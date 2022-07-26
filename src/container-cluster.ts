@@ -1205,7 +1205,7 @@ export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerr
   }
   return {
     image_type: cdktf.stringToTerraform(struct!.imageType),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
   }
 }
@@ -1485,7 +1485,7 @@ export function containerClusterClusterAutoscalingToTerraform(struct?: Container
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     auto_provisioning_defaults: containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerraform(struct!.autoProvisioningDefaults),
-    resource_limits: cdktf.listMapper(containerClusterClusterAutoscalingResourceLimitsToTerraform)(struct!.resourceLimits),
+    resource_limits: cdktf.listMapper(containerClusterClusterAutoscalingResourceLimitsToTerraform, true)(struct!.resourceLimits),
   }
 }
 
@@ -2093,7 +2093,7 @@ export function containerClusterLoggingConfigToTerraform(struct?: ContainerClust
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enable_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.enableComponents),
+    enable_components: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.enableComponents),
   }
 }
 
@@ -2582,7 +2582,7 @@ export function containerClusterMaintenancePolicyToTerraform(struct?: ContainerC
   }
   return {
     daily_maintenance_window: containerClusterMaintenancePolicyDailyMaintenanceWindowToTerraform(struct!.dailyMaintenanceWindow),
-    maintenance_exclusion: cdktf.listMapper(containerClusterMaintenancePolicyMaintenanceExclusionToTerraform)(struct!.maintenanceExclusion),
+    maintenance_exclusion: cdktf.listMapper(containerClusterMaintenancePolicyMaintenanceExclusionToTerraform, true)(struct!.maintenanceExclusion),
     recurring_window: containerClusterMaintenancePolicyRecurringWindowToTerraform(struct!.recurringWindow),
   }
 }
@@ -2962,7 +2962,7 @@ export function containerClusterMasterAuthorizedNetworksConfigToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cidr_blocks: cdktf.listMapper(containerClusterMasterAuthorizedNetworksConfigCidrBlocksToTerraform)(struct!.cidrBlocks),
+    cidr_blocks: cdktf.listMapper(containerClusterMasterAuthorizedNetworksConfigCidrBlocksToTerraform, true)(struct!.cidrBlocks),
   }
 }
 
@@ -3029,7 +3029,7 @@ export function containerClusterMonitoringConfigToTerraform(struct?: ContainerCl
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    enable_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.enableComponents),
+    enable_components: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.enableComponents),
   }
 }
 
@@ -3899,7 +3899,7 @@ export function containerClusterNodeConfigToTerraform(struct?: ContainerClusterN
     boot_disk_kms_key: cdktf.stringToTerraform(struct!.bootDiskKmsKey),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
-    guest_accelerator: cdktf.listMapper(containerClusterNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    guest_accelerator: cdktf.listMapper(containerClusterNodeConfigGuestAcceleratorToTerraform, false)(struct!.guestAccelerator),
     image_type: cdktf.stringToTerraform(struct!.imageType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
@@ -3907,12 +3907,12 @@ export function containerClusterNodeConfigToTerraform(struct?: ContainerClusterN
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     node_group: cdktf.stringToTerraform(struct!.nodeGroup),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     spot: cdktf.booleanToTerraform(struct!.spot),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
-    taint: cdktf.listMapper(containerClusterNodeConfigTaintToTerraform)(struct!.taint),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
+    taint: cdktf.listMapper(containerClusterNodeConfigTaintToTerraform, false)(struct!.taint),
     gcfs_config: containerClusterNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerClusterNodeConfigGvnicToTerraform(struct!.gvnic),
     shielded_instance_config: containerClusterNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
@@ -5322,7 +5322,7 @@ export function containerClusterNodePoolNodeConfigToTerraform(struct?: Container
     boot_disk_kms_key: cdktf.stringToTerraform(struct!.bootDiskKmsKey),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
-    guest_accelerator: cdktf.listMapper(containerClusterNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    guest_accelerator: cdktf.listMapper(containerClusterNodePoolNodeConfigGuestAcceleratorToTerraform, false)(struct!.guestAccelerator),
     image_type: cdktf.stringToTerraform(struct!.imageType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
@@ -5330,12 +5330,12 @@ export function containerClusterNodePoolNodeConfigToTerraform(struct?: Container
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     node_group: cdktf.stringToTerraform(struct!.nodeGroup),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     spot: cdktf.booleanToTerraform(struct!.spot),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
-    taint: cdktf.listMapper(containerClusterNodePoolNodeConfigTaintToTerraform)(struct!.taint),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
+    taint: cdktf.listMapper(containerClusterNodePoolNodeConfigTaintToTerraform, false)(struct!.taint),
     gcfs_config: containerClusterNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerClusterNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
     shielded_instance_config: containerClusterNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
@@ -6001,7 +6001,7 @@ export function containerClusterNodePoolToTerraform(struct?: ContainerClusterNod
     name: cdktf.stringToTerraform(struct!.name),
     name_prefix: cdktf.stringToTerraform(struct!.namePrefix),
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
-    node_locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeLocations),
+    node_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.nodeLocations),
     version: cdktf.stringToTerraform(struct!.version),
     autoscaling: containerClusterNodePoolAutoscalingToTerraform(struct!.autoscaling),
     management: containerClusterNodePoolManagementToTerraform(struct!.management),
@@ -7281,7 +7281,10 @@ export class ContainerCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clusterIpv4Cidr = config.clusterIpv4Cidr;
     this._datapathProvider = config.datapathProvider;
@@ -8214,7 +8217,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       networking_mode: cdktf.stringToTerraform(this._networkingMode),
-      node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
+      node_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._nodeLocations),
       node_version: cdktf.stringToTerraform(this._nodeVersion),
       private_ipv6_google_access: cdktf.stringToTerraform(this._privateIpv6GoogleAccess),
       project: cdktf.stringToTerraform(this._project),
@@ -8237,7 +8240,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       monitoring_config: containerClusterMonitoringConfigToTerraform(this._monitoringConfig.internalValue),
       network_policy: containerClusterNetworkPolicyToTerraform(this._networkPolicy.internalValue),
       node_config: containerClusterNodeConfigToTerraform(this._nodeConfig.internalValue),
-      node_pool: cdktf.listMapper(containerClusterNodePoolToTerraform)(this._nodePool.internalValue),
+      node_pool: cdktf.listMapper(containerClusterNodePoolToTerraform, true)(this._nodePool.internalValue),
       notification_config: containerClusterNotificationConfigToTerraform(this._notificationConfig.internalValue),
       private_cluster_config: containerClusterPrivateClusterConfigToTerraform(this._privateClusterConfig.internalValue),
       release_channel: containerClusterReleaseChannelToTerraform(this._releaseChannel.internalValue),

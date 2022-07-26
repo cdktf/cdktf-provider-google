@@ -275,8 +275,8 @@ export function computeRouterNatSubnetworkToTerraform(struct?: ComputeRouterNatS
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    secondary_ip_range_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secondaryIpRangeNames),
-    source_ip_ranges_to_nat: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpRangesToNat),
+    secondary_ip_range_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.secondaryIpRangeNames),
+    source_ip_ranges_to_nat: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceIpRangesToNat),
   }
 }
 
@@ -560,7 +560,10 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._drainNatIps = config.drainNatIps;
     this._enableDynamicPortAllocation = config.enableDynamicPortAllocation;
@@ -902,7 +905,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      drain_nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._drainNatIps),
+      drain_nat_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(this._drainNatIps),
       enable_dynamic_port_allocation: cdktf.booleanToTerraform(this._enableDynamicPortAllocation),
       enable_endpoint_independent_mapping: cdktf.booleanToTerraform(this._enableEndpointIndependentMapping),
       icmp_idle_timeout_sec: cdktf.numberToTerraform(this._icmpIdleTimeoutSec),
@@ -911,7 +914,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       min_ports_per_vm: cdktf.numberToTerraform(this._minPortsPerVm),
       name: cdktf.stringToTerraform(this._name),
       nat_ip_allocate_option: cdktf.stringToTerraform(this._natIpAllocateOption),
-      nat_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._natIps),
+      nat_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(this._natIps),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
@@ -920,7 +923,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       tcp_transitory_idle_timeout_sec: cdktf.numberToTerraform(this._tcpTransitoryIdleTimeoutSec),
       udp_idle_timeout_sec: cdktf.numberToTerraform(this._udpIdleTimeoutSec),
       log_config: computeRouterNatLogConfigToTerraform(this._logConfig.internalValue),
-      subnetwork: cdktf.listMapper(computeRouterNatSubnetworkToTerraform)(this._subnetwork.internalValue),
+      subnetwork: cdktf.listMapper(computeRouterNatSubnetworkToTerraform, true)(this._subnetwork.internalValue),
       timeouts: computeRouterNatTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

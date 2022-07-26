@@ -197,8 +197,8 @@ export function computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    include_http_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includeHttpHeaders),
-    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringWhitelist),
+    include_http_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeHttpHeaders),
+    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryStringWhitelist),
   }
 }
 
@@ -494,9 +494,9 @@ export function computeBackendBucketCdnPolicyToTerraform(struct?: ComputeBackend
     request_coalescing: cdktf.booleanToTerraform(struct!.requestCoalescing),
     serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
-    bypass_cache_on_request_headers: cdktf.listMapper(computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraform)(struct!.bypassCacheOnRequestHeaders),
+    bypass_cache_on_request_headers: cdktf.listMapper(computeBackendBucketCdnPolicyBypassCacheOnRequestHeadersToTerraform, true)(struct!.bypassCacheOnRequestHeaders),
     cache_key_policy: computeBackendBucketCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
-    negative_caching_policy: cdktf.listMapper(computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
+    negative_caching_policy: cdktf.listMapper(computeBackendBucketCdnPolicyNegativeCachingPolicyToTerraform, true)(struct!.negativeCachingPolicy),
   }
 }
 
@@ -930,7 +930,10 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._bucketName = config.bucketName;
     this._customResponseHeaders = config.customResponseHeaders;
@@ -1119,7 +1122,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_name: cdktf.stringToTerraform(this._bucketName),
-      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
+      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
       edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),

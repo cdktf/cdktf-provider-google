@@ -420,9 +420,9 @@ export function osConfigOsPolicyAssignmentInstanceFilterToTerraform(struct?: OsC
   }
   return {
     all: cdktf.booleanToTerraform(struct!.all),
-    exclusion_labels: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterExclusionLabelsToTerraform)(struct!.exclusionLabels),
-    inclusion_labels: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterInclusionLabelsToTerraform)(struct!.inclusionLabels),
-    inventories: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterInventoriesToTerraform)(struct!.inventories),
+    exclusion_labels: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterExclusionLabelsToTerraform, true)(struct!.exclusionLabels),
+    inclusion_labels: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterInclusionLabelsToTerraform, true)(struct!.inclusionLabels),
+    inventories: cdktf.listMapper(osConfigOsPolicyAssignmentInstanceFilterInventoriesToTerraform, true)(struct!.inventories),
   }
 }
 
@@ -1070,7 +1070,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecE
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
     interpreter: cdktf.stringToTerraform(struct!.interpreter),
     output_file_path: cdktf.stringToTerraform(struct!.outputFilePath),
     script: cdktf.stringToTerraform(struct!.script),
@@ -1616,7 +1616,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecV
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
     interpreter: cdktf.stringToTerraform(struct!.interpreter),
     output_file_path: cdktf.stringToTerraform(struct!.outputFilePath),
     script: cdktf.stringToTerraform(struct!.script),
@@ -3343,7 +3343,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMs
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    properties: cdktf.listMapper(cdktf.stringToTerraform)(struct!.properties),
+    properties: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.properties),
     source: osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceToTerraform(struct!.source),
   }
 }
@@ -4309,7 +4309,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepos
   }
   return {
     archive_type: cdktf.stringToTerraform(struct!.archiveType),
-    components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.components),
+    components: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.components),
     distribution: cdktf.stringToTerraform(struct!.distribution),
     gpg_key: cdktf.stringToTerraform(struct!.gpgKey),
     uri: cdktf.stringToTerraform(struct!.uri),
@@ -4568,7 +4568,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepos
   return {
     base_url: cdktf.stringToTerraform(struct!.baseUrl),
     display_name: cdktf.stringToTerraform(struct!.displayName),
-    gpg_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.gpgKeys),
+    gpg_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.gpgKeys),
     id: cdktf.stringToTerraform(struct!.id),
   }
 }
@@ -4719,7 +4719,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepos
   return {
     base_url: cdktf.stringToTerraform(struct!.baseUrl),
     display_name: cdktf.stringToTerraform(struct!.displayName),
-    gpg_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.gpgKeys),
+    gpg_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.gpgKeys),
     id: cdktf.stringToTerraform(struct!.id),
   }
 }
@@ -5222,8 +5222,8 @@ export function osConfigOsPolicyAssignmentOsPoliciesResourceGroupsToTerraform(st
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    inventory_filters: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersToTerraform)(struct!.inventoryFilters),
-    resources: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesToTerraform)(struct!.resources),
+    inventory_filters: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersToTerraform, true)(struct!.inventoryFilters),
+    resources: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesToTerraform, true)(struct!.resources),
   }
 }
 
@@ -5372,7 +5372,7 @@ export function osConfigOsPolicyAssignmentOsPoliciesToTerraform(struct?: OsConfi
     description: cdktf.stringToTerraform(struct!.description),
     id: cdktf.stringToTerraform(struct!.id),
     mode: cdktf.stringToTerraform(struct!.mode),
-    resource_groups: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsToTerraform)(struct!.resourceGroups),
+    resource_groups: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesResourceGroupsToTerraform, true)(struct!.resourceGroups),
   }
 }
 
@@ -5883,7 +5883,10 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -6081,7 +6084,7 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       instance_filter: osConfigOsPolicyAssignmentInstanceFilterToTerraform(this._instanceFilter.internalValue),
-      os_policies: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesToTerraform)(this._osPolicies.internalValue),
+      os_policies: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesToTerraform, true)(this._osPolicies.internalValue),
       rollout: osConfigOsPolicyAssignmentRolloutToTerraform(this._rollout.internalValue),
       timeouts: osConfigOsPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };

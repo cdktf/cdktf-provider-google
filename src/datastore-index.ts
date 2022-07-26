@@ -300,7 +300,10 @@ export class DatastoreIndex extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._ancestor = config.ancestor;
     this._id = config.id;
@@ -422,7 +425,7 @@ export class DatastoreIndex extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       kind: cdktf.stringToTerraform(this._kind),
       project: cdktf.stringToTerraform(this._project),
-      properties: cdktf.listMapper(datastoreIndexPropertiesToTerraform)(this._properties.internalValue),
+      properties: cdktf.listMapper(datastoreIndexPropertiesToTerraform, true)(this._properties.internalValue),
       timeouts: datastoreIndexTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

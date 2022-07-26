@@ -1162,7 +1162,10 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._checkerType = config.checkerType;
     this._displayName = config.displayName;
@@ -1406,9 +1409,9 @@ export class MonitoringUptimeCheckConfig extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       period: cdktf.stringToTerraform(this._period),
       project: cdktf.stringToTerraform(this._project),
-      selected_regions: cdktf.listMapper(cdktf.stringToTerraform)(this._selectedRegions),
+      selected_regions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._selectedRegions),
       timeout: cdktf.stringToTerraform(this._timeout),
-      content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform)(this._contentMatchers.internalValue),
+      content_matchers: cdktf.listMapper(monitoringUptimeCheckConfigContentMatchersToTerraform, true)(this._contentMatchers.internalValue),
       http_check: monitoringUptimeCheckConfigHttpCheckToTerraform(this._httpCheck.internalValue),
       monitored_resource: monitoringUptimeCheckConfigMonitoredResourceToTerraform(this._monitoredResource.internalValue),
       resource_group: monitoringUptimeCheckConfigResourceGroupToTerraform(this._resourceGroup.internalValue),

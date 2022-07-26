@@ -1274,8 +1274,8 @@ export function storageTransferJobTransferSpecObjectConditionsToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    exclude_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludePrefixes),
-    include_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includePrefixes),
+    exclude_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludePrefixes),
+    include_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includePrefixes),
     max_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.maxTimeElapsedSinceLastModification),
     min_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.minTimeElapsedSinceLastModification),
   }
@@ -1980,7 +1980,10 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

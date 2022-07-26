@@ -103,7 +103,7 @@ export function computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform(struct?: 
   }
   return {
     ip_protocol: cdktf.stringToTerraform(struct!.ipProtocol),
-    ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
+    ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ports),
   }
 }
 
@@ -233,9 +233,9 @@ export function computeFirewallPolicyRuleMatchToTerraform(struct?: ComputeFirewa
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dest_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destIpRanges),
-    src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.srcIpRanges),
-    layer4_configs: cdktf.listMapper(computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform)(struct!.layer4Configs),
+    dest_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destIpRanges),
+    src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.srcIpRanges),
+    layer4_configs: cdktf.listMapper(computeFirewallPolicyRuleMatchLayer4ConfigsToTerraform, true)(struct!.layer4Configs),
   }
 }
 
@@ -490,7 +490,10 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._action = config.action;
     this._description = config.description;
@@ -711,8 +714,8 @@ export class ComputeFirewallPolicyRule extends cdktf.TerraformResource {
       firewall_policy: cdktf.stringToTerraform(this._firewallPolicy),
       id: cdktf.stringToTerraform(this._id),
       priority: cdktf.numberToTerraform(this._priority),
-      target_resources: cdktf.listMapper(cdktf.stringToTerraform)(this._targetResources),
-      target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._targetServiceAccounts),
+      target_resources: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetResources),
+      target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetServiceAccounts),
       match: computeFirewallPolicyRuleMatchToTerraform(this._match.internalValue),
       timeouts: computeFirewallPolicyRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

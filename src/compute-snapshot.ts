@@ -471,7 +471,10 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -707,7 +710,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       source_disk: cdktf.stringToTerraform(this._sourceDisk),
-      storage_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._storageLocations),
+      storage_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._storageLocations),
       zone: cdktf.stringToTerraform(this._zone),
       snapshot_encryption_key: computeSnapshotSnapshotEncryptionKeyToTerraform(this._snapshotEncryptionKey.internalValue),
       source_disk_encryption_key: computeSnapshotSourceDiskEncryptionKeyToTerraform(this._sourceDiskEncryptionKey.internalValue),

@@ -1392,7 +1392,10 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._baseInstanceName = config.baseInstanceName;
     this._description = config.description;
@@ -1700,17 +1703,17 @@ export class ComputeInstanceGroupManager extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      target_pools: cdktf.listMapper(cdktf.stringToTerraform)(this._targetPools),
+      target_pools: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetPools),
       target_size: cdktf.numberToTerraform(this._targetSize),
       wait_for_instances: cdktf.booleanToTerraform(this._waitForInstances),
       wait_for_instances_status: cdktf.stringToTerraform(this._waitForInstancesStatus),
       zone: cdktf.stringToTerraform(this._zone),
       auto_healing_policies: computeInstanceGroupManagerAutoHealingPoliciesToTerraform(this._autoHealingPolicies.internalValue),
-      named_port: cdktf.listMapper(computeInstanceGroupManagerNamedPortToTerraform)(this._namedPort.internalValue),
-      stateful_disk: cdktf.listMapper(computeInstanceGroupManagerStatefulDiskToTerraform)(this._statefulDisk.internalValue),
+      named_port: cdktf.listMapper(computeInstanceGroupManagerNamedPortToTerraform, true)(this._namedPort.internalValue),
+      stateful_disk: cdktf.listMapper(computeInstanceGroupManagerStatefulDiskToTerraform, true)(this._statefulDisk.internalValue),
       timeouts: computeInstanceGroupManagerTimeoutsToTerraform(this._timeouts.internalValue),
       update_policy: computeInstanceGroupManagerUpdatePolicyToTerraform(this._updatePolicy.internalValue),
-      version: cdktf.listMapper(computeInstanceGroupManagerVersionToTerraform)(this._version.internalValue),
+      version: cdktf.listMapper(computeInstanceGroupManagerVersionToTerraform, true)(this._version.internalValue),
     };
   }
 }

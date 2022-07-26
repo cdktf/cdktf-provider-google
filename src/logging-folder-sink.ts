@@ -346,7 +346,10 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._destination = config.destination;
@@ -535,7 +538,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       include_children: cdktf.booleanToTerraform(this._includeChildren),
       name: cdktf.stringToTerraform(this._name),
       bigquery_options: loggingFolderSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
-      exclusions: cdktf.listMapper(loggingFolderSinkExclusionsToTerraform)(this._exclusions.internalValue),
+      exclusions: cdktf.listMapper(loggingFolderSinkExclusionsToTerraform, true)(this._exclusions.internalValue),
     };
   }
 }

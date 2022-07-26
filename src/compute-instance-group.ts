@@ -347,7 +347,10 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -523,12 +526,12 @@ export class ComputeInstanceGroup extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
-      instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
+      instances: cdktf.listMapper(cdktf.stringToTerraform, false)(this._instances),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       zone: cdktf.stringToTerraform(this._zone),
-      named_port: cdktf.listMapper(computeInstanceGroupNamedPortToTerraform)(this._namedPort.internalValue),
+      named_port: cdktf.listMapper(computeInstanceGroupNamedPortToTerraform, true)(this._namedPort.internalValue),
       timeouts: computeInstanceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

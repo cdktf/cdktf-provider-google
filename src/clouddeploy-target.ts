@@ -183,7 +183,7 @@ export function clouddeployTargetExecutionConfigsToTerraform(struct?: Clouddeplo
   return {
     artifact_storage: cdktf.stringToTerraform(struct!.artifactStorage),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
-    usages: cdktf.listMapper(cdktf.stringToTerraform)(struct!.usages),
+    usages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.usages),
     worker_pool: cdktf.stringToTerraform(struct!.workerPool),
   }
 }
@@ -589,7 +589,10 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._description = config.description;
@@ -835,7 +838,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       require_approval: cdktf.booleanToTerraform(this._requireApproval),
       anthos_cluster: clouddeployTargetAnthosClusterToTerraform(this._anthosCluster.internalValue),
-      execution_configs: cdktf.listMapper(clouddeployTargetExecutionConfigsToTerraform)(this._executionConfigs.internalValue),
+      execution_configs: cdktf.listMapper(clouddeployTargetExecutionConfigsToTerraform, true)(this._executionConfigs.internalValue),
       gke: clouddeployTargetGkeToTerraform(this._gke.internalValue),
       timeouts: clouddeployTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };

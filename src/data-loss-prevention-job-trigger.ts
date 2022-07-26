@@ -650,8 +650,8 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageO
   }
   return {
     bucket_name: cdktf.stringToTerraform(struct!.bucketName),
-    exclude_regex: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludeRegex),
-    include_regex: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includeRegex),
+    exclude_regex: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludeRegex),
+    include_regex: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeRegex),
   }
 }
 
@@ -898,7 +898,7 @@ export function dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageO
   return {
     bytes_limit_per_file: cdktf.numberToTerraform(struct!.bytesLimitPerFile),
     bytes_limit_per_file_percent: cdktf.numberToTerraform(struct!.bytesLimitPerFilePercent),
-    file_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileTypes),
+    file_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fileTypes),
     files_limit_percent: cdktf.numberToTerraform(struct!.filesLimitPercent),
     sample_method: cdktf.stringToTerraform(struct!.sampleMethod),
     file_set: dataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetToTerraform(struct!.fileSet),
@@ -1713,7 +1713,7 @@ export function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataL
   }
   return {
     inspect_template_name: cdktf.stringToTerraform(struct!.inspectTemplateName),
-    actions: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsToTerraform)(struct!.actions),
+    actions: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsToTerraform, true)(struct!.actions),
     storage_config: dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct!.storageConfig),
   }
 }
@@ -2135,7 +2135,10 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;
@@ -2296,7 +2299,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
       status: cdktf.stringToTerraform(this._status),
       inspect_job: dataLossPreventionJobTriggerInspectJobToTerraform(this._inspectJob.internalValue),
       timeouts: dataLossPreventionJobTriggerTimeoutsToTerraform(this._timeouts.internalValue),
-      triggers: cdktf.listMapper(dataLossPreventionJobTriggerTriggersToTerraform)(this._triggers.internalValue),
+      triggers: cdktf.listMapper(dataLossPreventionJobTriggerTriggersToTerraform, true)(this._triggers.internalValue),
     };
   }
 }

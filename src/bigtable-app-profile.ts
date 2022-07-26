@@ -325,7 +325,10 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appProfileId = config.appProfileId;
     this._description = config.description;
@@ -516,7 +519,7 @@ export class BigtableAppProfile extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       ignore_warnings: cdktf.booleanToTerraform(this._ignoreWarnings),
       instance: cdktf.stringToTerraform(this._instance),
-      multi_cluster_routing_cluster_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._multiClusterRoutingClusterIds),
+      multi_cluster_routing_cluster_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(this._multiClusterRoutingClusterIds),
       multi_cluster_routing_use_any: cdktf.booleanToTerraform(this._multiClusterRoutingUseAny),
       project: cdktf.stringToTerraform(this._project),
       single_cluster_routing: bigtableAppProfileSingleClusterRoutingToTerraform(this._singleClusterRouting.internalValue),

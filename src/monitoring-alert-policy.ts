@@ -423,7 +423,7 @@ export function monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerr
   return {
     alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
     cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
-    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByFields),
     per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
   }
 }
@@ -724,7 +724,7 @@ export function monitoringAlertPolicyConditionsConditionAbsentToTerraform(struct
   return {
     duration: cdktf.stringToTerraform(struct!.duration),
     filter: cdktf.stringToTerraform(struct!.filter),
-    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform)(struct!.aggregations),
+    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionAbsentAggregationsToTerraform, true)(struct!.aggregations),
     trigger: monitoringAlertPolicyConditionsConditionAbsentTriggerToTerraform(struct!.trigger),
   }
 }
@@ -1307,7 +1307,7 @@ export function monitoringAlertPolicyConditionsConditionThresholdAggregationsToT
   return {
     alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
     cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
-    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByFields),
     per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
   }
 }
@@ -1562,7 +1562,7 @@ export function monitoringAlertPolicyConditionsConditionThresholdDenominatorAggr
   return {
     alignment_period: cdktf.stringToTerraform(struct!.alignmentPeriod),
     cross_series_reducer: cdktf.stringToTerraform(struct!.crossSeriesReducer),
-    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupByFields),
+    group_by_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.groupByFields),
     per_series_aligner: cdktf.stringToTerraform(struct!.perSeriesAligner),
   }
 }
@@ -1931,8 +1931,8 @@ export function monitoringAlertPolicyConditionsConditionThresholdToTerraform(str
     evaluation_missing_data: cdktf.stringToTerraform(struct!.evaluationMissingData),
     filter: cdktf.stringToTerraform(struct!.filter),
     threshold_value: cdktf.numberToTerraform(struct!.thresholdValue),
-    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform)(struct!.aggregations),
-    denominator_aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform)(struct!.denominatorAggregations),
+    aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdAggregationsToTerraform, true)(struct!.aggregations),
+    denominator_aggregations: cdktf.listMapper(monitoringAlertPolicyConditionsConditionThresholdDenominatorAggregationsToTerraform, true)(struct!.denominatorAggregations),
     trigger: monitoringAlertPolicyConditionsConditionThresholdTriggerToTerraform(struct!.trigger),
   }
 }
@@ -2638,7 +2638,10 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._combiner = config.combiner;
     this._displayName = config.displayName;
@@ -2845,11 +2848,11 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
-      notification_channels: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationChannels),
+      notification_channels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notificationChannels),
       project: cdktf.stringToTerraform(this._project),
       user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._userLabels),
       alert_strategy: monitoringAlertPolicyAlertStrategyToTerraform(this._alertStrategy.internalValue),
-      conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform)(this._conditions.internalValue),
+      conditions: cdktf.listMapper(monitoringAlertPolicyConditionsToTerraform, true)(this._conditions.internalValue),
       documentation: monitoringAlertPolicyDocumentationToTerraform(this._documentation.internalValue),
       timeouts: monitoringAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

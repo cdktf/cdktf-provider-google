@@ -455,7 +455,10 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allPorts = config.allPorts;
     this._allowGlobalAccess = config.allowGlobalAccess;
@@ -884,13 +887,13 @@ export class ComputeForwardingRule extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       network_tier: cdktf.stringToTerraform(this._networkTier),
       port_range: cdktf.stringToTerraform(this._portRange),
-      ports: cdktf.listMapper(cdktf.stringToTerraform)(this._ports),
+      ports: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ports),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       service_label: cdktf.stringToTerraform(this._serviceLabel),
       subnetwork: cdktf.stringToTerraform(this._subnetwork),
       target: cdktf.stringToTerraform(this._target),
-      service_directory_registrations: cdktf.listMapper(computeForwardingRuleServiceDirectoryRegistrationsToTerraform)(this._serviceDirectoryRegistrations.internalValue),
+      service_directory_registrations: cdktf.listMapper(computeForwardingRuleServiceDirectoryRegistrationsToTerraform, true)(this._serviceDirectoryRegistrations.internalValue),
       timeouts: computeForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

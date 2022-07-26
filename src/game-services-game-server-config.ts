@@ -532,8 +532,8 @@ export function gameServicesGameServerConfigScalingConfigsToTerraform(struct?: G
   return {
     fleet_autoscaler_spec: cdktf.stringToTerraform(struct!.fleetAutoscalerSpec),
     name: cdktf.stringToTerraform(struct!.name),
-    schedules: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSchedulesToTerraform)(struct!.schedules),
-    selectors: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSelectorsToTerraform)(struct!.selectors),
+    schedules: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSchedulesToTerraform, true)(struct!.schedules),
+    selectors: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsSelectorsToTerraform, true)(struct!.selectors),
   }
 }
 
@@ -812,7 +812,10 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._configId = config.configId;
     this._deploymentId = config.deploymentId;
@@ -999,8 +1002,8 @@ export class GameServicesGameServerConfig extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
-      fleet_configs: cdktf.listMapper(gameServicesGameServerConfigFleetConfigsToTerraform)(this._fleetConfigs.internalValue),
-      scaling_configs: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsToTerraform)(this._scalingConfigs.internalValue),
+      fleet_configs: cdktf.listMapper(gameServicesGameServerConfigFleetConfigsToTerraform, true)(this._fleetConfigs.internalValue),
+      scaling_configs: cdktf.listMapper(gameServicesGameServerConfigScalingConfigsToTerraform, true)(this._scalingConfigs.internalValue),
       timeouts: gameServicesGameServerConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

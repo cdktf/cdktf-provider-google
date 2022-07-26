@@ -395,7 +395,10 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._adminEnabled = config.adminEnabled;
     this._bandwidth = config.bandwidth;
@@ -740,13 +743,13 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
     return {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
       bandwidth: cdktf.stringToTerraform(this._bandwidth),
-      candidate_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._candidateSubnets),
+      candidate_subnets: cdktf.listMapper(cdktf.stringToTerraform, false)(this._candidateSubnets),
       description: cdktf.stringToTerraform(this._description),
       edge_availability_domain: cdktf.stringToTerraform(this._edgeAvailabilityDomain),
       encryption: cdktf.stringToTerraform(this._encryption),
       id: cdktf.stringToTerraform(this._id),
       interconnect: cdktf.stringToTerraform(this._interconnect),
-      ipsec_internal_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._ipsecInternalAddresses),
+      ipsec_internal_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipsecInternalAddresses),
       mtu: cdktf.stringToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

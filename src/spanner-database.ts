@@ -301,7 +301,10 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._databaseDialect = config.databaseDialect;
     this._ddl = config.ddl;
@@ -485,7 +488,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_dialect: cdktf.stringToTerraform(this._databaseDialect),
-      ddl: cdktf.listMapper(cdktf.stringToTerraform)(this._ddl),
+      ddl: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ddl),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),

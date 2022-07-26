@@ -447,7 +447,10 @@ export class BigtableInstance extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._deletionProtection = config.deletionProtection;
     this._displayName = config.displayName;
@@ -601,7 +604,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform)(this._cluster.internalValue),
+      cluster: cdktf.listMapper(bigtableInstanceClusterToTerraform, true)(this._cluster.internalValue),
     };
   }
 }

@@ -84,7 +84,10 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -218,7 +221,7 @@ export class OrganizationIamCustomRole extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       org_id: cdktf.stringToTerraform(this._orgId),
-      permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._permissions),
+      permissions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._permissions),
       role_id: cdktf.stringToTerraform(this._roleId),
       stage: cdktf.stringToTerraform(this._stage),
       title: cdktf.stringToTerraform(this._title),

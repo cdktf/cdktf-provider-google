@@ -217,7 +217,7 @@ export function computeReservationShareSettingsToTerraform(struct?: ComputeReser
   }
   return {
     share_type: cdktf.stringToTerraform(struct!.shareType),
-    project_map: cdktf.listMapper(computeReservationShareSettingsProjectMapToTerraform)(struct!.projectMap),
+    project_map: cdktf.listMapper(computeReservationShareSettingsProjectMapToTerraform, true)(struct!.projectMap),
   }
 }
 
@@ -581,8 +581,8 @@ export function computeReservationSpecificReservationInstancePropertiesToTerrafo
   return {
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
-    guest_accelerators: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesGuestAcceleratorsToTerraform)(struct!.guestAccelerators),
-    local_ssds: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerraform)(struct!.localSsds),
+    guest_accelerators: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesGuestAcceleratorsToTerraform, true)(struct!.guestAccelerators),
+    local_ssds: cdktf.listMapper(computeReservationSpecificReservationInstancePropertiesLocalSsdsToTerraform, true)(struct!.localSsds),
   }
 }
 
@@ -954,7 +954,10 @@ export class ComputeReservation extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

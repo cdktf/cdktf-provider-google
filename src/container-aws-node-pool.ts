@@ -763,13 +763,13 @@ export function containerAwsNodePoolConfigAToTerraform(struct?: ContainerAwsNode
     iam_instance_profile: cdktf.stringToTerraform(struct!.iamInstanceProfile),
     instance_type: cdktf.stringToTerraform(struct!.instanceType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
-    security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.securityGroupIds),
+    security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.securityGroupIds),
     tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     config_encryption: containerAwsNodePoolConfigConfigEncryptionToTerraform(struct!.configEncryption),
     proxy_config: containerAwsNodePoolConfigProxyConfigToTerraform(struct!.proxyConfig),
     root_volume: containerAwsNodePoolConfigRootVolumeToTerraform(struct!.rootVolume),
     ssh_config: containerAwsNodePoolConfigSshConfigToTerraform(struct!.sshConfig),
-    taints: cdktf.listMapper(containerAwsNodePoolConfigTaintsToTerraform)(struct!.taints),
+    taints: cdktf.listMapper(containerAwsNodePoolConfigTaintsToTerraform, true)(struct!.taints),
   }
 }
 
@@ -1239,7 +1239,10 @@ export class ContainerAwsNodePool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._cluster = config.cluster;

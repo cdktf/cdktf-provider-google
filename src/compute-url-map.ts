@@ -148,12 +148,12 @@ export function computeUrlMapDefaultRouteActionCorsPolicyToTerraform(struct?: Co
   }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
-    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
-    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
-    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
-    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOrigins),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
-    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposeHeaders),
     max_age: cdktf.numberToTerraform(struct!.maxAge),
   }
 }
@@ -954,7 +954,7 @@ export function computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: C
   }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
-    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retryConditions),
     per_try_timeout: computeUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
@@ -1602,10 +1602,10 @@ export function computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -1946,7 +1946,7 @@ export function computeUrlMapDefaultRouteActionToTerraform(struct?: ComputeUrlMa
     retry_policy: computeUrlMapDefaultRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
     timeout: computeUrlMapDefaultRouteActionTimeoutToTerraform(struct!.timeout),
     url_rewrite: computeUrlMapDefaultRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
-    weighted_backend_services: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapDefaultRouteActionWeightedBackendServicesToTerraform, true)(struct!.weightedBackendServices),
   }
 }
 
@@ -2701,10 +2701,10 @@ export function computeUrlMapHeaderActionToTerraform(struct?: ComputeUrlMapHeade
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -2854,7 +2854,7 @@ export function computeUrlMapHostRuleToTerraform(struct?: ComputeUrlMapHostRule 
   }
   return {
     description: cdktf.stringToTerraform(struct!.description),
-    hosts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hosts),
+    hosts: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.hosts),
     path_matcher: cdktf.stringToTerraform(struct!.pathMatcher),
   }
 }
@@ -3040,12 +3040,12 @@ export function computeUrlMapPathMatcherDefaultRouteActionCorsPolicyToTerraform(
   }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
-    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
-    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
-    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
-    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOrigins),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
-    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposeHeaders),
     max_age: cdktf.numberToTerraform(struct!.maxAge),
   }
 }
@@ -3846,7 +3846,7 @@ export function computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform
   }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
-    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retryConditions),
     per_try_timeout: computeUrlMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
@@ -4494,10 +4494,10 @@ export function computeUrlMapPathMatcherDefaultRouteActionWeightedBackendService
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -4838,7 +4838,7 @@ export function computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct?: C
     retry_policy: computeUrlMapPathMatcherDefaultRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
     timeout: computeUrlMapPathMatcherDefaultRouteActionTimeoutToTerraform(struct!.timeout),
     url_rewrite: computeUrlMapPathMatcherDefaultRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
-    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesToTerraform, true)(struct!.weightedBackendServices),
   }
 }
 
@@ -5593,10 +5593,10 @@ export function computeUrlMapPathMatcherHeaderActionToTerraform(struct?: Compute
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -5778,12 +5778,12 @@ export function computeUrlMapPathMatcherPathRuleRouteActionCorsPolicyToTerraform
   }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
-    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
-    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
-    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
-    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOrigins),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
-    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposeHeaders),
     max_age: cdktf.numberToTerraform(struct!.maxAge),
   }
 }
@@ -6573,7 +6573,7 @@ export function computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerrafor
   }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
-    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retryConditions),
     per_try_timeout: computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
@@ -7201,10 +7201,10 @@ export function computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServic
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -7537,7 +7537,7 @@ export function computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct?: 
     retry_policy: computeUrlMapPathMatcherPathRuleRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
     timeout: computeUrlMapPathMatcherPathRuleRouteActionTimeoutToTerraform(struct!.timeout),
     url_rewrite: computeUrlMapPathMatcherPathRuleRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
-    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesToTerraform, true)(struct!.weightedBackendServices),
   }
 }
 
@@ -7996,7 +7996,7 @@ export function computeUrlMapPathMatcherPathRuleToTerraform(struct?: ComputeUrlM
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
     service: cdktf.stringToTerraform(struct!.service),
     route_action: computeUrlMapPathMatcherPathRuleRouteActionToTerraform(struct!.routeAction),
     url_redirect: computeUrlMapPathMatcherPathRuleUrlRedirectToTerraform(struct!.urlRedirect),
@@ -8481,10 +8481,10 @@ export function computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -9159,7 +9159,7 @@ export function computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTer
   }
   return {
     filter_match_criteria: cdktf.stringToTerraform(struct!.filterMatchCriteria),
-    filter_labels: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform)(struct!.filterLabels),
+    filter_labels: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsToTerraform, true)(struct!.filterLabels),
   }
 }
 
@@ -9517,9 +9517,9 @@ export function computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform(struct?:
     ignore_case: cdktf.booleanToTerraform(struct!.ignoreCase),
     prefix_match: cdktf.stringToTerraform(struct!.prefixMatch),
     regex_match: cdktf.stringToTerraform(struct!.regexMatch),
-    header_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform)(struct!.headerMatches),
-    metadata_filters: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform)(struct!.metadataFilters),
-    query_parameter_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform)(struct!.queryParameterMatches),
+    header_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesToTerraform, true)(struct!.headerMatches),
+    metadata_filters: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersToTerraform, true)(struct!.metadataFilters),
+    query_parameter_matches: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesToTerraform, true)(struct!.queryParameterMatches),
   }
 }
 
@@ -9800,12 +9800,12 @@ export function computeUrlMapPathMatcherRouteRulesRouteActionCorsPolicyToTerrafo
   }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
-    allow_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowHeaders),
-    allow_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowMethods),
-    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOriginRegexes),
-    allow_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowOrigins),
+    allow_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowHeaders),
+    allow_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowMethods),
+    allow_origin_regexes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOriginRegexes),
+    allow_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowOrigins),
     disabled: cdktf.booleanToTerraform(struct!.disabled),
-    expose_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposeHeaders),
+    expose_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposeHeaders),
     max_age: cdktf.numberToTerraform(struct!.maxAge),
   }
 }
@@ -10610,7 +10610,7 @@ export function computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraf
   }
   return {
     num_retries: cdktf.numberToTerraform(struct!.numRetries),
-    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.retryConditions),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retryConditions),
     per_try_timeout: computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
   }
 }
@@ -11235,10 +11235,10 @@ export function computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServ
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.requestHeadersToRemove),
-    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeadersToRemove),
-    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform)(struct!.requestHeadersToAdd),
-    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform)(struct!.responseHeadersToAdd),
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
   }
 }
 
@@ -11571,7 +11571,7 @@ export function computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct?
     retry_policy: computeUrlMapPathMatcherRouteRulesRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
     timeout: computeUrlMapPathMatcherRouteRulesRouteActionTimeoutToTerraform(struct!.timeout),
     url_rewrite: computeUrlMapPathMatcherRouteRulesRouteActionUrlRewriteToTerraform(struct!.urlRewrite),
-    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform)(struct!.weightedBackendServices),
+    weighted_backend_services: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesToTerraform, true)(struct!.weightedBackendServices),
   }
 }
 
@@ -12054,7 +12054,7 @@ export function computeUrlMapPathMatcherRouteRulesToTerraform(struct?: ComputeUr
     priority: cdktf.numberToTerraform(struct!.priority),
     service: cdktf.stringToTerraform(struct!.service),
     header_action: computeUrlMapPathMatcherRouteRulesHeaderActionToTerraform(struct!.headerAction),
-    match_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform)(struct!.matchRules),
+    match_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesMatchRulesToTerraform, true)(struct!.matchRules),
     route_action: computeUrlMapPathMatcherRouteRulesRouteActionToTerraform(struct!.routeAction),
     url_redirect: computeUrlMapPathMatcherRouteRulesUrlRedirectToTerraform(struct!.urlRedirect),
   }
@@ -12311,8 +12311,8 @@ export function computeUrlMapPathMatcherToTerraform(struct?: ComputeUrlMapPathMa
     default_route_action: computeUrlMapPathMatcherDefaultRouteActionToTerraform(struct!.defaultRouteAction),
     default_url_redirect: computeUrlMapPathMatcherDefaultUrlRedirectToTerraform(struct!.defaultUrlRedirect),
     header_action: computeUrlMapPathMatcherHeaderActionToTerraform(struct!.headerAction),
-    path_rule: cdktf.listMapper(computeUrlMapPathMatcherPathRuleToTerraform)(struct!.pathRule),
-    route_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesToTerraform)(struct!.routeRules),
+    path_rule: cdktf.listMapper(computeUrlMapPathMatcherPathRuleToTerraform, true)(struct!.pathRule),
+    route_rules: cdktf.listMapper(computeUrlMapPathMatcherRouteRulesToTerraform, true)(struct!.routeRules),
   }
 }
 
@@ -12886,7 +12886,10 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._defaultService = config.defaultService;
     this._description = config.description;
@@ -13129,9 +13132,9 @@ export class ComputeUrlMap extends cdktf.TerraformResource {
       default_route_action: computeUrlMapDefaultRouteActionToTerraform(this._defaultRouteAction.internalValue),
       default_url_redirect: computeUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect.internalValue),
       header_action: computeUrlMapHeaderActionToTerraform(this._headerAction.internalValue),
-      host_rule: cdktf.listMapper(computeUrlMapHostRuleToTerraform)(this._hostRule.internalValue),
-      path_matcher: cdktf.listMapper(computeUrlMapPathMatcherToTerraform)(this._pathMatcher.internalValue),
-      test: cdktf.listMapper(computeUrlMapTestToTerraform)(this._test.internalValue),
+      host_rule: cdktf.listMapper(computeUrlMapHostRuleToTerraform, true)(this._hostRule.internalValue),
+      path_matcher: cdktf.listMapper(computeUrlMapPathMatcherToTerraform, true)(this._pathMatcher.internalValue),
+      test: cdktf.listMapper(computeUrlMapTestToTerraform, true)(this._test.internalValue),
       timeouts: computeUrlMapTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

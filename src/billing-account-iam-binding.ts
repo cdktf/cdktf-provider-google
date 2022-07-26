@@ -179,7 +179,10 @@ export class BillingAccountIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._billingAccountId = config.billingAccountId;
     this._id = config.id;
@@ -276,7 +279,7 @@ export class BillingAccountIamBinding extends cdktf.TerraformResource {
     return {
       billing_account_id: cdktf.stringToTerraform(this._billingAccountId),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       role: cdktf.stringToTerraform(this._role),
       condition: billingAccountIamBindingConditionToTerraform(this._condition.internalValue),
     };

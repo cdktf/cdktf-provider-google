@@ -97,7 +97,7 @@ export function loggingMetricBucketOptionsExplicitBucketsToTerraform(struct?: Lo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    bounds: cdktf.listMapper(cdktf.numberToTerraform)(struct!.bounds),
+    bounds: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.bounds),
   }
 }
 
@@ -726,7 +726,7 @@ export function loggingMetricMetricDescriptorToTerraform(struct?: LoggingMetricM
     metric_kind: cdktf.stringToTerraform(struct!.metricKind),
     unit: cdktf.stringToTerraform(struct!.unit),
     value_type: cdktf.stringToTerraform(struct!.valueType),
-    labels: cdktf.listMapper(loggingMetricMetricDescriptorLabelsToTerraform)(struct!.labels),
+    labels: cdktf.listMapper(loggingMetricMetricDescriptorLabelsToTerraform, true)(struct!.labels),
   }
 }
 
@@ -1022,7 +1022,10 @@ export class LoggingMetric extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._filter = config.filter;

@@ -44,7 +44,7 @@ export function dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    exempted_members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exemptedMembers),
+    exempted_members: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exemptedMembers),
     log_type: cdktf.stringToTerraform(struct!.logType),
   }
 }
@@ -168,7 +168,7 @@ export function dataGoogleIamPolicyAuditConfigToTerraform(struct?: DataGoogleIam
   }
   return {
     service: cdktf.stringToTerraform(struct!.service),
-    audit_log_configs: cdktf.listMapper(dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform)(struct!.auditLogConfigs),
+    audit_log_configs: cdktf.listMapper(dataGoogleIamPolicyAuditConfigAuditLogConfigsToTerraform, true)(struct!.auditLogConfigs),
   }
 }
 
@@ -404,7 +404,7 @@ export function dataGoogleIamPolicyBindingToTerraform(struct?: DataGoogleIamPoli
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    members: cdktf.listMapper(cdktf.stringToTerraform)(struct!.members),
+    members: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.members),
     role: cdktf.stringToTerraform(struct!.role),
     condition: dataGoogleIamPolicyBindingConditionToTerraform(struct!.condition),
   }
@@ -561,7 +561,10 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._auditConfig.internalValue = config.auditConfig;
@@ -632,8 +635,8 @@ export class DataGoogleIamPolicy extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      audit_config: cdktf.listMapper(dataGoogleIamPolicyAuditConfigToTerraform)(this._auditConfig.internalValue),
-      binding: cdktf.listMapper(dataGoogleIamPolicyBindingToTerraform)(this._binding.internalValue),
+      audit_config: cdktf.listMapper(dataGoogleIamPolicyAuditConfigToTerraform, true)(this._auditConfig.internalValue),
+      binding: cdktf.listMapper(dataGoogleIamPolicyBindingToTerraform, true)(this._binding.internalValue),
     };
   }
 }

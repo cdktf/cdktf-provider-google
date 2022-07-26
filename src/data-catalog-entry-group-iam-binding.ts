@@ -187,7 +187,10 @@ export class DataCatalogEntryGroupIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._entryGroup = config.entryGroup;
     this._id = config.id;
@@ -318,7 +321,7 @@ export class DataCatalogEntryGroupIamBinding extends cdktf.TerraformResource {
     return {
       entry_group: cdktf.stringToTerraform(this._entryGroup),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),

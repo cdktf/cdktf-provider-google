@@ -130,7 +130,7 @@ export function filestoreInstanceFileSharesNfsExportOptionsToTerraform(struct?: 
     access_mode: cdktf.stringToTerraform(struct!.accessMode),
     anon_gid: cdktf.numberToTerraform(struct!.anonGid),
     anon_uid: cdktf.numberToTerraform(struct!.anonUid),
-    ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRanges),
+    ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRanges),
     squash_mode: cdktf.stringToTerraform(struct!.squashMode),
   }
 }
@@ -333,7 +333,7 @@ export function filestoreInstanceFileSharesToTerraform(struct?: FilestoreInstanc
   return {
     capacity_gb: cdktf.numberToTerraform(struct!.capacityGb),
     name: cdktf.stringToTerraform(struct!.name),
-    nfs_export_options: cdktf.listMapper(filestoreInstanceFileSharesNfsExportOptionsToTerraform)(struct!.nfsExportOptions),
+    nfs_export_options: cdktf.listMapper(filestoreInstanceFileSharesNfsExportOptionsToTerraform, true)(struct!.nfsExportOptions),
   }
 }
 
@@ -462,7 +462,7 @@ export function filestoreInstanceNetworksToTerraform(struct?: FilestoreInstanceN
   }
   return {
     connect_mode: cdktf.stringToTerraform(struct!.connectMode),
-    modes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.modes),
+    modes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.modes),
     network: cdktf.stringToTerraform(struct!.network),
     reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
   }
@@ -775,7 +775,10 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -1001,7 +1004,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       tier: cdktf.stringToTerraform(this._tier),
       zone: cdktf.stringToTerraform(this._zone),
       file_shares: filestoreInstanceFileSharesToTerraform(this._fileShares.internalValue),
-      networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform)(this._networks.internalValue),
+      networks: cdktf.listMapper(filestoreInstanceNetworksToTerraform, true)(this._networks.internalValue),
       timeouts: filestoreInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

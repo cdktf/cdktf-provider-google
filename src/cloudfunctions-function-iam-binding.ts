@@ -187,7 +187,10 @@ export class CloudfunctionsFunctionIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cloudFunction = config.cloudFunction;
     this._id = config.id;
@@ -318,7 +321,7 @@ export class CloudfunctionsFunctionIamBinding extends cdktf.TerraformResource {
     return {
       cloud_function: cdktf.stringToTerraform(this._cloudFunction),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),

@@ -270,7 +270,7 @@ export function computeGlobalForwardingRuleMetadataFiltersToTerraform(struct?: C
   }
   return {
     filter_match_criteria: cdktf.stringToTerraform(struct!.filterMatchCriteria),
-    filter_labels: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform)(struct!.filterLabels),
+    filter_labels: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersFilterLabelsToTerraform, true)(struct!.filterLabels),
   }
 }
 
@@ -532,7 +532,10 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -810,7 +813,7 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
       port_range: cdktf.stringToTerraform(this._portRange),
       project: cdktf.stringToTerraform(this._project),
       target: cdktf.stringToTerraform(this._target),
-      metadata_filters: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersToTerraform)(this._metadataFilters.internalValue),
+      metadata_filters: cdktf.listMapper(computeGlobalForwardingRuleMetadataFiltersToTerraform, true)(this._metadataFilters.internalValue),
       timeouts: computeGlobalForwardingRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

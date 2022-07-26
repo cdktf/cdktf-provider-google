@@ -485,10 +485,10 @@ export function privatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameTo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    dns_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsNames),
-    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
-    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
-    uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.uris),
+    dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dnsNames),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.emailAddresses),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipAddresses),
+    uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.uris),
   }
 }
 
@@ -714,7 +714,7 @@ export function privatecaCertificateAuthorityConfigX509ConfigAdditionalExtension
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1593,7 +1593,7 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExte
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1703,7 +1703,7 @@ export function privatecaCertificateAuthorityConfigX509ConfigKeyUsageToTerraform
   return {
     base_key_usage: privatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageToTerraform(struct!.baseKeyUsage),
     extended_key_usage: privatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsageToTerraform(struct!.extendedKeyUsage),
-    unknown_extended_key_usages: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform)(struct!.unknownExtendedKeyUsages),
+    unknown_extended_key_usages: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesToTerraform, true)(struct!.unknownExtendedKeyUsages),
   }
 }
 
@@ -1808,7 +1808,7 @@ export function privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToTerrafor
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1929,11 +1929,11 @@ export function privatecaCertificateAuthorityConfigX509ConfigToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.aiaOcspServers),
-    additional_extensions: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsToTerraform)(struct!.additionalExtensions),
+    aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.aiaOcspServers),
+    additional_extensions: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsToTerraform, true)(struct!.additionalExtensions),
     ca_options: privatecaCertificateAuthorityConfigX509ConfigCaOptionsToTerraform(struct!.caOptions),
     key_usage: privatecaCertificateAuthorityConfigX509ConfigKeyUsageToTerraform(struct!.keyUsage),
-    policy_ids: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToTerraform)(struct!.policyIds),
+    policy_ids: cdktf.listMapper(privatecaCertificateAuthorityConfigX509ConfigPolicyIdsToTerraform, true)(struct!.policyIds),
   }
 }
 
@@ -2270,7 +2270,7 @@ export function privatecaCertificateAuthoritySubordinateConfigPemIssuerChainToTe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    pem_certificates: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pemCertificates),
+    pem_certificates: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pemCertificates),
   }
 }
 
@@ -2583,7 +2583,10 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._certificateAuthorityId = config.certificateAuthorityId;
     this._deletionProtection = config.deletionProtection;

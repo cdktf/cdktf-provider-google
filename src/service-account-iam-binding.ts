@@ -179,7 +179,10 @@ export class ServiceAccountIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._members = config.members;
@@ -275,7 +278,7 @@ export class ServiceAccountIamBinding extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       role: cdktf.stringToTerraform(this._role),
       service_account_id: cdktf.stringToTerraform(this._serviceAccountId),
       condition: serviceAccountIamBindingConditionToTerraform(this._condition.internalValue),

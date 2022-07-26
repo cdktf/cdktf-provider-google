@@ -192,7 +192,7 @@ export function identityPlatformInboundSamlConfigIdpConfigToTerraform(struct?: I
     idp_entity_id: cdktf.stringToTerraform(struct!.idpEntityId),
     sign_request: cdktf.booleanToTerraform(struct!.signRequest),
     sso_url: cdktf.stringToTerraform(struct!.ssoUrl),
-    idp_certificates: cdktf.listMapper(identityPlatformInboundSamlConfigIdpConfigIdpCertificatesToTerraform)(struct!.idpCertificates),
+    idp_certificates: cdktf.listMapper(identityPlatformInboundSamlConfigIdpConfigIdpCertificatesToTerraform, true)(struct!.idpCertificates),
   }
 }
 
@@ -629,7 +629,10 @@ export class IdentityPlatformInboundSamlConfig extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;

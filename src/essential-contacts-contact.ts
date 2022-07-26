@@ -207,7 +207,10 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._email = config.email;
     this._id = config.id;
@@ -319,7 +322,7 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
       email: cdktf.stringToTerraform(this._email),
       id: cdktf.stringToTerraform(this._id),
       language_tag: cdktf.stringToTerraform(this._languageTag),
-      notification_category_subscriptions: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationCategorySubscriptions),
+      notification_category_subscriptions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notificationCategorySubscriptions),
       parent: cdktf.stringToTerraform(this._parent),
       timeouts: essentialContactsContactTimeoutsToTerraform(this._timeouts.internalValue),
     };

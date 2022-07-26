@@ -826,7 +826,10 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._bootDiskSizeGb = config.bootDiskSizeGb;
     this._bootDiskType = config.bootDiskType;
@@ -1394,7 +1397,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       disk_encryption: cdktf.stringToTerraform(this._diskEncryption),
       id: cdktf.stringToTerraform(this._id),
       install_gpu_driver: cdktf.booleanToTerraform(this._installGpuDriver),
-      instance_owners: cdktf.listMapper(cdktf.stringToTerraform)(this._instanceOwners),
+      instance_owners: cdktf.listMapper(cdktf.stringToTerraform, false)(this._instanceOwners),
       kms_key: cdktf.stringToTerraform(this._kmsKey),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
@@ -1408,9 +1411,9 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       post_startup_script: cdktf.stringToTerraform(this._postStartupScript),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
-      service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceAccountScopes),
+      service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._serviceAccountScopes),
       subnet: cdktf.stringToTerraform(this._subnet),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       update_time: cdktf.stringToTerraform(this._updateTime),
       accelerator_config: notebooksInstanceAcceleratorConfigToTerraform(this._acceleratorConfig.internalValue),
       container_image: notebooksInstanceContainerImageToTerraform(this._containerImage.internalValue),

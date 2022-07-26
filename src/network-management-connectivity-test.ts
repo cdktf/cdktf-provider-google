@@ -649,7 +649,10 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -830,7 +833,7 @@ export class NetworkManagementConnectivityTest extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),
-      related_projects: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedProjects),
+      related_projects: cdktf.listMapper(cdktf.stringToTerraform, false)(this._relatedProjects),
       destination: networkManagementConnectivityTestDestinationToTerraform(this._destination.internalValue),
       source: networkManagementConnectivityTestSourceToTerraform(this._source.internalValue),
       timeouts: networkManagementConnectivityTestTimeoutsToTerraform(this._timeouts.internalValue),

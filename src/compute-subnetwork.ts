@@ -315,7 +315,7 @@ export function computeSubnetworkLogConfigToTerraform(struct?: ComputeSubnetwork
     filter_expr: cdktf.stringToTerraform(struct!.filterExpr),
     flow_sampling: cdktf.numberToTerraform(struct!.flowSampling),
     metadata: cdktf.stringToTerraform(struct!.metadata),
-    metadata_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.metadataFields),
+    metadata_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.metadataFields),
   }
 }
 
@@ -617,7 +617,10 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -936,7 +939,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       purpose: cdktf.stringToTerraform(this._purpose),
       region: cdktf.stringToTerraform(this._region),
       role: cdktf.stringToTerraform(this._role),
-      secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform)(this._secondaryIpRange.internalValue),
+      secondary_ip_range: cdktf.listMapper(computeSubnetworkSecondaryIpRangeToTerraform, false)(this._secondaryIpRange.internalValue),
       stack_type: cdktf.stringToTerraform(this._stackType),
       log_config: computeSubnetworkLogConfigToTerraform(this._logConfig.internalValue),
       timeouts: computeSubnetworkTimeoutsToTerraform(this._timeouts.internalValue),

@@ -203,7 +203,10 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._parent = config.parent;
@@ -313,7 +316,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       parent: cdktf.stringToTerraform(this._parent),
-      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopes),
       title: cdktf.stringToTerraform(this._title),
       timeouts: accessContextManagerAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

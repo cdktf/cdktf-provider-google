@@ -183,7 +183,10 @@ export class ApigeeEnvironmentIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._envId = config.envId;
     this._id = config.id;
@@ -294,7 +297,7 @@ export class ApigeeEnvironmentIamBinding extends cdktf.TerraformResource {
     return {
       env_id: cdktf.stringToTerraform(this._envId),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       org_id: cdktf.stringToTerraform(this._orgId),
       role: cdktf.stringToTerraform(this._role),
       condition: apigeeEnvironmentIamBindingConditionToTerraform(this._condition.internalValue),

@@ -187,7 +187,10 @@ export class BigtableTableIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._instance = config.instance;
@@ -315,7 +318,7 @@ export class BigtableTableIamBinding extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       table: cdktf.stringToTerraform(this._table),

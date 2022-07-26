@@ -483,7 +483,10 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._expirationTime = config.expirationTime;
     this._id = config.id;
@@ -681,10 +684,10 @@ export class ContainerAnalysisNote extends cdktf.TerraformResource {
       long_description: cdktf.stringToTerraform(this._longDescription),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      related_note_names: cdktf.listMapper(cdktf.stringToTerraform)(this._relatedNoteNames),
+      related_note_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._relatedNoteNames),
       short_description: cdktf.stringToTerraform(this._shortDescription),
       attestation_authority: containerAnalysisNoteAttestationAuthorityToTerraform(this._attestationAuthority.internalValue),
-      related_url: cdktf.listMapper(containerAnalysisNoteRelatedUrlToTerraform)(this._relatedUrl.internalValue),
+      related_url: cdktf.listMapper(containerAnalysisNoteRelatedUrlToTerraform, true)(this._relatedUrl.internalValue),
       timeouts: containerAnalysisNoteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -345,7 +345,10 @@ export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activeKeyVersion = config.activeKeyVersion;
     this._id = config.id;
@@ -477,9 +480,9 @@ export class OrganizationAccessApprovalSettings extends cdktf.TerraformResource 
     return {
       active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       id: cdktf.stringToTerraform(this._id),
-      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notificationEmails),
       organization_id: cdktf.stringToTerraform(this._organizationId),
-      enrolled_services: cdktf.listMapper(organizationAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices.internalValue),
+      enrolled_services: cdktf.listMapper(organizationAccessApprovalSettingsEnrolledServicesToTerraform, true)(this._enrolledServices.internalValue),
       timeouts: organizationAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -183,7 +183,10 @@ export class HealthcareConsentStoreIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._consentStoreId = config.consentStoreId;
     this._dataset = config.dataset;
@@ -295,7 +298,7 @@ export class HealthcareConsentStoreIamBinding extends cdktf.TerraformResource {
       consent_store_id: cdktf.stringToTerraform(this._consentStoreId),
       dataset: cdktf.stringToTerraform(this._dataset),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       role: cdktf.stringToTerraform(this._role),
       condition: healthcareConsentStoreIamBindingConditionToTerraform(this._condition.internalValue),
     };

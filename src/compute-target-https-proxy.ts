@@ -245,7 +245,10 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -441,7 +444,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       proxy_bind: cdktf.booleanToTerraform(this._proxyBind),
       quic_override: cdktf.stringToTerraform(this._quicOverride),
-      ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform)(this._sslCertificates),
+      ssl_certificates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sslCertificates),
       ssl_policy: cdktf.stringToTerraform(this._sslPolicy),
       url_map: cdktf.stringToTerraform(this._urlMap),
       timeouts: computeTargetHttpsProxyTimeoutsToTerraform(this._timeouts.internalValue),

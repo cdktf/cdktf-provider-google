@@ -329,7 +329,7 @@ export function cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct?: Cloud
   }
   return {
     location: cdktf.stringToTerraform(struct!.location),
-    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    paths: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.paths),
   }
 }
 
@@ -436,7 +436,7 @@ export function cloudbuildTriggerBuildArtifactsToTerraform(struct?: CloudbuildTr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
+    images: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.images),
     objects: cloudbuildTriggerBuildArtifactsObjectsToTerraform(struct!.objects),
   }
 }
@@ -650,7 +650,7 @@ export function cloudbuildTriggerBuildAvailableSecretsToTerraform(struct?: Cloud
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    secret_manager: cdktf.listMapper(cloudbuildTriggerBuildAvailableSecretsSecretManagerToTerraform)(struct!.secretManager),
+    secret_manager: cdktf.listMapper(cloudbuildTriggerBuildAvailableSecretsSecretManagerToTerraform, true)(struct!.secretManager),
   }
 }
 
@@ -933,16 +933,16 @@ export function cloudbuildTriggerBuildOptionsToTerraform(struct?: CloudbuildTrig
   return {
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     dynamic_substitutions: cdktf.booleanToTerraform(struct!.dynamicSubstitutions),
-    env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.env),
+    env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.env),
     log_streaming_option: cdktf.stringToTerraform(struct!.logStreamingOption),
     logging: cdktf.stringToTerraform(struct!.logging),
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     requested_verify_option: cdktf.stringToTerraform(struct!.requestedVerifyOption),
-    secret_env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretEnv),
-    source_provenance_hash: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceProvenanceHash),
+    secret_env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.secretEnv),
+    source_provenance_hash: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceProvenanceHash),
     substitution_option: cdktf.stringToTerraform(struct!.substitutionOption),
     worker_pool: cdktf.stringToTerraform(struct!.workerPool),
-    volumes: cdktf.listMapper(cloudbuildTriggerBuildOptionsVolumesToTerraform)(struct!.volumes),
+    volumes: cdktf.listMapper(cloudbuildTriggerBuildOptionsVolumesToTerraform, true)(struct!.volumes),
   }
 }
 
@@ -2110,17 +2110,17 @@ export function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTrigger
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
     dir: cdktf.stringToTerraform(struct!.dir),
     entrypoint: cdktf.stringToTerraform(struct!.entrypoint),
-    env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.env),
+    env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.env),
     id: cdktf.stringToTerraform(struct!.id),
     name: cdktf.stringToTerraform(struct!.name),
-    secret_env: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretEnv),
+    secret_env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.secretEnv),
     timeout: cdktf.stringToTerraform(struct!.timeout),
     timing: cdktf.stringToTerraform(struct!.timing),
-    wait_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.waitFor),
-    volumes: cdktf.listMapper(cloudbuildTriggerBuildStepVolumesToTerraform)(struct!.volumes),
+    wait_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.waitFor),
+    volumes: cdktf.listMapper(cloudbuildTriggerBuildStepVolumesToTerraform, true)(struct!.volumes),
   }
 }
 
@@ -2513,18 +2513,18 @@ export function cloudbuildTriggerBuildToTerraform(struct?: CloudbuildTriggerBuil
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    images: cdktf.listMapper(cdktf.stringToTerraform)(struct!.images),
+    images: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.images),
     logs_bucket: cdktf.stringToTerraform(struct!.logsBucket),
     queue_ttl: cdktf.stringToTerraform(struct!.queueTtl),
     substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.substitutions),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     timeout: cdktf.stringToTerraform(struct!.timeout),
     artifacts: cloudbuildTriggerBuildArtifactsToTerraform(struct!.artifacts),
     available_secrets: cloudbuildTriggerBuildAvailableSecretsToTerraform(struct!.availableSecrets),
     options: cloudbuildTriggerBuildOptionsToTerraform(struct!.options),
-    secret: cdktf.listMapper(cloudbuildTriggerBuildSecretToTerraform)(struct!.secret),
+    secret: cdktf.listMapper(cloudbuildTriggerBuildSecretToTerraform, true)(struct!.secret),
     source: cloudbuildTriggerBuildSourceToTerraform(struct!.source),
-    step: cdktf.listMapper(cloudbuildTriggerBuildStepToTerraform)(struct!.step),
+    step: cdktf.listMapper(cloudbuildTriggerBuildStepToTerraform, true)(struct!.step),
   }
 }
 
@@ -4069,7 +4069,10 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._disabled = config.disabled;
@@ -4472,14 +4475,14 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       filename: cdktf.stringToTerraform(this._filename),
       filter: cdktf.stringToTerraform(this._filter),
       id: cdktf.stringToTerraform(this._id),
-      ignored_files: cdktf.listMapper(cdktf.stringToTerraform)(this._ignoredFiles),
+      ignored_files: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ignoredFiles),
       include_build_logs: cdktf.stringToTerraform(this._includeBuildLogs),
-      included_files: cdktf.listMapper(cdktf.stringToTerraform)(this._includedFiles),
+      included_files: cdktf.listMapper(cdktf.stringToTerraform, false)(this._includedFiles),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
       substitutions: cdktf.hashMapper(cdktf.stringToTerraform)(this._substitutions),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       approval_config: cloudbuildTriggerApprovalConfigToTerraform(this._approvalConfig.internalValue),
       build: cloudbuildTriggerBuildToTerraform(this._build.internalValue),
       git_file_source: cloudbuildTriggerGitFileSourceToTerraform(this._gitFileSource.internalValue),

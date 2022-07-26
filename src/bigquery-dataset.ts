@@ -235,7 +235,7 @@ export function bigqueryDatasetAccessDatasetToTerraform(struct?: BigqueryDataset
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    target_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.targetTypes),
+    target_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.targetTypes),
     dataset: bigqueryDatasetAccessDatasetDatasetToTerraform(struct!.dataset),
   }
 }
@@ -941,7 +941,10 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._datasetId = config.datasetId;
     this._defaultPartitionExpirationMs = config.defaultPartitionExpirationMs;
@@ -1203,7 +1206,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
-      access: cdktf.listMapper(bigqueryDatasetAccessToTerraform)(this._access.internalValue),
+      access: cdktf.listMapper(bigqueryDatasetAccessToTerraform, true)(this._access.internalValue),
       default_encryption_configuration: bigqueryDatasetDefaultEncryptionConfigurationToTerraform(this._defaultEncryptionConfiguration.internalValue),
       timeouts: bigqueryDatasetTimeoutsToTerraform(this._timeouts.internalValue),
     };

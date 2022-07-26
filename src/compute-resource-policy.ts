@@ -924,7 +924,7 @@ export function computeResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedul
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    day_of_weeks: cdktf.listMapper(computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksToTerraform)(struct!.dayOfWeeks),
+    day_of_weeks: cdktf.listMapper(computeResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeksToTerraform, true)(struct!.dayOfWeeks),
   }
 }
 
@@ -1128,7 +1128,7 @@ export function computeResourcePolicySnapshotSchedulePolicySnapshotPropertiesToT
   return {
     guest_flush: cdktf.booleanToTerraform(struct!.guestFlush),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
-    storage_locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.storageLocations),
+    storage_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.storageLocations),
   }
 }
 
@@ -1481,7 +1481,10 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

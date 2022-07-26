@@ -222,7 +222,10 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._consumerAcceptList = config.consumerAcceptList;
     this._description = config.description;
@@ -429,7 +432,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      consumer_accept_list: cdktf.listMapper(cdktf.stringToTerraform)(this._consumerAcceptList),
+      consumer_accept_list: cdktf.listMapper(cdktf.stringToTerraform, false)(this._consumerAcceptList),
       description: cdktf.stringToTerraform(this._description),
       disk_encryption_key_name: cdktf.stringToTerraform(this._diskEncryptionKeyName),
       display_name: cdktf.stringToTerraform(this._displayName),

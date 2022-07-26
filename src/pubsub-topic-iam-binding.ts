@@ -183,7 +183,10 @@ export class PubsubTopicIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._members = config.members;
@@ -296,7 +299,7 @@ export class PubsubTopicIamBinding extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       topic: cdktf.stringToTerraform(this._topic),

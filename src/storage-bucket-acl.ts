@@ -72,7 +72,10 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._bucket = config.bucket;
     this._defaultAcl = config.defaultAcl;
@@ -172,7 +175,7 @@ export class StorageBucketAcl extends cdktf.TerraformResource {
       default_acl: cdktf.stringToTerraform(this._defaultAcl),
       id: cdktf.stringToTerraform(this._id),
       predefined_acl: cdktf.stringToTerraform(this._predefinedAcl),
-      role_entity: cdktf.listMapper(cdktf.stringToTerraform)(this._roleEntity),
+      role_entity: cdktf.listMapper(cdktf.stringToTerraform, false)(this._roleEntity),
     };
   }
 }

@@ -341,7 +341,10 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -473,7 +476,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      public_key: cdktf.listMapper(networkServicesEdgeCacheKeysetPublicKeyToTerraform)(this._publicKey.internalValue),
+      public_key: cdktf.listMapper(networkServicesEdgeCacheKeysetPublicKeyToTerraform, true)(this._publicKey.internalValue),
       timeouts: networkServicesEdgeCacheKeysetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

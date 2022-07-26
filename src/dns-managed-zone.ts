@@ -313,7 +313,7 @@ export function dnsManagedZoneDnssecConfigToTerraform(struct?: DnsManagedZoneDns
     kind: cdktf.stringToTerraform(struct!.kind),
     non_existence: cdktf.stringToTerraform(struct!.nonExistence),
     state: cdktf.stringToTerraform(struct!.state),
-    default_key_specs: cdktf.listMapper(dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform)(struct!.defaultKeySpecs),
+    default_key_specs: cdktf.listMapper(dnsManagedZoneDnssecConfigDefaultKeySpecsToTerraform, true)(struct!.defaultKeySpecs),
   }
 }
 
@@ -573,7 +573,7 @@ export function dnsManagedZoneForwardingConfigToTerraform(struct?: DnsManagedZon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    target_name_servers: cdktf.listMapper(dnsManagedZoneForwardingConfigTargetNameServersToTerraform)(struct!.targetNameServers),
+    target_name_servers: cdktf.listMapper(dnsManagedZoneForwardingConfigTargetNameServersToTerraform, true)(struct!.targetNameServers),
   }
 }
 
@@ -865,7 +865,7 @@ export function dnsManagedZonePrivateVisibilityConfigToTerraform(struct?: DnsMan
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    networks: cdktf.listMapper(dnsManagedZonePrivateVisibilityConfigNetworksToTerraform)(struct!.networks),
+    networks: cdktf.listMapper(dnsManagedZonePrivateVisibilityConfigNetworksToTerraform, true)(struct!.networks),
   }
 }
 
@@ -1076,7 +1076,10 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._dnsName = config.dnsName;

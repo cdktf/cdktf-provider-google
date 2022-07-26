@@ -230,7 +230,10 @@ export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._domain = config.domain;
     this._id = config.id;
@@ -400,7 +403,7 @@ export class ActiveDirectoryDomainTrust extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       selective_authentication: cdktf.booleanToTerraform(this._selectiveAuthentication),
-      target_dns_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._targetDnsIpAddresses),
+      target_dns_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetDnsIpAddresses),
       target_domain_name: cdktf.stringToTerraform(this._targetDomainName),
       trust_direction: cdktf.stringToTerraform(this._trustDirection),
       trust_handshake_secret: cdktf.stringToTerraform(this._trustHandshakeSecret),

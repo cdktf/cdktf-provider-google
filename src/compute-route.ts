@@ -272,7 +272,10 @@ export class ComputeRoute extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._destRange = config.destRange;
@@ -555,7 +558,7 @@ export class ComputeRoute extends cdktf.TerraformResource {
       next_hop_vpn_tunnel: cdktf.stringToTerraform(this._nextHopVpnTunnel),
       priority: cdktf.numberToTerraform(this._priority),
       project: cdktf.stringToTerraform(this._project),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       timeouts: computeRouteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

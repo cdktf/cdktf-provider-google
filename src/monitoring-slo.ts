@@ -279,9 +279,9 @@ export function monitoringSloBasicSliToTerraform(struct?: MonitoringSloBasicSliO
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
-    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
-    version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    location: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.location),
+    method: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.method),
+    version: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.version),
     availability: monitoringSloBasicSliAvailabilityToTerraform(struct!.availability),
     latency: monitoringSloBasicSliLatencyToTerraform(struct!.latency),
   }
@@ -1176,9 +1176,9 @@ export function monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerfo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    location: cdktf.listMapper(cdktf.stringToTerraform)(struct!.location),
-    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
-    version: cdktf.listMapper(cdktf.stringToTerraform)(struct!.version),
+    location: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.location),
+    method: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.method),
+    version: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.version),
     availability: monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityToTerraform(struct!.availability),
     latency: monitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyToTerraform(struct!.latency),
   }
@@ -2495,7 +2495,10 @@ export class MonitoringSlo extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._calendarPeriod = config.calendarPeriod;
     this._displayName = config.displayName;

@@ -238,7 +238,10 @@ export class CertificateManagerCertificateMapEntry extends cdktf.TerraformResour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._certificates = config.certificates;
     this._description = config.description;
@@ -428,7 +431,7 @@ export class CertificateManagerCertificateMapEntry extends cdktf.TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      certificates: cdktf.listMapper(cdktf.stringToTerraform)(this._certificates),
+      certificates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._certificates),
       description: cdktf.stringToTerraform(this._description),
       hostname: cdktf.stringToTerraform(this._hostname),
       id: cdktf.stringToTerraform(this._id),

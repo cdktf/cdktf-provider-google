@@ -85,7 +85,7 @@ export function recaptchaEnterpriseKeyAndroidSettingsToTerraform(struct?: Recapt
   }
   return {
     allow_all_package_names: cdktf.booleanToTerraform(struct!.allowAllPackageNames),
-    allowed_package_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedPackageNames),
+    allowed_package_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedPackageNames),
   }
 }
 
@@ -181,7 +181,7 @@ export function recaptchaEnterpriseKeyIosSettingsToTerraform(struct?: RecaptchaE
   }
   return {
     allow_all_bundle_ids: cdktf.booleanToTerraform(struct!.allowAllBundleIds),
-    allowed_bundle_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedBundleIds),
+    allowed_bundle_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedBundleIds),
   }
 }
 
@@ -521,7 +521,7 @@ export function recaptchaEnterpriseKeyWebSettingsToTerraform(struct?: RecaptchaE
   return {
     allow_all_domains: cdktf.booleanToTerraform(struct!.allowAllDomains),
     allow_amp_traffic: cdktf.booleanToTerraform(struct!.allowAmpTraffic),
-    allowed_domains: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedDomains),
+    allowed_domains: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedDomains),
     challenge_security_preference: cdktf.stringToTerraform(struct!.challengeSecurityPreference),
     integration_type: cdktf.stringToTerraform(struct!.integrationType),
   }
@@ -693,7 +693,10 @@ export class RecaptchaEnterpriseKey extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._id = config.id;

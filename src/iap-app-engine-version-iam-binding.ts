@@ -191,7 +191,10 @@ export class IapAppEngineVersionIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._appId = config.appId;
     this._id = config.id;
@@ -333,7 +336,7 @@ export class IapAppEngineVersionIamBinding extends cdktf.TerraformResource {
     return {
       app_id: cdktf.stringToTerraform(this._appId),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       service: cdktf.stringToTerraform(this._service),

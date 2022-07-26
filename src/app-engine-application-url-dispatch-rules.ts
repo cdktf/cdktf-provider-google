@@ -347,7 +347,10 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._project = config.project;
@@ -428,7 +431,7 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
     return {
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
-      dispatch_rules: cdktf.listMapper(appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform)(this._dispatchRules.internalValue),
+      dispatch_rules: cdktf.listMapper(appEngineApplicationUrlDispatchRulesDispatchRulesToTerraform, true)(this._dispatchRules.internalValue),
       timeouts: appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -266,7 +266,7 @@ export function containerAwsClusterAuthorizationToTerraform(struct?: ContainerAw
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    admin_users: cdktf.listMapper(containerAwsClusterAuthorizationAdminUsersToTerraform)(struct!.adminUsers),
+    admin_users: cdktf.listMapper(containerAwsClusterAuthorizationAdminUsersToTerraform, true)(struct!.adminUsers),
   }
 }
 
@@ -1087,8 +1087,8 @@ export function containerAwsClusterControlPlaneToTerraform(struct?: ContainerAws
   return {
     iam_instance_profile: cdktf.stringToTerraform(struct!.iamInstanceProfile),
     instance_type: cdktf.stringToTerraform(struct!.instanceType),
-    security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.securityGroupIds),
-    subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subnetIds),
+    security_group_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.securityGroupIds),
+    subnet_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subnetIds),
     tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.tags),
     version: cdktf.stringToTerraform(struct!.version),
     aws_services_authentication: containerAwsClusterControlPlaneAwsServicesAuthenticationToTerraform(struct!.awsServicesAuthentication),
@@ -1494,8 +1494,8 @@ export function containerAwsClusterNetworkingToTerraform(struct?: ContainerAwsCl
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    pod_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.podAddressCidrBlocks),
-    service_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceAddressCidrBlocks),
+    pod_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.podAddressCidrBlocks),
+    service_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serviceAddressCidrBlocks),
     vpc_id: cdktf.stringToTerraform(struct!.vpcId),
   }
 }
@@ -1745,7 +1745,10 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._awsRegion = config.awsRegion;

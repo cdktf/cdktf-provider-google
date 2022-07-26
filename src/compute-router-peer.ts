@@ -582,7 +582,10 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._advertiseMode = config.advertiseMode;
     this._advertisedGroups = config.advertisedGroups;
@@ -859,7 +862,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       advertise_mode: cdktf.stringToTerraform(this._advertiseMode),
-      advertised_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._advertisedGroups),
+      advertised_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(this._advertisedGroups),
       advertised_route_priority: cdktf.numberToTerraform(this._advertisedRoutePriority),
       enable: cdktf.booleanToTerraform(this._enable),
       id: cdktf.stringToTerraform(this._id),
@@ -871,7 +874,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
-      advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform)(this._advertisedIpRanges.internalValue),
+      advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform, true)(this._advertisedIpRanges.internalValue),
       bfd: computeRouterPeerBfdToTerraform(this._bfd.internalValue),
       timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),
     };

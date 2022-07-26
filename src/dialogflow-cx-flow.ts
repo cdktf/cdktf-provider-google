@@ -93,7 +93,7 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesTextToTer
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    text: cdktf.listMapper(cdktf.stringToTerraform)(struct!.text),
+    text: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.text),
   }
 }
 
@@ -285,7 +285,7 @@ export function dialogflowCxFlowEventHandlersTriggerFulfillmentToTerraform(struc
     return_partial_responses: cdktf.booleanToTerraform(struct!.returnPartialResponses),
     tag: cdktf.stringToTerraform(struct!.tag),
     webhook: cdktf.stringToTerraform(struct!.webhook),
-    messages: cdktf.listMapper(dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerraform)(struct!.messages),
+    messages: cdktf.listMapper(dialogflowCxFlowEventHandlersTriggerFulfillmentMessagesToTerraform, true)(struct!.messages),
   }
 }
 
@@ -870,7 +870,7 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesTextTo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    text: cdktf.listMapper(cdktf.stringToTerraform)(struct!.text),
+    text: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.text),
   }
 }
 
@@ -1062,7 +1062,7 @@ export function dialogflowCxFlowTransitionRoutesTriggerFulfillmentToTerraform(st
     return_partial_responses: cdktf.booleanToTerraform(struct!.returnPartialResponses),
     tag: cdktf.stringToTerraform(struct!.tag),
     webhook: cdktf.stringToTerraform(struct!.webhook),
-    messages: cdktf.listMapper(dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerraform)(struct!.messages),
+    messages: cdktf.listMapper(dialogflowCxFlowTransitionRoutesTriggerFulfillmentMessagesToTerraform, true)(struct!.messages),
   }
 }
 
@@ -1437,7 +1437,10 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;
@@ -1628,11 +1631,11 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       language_code: cdktf.stringToTerraform(this._languageCode),
       parent: cdktf.stringToTerraform(this._parent),
-      transition_route_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._transitionRouteGroups),
-      event_handlers: cdktf.listMapper(dialogflowCxFlowEventHandlersToTerraform)(this._eventHandlers.internalValue),
+      transition_route_groups: cdktf.listMapper(cdktf.stringToTerraform, false)(this._transitionRouteGroups),
+      event_handlers: cdktf.listMapper(dialogflowCxFlowEventHandlersToTerraform, true)(this._eventHandlers.internalValue),
       nlu_settings: dialogflowCxFlowNluSettingsToTerraform(this._nluSettings.internalValue),
       timeouts: dialogflowCxFlowTimeoutsToTerraform(this._timeouts.internalValue),
-      transition_routes: cdktf.listMapper(dialogflowCxFlowTransitionRoutesToTerraform)(this._transitionRoutes.internalValue),
+      transition_routes: cdktf.listMapper(dialogflowCxFlowTransitionRoutesToTerraform, true)(this._transitionRoutes.internalValue),
     };
   }
 }

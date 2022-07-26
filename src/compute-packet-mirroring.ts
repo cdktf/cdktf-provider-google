@@ -168,9 +168,9 @@ export function computePacketMirroringFilterToTerraform(struct?: ComputePacketMi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cidrRanges),
+    cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.cidrRanges),
     direction: cdktf.stringToTerraform(struct!.direction),
-    ip_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipProtocols),
+    ip_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipProtocols),
   }
 }
 
@@ -485,9 +485,9 @@ export function computePacketMirroringMirroredResourcesToTerraform(struct?: Comp
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
-    instances: cdktf.listMapper(computePacketMirroringMirroredResourcesInstancesToTerraform)(struct!.instances),
-    subnetworks: cdktf.listMapper(computePacketMirroringMirroredResourcesSubnetworksToTerraform)(struct!.subnetworks),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
+    instances: cdktf.listMapper(computePacketMirroringMirroredResourcesInstancesToTerraform, true)(struct!.instances),
+    subnetworks: cdktf.listMapper(computePacketMirroringMirroredResourcesSubnetworksToTerraform, true)(struct!.subnetworks),
   }
 }
 
@@ -809,7 +809,10 @@ export class ComputePacketMirroring extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

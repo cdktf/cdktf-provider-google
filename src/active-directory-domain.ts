@@ -228,7 +228,10 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._admin = config.admin;
     this._authorizedNetworks = config.authorizedNetworks;
@@ -397,11 +400,11 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin: cdktf.stringToTerraform(this._admin),
-      authorized_networks: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedNetworks),
+      authorized_networks: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authorizedNetworks),
       domain_name: cdktf.stringToTerraform(this._domainName),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
-      locations: cdktf.listMapper(cdktf.stringToTerraform)(this._locations),
+      locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._locations),
       project: cdktf.stringToTerraform(this._project),
       reserved_ip_range: cdktf.stringToTerraform(this._reservedIpRange),
       timeouts: activeDirectoryDomainTimeoutsToTerraform(this._timeouts.internalValue),

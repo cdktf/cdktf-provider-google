@@ -187,7 +187,10 @@ export class PrivatecaCertificateTemplateIamBinding extends cdktf.TerraformResou
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._certificateTemplate = config.certificateTemplate;
     this._id = config.id;
@@ -319,7 +322,7 @@ export class PrivatecaCertificateTemplateIamBinding extends cdktf.TerraformResou
       certificate_template: cdktf.stringToTerraform(this._certificateTemplate),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       condition: privatecaCertificateTemplateIamBindingConditionToTerraform(this._condition.internalValue),

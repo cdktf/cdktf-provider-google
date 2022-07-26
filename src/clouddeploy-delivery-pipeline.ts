@@ -304,7 +304,7 @@ export function clouddeployDeliveryPipelineSerialPipelineStagesToTerraform(struc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    profiles: cdktf.listMapper(cdktf.stringToTerraform)(struct!.profiles),
+    profiles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.profiles),
     target_id: cdktf.stringToTerraform(struct!.targetId),
   }
 }
@@ -426,7 +426,7 @@ export function clouddeployDeliveryPipelineSerialPipelineToTerraform(struct?: Cl
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    stages: cdktf.listMapper(clouddeployDeliveryPipelineSerialPipelineStagesToTerraform)(struct!.stages),
+    stages: cdktf.listMapper(clouddeployDeliveryPipelineSerialPipelineStagesToTerraform, true)(struct!.stages),
   }
 }
 
@@ -640,7 +640,10 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._description = config.description;
