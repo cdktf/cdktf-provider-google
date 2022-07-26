@@ -190,7 +190,10 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._origin = config.origin;
@@ -308,7 +311,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
       origin: cdktf.stringToTerraform(this._origin),
       parent: cdktf.stringToTerraform(this._parent),
       reason: cdktf.stringToTerraform(this._reason),
-      restrictions: cdktf.listMapper(cdktf.stringToTerraform)(this._restrictions),
+      restrictions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._restrictions),
       timeouts: resourceManagerLienTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

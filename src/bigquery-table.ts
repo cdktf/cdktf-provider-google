@@ -692,7 +692,7 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
     max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
     schema: cdktf.stringToTerraform(struct!.schema),
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
-    source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
+    source_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceUris),
     csv_options: bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct!.csvOptions),
     google_sheets_options: bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct!.googleSheetsOptions),
     hive_partitioning_options: bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct!.hivePartitioningOptions),
@@ -1563,7 +1563,10 @@ export class BigqueryTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._clustering = config.clustering;
     this._datasetId = config.datasetId;
@@ -1905,7 +1908,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      clustering: cdktf.listMapper(cdktf.stringToTerraform)(this._clustering),
+      clustering: cdktf.listMapper(cdktf.stringToTerraform, false)(this._clustering),
       dataset_id: cdktf.stringToTerraform(this._datasetId),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       description: cdktf.stringToTerraform(this._description),

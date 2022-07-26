@@ -64,7 +64,10 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._delegates = config.delegates;
     this._id = config.id;
@@ -165,7 +168,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      delegates: cdktf.listMapper(cdktf.stringToTerraform)(this._delegates),
+      delegates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._delegates),
       id: cdktf.stringToTerraform(this._id),
       include_email: cdktf.booleanToTerraform(this._includeEmail),
       target_audience: cdktf.stringToTerraform(this._targetAudience),

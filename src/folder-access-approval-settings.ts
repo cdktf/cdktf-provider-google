@@ -359,7 +359,10 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activeKeyVersion = config.activeKeyVersion;
     this._folderId = config.folderId;
@@ -492,8 +495,8 @@ export class FolderAccessApprovalSettings extends cdktf.TerraformResource {
       active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       folder_id: cdktf.stringToTerraform(this._folderId),
       id: cdktf.stringToTerraform(this._id),
-      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
-      enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices.internalValue),
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notificationEmails),
+      enrolled_services: cdktf.listMapper(folderAccessApprovalSettingsEnrolledServicesToTerraform, true)(this._enrolledServices.internalValue),
       timeouts: folderAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

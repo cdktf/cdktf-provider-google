@@ -109,7 +109,7 @@ export function dialogflowCxEntityTypeEntitiesToTerraform(struct?: DialogflowCxE
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    synonyms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.synonyms),
+    synonyms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.synonyms),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
@@ -477,7 +477,10 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autoExpansionMode = config.autoExpansionMode;
     this._displayName = config.displayName;
@@ -682,8 +685,8 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
       language_code: cdktf.stringToTerraform(this._languageCode),
       parent: cdktf.stringToTerraform(this._parent),
       redact: cdktf.booleanToTerraform(this._redact),
-      entities: cdktf.listMapper(dialogflowCxEntityTypeEntitiesToTerraform)(this._entities.internalValue),
-      excluded_phrases: cdktf.listMapper(dialogflowCxEntityTypeExcludedPhrasesToTerraform)(this._excludedPhrases.internalValue),
+      entities: cdktf.listMapper(dialogflowCxEntityTypeEntitiesToTerraform, true)(this._entities.internalValue),
+      excluded_phrases: cdktf.listMapper(dialogflowCxEntityTypeExcludedPhrasesToTerraform, true)(this._excludedPhrases.internalValue),
       timeouts: dialogflowCxEntityTypeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

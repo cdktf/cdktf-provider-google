@@ -1019,7 +1019,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     boot_disk_kms_key: cdktf.stringToTerraform(struct!.bootDiskKmsKey),
     disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
-    guest_accelerator: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorToTerraform)(struct!.guestAccelerator),
+    guest_accelerator: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorToTerraform, false)(struct!.guestAccelerator),
     image_type: cdktf.stringToTerraform(struct!.imageType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
@@ -1027,12 +1027,12 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     node_group: cdktf.stringToTerraform(struct!.nodeGroup),
-    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     spot: cdktf.booleanToTerraform(struct!.spot),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
-    taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform)(struct!.taint),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
+    taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform, false)(struct!.taint),
     gcfs_config: containerNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
     shielded_instance_config: containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
@@ -1780,7 +1780,10 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._cluster = config.cluster;
     this._id = config.id;
@@ -2086,7 +2089,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       node_count: cdktf.numberToTerraform(this._nodeCount),
-      node_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeLocations),
+      node_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(this._nodeLocations),
       project: cdktf.stringToTerraform(this._project),
       version: cdktf.stringToTerraform(this._version),
       autoscaling: containerNodePoolAutoscalingToTerraform(this._autoscaling.internalValue),

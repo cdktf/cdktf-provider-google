@@ -375,7 +375,7 @@ export function binaryAuthorizationAttestorAttestationAuthorityNoteToTerraform(s
   }
   return {
     note_reference: cdktf.stringToTerraform(struct!.noteReference),
-    public_keys: cdktf.listMapper(binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform)(struct!.publicKeys),
+    public_keys: cdktf.listMapper(binaryAuthorizationAttestorAttestationAuthorityNotePublicKeysToTerraform, true)(struct!.publicKeys),
   }
 }
 
@@ -613,7 +613,10 @@ export class BinaryAuthorizationAttestor extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

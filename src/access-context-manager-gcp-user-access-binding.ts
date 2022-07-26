@@ -201,7 +201,10 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessLevels = config.accessLevels;
     this._groupKey = config.groupKey;
@@ -296,7 +299,7 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_levels: cdktf.listMapper(cdktf.stringToTerraform)(this._accessLevels),
+      access_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._accessLevels),
       group_key: cdktf.stringToTerraform(this._groupKey),
       id: cdktf.stringToTerraform(this._id),
       organization_id: cdktf.stringToTerraform(this._organizationId),

@@ -182,7 +182,7 @@ export function apikeysKeyRestrictionsAndroidKeyRestrictionsToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_applications: cdktf.listMapper(apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsToTerraform)(struct!.allowedApplications),
+    allowed_applications: cdktf.listMapper(apikeysKeyRestrictionsAndroidKeyRestrictionsAllowedApplicationsToTerraform, true)(struct!.allowedApplications),
   }
 }
 
@@ -252,7 +252,7 @@ export function apikeysKeyRestrictionsApiTargetsToTerraform(struct?: ApikeysKeyR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.methods),
+    methods: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.methods),
     service: cdktf.stringToTerraform(struct!.service),
   }
 }
@@ -371,7 +371,7 @@ export function apikeysKeyRestrictionsBrowserKeyRestrictionsToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_referrers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedReferrers),
+    allowed_referrers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedReferrers),
   }
 }
 
@@ -435,7 +435,7 @@ export function apikeysKeyRestrictionsIosKeyRestrictionsToTerraform(struct?: Api
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_bundle_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedBundleIds),
+    allowed_bundle_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedBundleIds),
   }
 }
 
@@ -499,7 +499,7 @@ export function apikeysKeyRestrictionsServerKeyRestrictionsToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedIps),
+    allowed_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedIps),
   }
 }
 
@@ -588,7 +588,7 @@ export function apikeysKeyRestrictionsToTerraform(struct?: ApikeysKeyRestriction
   }
   return {
     android_key_restrictions: apikeysKeyRestrictionsAndroidKeyRestrictionsToTerraform(struct!.androidKeyRestrictions),
-    api_targets: cdktf.listMapper(apikeysKeyRestrictionsApiTargetsToTerraform)(struct!.apiTargets),
+    api_targets: cdktf.listMapper(apikeysKeyRestrictionsApiTargetsToTerraform, true)(struct!.apiTargets),
     browser_key_restrictions: apikeysKeyRestrictionsBrowserKeyRestrictionsToTerraform(struct!.browserKeyRestrictions),
     ios_key_restrictions: apikeysKeyRestrictionsIosKeyRestrictionsToTerraform(struct!.iosKeyRestrictions),
     server_key_restrictions: apikeysKeyRestrictionsServerKeyRestrictionsToTerraform(struct!.serverKeyRestrictions),
@@ -893,7 +893,10 @@ export class ApikeysKey extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._id = config.id;

@@ -202,7 +202,10 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._hostnames = config.hostnames;
     this._id = config.id;
@@ -295,7 +298,7 @@ export class ApigeeEnvgroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hostnames: cdktf.listMapper(cdktf.stringToTerraform)(this._hostnames),
+      hostnames: cdktf.listMapper(cdktf.stringToTerraform, false)(this._hostnames),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),

@@ -275,7 +275,10 @@ export class DialogflowAgent extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._apiVersion = config.apiVersion;
     this._avatarUri = config.avatarUri;
@@ -533,7 +536,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       match_mode: cdktf.stringToTerraform(this._matchMode),
       project: cdktf.stringToTerraform(this._project),
-      supported_language_codes: cdktf.listMapper(cdktf.stringToTerraform)(this._supportedLanguageCodes),
+      supported_language_codes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._supportedLanguageCodes),
       tier: cdktf.stringToTerraform(this._tier),
       time_zone: cdktf.stringToTerraform(this._timeZone),
       timeouts: dialogflowAgentTimeoutsToTerraform(this._timeouts.internalValue),

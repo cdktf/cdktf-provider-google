@@ -504,7 +504,10 @@ export class ComputeImage extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._diskSizeGb = config.diskSizeGb;
@@ -778,13 +781,13 @@ export class ComputeImage extends cdktf.TerraformResource {
       family: cdktf.stringToTerraform(this._family),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
-      licenses: cdktf.listMapper(cdktf.stringToTerraform)(this._licenses),
+      licenses: cdktf.listMapper(cdktf.stringToTerraform, false)(this._licenses),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       source_disk: cdktf.stringToTerraform(this._sourceDisk),
       source_image: cdktf.stringToTerraform(this._sourceImage),
       source_snapshot: cdktf.stringToTerraform(this._sourceSnapshot),
-      guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform)(this._guestOsFeatures.internalValue),
+      guest_os_features: cdktf.listMapper(computeImageGuestOsFeaturesToTerraform, true)(this._guestOsFeatures.internalValue),
       raw_disk: computeImageRawDiskToTerraform(this._rawDisk.internalValue),
       timeouts: computeImageTimeoutsToTerraform(this._timeouts.internalValue),
     };

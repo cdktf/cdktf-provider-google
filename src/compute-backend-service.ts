@@ -740,11 +740,11 @@ export function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?:
   }
   return {
     include_host: cdktf.booleanToTerraform(struct!.includeHost),
-    include_named_cookies: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includeNamedCookies),
+    include_named_cookies: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeNamedCookies),
     include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
     include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
-    query_string_blacklist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringBlacklist),
-    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryStringWhitelist),
+    query_string_blacklist: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryStringBlacklist),
+    query_string_whitelist: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryStringWhitelist),
   }
 }
 
@@ -1118,7 +1118,7 @@ export function computeBackendServiceCdnPolicyToTerraform(struct?: ComputeBacken
     serve_while_stale: cdktf.numberToTerraform(struct!.serveWhileStale),
     signed_url_cache_max_age_sec: cdktf.numberToTerraform(struct!.signedUrlCacheMaxAgeSec),
     cache_key_policy: computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
-    negative_caching_policy: cdktf.listMapper(computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform)(struct!.negativeCachingPolicy),
+    negative_caching_policy: cdktf.listMapper(computeBackendServiceCdnPolicyNegativeCachingPolicyToTerraform, true)(struct!.negativeCachingPolicy),
   }
 }
 
@@ -2681,7 +2681,7 @@ export function computeBackendServiceSecuritySettingsToTerraform(struct?: Comput
   }
   return {
     client_tls_policy: cdktf.stringToTerraform(struct!.clientTlsPolicy),
-    subject_alt_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subjectAltNames),
+    subject_alt_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.subjectAltNames),
   }
 }
 
@@ -2911,7 +2911,10 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._affinityCookieTtlSec = config.affinityCookieTtlSec;
     this._connectionDrainingTimeoutSec = config.connectionDrainingTimeoutSec;
@@ -3381,11 +3384,11 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     return {
       affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
       connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
-      custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customRequestHeaders),
-      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform)(this._customResponseHeaders),
+      custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customRequestHeaders),
+      custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
-      health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      health_checks: cdktf.listMapper(cdktf.stringToTerraform, false)(this._healthChecks),
       id: cdktf.stringToTerraform(this._id),
       load_balancing_scheme: cdktf.stringToTerraform(this._loadBalancingScheme),
       locality_lb_policy: cdktf.stringToTerraform(this._localityLbPolicy),
@@ -3396,7 +3399,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       security_policy: cdktf.stringToTerraform(this._securityPolicy),
       session_affinity: cdktf.stringToTerraform(this._sessionAffinity),
       timeout_sec: cdktf.numberToTerraform(this._timeoutSec),
-      backend: cdktf.listMapper(computeBackendServiceBackendToTerraform)(this._backend.internalValue),
+      backend: cdktf.listMapper(computeBackendServiceBackendToTerraform, true)(this._backend.internalValue),
       cdn_policy: computeBackendServiceCdnPolicyToTerraform(this._cdnPolicy.internalValue),
       circuit_breakers: computeBackendServiceCircuitBreakersToTerraform(this._circuitBreakers.internalValue),
       consistent_hash: computeBackendServiceConsistentHashToTerraform(this._consistentHash.internalValue),

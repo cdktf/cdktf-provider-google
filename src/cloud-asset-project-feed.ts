@@ -521,7 +521,10 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._assetNames = config.assetNames;
     this._assetTypes = config.assetTypes;
@@ -704,8 +707,8 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      asset_names: cdktf.listMapper(cdktf.stringToTerraform)(this._assetNames),
-      asset_types: cdktf.listMapper(cdktf.stringToTerraform)(this._assetTypes),
+      asset_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._assetNames),
+      asset_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._assetTypes),
       billing_project: cdktf.stringToTerraform(this._billingProject),
       content_type: cdktf.stringToTerraform(this._contentType),
       feed_id: cdktf.stringToTerraform(this._feedId),

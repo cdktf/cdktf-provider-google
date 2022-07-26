@@ -284,7 +284,7 @@ export function secretManagerSecretReplicationUserManagedToTerraform(struct?: Se
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    replicas: cdktf.listMapper(secretManagerSecretReplicationUserManagedReplicasToTerraform)(struct!.replicas),
+    replicas: cdktf.listMapper(secretManagerSecretReplicationUserManagedReplicasToTerraform, true)(struct!.replicas),
   }
 }
 
@@ -786,7 +786,10 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._expireTime = config.expireTime;
     this._id = config.id;
@@ -983,7 +986,7 @@ export class SecretManagerSecret extends cdktf.TerraformResource {
       replication: secretManagerSecretReplicationToTerraform(this._replication.internalValue),
       rotation: secretManagerSecretRotationToTerraform(this._rotation.internalValue),
       timeouts: secretManagerSecretTimeoutsToTerraform(this._timeouts.internalValue),
-      topics: cdktf.listMapper(secretManagerSecretTopicsToTerraform)(this._topics.internalValue),
+      topics: cdktf.listMapper(secretManagerSecretTopicsToTerraform, true)(this._topics.internalValue),
     };
   }
 }

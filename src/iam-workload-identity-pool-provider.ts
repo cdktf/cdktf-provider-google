@@ -257,7 +257,7 @@ export function iamWorkloadIdentityPoolProviderOidcToTerraform(struct?: IamWorkl
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     issuer_uri: cdktf.stringToTerraform(struct!.issuerUri),
   }
 }
@@ -491,7 +491,10 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._attributeCondition = config.attributeCondition;
     this._attributeMapping = config.attributeMapping;

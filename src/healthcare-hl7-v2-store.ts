@@ -601,7 +601,10 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._dataset = config.dataset;
     this._id = config.id;
@@ -755,7 +758,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       notification_config: healthcareHl7V2StoreNotificationConfigToTerraform(this._notificationConfig.internalValue),
-      notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform)(this._notificationConfigs.internalValue),
+      notification_configs: cdktf.listMapper(healthcareHl7V2StoreNotificationConfigsToTerraform, true)(this._notificationConfigs.internalValue),
       parser_config: healthcareHl7V2StoreParserConfigToTerraform(this._parserConfig.internalValue),
       timeouts: healthcareHl7V2StoreTimeoutsToTerraform(this._timeouts.internalValue),
     };

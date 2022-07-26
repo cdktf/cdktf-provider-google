@@ -278,7 +278,7 @@ export function containerAzureClusterAuthorizationToTerraform(struct?: Container
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    admin_users: cdktf.listMapper(containerAzureClusterAuthorizationAdminUsersToTerraform)(struct!.adminUsers),
+    admin_users: cdktf.listMapper(containerAzureClusterAuthorizationAdminUsersToTerraform, true)(struct!.adminUsers),
   }
 }
 
@@ -877,7 +877,7 @@ export function containerAzureClusterControlPlaneToTerraform(struct?: ContainerA
     database_encryption: containerAzureClusterControlPlaneDatabaseEncryptionToTerraform(struct!.databaseEncryption),
     main_volume: containerAzureClusterControlPlaneMainVolumeToTerraform(struct!.mainVolume),
     proxy_config: containerAzureClusterControlPlaneProxyConfigToTerraform(struct!.proxyConfig),
-    replica_placements: cdktf.listMapper(containerAzureClusterControlPlaneReplicaPlacementsToTerraform)(struct!.replicaPlacements),
+    replica_placements: cdktf.listMapper(containerAzureClusterControlPlaneReplicaPlacementsToTerraform, true)(struct!.replicaPlacements),
     root_volume: containerAzureClusterControlPlaneRootVolumeToTerraform(struct!.rootVolume),
     ssh_config: containerAzureClusterControlPlaneSshConfigToTerraform(struct!.sshConfig),
   }
@@ -1219,8 +1219,8 @@ export function containerAzureClusterNetworkingToTerraform(struct?: ContainerAzu
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    pod_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.podAddressCidrBlocks),
-    service_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceAddressCidrBlocks),
+    pod_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.podAddressCidrBlocks),
+    service_address_cidr_blocks: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serviceAddressCidrBlocks),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
   }
 }
@@ -1470,7 +1470,10 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._annotations = config.annotations;
     this._azureRegion = config.azureRegion;

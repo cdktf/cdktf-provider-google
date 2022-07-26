@@ -237,7 +237,10 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._backupPool = config.backupPool;
     this._description = config.description;
@@ -443,9 +446,9 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
       backup_pool: cdktf.stringToTerraform(this._backupPool),
       description: cdktf.stringToTerraform(this._description),
       failover_ratio: cdktf.numberToTerraform(this._failoverRatio),
-      health_checks: cdktf.listMapper(cdktf.stringToTerraform)(this._healthChecks),
+      health_checks: cdktf.listMapper(cdktf.stringToTerraform, false)(this._healthChecks),
       id: cdktf.stringToTerraform(this._id),
-      instances: cdktf.listMapper(cdktf.stringToTerraform)(this._instances),
+      instances: cdktf.listMapper(cdktf.stringToTerraform, false)(this._instances),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

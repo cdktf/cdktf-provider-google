@@ -1587,9 +1587,9 @@ export function notebooksRuntimeVirtualMachineVirtualMachineConfigToTerraform(st
     nic_type: cdktf.stringToTerraform(struct!.nicType),
     reserved_ip_range: cdktf.stringToTerraform(struct!.reservedIpRange),
     subnet: cdktf.stringToTerraform(struct!.subnet),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     accelerator_config: notebooksRuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigToTerraform(struct!.acceleratorConfig),
-    container_images: cdktf.listMapper(notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesToTerraform)(struct!.containerImages),
+    container_images: cdktf.listMapper(notebooksRuntimeVirtualMachineVirtualMachineConfigContainerImagesToTerraform, true)(struct!.containerImages),
     data_disk: notebooksRuntimeVirtualMachineVirtualMachineConfigDataDiskToTerraform(struct!.dataDisk),
     encryption_config: notebooksRuntimeVirtualMachineVirtualMachineConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
     shielded_instance_config: notebooksRuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
@@ -2045,7 +2045,10 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._location = config.location;

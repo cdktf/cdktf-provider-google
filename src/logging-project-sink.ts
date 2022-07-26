@@ -346,7 +346,10 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._destination = config.destination;
@@ -538,7 +541,7 @@ export class LoggingProjectSink extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       unique_writer_identity: cdktf.booleanToTerraform(this._uniqueWriterIdentity),
       bigquery_options: loggingProjectSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
-      exclusions: cdktf.listMapper(loggingProjectSinkExclusionsToTerraform)(this._exclusions.internalValue),
+      exclusions: cdktf.listMapper(loggingProjectSinkExclusionsToTerraform, true)(this._exclusions.internalValue),
     };
   }
 }

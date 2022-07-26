@@ -338,7 +338,10 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -494,7 +497,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       timeouts: computeHaVpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
-      vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform)(this._vpnInterfaces.internalValue),
+      vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform, true)(this._vpnInterfaces.internalValue),
     };
   }
 }

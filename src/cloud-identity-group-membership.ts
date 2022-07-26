@@ -408,7 +408,10 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._group = config.group;
     this._id = config.id;
@@ -524,7 +527,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       group: cdktf.stringToTerraform(this._group),
       id: cdktf.stringToTerraform(this._id),
       preferred_member_key: cloudIdentityGroupMembershipPreferredMemberKeyToTerraform(this._preferredMemberKey.internalValue),
-      roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform)(this._roles.internalValue),
+      roles: cdktf.listMapper(cloudIdentityGroupMembershipRolesToTerraform, true)(this._roles.internalValue),
       timeouts: cloudIdentityGroupMembershipTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

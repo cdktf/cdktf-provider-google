@@ -666,7 +666,7 @@ export function computeInstanceFromTemplateServiceAccountToTerraform(struct?: Co
   }
   return {
     email: struct!.email === undefined ? null : cdktf.stringToTerraform(struct!.email),
-    scopes: struct!.scopes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
+    scopes: struct!.scopes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scopes),
   }
 }
 
@@ -1811,8 +1811,8 @@ export function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    access_config: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
-    alias_ip_range: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
+    access_config: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAccessConfigToTerraform, false)(struct!.accessConfig),
+    alias_ip_range: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceAliasIpRangeToTerraform, false)(struct!.aliasIpRange),
     network: cdktf.stringToTerraform(struct!.network),
     network_ip: cdktf.stringToTerraform(struct!.networkIp),
     nic_type: cdktf.stringToTerraform(struct!.nicType),
@@ -1820,7 +1820,7 @@ export function computeInstanceFromTemplateNetworkInterfaceToTerraform(struct?: 
     stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
-    ipv6_access_config: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceIpv6AccessConfigToTerraform)(struct!.ipv6AccessConfig),
+    ipv6_access_config: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceIpv6AccessConfigToTerraform, true)(struct!.ipv6AccessConfig),
   }
 }
 
@@ -2134,7 +2134,7 @@ export function computeInstanceFromTemplateReservationAffinitySpecificReservatio
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2318,7 +2318,7 @@ export function computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform(s
   return {
     key: cdktf.stringToTerraform(struct!.key),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2492,7 +2492,7 @@ export function computeInstanceFromTemplateSchedulingToTerraform(struct?: Comput
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     provisioning_model: cdktf.stringToTerraform(struct!.provisioningModel),
-    node_affinities: cdktf.listMapper(computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),
+    node_affinities: cdktf.listMapper(computeInstanceFromTemplateSchedulingNodeAffinitiesToTerraform, true)(struct!.nodeAffinities),
   }
 }
 
@@ -2963,7 +2963,10 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowStoppingForUpdate = config.allowStoppingForUpdate;
     this._attachedDisk.internalValue = config.attachedDisk;
@@ -3534,13 +3537,13 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_stopping_for_update: cdktf.booleanToTerraform(this._allowStoppingForUpdate),
-      attached_disk: cdktf.listMapper(computeInstanceFromTemplateAttachedDiskToTerraform)(this._attachedDisk.internalValue),
+      attached_disk: cdktf.listMapper(computeInstanceFromTemplateAttachedDiskToTerraform, false)(this._attachedDisk.internalValue),
       can_ip_forward: cdktf.booleanToTerraform(this._canIpForward),
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       description: cdktf.stringToTerraform(this._description),
       desired_status: cdktf.stringToTerraform(this._desiredStatus),
       enable_display: cdktf.booleanToTerraform(this._enableDisplay),
-      guest_accelerator: cdktf.listMapper(computeInstanceFromTemplateGuestAcceleratorToTerraform)(this._guestAccelerator.internalValue),
+      guest_accelerator: cdktf.listMapper(computeInstanceFromTemplateGuestAcceleratorToTerraform, false)(this._guestAccelerator.internalValue),
       hostname: cdktf.stringToTerraform(this._hostname),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
@@ -3550,16 +3553,16 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       min_cpu_platform: cdktf.stringToTerraform(this._minCpuPlatform),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      resource_policies: cdktf.listMapper(cdktf.stringToTerraform)(this._resourcePolicies),
-      scratch_disk: cdktf.listMapper(computeInstanceFromTemplateScratchDiskToTerraform)(this._scratchDisk.internalValue),
-      service_account: cdktf.listMapper(computeInstanceFromTemplateServiceAccountToTerraform)(this._serviceAccount.internalValue),
+      resource_policies: cdktf.listMapper(cdktf.stringToTerraform, false)(this._resourcePolicies),
+      scratch_disk: cdktf.listMapper(computeInstanceFromTemplateScratchDiskToTerraform, false)(this._scratchDisk.internalValue),
+      service_account: cdktf.listMapper(computeInstanceFromTemplateServiceAccountToTerraform, false)(this._serviceAccount.internalValue),
       source_instance_template: cdktf.stringToTerraform(this._sourceInstanceTemplate),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       zone: cdktf.stringToTerraform(this._zone),
       advanced_machine_features: computeInstanceFromTemplateAdvancedMachineFeaturesToTerraform(this._advancedMachineFeatures.internalValue),
       boot_disk: computeInstanceFromTemplateBootDiskToTerraform(this._bootDisk.internalValue),
       confidential_instance_config: computeInstanceFromTemplateConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig.internalValue),
-      network_interface: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(computeInstanceFromTemplateNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       reservation_affinity: computeInstanceFromTemplateReservationAffinityToTerraform(this._reservationAffinity.internalValue),
       scheduling: computeInstanceFromTemplateSchedulingToTerraform(this._scheduling.internalValue),
       shielded_instance_config: computeInstanceFromTemplateShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig.internalValue),

@@ -459,7 +459,10 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._datasetId = config.datasetId;
     this._definitionBody = config.definitionBody;
@@ -717,14 +720,14 @@ export class BigqueryRoutine extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       determinism_level: cdktf.stringToTerraform(this._determinismLevel),
       id: cdktf.stringToTerraform(this._id),
-      imported_libraries: cdktf.listMapper(cdktf.stringToTerraform)(this._importedLibraries),
+      imported_libraries: cdktf.listMapper(cdktf.stringToTerraform, false)(this._importedLibraries),
       language: cdktf.stringToTerraform(this._language),
       project: cdktf.stringToTerraform(this._project),
       return_table_type: cdktf.stringToTerraform(this._returnTableType),
       return_type: cdktf.stringToTerraform(this._returnType),
       routine_id: cdktf.stringToTerraform(this._routineId),
       routine_type: cdktf.stringToTerraform(this._routineType),
-      arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform)(this._arguments.internalValue),
+      arguments: cdktf.listMapper(bigqueryRoutineArgumentsToTerraform, true)(this._arguments.internalValue),
       timeouts: bigqueryRoutineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

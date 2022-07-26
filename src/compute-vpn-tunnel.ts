@@ -271,7 +271,10 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -613,7 +616,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       ike_version: cdktf.numberToTerraform(this._ikeVersion),
-      local_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform)(this._localTrafficSelector),
+      local_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform, false)(this._localTrafficSelector),
       name: cdktf.stringToTerraform(this._name),
       peer_external_gateway: cdktf.stringToTerraform(this._peerExternalGateway),
       peer_external_gateway_interface: cdktf.numberToTerraform(this._peerExternalGatewayInterface),
@@ -621,7 +624,7 @@ export class ComputeVpnTunnel extends cdktf.TerraformResource {
       peer_ip: cdktf.stringToTerraform(this._peerIp),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      remote_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform)(this._remoteTrafficSelector),
+      remote_traffic_selector: cdktf.listMapper(cdktf.stringToTerraform, false)(this._remoteTrafficSelector),
       router: cdktf.stringToTerraform(this._router),
       shared_secret: cdktf.stringToTerraform(this._sharedSecret),
       target_vpn_gateway: cdktf.stringToTerraform(this._targetVpnGateway),

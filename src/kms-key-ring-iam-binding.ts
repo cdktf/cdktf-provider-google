@@ -179,7 +179,10 @@ export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._keyRingId = config.keyRingId;
@@ -276,7 +279,7 @@ export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       key_ring_id: cdktf.stringToTerraform(this._keyRingId),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       role: cdktf.stringToTerraform(this._role),
       condition: kmsKeyRingIamBindingConditionToTerraform(this._condition.internalValue),
     };

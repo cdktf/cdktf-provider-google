@@ -465,7 +465,10 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._failoverOrigin = config.failoverOrigin;
@@ -704,7 +707,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       port: cdktf.numberToTerraform(this._port),
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),
-      retry_conditions: cdktf.listMapper(cdktf.stringToTerraform)(this._retryConditions),
+      retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._retryConditions),
       timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout.internalValue),
       timeouts: networkServicesEdgeCacheOriginTimeoutsToTerraform(this._timeouts.internalValue),
     };

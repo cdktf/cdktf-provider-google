@@ -268,7 +268,7 @@ export function computeRegionPerInstanceConfigPreservedStateToTerraform(struct?:
   }
   return {
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
-    disk: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateDiskToTerraform)(struct!.disk),
+    disk: cdktf.listMapper(computeRegionPerInstanceConfigPreservedStateDiskToTerraform, true)(struct!.disk),
   }
 }
 
@@ -504,7 +504,10 @@ export class ComputeRegionPerInstanceConfig extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._minimalAction = config.minimalAction;

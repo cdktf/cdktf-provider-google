@@ -175,7 +175,10 @@ export class KmsSecretCiphertext extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalAuthenticatedData = config.additionalAuthenticatedData;
     this._cryptoKey = config.cryptoKey;

@@ -454,7 +454,10 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -742,7 +745,7 @@ export class ComputeRegionDisk extends cdktf.TerraformResource {
       physical_block_size_bytes: cdktf.numberToTerraform(this._physicalBlockSizeBytes),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
-      replica_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._replicaZones),
+      replica_zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._replicaZones),
       size: cdktf.numberToTerraform(this._size),
       snapshot: cdktf.stringToTerraform(this._snapshot),
       type: cdktf.stringToTerraform(this._type),

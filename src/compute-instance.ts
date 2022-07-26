@@ -1583,9 +1583,9 @@ export function computeInstanceNetworkInterfaceToTerraform(struct?: ComputeInsta
     stack_type: cdktf.stringToTerraform(struct!.stackType),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     subnetwork_project: cdktf.stringToTerraform(struct!.subnetworkProject),
-    access_config: cdktf.listMapper(computeInstanceNetworkInterfaceAccessConfigToTerraform)(struct!.accessConfig),
-    alias_ip_range: cdktf.listMapper(computeInstanceNetworkInterfaceAliasIpRangeToTerraform)(struct!.aliasIpRange),
-    ipv6_access_config: cdktf.listMapper(computeInstanceNetworkInterfaceIpv6AccessConfigToTerraform)(struct!.ipv6AccessConfig),
+    access_config: cdktf.listMapper(computeInstanceNetworkInterfaceAccessConfigToTerraform, true)(struct!.accessConfig),
+    alias_ip_range: cdktf.listMapper(computeInstanceNetworkInterfaceAliasIpRangeToTerraform, true)(struct!.aliasIpRange),
+    ipv6_access_config: cdktf.listMapper(computeInstanceNetworkInterfaceIpv6AccessConfigToTerraform, true)(struct!.ipv6AccessConfig),
   }
 }
 
@@ -1899,7 +1899,7 @@ export function computeInstanceReservationAffinitySpecificReservationToTerraform
   }
   return {
     key: cdktf.stringToTerraform(struct!.key),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2083,7 +2083,7 @@ export function computeInstanceSchedulingNodeAffinitiesToTerraform(struct?: Comp
   return {
     key: cdktf.stringToTerraform(struct!.key),
     operator: cdktf.stringToTerraform(struct!.operator),
-    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
 }
 
@@ -2257,7 +2257,7 @@ export function computeInstanceSchedulingToTerraform(struct?: ComputeInstanceSch
     on_host_maintenance: cdktf.stringToTerraform(struct!.onHostMaintenance),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
     provisioning_model: cdktf.stringToTerraform(struct!.provisioningModel),
-    node_affinities: cdktf.listMapper(computeInstanceSchedulingNodeAffinitiesToTerraform)(struct!.nodeAffinities),
+    node_affinities: cdktf.listMapper(computeInstanceSchedulingNodeAffinitiesToTerraform, true)(struct!.nodeAffinities),
   }
 }
 
@@ -2559,7 +2559,7 @@ export function computeInstanceServiceAccountToTerraform(struct?: ComputeInstanc
   }
   return {
     email: cdktf.stringToTerraform(struct!.email),
-    scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.scopes),
+    scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scopes),
   }
 }
 
@@ -2917,7 +2917,10 @@ export class ComputeInstance extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._allowStoppingForUpdate = config.allowStoppingForUpdate;
     this._canIpForward = config.canIpForward;
@@ -3470,7 +3473,7 @@ export class ComputeInstance extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       desired_status: cdktf.stringToTerraform(this._desiredStatus),
       enable_display: cdktf.booleanToTerraform(this._enableDisplay),
-      guest_accelerator: cdktf.listMapper(computeInstanceGuestAcceleratorToTerraform)(this._guestAccelerator.internalValue),
+      guest_accelerator: cdktf.listMapper(computeInstanceGuestAcceleratorToTerraform, false)(this._guestAccelerator.internalValue),
       hostname: cdktf.stringToTerraform(this._hostname),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
@@ -3480,17 +3483,17 @@ export class ComputeInstance extends cdktf.TerraformResource {
       min_cpu_platform: cdktf.stringToTerraform(this._minCpuPlatform),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      resource_policies: cdktf.listMapper(cdktf.stringToTerraform)(this._resourcePolicies),
-      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      resource_policies: cdktf.listMapper(cdktf.stringToTerraform, false)(this._resourcePolicies),
+      tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       zone: cdktf.stringToTerraform(this._zone),
       advanced_machine_features: computeInstanceAdvancedMachineFeaturesToTerraform(this._advancedMachineFeatures.internalValue),
-      attached_disk: cdktf.listMapper(computeInstanceAttachedDiskToTerraform)(this._attachedDisk.internalValue),
+      attached_disk: cdktf.listMapper(computeInstanceAttachedDiskToTerraform, true)(this._attachedDisk.internalValue),
       boot_disk: computeInstanceBootDiskToTerraform(this._bootDisk.internalValue),
       confidential_instance_config: computeInstanceConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig.internalValue),
-      network_interface: cdktf.listMapper(computeInstanceNetworkInterfaceToTerraform)(this._networkInterface.internalValue),
+      network_interface: cdktf.listMapper(computeInstanceNetworkInterfaceToTerraform, true)(this._networkInterface.internalValue),
       reservation_affinity: computeInstanceReservationAffinityToTerraform(this._reservationAffinity.internalValue),
       scheduling: computeInstanceSchedulingToTerraform(this._scheduling.internalValue),
-      scratch_disk: cdktf.listMapper(computeInstanceScratchDiskToTerraform)(this._scratchDisk.internalValue),
+      scratch_disk: cdktf.listMapper(computeInstanceScratchDiskToTerraform, true)(this._scratchDisk.internalValue),
       service_account: computeInstanceServiceAccountToTerraform(this._serviceAccount.internalValue),
       shielded_instance_config: computeInstanceShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig.internalValue),
       timeouts: computeInstanceTimeoutsToTerraform(this._timeouts.internalValue),

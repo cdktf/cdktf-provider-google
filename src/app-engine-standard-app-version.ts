@@ -861,7 +861,7 @@ export function appEngineStandardAppVersionDeploymentToTerraform(struct?: AppEng
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    files: cdktf.listMapper(appEngineStandardAppVersionDeploymentFilesToTerraform)(struct!.files),
+    files: cdktf.listMapper(appEngineStandardAppVersionDeploymentFilesToTerraform, true)(struct!.files),
     zip: appEngineStandardAppVersionDeploymentZipToTerraform(struct!.zip),
   }
 }
@@ -2005,7 +2005,10 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._deleteServiceOnDestroy = config.deleteServiceOnDestroy;
     this._envVariables = config.envVariables;
@@ -2372,7 +2375,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       delete_service_on_destroy: cdktf.booleanToTerraform(this._deleteServiceOnDestroy),
       env_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._envVariables),
       id: cdktf.stringToTerraform(this._id),
-      inbound_services: cdktf.listMapper(cdktf.stringToTerraform)(this._inboundServices),
+      inbound_services: cdktf.listMapper(cdktf.stringToTerraform, false)(this._inboundServices),
       instance_class: cdktf.stringToTerraform(this._instanceClass),
       noop_on_destroy: cdktf.booleanToTerraform(this._noopOnDestroy),
       project: cdktf.stringToTerraform(this._project),
@@ -2385,8 +2388,8 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       basic_scaling: appEngineStandardAppVersionBasicScalingToTerraform(this._basicScaling.internalValue),
       deployment: appEngineStandardAppVersionDeploymentToTerraform(this._deployment.internalValue),
       entrypoint: appEngineStandardAppVersionEntrypointToTerraform(this._entrypoint.internalValue),
-      handlers: cdktf.listMapper(appEngineStandardAppVersionHandlersToTerraform)(this._handlers.internalValue),
-      libraries: cdktf.listMapper(appEngineStandardAppVersionLibrariesToTerraform)(this._libraries.internalValue),
+      handlers: cdktf.listMapper(appEngineStandardAppVersionHandlersToTerraform, true)(this._handlers.internalValue),
+      libraries: cdktf.listMapper(appEngineStandardAppVersionLibrariesToTerraform, true)(this._libraries.internalValue),
       manual_scaling: appEngineStandardAppVersionManualScalingToTerraform(this._manualScaling.internalValue),
       timeouts: appEngineStandardAppVersionTimeoutsToTerraform(this._timeouts.internalValue),
       vpc_access_connector: appEngineStandardAppVersionVpcAccessConnectorToTerraform(this._vpcAccessConnector.internalValue),

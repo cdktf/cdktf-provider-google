@@ -64,7 +64,10 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._delegates = config.delegates;
     this._id = config.id;
@@ -162,10 +165,10 @@ export class DataGoogleServiceAccountAccessToken extends cdktf.TerraformDataSour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      delegates: cdktf.listMapper(cdktf.stringToTerraform)(this._delegates),
+      delegates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._delegates),
       id: cdktf.stringToTerraform(this._id),
       lifetime: cdktf.stringToTerraform(this._lifetime),
-      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(this._scopes),
       target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),
     };
   }

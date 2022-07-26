@@ -183,7 +183,10 @@ export class EndpointsServiceConsumersIamBinding extends cdktf.TerraformResource
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._consumerProject = config.consumerProject;
     this._id = config.id;
@@ -294,7 +297,7 @@ export class EndpointsServiceConsumersIamBinding extends cdktf.TerraformResource
     return {
       consumer_project: cdktf.stringToTerraform(this._consumerProject),
       id: cdktf.stringToTerraform(this._id),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       role: cdktf.stringToTerraform(this._role),
       service_name: cdktf.stringToTerraform(this._serviceName),
       condition: endpointsServiceConsumersIamBindingConditionToTerraform(this._condition.internalValue),

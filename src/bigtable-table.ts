@@ -174,7 +174,10 @@ export class BigtableTable extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._instanceName = config.instanceName;
@@ -288,8 +291,8 @@ export class BigtableTable extends cdktf.TerraformResource {
       instance_name: cdktf.stringToTerraform(this._instanceName),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
-      split_keys: cdktf.listMapper(cdktf.stringToTerraform)(this._splitKeys),
-      column_family: cdktf.listMapper(bigtableTableColumnFamilyToTerraform)(this._columnFamily.internalValue),
+      split_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(this._splitKeys),
+      column_family: cdktf.listMapper(bigtableTableColumnFamilyToTerraform, true)(this._columnFamily.internalValue),
     };
   }
 }

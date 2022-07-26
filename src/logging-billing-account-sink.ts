@@ -340,7 +340,10 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._billingAccount = config.billingAccount;
     this._description = config.description;
@@ -511,7 +514,7 @@ export class LoggingBillingAccountSink extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       bigquery_options: loggingBillingAccountSinkBigqueryOptionsToTerraform(this._bigqueryOptions.internalValue),
-      exclusions: cdktf.listMapper(loggingBillingAccountSinkExclusionsToTerraform)(this._exclusions.internalValue),
+      exclusions: cdktf.listMapper(loggingBillingAccountSinkExclusionsToTerraform, true)(this._exclusions.internalValue),
     };
   }
 }

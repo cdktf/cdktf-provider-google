@@ -343,7 +343,10 @@ export class FirestoreIndex extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._collection = config.collection;
     this._database = config.database;
@@ -480,7 +483,7 @@ export class FirestoreIndex extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       query_scope: cdktf.stringToTerraform(this._queryScope),
-      fields: cdktf.listMapper(firestoreIndexFieldsToTerraform)(this._fields.internalValue),
+      fields: cdktf.listMapper(firestoreIndexFieldsToTerraform, true)(this._fields.internalValue),
       timeouts: firestoreIndexTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

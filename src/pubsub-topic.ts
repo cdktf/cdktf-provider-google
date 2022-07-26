@@ -91,7 +91,7 @@ export function pubsubTopicMessageStoragePolicyToTerraform(struct?: PubsubTopicM
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_persistence_regions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedPersistenceRegions),
+    allowed_persistence_regions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedPersistenceRegions),
   }
 }
 
@@ -398,7 +398,10 @@ export class PubsubTopic extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._kmsKeyName = config.kmsKeyName;

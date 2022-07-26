@@ -336,7 +336,10 @@ export class DialogflowIntent extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._action = config.action;
     this._defaultResponsePlatforms = config.defaultResponsePlatforms;
@@ -602,11 +605,11 @@ export class DialogflowIntent extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       action: cdktf.stringToTerraform(this._action),
-      default_response_platforms: cdktf.listMapper(cdktf.stringToTerraform)(this._defaultResponsePlatforms),
+      default_response_platforms: cdktf.listMapper(cdktf.stringToTerraform, false)(this._defaultResponsePlatforms),
       display_name: cdktf.stringToTerraform(this._displayName),
-      events: cdktf.listMapper(cdktf.stringToTerraform)(this._events),
+      events: cdktf.listMapper(cdktf.stringToTerraform, false)(this._events),
       id: cdktf.stringToTerraform(this._id),
-      input_context_names: cdktf.listMapper(cdktf.stringToTerraform)(this._inputContextNames),
+      input_context_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._inputContextNames),
       is_fallback: cdktf.booleanToTerraform(this._isFallback),
       ml_disabled: cdktf.booleanToTerraform(this._mlDisabled),
       parent_followup_intent_name: cdktf.stringToTerraform(this._parentFollowupIntentName),

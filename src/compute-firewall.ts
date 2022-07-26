@@ -208,7 +208,7 @@ export function computeFirewallAllowToTerraform(struct?: ComputeFirewallAllow | 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
+    ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ports),
     protocol: cdktf.stringToTerraform(struct!.protocol),
   }
 }
@@ -342,7 +342,7 @@ export function computeFirewallDenyToTerraform(struct?: ComputeFirewallDeny | cd
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ports),
+    ports: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ports),
     protocol: cdktf.stringToTerraform(struct!.protocol),
   }
 }
@@ -672,7 +672,10 @@ export class ComputeFirewall extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._destinationRanges = config.destinationRanges;
@@ -1014,7 +1017,7 @@ export class ComputeFirewall extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
-      destination_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationRanges),
+      destination_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._destinationRanges),
       direction: cdktf.stringToTerraform(this._direction),
       disabled: cdktf.booleanToTerraform(this._disabled),
       enable_logging: cdktf.booleanToTerraform(this._enableLogging),
@@ -1023,13 +1026,13 @@ export class ComputeFirewall extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       priority: cdktf.numberToTerraform(this._priority),
       project: cdktf.stringToTerraform(this._project),
-      source_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceRanges),
-      source_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceServiceAccounts),
-      source_tags: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceTags),
-      target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform)(this._targetServiceAccounts),
-      target_tags: cdktf.listMapper(cdktf.stringToTerraform)(this._targetTags),
-      allow: cdktf.listMapper(computeFirewallAllowToTerraform)(this._allow.internalValue),
-      deny: cdktf.listMapper(computeFirewallDenyToTerraform)(this._deny.internalValue),
+      source_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourceRanges),
+      source_service_accounts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourceServiceAccounts),
+      source_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._sourceTags),
+      target_service_accounts: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetServiceAccounts),
+      target_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._targetTags),
+      allow: cdktf.listMapper(computeFirewallAllowToTerraform, true)(this._allow.internalValue),
+      deny: cdktf.listMapper(computeFirewallDenyToTerraform, true)(this._deny.internalValue),
       log_config: computeFirewallLogConfigToTerraform(this._logConfig.internalValue),
       timeouts: computeFirewallTimeoutsToTerraform(this._timeouts.internalValue),
     };

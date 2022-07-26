@@ -713,7 +713,7 @@ export function cloudfunctionsFunctionSecretVolumesToTerraform(struct?: Cloudfun
     mount_path: cdktf.stringToTerraform(struct!.mountPath),
     project_id: cdktf.stringToTerraform(struct!.projectId),
     secret: cdktf.stringToTerraform(struct!.secret),
-    versions: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesVersionsToTerraform)(struct!.versions),
+    versions: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesVersionsToTerraform, true)(struct!.versions),
   }
 }
 
@@ -1115,7 +1115,10 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._availableMemoryMb = config.availableMemoryMb;
     this._buildEnvironmentVariables = config.buildEnvironmentVariables;
@@ -1677,8 +1680,8 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       vpc_connector: cdktf.stringToTerraform(this._vpcConnector),
       vpc_connector_egress_settings: cdktf.stringToTerraform(this._vpcConnectorEgressSettings),
       event_trigger: cloudfunctionsFunctionEventTriggerToTerraform(this._eventTrigger.internalValue),
-      secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform)(this._secretEnvironmentVariables.internalValue),
-      secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform)(this._secretVolumes.internalValue),
+      secret_environment_variables: cdktf.listMapper(cloudfunctionsFunctionSecretEnvironmentVariablesToTerraform, true)(this._secretEnvironmentVariables.internalValue),
+      secret_volumes: cdktf.listMapper(cloudfunctionsFunctionSecretVolumesToTerraform, true)(this._secretVolumes.internalValue),
       source_repository: cloudfunctionsFunctionSourceRepositoryToTerraform(this._sourceRepository.internalValue),
       timeouts: cloudfunctionsFunctionTimeoutsToTerraform(this._timeouts.internalValue),
     };

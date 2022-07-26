@@ -84,7 +84,10 @@ export class StorageNotification extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._bucket = config.bucket;
     this._customAttributes = config.customAttributes;
@@ -220,7 +223,7 @@ export class StorageNotification extends cdktf.TerraformResource {
     return {
       bucket: cdktf.stringToTerraform(this._bucket),
       custom_attributes: cdktf.hashMapper(cdktf.stringToTerraform)(this._customAttributes),
-      event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
+      event_types: cdktf.listMapper(cdktf.stringToTerraform, false)(this._eventTypes),
       id: cdktf.stringToTerraform(this._id),
       object_name_prefix: cdktf.stringToTerraform(this._objectNamePrefix),
       payload_format: cdktf.stringToTerraform(this._payloadFormat),

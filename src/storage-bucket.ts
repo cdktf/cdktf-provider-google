@@ -151,9 +151,9 @@ export function storageBucketCorsToTerraform(struct?: StorageBucketCors | cdktf.
   }
   return {
     max_age_seconds: cdktf.numberToTerraform(struct!.maxAgeSeconds),
-    method: cdktf.listMapper(cdktf.stringToTerraform)(struct!.method),
-    origin: cdktf.listMapper(cdktf.stringToTerraform)(struct!.origin),
-    response_header: cdktf.listMapper(cdktf.stringToTerraform)(struct!.responseHeader),
+    method: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.method),
+    origin: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.origin),
+    response_header: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeader),
   }
 }
 
@@ -529,7 +529,7 @@ export function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageB
     custom_time_before: cdktf.stringToTerraform(struct!.customTimeBefore),
     days_since_custom_time: cdktf.numberToTerraform(struct!.daysSinceCustomTime),
     days_since_noncurrent_time: cdktf.numberToTerraform(struct!.daysSinceNoncurrentTime),
-    matches_storage_class: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchesStorageClass),
+    matches_storage_class: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchesStorageClass),
     noncurrent_time_before: cdktf.stringToTerraform(struct!.noncurrentTimeBefore),
     num_newer_versions: cdktf.numberToTerraform(struct!.numNewerVersions),
     with_state: cdktf.stringToTerraform(struct!.withState),
@@ -1390,7 +1390,10 @@ export class StorageBucket extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._defaultEventBasedHold = config.defaultEventBasedHold;
     this._forceDestroy = config.forceDestroy;
@@ -1724,9 +1727,9 @@ export class StorageBucket extends cdktf.TerraformResource {
       requester_pays: cdktf.booleanToTerraform(this._requesterPays),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
-      cors: cdktf.listMapper(storageBucketCorsToTerraform)(this._cors.internalValue),
+      cors: cdktf.listMapper(storageBucketCorsToTerraform, true)(this._cors.internalValue),
       encryption: storageBucketEncryptionToTerraform(this._encryption.internalValue),
-      lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform)(this._lifecycleRule.internalValue),
+      lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform, true)(this._lifecycleRule.internalValue),
       logging: storageBucketLoggingToTerraform(this._logging.internalValue),
       retention_policy: storageBucketRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
       timeouts: storageBucketTimeoutsToTerraform(this._timeouts.internalValue),

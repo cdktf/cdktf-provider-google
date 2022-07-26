@@ -187,7 +187,10 @@ export class SpannerDatabaseIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._database = config.database;
     this._id = config.id;
@@ -316,7 +319,7 @@ export class SpannerDatabaseIamBinding extends cdktf.TerraformResource {
       database: cdktf.stringToTerraform(this._database),
       id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       condition: spannerDatabaseIamBindingConditionToTerraform(this._condition.internalValue),

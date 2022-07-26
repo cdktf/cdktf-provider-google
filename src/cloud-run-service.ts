@@ -1842,15 +1842,15 @@ export function cloudRunServiceTemplateSpecContainersToTerraform(struct?: CloudR
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
-    command: cdktf.listMapper(cdktf.stringToTerraform)(struct!.command),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
+    command: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.command),
     image: cdktf.stringToTerraform(struct!.image),
     working_dir: cdktf.stringToTerraform(struct!.workingDir),
-    env: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvToTerraform)(struct!.env),
-    env_from: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromToTerraform)(struct!.envFrom),
-    ports: cdktf.listMapper(cloudRunServiceTemplateSpecContainersPortsToTerraform)(struct!.ports),
+    env: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvToTerraform, true)(struct!.env),
+    env_from: cdktf.listMapper(cloudRunServiceTemplateSpecContainersEnvFromToTerraform, true)(struct!.envFrom),
+    ports: cdktf.listMapper(cloudRunServiceTemplateSpecContainersPortsToTerraform, true)(struct!.ports),
     resources: cloudRunServiceTemplateSpecContainersResourcesToTerraform(struct!.resources),
-    volume_mounts: cdktf.listMapper(cloudRunServiceTemplateSpecContainersVolumeMountsToTerraform)(struct!.volumeMounts),
+    volume_mounts: cdktf.listMapper(cloudRunServiceTemplateSpecContainersVolumeMountsToTerraform, true)(struct!.volumeMounts),
   }
 }
 
@@ -2305,7 +2305,7 @@ export function cloudRunServiceTemplateSpecVolumesSecretToTerraform(struct?: Clo
   return {
     default_mode: cdktf.numberToTerraform(struct!.defaultMode),
     secret_name: cdktf.stringToTerraform(struct!.secretName),
-    items: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesSecretItemsToTerraform)(struct!.items),
+    items: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesSecretItemsToTerraform, true)(struct!.items),
   }
 }
 
@@ -2570,8 +2570,8 @@ export function cloudRunServiceTemplateSpecToTerraform(struct?: CloudRunServiceT
     container_concurrency: cdktf.numberToTerraform(struct!.containerConcurrency),
     service_account_name: cdktf.stringToTerraform(struct!.serviceAccountName),
     timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
-    containers: cdktf.listMapper(cloudRunServiceTemplateSpecContainersToTerraform)(struct!.containers),
-    volumes: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesToTerraform)(struct!.volumes),
+    containers: cdktf.listMapper(cloudRunServiceTemplateSpecContainersToTerraform, true)(struct!.containers),
+    volumes: cdktf.listMapper(cloudRunServiceTemplateSpecVolumesToTerraform, true)(struct!.volumes),
   }
 }
 
@@ -3165,7 +3165,10 @@ export class CloudRunService extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._autogenerateRevisionName = config.autogenerateRevisionName;
     this._id = config.id;
@@ -3340,7 +3343,7 @@ export class CloudRunService extends cdktf.TerraformResource {
       metadata: cloudRunServiceMetadataToTerraform(this._metadata.internalValue),
       template: cloudRunServiceTemplateToTerraform(this._template.internalValue),
       timeouts: cloudRunServiceTimeoutsToTerraform(this._timeouts.internalValue),
-      traffic: cdktf.listMapper(cloudRunServiceTrafficToTerraform)(this._traffic.internalValue),
+      traffic: cdktf.listMapper(cloudRunServiceTrafficToTerraform, true)(this._traffic.internalValue),
     };
   }
 }

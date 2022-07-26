@@ -217,7 +217,7 @@ export function containerAnalysisOccurrenceAttestationToTerraform(struct?: Conta
   }
   return {
     serialized_payload: cdktf.stringToTerraform(struct!.serializedPayload),
-    signatures: cdktf.listMapper(containerAnalysisOccurrenceAttestationSignaturesToTerraform)(struct!.signatures),
+    signatures: cdktf.listMapper(containerAnalysisOccurrenceAttestationSignaturesToTerraform, true)(struct!.signatures),
   }
 }
 
@@ -447,7 +447,10 @@ export class ContainerAnalysisOccurrence extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._noteName = config.noteName;

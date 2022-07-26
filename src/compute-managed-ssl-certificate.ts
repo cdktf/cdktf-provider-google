@@ -81,7 +81,7 @@ export function computeManagedSslCertificateManagedToTerraform(struct?: ComputeM
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    domains: cdktf.listMapper(cdktf.stringToTerraform)(struct!.domains),
+    domains: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.domains),
   }
 }
 
@@ -265,7 +265,10 @@ export class ComputeManagedSslCertificate extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._certificateId = config.certificateId;
     this._description = config.description;

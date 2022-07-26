@@ -426,7 +426,7 @@ export function deploymentManagerDeploymentTargetToTerraform(struct?: Deployment
   }
   return {
     config: deploymentManagerDeploymentTargetConfigToTerraform(struct!.config),
-    imports: cdktf.listMapper(deploymentManagerDeploymentTargetImportsToTerraform)(struct!.imports),
+    imports: cdktf.listMapper(deploymentManagerDeploymentTargetImportsToTerraform, true)(struct!.imports),
   }
 }
 
@@ -659,7 +659,10 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._createPolicy = config.createPolicy;
     this._deletePolicy = config.deletePolicy;
@@ -859,7 +862,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       preview: cdktf.booleanToTerraform(this._preview),
       project: cdktf.stringToTerraform(this._project),
-      labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform)(this._labels.internalValue),
+      labels: cdktf.listMapper(deploymentManagerDeploymentLabelsToTerraform, true)(this._labels.internalValue),
       target: deploymentManagerDeploymentTargetToTerraform(this._target.internalValue),
       timeouts: deploymentManagerDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -305,10 +305,10 @@ export function dataprocJobHadoopConfigToTerraform(struct?: DataprocJobHadoopCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
-    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     main_class: cdktf.stringToTerraform(struct!.mainClass),
     main_jar_file_uri: cdktf.stringToTerraform(struct!.mainJarFileUri),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
@@ -564,10 +564,10 @@ export function dataprocJobHiveConfigToTerraform(struct?: DataprocJobHiveConfigO
   }
   return {
     continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
     query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
-    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryList),
     script_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.scriptVariables),
   }
 }
@@ -846,10 +846,10 @@ export function dataprocJobPigConfigToTerraform(struct?: DataprocJobPigConfigOut
   }
   return {
     continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
     query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
-    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryList),
     script_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.scriptVariables),
     logging_config: dataprocJobPigConfigLoggingConfigToTerraform(struct!.loggingConfig),
   }
@@ -1219,12 +1219,12 @@ export function dataprocJobPrestoConfigToTerraform(struct?: DataprocJobPrestoCon
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    client_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clientTags),
+    client_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.clientTags),
     continue_on_failure: cdktf.booleanToTerraform(struct!.continueOnFailure),
     output_format: cdktf.stringToTerraform(struct!.outputFormat),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
     query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
-    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryList),
     logging_config: dataprocJobPrestoConfigLoggingConfigToTerraform(struct!.loggingConfig),
   }
 }
@@ -1530,13 +1530,13 @@ export function dataprocJobPysparkConfigToTerraform(struct?: DataprocJobPysparkC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
-    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     main_python_file_uri: cdktf.stringToTerraform(struct!.mainPythonFileUri),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
-    python_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pythonFileUris),
+    python_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pythonFileUris),
     logging_config: dataprocJobPysparkConfigLoggingConfigToTerraform(struct!.loggingConfig),
   }
 }
@@ -2018,10 +2018,10 @@ export function dataprocJobSparkConfigToTerraform(struct?: DataprocJobSparkConfi
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    archive_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.archiveUris),
-    args: cdktf.listMapper(cdktf.stringToTerraform)(struct!.args),
-    file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fileUris),
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    archive_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.archiveUris),
+    args: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.args),
+    file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.fileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     main_class: cdktf.stringToTerraform(struct!.mainClass),
     main_jar_file_uri: cdktf.stringToTerraform(struct!.mainJarFileUri),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
@@ -2340,10 +2340,10 @@ export function dataprocJobSparksqlConfigToTerraform(struct?: DataprocJobSparksq
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.jarFileUris),
+    jar_file_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.jarFileUris),
     properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.properties),
     query_file_uri: cdktf.stringToTerraform(struct!.queryFileUri),
-    query_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.queryList),
+    query_list: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.queryList),
     script_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.scriptVariables),
     logging_config: dataprocJobSparksqlConfigLoggingConfigToTerraform(struct!.loggingConfig),
   }
@@ -2642,7 +2642,10 @@ export class DataprocJob extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._forceDelete = config.forceDelete;
     this._id = config.id;

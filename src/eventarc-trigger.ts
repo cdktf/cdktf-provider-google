@@ -968,7 +968,10 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._labels = config.labels;
@@ -1167,7 +1170,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),
       destination: eventarcTriggerDestinationToTerraform(this._destination.internalValue),
-      matching_criteria: cdktf.listMapper(eventarcTriggerMatchingCriteriaToTerraform)(this._matchingCriteria.internalValue),
+      matching_criteria: cdktf.listMapper(eventarcTriggerMatchingCriteriaToTerraform, true)(this._matchingCriteria.internalValue),
       timeouts: eventarcTriggerTimeoutsToTerraform(this._timeouts.internalValue),
       transport: eventarcTriggerTransportToTerraform(this._transport.internalValue),
     };

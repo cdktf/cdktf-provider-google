@@ -142,7 +142,7 @@ export function dataLossPreventionStoredInfoTypeDictionaryWordListToTerraform(st
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    words: cdktf.listMapper(cdktf.stringToTerraform)(struct!.words),
+    words: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.words),
   }
 }
 
@@ -829,7 +829,7 @@ export function dataLossPreventionStoredInfoTypeRegexToTerraform(struct?: DataLo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    group_indexes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.groupIndexes),
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.groupIndexes),
     pattern: cdktf.stringToTerraform(struct!.pattern),
   }
 }
@@ -1063,7 +1063,10 @@ export class DataLossPreventionStoredInfoType extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._displayName = config.displayName;

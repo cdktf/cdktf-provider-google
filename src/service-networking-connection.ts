@@ -201,7 +201,10 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._network = config.network;
@@ -298,7 +301,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       network: cdktf.stringToTerraform(this._network),
-      reserved_peering_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._reservedPeeringRanges),
+      reserved_peering_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(this._reservedPeeringRanges),
       service: cdktf.stringToTerraform(this._service),
       timeouts: serviceNetworkingConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };

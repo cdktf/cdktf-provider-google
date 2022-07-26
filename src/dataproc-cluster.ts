@@ -453,9 +453,9 @@ export function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?:
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     network: cdktf.stringToTerraform(struct!.network),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
-    service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceAccountScopes),
+    service_account_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serviceAccountScopes),
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
-    tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tags),
+    tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     zone: cdktf.stringToTerraform(struct!.zone),
     shielded_instance_config: dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
   }
@@ -1207,7 +1207,7 @@ export function dataprocClusterClusterConfigMasterConfigToTerraform(struct?: Dat
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     num_instances: cdktf.numberToTerraform(struct!.numInstances),
-    accelerators: cdktf.listMapper(dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform)(struct!.accelerators),
+    accelerators: cdktf.listMapper(dataprocClusterClusterConfigMasterConfigAcceleratorsToTerraform, true)(struct!.accelerators),
     disk_config: dataprocClusterClusterConfigMasterConfigDiskConfigToTerraform(struct!.diskConfig),
   }
 }
@@ -2256,7 +2256,7 @@ export function dataprocClusterClusterConfigSoftwareConfigToTerraform(struct?: D
   }
   return {
     image_version: cdktf.stringToTerraform(struct!.imageVersion),
-    optional_components: cdktf.listMapper(cdktf.stringToTerraform)(struct!.optionalComponents),
+    optional_components: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.optionalComponents),
     override_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.overrideProperties),
   }
 }
@@ -2655,7 +2655,7 @@ export function dataprocClusterClusterConfigWorkerConfigToTerraform(struct?: Dat
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     num_instances: cdktf.numberToTerraform(struct!.numInstances),
-    accelerators: cdktf.listMapper(dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform)(struct!.accelerators),
+    accelerators: cdktf.listMapper(dataprocClusterClusterConfigWorkerConfigAcceleratorsToTerraform, true)(struct!.accelerators),
     disk_config: dataprocClusterClusterConfigWorkerConfigDiskConfigToTerraform(struct!.diskConfig),
   }
 }
@@ -2922,7 +2922,7 @@ export function dataprocClusterClusterConfigToTerraform(struct?: DataprocCluster
     encryption_config: dataprocClusterClusterConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
     endpoint_config: dataprocClusterClusterConfigEndpointConfigToTerraform(struct!.endpointConfig),
     gce_cluster_config: dataprocClusterClusterConfigGceClusterConfigToTerraform(struct!.gceClusterConfig),
-    initialization_action: cdktf.listMapper(dataprocClusterClusterConfigInitializationActionToTerraform)(struct!.initializationAction),
+    initialization_action: cdktf.listMapper(dataprocClusterClusterConfigInitializationActionToTerraform, true)(struct!.initializationAction),
     lifecycle_config: dataprocClusterClusterConfigLifecycleConfigToTerraform(struct!.lifecycleConfig),
     master_config: dataprocClusterClusterConfigMasterConfigToTerraform(struct!.masterConfig),
     metastore_config: dataprocClusterClusterConfigMetastoreConfigToTerraform(struct!.metastoreConfig),
@@ -3937,7 +3937,7 @@ export function dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClu
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.locations),
+    locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.locations),
     autoscaling: dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigAutoscalingToTerraform(struct!.autoscaling),
     config: dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigConfigToTerraform(struct!.config),
   }
@@ -4060,7 +4060,7 @@ export function dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClu
   }
   return {
     node_pool: cdktf.stringToTerraform(struct!.nodePool),
-    roles: cdktf.listMapper(cdktf.stringToTerraform)(struct!.roles),
+    roles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.roles),
     node_pool_config: dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigToTerraform(struct!.nodePoolConfig),
   }
 }
@@ -4205,7 +4205,7 @@ export function dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClu
   }
   return {
     gke_cluster_target: cdktf.stringToTerraform(struct!.gkeClusterTarget),
-    node_pool_target: cdktf.listMapper(dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetToTerraform)(struct!.nodePoolTarget),
+    node_pool_target: cdktf.listMapper(dataprocClusterVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetToTerraform, true)(struct!.nodePoolTarget),
   }
 }
 
@@ -4649,7 +4649,10 @@ export class DataprocCluster extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._gracefulDecommissionTimeout = config.gracefulDecommissionTimeout;
     this._id = config.id;

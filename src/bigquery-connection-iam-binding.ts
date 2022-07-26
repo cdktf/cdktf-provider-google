@@ -187,7 +187,10 @@ export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._connectionId = config.connectionId;
     this._id = config.id;
@@ -319,7 +322,7 @@ export class BigqueryConnectionIamBinding extends cdktf.TerraformResource {
       connection_id: cdktf.stringToTerraform(this._connectionId),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       project: cdktf.stringToTerraform(this._project),
       role: cdktf.stringToTerraform(this._role),
       condition: bigqueryConnectionIamBindingConditionToTerraform(this._condition.internalValue),

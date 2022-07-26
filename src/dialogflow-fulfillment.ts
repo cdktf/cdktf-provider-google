@@ -459,7 +459,10 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;
@@ -598,7 +601,7 @@ export class DialogflowFulfillment extends cdktf.TerraformResource {
       enabled: cdktf.booleanToTerraform(this._enabled),
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
-      features: cdktf.listMapper(dialogflowFulfillmentFeaturesToTerraform)(this._features.internalValue),
+      features: cdktf.listMapper(dialogflowFulfillmentFeaturesToTerraform, true)(this._features.internalValue),
       generic_web_service: dialogflowFulfillmentGenericWebServiceToTerraform(this._genericWebService.internalValue),
       timeouts: dialogflowFulfillmentTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -267,7 +267,10 @@ export class MlEngineModel extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -455,7 +458,7 @@ export class MlEngineModel extends cdktf.TerraformResource {
       online_prediction_console_logging: cdktf.booleanToTerraform(this._onlinePredictionConsoleLogging),
       online_prediction_logging: cdktf.booleanToTerraform(this._onlinePredictionLogging),
       project: cdktf.stringToTerraform(this._project),
-      regions: cdktf.listMapper(cdktf.stringToTerraform)(this._regions),
+      regions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._regions),
       default_version: mlEngineModelDefaultVersionToTerraform(this._defaultVersion.internalValue),
       timeouts: mlEngineModelTimeoutsToTerraform(this._timeouts.internalValue),
     };

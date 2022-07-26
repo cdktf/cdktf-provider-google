@@ -352,7 +352,10 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._activeKeyVersion = config.activeKeyVersion;
     this._id = config.id;
@@ -501,10 +504,10 @@ export class ProjectAccessApprovalSettings extends cdktf.TerraformResource {
     return {
       active_key_version: cdktf.stringToTerraform(this._activeKeyVersion),
       id: cdktf.stringToTerraform(this._id),
-      notification_emails: cdktf.listMapper(cdktf.stringToTerraform)(this._notificationEmails),
+      notification_emails: cdktf.listMapper(cdktf.stringToTerraform, false)(this._notificationEmails),
       project: cdktf.stringToTerraform(this._project),
       project_id: cdktf.stringToTerraform(this._projectId),
-      enrolled_services: cdktf.listMapper(projectAccessApprovalSettingsEnrolledServicesToTerraform)(this._enrolledServices.internalValue),
+      enrolled_services: cdktf.listMapper(projectAccessApprovalSettingsEnrolledServicesToTerraform, true)(this._enrolledServices.internalValue),
       timeouts: projectAccessApprovalSettingsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

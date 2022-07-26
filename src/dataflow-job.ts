@@ -249,7 +249,10 @@ export class DataflowJob extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._additionalExperiments = config.additionalExperiments;
     this._enableStreamingEngine = config.enableStreamingEngine;
@@ -643,7 +646,7 @@ export class DataflowJob extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_experiments: cdktf.listMapper(cdktf.stringToTerraform)(this._additionalExperiments),
+      additional_experiments: cdktf.listMapper(cdktf.stringToTerraform, false)(this._additionalExperiments),
       enable_streaming_engine: cdktf.booleanToTerraform(this._enableStreamingEngine),
       id: cdktf.stringToTerraform(this._id),
       ip_configuration: cdktf.stringToTerraform(this._ipConfiguration),

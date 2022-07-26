@@ -337,7 +337,7 @@ export function computeSecurityPolicyRuleMatchConfigToTerraform(struct?: Compute
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.srcIpRanges),
+    src_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.srcIpRanges),
   }
 }
 
@@ -1628,7 +1628,10 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;
@@ -1809,7 +1812,7 @@ export class ComputeSecurityPolicy extends cdktf.TerraformResource {
       type: cdktf.stringToTerraform(this._type),
       adaptive_protection_config: computeSecurityPolicyAdaptiveProtectionConfigToTerraform(this._adaptiveProtectionConfig.internalValue),
       advanced_options_config: computeSecurityPolicyAdvancedOptionsConfigToTerraform(this._advancedOptionsConfig.internalValue),
-      rule: cdktf.listMapper(computeSecurityPolicyRuleToTerraform)(this._rule.internalValue),
+      rule: cdktf.listMapper(computeSecurityPolicyRuleToTerraform, true)(this._rule.internalValue),
       timeouts: computeSecurityPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

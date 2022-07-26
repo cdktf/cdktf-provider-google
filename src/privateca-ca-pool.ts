@@ -460,7 +460,7 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsO
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1342,7 +1342,7 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtend
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1452,7 +1452,7 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(s
   return {
     base_key_usage: privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageToTerraform(struct!.baseKeyUsage),
     extended_key_usage: privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageToTerraform(struct!.extendedKeyUsage),
-    unknown_extended_key_usages: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsagesToTerraform)(struct!.unknownExtendedKeyUsages),
+    unknown_extended_key_usages: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsagesToTerraform, true)(struct!.unknownExtendedKeyUsages),
   }
 }
 
@@ -1557,7 +1557,7 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform(
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    object_id_path: cdktf.listMapper(cdktf.numberToTerraform)(struct!.objectIdPath),
+    object_id_path: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.objectIdPath),
   }
 }
 
@@ -1678,11 +1678,11 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct?: 
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.aiaOcspServers),
-    additional_extensions: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsToTerraform)(struct!.additionalExtensions),
+    aia_ocsp_servers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.aiaOcspServers),
+    additional_extensions: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsToTerraform, true)(struct!.additionalExtensions),
     ca_options: privatecaCaPoolIssuancePolicyBaselineValuesCaOptionsToTerraform(struct!.caOptions),
     key_usage: privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(struct!.keyUsage),
-    policy_ids: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform)(struct!.policyIds),
+    policy_ids: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform, true)(struct!.policyIds),
   }
 }
 
@@ -2130,7 +2130,7 @@ export function privatecaCaPoolIssuancePolicyToTerraform(struct?: PrivatecaCaPoo
   return {
     maximum_lifetime: cdktf.stringToTerraform(struct!.maximumLifetime),
     allowed_issuance_modes: privatecaCaPoolIssuancePolicyAllowedIssuanceModesToTerraform(struct!.allowedIssuanceModes),
-    allowed_key_types: cdktf.listMapper(privatecaCaPoolIssuancePolicyAllowedKeyTypesToTerraform)(struct!.allowedKeyTypes),
+    allowed_key_types: cdktf.listMapper(privatecaCaPoolIssuancePolicyAllowedKeyTypesToTerraform, true)(struct!.allowedKeyTypes),
     baseline_values: privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct!.baselineValues),
     identity_constraints: privatecaCaPoolIssuancePolicyIdentityConstraintsToTerraform(struct!.identityConstraints),
   }
@@ -2529,7 +2529,10 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._labels = config.labels;

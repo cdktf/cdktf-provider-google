@@ -144,7 +144,10 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._customSupportLevel = config.customSupportLevel;
     this._fullResourceName = config.fullResourceName;
@@ -232,7 +235,7 @@ export class DataGoogleIamTestablePermissions extends cdktf.TerraformDataSource 
       custom_support_level: cdktf.stringToTerraform(this._customSupportLevel),
       full_resource_name: cdktf.stringToTerraform(this._fullResourceName),
       id: cdktf.stringToTerraform(this._id),
-      stages: cdktf.listMapper(cdktf.stringToTerraform)(this._stages),
+      stages: cdktf.listMapper(cdktf.stringToTerraform, false)(this._stages),
     };
   }
 }

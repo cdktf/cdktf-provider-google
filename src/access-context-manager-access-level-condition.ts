@@ -262,12 +262,12 @@ export function accessContextManagerAccessLevelConditionDevicePolicyToTerraform(
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_device_management_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedDeviceManagementLevels),
-    allowed_encryption_statuses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedEncryptionStatuses),
+    allowed_device_management_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedDeviceManagementLevels),
+    allowed_encryption_statuses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedEncryptionStatuses),
     require_admin_approval: cdktf.booleanToTerraform(struct!.requireAdminApproval),
     require_corp_owned: cdktf.booleanToTerraform(struct!.requireCorpOwned),
     require_screen_lock: cdktf.booleanToTerraform(struct!.requireScreenLock),
-    os_constraints: cdktf.listMapper(accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform)(struct!.osConstraints),
+    os_constraints: cdktf.listMapper(accessContextManagerAccessLevelConditionDevicePolicyOsConstraintsToTerraform, true)(struct!.osConstraints),
   }
 }
 
@@ -564,7 +564,10 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._accessLevel = config.accessLevel;
     this._id = config.id;
@@ -730,11 +733,11 @@ export class AccessContextManagerAccessLevelCondition extends cdktf.TerraformRes
     return {
       access_level: cdktf.stringToTerraform(this._accessLevel),
       id: cdktf.stringToTerraform(this._id),
-      ip_subnetworks: cdktf.listMapper(cdktf.stringToTerraform)(this._ipSubnetworks),
-      members: cdktf.listMapper(cdktf.stringToTerraform)(this._members),
+      ip_subnetworks: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ipSubnetworks),
+      members: cdktf.listMapper(cdktf.stringToTerraform, false)(this._members),
       negate: cdktf.booleanToTerraform(this._negate),
-      regions: cdktf.listMapper(cdktf.stringToTerraform)(this._regions),
-      required_access_levels: cdktf.listMapper(cdktf.stringToTerraform)(this._requiredAccessLevels),
+      regions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._regions),
+      required_access_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(this._requiredAccessLevels),
       device_policy: accessContextManagerAccessLevelConditionDevicePolicyToTerraform(this._devicePolicy.internalValue),
       timeouts: accessContextManagerAccessLevelConditionTimeoutsToTerraform(this._timeouts.internalValue),
     };

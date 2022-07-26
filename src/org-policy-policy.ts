@@ -214,8 +214,8 @@ export function orgPolicyPolicySpecRulesValuesToTerraform(struct?: OrgPolicyPoli
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedValues),
-    denied_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.deniedValues),
+    allowed_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedValues),
+    denied_values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.deniedValues),
   }
 }
 
@@ -533,7 +533,7 @@ export function orgPolicyPolicySpecToTerraform(struct?: OrgPolicyPolicySpecOutpu
   return {
     inherit_from_parent: cdktf.booleanToTerraform(struct!.inheritFromParent),
     reset: cdktf.booleanToTerraform(struct!.reset),
-    rules: cdktf.listMapper(orgPolicyPolicySpecRulesToTerraform)(struct!.rules),
+    rules: cdktf.listMapper(orgPolicyPolicySpecRulesToTerraform, true)(struct!.rules),
   }
 }
 
@@ -801,7 +801,10 @@ export class OrgPolicyPolicy extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._name = config.name;

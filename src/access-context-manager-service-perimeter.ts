@@ -121,7 +121,7 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressFrom
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identities),
     identity_type: cdktf.stringToTerraform(struct!.identityType),
   }
 }
@@ -351,7 +351,7 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOp
   }
   return {
     service_name: cdktf.stringToTerraform(struct!.serviceName),
-    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsMethodSelectorsToTerraform, true)(struct!.methodSelectors),
   }
 }
 
@@ -490,9 +490,9 @@ export function accessContextManagerServicePerimeterSpecEgressPoliciesEgressToTo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    external_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalResources),
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
+    external_resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.externalResources),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesEgressToOperationsToTerraform, true)(struct!.operations),
   }
 }
 
@@ -887,9 +887,9 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressFr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identities),
     identity_type: cdktf.stringToTerraform(struct!.identityType),
-    sources: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform)(struct!.sources),
+    sources: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressFromSourcesToTerraform, true)(struct!.sources),
   }
 }
 
@@ -1140,7 +1140,7 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressTo
   }
   return {
     service_name: cdktf.stringToTerraform(struct!.serviceName),
-    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsMethodSelectorsToTerraform, true)(struct!.methodSelectors),
   }
 }
 
@@ -1274,8 +1274,8 @@ export function accessContextManagerServicePerimeterSpecIngressPoliciesIngressTo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform)(struct!.operations),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesIngressToOperationsToTerraform, true)(struct!.operations),
   }
 }
 
@@ -1500,7 +1500,7 @@ export function accessContextManagerServicePerimeterSpecVpcAccessibleServicesToT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedServices),
+    allowed_services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedServices),
     enable_restriction: cdktf.booleanToTerraform(struct!.enableRestriction),
   }
 }
@@ -1635,11 +1635,11 @@ export function accessContextManagerServicePerimeterSpecToTerraform(struct?: Acc
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
-    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform)(struct!.egressPolicies),
-    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform)(struct!.ingressPolicies),
+    access_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.accessLevels),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    restricted_services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.restrictedServices),
+    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecEgressPoliciesToTerraform, true)(struct!.egressPolicies),
+    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterSpecIngressPoliciesToTerraform, true)(struct!.ingressPolicies),
     vpc_accessible_services: accessContextManagerServicePerimeterSpecVpcAccessibleServicesToTerraform(struct!.vpcAccessibleServices),
   }
 }
@@ -1827,7 +1827,7 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressFr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identities),
     identity_type: cdktf.stringToTerraform(struct!.identityType),
   }
 }
@@ -2057,7 +2057,7 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressTo
   }
   return {
     service_name: cdktf.stringToTerraform(struct!.serviceName),
-    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsMethodSelectorsToTerraform, true)(struct!.methodSelectors),
   }
 }
 
@@ -2196,9 +2196,9 @@ export function accessContextManagerServicePerimeterStatusEgressPoliciesEgressTo
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    external_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalResources),
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform)(struct!.operations),
+    external_resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.externalResources),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesEgressToOperationsToTerraform, true)(struct!.operations),
   }
 }
 
@@ -2593,9 +2593,9 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    identities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identities),
+    identities: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identities),
     identity_type: cdktf.stringToTerraform(struct!.identityType),
-    sources: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform)(struct!.sources),
+    sources: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressFromSourcesToTerraform, true)(struct!.sources),
   }
 }
 
@@ -2846,7 +2846,7 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
   }
   return {
     service_name: cdktf.stringToTerraform(struct!.serviceName),
-    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform)(struct!.methodSelectors),
+    method_selectors: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsMethodSelectorsToTerraform, true)(struct!.methodSelectors),
   }
 }
 
@@ -2980,8 +2980,8 @@ export function accessContextManagerServicePerimeterStatusIngressPoliciesIngress
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform)(struct!.operations),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    operations: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesIngressToOperationsToTerraform, true)(struct!.operations),
   }
 }
 
@@ -3206,7 +3206,7 @@ export function accessContextManagerServicePerimeterStatusVpcAccessibleServicesT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    allowed_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedServices),
+    allowed_services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedServices),
     enable_restriction: cdktf.booleanToTerraform(struct!.enableRestriction),
   }
 }
@@ -3341,11 +3341,11 @@ export function accessContextManagerServicePerimeterStatusToTerraform(struct?: A
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    access_levels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.accessLevels),
-    resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resources),
-    restricted_services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.restrictedServices),
-    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform)(struct!.egressPolicies),
-    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform)(struct!.ingressPolicies),
+    access_levels: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.accessLevels),
+    resources: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resources),
+    restricted_services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.restrictedServices),
+    egress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusEgressPoliciesToTerraform, true)(struct!.egressPolicies),
+    ingress_policies: cdktf.listMapper(accessContextManagerServicePerimeterStatusIngressPoliciesToTerraform, true)(struct!.ingressPolicies),
     vpc_accessible_services: accessContextManagerServicePerimeterStatusVpcAccessibleServicesToTerraform(struct!.vpcAccessibleServices),
   }
 }
@@ -3670,7 +3670,10 @@ export class AccessContextManagerServicePerimeter extends cdktf.TerraformResourc
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._description = config.description;
     this._id = config.id;

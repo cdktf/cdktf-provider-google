@@ -452,7 +452,10 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._connectionPreference = config.connectionPreference;
     this._consumerRejectLists = config.consumerRejectLists;
@@ -689,17 +692,17 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connection_preference: cdktf.stringToTerraform(this._connectionPreference),
-      consumer_reject_lists: cdktf.listMapper(cdktf.stringToTerraform)(this._consumerRejectLists),
+      consumer_reject_lists: cdktf.listMapper(cdktf.stringToTerraform, false)(this._consumerRejectLists),
       description: cdktf.stringToTerraform(this._description),
-      domain_names: cdktf.listMapper(cdktf.stringToTerraform)(this._domainNames),
+      domain_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._domainNames),
       enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
-      nat_subnets: cdktf.listMapper(cdktf.stringToTerraform)(this._natSubnets),
+      nat_subnets: cdktf.listMapper(cdktf.stringToTerraform, false)(this._natSubnets),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       target_service: cdktf.stringToTerraform(this._targetService),
-      consumer_accept_lists: cdktf.listMapper(computeServiceAttachmentConsumerAcceptListsToTerraform)(this._consumerAcceptLists.internalValue),
+      consumer_accept_lists: cdktf.listMapper(computeServiceAttachmentConsumerAcceptListsToTerraform, true)(this._consumerAcceptLists.internalValue),
       timeouts: computeServiceAttachmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -696,7 +696,7 @@ export function bigqueryJobCopyToTerraform(struct?: BigqueryJobCopyOutputReferen
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
     destination_encryption_configuration: bigqueryJobCopyDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
     destination_table: bigqueryJobCopyDestinationTableToTerraform(struct!.destinationTable),
-    source_tables: cdktf.listMapper(bigqueryJobCopySourceTablesToTerraform)(struct!.sourceTables),
+    source_tables: cdktf.listMapper(bigqueryJobCopySourceTablesToTerraform, true)(struct!.sourceTables),
   }
 }
 
@@ -1135,7 +1135,7 @@ export function bigqueryJobExtractToTerraform(struct?: BigqueryJobExtractOutputR
   return {
     compression: cdktf.stringToTerraform(struct!.compression),
     destination_format: cdktf.stringToTerraform(struct!.destinationFormat),
-    destination_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationUris),
+    destination_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.destinationUris),
     field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
     print_header: cdktf.booleanToTerraform(struct!.printHeader),
     use_avro_logical_types: cdktf.booleanToTerraform(struct!.useAvroLogicalTypes),
@@ -1844,12 +1844,12 @@ export function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoadOutputReferen
     ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
     max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
     null_marker: cdktf.stringToTerraform(struct!.nullMarker),
-    projection_fields: cdktf.listMapper(cdktf.stringToTerraform)(struct!.projectionFields),
+    projection_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.projectionFields),
     quote: cdktf.stringToTerraform(struct!.quote),
-    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaUpdateOptions),
+    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.schemaUpdateOptions),
     skip_leading_rows: cdktf.numberToTerraform(struct!.skipLeadingRows),
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
-    source_uris: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceUris),
+    source_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceUris),
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
     destination_encryption_configuration: bigqueryJobLoadDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
     destination_table: bigqueryJobLoadDestinationTableToTerraform(struct!.destinationTable),
@@ -2980,7 +2980,7 @@ export function bigqueryJobQueryToTerraform(struct?: BigqueryJobQueryOutputRefer
     parameter_mode: cdktf.stringToTerraform(struct!.parameterMode),
     priority: cdktf.stringToTerraform(struct!.priority),
     query: cdktf.stringToTerraform(struct!.query),
-    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.schemaUpdateOptions),
+    schema_update_options: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.schemaUpdateOptions),
     use_legacy_sql: cdktf.booleanToTerraform(struct!.useLegacySql),
     use_query_cache: cdktf.booleanToTerraform(struct!.useQueryCache),
     write_disposition: cdktf.stringToTerraform(struct!.writeDisposition),
@@ -2988,7 +2988,7 @@ export function bigqueryJobQueryToTerraform(struct?: BigqueryJobQueryOutputRefer
     destination_encryption_configuration: bigqueryJobQueryDestinationEncryptionConfigurationToTerraform(struct!.destinationEncryptionConfiguration),
     destination_table: bigqueryJobQueryDestinationTableToTerraform(struct!.destinationTable),
     script_options: bigqueryJobQueryScriptOptionsToTerraform(struct!.scriptOptions),
-    user_defined_function_resources: cdktf.listMapper(bigqueryJobQueryUserDefinedFunctionResourcesToTerraform)(struct!.userDefinedFunctionResources),
+    user_defined_function_resources: cdktf.listMapper(bigqueryJobQueryUserDefinedFunctionResourcesToTerraform, true)(struct!.userDefinedFunctionResources),
   }
 }
 
@@ -3524,7 +3524,10 @@ export class BigqueryJob extends cdktf.TerraformResource {
       provider: config.provider,
       dependsOn: config.dependsOn,
       count: config.count,
-      lifecycle: config.lifecycle
+      lifecycle: config.lifecycle,
+      provisioners: config.provisioners,
+      connection: config.connection,
+      forEach: config.forEach
     });
     this._id = config.id;
     this._jobId = config.jobId;
