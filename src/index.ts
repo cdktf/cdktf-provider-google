@@ -233,6 +233,7 @@ export * from './data-loss-prevention-job-trigger';
 export * from './data-loss-prevention-stored-info-type';
 export * from './dataflow-job';
 export * from './dataplex-lake';
+export * from './dataplex-zone';
 export * from './dataproc-autoscaling-policy';
 export * from './dataproc-autoscaling-policy-iam-binding';
 export * from './dataproc-autoscaling-policy-iam-member';

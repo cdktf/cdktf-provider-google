@@ -16,7 +16,7 @@ If not specified, this defaults to 100.
   */
   readonly bootDiskSizeGb?: number;
   /**
-  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"]
+  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#boot_disk_type NotebooksInstance#boot_disk_type}
   */
@@ -44,7 +44,7 @@ If not specified, this defaults to 100.
   */
   readonly dataDiskSizeGb?: number;
   /**
-  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED"]
+  * Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#data_disk_type NotebooksInstance#data_disk_type}
   */
@@ -127,6 +127,12 @@ Format: projects/{project_id}/global/networks/{network_id}
   */
   readonly network?: string;
   /**
+  * The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#nic_type NotebooksInstance#nic_type}
+  */
+  readonly nicType?: string;
+  /**
   * The notebook instance will not register with the proxy..
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#no_proxy_access NotebooksInstance#no_proxy_access}
@@ -206,6 +212,12 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#container_image NotebooksInstance#container_image}
   */
   readonly containerImage?: NotebooksInstanceContainerImage;
+  /**
+  * reservation_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#reservation_affinity NotebooksInstance#reservation_affinity}
+  */
+  readonly reservationAffinity?: NotebooksInstanceReservationAffinity;
   /**
   * shielded_instance_config block
   * 
@@ -407,6 +419,128 @@ export class NotebooksInstanceContainerImageOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
     return this._tag;
+  }
+}
+export interface NotebooksInstanceReservationAffinity {
+  /**
+  * The type of Compute Reservation. Possible values: ["NO_RESERVATION", "ANY_RESERVATION", "SPECIFIC_RESERVATION"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#consume_reservation_type NotebooksInstance#consume_reservation_type}
+  */
+  readonly consumeReservationType: string;
+  /**
+  * Corresponds to the label key of reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#key NotebooksInstance#key}
+  */
+  readonly key?: string;
+  /**
+  * Corresponds to the label values of reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_instance#values NotebooksInstance#values}
+  */
+  readonly values?: string[];
+}
+
+export function notebooksInstanceReservationAffinityToTerraform(struct?: NotebooksInstanceReservationAffinityOutputReference | NotebooksInstanceReservationAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    consume_reservation_type: cdktf.stringToTerraform(struct!.consumeReservationType),
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+  }
+}
+
+export class NotebooksInstanceReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NotebooksInstanceReservationAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumeReservationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumeReservationType = this._consumeReservationType;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksInstanceReservationAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._consumeReservationType = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._consumeReservationType = value.consumeReservationType;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // consume_reservation_type - computed: false, optional: false, required: true
+  private _consumeReservationType?: string; 
+  public get consumeReservationType() {
+    return this.getStringAttribute('consume_reservation_type');
+  }
+  public set consumeReservationType(value: string) {
+    this._consumeReservationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumeReservationTypeInput() {
+    return this._consumeReservationType;
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: true, required: false
+  private _values?: string[]; 
+  public get values() {
+    return this.getListAttribute('values');
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  public resetValues() {
+    this._values = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
   }
 }
 export interface NotebooksInstanceShieldedInstanceConfig {
@@ -820,7 +954,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -848,6 +982,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     this._metadata = config.metadata;
     this._name = config.name;
     this._network = config.network;
+    this._nicType = config.nicType;
     this._noProxyAccess = config.noProxyAccess;
     this._noPublicIp = config.noPublicIp;
     this._noRemoveDataDisk = config.noRemoveDataDisk;
@@ -860,6 +995,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     this._updateTime = config.updateTime;
     this._acceleratorConfig.internalValue = config.acceleratorConfig;
     this._containerImage.internalValue = config.containerImage;
+    this._reservationAffinity.internalValue = config.reservationAffinity;
     this._shieldedInstanceConfig.internalValue = config.shieldedInstanceConfig;
     this._timeouts.internalValue = config.timeouts;
     this._vmImage.internalValue = config.vmImage;
@@ -1132,6 +1268,22 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     return this._network;
   }
 
+  // nic_type - computed: false, optional: true, required: false
+  private _nicType?: string; 
+  public get nicType() {
+    return this.getStringAttribute('nic_type');
+  }
+  public set nicType(value: string) {
+    this._nicType = value;
+  }
+  public resetNicType() {
+    this._nicType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nicTypeInput() {
+    return this._nicType;
+  }
+
   // no_proxy_access - computed: false, optional: true, required: false
   private _noProxyAccess?: boolean | cdktf.IResolvable; 
   public get noProxyAccess() {
@@ -1334,6 +1486,22 @@ export class NotebooksInstance extends cdktf.TerraformResource {
     return this._containerImage.internalValue;
   }
 
+  // reservation_affinity - computed: false, optional: true, required: false
+  private _reservationAffinity = new NotebooksInstanceReservationAffinityOutputReference(this, "reservation_affinity");
+  public get reservationAffinity() {
+    return this._reservationAffinity;
+  }
+  public putReservationAffinity(value: NotebooksInstanceReservationAffinity) {
+    this._reservationAffinity.internalValue = value;
+  }
+  public resetReservationAffinity() {
+    this._reservationAffinity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationAffinityInput() {
+    return this._reservationAffinity.internalValue;
+  }
+
   // shielded_instance_config - computed: false, optional: true, required: false
   private _shieldedInstanceConfig = new NotebooksInstanceShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
@@ -1405,6 +1573,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       metadata: cdktf.hashMapper(cdktf.stringToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
+      nic_type: cdktf.stringToTerraform(this._nicType),
       no_proxy_access: cdktf.booleanToTerraform(this._noProxyAccess),
       no_public_ip: cdktf.booleanToTerraform(this._noPublicIp),
       no_remove_data_disk: cdktf.booleanToTerraform(this._noRemoveDataDisk),
@@ -1417,6 +1586,7 @@ export class NotebooksInstance extends cdktf.TerraformResource {
       update_time: cdktf.stringToTerraform(this._updateTime),
       accelerator_config: notebooksInstanceAcceleratorConfigToTerraform(this._acceleratorConfig.internalValue),
       container_image: notebooksInstanceContainerImageToTerraform(this._containerImage.internalValue),
+      reservation_affinity: notebooksInstanceReservationAffinityToTerraform(this._reservationAffinity.internalValue),
       shielded_instance_config: notebooksInstanceShieldedInstanceConfigToTerraform(this._shieldedInstanceConfig.internalValue),
       timeouts: notebooksInstanceTimeoutsToTerraform(this._timeouts.internalValue),
       vm_image: notebooksInstanceVmImageToTerraform(this._vmImage.internalValue),
