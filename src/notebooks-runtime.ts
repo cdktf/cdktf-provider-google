@@ -224,6 +224,132 @@ export class NotebooksRuntimeAccessConfigOutputReference extends cdktf.ComplexOb
     return this._runtimeOwner;
   }
 }
+export interface NotebooksRuntimeSoftwareConfigKernels {
+  /**
+  * The path to the container image repository.
+For example: gcr.io/{project_id}/{imageName}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#repository NotebooksRuntime#repository}
+  */
+  readonly repository: string;
+  /**
+  * The tag of the container image. If not specified, this defaults to the latest tag.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#tag NotebooksRuntime#tag}
+  */
+  readonly tag?: string;
+}
+
+export function notebooksRuntimeSoftwareConfigKernelsToTerraform(struct?: NotebooksRuntimeSoftwareConfigKernels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    repository: cdktf.stringToTerraform(struct!.repository),
+    tag: cdktf.stringToTerraform(struct!.tag),
+  }
+}
+
+export class NotebooksRuntimeSoftwareConfigKernelsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NotebooksRuntimeSoftwareConfigKernels | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._repository !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    if (this._tag !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotebooksRuntimeSoftwareConfigKernels | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._repository = undefined;
+      this._tag = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._repository = value.repository;
+      this._tag = value.tag;
+    }
+  }
+
+  // repository - computed: false, optional: false, required: true
+  private _repository?: string; 
+  public get repository() {
+    return this.getStringAttribute('repository');
+  }
+  public set repository(value: string) {
+    this._repository = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository;
+  }
+
+  // tag - computed: false, optional: true, required: false
+  private _tag?: string; 
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+  public set tag(value: string) {
+    this._tag = value;
+  }
+  public resetTag() {
+    this._tag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagInput() {
+    return this._tag;
+  }
+}
+
+export class NotebooksRuntimeSoftwareConfigKernelsList extends cdktf.ComplexList {
+  public internalValue? : NotebooksRuntimeSoftwareConfigKernels[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NotebooksRuntimeSoftwareConfigKernelsOutputReference {
+    return new NotebooksRuntimeSoftwareConfigKernelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface NotebooksRuntimeSoftwareConfig {
   /**
   * Specify a custom Cloud Storage path where the GPU driver is stored.
@@ -273,6 +399,18 @@ Cloud Storage path (gs://path-to-file/file-name).
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#post_startup_script NotebooksRuntime#post_startup_script}
   */
   readonly postStartupScript?: string;
+  /**
+  * Behavior for the post startup script. Possible values: ["POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED", "RUN_EVERY_START", "DOWNLOAD_AND_RUN_EVERY_START"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#post_startup_script_behavior NotebooksRuntime#post_startup_script_behavior}
+  */
+  readonly postStartupScriptBehavior?: string;
+  /**
+  * kernels block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime#kernels NotebooksRuntime#kernels}
+  */
+  readonly kernels?: NotebooksRuntimeSoftwareConfigKernels[] | cdktf.IResolvable;
 }
 
 export function notebooksRuntimeSoftwareConfigToTerraform(struct?: NotebooksRuntimeSoftwareConfigOutputReference | NotebooksRuntimeSoftwareConfig): any {
@@ -288,6 +426,8 @@ export function notebooksRuntimeSoftwareConfigToTerraform(struct?: NotebooksRunt
     install_gpu_driver: cdktf.booleanToTerraform(struct!.installGpuDriver),
     notebook_upgrade_schedule: cdktf.stringToTerraform(struct!.notebookUpgradeSchedule),
     post_startup_script: cdktf.stringToTerraform(struct!.postStartupScript),
+    post_startup_script_behavior: cdktf.stringToTerraform(struct!.postStartupScriptBehavior),
+    kernels: cdktf.listMapper(notebooksRuntimeSoftwareConfigKernelsToTerraform, true)(struct!.kernels),
   }
 }
 
@@ -333,6 +473,14 @@ export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.postStartupScript = this._postStartupScript;
     }
+    if (this._postStartupScriptBehavior !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postStartupScriptBehavior = this._postStartupScriptBehavior;
+    }
+    if (this._kernels?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kernels = this._kernels?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -346,6 +494,8 @@ export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.Complex
       this._installGpuDriver = undefined;
       this._notebookUpgradeSchedule = undefined;
       this._postStartupScript = undefined;
+      this._postStartupScriptBehavior = undefined;
+      this._kernels.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -356,6 +506,8 @@ export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.Complex
       this._installGpuDriver = value.installGpuDriver;
       this._notebookUpgradeSchedule = value.notebookUpgradeSchedule;
       this._postStartupScript = value.postStartupScript;
+      this._postStartupScriptBehavior = value.postStartupScriptBehavior;
+      this._kernels.internalValue = value.kernels;
     }
   }
 
@@ -469,6 +621,43 @@ export class NotebooksRuntimeSoftwareConfigOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get postStartupScriptInput() {
     return this._postStartupScript;
+  }
+
+  // post_startup_script_behavior - computed: false, optional: true, required: false
+  private _postStartupScriptBehavior?: string; 
+  public get postStartupScriptBehavior() {
+    return this.getStringAttribute('post_startup_script_behavior');
+  }
+  public set postStartupScriptBehavior(value: string) {
+    this._postStartupScriptBehavior = value;
+  }
+  public resetPostStartupScriptBehavior() {
+    this._postStartupScriptBehavior = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postStartupScriptBehaviorInput() {
+    return this._postStartupScriptBehavior;
+  }
+
+  // upgradeable - computed: true, optional: false, required: false
+  public get upgradeable() {
+    return this.getBooleanAttribute('upgradeable');
+  }
+
+  // kernels - computed: false, optional: true, required: false
+  private _kernels = new NotebooksRuntimeSoftwareConfigKernelsList(this, "kernels", false);
+  public get kernels() {
+    return this._kernels;
+  }
+  public putKernels(value: NotebooksRuntimeSoftwareConfigKernels[] | cdktf.IResolvable) {
+    this._kernels.internalValue = value;
+  }
+  public resetKernels() {
+    this._kernels.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kernelsInput() {
+    return this._kernels.internalValue;
   }
 }
 export interface NotebooksRuntimeTimeouts {
@@ -2039,7 +2228,7 @@ export class NotebooksRuntime extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_runtime',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

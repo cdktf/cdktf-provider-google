@@ -298,9 +298,19 @@ export class DataGoogleStorageBucketLifecycleRuleConditionOutputReference extend
     return this.getNumberAttribute('days_since_noncurrent_time');
   }
 
+  // matches_prefix - computed: true, optional: false, required: false
+  public get matchesPrefix() {
+    return this.getListAttribute('matches_prefix');
+  }
+
   // matches_storage_class - computed: true, optional: false, required: false
   public get matchesStorageClass() {
     return this.getListAttribute('matches_storage_class');
+  }
+
+  // matches_suffix - computed: true, optional: false, required: false
+  public get matchesSuffix() {
+    return this.getListAttribute('matches_suffix');
   }
 
   // noncurrent_time_before - computed: true, optional: false, required: false
@@ -706,7 +716,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

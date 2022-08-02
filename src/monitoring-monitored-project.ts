@@ -162,7 +162,7 @@ export class MonitoringMonitoredProject extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_monitored_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

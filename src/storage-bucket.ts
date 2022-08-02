@@ -493,11 +493,23 @@ export interface StorageBucketLifecycleRuleCondition {
   */
   readonly daysSinceNoncurrentTime?: number;
   /**
+  * One or more matching name prefixes to satisfy this condition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#matches_prefix StorageBucket#matches_prefix}
+  */
+  readonly matchesPrefix?: string[];
+  /**
   * Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
   */
   readonly matchesStorageClass?: string[];
+  /**
+  * One or more matching name suffixes to satisfy this condition.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#matches_suffix StorageBucket#matches_suffix}
+  */
+  readonly matchesSuffix?: string[];
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   * 
@@ -529,7 +541,9 @@ export function storageBucketLifecycleRuleConditionToTerraform(struct?: StorageB
     custom_time_before: cdktf.stringToTerraform(struct!.customTimeBefore),
     days_since_custom_time: cdktf.numberToTerraform(struct!.daysSinceCustomTime),
     days_since_noncurrent_time: cdktf.numberToTerraform(struct!.daysSinceNoncurrentTime),
+    matches_prefix: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchesPrefix),
     matches_storage_class: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchesStorageClass),
+    matches_suffix: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.matchesSuffix),
     noncurrent_time_before: cdktf.stringToTerraform(struct!.noncurrentTimeBefore),
     num_newer_versions: cdktf.numberToTerraform(struct!.numNewerVersions),
     with_state: cdktf.stringToTerraform(struct!.withState),
@@ -570,9 +584,17 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.daysSinceNoncurrentTime = this._daysSinceNoncurrentTime;
     }
+    if (this._matchesPrefix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchesPrefix = this._matchesPrefix;
+    }
     if (this._matchesStorageClass !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchesStorageClass = this._matchesStorageClass;
+    }
+    if (this._matchesSuffix !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchesSuffix = this._matchesSuffix;
     }
     if (this._noncurrentTimeBefore !== undefined) {
       hasAnyValues = true;
@@ -597,7 +619,9 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
       this._customTimeBefore = undefined;
       this._daysSinceCustomTime = undefined;
       this._daysSinceNoncurrentTime = undefined;
+      this._matchesPrefix = undefined;
       this._matchesStorageClass = undefined;
+      this._matchesSuffix = undefined;
       this._noncurrentTimeBefore = undefined;
       this._numNewerVersions = undefined;
       this._withState = undefined;
@@ -609,7 +633,9 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
       this._customTimeBefore = value.customTimeBefore;
       this._daysSinceCustomTime = value.daysSinceCustomTime;
       this._daysSinceNoncurrentTime = value.daysSinceNoncurrentTime;
+      this._matchesPrefix = value.matchesPrefix;
       this._matchesStorageClass = value.matchesStorageClass;
+      this._matchesSuffix = value.matchesSuffix;
       this._noncurrentTimeBefore = value.noncurrentTimeBefore;
       this._numNewerVersions = value.numNewerVersions;
       this._withState = value.withState;
@@ -696,6 +722,22 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
     return this._daysSinceNoncurrentTime;
   }
 
+  // matches_prefix - computed: false, optional: true, required: false
+  private _matchesPrefix?: string[]; 
+  public get matchesPrefix() {
+    return this.getListAttribute('matches_prefix');
+  }
+  public set matchesPrefix(value: string[]) {
+    this._matchesPrefix = value;
+  }
+  public resetMatchesPrefix() {
+    this._matchesPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchesPrefixInput() {
+    return this._matchesPrefix;
+  }
+
   // matches_storage_class - computed: false, optional: true, required: false
   private _matchesStorageClass?: string[]; 
   public get matchesStorageClass() {
@@ -710,6 +752,22 @@ export class StorageBucketLifecycleRuleConditionOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get matchesStorageClassInput() {
     return this._matchesStorageClass;
+  }
+
+  // matches_suffix - computed: false, optional: true, required: false
+  private _matchesSuffix?: string[]; 
+  public get matchesSuffix() {
+    return this.getListAttribute('matches_suffix');
+  }
+  public set matchesSuffix(value: string[]) {
+    this._matchesSuffix = value;
+  }
+  public resetMatchesSuffix() {
+    this._matchesSuffix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchesSuffixInput() {
+    return this._matchesSuffix;
   }
 
   // noncurrent_time_before - computed: false, optional: true, required: false
@@ -1384,7 +1442,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

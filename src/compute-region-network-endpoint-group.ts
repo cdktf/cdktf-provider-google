@@ -34,6 +34,14 @@ character, which cannot be a dash.
   */
   readonly name: string;
   /**
+  * This field is only used for PSC.
+The URL of the network to which all network endpoints in the NEG belong. Uses
+"default" project network if unspecified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group#network ComputeRegionNetworkEndpointGroup#network}
+  */
+  readonly network?: string;
+  /**
   * Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: "SERVERLESS" Possible values: ["SERVERLESS", "PRIVATE_SERVICE_CONNECT"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group#network_endpoint_type ComputeRegionNetworkEndpointGroup#network_endpoint_type}
@@ -56,6 +64,13 @@ a Google API or a PSC Producer Service Attachment.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group#region ComputeRegionNetworkEndpointGroup#region}
   */
   readonly region: string;
+  /**
+  * This field is only used for PSC.
+Optional URL of the subnetwork to which all network endpoints in the NEG belong.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_network_endpoint_group#subnetwork ComputeRegionNetworkEndpointGroup#subnetwork}
+  */
+  readonly subnetwork?: string;
   /**
   * app_engine block
   * 
@@ -587,7 +602,7 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_network_endpoint_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -601,10 +616,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
+    this._network = config.network;
     this._networkEndpointType = config.networkEndpointType;
     this._project = config.project;
     this._pscTargetService = config.pscTargetService;
     this._region = config.region;
+    this._subnetwork = config.subnetwork;
     this._appEngine.internalValue = config.appEngine;
     this._cloudFunction.internalValue = config.cloudFunction;
     this._cloudRun.internalValue = config.cloudRun;
@@ -658,6 +675,22 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // network - computed: false, optional: true, required: false
+  private _network?: string; 
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+  public set network(value: string) {
+    this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network;
   }
 
   // network_endpoint_type - computed: false, optional: true, required: false
@@ -724,6 +757,22 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
+  }
+
+  // subnetwork - computed: false, optional: true, required: false
+  private _subnetwork?: string; 
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+  public set subnetwork(value: string) {
+    this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork;
   }
 
   // app_engine - computed: false, optional: true, required: false
@@ -799,10 +848,12 @@ export class ComputeRegionNetworkEndpointGroup extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      network: cdktf.stringToTerraform(this._network),
       network_endpoint_type: cdktf.stringToTerraform(this._networkEndpointType),
       project: cdktf.stringToTerraform(this._project),
       psc_target_service: cdktf.stringToTerraform(this._pscTargetService),
       region: cdktf.stringToTerraform(this._region),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
       app_engine: computeRegionNetworkEndpointGroupAppEngineToTerraform(this._appEngine.internalValue),
       cloud_function: computeRegionNetworkEndpointGroupCloudFunctionToTerraform(this._cloudFunction.internalValue),
       cloud_run: computeRegionNetworkEndpointGroupCloudRunToTerraform(this._cloudRun.internalValue),

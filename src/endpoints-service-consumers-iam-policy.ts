@@ -54,7 +54,7 @@ export class EndpointsServiceConsumersIamPolicy extends cdktf.TerraformResource 
       terraformResourceType: 'google_endpoints_service_consumers_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.30.0',
+        providerVersion: '4.31.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
