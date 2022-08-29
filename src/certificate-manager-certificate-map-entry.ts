@@ -16,8 +16,7 @@ Each certificate must match pattern projects/*\/locations/*\/certificates/*.
   */
   readonly certificates: string[];
   /**
-  * CertificateMapEntry is a list of certificate configurations,
-that have been issued for a particular hostname
+  * A human-readable description of the resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate_map_entry#description CertificateManagerCertificateMapEntry#description}
   */
@@ -52,7 +51,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   */
   readonly map: string;
   /**
-  * A predefined matcher for particular cases, other than SNI selection Possible values: ["MATCHER_UNSPECIFIED", "PRIMARY"]
+  * A predefined matcher for particular cases, other than SNI selection
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate_map_entry#matcher CertificateManagerCertificateMapEntry#matcher}
   */
@@ -232,7 +231,7 @@ export class CertificateManagerCertificateMapEntry extends cdktf.TerraformResour
       terraformResourceType: 'google_certificate_manager_certificate_map_entry',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1130,6 +1130,95 @@ export class DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowList extends 
     return new DataGoogleSqlDatabaseInstanceSettingsMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // complexity - computed: true, optional: false, required: false
+  public get complexity() {
+    return this.getStringAttribute('complexity');
+  }
+
+  // disallow_username_substring - computed: true, optional: false, required: false
+  public get disallowUsernameSubstring() {
+    return this.getBooleanAttribute('disallow_username_substring');
+  }
+
+  // enable_password_policy - computed: true, optional: false, required: false
+  public get enablePasswordPolicy() {
+    return this.getBooleanAttribute('enable_password_policy');
+  }
+
+  // min_length - computed: true, optional: false, required: false
+  public get minLength() {
+    return this.getNumberAttribute('min_length');
+  }
+
+  // password_change_interval - computed: true, optional: false, required: false
+  public get passwordChangeInterval() {
+    return this.getStringAttribute('password_change_interval');
+  }
+
+  // reuse_interval - computed: true, optional: false, required: false
+  public get reuseInterval() {
+    return this.getNumberAttribute('reuse_interval');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleSqlDatabaseInstanceSettingsSqlServerAuditConfig {
 }
 
@@ -1321,6 +1410,12 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this._maintenanceWindow;
   }
 
+  // password_validation_policy - computed: true, optional: false, required: false
+  private _passwordValidationPolicy = new DataGoogleSqlDatabaseInstanceSettingsPasswordValidationPolicyList(this, "password_validation_policy", false);
+  public get passwordValidationPolicy() {
+    return this._passwordValidationPolicy;
+  }
+
   // pricing_plan - computed: true, optional: false, required: false
   public get pricingPlan() {
     return this.getStringAttribute('pricing_plan');
@@ -1394,7 +1489,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

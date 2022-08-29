@@ -72,7 +72,7 @@ export class LoggingBillingAccountBucketConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_billing_account_bucket_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
