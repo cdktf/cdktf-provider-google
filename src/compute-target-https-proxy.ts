@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeTargetHttpsProxyConfig extends cdktf.TerraformMetaArguments {
   /**
+  * A reference to the CertificateMap resource uri that identifies a certificate map 
+associated with the given target proxy. This field can only be set for global target proxies.
+Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy#certificate_map ComputeTargetHttpsProxy#certificate_map}
+  */
+  readonly certificateMap?: string;
+  /**
   * An optional description of this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy#description ComputeTargetHttpsProxy#description}
@@ -60,7 +68,7 @@ certificate must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_https_proxy#ssl_certificates ComputeTargetHttpsProxy#ssl_certificates}
   */
-  readonly sslCertificates: string[];
+  readonly sslCertificates?: string[];
   /**
   * A reference to the SslPolicy resource that will be associated with
 the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
@@ -239,7 +247,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_target_https_proxy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -250,6 +258,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._certificateMap = config.certificateMap;
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
@@ -265,6 +274,22 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // certificate_map - computed: false, optional: true, required: false
+  private _certificateMap?: string; 
+  public get certificateMap() {
+    return this.getStringAttribute('certificate_map');
+  }
+  public set certificateMap(value: string) {
+    this._certificateMap = value;
+  }
+  public resetCertificateMap() {
+    this._certificateMap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateMapInput() {
+    return this._certificateMap;
+  }
 
   // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
@@ -374,13 +399,16 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
-  // ssl_certificates - computed: false, optional: false, required: true
+  // ssl_certificates - computed: false, optional: true, required: false
   private _sslCertificates?: string[]; 
   public get sslCertificates() {
     return this.getListAttribute('ssl_certificates');
   }
   public set sslCertificates(value: string[]) {
     this._sslCertificates = value;
+  }
+  public resetSslCertificates() {
+    this._sslCertificates = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslCertificatesInput() {
@@ -438,6 +466,7 @@ export class ComputeTargetHttpsProxy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      certificate_map: cdktf.stringToTerraform(this._certificateMap),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),

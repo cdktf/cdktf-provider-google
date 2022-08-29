@@ -128,6 +128,10 @@ export interface GoogleProviderConfig {
   */
   readonly clouddeployCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}
+  */
+  readonly cloudfunctions2CustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}
   */
   readonly composerCustomEndpoint?: string;
@@ -493,7 +497,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -528,6 +532,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._cloudSchedulerCustomEndpoint = config.cloudSchedulerCustomEndpoint;
     this._cloudTasksCustomEndpoint = config.cloudTasksCustomEndpoint;
     this._clouddeployCustomEndpoint = config.clouddeployCustomEndpoint;
+    this._cloudfunctions2CustomEndpoint = config.cloudfunctions2CustomEndpoint;
     this._composerCustomEndpoint = config.composerCustomEndpoint;
     this._computeCustomEndpoint = config.computeCustomEndpoint;
     this._containerAnalysisCustomEndpoint = config.containerAnalysisCustomEndpoint;
@@ -1090,6 +1095,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get clouddeployCustomEndpointInput() {
     return this._clouddeployCustomEndpoint;
+  }
+
+  // cloudfunctions2_custom_endpoint - computed: false, optional: true, required: false
+  private _cloudfunctions2CustomEndpoint?: string; 
+  public get cloudfunctions2CustomEndpoint() {
+    return this._cloudfunctions2CustomEndpoint;
+  }
+  public set cloudfunctions2CustomEndpoint(value: string | undefined) {
+    this._cloudfunctions2CustomEndpoint = value;
+  }
+  public resetCloudfunctions2CustomEndpoint() {
+    this._cloudfunctions2CustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudfunctions2CustomEndpointInput() {
+    return this._cloudfunctions2CustomEndpoint;
   }
 
   // composer_custom_endpoint - computed: false, optional: true, required: false
@@ -2376,6 +2397,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       cloud_scheduler_custom_endpoint: cdktf.stringToTerraform(this._cloudSchedulerCustomEndpoint),
       cloud_tasks_custom_endpoint: cdktf.stringToTerraform(this._cloudTasksCustomEndpoint),
       clouddeploy_custom_endpoint: cdktf.stringToTerraform(this._clouddeployCustomEndpoint),
+      cloudfunctions2_custom_endpoint: cdktf.stringToTerraform(this._cloudfunctions2CustomEndpoint),
       composer_custom_endpoint: cdktf.stringToTerraform(this._composerCustomEndpoint),
       compute_custom_endpoint: cdktf.stringToTerraform(this._computeCustomEndpoint),
       container_analysis_custom_endpoint: cdktf.stringToTerraform(this._containerAnalysisCustomEndpoint),

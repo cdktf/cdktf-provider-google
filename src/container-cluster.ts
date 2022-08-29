@@ -249,6 +249,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly masterAuthorizedNetworksConfig?: ContainerClusterMasterAuthorizedNetworksConfig;
   /**
+  * mesh_certificates block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#mesh_certificates ContainerCluster#mesh_certificates}
+  */
+  readonly meshCertificates?: ContainerClusterMeshCertificates;
+  /**
   * monitoring_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#monitoring_config ContainerCluster#monitoring_config}
@@ -3043,9 +3049,73 @@ export class ContainerClusterMasterAuthorizedNetworksConfigOutputReference exten
     return this._cidrBlocks.internalValue;
   }
 }
+export interface ContainerClusterMeshCertificates {
+  /**
+  * When enabled the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_certificates ContainerCluster#enable_certificates}
+  */
+  readonly enableCertificates: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterMeshCertificatesToTerraform(struct?: ContainerClusterMeshCertificatesOutputReference | ContainerClusterMeshCertificates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_certificates: cdktf.booleanToTerraform(struct!.enableCertificates),
+  }
+}
+
+export class ContainerClusterMeshCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterMeshCertificates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableCertificates !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableCertificates = this._enableCertificates;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterMeshCertificates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableCertificates = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableCertificates = value.enableCertificates;
+    }
+  }
+
+  // enable_certificates - computed: false, optional: false, required: true
+  private _enableCertificates?: boolean | cdktf.IResolvable; 
+  public get enableCertificates() {
+    return this.getBooleanAttribute('enable_certificates');
+  }
+  public set enableCertificates(value: boolean | cdktf.IResolvable) {
+    this._enableCertificates = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableCertificatesInput() {
+    return this._enableCertificates;
+  }
+}
 export interface ContainerClusterMonitoringConfig {
   /**
-  * GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS.
+  * GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_components ContainerCluster#enable_components}
   */
@@ -7304,7 +7374,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -7355,6 +7425,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._maintenancePolicy.internalValue = config.maintenancePolicy;
     this._masterAuth.internalValue = config.masterAuth;
     this._masterAuthorizedNetworksConfig.internalValue = config.masterAuthorizedNetworksConfig;
+    this._meshCertificates.internalValue = config.meshCertificates;
     this._monitoringConfig.internalValue = config.monitoringConfig;
     this._networkPolicy.internalValue = config.networkPolicy;
     this._nodeConfig.internalValue = config.nodeConfig;
@@ -8044,6 +8115,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._masterAuthorizedNetworksConfig.internalValue;
   }
 
+  // mesh_certificates - computed: false, optional: true, required: false
+  private _meshCertificates = new ContainerClusterMeshCertificatesOutputReference(this, "mesh_certificates");
+  public get meshCertificates() {
+    return this._meshCertificates;
+  }
+  public putMeshCertificates(value: ContainerClusterMeshCertificates) {
+    this._meshCertificates.internalValue = value;
+  }
+  public resetMeshCertificates() {
+    this._meshCertificates.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get meshCertificatesInput() {
+    return this._meshCertificates.internalValue;
+  }
+
   // monitoring_config - computed: false, optional: true, required: false
   private _monitoringConfig = new ContainerClusterMonitoringConfigOutputReference(this, "monitoring_config");
   public get monitoringConfig() {
@@ -8266,6 +8353,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       maintenance_policy: containerClusterMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
       master_auth: containerClusterMasterAuthToTerraform(this._masterAuth.internalValue),
       master_authorized_networks_config: containerClusterMasterAuthorizedNetworksConfigToTerraform(this._masterAuthorizedNetworksConfig.internalValue),
+      mesh_certificates: containerClusterMeshCertificatesToTerraform(this._meshCertificates.internalValue),
       monitoring_config: containerClusterMonitoringConfigToTerraform(this._monitoringConfig.internalValue),
       network_policy: containerClusterNetworkPolicyToTerraform(this._networkPolicy.internalValue),
       node_config: containerClusterNodeConfigToTerraform(this._nodeConfig.internalValue),

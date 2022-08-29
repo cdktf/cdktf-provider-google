@@ -50,7 +50,7 @@ export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_managed_zone',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.33.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -94,6 +94,11 @@ export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // managed_zone_id - computed: true, optional: false, required: false
+  public get managedZoneId() {
+    return this.getNumberAttribute('managed_zone_id');
   }
 
   // name - computed: false, optional: false, required: true
