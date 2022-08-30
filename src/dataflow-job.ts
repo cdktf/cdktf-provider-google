@@ -243,7 +243,7 @@ export class DataflowJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataflow_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -282,7 +282,7 @@ export class DataflowJob extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // additional_experiments - computed: false, optional: true, required: false
+  // additional_experiments - computed: true, optional: true, required: false
   private _additionalExperiments?: string[]; 
   public get additionalExperiments() {
     return cdktf.Fn.tolist(this.getListAttribute('additional_experiments'));

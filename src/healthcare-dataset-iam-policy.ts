@@ -50,7 +50,7 @@ export class HealthcareDatasetIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dataset_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

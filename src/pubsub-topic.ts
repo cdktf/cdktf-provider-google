@@ -37,7 +37,7 @@ the last messageRetentionDuration are always available to subscribers.
 For instance, it allows any attached subscription to seek to a timestamp
 that is up to messageRetentionDuration in the past. If this field is not
 set, message retention is controlled by settings on individual subscriptions.
-Cannot be more than 7 days or less than 10 minutes.
+Cannot be more than 31 days or less than 10 minutes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_topic#message_retention_duration PubsubTopic#message_retention_duration}
   */
@@ -392,7 +392,7 @@ export class PubsubTopic extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_topic',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
