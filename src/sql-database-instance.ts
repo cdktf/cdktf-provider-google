@@ -55,7 +55,7 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly region?: string;
   /**
-  * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
+  * Initial root password. Required for MS SQL Server.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#root_password SqlDatabaseInstance#root_password}
   */
@@ -2103,6 +2103,215 @@ export class SqlDatabaseInstanceSettingsMaintenanceWindowOutputReference extends
     return this._updateTrack;
   }
 }
+export interface SqlDatabaseInstanceSettingsPasswordValidationPolicy {
+  /**
+  * Password complexity.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#complexity SqlDatabaseInstance#complexity}
+  */
+  readonly complexity?: string;
+  /**
+  * Disallow username as a part of the password.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disallow_username_substring SqlDatabaseInstance#disallow_username_substring}
+  */
+  readonly disallowUsernameSubstring?: boolean | cdktf.IResolvable;
+  /**
+  * Whether the password policy is enabled or not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#enable_password_policy SqlDatabaseInstance#enable_password_policy}
+  */
+  readonly enablePasswordPolicy: boolean | cdktf.IResolvable;
+  /**
+  * Minimum number of characters allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#min_length SqlDatabaseInstance#min_length}
+  */
+  readonly minLength?: number;
+  /**
+  * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#password_change_interval SqlDatabaseInstance#password_change_interval}
+  */
+  readonly passwordChangeInterval?: string;
+  /**
+  * Number of previous passwords that cannot be reused.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#reuse_interval SqlDatabaseInstance#reuse_interval}
+  */
+  readonly reuseInterval?: number;
+}
+
+export function sqlDatabaseInstanceSettingsPasswordValidationPolicyToTerraform(struct?: SqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference | SqlDatabaseInstanceSettingsPasswordValidationPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    complexity: cdktf.stringToTerraform(struct!.complexity),
+    disallow_username_substring: cdktf.booleanToTerraform(struct!.disallowUsernameSubstring),
+    enable_password_policy: cdktf.booleanToTerraform(struct!.enablePasswordPolicy),
+    min_length: cdktf.numberToTerraform(struct!.minLength),
+    password_change_interval: cdktf.stringToTerraform(struct!.passwordChangeInterval),
+    reuse_interval: cdktf.numberToTerraform(struct!.reuseInterval),
+  }
+}
+
+export class SqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SqlDatabaseInstanceSettingsPasswordValidationPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._complexity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.complexity = this._complexity;
+    }
+    if (this._disallowUsernameSubstring !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disallowUsernameSubstring = this._disallowUsernameSubstring;
+    }
+    if (this._enablePasswordPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePasswordPolicy = this._enablePasswordPolicy;
+    }
+    if (this._minLength !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minLength = this._minLength;
+    }
+    if (this._passwordChangeInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.passwordChangeInterval = this._passwordChangeInterval;
+    }
+    if (this._reuseInterval !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reuseInterval = this._reuseInterval;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsPasswordValidationPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._complexity = undefined;
+      this._disallowUsernameSubstring = undefined;
+      this._enablePasswordPolicy = undefined;
+      this._minLength = undefined;
+      this._passwordChangeInterval = undefined;
+      this._reuseInterval = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._complexity = value.complexity;
+      this._disallowUsernameSubstring = value.disallowUsernameSubstring;
+      this._enablePasswordPolicy = value.enablePasswordPolicy;
+      this._minLength = value.minLength;
+      this._passwordChangeInterval = value.passwordChangeInterval;
+      this._reuseInterval = value.reuseInterval;
+    }
+  }
+
+  // complexity - computed: false, optional: true, required: false
+  private _complexity?: string; 
+  public get complexity() {
+    return this.getStringAttribute('complexity');
+  }
+  public set complexity(value: string) {
+    this._complexity = value;
+  }
+  public resetComplexity() {
+    this._complexity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get complexityInput() {
+    return this._complexity;
+  }
+
+  // disallow_username_substring - computed: false, optional: true, required: false
+  private _disallowUsernameSubstring?: boolean | cdktf.IResolvable; 
+  public get disallowUsernameSubstring() {
+    return this.getBooleanAttribute('disallow_username_substring');
+  }
+  public set disallowUsernameSubstring(value: boolean | cdktf.IResolvable) {
+    this._disallowUsernameSubstring = value;
+  }
+  public resetDisallowUsernameSubstring() {
+    this._disallowUsernameSubstring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disallowUsernameSubstringInput() {
+    return this._disallowUsernameSubstring;
+  }
+
+  // enable_password_policy - computed: false, optional: false, required: true
+  private _enablePasswordPolicy?: boolean | cdktf.IResolvable; 
+  public get enablePasswordPolicy() {
+    return this.getBooleanAttribute('enable_password_policy');
+  }
+  public set enablePasswordPolicy(value: boolean | cdktf.IResolvable) {
+    this._enablePasswordPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePasswordPolicyInput() {
+    return this._enablePasswordPolicy;
+  }
+
+  // min_length - computed: false, optional: true, required: false
+  private _minLength?: number; 
+  public get minLength() {
+    return this.getNumberAttribute('min_length');
+  }
+  public set minLength(value: number) {
+    this._minLength = value;
+  }
+  public resetMinLength() {
+    this._minLength = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minLengthInput() {
+    return this._minLength;
+  }
+
+  // password_change_interval - computed: false, optional: true, required: false
+  private _passwordChangeInterval?: string; 
+  public get passwordChangeInterval() {
+    return this.getStringAttribute('password_change_interval');
+  }
+  public set passwordChangeInterval(value: string) {
+    this._passwordChangeInterval = value;
+  }
+  public resetPasswordChangeInterval() {
+    this._passwordChangeInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordChangeIntervalInput() {
+    return this._passwordChangeInterval;
+  }
+
+  // reuse_interval - computed: false, optional: true, required: false
+  private _reuseInterval?: number; 
+  public get reuseInterval() {
+    return this.getNumberAttribute('reuse_interval');
+  }
+  public set reuseInterval(value: number) {
+    this._reuseInterval = value;
+  }
+  public resetReuseInterval() {
+    this._reuseInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reuseIntervalInput() {
+    return this._reuseInterval;
+  }
+}
 export interface SqlDatabaseInstanceSettingsSqlServerAuditConfig {
   /**
   * The name of the destination bucket (e.g., gs://mybucket).
@@ -2334,6 +2543,12 @@ is set to true.
   */
   readonly maintenanceWindow?: SqlDatabaseInstanceSettingsMaintenanceWindow;
   /**
+  * password_validation_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#password_validation_policy SqlDatabaseInstance#password_validation_policy}
+  */
+  readonly passwordValidationPolicy?: SqlDatabaseInstanceSettingsPasswordValidationPolicy;
+  /**
   * sql_server_audit_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#sql_server_audit_config SqlDatabaseInstance#sql_server_audit_config}
@@ -2364,6 +2579,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     ip_configuration: sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct!.ipConfiguration),
     location_preference: sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct!.locationPreference),
     maintenance_window: sqlDatabaseInstanceSettingsMaintenanceWindowToTerraform(struct!.maintenanceWindow),
+    password_validation_policy: sqlDatabaseInstanceSettingsPasswordValidationPolicyToTerraform(struct!.passwordValidationPolicy),
     sql_server_audit_config: sqlDatabaseInstanceSettingsSqlServerAuditConfigToTerraform(struct!.sqlServerAuditConfig),
   }
 }
@@ -2450,6 +2666,10 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.maintenanceWindow = this._maintenanceWindow?.internalValue;
     }
+    if (this._passwordValidationPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.passwordValidationPolicy = this._passwordValidationPolicy?.internalValue;
+    }
     if (this._sqlServerAuditConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.sqlServerAuditConfig = this._sqlServerAuditConfig?.internalValue;
@@ -2477,6 +2697,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._ipConfiguration.internalValue = undefined;
       this._locationPreference.internalValue = undefined;
       this._maintenanceWindow.internalValue = undefined;
+      this._passwordValidationPolicy.internalValue = undefined;
       this._sqlServerAuditConfig.internalValue = undefined;
     }
     else {
@@ -2498,6 +2719,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._ipConfiguration.internalValue = value.ipConfiguration;
       this._locationPreference.internalValue = value.locationPreference;
       this._maintenanceWindow.internalValue = value.maintenanceWindow;
+      this._passwordValidationPolicy.internalValue = value.passwordValidationPolicy;
       this._sqlServerAuditConfig.internalValue = value.sqlServerAuditConfig;
     }
   }
@@ -2776,6 +2998,22 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     return this._maintenanceWindow.internalValue;
   }
 
+  // password_validation_policy - computed: false, optional: true, required: false
+  private _passwordValidationPolicy = new SqlDatabaseInstanceSettingsPasswordValidationPolicyOutputReference(this, "password_validation_policy");
+  public get passwordValidationPolicy() {
+    return this._passwordValidationPolicy;
+  }
+  public putPasswordValidationPolicy(value: SqlDatabaseInstanceSettingsPasswordValidationPolicy) {
+    this._passwordValidationPolicy.internalValue = value;
+  }
+  public resetPasswordValidationPolicy() {
+    this._passwordValidationPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordValidationPolicyInput() {
+    return this._passwordValidationPolicy.internalValue;
+  }
+
   // sql_server_audit_config - computed: false, optional: true, required: false
   private _sqlServerAuditConfig = new SqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference(this, "sql_server_audit_config");
   public get sqlServerAuditConfig() {
@@ -2948,7 +3186,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

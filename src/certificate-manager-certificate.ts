@@ -21,7 +21,7 @@ export interface CertificateManagerCertificateConfig extends cdktf.TerraformMeta
   */
   readonly id?: string;
   /**
-  * Set of label tags associated with the EdgeCache resource.
+  * Set of label tags associated with the Certificate resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#labels CertificateManagerCertificate#labels}
   */
@@ -41,12 +41,12 @@ and all following characters must be a dash, underscore, letter or digit.
   /**
   * The scope of the certificate.
 
-Certificates with default scope are served from core Google data centers.
+DEFAULT: Certificates with default scope are served from core Google data centers.
 If unsure, choose this option.
 
-Certificates with scope EDGE_CACHE are special-purposed certificates,
+EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
 served from non-core Google data centers.
-Currently allowed only for managed certificates. Default value: "DEFAULT" Possible values: ["DEFAULT", "EDGE_CACHE"]
+Currently allowed only for managed certificates.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#scope CertificateManagerCertificate#scope}
   */
@@ -69,6 +69,154 @@ Currently allowed only for managed certificates. Default value: "DEFAULT" Possib
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#timeouts CertificateManagerCertificate#timeouts}
   */
   readonly timeouts?: CertificateManagerCertificateTimeouts;
+}
+export interface CertificateManagerCertificateManagedAuthorizationAttemptInfo {
+}
+
+export function certificateManagerCertificateManagedAuthorizationAttemptInfoToTerraform(struct?: CertificateManagerCertificateManagedAuthorizationAttemptInfo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CertificateManagerCertificateManagedAuthorizationAttemptInfo | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateManagerCertificateManagedAuthorizationAttemptInfo | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // details - computed: true, optional: false, required: false
+  public get details() {
+    return this.getStringAttribute('details');
+  }
+
+  // domain - computed: true, optional: false, required: false
+  public get domain() {
+    return this.getStringAttribute('domain');
+  }
+
+  // failure_reason - computed: true, optional: false, required: false
+  public get failureReason() {
+    return this.getStringAttribute('failure_reason');
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+}
+
+export class CertificateManagerCertificateManagedAuthorizationAttemptInfoList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference {
+    return new CertificateManagerCertificateManagedAuthorizationAttemptInfoOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CertificateManagerCertificateManagedProvisioningIssue {
+}
+
+export function certificateManagerCertificateManagedProvisioningIssueToTerraform(struct?: CertificateManagerCertificateManagedProvisioningIssue): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class CertificateManagerCertificateManagedProvisioningIssueOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CertificateManagerCertificateManagedProvisioningIssue | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CertificateManagerCertificateManagedProvisioningIssue | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // details - computed: true, optional: false, required: false
+  public get details() {
+    return this.getStringAttribute('details');
+  }
+
+  // reason - computed: true, optional: false, required: false
+  public get reason() {
+    return this.getStringAttribute('reason');
+  }
+}
+
+export class CertificateManagerCertificateManagedProvisioningIssueList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CertificateManagerCertificateManagedProvisioningIssueOutputReference {
+    return new CertificateManagerCertificateManagedProvisioningIssueOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface CertificateManagerCertificateManaged {
   /**
@@ -135,6 +283,12 @@ export class CertificateManagerCertificateManagedOutputReference extends cdktf.C
     }
   }
 
+  // authorization_attempt_info - computed: true, optional: false, required: false
+  private _authorizationAttemptInfo = new CertificateManagerCertificateManagedAuthorizationAttemptInfoList(this, "authorization_attempt_info", false);
+  public get authorizationAttemptInfo() {
+    return this._authorizationAttemptInfo;
+  }
+
   // dns_authorizations - computed: false, optional: true, required: false
   private _dnsAuthorizations?: string[]; 
   public get dnsAuthorizations() {
@@ -165,6 +319,12 @@ export class CertificateManagerCertificateManagedOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get domainsInput() {
     return this._domains;
+  }
+
+  // provisioning_issue - computed: true, optional: false, required: false
+  private _provisioningIssue = new CertificateManagerCertificateManagedProvisioningIssueList(this, "provisioning_issue", false);
+  public get provisioningIssue() {
+    return this._provisioningIssue;
   }
 
   // state - computed: true, optional: false, required: false
@@ -420,7 +580,7 @@ export class CertificateManagerCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_certificate_manager_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

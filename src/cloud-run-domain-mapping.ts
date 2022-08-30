@@ -690,7 +690,7 @@ export class CloudRunDomainMapping extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_domain_mapping',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

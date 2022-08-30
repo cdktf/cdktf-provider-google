@@ -41,6 +41,12 @@ This string must not contain more than 500 characters.
   */
   readonly name: string;
   /**
+  * Sets the job to a paused state. Jobs default to being enabled when this property is not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job#paused CloudSchedulerJob#paused}
+  */
+  readonly paused?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_scheduler_job#project CloudSchedulerJob#project}
   */
   readonly project?: string;
@@ -1293,7 +1299,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_scheduler_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1308,6 +1314,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
+    this._paused = config.paused;
     this._project = config.project;
     this._region = config.region;
     this._schedule = config.schedule;
@@ -1384,6 +1391,22 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // paused - computed: true, optional: true, required: false
+  private _paused?: boolean | cdktf.IResolvable; 
+  public get paused() {
+    return this.getBooleanAttribute('paused');
+  }
+  public set paused(value: boolean | cdktf.IResolvable) {
+    this._paused = value;
+  }
+  public resetPaused() {
+    this._paused = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pausedInput() {
+    return this._paused;
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -1430,6 +1453,11 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
     return this._schedule;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
   }
 
   // time_zone - computed: false, optional: true, required: false
@@ -1538,6 +1566,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      paused: cdktf.booleanToTerraform(this._paused),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       schedule: cdktf.stringToTerraform(this._schedule),
