@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface AppEngineStandardAppVersionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Allows App Engine second generation runtimes to access the legacy bundled services.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#app_engine_apis AppEngineStandardAppVersion#app_engine_apis}
+  */
+  readonly appEngineApis?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#delete_service_on_destroy AppEngineStandardAppVersion#delete_service_on_destroy}
   */
   readonly deleteServiceOnDestroy?: boolean | cdktf.IResolvable;
@@ -1999,7 +2005,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_standard_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2010,6 +2016,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._appEngineApis = config.appEngineApis;
     this._deleteServiceOnDestroy = config.deleteServiceOnDestroy;
     this._envVariables = config.envVariables;
     this._id = config.id;
@@ -2036,6 +2043,22 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // app_engine_apis - computed: false, optional: true, required: false
+  private _appEngineApis?: boolean | cdktf.IResolvable; 
+  public get appEngineApis() {
+    return this.getBooleanAttribute('app_engine_apis');
+  }
+  public set appEngineApis(value: boolean | cdktf.IResolvable) {
+    this._appEngineApis = value;
+  }
+  public resetAppEngineApis() {
+    this._appEngineApis = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appEngineApisInput() {
+    return this._appEngineApis;
+  }
 
   // delete_service_on_destroy - computed: false, optional: true, required: false
   private _deleteServiceOnDestroy?: boolean | cdktf.IResolvable; 
@@ -2372,6 +2395,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      app_engine_apis: cdktf.booleanToTerraform(this._appEngineApis),
       delete_service_on_destroy: cdktf.booleanToTerraform(this._deleteServiceOnDestroy),
       env_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._envVariables),
       id: cdktf.stringToTerraform(this._id),

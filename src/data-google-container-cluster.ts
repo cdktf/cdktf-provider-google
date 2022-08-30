@@ -2005,6 +2005,70 @@ export class DataGoogleContainerClusterMasterAuthorizedNetworksConfigList extend
     return new DataGoogleContainerClusterMasterAuthorizedNetworksConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterMeshCertificates {
+}
+
+export function dataGoogleContainerClusterMeshCertificatesToTerraform(struct?: DataGoogleContainerClusterMeshCertificates): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterMeshCertificatesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterMeshCertificates | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterMeshCertificates | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enable_certificates - computed: true, optional: false, required: false
+  public get enableCertificates() {
+    return this.getBooleanAttribute('enable_certificates');
+  }
+}
+
+export class DataGoogleContainerClusterMeshCertificatesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterMeshCertificatesOutputReference {
+    return new DataGoogleContainerClusterMeshCertificatesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterMonitoringConfig {
 }
 
@@ -2340,6 +2404,80 @@ export class DataGoogleContainerClusterNodeConfigGvnicList extends cdktf.Complex
     return new DataGoogleContainerClusterNodeConfigGvnicOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodeConfigReservationAffinity {
+}
+
+export function dataGoogleContainerClusterNodeConfigReservationAffinityToTerraform(struct?: DataGoogleContainerClusterNodeConfigReservationAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodeConfigReservationAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodeConfigReservationAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // consume_reservation_type - computed: true, optional: false, required: false
+  public get consumeReservationType() {
+    return this.getStringAttribute('consume_reservation_type');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // values - computed: true, optional: false, required: false
+  public get values() {
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigReservationAffinityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodeConfigReservationAffinityOutputReference {
+    return new DataGoogleContainerClusterNodeConfigReservationAffinityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodeConfigShieldedInstanceConfig {
 }
 
@@ -2665,6 +2803,12 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
     return this.getBooleanAttribute('preemptible');
+  }
+
+  // reservation_affinity - computed: true, optional: false, required: false
+  private _reservationAffinity = new DataGoogleContainerClusterNodeConfigReservationAffinityList(this, "reservation_affinity", false);
+  public get reservationAffinity() {
+    return this._reservationAffinity;
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -3059,6 +3203,80 @@ export class DataGoogleContainerClusterNodePoolNodeConfigGvnicList extends cdktf
     return new DataGoogleContainerClusterNodePoolNodeConfigGvnicOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity {
+}
+
+export function dataGoogleContainerClusterNodePoolNodeConfigReservationAffinityToTerraform(struct?: DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // consume_reservation_type - computed: true, optional: false, required: false
+  public get consumeReservationType() {
+    return this.getStringAttribute('consume_reservation_type');
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // values - computed: true, optional: false, required: false
+  public get values() {
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference {
+    return new DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodePoolNodeConfigShieldedInstanceConfig {
 }
 
@@ -3384,6 +3602,12 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   // preemptible - computed: true, optional: false, required: false
   public get preemptible() {
     return this.getBooleanAttribute('preemptible');
+  }
+
+  // reservation_affinity - computed: true, optional: false, required: false
+  private _reservationAffinity = new DataGoogleContainerClusterNodePoolNodeConfigReservationAffinityList(this, "reservation_affinity", false);
+  public get reservationAffinity() {
+    return this._reservationAffinity;
   }
 
   // service_account - computed: true, optional: false, required: false
@@ -4286,7 +4510,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -4495,6 +4719,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   // master_version - computed: true, optional: false, required: false
   public get masterVersion() {
     return this.getStringAttribute('master_version');
+  }
+
+  // mesh_certificates - computed: true, optional: false, required: false
+  private _meshCertificates = new DataGoogleContainerClusterMeshCertificatesList(this, "mesh_certificates", false);
+  public get meshCertificates() {
+    return this._meshCertificates;
   }
 
   // min_master_version - computed: true, optional: false, required: false

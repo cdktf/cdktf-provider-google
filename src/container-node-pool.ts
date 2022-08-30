@@ -721,6 +721,128 @@ export class ContainerNodePoolNodeConfigGvnicOutputReference extends cdktf.Compl
     return this._enabled;
   }
 }
+export interface ContainerNodePoolNodeConfigReservationAffinity {
+  /**
+  * Corresponds to the type of reservation consumption.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#consume_reservation_type ContainerNodePool#consume_reservation_type}
+  */
+  readonly consumeReservationType: string;
+  /**
+  * The label key of a reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#key ContainerNodePool#key}
+  */
+  readonly key?: string;
+  /**
+  * The label values of the reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#values ContainerNodePool#values}
+  */
+  readonly values?: string[];
+}
+
+export function containerNodePoolNodeConfigReservationAffinityToTerraform(struct?: ContainerNodePoolNodeConfigReservationAffinityOutputReference | ContainerNodePoolNodeConfigReservationAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    consume_reservation_type: cdktf.stringToTerraform(struct!.consumeReservationType),
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+  }
+}
+
+export class ContainerNodePoolNodeConfigReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigReservationAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumeReservationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumeReservationType = this._consumeReservationType;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigReservationAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._consumeReservationType = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._consumeReservationType = value.consumeReservationType;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // consume_reservation_type - computed: false, optional: false, required: true
+  private _consumeReservationType?: string; 
+  public get consumeReservationType() {
+    return this.getStringAttribute('consume_reservation_type');
+  }
+  public set consumeReservationType(value: string) {
+    this._consumeReservationType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumeReservationTypeInput() {
+    return this._consumeReservationType;
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: true, required: false
+  private _values?: string[]; 
+  public get values() {
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  public resetValues() {
+    this._values = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
 export interface ContainerNodePoolNodeConfigShieldedInstanceConfig {
   /**
   * Defines whether the instance has integrity monitoring enabled.
@@ -997,6 +1119,12 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly gvnic?: ContainerNodePoolNodeConfigGvnic;
   /**
+  * reservation_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#reservation_affinity ContainerNodePool#reservation_affinity}
+  */
+  readonly reservationAffinity?: ContainerNodePoolNodeConfigReservationAffinity;
+  /**
   * shielded_instance_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#shielded_instance_config ContainerNodePool#shielded_instance_config}
@@ -1035,6 +1163,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform, false)(struct!.taint),
     gcfs_config: containerNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
+    reservation_affinity: containerNodePoolNodeConfigReservationAffinityToTerraform(struct!.reservationAffinity),
     shielded_instance_config: containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
     workload_metadata_config: containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct!.workloadMetadataConfig),
   }
@@ -1130,6 +1259,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.gvnic = this._gvnic?.internalValue;
     }
+    if (this._reservationAffinity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
+    }
     if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
@@ -1163,6 +1296,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
       this._gvnic.internalValue = undefined;
+      this._reservationAffinity.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
       this._workloadMetadataConfig.internalValue = undefined;
     }
@@ -1187,6 +1321,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
       this._gvnic.internalValue = value.gvnic;
+      this._reservationAffinity.internalValue = value.reservationAffinity;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
       this._workloadMetadataConfig.internalValue = value.workloadMetadataConfig;
     }
@@ -1496,6 +1631,22 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
     return this._gvnic.internalValue;
   }
 
+  // reservation_affinity - computed: false, optional: true, required: false
+  private _reservationAffinity = new ContainerNodePoolNodeConfigReservationAffinityOutputReference(this, "reservation_affinity");
+  public get reservationAffinity() {
+    return this._reservationAffinity;
+  }
+  public putReservationAffinity(value: ContainerNodePoolNodeConfigReservationAffinity) {
+    this._reservationAffinity.internalValue = value;
+  }
+  public resetReservationAffinity() {
+    this._reservationAffinity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationAffinityInput() {
+    return this._reservationAffinity.internalValue;
+  }
+
   // shielded_instance_config - computed: false, optional: true, required: false
   private _shieldedInstanceConfig = new ContainerNodePoolNodeConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
   public get shieldedInstanceConfig() {
@@ -1774,7 +1925,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

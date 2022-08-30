@@ -1475,7 +1475,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
