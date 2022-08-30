@@ -439,7 +439,7 @@ export class DataplexLake extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_lake',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

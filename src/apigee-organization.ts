@@ -53,6 +53,15 @@ Valid only when 'RuntimeType' is set to CLOUD. The value can be updated only whe
   */
   readonly projectId: string;
   /**
+  * Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
+is not EVALUATION). It controls how long Organization data will be retained after the initial delete
+operation completes. During this period, the Organization may be restored to its last known state.
+After this period, the Organization will no longer be able to be restored. Default value: "DELETION_RETENTION_UNSPECIFIED" Possible values: ["DELETION_RETENTION_UNSPECIFIED", "MINIMUM"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#retention ApigeeOrganization#retention}
+  */
+  readonly retention?: string;
+  /**
   * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
@@ -230,7 +239,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_organization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.31.0',
+        providerVersion: '4.34.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -248,6 +257,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._id = config.id;
     this._projectId = config.projectId;
+    this._retention = config.retention;
     this._runtimeDatabaseEncryptionKeyName = config.runtimeDatabaseEncryptionKeyName;
     this._runtimeType = config.runtimeType;
     this._timeouts.internalValue = config.timeouts;
@@ -376,6 +386,22 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     return this._projectId;
   }
 
+  // retention - computed: false, optional: true, required: false
+  private _retention?: string; 
+  public get retention() {
+    return this.getStringAttribute('retention');
+  }
+  public set retention(value: string) {
+    this._retention = value;
+  }
+  public resetRetention() {
+    this._retention = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInput() {
+    return this._retention;
+  }
+
   // runtime_database_encryption_key_name - computed: false, optional: true, required: false
   private _runtimeDatabaseEncryptionKeyName?: string; 
   public get runtimeDatabaseEncryptionKeyName() {
@@ -442,6 +468,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),
       project_id: cdktf.stringToTerraform(this._projectId),
+      retention: cdktf.stringToTerraform(this._retention),
       runtime_database_encryption_key_name: cdktf.stringToTerraform(this._runtimeDatabaseEncryptionKeyName),
       runtime_type: cdktf.stringToTerraform(this._runtimeType),
       timeouts: apigeeOrganizationTimeoutsToTerraform(this._timeouts.internalValue),
