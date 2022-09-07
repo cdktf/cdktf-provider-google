@@ -150,7 +150,7 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
       terraformResourceType: 'google_monitoring_notification_channel',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -197,6 +197,11 @@ export class DataGoogleMonitoringNotificationChannel extends cdktf.TerraformData
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
+  }
+
+  // force_delete - computed: true, optional: false, required: false
+  public get forceDelete() {
+    return this.getBooleanAttribute('force_delete');
   }
 
   // id - computed: true, optional: true, required: false

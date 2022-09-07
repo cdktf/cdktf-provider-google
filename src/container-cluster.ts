@@ -303,6 +303,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceUsageExportConfig?: ContainerClusterResourceUsageExportConfig;
   /**
+  * service_external_ips_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#service_external_ips_config ContainerCluster#service_external_ips_config}
+  */
+  readonly serviceExternalIpsConfig?: ContainerClusterServiceExternalIpsConfig;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#timeouts ContainerCluster#timeouts}
@@ -7362,6 +7368,70 @@ export class ContainerClusterResourceUsageExportConfigOutputReference extends cd
     return this._bigqueryDestination.internalValue;
   }
 }
+export interface ContainerClusterServiceExternalIpsConfig {
+  /**
+  * When enabled, services with exterenal ips specified will be allowed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterServiceExternalIpsConfigToTerraform(struct?: ContainerClusterServiceExternalIpsConfigOutputReference | ContainerClusterServiceExternalIpsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerClusterServiceExternalIpsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterServiceExternalIpsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterServiceExternalIpsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
 export interface ContainerClusterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#create ContainerCluster#create}
@@ -7676,7 +7746,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -7736,6 +7806,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._privateClusterConfig.internalValue = config.privateClusterConfig;
     this._releaseChannel.internalValue = config.releaseChannel;
     this._resourceUsageExportConfig.internalValue = config.resourceUsageExportConfig;
+    this._serviceExternalIpsConfig.internalValue = config.serviceExternalIpsConfig;
     this._timeouts.internalValue = config.timeouts;
     this._verticalPodAutoscaling.internalValue = config.verticalPodAutoscaling;
     this._workloadIdentityConfig.internalValue = config.workloadIdentityConfig;
@@ -8561,6 +8632,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._resourceUsageExportConfig.internalValue;
   }
 
+  // service_external_ips_config - computed: false, optional: true, required: false
+  private _serviceExternalIpsConfig = new ContainerClusterServiceExternalIpsConfigOutputReference(this, "service_external_ips_config");
+  public get serviceExternalIpsConfig() {
+    return this._serviceExternalIpsConfig;
+  }
+  public putServiceExternalIpsConfig(value: ContainerClusterServiceExternalIpsConfig) {
+    this._serviceExternalIpsConfig.internalValue = value;
+  }
+  public resetServiceExternalIpsConfig() {
+    this._serviceExternalIpsConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceExternalIpsConfigInput() {
+    return this._serviceExternalIpsConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ContainerClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -8664,6 +8751,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       private_cluster_config: containerClusterPrivateClusterConfigToTerraform(this._privateClusterConfig.internalValue),
       release_channel: containerClusterReleaseChannelToTerraform(this._releaseChannel.internalValue),
       resource_usage_export_config: containerClusterResourceUsageExportConfigToTerraform(this._resourceUsageExportConfig.internalValue),
+      service_external_ips_config: containerClusterServiceExternalIpsConfigToTerraform(this._serviceExternalIpsConfig.internalValue),
       timeouts: containerClusterTimeoutsToTerraform(this._timeouts.internalValue),
       vertical_pod_autoscaling: containerClusterVerticalPodAutoscalingToTerraform(this._verticalPodAutoscaling.internalValue),
       workload_identity_config: containerClusterWorkloadIdentityConfigToTerraform(this._workloadIdentityConfig.internalValue),

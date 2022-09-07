@@ -77,11 +77,212 @@ Valid only when 'RuntimeType' is CLOUD. For example: 'projects/foo/locations/us/
   */
   readonly runtimeType?: string;
   /**
+  * properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#properties ApigeeOrganization#properties}
+  */
+  readonly properties?: ApigeeOrganizationProperties;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#timeouts ApigeeOrganization#timeouts}
   */
   readonly timeouts?: ApigeeOrganizationTimeouts;
+}
+export interface ApigeeOrganizationPropertiesProperty {
+  /**
+  * Name of the property.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#name ApigeeOrganization#name}
+  */
+  readonly name?: string;
+  /**
+  * Value of the property.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#value ApigeeOrganization#value}
+  */
+  readonly value?: string;
+}
+
+export function apigeeOrganizationPropertiesPropertyToTerraform(struct?: ApigeeOrganizationPropertiesProperty | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class ApigeeOrganizationPropertiesPropertyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApigeeOrganizationPropertiesProperty | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeOrganizationPropertiesProperty | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // value - computed: false, optional: true, required: false
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class ApigeeOrganizationPropertiesPropertyList extends cdktf.ComplexList {
+  public internalValue? : ApigeeOrganizationPropertiesProperty[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApigeeOrganizationPropertiesPropertyOutputReference {
+    return new ApigeeOrganizationPropertiesPropertyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApigeeOrganizationProperties {
+  /**
+  * property block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_organization#property ApigeeOrganization#property}
+  */
+  readonly property?: ApigeeOrganizationPropertiesProperty[] | cdktf.IResolvable;
+}
+
+export function apigeeOrganizationPropertiesToTerraform(struct?: ApigeeOrganizationPropertiesOutputReference | ApigeeOrganizationProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    property: cdktf.listMapper(apigeeOrganizationPropertiesPropertyToTerraform, true)(struct!.property),
+  }
+}
+
+export class ApigeeOrganizationPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApigeeOrganizationProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._property?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.property = this._property?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeOrganizationProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._property.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._property.internalValue = value.property;
+    }
+  }
+
+  // property - computed: false, optional: true, required: false
+  private _property = new ApigeeOrganizationPropertiesPropertyList(this, "property", false);
+  public get property() {
+    return this._property;
+  }
+  public putProperty(value: ApigeeOrganizationPropertiesProperty[] | cdktf.IResolvable) {
+    this._property.internalValue = value;
+  }
+  public resetProperty() {
+    this._property.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyInput() {
+    return this._property.internalValue;
+  }
 }
 export interface ApigeeOrganizationTimeouts {
   /**
@@ -239,7 +440,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_organization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -260,6 +461,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     this._retention = config.retention;
     this._runtimeDatabaseEncryptionKeyName = config.runtimeDatabaseEncryptionKeyName;
     this._runtimeType = config.runtimeType;
+    this._properties.internalValue = config.properties;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -439,6 +641,22 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
     return this.getStringAttribute('subscription_type');
   }
 
+  // properties - computed: false, optional: true, required: false
+  private _properties = new ApigeeOrganizationPropertiesOutputReference(this, "properties");
+  public get properties() {
+    return this._properties;
+  }
+  public putProperties(value: ApigeeOrganizationProperties) {
+    this._properties.internalValue = value;
+  }
+  public resetProperties() {
+    this._properties.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ApigeeOrganizationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -471,6 +689,7 @@ export class ApigeeOrganization extends cdktf.TerraformResource {
       retention: cdktf.stringToTerraform(this._retention),
       runtime_database_encryption_key_name: cdktf.stringToTerraform(this._runtimeDatabaseEncryptionKeyName),
       runtime_type: cdktf.stringToTerraform(this._runtimeType),
+      properties: apigeeOrganizationPropertiesToTerraform(this._properties.internalValue),
       timeouts: apigeeOrganizationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
