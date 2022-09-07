@@ -59,11 +59,122 @@ in the format 'organizations/{{org_name}}'.
   */
   readonly orgId: string;
   /**
+  * node_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#node_config ApigeeEnvironment#node_config}
+  */
+  readonly nodeConfig?: ApigeeEnvironmentNodeConfig;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#timeouts ApigeeEnvironment#timeouts}
   */
   readonly timeouts?: ApigeeEnvironmentTimeouts;
+}
+export interface ApigeeEnvironmentNodeConfig {
+  /**
+  * The maximum total number of gateway nodes that the is reserved for all instances that
+has the specified environment. If not specified, the default is determined by the
+recommended maximum number of nodes for that gateway.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#max_node_count ApigeeEnvironment#max_node_count}
+  */
+  readonly maxNodeCount?: string;
+  /**
+  * The minimum total number of gateway nodes that the is reserved for all instances that
+has the specified environment. If not specified, the default is determined by the
+recommended minimum number of nodes for that gateway.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_environment#min_node_count ApigeeEnvironment#min_node_count}
+  */
+  readonly minNodeCount?: string;
+}
+
+export function apigeeEnvironmentNodeConfigToTerraform(struct?: ApigeeEnvironmentNodeConfigOutputReference | ApigeeEnvironmentNodeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_node_count: cdktf.stringToTerraform(struct!.maxNodeCount),
+    min_node_count: cdktf.stringToTerraform(struct!.minNodeCount),
+  }
+}
+
+export class ApigeeEnvironmentNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApigeeEnvironmentNodeConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxNodeCount = this._maxNodeCount;
+    }
+    if (this._minNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minNodeCount = this._minNodeCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApigeeEnvironmentNodeConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxNodeCount = undefined;
+      this._minNodeCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxNodeCount = value.maxNodeCount;
+      this._minNodeCount = value.minNodeCount;
+    }
+  }
+
+  // current_aggregate_node_count - computed: true, optional: false, required: false
+  public get currentAggregateNodeCount() {
+    return this.getStringAttribute('current_aggregate_node_count');
+  }
+
+  // max_node_count - computed: false, optional: true, required: false
+  private _maxNodeCount?: string; 
+  public get maxNodeCount() {
+    return this.getStringAttribute('max_node_count');
+  }
+  public set maxNodeCount(value: string) {
+    this._maxNodeCount = value;
+  }
+  public resetMaxNodeCount() {
+    this._maxNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodeCountInput() {
+    return this._maxNodeCount;
+  }
+
+  // min_node_count - computed: false, optional: true, required: false
+  private _minNodeCount?: string; 
+  public get minNodeCount() {
+    return this.getStringAttribute('min_node_count');
+  }
+  public set minNodeCount(value: string) {
+    this._minNodeCount = value;
+  }
+  public resetMinNodeCount() {
+    this._minNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodeCountInput() {
+    return this._minNodeCount;
+  }
 }
 export interface ApigeeEnvironmentTimeouts {
   /**
@@ -221,7 +332,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -239,6 +350,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
     this._id = config.id;
     this._name = config.name;
     this._orgId = config.orgId;
+    this._nodeConfig.internalValue = config.nodeConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -352,6 +464,22 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
     return this._orgId;
   }
 
+  // node_config - computed: false, optional: true, required: false
+  private _nodeConfig = new ApigeeEnvironmentNodeConfigOutputReference(this, "node_config");
+  public get nodeConfig() {
+    return this._nodeConfig;
+  }
+  public putNodeConfig(value: ApigeeEnvironmentNodeConfig) {
+    this._nodeConfig.internalValue = value;
+  }
+  public resetNodeConfig() {
+    this._nodeConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeConfigInput() {
+    return this._nodeConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ApigeeEnvironmentTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -381,6 +509,7 @@ export class ApigeeEnvironment extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       org_id: cdktf.stringToTerraform(this._orgId),
+      node_config: apigeeEnvironmentNodeConfigToTerraform(this._nodeConfig.internalValue),
       timeouts: apigeeEnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

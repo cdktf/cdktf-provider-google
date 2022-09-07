@@ -58,7 +58,7 @@ export class ComputeRegionDiskIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_disk_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

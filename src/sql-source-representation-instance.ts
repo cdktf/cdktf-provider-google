@@ -186,7 +186,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_source_representation_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

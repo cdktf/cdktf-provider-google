@@ -442,7 +442,7 @@ export class NotebooksEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.34.0',
+        providerVersion: '4.35.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
