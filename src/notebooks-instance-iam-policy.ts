@@ -58,7 +58,7 @@ export class NotebooksInstanceIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_instance_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

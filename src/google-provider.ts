@@ -192,6 +192,10 @@ export interface GoogleProviderConfig {
   */
   readonly datastoreCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}
+  */
+  readonly datastreamCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}
   */
   readonly deploymentManagerCustomEndpoint?: string;
@@ -497,7 +501,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -548,6 +552,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._dataprocCustomEndpoint = config.dataprocCustomEndpoint;
     this._dataprocMetastoreCustomEndpoint = config.dataprocMetastoreCustomEndpoint;
     this._datastoreCustomEndpoint = config.datastoreCustomEndpoint;
+    this._datastreamCustomEndpoint = config.datastreamCustomEndpoint;
     this._deploymentManagerCustomEndpoint = config.deploymentManagerCustomEndpoint;
     this._dialogflowCustomEndpoint = config.dialogflowCustomEndpoint;
     this._dialogflowCxCustomEndpoint = config.dialogflowCxCustomEndpoint;
@@ -1351,6 +1356,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get datastoreCustomEndpointInput() {
     return this._datastoreCustomEndpoint;
+  }
+
+  // datastream_custom_endpoint - computed: false, optional: true, required: false
+  private _datastreamCustomEndpoint?: string; 
+  public get datastreamCustomEndpoint() {
+    return this._datastreamCustomEndpoint;
+  }
+  public set datastreamCustomEndpoint(value: string | undefined) {
+    this._datastreamCustomEndpoint = value;
+  }
+  public resetDatastreamCustomEndpoint() {
+    this._datastreamCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datastreamCustomEndpointInput() {
+    return this._datastreamCustomEndpoint;
   }
 
   // deployment_manager_custom_endpoint - computed: false, optional: true, required: false
@@ -2413,6 +2434,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       dataproc_custom_endpoint: cdktf.stringToTerraform(this._dataprocCustomEndpoint),
       dataproc_metastore_custom_endpoint: cdktf.stringToTerraform(this._dataprocMetastoreCustomEndpoint),
       datastore_custom_endpoint: cdktf.stringToTerraform(this._datastoreCustomEndpoint),
+      datastream_custom_endpoint: cdktf.stringToTerraform(this._datastreamCustomEndpoint),
       deployment_manager_custom_endpoint: cdktf.stringToTerraform(this._deploymentManagerCustomEndpoint),
       dialogflow_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCustomEndpoint),
       dialogflow_cx_custom_endpoint: cdktf.stringToTerraform(this._dialogflowCxCustomEndpoint),

@@ -14,6 +14,14 @@ export interface ComputeTargetSslProxyConfig extends cdktf.TerraformMetaArgument
   */
   readonly backendService: string;
   /**
+  * A reference to the CertificateMap resource uri that identifies a certificate map
+associated with the given target proxy. This field can only be set for global target proxies.
+Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#certificate_map ComputeTargetSslProxy#certificate_map}
+  */
+  readonly certificateMap?: string;
+  /**
   * An optional description of this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#description ComputeTargetSslProxy#description}
@@ -56,7 +64,7 @@ SSL certificate must be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy#ssl_certificates ComputeTargetSslProxy#ssl_certificates}
   */
-  readonly sslCertificates: string[];
+  readonly sslCertificates?: string[];
   /**
   * A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
@@ -228,7 +236,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_target_ssl_proxy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -240,6 +248,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._backendService = config.backendService;
+    this._certificateMap = config.certificateMap;
     this._description = config.description;
     this._id = config.id;
     this._name = config.name;
@@ -265,6 +274,22 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get backendServiceInput() {
     return this._backendService;
+  }
+
+  // certificate_map - computed: false, optional: true, required: false
+  private _certificateMap?: string; 
+  public get certificateMap() {
+    return this.getStringAttribute('certificate_map');
+  }
+  public set certificateMap(value: string) {
+    this._certificateMap = value;
+  }
+  public resetCertificateMap() {
+    this._certificateMap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateMapInput() {
+    return this._certificateMap;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -359,13 +384,16 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
-  // ssl_certificates - computed: false, optional: false, required: true
+  // ssl_certificates - computed: false, optional: true, required: false
   private _sslCertificates?: string[]; 
   public get sslCertificates() {
     return this.getListAttribute('ssl_certificates');
   }
   public set sslCertificates(value: string[]) {
     this._sslCertificates = value;
+  }
+  public resetSslCertificates() {
+    this._sslCertificates = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sslCertificatesInput() {
@@ -411,6 +439,7 @@ export class ComputeTargetSslProxy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_service: cdktf.stringToTerraform(this._backendService),
+      certificate_map: cdktf.stringToTerraform(this._certificateMap),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),

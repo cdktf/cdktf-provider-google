@@ -1100,6 +1100,14 @@ export class ComputeResourcePolicySnapshotSchedulePolicyScheduleOutputReference 
 }
 export interface ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties {
   /**
+  * Creates the new snapshot in the snapshot chain labeled with the 
+specified name. The chain name must be 1-63 characters long and comply 
+with RFC1035.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy#chain_name ComputeResourcePolicy#chain_name}
+  */
+  readonly chainName?: string;
+  /**
   * Whether to perform a 'guest aware' snapshot.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_resource_policy#guest_flush ComputeResourcePolicy#guest_flush}
@@ -1126,6 +1134,7 @@ export function computeResourcePolicySnapshotSchedulePolicySnapshotPropertiesToT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    chain_name: cdktf.stringToTerraform(struct!.chainName),
     guest_flush: cdktf.booleanToTerraform(struct!.guestFlush),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     storage_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.storageLocations),
@@ -1146,6 +1155,10 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   public get internalValue(): ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._chainName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.chainName = this._chainName;
+    }
     if (this._guestFlush !== undefined) {
       hasAnyValues = true;
       internalValueResult.guestFlush = this._guestFlush;
@@ -1164,16 +1177,34 @@ export class ComputeResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput
   public set internalValue(value: ComputeResourcePolicySnapshotSchedulePolicySnapshotProperties | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._chainName = undefined;
       this._guestFlush = undefined;
       this._labels = undefined;
       this._storageLocations = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._chainName = value.chainName;
       this._guestFlush = value.guestFlush;
       this._labels = value.labels;
       this._storageLocations = value.storageLocations;
     }
+  }
+
+  // chain_name - computed: false, optional: true, required: false
+  private _chainName?: string; 
+  public get chainName() {
+    return this.getStringAttribute('chain_name');
+  }
+  public set chainName(value: string) {
+    this._chainName = value;
+  }
+  public resetChainName() {
+    this._chainName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get chainNameInput() {
+    return this._chainName;
   }
 
   // guest_flush - computed: false, optional: true, required: false
@@ -1475,7 +1506,7 @@ export class ComputeResourcePolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

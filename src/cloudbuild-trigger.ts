@@ -79,6 +79,13 @@ a build.
   */
   readonly includedFiles?: string[];
   /**
+  * The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
+If not specified, "global" is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#location CloudbuildTrigger#location}
+  */
+  readonly location?: string;
+  /**
   * Name of the trigger. Must be unique within the project.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#name CloudbuildTrigger#name}
@@ -4063,7 +4070,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -4082,6 +4089,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
     this._ignoredFiles = config.ignoredFiles;
     this._includeBuildLogs = config.includeBuildLogs;
     this._includedFiles = config.includedFiles;
+    this._location = config.location;
     this._name = config.name;
     this._project = config.project;
     this._serviceAccount = config.serviceAccount;
@@ -4233,6 +4241,22 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get includedFilesInput() {
     return this._includedFiles;
+  }
+
+  // location - computed: false, optional: true, required: false
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
   }
 
   // name - computed: true, optional: true, required: false
@@ -4478,6 +4502,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       ignored_files: cdktf.listMapper(cdktf.stringToTerraform, false)(this._ignoredFiles),
       include_build_logs: cdktf.stringToTerraform(this._includeBuildLogs),
       included_files: cdktf.listMapper(cdktf.stringToTerraform, false)(this._includedFiles),
+      location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       service_account: cdktf.stringToTerraform(this._serviceAccount),

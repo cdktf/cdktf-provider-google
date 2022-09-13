@@ -2903,6 +2903,11 @@ export class DataGoogleContainerClusterNodePoolAutoscalingOutputReference extend
     }
   }
 
+  // location_policy - computed: true, optional: false, required: false
+  public get locationPolicy() {
+    return this.getStringAttribute('location_policy');
+  }
+
   // max_node_count - computed: true, optional: false, required: false
   public get maxNodeCount() {
     return this.getNumberAttribute('max_node_count');
@@ -2911,6 +2916,16 @@ export class DataGoogleContainerClusterNodePoolAutoscalingOutputReference extend
   // min_node_count - computed: true, optional: false, required: false
   public get minNodeCount() {
     return this.getNumberAttribute('min_node_count');
+  }
+
+  // total_max_node_count - computed: true, optional: false, required: false
+  public get totalMaxNodeCount() {
+    return this.getNumberAttribute('total_max_node_count');
+  }
+
+  // total_min_node_count - computed: true, optional: false, required: false
+  public get totalMinNodeCount() {
+    return this.getNumberAttribute('total_min_node_count');
   }
 }
 
@@ -4574,7 +4589,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

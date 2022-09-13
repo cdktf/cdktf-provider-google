@@ -595,7 +595,7 @@ export class HealthcareHl7V2Store extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_hl7_v2_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

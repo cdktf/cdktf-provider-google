@@ -783,6 +783,11 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicySnapshotProper
     }
   }
 
+  // chain_name - computed: true, optional: false, required: false
+  public get chainName() {
+    return this.getStringAttribute('chain_name');
+  }
+
   // guest_flush - computed: true, optional: false, required: false
   public get guestFlush() {
     return this.getBooleanAttribute('guest_flush');
@@ -922,7 +927,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

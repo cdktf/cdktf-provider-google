@@ -185,7 +185,7 @@ export class IapAppEngineVersionIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_app_engine_version_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -8,6 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Creates the new snapshot in the snapshot chain labeled with the 
+specified name. The chain name must be 1-63 characters long and 
+comply with RFC1035. This is an uncommon option only for advanced 
+service owners who needs to create separate snapshot chains, for 
+example, for chargeback tracking.  When you describe your snapshot 
+resource, this field is visible only if it has a non-empty value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot#chain_name ComputeSnapshot#chain_name}
+  */
+  readonly chainName?: string;
+  /**
   * An optional description of this resource.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot#description ComputeSnapshot#description}
@@ -465,7 +476,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -476,6 +487,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._chainName = config.chainName;
     this._description = config.description;
     this._id = config.id;
     this._labels = config.labels;
@@ -492,6 +504,22 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // chain_name - computed: false, optional: true, required: false
+  private _chainName?: string; 
+  public get chainName() {
+    return this.getStringAttribute('chain_name');
+  }
+  public set chainName(value: string) {
+    this._chainName = value;
+  }
+  public resetChainName() {
+    this._chainName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get chainNameInput() {
+    return this._chainName;
+  }
 
   // creation_timestamp - computed: true, optional: false, required: false
   public get creationTimestamp() {
@@ -704,6 +732,7 @@ export class ComputeSnapshot extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      chain_name: cdktf.stringToTerraform(this._chainName),
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
