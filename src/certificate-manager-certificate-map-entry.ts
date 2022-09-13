@@ -231,7 +231,7 @@ export class CertificateManagerCertificateMapEntry extends cdktf.TerraformResour
       terraformResourceType: 'google_certificate_manager_certificate_map_entry',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

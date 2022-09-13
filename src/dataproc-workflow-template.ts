@@ -4126,6 +4126,131 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
     return this._values;
   }
 }
+export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig {
+  /**
+  * Optional. Defines whether instances have integrity monitoring enabled. Integrity monitoring compares the most recent boot measurements to the integrity policy baseline and returns a pair of pass/fail results depending on whether they match or not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template#enable_integrity_monitoring DataprocWorkflowTemplate#enable_integrity_monitoring}
+  */
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
+  /**
+  * Optional. Defines whether the instances have Secure Boot enabled. Secure Boot helps ensure that the system only runs authentic software by verifying the digital signature of all boot components, and halting the boot process if signature verification fails.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template#enable_secure_boot DataprocWorkflowTemplate#enable_secure_boot}
+  */
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
+  /**
+  * Optional. Defines whether the instance have the vTPM enabled. Virtual Trusted Platform Module protects objects like keys, certificates and enables Measured Boot by performing the measurements needed to create a known good boot baseline, called the integrity policy baseline.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template#enable_vtpm DataprocWorkflowTemplate#enable_vtpm}
+  */
+  readonly enableVtpm?: boolean | cdktf.IResolvable;
+}
+
+export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+    enable_vtpm: cdktf.booleanToTerraform(struct!.enableVtpm),
+  }
+}
+
+export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableIntegrityMonitoring !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
+    }
+    if (this._enableSecureBoot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableSecureBoot = this._enableSecureBoot;
+    }
+    if (this._enableVtpm !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableVtpm = this._enableVtpm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableIntegrityMonitoring = undefined;
+      this._enableSecureBoot = undefined;
+      this._enableVtpm = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
+      this._enableSecureBoot = value.enableSecureBoot;
+      this._enableVtpm = value.enableVtpm;
+    }
+  }
+
+  // enable_integrity_monitoring - computed: false, optional: true, required: false
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
+  public get enableIntegrityMonitoring() {
+    return this.getBooleanAttribute('enable_integrity_monitoring');
+  }
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
+    this._enableIntegrityMonitoring = value;
+  }
+  public resetEnableIntegrityMonitoring() {
+    this._enableIntegrityMonitoring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIntegrityMonitoringInput() {
+    return this._enableIntegrityMonitoring;
+  }
+
+  // enable_secure_boot - computed: false, optional: true, required: false
+  private _enableSecureBoot?: boolean | cdktf.IResolvable; 
+  public get enableSecureBoot() {
+    return this.getBooleanAttribute('enable_secure_boot');
+  }
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
+    this._enableSecureBoot = value;
+  }
+  public resetEnableSecureBoot() {
+    this._enableSecureBoot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSecureBootInput() {
+    return this._enableSecureBoot;
+  }
+
+  // enable_vtpm - computed: false, optional: true, required: false
+  private _enableVtpm?: boolean | cdktf.IResolvable; 
+  public get enableVtpm() {
+    return this.getBooleanAttribute('enable_vtpm');
+  }
+  public set enableVtpm(value: boolean | cdktf.IResolvable) {
+    this._enableVtpm = value;
+  }
+  public resetEnableVtpm() {
+    this._enableVtpm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableVtpmInput() {
+    return this._enableVtpm;
+  }
+}
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
   /**
   * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
@@ -4193,6 +4318,12 @@ export interface DataprocWorkflowTemplatePlacementManagedClusterConfigGceCluster
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template#reservation_affinity DataprocWorkflowTemplate#reservation_affinity}
   */
   readonly reservationAffinity?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity;
+  /**
+  * shielded_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_workflow_template#shielded_instance_config DataprocWorkflowTemplate#shielded_instance_config}
+  */
+  readonly shieldedInstanceConfig?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig;
 }
 
 export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigToTerraform(struct?: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigOutputReference | DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfig): any {
@@ -4212,6 +4343,7 @@ export function dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterC
     zone: cdktf.stringToTerraform(struct!.zone),
     node_group_affinity: dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityToTerraform(struct!.nodeGroupAffinity),
     reservation_affinity: dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityToTerraform(struct!.reservationAffinity),
+    shielded_instance_config: dataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
   }
 }
 
@@ -4273,6 +4405,10 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
       hasAnyValues = true;
       internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
     }
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -4290,6 +4426,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
       this._zone = undefined;
       this._nodeGroupAffinity.internalValue = undefined;
       this._reservationAffinity.internalValue = undefined;
+      this._shieldedInstanceConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -4304,6 +4441,7 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
       this._zone = value.zone;
       this._nodeGroupAffinity.internalValue = value.nodeGroupAffinity;
       this._reservationAffinity.internalValue = value.reservationAffinity;
+      this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
     }
   }
 
@@ -4481,6 +4619,22 @@ export class DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConf
   // Temporarily expose input value. Use with caution.
   public get reservationAffinityInput() {
     return this._reservationAffinity.internalValue;
+  }
+
+  // shielded_instance_config - computed: false, optional: true, required: false
+  private _shieldedInstanceConfig = new DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
+  public get shieldedInstanceConfig() {
+    return this._shieldedInstanceConfig;
+  }
+  public putShieldedInstanceConfig(value: DataprocWorkflowTemplatePlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig) {
+    this._shieldedInstanceConfig.internalValue = value;
+  }
+  public resetShieldedInstanceConfig() {
+    this._shieldedInstanceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shieldedInstanceConfigInput() {
+    return this._shieldedInstanceConfig.internalValue;
   }
 }
 export interface DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions {
@@ -7902,7 +8056,7 @@ export class DataprocWorkflowTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_workflow_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

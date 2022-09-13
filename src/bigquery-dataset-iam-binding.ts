@@ -177,7 +177,7 @@ export class BigqueryDatasetIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

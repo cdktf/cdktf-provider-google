@@ -769,7 +769,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -99,6 +99,13 @@ Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
   */
   readonly service: string;
   /**
+  * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as
+default if this field is neither provided in app.yaml file nor through CLI flag.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#service_account AppEngineFlexibleAppVersion#service_account}
+  */
+  readonly serviceAccount?: string;
+  /**
   * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed. Default value: "SERVING" Possible values: ["SERVING", "STOPPED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#serving_status AppEngineFlexibleAppVersion#serving_status}
@@ -3870,7 +3877,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_flexible_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3896,6 +3903,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     this._runtimeChannel = config.runtimeChannel;
     this._runtimeMainExecutablePath = config.runtimeMainExecutablePath;
     this._service = config.service;
+    this._serviceAccount = config.serviceAccount;
     this._servingStatus = config.servingStatus;
     this._versionId = config.versionId;
     this._apiConfig.internalValue = config.apiConfig;
@@ -4156,6 +4164,22 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
     return this._service;
   }
 
+  // service_account - computed: false, optional: true, required: false
+  private _serviceAccount?: string; 
+  public get serviceAccount() {
+    return this.getStringAttribute('service_account');
+  }
+  public set serviceAccount(value: string) {
+    this._serviceAccount = value;
+  }
+  public resetServiceAccount() {
+    this._serviceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceAccountInput() {
+    return this._serviceAccount;
+  }
+
   // serving_status - computed: false, optional: true, required: false
   private _servingStatus?: string; 
   public get servingStatus() {
@@ -4411,6 +4435,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       runtime_channel: cdktf.stringToTerraform(this._runtimeChannel),
       runtime_main_executable_path: cdktf.stringToTerraform(this._runtimeMainExecutablePath),
       service: cdktf.stringToTerraform(this._service),
+      service_account: cdktf.stringToTerraform(this._serviceAccount),
       serving_status: cdktf.stringToTerraform(this._servingStatus),
       version_id: cdktf.stringToTerraform(this._versionId),
       api_config: appEngineFlexibleAppVersionApiConfigToTerraform(this._apiConfig.internalValue),

@@ -4666,17 +4666,35 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
 }
 export interface ContainerClusterNodePoolAutoscaling {
   /**
-  * Maximum number of nodes in the NodePool. Must be >= min_node_count.
+  * Location policy specifies the algorithm used when scaling-up the node pool. "BALANCED" - Is a best effort policy that aims to balance the sizes of available zones. "ANY" - Instructs the cluster autoscaler to prioritize utilization of unused reservations, and reduces preemption risk for Spot VMs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#location_policy ContainerCluster#location_policy}
+  */
+  readonly locationPolicy?: string;
+  /**
+  * Maximum number of nodes per zone in the node pool. Must be >= min_node_count. Cannot be used with total limits.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#max_node_count ContainerCluster#max_node_count}
   */
-  readonly maxNodeCount: number;
+  readonly maxNodeCount?: number;
   /**
-  * Minimum number of nodes in the NodePool. Must be >=0 and <= max_node_count.
+  * Minimum number of nodes per zone in the node pool. Must be >=0 and <= max_node_count. Cannot be used with total limits.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#min_node_count ContainerCluster#min_node_count}
   */
-  readonly minNodeCount: number;
+  readonly minNodeCount?: number;
+  /**
+  * Maximum number of all nodes in the node pool. Must be >= total_min_node_count. Cannot be used with per zone limits.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#total_max_node_count ContainerCluster#total_max_node_count}
+  */
+  readonly totalMaxNodeCount?: number;
+  /**
+  * Minimum number of all nodes in the node pool. Must be >=0 and <= total_max_node_count. Cannot be used with per zone limits.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#total_min_node_count ContainerCluster#total_min_node_count}
+  */
+  readonly totalMinNodeCount?: number;
 }
 
 export function containerClusterNodePoolAutoscalingToTerraform(struct?: ContainerClusterNodePoolAutoscalingOutputReference | ContainerClusterNodePoolAutoscaling): any {
@@ -4685,8 +4703,11 @@ export function containerClusterNodePoolAutoscalingToTerraform(struct?: Containe
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    location_policy: cdktf.stringToTerraform(struct!.locationPolicy),
     max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
     min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
+    total_max_node_count: cdktf.numberToTerraform(struct!.totalMaxNodeCount),
+    total_min_node_count: cdktf.numberToTerraform(struct!.totalMinNodeCount),
   }
 }
 
@@ -4704,6 +4725,10 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
   public get internalValue(): ContainerClusterNodePoolAutoscaling | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._locationPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.locationPolicy = this._locationPolicy;
+    }
     if (this._maxNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodeCount = this._maxNodeCount;
@@ -4712,23 +4737,53 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.minNodeCount = this._minNodeCount;
     }
+    if (this._totalMaxNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.totalMaxNodeCount = this._totalMaxNodeCount;
+    }
+    if (this._totalMinNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.totalMinNodeCount = this._totalMinNodeCount;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
   public set internalValue(value: ContainerClusterNodePoolAutoscaling | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._locationPolicy = undefined;
       this._maxNodeCount = undefined;
       this._minNodeCount = undefined;
+      this._totalMaxNodeCount = undefined;
+      this._totalMinNodeCount = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._locationPolicy = value.locationPolicy;
       this._maxNodeCount = value.maxNodeCount;
       this._minNodeCount = value.minNodeCount;
+      this._totalMaxNodeCount = value.totalMaxNodeCount;
+      this._totalMinNodeCount = value.totalMinNodeCount;
     }
   }
 
-  // max_node_count - computed: false, optional: false, required: true
+  // location_policy - computed: false, optional: true, required: false
+  private _locationPolicy?: string; 
+  public get locationPolicy() {
+    return this.getStringAttribute('location_policy');
+  }
+  public set locationPolicy(value: string) {
+    this._locationPolicy = value;
+  }
+  public resetLocationPolicy() {
+    this._locationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationPolicyInput() {
+    return this._locationPolicy;
+  }
+
+  // max_node_count - computed: false, optional: true, required: false
   private _maxNodeCount?: number; 
   public get maxNodeCount() {
     return this.getNumberAttribute('max_node_count');
@@ -4736,12 +4791,15 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
   public set maxNodeCount(value: number) {
     this._maxNodeCount = value;
   }
+  public resetMaxNodeCount() {
+    this._maxNodeCount = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get maxNodeCountInput() {
     return this._maxNodeCount;
   }
 
-  // min_node_count - computed: false, optional: false, required: true
+  // min_node_count - computed: false, optional: true, required: false
   private _minNodeCount?: number; 
   public get minNodeCount() {
     return this.getNumberAttribute('min_node_count');
@@ -4749,9 +4807,44 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
   public set minNodeCount(value: number) {
     this._minNodeCount = value;
   }
+  public resetMinNodeCount() {
+    this._minNodeCount = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get minNodeCountInput() {
     return this._minNodeCount;
+  }
+
+  // total_max_node_count - computed: false, optional: true, required: false
+  private _totalMaxNodeCount?: number; 
+  public get totalMaxNodeCount() {
+    return this.getNumberAttribute('total_max_node_count');
+  }
+  public set totalMaxNodeCount(value: number) {
+    this._totalMaxNodeCount = value;
+  }
+  public resetTotalMaxNodeCount() {
+    this._totalMaxNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get totalMaxNodeCountInput() {
+    return this._totalMaxNodeCount;
+  }
+
+  // total_min_node_count - computed: false, optional: true, required: false
+  private _totalMinNodeCount?: number; 
+  public get totalMinNodeCount() {
+    return this.getNumberAttribute('total_min_node_count');
+  }
+  public set totalMinNodeCount(value: number) {
+    this._totalMinNodeCount = value;
+  }
+  public resetTotalMinNodeCount() {
+    this._totalMinNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get totalMinNodeCountInput() {
+    return this._totalMinNodeCount;
   }
 }
 export interface ContainerClusterNodePoolManagement {
@@ -7746,7 +7839,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

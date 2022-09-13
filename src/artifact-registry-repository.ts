@@ -331,7 +331,7 @@ export class ArtifactRegistryRepository extends cdktf.TerraformResource {
       terraformResourceType: 'google_artifact_registry_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

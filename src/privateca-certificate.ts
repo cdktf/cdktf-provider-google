@@ -4417,7 +4417,7 @@ export class PrivatecaCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

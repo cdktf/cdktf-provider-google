@@ -44,6 +44,12 @@ export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table#column_family BigtableTable#column_family}
   */
   readonly columnFamily?: BigtableTableColumnFamily[] | cdktf.IResolvable;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table#timeouts BigtableTable#timeouts}
+  */
+  readonly timeouts?: BigtableTableTimeouts;
 }
 export interface BigtableTableColumnFamily {
   /**
@@ -141,6 +147,81 @@ export class BigtableTableColumnFamilyList extends cdktf.ComplexList {
     return new BigtableTableColumnFamilyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface BigtableTableTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_table#create BigtableTable#create}
+  */
+  readonly create?: string;
+}
+
+export function bigtableTableTimeoutsToTerraform(struct?: BigtableTableTimeoutsOutputReference | BigtableTableTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+  }
+}
+
+export class BigtableTableTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigtableTableTimeouts | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigtableTableTimeouts | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._create = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._create = value.create;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_table google_bigtable_table}
@@ -168,7 +249,7 @@ export class BigtableTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.35.0',
+        providerVersion: '4.36.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -185,6 +266,7 @@ export class BigtableTable extends cdktf.TerraformResource {
     this._project = config.project;
     this._splitKeys = config.splitKeys;
     this._columnFamily.internalValue = config.columnFamily;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -281,6 +363,22 @@ export class BigtableTable extends cdktf.TerraformResource {
     return this._columnFamily.internalValue;
   }
 
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new BigtableTableTimeoutsOutputReference(this, "timeouts");
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: BigtableTableTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -293,6 +391,7 @@ export class BigtableTable extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       split_keys: cdktf.listMapper(cdktf.stringToTerraform, false)(this._splitKeys),
       column_family: cdktf.listMapper(bigtableTableColumnFamilyToTerraform, true)(this._columnFamily.internalValue),
+      timeouts: bigtableTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

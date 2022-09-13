@@ -257,6 +257,7 @@ export * from './dataproc-metastore-service-iam-member';
 export * from './dataproc-metastore-service-iam-policy';
 export * from './dataproc-workflow-template';
 export * from './datastore-index';
+export * from './datastream-connection-profile';
 export * from './deployment-manager-deployment';
 export * from './dialogflow-agent';
 export * from './dialogflow-cx-agent';
