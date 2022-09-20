@@ -27,7 +27,7 @@ export interface DialogflowCxVersionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly id?: string;
   /**
-  * The Flow to create an Version for. 
+  * The Flow to create an Version for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_version#parent DialogflowCxVersion#parent}
@@ -270,7 +270,7 @@ export class DialogflowCxVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

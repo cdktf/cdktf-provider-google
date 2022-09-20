@@ -74,7 +74,7 @@ in the format 'organizations/{{org_name}}'.
   */
   readonly orgId: string;
   /**
-  * The size of the CIDR block range that will be reserved by the instance. For valid values, 
+  * The size of the CIDR block range that will be reserved by the instance. For valid values,
 see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_instance#peering_cidr_range ApigeeInstance#peering_cidr_range}
@@ -216,7 +216,7 @@ export class ApigeeInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

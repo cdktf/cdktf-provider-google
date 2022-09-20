@@ -584,7 +584,7 @@ version or an integer for a specific version.
   /**
   * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. 
 If the secret is in another project, you must define an alias. 
-An alias definition has the form: :projects/<project-id|project-number>/secrets/. 
+An alias definition has the form: :projects/{project-id|project-number}/secrets/. 
 If multiple alias definitions are needed, they must be separated by commas. 
 The alias definitions must be set on the run.googleapis.com/secrets annotation.
   * 
@@ -2280,7 +2280,7 @@ file mode, like fsGroup, and the result can be other mode bits set.
 is assumed to be in the same project.
 If the secret is in another project, you must define an alias.
 An alias definition has the form:
-<alias>:projects/<project-id|project-number>/secrets/<secret-name>.
+{alias}:projects/{project-id|project-number}/secrets/{secret-name}.
 If multiple alias definitions are needed, they must be separated by
 commas.
 The alias definitions must be set on the run.googleapis.com/secrets
@@ -3159,7 +3159,7 @@ export class CloudRunService extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -12,6 +12,12 @@ export interface DataGoogleServiceAccountJwtConfig extends cdktf.TerraformMetaAr
   */
   readonly delegates?: string[];
   /**
+  * Number of seconds until the JWT expires. If set and non-zero an `exp` claim will be added to the payload derived from the current timestamp plus expires_in seconds.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_jwt#expires_in DataGoogleServiceAccountJwt#expires_in}
+  */
+  readonly expiresIn?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account_jwt#id DataGoogleServiceAccountJwt#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -56,7 +62,7 @@ export class DataGoogleServiceAccountJwt extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_service_account_jwt',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -68,6 +74,7 @@ export class DataGoogleServiceAccountJwt extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._delegates = config.delegates;
+    this._expiresIn = config.expiresIn;
     this._id = config.id;
     this._payload = config.payload;
     this._targetServiceAccount = config.targetServiceAccount;
@@ -91,6 +98,22 @@ export class DataGoogleServiceAccountJwt extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get delegatesInput() {
     return this._delegates;
+  }
+
+  // expires_in - computed: false, optional: true, required: false
+  private _expiresIn?: number; 
+  public get expiresIn() {
+    return this.getNumberAttribute('expires_in');
+  }
+  public set expiresIn(value: number) {
+    this._expiresIn = value;
+  }
+  public resetExpiresIn() {
+    this._expiresIn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiresInInput() {
+    return this._expiresIn;
   }
 
   // id - computed: true, optional: true, required: false
@@ -147,6 +170,7 @@ export class DataGoogleServiceAccountJwt extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       delegates: cdktf.listMapper(cdktf.stringToTerraform, false)(this._delegates),
+      expires_in: cdktf.numberToTerraform(this._expiresIn),
       id: cdktf.stringToTerraform(this._id),
       payload: cdktf.stringToTerraform(this._payload),
       target_service_account: cdktf.stringToTerraform(this._targetServiceAccount),

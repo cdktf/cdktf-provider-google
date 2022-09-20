@@ -76,6 +76,12 @@ export interface BigtableInstanceClusterAutoscalingConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#min_nodes BigtableInstance#min_nodes}
   */
   readonly minNodes: number;
+  /**
+  * The target storage utilization for autoscaling, in GB, for each node in a cluster. This number is limited between 2560 (2.5TiB) and 5120 (5TiB) for a SSD cluster and between 8192 (8TiB) and 16384 (16 TiB) for an HDD cluster. If not set, whatever is already set for the cluster will not change, or if the cluster is just being created, it will use the default value of 2560 for SSD clusters and 8192 for HDD clusters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#storage_target BigtableInstance#storage_target}
+  */
+  readonly storageTarget?: number;
 }
 
 export function bigtableInstanceClusterAutoscalingConfigToTerraform(struct?: BigtableInstanceClusterAutoscalingConfigOutputReference | BigtableInstanceClusterAutoscalingConfig): any {
@@ -87,6 +93,7 @@ export function bigtableInstanceClusterAutoscalingConfigToTerraform(struct?: Big
     cpu_target: cdktf.numberToTerraform(struct!.cpuTarget),
     max_nodes: cdktf.numberToTerraform(struct!.maxNodes),
     min_nodes: cdktf.numberToTerraform(struct!.minNodes),
+    storage_target: cdktf.numberToTerraform(struct!.storageTarget),
   }
 }
 
@@ -116,6 +123,10 @@ export class BigtableInstanceClusterAutoscalingConfigOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.minNodes = this._minNodes;
     }
+    if (this._storageTarget !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageTarget = this._storageTarget;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -125,12 +136,14 @@ export class BigtableInstanceClusterAutoscalingConfigOutputReference extends cdk
       this._cpuTarget = undefined;
       this._maxNodes = undefined;
       this._minNodes = undefined;
+      this._storageTarget = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cpuTarget = value.cpuTarget;
       this._maxNodes = value.maxNodes;
       this._minNodes = value.minNodes;
+      this._storageTarget = value.storageTarget;
     }
   }
 
@@ -171,6 +184,22 @@ export class BigtableInstanceClusterAutoscalingConfigOutputReference extends cdk
   // Temporarily expose input value. Use with caution.
   public get minNodesInput() {
     return this._minNodes;
+  }
+
+  // storage_target - computed: true, optional: true, required: false
+  private _storageTarget?: number; 
+  public get storageTarget() {
+    return this.getNumberAttribute('storage_target');
+  }
+  public set storageTarget(value: number) {
+    this._storageTarget = value;
+  }
+  public resetStorageTarget() {
+    this._storageTarget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTargetInput() {
+    return this._storageTarget;
   }
 }
 export interface BigtableInstanceCluster {
@@ -441,7 +470,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

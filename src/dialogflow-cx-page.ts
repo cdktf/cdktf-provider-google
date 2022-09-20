@@ -39,7 +39,7 @@ If not specified, the agent's default language is used. Many languages are suppo
   */
   readonly languageCode?: string;
   /**
-  * The flow to create a page for. 
+  * The flow to create a page for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#parent DialogflowCxPage#parent}
@@ -743,14 +743,14 @@ export interface DialogflowCxPageEventHandlers {
   */
   readonly event?: string;
   /**
-  * The target flow to transition to. 
+  * The target flow to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
-  * The target page to transition to. 
+  * The target page to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
@@ -1328,7 +1328,7 @@ export interface DialogflowCxPageFormParameters {
   */
   readonly displayName?: string;
   /**
-  * The entity type of the parameter. 
+  * The entity type of the parameter.
 Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#entity_type DialogflowCxPage#entity_type}
@@ -1341,14 +1341,14 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   */
   readonly isList?: boolean | cdktf.IResolvable;
   /**
-  * Indicates whether the parameter content should be redacted in log. 
+  * Indicates whether the parameter content should be redacted in log.
 If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#redact DialogflowCxPage#redact}
   */
   readonly redact?: boolean | cdktf.IResolvable;
   /**
-  * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. 
+  * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them.
 Required parameters must be filled before form filling concludes.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#required DialogflowCxPage#required}
@@ -2097,21 +2097,21 @@ At least one of intent or condition must be specified. When both intent and cond
   */
   readonly condition?: string;
   /**
-  * The unique identifier of an Intent. 
+  * The unique identifier of an Intent.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#intent DialogflowCxPage#intent}
   */
   readonly intent?: string;
   /**
-  * The target flow to transition to. 
+  * The target flow to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#target_flow DialogflowCxPage#target_flow}
   */
   readonly targetFlow?: string;
   /**
-  * The target page to transition to. 
+  * The target page to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_page#target_page DialogflowCxPage#target_page}
@@ -2339,7 +2339,7 @@ export class DialogflowCxPage extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_page',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

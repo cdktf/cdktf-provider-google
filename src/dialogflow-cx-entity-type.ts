@@ -54,7 +54,7 @@ If not specified, the agent's default language is used. Many languages are suppo
   */
   readonly languageCode?: string;
   /**
-  * The agent to create a entity type for. 
+  * The agent to create a entity type for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_entity_type#parent DialogflowCxEntityType#parent}
@@ -471,7 +471,7 @@ export class DialogflowCxEntityType extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_entity_type',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -175,7 +175,7 @@ export class ApigeeEndpointAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_endpoint_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -197,6 +197,11 @@ export class ApigeeEndpointAttachment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // connection_state - computed: true, optional: false, required: false
+  public get connectionState() {
+    return this.getStringAttribute('connection_state');
+  }
 
   // endpoint_attachment_id - computed: false, optional: false, required: true
   private _endpointAttachmentId?: string; 

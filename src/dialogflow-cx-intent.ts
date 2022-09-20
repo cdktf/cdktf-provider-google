@@ -27,7 +27,7 @@ export interface DialogflowCxIntentConfig extends cdktf.TerraformMetaArguments {
   */
   readonly id?: string;
   /**
-  * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. 
+  * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
 Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
@@ -85,7 +85,7 @@ If the supplied value is negative, the intent is ignored in runtime detect inten
 }
 export interface DialogflowCxIntentParameters {
   /**
-  * The entity type of the parameter. 
+  * The entity type of the parameter.
 Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
@@ -107,7 +107,7 @@ Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for 
   */
   readonly isList?: boolean | cdktf.IResolvable;
   /**
-  * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. 
+  * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
 Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
@@ -679,7 +679,7 @@ export class DialogflowCxIntent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_intent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
