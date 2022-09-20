@@ -459,7 +459,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_origin',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

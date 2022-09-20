@@ -38,7 +38,7 @@ If not specified, the agent's default language is used. Many languages are suppo
   */
   readonly languageCode?: string;
   /**
-  * The agent to create a flow for. 
+  * The agent to create a flow for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#parent DialogflowCxFlow#parent}
@@ -411,14 +411,14 @@ export interface DialogflowCxFlowEventHandlers {
   */
   readonly event?: string;
   /**
-  * The target flow to transition to. 
+  * The target flow to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#target_flow DialogflowCxFlow#target_flow}
   */
   readonly targetFlow?: string;
   /**
-  * The target page to transition to. 
+  * The target page to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#target_page DialogflowCxFlow#target_page}
@@ -598,7 +598,7 @@ export class DialogflowCxFlowEventHandlersList extends cdktf.ComplexList {
 }
 export interface DialogflowCxFlowNluSettings {
   /**
-  * To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. 
+  * To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold.
 If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#classification_threshold DialogflowCxFlow#classification_threshold}
@@ -1189,21 +1189,21 @@ At least one of intent or condition must be specified. When both intent and cond
   */
   readonly condition?: string;
   /**
-  * The unique identifier of an Intent. 
+  * The unique identifier of an Intent.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#intent DialogflowCxFlow#intent}
   */
   readonly intent?: string;
   /**
-  * The target flow to transition to. 
+  * The target flow to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#target_flow DialogflowCxFlow#target_flow}
   */
   readonly targetFlow?: string;
   /**
-  * The target page to transition to. 
+  * The target page to transition to.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_flow#target_page DialogflowCxFlow#target_page}
@@ -1431,7 +1431,7 @@ export class DialogflowCxFlow extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_flow',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

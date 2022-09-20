@@ -1789,11 +1789,11 @@ The default value is CSV.
   readonly sourceFormat?: string;
   /**
   * The fully-qualified URIs that point to your data in Google Cloud.
-For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
+For Google Cloud Storage URIs: Each URI can contain one '\*' wildcard character
 and it must come after the 'bucket' name. Size limits related to load jobs apply
 to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
 specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
-For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
+For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '\*' wildcard character is not allowed.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#source_uris BigqueryJob#source_uris}
   */
@@ -3518,7 +3518,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -249,7 +249,7 @@ export class BigtableTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

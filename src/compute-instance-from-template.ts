@@ -111,7 +111,7 @@ export interface ComputeInstanceFromTemplateConfig extends cdktf.TerraformMetaAr
   */
   readonly project?: string;
   /**
-  * A list of short names or self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported.
+  * A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_from_template#resource_policies ComputeInstanceFromTemplate#resource_policies}
   */
@@ -2957,7 +2957,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

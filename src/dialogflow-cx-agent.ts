@@ -14,7 +14,7 @@ export interface DialogflowCxAgentConfig extends cdktf.TerraformMetaArguments {
   */
   readonly avatarUri?: string;
   /**
-  * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) 
+  * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dialogflow_cx_agent#default_language_code DialogflowCxAgent#default_language_code}
@@ -320,7 +320,7 @@ export class DialogflowCxAgent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_agent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.36.0',
+        providerVersion: '4.37.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
