@@ -496,7 +496,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -526,6 +526,11 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   private _buildEnvironmentVariables = new cdktf.StringMap(this, "build_environment_variables");
   public get buildEnvironmentVariables() {
     return this._buildEnvironmentVariables;
+  }
+
+  // build_worker_pool - computed: true, optional: false, required: false
+  public get buildWorkerPool() {
+    return this.getStringAttribute('build_worker_pool');
   }
 
   // description - computed: true, optional: false, required: false

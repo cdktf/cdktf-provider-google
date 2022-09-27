@@ -259,6 +259,7 @@ export * from './dataproc-metastore-service-iam-policy';
 export * from './dataproc-workflow-template';
 export * from './datastore-index';
 export * from './datastream-connection-profile';
+export * from './datastream-private-connection';
 export * from './deployment-manager-deployment';
 export * from './dialogflow-agent';
 export * from './dialogflow-cx-agent';
@@ -624,5 +625,6 @@ export * from './data-google-storage-transfer-project-service-account';
 export * from './data-google-tags-tag-key';
 export * from './data-google-tags-tag-value';
 export * from './data-google-tpu-tensorflow-versions';
+export * from './data-google-vpc-access-connector';
 export * from './google-provider';
 

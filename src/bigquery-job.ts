@@ -1722,6 +1722,14 @@ JSON: Named values that don't match any column names
   */
   readonly ignoreUnknownValues?: boolean | cdktf.IResolvable;
   /**
+  * If sourceFormat is set to newline-delimited JSON, indicates whether it should be processed as a JSON variant such as GeoJSON.
+For a sourceFormat other than JSON, omit this field. If the sourceFormat is newline-delimited JSON: - for newline-delimited
+GeoJSON: set to GEOJSON.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_job#json_extension BigqueryJob#json_extension}
+  */
+  readonly jsonExtension?: string;
+  /**
   * The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
   * 
@@ -1842,6 +1850,7 @@ export function bigqueryJobLoadToTerraform(struct?: BigqueryJobLoadOutputReferen
     encoding: cdktf.stringToTerraform(struct!.encoding),
     field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
     ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
+    json_extension: cdktf.stringToTerraform(struct!.jsonExtension),
     max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
     null_marker: cdktf.stringToTerraform(struct!.nullMarker),
     projection_fields: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.projectionFields),
@@ -1898,6 +1907,10 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
     if (this._ignoreUnknownValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.ignoreUnknownValues = this._ignoreUnknownValues;
+    }
+    if (this._jsonExtension !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jsonExtension = this._jsonExtension;
     }
     if (this._maxBadRecords !== undefined) {
       hasAnyValues = true;
@@ -1960,6 +1973,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
       this._encoding = undefined;
       this._fieldDelimiter = undefined;
       this._ignoreUnknownValues = undefined;
+      this._jsonExtension = undefined;
       this._maxBadRecords = undefined;
       this._nullMarker = undefined;
       this._projectionFields = undefined;
@@ -1982,6 +1996,7 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
       this._encoding = value.encoding;
       this._fieldDelimiter = value.fieldDelimiter;
       this._ignoreUnknownValues = value.ignoreUnknownValues;
+      this._jsonExtension = value.jsonExtension;
       this._maxBadRecords = value.maxBadRecords;
       this._nullMarker = value.nullMarker;
       this._projectionFields = value.projectionFields;
@@ -2107,6 +2122,22 @@ export class BigqueryJobLoadOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get ignoreUnknownValuesInput() {
     return this._ignoreUnknownValues;
+  }
+
+  // json_extension - computed: false, optional: true, required: false
+  private _jsonExtension?: string; 
+  public get jsonExtension() {
+    return this.getStringAttribute('json_extension');
+  }
+  public set jsonExtension(value: string) {
+    this._jsonExtension = value;
+  }
+  public resetJsonExtension() {
+    this._jsonExtension = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jsonExtensionInput() {
+    return this._jsonExtension;
   }
 
   // max_bad_records - computed: false, optional: true, required: false
@@ -3518,7 +3549,7 @@ export class BigqueryJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
