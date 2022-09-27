@@ -93,9 +93,9 @@ be different from [locationId].
   /**
   * Optional. Read replica mode. Can only be specified when trying to create the instance.
 If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
-- READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the 
+- READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the
 instance cannot scale up or down the number of replicas.
-- READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance 
+- READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
 can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
@@ -111,7 +111,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
   readonly redisConfigs?: { [key: string]: string };
   /**
   * The version of Redis software. If not provided, latest supported
-version will be used. Please check the API documentation linked 
+version will be used. Please check the API documentation linked
 at the top for the latest valid values.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#redis_version RedisInstance#redis_version}
@@ -124,9 +124,9 @@ at the top for the latest valid values.
   */
   readonly region?: string;
   /**
-  * Optional. The number of replica nodes. The valid range for the Standard Tier with 
+  * Optional. The number of replica nodes. The valid range for the Standard Tier with
 read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled
-for a Standard Tier instance, the only valid value is 1 and the default is 1. 
+for a Standard Tier instance, the only valid value is 1 and the default is 1.
 The valid value for basic tier is 0 and the default is also 0.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#replica_count RedisInstance#replica_count}
@@ -145,7 +145,7 @@ network.
   /**
   * Optional. Additional IP range for node placement. Required when enabling read replicas on
 an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
-"auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address 
+"auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
 range associated with the private service access connection, or "auto".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
@@ -180,6 +180,12 @@ range associated with the private service access connection, or "auto".
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#maintenance_schedule RedisInstance#maintenance_schedule}
   */
   readonly maintenanceSchedule?: RedisInstanceMaintenanceSchedule;
+  /**
+  * persistence_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#persistence_config RedisInstance#persistence_config}
+  */
+  readonly persistenceConfig?: RedisInstancePersistenceConfig;
   /**
   * timeouts block
   * 
@@ -793,6 +799,146 @@ export class RedisInstanceMaintenanceScheduleOutputReference extends cdktf.Compl
     return this.getStringAttribute('start_time');
   }
 }
+export interface RedisInstancePersistenceConfig {
+  /**
+  * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
+
+- DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
+- RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#persistence_mode RedisInstance#persistence_mode}
+  */
+  readonly persistenceMode?: string;
+  /**
+  * Optional. Available snapshot periods for scheduling.
+
+- ONE_HOUR:	Snapshot every 1 hour.
+- SIX_HOURS:	Snapshot every 6 hours.
+- TWELVE_HOURS:	Snapshot every 12 hours.
+- TWENTY_FOUR_HOURS:	Snapshot every 24 horus. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
+  */
+  readonly rdbSnapshotPeriod: string;
+  /**
+  * Optional. Date and time that the first snapshot was/will be attempted,
+and to which future snapshots will be aligned. If not provided,
+the current time will be used.
+A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
+and up to nine fractional digits.
+Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
+  */
+  readonly rdbSnapshotStartTime?: string;
+}
+
+export function redisInstancePersistenceConfigToTerraform(struct?: RedisInstancePersistenceConfigOutputReference | RedisInstancePersistenceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    persistence_mode: cdktf.stringToTerraform(struct!.persistenceMode),
+    rdb_snapshot_period: cdktf.stringToTerraform(struct!.rdbSnapshotPeriod),
+    rdb_snapshot_start_time: cdktf.stringToTerraform(struct!.rdbSnapshotStartTime),
+  }
+}
+
+export class RedisInstancePersistenceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): RedisInstancePersistenceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._persistenceMode !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.persistenceMode = this._persistenceMode;
+    }
+    if (this._rdbSnapshotPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdbSnapshotPeriod = this._rdbSnapshotPeriod;
+    }
+    if (this._rdbSnapshotStartTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rdbSnapshotStartTime = this._rdbSnapshotStartTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstancePersistenceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._persistenceMode = undefined;
+      this._rdbSnapshotPeriod = undefined;
+      this._rdbSnapshotStartTime = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._persistenceMode = value.persistenceMode;
+      this._rdbSnapshotPeriod = value.rdbSnapshotPeriod;
+      this._rdbSnapshotStartTime = value.rdbSnapshotStartTime;
+    }
+  }
+
+  // persistence_mode - computed: true, optional: true, required: false
+  private _persistenceMode?: string; 
+  public get persistenceMode() {
+    return this.getStringAttribute('persistence_mode');
+  }
+  public set persistenceMode(value: string) {
+    this._persistenceMode = value;
+  }
+  public resetPersistenceMode() {
+    this._persistenceMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get persistenceModeInput() {
+    return this._persistenceMode;
+  }
+
+  // rdb_next_snapshot_time - computed: true, optional: false, required: false
+  public get rdbNextSnapshotTime() {
+    return this.getStringAttribute('rdb_next_snapshot_time');
+  }
+
+  // rdb_snapshot_period - computed: false, optional: false, required: true
+  private _rdbSnapshotPeriod?: string; 
+  public get rdbSnapshotPeriod() {
+    return this.getStringAttribute('rdb_snapshot_period');
+  }
+  public set rdbSnapshotPeriod(value: string) {
+    this._rdbSnapshotPeriod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdbSnapshotPeriodInput() {
+    return this._rdbSnapshotPeriod;
+  }
+
+  // rdb_snapshot_start_time - computed: true, optional: true, required: false
+  private _rdbSnapshotStartTime?: string; 
+  public get rdbSnapshotStartTime() {
+    return this.getStringAttribute('rdb_snapshot_start_time');
+  }
+  public set rdbSnapshotStartTime(value: string) {
+    this._rdbSnapshotStartTime = value;
+  }
+  public resetRdbSnapshotStartTime() {
+    this._rdbSnapshotStartTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rdbSnapshotStartTimeInput() {
+    return this._rdbSnapshotStartTime;
+  }
+}
 export interface RedisInstanceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#create RedisInstance#create}
@@ -949,7 +1095,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -983,6 +1129,7 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._transitEncryptionMode = config.transitEncryptionMode;
     this._maintenancePolicy.internalValue = config.maintenancePolicy;
     this._maintenanceSchedule.internalValue = config.maintenanceSchedule;
+    this._persistenceConfig.internalValue = config.persistenceConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1404,6 +1551,22 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._maintenanceSchedule.internalValue;
   }
 
+  // persistence_config - computed: false, optional: true, required: false
+  private _persistenceConfig = new RedisInstancePersistenceConfigOutputReference(this, "persistence_config");
+  public get persistenceConfig() {
+    return this._persistenceConfig;
+  }
+  public putPersistenceConfig(value: RedisInstancePersistenceConfig) {
+    this._persistenceConfig.internalValue = value;
+  }
+  public resetPersistenceConfig() {
+    this._persistenceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get persistenceConfigInput() {
+    return this._persistenceConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new RedisInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1449,6 +1612,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
       maintenance_policy: redisInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
       maintenance_schedule: redisInstanceMaintenanceScheduleToTerraform(this._maintenanceSchedule.internalValue),
+      persistence_config: redisInstancePersistenceConfigToTerraform(this._persistenceConfig.internalValue),
       timeouts: redisInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

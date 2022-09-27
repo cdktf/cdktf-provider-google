@@ -72,7 +72,7 @@ export class LoggingFolderBucketConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_folder_bucket_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

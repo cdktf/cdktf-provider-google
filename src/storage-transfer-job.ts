@@ -1542,6 +1542,12 @@ export interface StorageTransferJobTransferSpecTransferOptions {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#overwrite_objects_already_existing_in_sink StorageTransferJob#overwrite_objects_already_existing_in_sink}
   */
   readonly overwriteObjectsAlreadyExistingInSink?: boolean | cdktf.IResolvable;
+  /**
+  * When to overwrite objects that already exist in the sink. If not set, overwrite behavior is determined by overwriteObjectsAlreadyExistingInSink.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#overwrite_when StorageTransferJob#overwrite_when}
+  */
+  readonly overwriteWhen?: string;
 }
 
 export function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?: StorageTransferJobTransferSpecTransferOptionsOutputReference | StorageTransferJobTransferSpecTransferOptions): any {
@@ -1553,6 +1559,7 @@ export function storageTransferJobTransferSpecTransferOptionsToTerraform(struct?
     delete_objects_from_source_after_transfer: cdktf.booleanToTerraform(struct!.deleteObjectsFromSourceAfterTransfer),
     delete_objects_unique_in_sink: cdktf.booleanToTerraform(struct!.deleteObjectsUniqueInSink),
     overwrite_objects_already_existing_in_sink: cdktf.booleanToTerraform(struct!.overwriteObjectsAlreadyExistingInSink),
+    overwrite_when: cdktf.stringToTerraform(struct!.overwriteWhen),
   }
 }
 
@@ -1582,6 +1589,10 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
       hasAnyValues = true;
       internalValueResult.overwriteObjectsAlreadyExistingInSink = this._overwriteObjectsAlreadyExistingInSink;
     }
+    if (this._overwriteWhen !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.overwriteWhen = this._overwriteWhen;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1591,12 +1602,14 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
       this._deleteObjectsFromSourceAfterTransfer = undefined;
       this._deleteObjectsUniqueInSink = undefined;
       this._overwriteObjectsAlreadyExistingInSink = undefined;
+      this._overwriteWhen = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._deleteObjectsFromSourceAfterTransfer = value.deleteObjectsFromSourceAfterTransfer;
       this._deleteObjectsUniqueInSink = value.deleteObjectsUniqueInSink;
       this._overwriteObjectsAlreadyExistingInSink = value.overwriteObjectsAlreadyExistingInSink;
+      this._overwriteWhen = value.overwriteWhen;
     }
   }
 
@@ -1646,6 +1659,22 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
   // Temporarily expose input value. Use with caution.
   public get overwriteObjectsAlreadyExistingInSinkInput() {
     return this._overwriteObjectsAlreadyExistingInSink;
+  }
+
+  // overwrite_when - computed: false, optional: true, required: false
+  private _overwriteWhen?: string; 
+  public get overwriteWhen() {
+    return this.getStringAttribute('overwrite_when');
+  }
+  public set overwriteWhen(value: string) {
+    this._overwriteWhen = value;
+  }
+  public resetOverwriteWhen() {
+    this._overwriteWhen = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overwriteWhenInput() {
+    return this._overwriteWhen;
   }
 }
 export interface StorageTransferJobTransferSpec {
@@ -1974,7 +2003,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

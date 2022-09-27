@@ -20,6 +20,12 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   */
   readonly buildEnvironmentVariables?: { [key: string]: string };
   /**
+  * Name of the Cloud Build Custom Worker Pool that should be used to build the function.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#build_worker_pool CloudfunctionsFunction#build_worker_pool}
+  */
+  readonly buildWorkerPool?: string;
+  /**
   * Description of the function.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function#description CloudfunctionsFunction#description}
@@ -1109,7 +1115,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1122,6 +1128,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     });
     this._availableMemoryMb = config.availableMemoryMb;
     this._buildEnvironmentVariables = config.buildEnvironmentVariables;
+    this._buildWorkerPool = config.buildWorkerPool;
     this._description = config.description;
     this._dockerRegistry = config.dockerRegistry;
     this._dockerRepository = config.dockerRepository;
@@ -1187,6 +1194,22 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get buildEnvironmentVariablesInput() {
     return this._buildEnvironmentVariables;
+  }
+
+  // build_worker_pool - computed: false, optional: true, required: false
+  private _buildWorkerPool?: string; 
+  public get buildWorkerPool() {
+    return this.getStringAttribute('build_worker_pool');
+  }
+  public set buildWorkerPool(value: string) {
+    this._buildWorkerPool = value;
+  }
+  public resetBuildWorkerPool() {
+    this._buildWorkerPool = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get buildWorkerPoolInput() {
+    return this._buildWorkerPool;
   }
 
   // description - computed: false, optional: true, required: false
@@ -1655,6 +1678,7 @@ export class CloudfunctionsFunction extends cdktf.TerraformResource {
     return {
       available_memory_mb: cdktf.numberToTerraform(this._availableMemoryMb),
       build_environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(this._buildEnvironmentVariables),
+      build_worker_pool: cdktf.stringToTerraform(this._buildWorkerPool),
       description: cdktf.stringToTerraform(this._description),
       docker_registry: cdktf.stringToTerraform(this._dockerRegistry),
       docker_repository: cdktf.stringToTerraform(this._dockerRepository),

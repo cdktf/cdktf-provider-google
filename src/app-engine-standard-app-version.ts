@@ -1916,6 +1916,12 @@ export class AppEngineStandardAppVersionTimeoutsOutputReference extends cdktf.Co
 }
 export interface AppEngineStandardAppVersionVpcAccessConnector {
   /**
+  * The egress setting for the connector, controlling what traffic is diverted through it.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#egress_setting AppEngineStandardAppVersion#egress_setting}
+  */
+  readonly egressSetting?: string;
+  /**
   * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_standard_app_version#name AppEngineStandardAppVersion#name}
@@ -1929,6 +1935,7 @@ export function appEngineStandardAppVersionVpcAccessConnectorToTerraform(struct?
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    egress_setting: cdktf.stringToTerraform(struct!.egressSetting),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -1947,6 +1954,10 @@ export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extend
   public get internalValue(): AppEngineStandardAppVersionVpcAccessConnector | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._egressSetting !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.egressSetting = this._egressSetting;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -1957,12 +1968,30 @@ export class AppEngineStandardAppVersionVpcAccessConnectorOutputReference extend
   public set internalValue(value: AppEngineStandardAppVersionVpcAccessConnector | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._egressSetting = undefined;
       this._name = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._egressSetting = value.egressSetting;
       this._name = value.name;
     }
+  }
+
+  // egress_setting - computed: false, optional: true, required: false
+  private _egressSetting?: string; 
+  public get egressSetting() {
+    return this.getStringAttribute('egress_setting');
+  }
+  public set egressSetting(value: string) {
+    this._egressSetting = value;
+  }
+  public resetEgressSetting() {
+    this._egressSetting = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get egressSettingInput() {
+    return this._egressSetting;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2005,7 +2034,7 @@ export class AppEngineStandardAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_standard_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.37.0',
+        providerVersion: '4.38.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
