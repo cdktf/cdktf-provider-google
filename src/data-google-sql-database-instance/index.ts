@@ -1489,7 +1489,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1508,6 +1508,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // available_maintenance_versions - computed: true, optional: false, required: false
+  public get availableMaintenanceVersions() {
+    return this.getListAttribute('available_maintenance_versions');
+  }
 
   // clone - computed: true, optional: false, required: false
   private _clone = new DataGoogleSqlDatabaseInstanceCloneList(this, "clone", false);
@@ -1560,6 +1565,11 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
   private _ipAddress = new DataGoogleSqlDatabaseInstanceIpAddressList(this, "ip_address", false);
   public get ipAddress() {
     return this._ipAddress;
+  }
+
+  // maintenance_version - computed: true, optional: false, required: false
+  public get maintenanceVersion() {
+    return this.getStringAttribute('maintenance_version');
   }
 
   // master_instance_name - computed: true, optional: false, required: false

@@ -127,7 +127,7 @@ export class DataGoogleComputeSubnetwork extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_subnetwork',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

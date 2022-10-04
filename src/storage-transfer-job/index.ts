@@ -33,6 +33,12 @@ export interface StorageTransferJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly status?: string;
   /**
+  * notification_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#notification_config StorageTransferJob#notification_config}
+  */
+  readonly notificationConfig?: StorageTransferJobNotificationConfig;
+  /**
   * schedule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#schedule StorageTransferJob#schedule}
@@ -44,6 +50,125 @@ export interface StorageTransferJobConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#transfer_spec StorageTransferJob#transfer_spec}
   */
   readonly transferSpec: StorageTransferJobTransferSpec;
+}
+export interface StorageTransferJobNotificationConfig {
+  /**
+  * Event types for which a notification is desired. If empty, send notifications for all event types. The valid types are "TRANSFER_OPERATION_SUCCESS", "TRANSFER_OPERATION_FAILED", "TRANSFER_OPERATION_ABORTED".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#event_types StorageTransferJob#event_types}
+  */
+  readonly eventTypes?: string[];
+  /**
+  * The desired format of the notification message payloads. One of "NONE" or "JSON".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#payload_format StorageTransferJob#payload_format}
+  */
+  readonly payloadFormat: string;
+  /**
+  * The Topic.name of the Pub/Sub topic to which to publish notifications.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#pubsub_topic StorageTransferJob#pubsub_topic}
+  */
+  readonly pubsubTopic: string;
+}
+
+export function storageTransferJobNotificationConfigToTerraform(struct?: StorageTransferJobNotificationConfigOutputReference | StorageTransferJobNotificationConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    event_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.eventTypes),
+    payload_format: cdktf.stringToTerraform(struct!.payloadFormat),
+    pubsub_topic: cdktf.stringToTerraform(struct!.pubsubTopic),
+  }
+}
+
+export class StorageTransferJobNotificationConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageTransferJobNotificationConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._eventTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventTypes = this._eventTypes;
+    }
+    if (this._payloadFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.payloadFormat = this._payloadFormat;
+    }
+    if (this._pubsubTopic !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pubsubTopic = this._pubsubTopic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageTransferJobNotificationConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._eventTypes = undefined;
+      this._payloadFormat = undefined;
+      this._pubsubTopic = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._eventTypes = value.eventTypes;
+      this._payloadFormat = value.payloadFormat;
+      this._pubsubTopic = value.pubsubTopic;
+    }
+  }
+
+  // event_types - computed: false, optional: true, required: false
+  private _eventTypes?: string[]; 
+  public get eventTypes() {
+    return cdktf.Fn.tolist(this.getListAttribute('event_types'));
+  }
+  public set eventTypes(value: string[]) {
+    this._eventTypes = value;
+  }
+  public resetEventTypes() {
+    this._eventTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventTypesInput() {
+    return this._eventTypes;
+  }
+
+  // payload_format - computed: false, optional: false, required: true
+  private _payloadFormat?: string; 
+  public get payloadFormat() {
+    return this.getStringAttribute('payload_format');
+  }
+  public set payloadFormat(value: string) {
+    this._payloadFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get payloadFormatInput() {
+    return this._payloadFormat;
+  }
+
+  // pubsub_topic - computed: false, optional: false, required: true
+  private _pubsubTopic?: string; 
+  public get pubsubTopic() {
+    return this.getStringAttribute('pubsub_topic');
+  }
+  public set pubsubTopic(value: string) {
+    this._pubsubTopic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pubsubTopicInput() {
+    return this._pubsubTopic;
+  }
 }
 export interface StorageTransferJobScheduleScheduleEndDate {
   /**
@@ -2003,7 +2128,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2018,6 +2143,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
     this._id = config.id;
     this._project = config.project;
     this._status = config.status;
+    this._notificationConfig.internalValue = config.notificationConfig;
     this._schedule.internalValue = config.schedule;
     this._transferSpec.internalValue = config.transferSpec;
   }
@@ -2107,6 +2233,22 @@ export class StorageTransferJob extends cdktf.TerraformResource {
     return this._status;
   }
 
+  // notification_config - computed: false, optional: true, required: false
+  private _notificationConfig = new StorageTransferJobNotificationConfigOutputReference(this, "notification_config");
+  public get notificationConfig() {
+    return this._notificationConfig;
+  }
+  public putNotificationConfig(value: StorageTransferJobNotificationConfig) {
+    this._notificationConfig.internalValue = value;
+  }
+  public resetNotificationConfig() {
+    this._notificationConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationConfigInput() {
+    return this._notificationConfig.internalValue;
+  }
+
   // schedule - computed: false, optional: true, required: false
   private _schedule = new StorageTransferJobScheduleOutputReference(this, "schedule");
   public get schedule() {
@@ -2146,6 +2288,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
       status: cdktf.stringToTerraform(this._status),
+      notification_config: storageTransferJobNotificationConfigToTerraform(this._notificationConfig.internalValue),
       schedule: storageTransferJobScheduleToTerraform(this._schedule.internalValue),
       transfer_spec: storageTransferJobTransferSpecToTerraform(this._transferSpec.internalValue),
     };

@@ -58,7 +58,7 @@ export class BigqueryConnectionIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_connection_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
