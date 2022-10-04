@@ -334,19 +334,33 @@ export class CertificateManagerCertificateManagedOutputReference extends cdktf.C
 }
 export interface CertificateManagerCertificateSelfManaged {
   /**
-  * The certificate chain in PEM-encoded form.
+  * **Deprecated** The certificate chain in PEM-encoded form.
 
 Leaf certificate comes first, followed by intermediate ones if any.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#certificate_pem CertificateManagerCertificate#certificate_pem}
   */
-  readonly certificatePem: string;
+  readonly certificatePem?: string;
+  /**
+  * The certificate chain in PEM-encoded form.
+
+Leaf certificate comes first, followed by intermediate ones if any.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#pem_certificate CertificateManagerCertificate#pem_certificate}
+  */
+  readonly pemCertificate?: string;
   /**
   * The private key of the leaf certificate in PEM-encoded form.
   * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#pem_private_key CertificateManagerCertificate#pem_private_key}
+  */
+  readonly pemPrivateKey?: string;
+  /**
+  * **Deprecated** The private key of the leaf certificate in PEM-encoded form.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/certificate_manager_certificate#private_key_pem CertificateManagerCertificate#private_key_pem}
   */
-  readonly privateKeyPem: string;
+  readonly privateKeyPem?: string;
 }
 
 export function certificateManagerCertificateSelfManagedToTerraform(struct?: CertificateManagerCertificateSelfManagedOutputReference | CertificateManagerCertificateSelfManaged): any {
@@ -356,6 +370,8 @@ export function certificateManagerCertificateSelfManagedToTerraform(struct?: Cer
   }
   return {
     certificate_pem: cdktf.stringToTerraform(struct!.certificatePem),
+    pem_certificate: cdktf.stringToTerraform(struct!.pemCertificate),
+    pem_private_key: cdktf.stringToTerraform(struct!.pemPrivateKey),
     private_key_pem: cdktf.stringToTerraform(struct!.privateKeyPem),
   }
 }
@@ -378,6 +394,14 @@ export class CertificateManagerCertificateSelfManagedOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.certificatePem = this._certificatePem;
     }
+    if (this._pemCertificate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemCertificate = this._pemCertificate;
+    }
+    if (this._pemPrivateKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pemPrivateKey = this._pemPrivateKey;
+    }
     if (this._privateKeyPem !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateKeyPem = this._privateKeyPem;
@@ -389,16 +413,20 @@ export class CertificateManagerCertificateSelfManagedOutputReference extends cdk
     if (value === undefined) {
       this.isEmptyObject = false;
       this._certificatePem = undefined;
+      this._pemCertificate = undefined;
+      this._pemPrivateKey = undefined;
       this._privateKeyPem = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._certificatePem = value.certificatePem;
+      this._pemCertificate = value.pemCertificate;
+      this._pemPrivateKey = value.pemPrivateKey;
       this._privateKeyPem = value.privateKeyPem;
     }
   }
 
-  // certificate_pem - computed: false, optional: false, required: true
+  // certificate_pem - computed: false, optional: true, required: false
   private _certificatePem?: string; 
   public get certificatePem() {
     return this.getStringAttribute('certificate_pem');
@@ -406,18 +434,56 @@ export class CertificateManagerCertificateSelfManagedOutputReference extends cdk
   public set certificatePem(value: string) {
     this._certificatePem = value;
   }
+  public resetCertificatePem() {
+    this._certificatePem = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get certificatePemInput() {
     return this._certificatePem;
   }
 
-  // private_key_pem - computed: false, optional: false, required: true
+  // pem_certificate - computed: false, optional: true, required: false
+  private _pemCertificate?: string; 
+  public get pemCertificate() {
+    return this.getStringAttribute('pem_certificate');
+  }
+  public set pemCertificate(value: string) {
+    this._pemCertificate = value;
+  }
+  public resetPemCertificate() {
+    this._pemCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemCertificateInput() {
+    return this._pemCertificate;
+  }
+
+  // pem_private_key - computed: false, optional: true, required: false
+  private _pemPrivateKey?: string; 
+  public get pemPrivateKey() {
+    return this.getStringAttribute('pem_private_key');
+  }
+  public set pemPrivateKey(value: string) {
+    this._pemPrivateKey = value;
+  }
+  public resetPemPrivateKey() {
+    this._pemPrivateKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pemPrivateKeyInput() {
+    return this._pemPrivateKey;
+  }
+
+  // private_key_pem - computed: false, optional: true, required: false
   private _privateKeyPem?: string; 
   public get privateKeyPem() {
     return this.getStringAttribute('private_key_pem');
   }
   public set privateKeyPem(value: string) {
     this._privateKeyPem = value;
+  }
+  public resetPrivateKeyPem() {
+    this._privateKeyPem = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyPemInput() {
@@ -580,7 +646,7 @@ export class CertificateManagerCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_certificate_manager_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

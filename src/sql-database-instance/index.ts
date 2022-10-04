@@ -14,7 +14,7 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly databaseVersion: string;
   /**
-  * Used to block Terraform from deleting a SQL Instance.
+  * Used to block Terraform from deleting a SQL Instance. Defaults to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#deletion_protection SqlDatabaseInstance#deletion_protection}
   */
@@ -30,6 +30,12 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * Maintenance version.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#maintenance_version SqlDatabaseInstance#maintenance_version}
+  */
+  readonly maintenanceVersion?: string;
   /**
   * The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups.
   * 
@@ -391,7 +397,7 @@ export interface SqlDatabaseInstanceReplicaConfiguration {
   */
   readonly clientKey?: string;
   /**
-  * The number of seconds between connect retries.
+  * The number of seconds between connect retries. MySQL's default is 60 seconds.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#connect_retry_interval SqlDatabaseInstance#connect_retry_interval}
   */
@@ -2447,7 +2453,7 @@ export interface SqlDatabaseInstanceSettings {
 settings.backup_configuration.enabled is set to true.
 For MySQL instances, ensure that settings.backup_configuration.binary_log_enabled is set to true.
 For Postgres instances, ensure that settings.backup_configuration.point_in_time_recovery_enabled
-is set to true.
+is set to true. Defaults to ZONAL.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#availability_type SqlDatabaseInstance#availability_type}
   */
@@ -2459,7 +2465,7 @@ is set to true.
   */
   readonly collation?: string;
   /**
-  * Enables auto-resizing of the storage size. Defaults to true. Set to false if you want to set disk_size.
+  * Enables auto-resizing of the storage size. Defaults to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_autoresize SqlDatabaseInstance#disk_autoresize}
   */
@@ -2471,13 +2477,13 @@ is set to true.
   */
   readonly diskAutoresizeLimit?: number;
   /**
-  * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. If you want to set this field, set disk_autoresize to false.
+  * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_size SqlDatabaseInstance#disk_size}
   */
   readonly diskSize?: number;
   /**
-  * The type of data disk: PD_SSD or PD_HDD.
+  * The type of data disk: PD_SSD or PD_HDD. Defaults to PD_SSD.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_type SqlDatabaseInstance#disk_type}
   */
@@ -3186,7 +3192,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.38.0',
+        providerVersion: '4.39.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3201,6 +3207,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     this._deletionProtection = config.deletionProtection;
     this._encryptionKeyName = config.encryptionKeyName;
     this._id = config.id;
+    this._maintenanceVersion = config.maintenanceVersion;
     this._masterInstanceName = config.masterInstanceName;
     this._name = config.name;
     this._project = config.project;
@@ -3216,6 +3223,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // available_maintenance_versions - computed: true, optional: false, required: false
+  public get availableMaintenanceVersions() {
+    return this.getListAttribute('available_maintenance_versions');
+  }
 
   // connection_name - computed: true, optional: false, required: false
   public get connectionName() {
@@ -3292,6 +3304,22 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   private _ipAddress = new SqlDatabaseInstanceIpAddressList(this, "ip_address", false);
   public get ipAddress() {
     return this._ipAddress;
+  }
+
+  // maintenance_version - computed: true, optional: true, required: false
+  private _maintenanceVersion?: string; 
+  public get maintenanceVersion() {
+    return this.getStringAttribute('maintenance_version');
+  }
+  public set maintenanceVersion(value: string) {
+    this._maintenanceVersion = value;
+  }
+  public resetMaintenanceVersion() {
+    this._maintenanceVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceVersionInput() {
+    return this._maintenanceVersion;
   }
 
   // master_instance_name - computed: true, optional: true, required: false
@@ -3490,6 +3518,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       encryption_key_name: cdktf.stringToTerraform(this._encryptionKeyName),
       id: cdktf.stringToTerraform(this._id),
+      maintenance_version: cdktf.stringToTerraform(this._maintenanceVersion),
       master_instance_name: cdktf.stringToTerraform(this._masterInstanceName),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
