@@ -535,6 +535,7 @@ export * as dataGoogleCloudIdentityGroupMemberships from './data-google-cloud-id
 export * as dataGoogleCloudIdentityGroups from './data-google-cloud-identity-groups';
 export * as dataGoogleCloudRunLocations from './data-google-cloud-run-locations';
 export * as dataGoogleCloudRunService from './data-google-cloud-run-service';
+export * as dataGoogleCloudfunctions2Function from './data-google-cloudfunctions2-function';
 export * as dataGoogleCloudfunctionsFunction from './data-google-cloudfunctions-function';
 export * as dataGoogleComposerEnvironment from './data-google-composer-environment';
 export * as dataGoogleComposerImageVersions from './data-google-composer-image-versions';
@@ -563,6 +564,7 @@ export * as dataGoogleComputeRegions from './data-google-compute-regions';
 export * as dataGoogleComputeResourcePolicy from './data-google-compute-resource-policy';
 export * as dataGoogleComputeRouter from './data-google-compute-router';
 export * as dataGoogleComputeRouterStatus from './data-google-compute-router-status';
+export * as dataGoogleComputeSnapshot from './data-google-compute-snapshot';
 export * as dataGoogleComputeSslCertificate from './data-google-compute-ssl-certificate';
 export * as dataGoogleComputeSslPolicy from './data-google-compute-ssl-policy';
 export * as dataGoogleComputeSubnetwork from './data-google-compute-subnetwork';

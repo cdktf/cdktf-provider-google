@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#concurrency BigqueryReservation#concurrency}
+  */
+  readonly concurrency?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#id BigqueryReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -29,6 +35,13 @@ Examples: US, EU, asia-northeast1. The default value is US.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#location BigqueryReservation#location}
   */
   readonly location?: string;
+  /**
+  * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU).
+If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#multi_region_auxiliary BigqueryReservation#multi_region_auxiliary}
+  */
+  readonly multiRegionAuxiliary?: boolean | cdktf.IResolvable;
   /**
   * The name of the reservation. This field must only contain alphanumeric characters or dash.
   * 
@@ -209,7 +222,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -220,9 +233,11 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._concurrency = config.concurrency;
     this._id = config.id;
     this._ignoreIdleSlots = config.ignoreIdleSlots;
     this._location = config.location;
+    this._multiRegionAuxiliary = config.multiRegionAuxiliary;
     this._name = config.name;
     this._project = config.project;
     this._slotCapacity = config.slotCapacity;
@@ -232,6 +247,22 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // concurrency - computed: false, optional: true, required: false
+  private _concurrency?: number; 
+  public get concurrency() {
+    return this.getNumberAttribute('concurrency');
+  }
+  public set concurrency(value: number) {
+    this._concurrency = value;
+  }
+  public resetConcurrency() {
+    this._concurrency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get concurrencyInput() {
+    return this._concurrency;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -279,6 +310,22 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // multi_region_auxiliary - computed: false, optional: true, required: false
+  private _multiRegionAuxiliary?: boolean | cdktf.IResolvable; 
+  public get multiRegionAuxiliary() {
+    return this.getBooleanAttribute('multi_region_auxiliary');
+  }
+  public set multiRegionAuxiliary(value: boolean | cdktf.IResolvable) {
+    this._multiRegionAuxiliary = value;
+  }
+  public resetMultiRegionAuxiliary() {
+    this._multiRegionAuxiliary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get multiRegionAuxiliaryInput() {
+    return this._multiRegionAuxiliary;
   }
 
   // name - computed: false, optional: false, required: true
@@ -345,9 +392,11 @@ export class BigqueryReservation extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      concurrency: cdktf.numberToTerraform(this._concurrency),
       id: cdktf.stringToTerraform(this._id),
       ignore_idle_slots: cdktf.booleanToTerraform(this._ignoreIdleSlots),
       location: cdktf.stringToTerraform(this._location),
+      multi_region_auxiliary: cdktf.booleanToTerraform(this._multiRegionAuxiliary),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       slot_capacity: cdktf.numberToTerraform(this._slotCapacity),

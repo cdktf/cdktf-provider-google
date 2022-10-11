@@ -100,6 +100,70 @@ export class DataGoogleStorageBucketCorsList extends cdktf.ComplexList {
     return new DataGoogleStorageBucketCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleStorageBucketCustomPlacementConfig {
+}
+
+export function dataGoogleStorageBucketCustomPlacementConfigToTerraform(struct?: DataGoogleStorageBucketCustomPlacementConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleStorageBucketCustomPlacementConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleStorageBucketCustomPlacementConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleStorageBucketCustomPlacementConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // data_locations - computed: true, optional: false, required: false
+  public get dataLocations() {
+    return cdktf.Fn.tolist(this.getListAttribute('data_locations'));
+  }
+}
+
+export class DataGoogleStorageBucketCustomPlacementConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleStorageBucketCustomPlacementConfigOutputReference {
+    return new DataGoogleStorageBucketCustomPlacementConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleStorageBucketEncryption {
 }
 
@@ -716,7 +780,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -739,6 +803,12 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   private _cors = new DataGoogleStorageBucketCorsList(this, "cors", false);
   public get cors() {
     return this._cors;
+  }
+
+  // custom_placement_config - computed: true, optional: false, required: false
+  private _customPlacementConfig = new DataGoogleStorageBucketCustomPlacementConfigList(this, "custom_placement_config", false);
+  public get customPlacementConfig() {
+    return this._customPlacementConfig;
   }
 
   // default_event_based_hold - computed: true, optional: false, required: false

@@ -75,6 +75,12 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   */
   readonly cors?: StorageBucketCors[] | cdktf.IResolvable;
   /**
+  * custom_placement_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
+  */
+  readonly customPlacementConfig?: StorageBucketCustomPlacementConfig;
+  /**
   * encryption block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#encryption StorageBucket#encryption}
@@ -301,6 +307,70 @@ export class StorageBucketCorsList extends cdktf.ComplexList {
   */
   public get(index: number): StorageBucketCorsOutputReference {
     return new StorageBucketCorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface StorageBucketCustomPlacementConfig {
+  /**
+  * The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#data_locations StorageBucket#data_locations}
+  */
+  readonly dataLocations: string[];
+}
+
+export function storageBucketCustomPlacementConfigToTerraform(struct?: StorageBucketCustomPlacementConfigOutputReference | StorageBucketCustomPlacementConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    data_locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.dataLocations),
+  }
+}
+
+export class StorageBucketCustomPlacementConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageBucketCustomPlacementConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dataLocations !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataLocations = this._dataLocations;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketCustomPlacementConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dataLocations = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dataLocations = value.dataLocations;
+    }
+  }
+
+  // data_locations - computed: false, optional: false, required: true
+  private _dataLocations?: string[]; 
+  public get dataLocations() {
+    return cdktf.Fn.tolist(this.getListAttribute('data_locations'));
+  }
+  public set dataLocations(value: string[]) {
+    this._dataLocations = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataLocationsInput() {
+    return this._dataLocations;
   }
 }
 export interface StorageBucketEncryption {
@@ -1442,7 +1512,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1464,6 +1534,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._storageClass = config.storageClass;
     this._uniformBucketLevelAccess = config.uniformBucketLevelAccess;
     this._cors.internalValue = config.cors;
+    this._customPlacementConfig.internalValue = config.customPlacementConfig;
     this._encryption.internalValue = config.encryption;
     this._lifecycleRule.internalValue = config.lifecycleRule;
     this._logging.internalValue = config.logging;
@@ -1657,6 +1728,22 @@ export class StorageBucket extends cdktf.TerraformResource {
     return this._cors.internalValue;
   }
 
+  // custom_placement_config - computed: false, optional: true, required: false
+  private _customPlacementConfig = new StorageBucketCustomPlacementConfigOutputReference(this, "custom_placement_config");
+  public get customPlacementConfig() {
+    return this._customPlacementConfig;
+  }
+  public putCustomPlacementConfig(value: StorageBucketCustomPlacementConfig) {
+    this._customPlacementConfig.internalValue = value;
+  }
+  public resetCustomPlacementConfig() {
+    this._customPlacementConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPlacementConfigInput() {
+    return this._customPlacementConfig.internalValue;
+  }
+
   // encryption - computed: false, optional: true, required: false
   private _encryption = new StorageBucketEncryptionOutputReference(this, "encryption");
   public get encryption() {
@@ -1786,6 +1873,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
       cors: cdktf.listMapper(storageBucketCorsToTerraform, true)(this._cors.internalValue),
+      custom_placement_config: storageBucketCustomPlacementConfigToTerraform(this._customPlacementConfig.internalValue),
       encryption: storageBucketEncryptionToTerraform(this._encryption.internalValue),
       lifecycle_rule: cdktf.listMapper(storageBucketLifecycleRuleToTerraform, true)(this._lifecycleRule.internalValue),
       logging: storageBucketLoggingToTerraform(this._logging.internalValue),

@@ -195,7 +195,7 @@ export class AccessContextManagerGcpUserAccessBinding extends cdktf.TerraformRes
       terraformResourceType: 'google_access_context_manager_gcp_user_access_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

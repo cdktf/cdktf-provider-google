@@ -50,7 +50,7 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
       terraformResourceType: 'google_container_registry_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

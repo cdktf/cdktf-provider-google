@@ -55,6 +55,12 @@ while private zones are visible only to Virtual Private Cloud resources. Default
   */
   readonly visibility?: string;
   /**
+  * cloud_logging_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#cloud_logging_config DnsManagedZone#cloud_logging_config}
+  */
+  readonly cloudLoggingConfig?: DnsManagedZoneCloudLoggingConfig;
+  /**
   * dnssec_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#dnssec_config DnsManagedZone#dnssec_config}
@@ -84,6 +90,70 @@ while private zones are visible only to Virtual Private Cloud resources. Default
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#timeouts DnsManagedZone#timeouts}
   */
   readonly timeouts?: DnsManagedZoneTimeouts;
+}
+export interface DnsManagedZoneCloudLoggingConfig {
+  /**
+  * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone#enable_logging DnsManagedZone#enable_logging}
+  */
+  readonly enableLogging: boolean | cdktf.IResolvable;
+}
+
+export function dnsManagedZoneCloudLoggingConfigToTerraform(struct?: DnsManagedZoneCloudLoggingConfigOutputReference | DnsManagedZoneCloudLoggingConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_logging: cdktf.booleanToTerraform(struct!.enableLogging),
+  }
+}
+
+export class DnsManagedZoneCloudLoggingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DnsManagedZoneCloudLoggingConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableLogging !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableLogging = this._enableLogging;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DnsManagedZoneCloudLoggingConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableLogging = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableLogging = value.enableLogging;
+    }
+  }
+
+  // enable_logging - computed: false, optional: false, required: true
+  private _enableLogging?: boolean | cdktf.IResolvable; 
+  public get enableLogging() {
+    return this.getBooleanAttribute('enable_logging');
+  }
+  public set enableLogging(value: boolean | cdktf.IResolvable) {
+    this._enableLogging = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableLoggingInput() {
+    return this._enableLogging;
+  }
 }
 export interface DnsManagedZoneDnssecConfigDefaultKeySpecs {
   /**
@@ -1070,7 +1140,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       terraformResourceType: 'google_dns_managed_zone',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1089,6 +1159,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._visibility = config.visibility;
+    this._cloudLoggingConfig.internalValue = config.cloudLoggingConfig;
     this._dnssecConfig.internalValue = config.dnssecConfig;
     this._forwardingConfig.internalValue = config.forwardingConfig;
     this._peeringConfig.internalValue = config.peeringConfig;
@@ -1237,6 +1308,22 @@ export class DnsManagedZone extends cdktf.TerraformResource {
     return this._visibility;
   }
 
+  // cloud_logging_config - computed: false, optional: true, required: false
+  private _cloudLoggingConfig = new DnsManagedZoneCloudLoggingConfigOutputReference(this, "cloud_logging_config");
+  public get cloudLoggingConfig() {
+    return this._cloudLoggingConfig;
+  }
+  public putCloudLoggingConfig(value: DnsManagedZoneCloudLoggingConfig) {
+    this._cloudLoggingConfig.internalValue = value;
+  }
+  public resetCloudLoggingConfig() {
+    this._cloudLoggingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudLoggingConfigInput() {
+    return this._cloudLoggingConfig.internalValue;
+  }
+
   // dnssec_config - computed: false, optional: true, required: false
   private _dnssecConfig = new DnsManagedZoneDnssecConfigOutputReference(this, "dnssec_config");
   public get dnssecConfig() {
@@ -1331,6 +1418,7 @@ export class DnsManagedZone extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       visibility: cdktf.stringToTerraform(this._visibility),
+      cloud_logging_config: dnsManagedZoneCloudLoggingConfigToTerraform(this._cloudLoggingConfig.internalValue),
       dnssec_config: dnsManagedZoneDnssecConfigToTerraform(this._dnssecConfig.internalValue),
       forwarding_config: dnsManagedZoneForwardingConfigToTerraform(this._forwardingConfig.internalValue),
       peering_config: dnsManagedZonePeeringConfigToTerraform(this._peeringConfig.internalValue),
