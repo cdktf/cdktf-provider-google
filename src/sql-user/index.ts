@@ -61,6 +61,12 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   */
   readonly type?: string;
   /**
+  * password_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password_policy SqlUser#password_policy}
+  */
+  readonly passwordPolicy?: SqlUserPasswordPolicy;
+  /**
   * sql_server_user_details block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#sql_server_user_details SqlUser#sql_server_user_details}
@@ -72,6 +78,235 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#timeouts SqlUser#timeouts}
   */
   readonly timeouts?: SqlUserTimeouts;
+}
+export interface SqlUserPasswordPolicyStatus {
+}
+
+export function sqlUserPasswordPolicyStatusToTerraform(struct?: SqlUserPasswordPolicyStatus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SqlUserPasswordPolicyStatusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SqlUserPasswordPolicyStatus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlUserPasswordPolicyStatus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // locked - computed: true, optional: false, required: false
+  public get locked() {
+    return this.getBooleanAttribute('locked');
+  }
+
+  // password_expiration_time - computed: true, optional: false, required: false
+  public get passwordExpirationTime() {
+    return this.getStringAttribute('password_expiration_time');
+  }
+}
+
+export class SqlUserPasswordPolicyStatusList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SqlUserPasswordPolicyStatusOutputReference {
+    return new SqlUserPasswordPolicyStatusOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface SqlUserPasswordPolicy {
+  /**
+  * Number of failed attempts allowed before the user get locked.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
+  */
+  readonly allowedFailedAttempts?: number;
+  /**
+  * If true, the check that will lock user after too many failed login attempts will be enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
+  */
+  readonly enableFailedAttemptsCheck?: boolean | cdktf.IResolvable;
+  /**
+  * If true, the user must specify the current password before changing the password. This flag is supported only for MySQL.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#enable_password_verification SqlUser#enable_password_verification}
+  */
+  readonly enablePasswordVerification?: boolean | cdktf.IResolvable;
+  /**
+  * Password expiration duration with one week grace period.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
+  */
+  readonly passwordExpirationDuration?: string;
+}
+
+export function sqlUserPasswordPolicyToTerraform(struct?: SqlUserPasswordPolicyOutputReference | SqlUserPasswordPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_failed_attempts: cdktf.numberToTerraform(struct!.allowedFailedAttempts),
+    enable_failed_attempts_check: cdktf.booleanToTerraform(struct!.enableFailedAttemptsCheck),
+    enable_password_verification: cdktf.booleanToTerraform(struct!.enablePasswordVerification),
+    password_expiration_duration: cdktf.stringToTerraform(struct!.passwordExpirationDuration),
+  }
+}
+
+export class SqlUserPasswordPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SqlUserPasswordPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedFailedAttempts !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedFailedAttempts = this._allowedFailedAttempts;
+    }
+    if (this._enableFailedAttemptsCheck !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableFailedAttemptsCheck = this._enableFailedAttemptsCheck;
+    }
+    if (this._enablePasswordVerification !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePasswordVerification = this._enablePasswordVerification;
+    }
+    if (this._passwordExpirationDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.passwordExpirationDuration = this._passwordExpirationDuration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlUserPasswordPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedFailedAttempts = undefined;
+      this._enableFailedAttemptsCheck = undefined;
+      this._enablePasswordVerification = undefined;
+      this._passwordExpirationDuration = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedFailedAttempts = value.allowedFailedAttempts;
+      this._enableFailedAttemptsCheck = value.enableFailedAttemptsCheck;
+      this._enablePasswordVerification = value.enablePasswordVerification;
+      this._passwordExpirationDuration = value.passwordExpirationDuration;
+    }
+  }
+
+  // allowed_failed_attempts - computed: false, optional: true, required: false
+  private _allowedFailedAttempts?: number; 
+  public get allowedFailedAttempts() {
+    return this.getNumberAttribute('allowed_failed_attempts');
+  }
+  public set allowedFailedAttempts(value: number) {
+    this._allowedFailedAttempts = value;
+  }
+  public resetAllowedFailedAttempts() {
+    this._allowedFailedAttempts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedFailedAttemptsInput() {
+    return this._allowedFailedAttempts;
+  }
+
+  // enable_failed_attempts_check - computed: false, optional: true, required: false
+  private _enableFailedAttemptsCheck?: boolean | cdktf.IResolvable; 
+  public get enableFailedAttemptsCheck() {
+    return this.getBooleanAttribute('enable_failed_attempts_check');
+  }
+  public set enableFailedAttemptsCheck(value: boolean | cdktf.IResolvable) {
+    this._enableFailedAttemptsCheck = value;
+  }
+  public resetEnableFailedAttemptsCheck() {
+    this._enableFailedAttemptsCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableFailedAttemptsCheckInput() {
+    return this._enableFailedAttemptsCheck;
+  }
+
+  // enable_password_verification - computed: false, optional: true, required: false
+  private _enablePasswordVerification?: boolean | cdktf.IResolvable; 
+  public get enablePasswordVerification() {
+    return this.getBooleanAttribute('enable_password_verification');
+  }
+  public set enablePasswordVerification(value: boolean | cdktf.IResolvable) {
+    this._enablePasswordVerification = value;
+  }
+  public resetEnablePasswordVerification() {
+    this._enablePasswordVerification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePasswordVerificationInput() {
+    return this._enablePasswordVerification;
+  }
+
+  // password_expiration_duration - computed: false, optional: true, required: false
+  private _passwordExpirationDuration?: string; 
+  public get passwordExpirationDuration() {
+    return this.getStringAttribute('password_expiration_duration');
+  }
+  public set passwordExpirationDuration(value: string) {
+    this._passwordExpirationDuration = value;
+  }
+  public resetPasswordExpirationDuration() {
+    this._passwordExpirationDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordExpirationDurationInput() {
+    return this._passwordExpirationDuration;
+  }
+
+  // status - computed: true, optional: false, required: false
+  private _status = new SqlUserPasswordPolicyStatusList(this, "status", false);
+  public get status() {
+    return this._status;
+  }
 }
 export interface SqlUserSqlServerUserDetails {
   /**
@@ -325,7 +560,7 @@ export class SqlUser extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_user',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -344,6 +579,7 @@ export class SqlUser extends cdktf.TerraformResource {
     this._password = config.password;
     this._project = config.project;
     this._type = config.type;
+    this._passwordPolicy.internalValue = config.passwordPolicy;
     this._sqlServerUserDetails.internalValue = config.sqlServerUserDetails;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -474,6 +710,22 @@ export class SqlUser extends cdktf.TerraformResource {
     return this._type;
   }
 
+  // password_policy - computed: false, optional: true, required: false
+  private _passwordPolicy = new SqlUserPasswordPolicyOutputReference(this, "password_policy");
+  public get passwordPolicy() {
+    return this._passwordPolicy;
+  }
+  public putPasswordPolicy(value: SqlUserPasswordPolicy) {
+    this._passwordPolicy.internalValue = value;
+  }
+  public resetPasswordPolicy() {
+    this._passwordPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordPolicyInput() {
+    return this._passwordPolicy.internalValue;
+  }
+
   // sql_server_user_details - computed: false, optional: true, required: false
   private _sqlServerUserDetails = new SqlUserSqlServerUserDetailsOutputReference(this, "sql_server_user_details");
   public get sqlServerUserDetails() {
@@ -520,6 +772,7 @@ export class SqlUser extends cdktf.TerraformResource {
       password: cdktf.stringToTerraform(this._password),
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
+      password_policy: sqlUserPasswordPolicyToTerraform(this._passwordPolicy.internalValue),
       sql_server_user_details: sqlUserSqlServerUserDetailsToTerraform(this._sqlServerUserDetails.internalValue),
       timeouts: sqlUserTimeoutsToTerraform(this._timeouts.internalValue),
     };

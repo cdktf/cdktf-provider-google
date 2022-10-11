@@ -19,6 +19,12 @@ When the load balancing scheme is INTERNAL, this field is not used.
   */
   readonly affinityCookieTtlSec?: number;
   /**
+  * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values: ["AUTOMATIC", "DISABLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#compression_mode ComputeBackendService#compression_mode}
+  */
+  readonly compressionMode?: string;
+  /**
   * Time for which instance will be drained (not accept new
 connections, but still work to finish started).
   * 
@@ -2905,7 +2911,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2917,6 +2923,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._affinityCookieTtlSec = config.affinityCookieTtlSec;
+    this._compressionMode = config.compressionMode;
     this._connectionDrainingTimeoutSec = config.connectionDrainingTimeoutSec;
     this._customRequestHeaders = config.customRequestHeaders;
     this._customResponseHeaders = config.customResponseHeaders;
@@ -2962,6 +2969,22 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get affinityCookieTtlSecInput() {
     return this._affinityCookieTtlSec;
+  }
+
+  // compression_mode - computed: false, optional: true, required: false
+  private _compressionMode?: string; 
+  public get compressionMode() {
+    return this.getStringAttribute('compression_mode');
+  }
+  public set compressionMode(value: string) {
+    this._compressionMode = value;
+  }
+  public resetCompressionMode() {
+    this._compressionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionModeInput() {
+    return this._compressionMode;
   }
 
   // connection_draining_timeout_sec - computed: false, optional: true, required: false
@@ -3383,6 +3406,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       affinity_cookie_ttl_sec: cdktf.numberToTerraform(this._affinityCookieTtlSec),
+      compression_mode: cdktf.stringToTerraform(this._compressionMode),
       connection_draining_timeout_sec: cdktf.numberToTerraform(this._connectionDrainingTimeoutSec),
       custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customRequestHeaders),
       custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customResponseHeaders),

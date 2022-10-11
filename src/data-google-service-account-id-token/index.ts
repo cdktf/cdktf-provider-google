@@ -58,7 +58,7 @@ export class DataGoogleServiceAccountIdToken extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_service_account_id_token',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

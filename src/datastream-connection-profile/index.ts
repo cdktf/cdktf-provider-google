@@ -43,6 +43,12 @@ export interface DatastreamConnectionProfileConfig extends cdktf.TerraformMetaAr
   */
   readonly project?: string;
   /**
+  * bigquery_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_connection_profile#bigquery_profile DatastreamConnectionProfile#bigquery_profile}
+  */
+  readonly bigqueryProfile?: DatastreamConnectionProfileBigqueryProfile;
+  /**
   * forward_ssh_connectivity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_connection_profile#forward_ssh_connectivity DatastreamConnectionProfile#forward_ssh_connectivity}
@@ -78,6 +84,44 @@ export interface DatastreamConnectionProfileConfig extends cdktf.TerraformMetaAr
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_connection_profile#timeouts DatastreamConnectionProfile#timeouts}
   */
   readonly timeouts?: DatastreamConnectionProfileTimeouts;
+}
+export interface DatastreamConnectionProfileBigqueryProfile {
+}
+
+export function datastreamConnectionProfileBigqueryProfileToTerraform(struct?: DatastreamConnectionProfileBigqueryProfileOutputReference | DatastreamConnectionProfileBigqueryProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatastreamConnectionProfileBigqueryProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamConnectionProfileBigqueryProfile | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamConnectionProfileBigqueryProfile | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
 }
 export interface DatastreamConnectionProfileForwardSshConnectivity {
   /**
@@ -1196,7 +1240,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_connection_profile',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1213,6 +1257,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
     this._labels = config.labels;
     this._location = config.location;
     this._project = config.project;
+    this._bigqueryProfile.internalValue = config.bigqueryProfile;
     this._forwardSshConnectivity.internalValue = config.forwardSshConnectivity;
     this._gcsProfile.internalValue = config.gcsProfile;
     this._mysqlProfile.internalValue = config.mysqlProfile;
@@ -1315,6 +1360,22 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // bigquery_profile - computed: false, optional: true, required: false
+  private _bigqueryProfile = new DatastreamConnectionProfileBigqueryProfileOutputReference(this, "bigquery_profile");
+  public get bigqueryProfile() {
+    return this._bigqueryProfile;
+  }
+  public putBigqueryProfile(value: DatastreamConnectionProfileBigqueryProfile) {
+    this._bigqueryProfile.internalValue = value;
+  }
+  public resetBigqueryProfile() {
+    this._bigqueryProfile.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryProfileInput() {
+    return this._bigqueryProfile.internalValue;
   }
 
   // forward_ssh_connectivity - computed: false, optional: true, required: false
@@ -1425,6 +1486,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
+      bigquery_profile: datastreamConnectionProfileBigqueryProfileToTerraform(this._bigqueryProfile.internalValue),
       forward_ssh_connectivity: datastreamConnectionProfileForwardSshConnectivityToTerraform(this._forwardSshConnectivity.internalValue),
       gcs_profile: datastreamConnectionProfileGcsProfileToTerraform(this._gcsProfile.internalValue),
       mysql_profile: datastreamConnectionProfileMysqlProfileToTerraform(this._mysqlProfile.internalValue),

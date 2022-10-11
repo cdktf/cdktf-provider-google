@@ -14,6 +14,12 @@ export interface ComputeBackendBucketConfig extends cdktf.TerraformMetaArguments
   */
   readonly bucketName: string;
   /**
+  * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values: ["AUTOMATIC", "DISABLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#compression_mode ComputeBackendBucket#compression_mode}
+  */
+  readonly compressionMode?: string;
+  /**
   * Headers that the HTTP/S load balancer should add to proxied responses.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_bucket#custom_response_headers ComputeBackendBucket#custom_response_headers}
@@ -924,7 +930,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -936,6 +942,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._bucketName = config.bucketName;
+    this._compressionMode = config.compressionMode;
     this._customResponseHeaders = config.customResponseHeaders;
     this._description = config.description;
     this._edgeSecurityPolicy = config.edgeSecurityPolicy;
@@ -962,6 +969,22 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get bucketNameInput() {
     return this._bucketName;
+  }
+
+  // compression_mode - computed: false, optional: true, required: false
+  private _compressionMode?: string; 
+  public get compressionMode() {
+    return this.getStringAttribute('compression_mode');
+  }
+  public set compressionMode(value: string) {
+    this._compressionMode = value;
+  }
+  public resetCompressionMode() {
+    this._compressionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionModeInput() {
+    return this._compressionMode;
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -1122,6 +1145,7 @@ export class ComputeBackendBucket extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bucket_name: cdktf.stringToTerraform(this._bucketName),
+      compression_mode: cdktf.stringToTerraform(this._compressionMode),
       custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
       edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),

@@ -377,7 +377,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_backend_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.39.0',
+        providerVersion: '4.40.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -406,6 +406,11 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   private _cdnPolicy = new DataGoogleComputeBackendBucketCdnPolicyList(this, "cdn_policy", false);
   public get cdnPolicy() {
     return this._cdnPolicy;
+  }
+
+  // compression_mode - computed: true, optional: false, required: false
+  public get compressionMode() {
+    return this.getStringAttribute('compression_mode');
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
