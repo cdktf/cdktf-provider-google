@@ -222,7 +222,7 @@ export class ActiveDirectoryDomain extends cdktf.TerraformResource {
       terraformResourceType: 'google_active_directory_domain',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

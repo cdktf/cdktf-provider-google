@@ -180,6 +180,70 @@ export class BigqueryTableEncryptionConfigurationOutputReference extends cdktf.C
     return this.getStringAttribute('kms_key_version');
   }
 }
+export interface BigqueryTableExternalDataConfigurationAvroOptions {
+  /**
+  * If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#use_avro_logical_types BigqueryTable#use_avro_logical_types}
+  */
+  readonly useAvroLogicalTypes: boolean | cdktf.IResolvable;
+}
+
+export function bigqueryTableExternalDataConfigurationAvroOptionsToTerraform(struct?: BigqueryTableExternalDataConfigurationAvroOptionsOutputReference | BigqueryTableExternalDataConfigurationAvroOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    use_avro_logical_types: cdktf.booleanToTerraform(struct!.useAvroLogicalTypes),
+  }
+}
+
+export class BigqueryTableExternalDataConfigurationAvroOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryTableExternalDataConfigurationAvroOptions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._useAvroLogicalTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useAvroLogicalTypes = this._useAvroLogicalTypes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryTableExternalDataConfigurationAvroOptions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._useAvroLogicalTypes = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._useAvroLogicalTypes = value.useAvroLogicalTypes;
+    }
+  }
+
+  // use_avro_logical_types - computed: false, optional: false, required: true
+  private _useAvroLogicalTypes?: boolean | cdktf.IResolvable; 
+  public get useAvroLogicalTypes() {
+    return this.getBooleanAttribute('use_avro_logical_types');
+  }
+  public set useAvroLogicalTypes(value: boolean | cdktf.IResolvable) {
+    this._useAvroLogicalTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useAvroLogicalTypesInput() {
+    return this._useAvroLogicalTypes;
+  }
+}
 export interface BigqueryTableExternalDataConfigurationCsvOptions {
   /**
   * Indicates if BigQuery should accept rows that are missing trailing optional columns.
@@ -660,6 +724,12 @@ export interface BigqueryTableExternalDataConfiguration {
   */
   readonly sourceUris: string[];
   /**
+  * avro_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#avro_options BigqueryTable#avro_options}
+  */
+  readonly avroOptions?: BigqueryTableExternalDataConfigurationAvroOptions;
+  /**
   * csv_options block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#csv_options BigqueryTable#csv_options}
@@ -693,6 +763,7 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
     schema: cdktf.stringToTerraform(struct!.schema),
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
     source_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceUris),
+    avro_options: bigqueryTableExternalDataConfigurationAvroOptionsToTerraform(struct!.avroOptions),
     csv_options: bigqueryTableExternalDataConfigurationCsvOptionsToTerraform(struct!.csvOptions),
     google_sheets_options: bigqueryTableExternalDataConfigurationGoogleSheetsOptionsToTerraform(struct!.googleSheetsOptions),
     hive_partitioning_options: bigqueryTableExternalDataConfigurationHivePartitioningOptionsToTerraform(struct!.hivePartitioningOptions),
@@ -745,6 +816,10 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.sourceUris = this._sourceUris;
     }
+    if (this._avroOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.avroOptions = this._avroOptions?.internalValue;
+    }
     if (this._csvOptions?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.csvOptions = this._csvOptions?.internalValue;
@@ -771,6 +846,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._schema = undefined;
       this._sourceFormat = undefined;
       this._sourceUris = undefined;
+      this._avroOptions.internalValue = undefined;
       this._csvOptions.internalValue = undefined;
       this._googleSheetsOptions.internalValue = undefined;
       this._hivePartitioningOptions.internalValue = undefined;
@@ -785,6 +861,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._schema = value.schema;
       this._sourceFormat = value.sourceFormat;
       this._sourceUris = value.sourceUris;
+      this._avroOptions.internalValue = value.avroOptions;
       this._csvOptions.internalValue = value.csvOptions;
       this._googleSheetsOptions.internalValue = value.googleSheetsOptions;
       this._hivePartitioningOptions.internalValue = value.hivePartitioningOptions;
@@ -908,6 +985,22 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get sourceUrisInput() {
     return this._sourceUris;
+  }
+
+  // avro_options - computed: false, optional: true, required: false
+  private _avroOptions = new BigqueryTableExternalDataConfigurationAvroOptionsOutputReference(this, "avro_options");
+  public get avroOptions() {
+    return this._avroOptions;
+  }
+  public putAvroOptions(value: BigqueryTableExternalDataConfigurationAvroOptions) {
+    this._avroOptions.internalValue = value;
+  }
+  public resetAvroOptions() {
+    this._avroOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get avroOptionsInput() {
+    return this._avroOptions.internalValue;
   }
 
   // csv_options - computed: false, optional: true, required: false
@@ -1557,7 +1650,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
