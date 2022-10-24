@@ -97,6 +97,12 @@ pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   */
   readonly version?: string;
   /**
+  * crypto_key_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#crypto_key_config DataFusionInstance#crypto_key_config}
+  */
+  readonly cryptoKeyConfig?: DataFusionInstanceCryptoKeyConfig;
+  /**
   * network_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#network_config DataFusionInstance#network_config}
@@ -108,6 +114,70 @@ pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#timeouts DataFusionInstance#timeouts}
   */
   readonly timeouts?: DataFusionInstanceTimeouts;
+}
+export interface DataFusionInstanceCryptoKeyConfig {
+  /**
+  * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of projects/*\/locations/*\/keyRings/*\/cryptoKeys/*.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#key_reference DataFusionInstance#key_reference}
+  */
+  readonly keyReference: string;
+}
+
+export function dataFusionInstanceCryptoKeyConfigToTerraform(struct?: DataFusionInstanceCryptoKeyConfigOutputReference | DataFusionInstanceCryptoKeyConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_reference: cdktf.stringToTerraform(struct!.keyReference),
+  }
+}
+
+export class DataFusionInstanceCryptoKeyConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFusionInstanceCryptoKeyConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyReference !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyReference = this._keyReference;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFusionInstanceCryptoKeyConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyReference = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyReference = value.keyReference;
+    }
+  }
+
+  // key_reference - computed: false, optional: false, required: true
+  private _keyReference?: string; 
+  public get keyReference() {
+    return this.getStringAttribute('key_reference');
+  }
+  public set keyReference(value: string) {
+    this._keyReference = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyReferenceInput() {
+    return this._keyReference;
+  }
 }
 export interface DataFusionInstanceNetworkConfig {
   /**
@@ -358,7 +428,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_fusion_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -382,6 +452,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     this._region = config.region;
     this._type = config.type;
     this._version = config.version;
+    this._cryptoKeyConfig.internalValue = config.cryptoKeyConfig;
     this._networkConfig.internalValue = config.networkConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -627,6 +698,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return this._version;
   }
 
+  // crypto_key_config - computed: false, optional: true, required: false
+  private _cryptoKeyConfig = new DataFusionInstanceCryptoKeyConfigOutputReference(this, "crypto_key_config");
+  public get cryptoKeyConfig() {
+    return this._cryptoKeyConfig;
+  }
+  public putCryptoKeyConfig(value: DataFusionInstanceCryptoKeyConfig) {
+    this._cryptoKeyConfig.internalValue = value;
+  }
+  public resetCryptoKeyConfig() {
+    this._cryptoKeyConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cryptoKeyConfigInput() {
+    return this._cryptoKeyConfig.internalValue;
+  }
+
   // network_config - computed: false, optional: true, required: false
   private _networkConfig = new DataFusionInstanceNetworkConfigOutputReference(this, "network_config");
   public get networkConfig() {
@@ -678,6 +765,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       type: cdktf.stringToTerraform(this._type),
       version: cdktf.stringToTerraform(this._version),
+      crypto_key_config: dataFusionInstanceCryptoKeyConfigToTerraform(this._cryptoKeyConfig.internalValue),
       network_config: dataFusionInstanceNetworkConfigToTerraform(this._networkConfig.internalValue),
       timeouts: dataFusionInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };

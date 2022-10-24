@@ -84,6 +84,7 @@ export * as cloudAssetOrganizationFeed from './cloud-asset-organization-feed';
 export * as cloudAssetProjectFeed from './cloud-asset-project-feed';
 export * as cloudIdentityGroup from './cloud-identity-group';
 export * as cloudIdentityGroupMembership from './cloud-identity-group-membership';
+export * as cloudIdsEndpoint from './cloud-ids-endpoint';
 export * as cloudRunDomainMapping from './cloud-run-domain-mapping';
 export * as cloudRunService from './cloud-run-service';
 export * as cloudRunServiceIamBinding from './cloud-run-service-iam-binding';

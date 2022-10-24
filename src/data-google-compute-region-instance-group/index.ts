@@ -202,7 +202,7 @@ export class DataGoogleComputeRegionInstanceGroup extends cdktf.TerraformDataSou
       terraformResourceType: 'google_compute_region_instance_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

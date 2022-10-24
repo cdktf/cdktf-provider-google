@@ -173,7 +173,7 @@ export class IapWebTypeComputeIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_web_type_compute_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1299,7 +1299,7 @@ export class CloudSchedulerJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_scheduler_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

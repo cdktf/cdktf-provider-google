@@ -1106,7 +1106,7 @@ export class DataplexAsset extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_asset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
