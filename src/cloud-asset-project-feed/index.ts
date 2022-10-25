@@ -515,7 +515,7 @@ export class CloudAssetProjectFeed extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_asset_project_feed',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

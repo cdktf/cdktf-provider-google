@@ -348,7 +348,7 @@ export class SourcerepoRepository extends cdktf.TerraformResource {
       terraformResourceType: 'google_sourcerepo_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
