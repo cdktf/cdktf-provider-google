@@ -177,7 +177,7 @@ export class BinaryAuthorizationAttestorIamMember extends cdktf.TerraformResourc
       terraformResourceType: 'google_binary_authorization_attestor_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

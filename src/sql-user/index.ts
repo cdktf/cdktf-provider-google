@@ -67,17 +67,80 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   */
   readonly passwordPolicy?: SqlUserPasswordPolicy;
   /**
-  * sql_server_user_details block
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#sql_server_user_details SqlUser#sql_server_user_details}
-  */
-  readonly sqlServerUserDetails?: SqlUserSqlServerUserDetails;
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#timeouts SqlUser#timeouts}
   */
   readonly timeouts?: SqlUserTimeouts;
+}
+export interface SqlUserSqlServerUserDetails {
+}
+
+export function sqlUserSqlServerUserDetailsToTerraform(struct?: SqlUserSqlServerUserDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class SqlUserSqlServerUserDetailsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SqlUserSqlServerUserDetails | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlUserSqlServerUserDetails | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // disabled - computed: true, optional: false, required: false
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+
+  // server_roles - computed: true, optional: false, required: false
+  public get serverRoles() {
+    return this.getListAttribute('server_roles');
+  }
+}
+
+export class SqlUserSqlServerUserDetailsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SqlUserSqlServerUserDetailsOutputReference {
+    return new SqlUserSqlServerUserDetailsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface SqlUserPasswordPolicyStatus {
 }
@@ -308,102 +371,6 @@ export class SqlUserPasswordPolicyOutputReference extends cdktf.ComplexObject {
     return this._status;
   }
 }
-export interface SqlUserSqlServerUserDetails {
-  /**
-  * If the user has been disabled.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#disabled SqlUser#disabled}
-  */
-  readonly disabled?: boolean | cdktf.IResolvable;
-  /**
-  * The server roles for this user in the database.
-  * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#server_roles SqlUser#server_roles}
-  */
-  readonly serverRoles?: string[];
-}
-
-export function sqlUserSqlServerUserDetailsToTerraform(struct?: SqlUserSqlServerUserDetailsOutputReference | SqlUserSqlServerUserDetails): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-    disabled: cdktf.booleanToTerraform(struct!.disabled),
-    server_roles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.serverRoles),
-  }
-}
-
-export class SqlUserSqlServerUserDetailsOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): SqlUserSqlServerUserDetails | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    if (this._disabled !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.disabled = this._disabled;
-    }
-    if (this._serverRoles !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.serverRoles = this._serverRoles;
-    }
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: SqlUserSqlServerUserDetails | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-      this._disabled = undefined;
-      this._serverRoles = undefined;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-      this._disabled = value.disabled;
-      this._serverRoles = value.serverRoles;
-    }
-  }
-
-  // disabled - computed: false, optional: true, required: false
-  private _disabled?: boolean | cdktf.IResolvable; 
-  public get disabled() {
-    return this.getBooleanAttribute('disabled');
-  }
-  public set disabled(value: boolean | cdktf.IResolvable) {
-    this._disabled = value;
-  }
-  public resetDisabled() {
-    this._disabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get disabledInput() {
-    return this._disabled;
-  }
-
-  // server_roles - computed: false, optional: true, required: false
-  private _serverRoles?: string[]; 
-  public get serverRoles() {
-    return this.getListAttribute('server_roles');
-  }
-  public set serverRoles(value: string[]) {
-    this._serverRoles = value;
-  }
-  public resetServerRoles() {
-    this._serverRoles = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get serverRolesInput() {
-    return this._serverRoles;
-  }
-}
 export interface SqlUserTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#create SqlUser#create}
@@ -560,7 +527,7 @@ export class SqlUser extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_user',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -580,7 +547,6 @@ export class SqlUser extends cdktf.TerraformResource {
     this._project = config.project;
     this._type = config.type;
     this._passwordPolicy.internalValue = config.passwordPolicy;
-    this._sqlServerUserDetails.internalValue = config.sqlServerUserDetails;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -694,6 +660,12 @@ export class SqlUser extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // sql_server_user_details - computed: true, optional: false, required: false
+  private _sqlServerUserDetails = new SqlUserSqlServerUserDetailsList(this, "sql_server_user_details", false);
+  public get sqlServerUserDetails() {
+    return this._sqlServerUserDetails;
+  }
+
   // type - computed: false, optional: true, required: false
   private _type?: string; 
   public get type() {
@@ -724,22 +696,6 @@ export class SqlUser extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get passwordPolicyInput() {
     return this._passwordPolicy.internalValue;
-  }
-
-  // sql_server_user_details - computed: false, optional: true, required: false
-  private _sqlServerUserDetails = new SqlUserSqlServerUserDetailsOutputReference(this, "sql_server_user_details");
-  public get sqlServerUserDetails() {
-    return this._sqlServerUserDetails;
-  }
-  public putSqlServerUserDetails(value: SqlUserSqlServerUserDetails) {
-    this._sqlServerUserDetails.internalValue = value;
-  }
-  public resetSqlServerUserDetails() {
-    this._sqlServerUserDetails.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get sqlServerUserDetailsInput() {
-    return this._sqlServerUserDetails.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -773,7 +729,6 @@ export class SqlUser extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       type: cdktf.stringToTerraform(this._type),
       password_policy: sqlUserPasswordPolicyToTerraform(this._passwordPolicy.internalValue),
-      sql_server_user_details: sqlUserSqlServerUserDetailsToTerraform(this._sqlServerUserDetails.internalValue),
       timeouts: sqlUserTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

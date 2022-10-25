@@ -384,6 +384,130 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
     return this._autoUpgrade;
   }
 }
+export interface ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#gpu_sharing_strategy ContainerNodePool#gpu_sharing_strategy}
+  */
+  readonly gpuSharingStrategy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#max_shared_clients_per_gpu ContainerNodePool#max_shared_clients_per_gpu}
+  */
+  readonly maxSharedClientsPerGpu?: number;
+}
+
+export function containerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigToTerraform(struct?: ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    gpu_sharing_strategy: cdktf.stringToTerraform(struct!.gpuSharingStrategy),
+    max_shared_clients_per_gpu: cdktf.numberToTerraform(struct!.maxSharedClientsPerGpu),
+  }
+}
+
+export class ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._gpuSharingStrategy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gpuSharingStrategy = this._gpuSharingStrategy;
+    }
+    if (this._maxSharedClientsPerGpu !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxSharedClientsPerGpu = this._maxSharedClientsPerGpu;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._gpuSharingStrategy = undefined;
+      this._maxSharedClientsPerGpu = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._gpuSharingStrategy = value.gpuSharingStrategy;
+      this._maxSharedClientsPerGpu = value.maxSharedClientsPerGpu;
+    }
+  }
+
+  // gpu_sharing_strategy - computed: true, optional: true, required: false
+  private _gpuSharingStrategy?: string; 
+  public get gpuSharingStrategy() {
+    return this.getStringAttribute('gpu_sharing_strategy');
+  }
+  public set gpuSharingStrategy(value: string) {
+    this._gpuSharingStrategy = value;
+  }
+  public resetGpuSharingStrategy() {
+    this._gpuSharingStrategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gpuSharingStrategyInput() {
+    return this._gpuSharingStrategy;
+  }
+
+  // max_shared_clients_per_gpu - computed: true, optional: true, required: false
+  private _maxSharedClientsPerGpu?: number; 
+  public get maxSharedClientsPerGpu() {
+    return this.getNumberAttribute('max_shared_clients_per_gpu');
+  }
+  public set maxSharedClientsPerGpu(value: number) {
+    this._maxSharedClientsPerGpu = value;
+  }
+  public resetMaxSharedClientsPerGpu() {
+    this._maxSharedClientsPerGpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSharedClientsPerGpuInput() {
+    return this._maxSharedClientsPerGpu;
+  }
+}
+
+export class ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList extends cdktf.ComplexList {
+  public internalValue? : ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference {
+    return new ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerNodePoolNodeConfigGuestAccelerator {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#count ContainerNodePool#count}
@@ -393,6 +517,10 @@ export interface ContainerNodePoolNodeConfigGuestAccelerator {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#gpu_partition_size ContainerNodePool#gpu_partition_size}
   */
   readonly gpuPartitionSize?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#gpu_sharing_config ContainerNodePool#gpu_sharing_config}
+  */
+  readonly gpuSharingConfig?: ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig[] | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#type ContainerNodePool#type}
   */
@@ -407,6 +535,7 @@ export function containerNodePoolNodeConfigGuestAcceleratorToTerraform(struct?: 
   return {
     count: cdktf.numberToTerraform(struct!.count),
     gpu_partition_size: cdktf.stringToTerraform(struct!.gpuPartitionSize),
+    gpu_sharing_config: cdktf.listMapper(containerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigToTerraform, false)(struct!.gpuSharingConfig),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -439,6 +568,10 @@ export class ContainerNodePoolNodeConfigGuestAcceleratorOutputReference extends 
       hasAnyValues = true;
       internalValueResult.gpuPartitionSize = this._gpuPartitionSize;
     }
+    if (this._gpuSharingConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gpuSharingConfig = this._gpuSharingConfig?.internalValue;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -452,6 +585,7 @@ export class ContainerNodePoolNodeConfigGuestAcceleratorOutputReference extends 
       this.resolvableValue = undefined;
       this._count = undefined;
       this._gpuPartitionSize = undefined;
+      this._gpuSharingConfig.internalValue = undefined;
       this._type = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -463,6 +597,7 @@ export class ContainerNodePoolNodeConfigGuestAcceleratorOutputReference extends 
       this.resolvableValue = undefined;
       this._count = value.count;
       this._gpuPartitionSize = value.gpuPartitionSize;
+      this._gpuSharingConfig.internalValue = value.gpuSharingConfig;
       this._type = value.type;
     }
   }
@@ -497,6 +632,22 @@ export class ContainerNodePoolNodeConfigGuestAcceleratorOutputReference extends 
   // Temporarily expose input value. Use with caution.
   public get gpuPartitionSizeInput() {
     return this._gpuPartitionSize;
+  }
+
+  // gpu_sharing_config - computed: true, optional: true, required: false
+  private _gpuSharingConfig = new ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfigList(this, "gpu_sharing_config", false);
+  public get gpuSharingConfig() {
+    return this._gpuSharingConfig;
+  }
+  public putGpuSharingConfig(value: ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig[] | cdktf.IResolvable) {
+    this._gpuSharingConfig.internalValue = value;
+  }
+  public resetGpuSharingConfig() {
+    this._gpuSharingConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gpuSharingConfigInput() {
+    return this._gpuSharingConfig.internalValue;
   }
 
   // type - computed: true, optional: true, required: false
@@ -2018,7 +2169,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

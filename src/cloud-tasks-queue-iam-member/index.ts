@@ -181,7 +181,7 @@ export class CloudTasksQueueIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_tasks_queue_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.40.0',
+        providerVersion: '4.41.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
