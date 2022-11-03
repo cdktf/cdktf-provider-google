@@ -2068,6 +2068,13 @@ later build step.
   */
   readonly name: string;
   /**
+  * A shell script to be executed in the step. 
+When script is provided, the user cannot specify the entrypoint or args.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#script CloudbuildTrigger#script}
+  */
+  readonly script?: string;
+  /**
   * A list of environment variables which are encrypted using
 a Cloud Key
 Management Service crypto key. These values must be specified in
@@ -2123,6 +2130,7 @@ export function cloudbuildTriggerBuildStepToTerraform(struct?: CloudbuildTrigger
     env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.env),
     id: cdktf.stringToTerraform(struct!.id),
     name: cdktf.stringToTerraform(struct!.name),
+    script: cdktf.stringToTerraform(struct!.script),
     secret_env: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.secretEnv),
     timeout: cdktf.stringToTerraform(struct!.timeout),
     timing: cdktf.stringToTerraform(struct!.timing),
@@ -2175,6 +2183,10 @@ export class CloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._script !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.script = this._script;
+    }
     if (this._secretEnv !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretEnv = this._secretEnv;
@@ -2208,6 +2220,7 @@ export class CloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObje
       this._env = undefined;
       this._id = undefined;
       this._name = undefined;
+      this._script = undefined;
       this._secretEnv = undefined;
       this._timeout = undefined;
       this._timing = undefined;
@@ -2227,6 +2240,7 @@ export class CloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObje
       this._env = value.env;
       this._id = value.id;
       this._name = value.name;
+      this._script = value.script;
       this._secretEnv = value.secretEnv;
       this._timeout = value.timeout;
       this._timing = value.timing;
@@ -2326,6 +2340,22 @@ export class CloudbuildTriggerBuildStepOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // script - computed: false, optional: true, required: false
+  private _script?: string; 
+  public get script() {
+    return this.getStringAttribute('script');
+  }
+  public set script(value: string) {
+    this._script = value;
+  }
+  public resetScript() {
+    this._script = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scriptInput() {
+    return this._script;
   }
 
   // secret_env - computed: false, optional: true, required: false
@@ -4070,7 +4100,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

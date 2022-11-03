@@ -1432,6 +1432,11 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this.getStringAttribute('tier');
   }
 
+  // time_zone - computed: true, optional: false, required: false
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+
   // user_labels - computed: true, optional: false, required: false
   private _userLabels = new cdktf.StringMap(this, "user_labels");
   public get userLabels() {
@@ -1489,7 +1494,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

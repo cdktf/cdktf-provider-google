@@ -26,6 +26,12 @@ export interface MonitoringNotificationChannelConfig extends cdktf.TerraformMeta
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * If true, the notification channel will be deleted regardless
+of its use in alert policies (the policies will be updated
+to remove the channel). If false, channels that are still
+referenced by an existing alerting policy will fail to be
+deleted in a delete operation.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_notification_channel#force_delete MonitoringNotificationChannel#force_delete}
   */
   readonly forceDelete?: boolean | cdktf.IResolvable;
@@ -358,7 +364,7 @@ export class MonitoringNotificationChannel extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_notification_channel',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -46,7 +46,7 @@ export class DataGoogleBigqueryDefaultServiceAccount extends cdktf.TerraformData
       terraformResourceType: 'google_bigquery_default_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -84,6 +84,11 @@ export class DataGoogleBigqueryDefaultServiceAccount extends cdktf.TerraformData
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // member - computed: true, optional: false, required: false
+  public get member() {
+    return this.getStringAttribute('member');
   }
 
   // project - computed: true, optional: true, required: false

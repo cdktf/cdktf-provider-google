@@ -526,7 +526,7 @@ export class ComputeGlobalForwardingRule extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

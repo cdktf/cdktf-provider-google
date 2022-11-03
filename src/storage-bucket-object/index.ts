@@ -364,7 +364,7 @@ export class StorageBucketObject extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket_object',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

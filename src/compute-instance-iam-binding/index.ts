@@ -181,7 +181,7 @@ export class ComputeInstanceIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

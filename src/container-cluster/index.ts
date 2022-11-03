@@ -201,6 +201,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly confidentialNodes?: ContainerClusterConfidentialNodes;
   /**
+  * cost_management_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#cost_management_config ContainerCluster#cost_management_config}
+  */
+  readonly costManagementConfig?: ContainerClusterCostManagementConfig;
+  /**
   * database_encryption block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#database_encryption ContainerCluster#database_encryption}
@@ -1197,6 +1203,18 @@ export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   */
   readonly bootDiskKmsKey?: string;
   /**
+  * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disk_size ContainerCluster#disk_size}
+  */
+  readonly diskSize?: number;
+  /**
+  * Type of the disk attached to each node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disk_type ContainerCluster#disk_type}
+  */
+  readonly diskType?: string;
+  /**
   * The default image type used by NAP once a new node pool is being created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#image_type ContainerCluster#image_type}
@@ -1223,6 +1241,8 @@ export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerr
   }
   return {
     boot_disk_kms_key: cdktf.stringToTerraform(struct!.bootDiskKmsKey),
+    disk_size: cdktf.numberToTerraform(struct!.diskSize),
+    disk_type: cdktf.stringToTerraform(struct!.diskType),
     image_type: cdktf.stringToTerraform(struct!.imageType),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
@@ -1247,6 +1267,14 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       hasAnyValues = true;
       internalValueResult.bootDiskKmsKey = this._bootDiskKmsKey;
     }
+    if (this._diskSize !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskSize = this._diskSize;
+    }
+    if (this._diskType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.diskType = this._diskType;
+    }
     if (this._imageType !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageType = this._imageType;
@@ -1266,6 +1294,8 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
     if (value === undefined) {
       this.isEmptyObject = false;
       this._bootDiskKmsKey = undefined;
+      this._diskSize = undefined;
+      this._diskType = undefined;
       this._imageType = undefined;
       this._oauthScopes = undefined;
       this._serviceAccount = undefined;
@@ -1273,6 +1303,8 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._bootDiskKmsKey = value.bootDiskKmsKey;
+      this._diskSize = value.diskSize;
+      this._diskType = value.diskType;
       this._imageType = value.imageType;
       this._oauthScopes = value.oauthScopes;
       this._serviceAccount = value.serviceAccount;
@@ -1293,6 +1325,38 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
   // Temporarily expose input value. Use with caution.
   public get bootDiskKmsKeyInput() {
     return this._bootDiskKmsKey;
+  }
+
+  // disk_size - computed: false, optional: true, required: false
+  private _diskSize?: number; 
+  public get diskSize() {
+    return this.getNumberAttribute('disk_size');
+  }
+  public set diskSize(value: number) {
+    this._diskSize = value;
+  }
+  public resetDiskSize() {
+    this._diskSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeInput() {
+    return this._diskSize;
+  }
+
+  // disk_type - computed: false, optional: true, required: false
+  private _diskType?: string; 
+  public get diskType() {
+    return this.getStringAttribute('disk_type');
+  }
+  public set diskType(value: string) {
+    this._diskType = value;
+  }
+  public resetDiskType() {
+    this._diskType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskTypeInput() {
+    return this._diskType;
   }
 
   // image_type - computed: false, optional: true, required: false
@@ -1660,6 +1724,70 @@ export class ContainerClusterConfidentialNodesOutputReference extends cdktf.Comp
   }
 
   public set internalValue(value: ContainerClusterConfidentialNodes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
+export interface ContainerClusterCostManagementConfig {
+  /**
+  * Whether to enable GKE cost allocation. When you enable GKE cost allocation, the cluster name and namespace of your GKE workloads appear in the labels field of the billing export to BigQuery. Defaults to false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterCostManagementConfigToTerraform(struct?: ContainerClusterCostManagementConfigOutputReference | ContainerClusterCostManagementConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerClusterCostManagementConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterCostManagementConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterCostManagementConfig | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this._enabled = undefined;
@@ -8234,7 +8362,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -8277,6 +8405,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._binaryAuthorization.internalValue = config.binaryAuthorization;
     this._clusterAutoscaling.internalValue = config.clusterAutoscaling;
     this._confidentialNodes.internalValue = config.confidentialNodes;
+    this._costManagementConfig.internalValue = config.costManagementConfig;
     this._databaseEncryption.internalValue = config.databaseEncryption;
     this._defaultSnatStatus.internalValue = config.defaultSnatStatus;
     this._dnsConfig.internalValue = config.dnsConfig;
@@ -8848,6 +8977,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._confidentialNodes.internalValue;
   }
 
+  // cost_management_config - computed: false, optional: true, required: false
+  private _costManagementConfig = new ContainerClusterCostManagementConfigOutputReference(this, "cost_management_config");
+  public get costManagementConfig() {
+    return this._costManagementConfig;
+  }
+  public putCostManagementConfig(value: ContainerClusterCostManagementConfig) {
+    this._costManagementConfig.internalValue = value;
+  }
+  public resetCostManagementConfig() {
+    this._costManagementConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get costManagementConfigInput() {
+    return this._costManagementConfig.internalValue;
+  }
+
   // database_encryption - computed: false, optional: true, required: false
   private _databaseEncryption = new ContainerClusterDatabaseEncryptionOutputReference(this, "database_encryption");
   public get databaseEncryption() {
@@ -9222,6 +9367,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       binary_authorization: containerClusterBinaryAuthorizationToTerraform(this._binaryAuthorization.internalValue),
       cluster_autoscaling: containerClusterClusterAutoscalingToTerraform(this._clusterAutoscaling.internalValue),
       confidential_nodes: containerClusterConfidentialNodesToTerraform(this._confidentialNodes.internalValue),
+      cost_management_config: containerClusterCostManagementConfigToTerraform(this._costManagementConfig.internalValue),
       database_encryption: containerClusterDatabaseEncryptionToTerraform(this._databaseEncryption.internalValue),
       default_snat_status: containerClusterDefaultSnatStatusToTerraform(this._defaultSnatStatus.internalValue),
       dns_config: containerClusterDnsConfigToTerraform(this._dnsConfig.internalValue),

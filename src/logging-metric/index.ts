@@ -1016,7 +1016,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_metric',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -46,7 +46,7 @@ export class DataGoogleStorageTransferProjectServiceAccount extends cdktf.Terraf
       terraformResourceType: 'google_storage_transfer_project_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -84,6 +84,11 @@ export class DataGoogleStorageTransferProjectServiceAccount extends cdktf.Terraf
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // member - computed: true, optional: false, required: false
+  public get member() {
+    return this.getStringAttribute('member');
   }
 
   // project - computed: true, optional: true, required: false

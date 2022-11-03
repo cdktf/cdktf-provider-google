@@ -48,6 +48,10 @@ export interface GoogleProviderConfig {
   */
   readonly bigQueryCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}
+  */
+  readonly bigqueryAnalyticsHubCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}
   */
   readonly bigqueryConnectionCustomEndpoint?: string;
@@ -505,7 +509,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -520,6 +524,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._artifactRegistryCustomEndpoint = config.artifactRegistryCustomEndpoint;
     this._assuredWorkloadsCustomEndpoint = config.assuredWorkloadsCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
+    this._bigqueryAnalyticsHubCustomEndpoint = config.bigqueryAnalyticsHubCustomEndpoint;
     this._bigqueryConnectionCustomEndpoint = config.bigqueryConnectionCustomEndpoint;
     this._bigqueryDataTransferCustomEndpoint = config.bigqueryDataTransferCustomEndpoint;
     this._bigqueryReservationCustomEndpoint = config.bigqueryReservationCustomEndpoint;
@@ -785,6 +790,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get bigQueryCustomEndpointInput() {
     return this._bigQueryCustomEndpoint;
+  }
+
+  // bigquery_analytics_hub_custom_endpoint - computed: false, optional: true, required: false
+  private _bigqueryAnalyticsHubCustomEndpoint?: string; 
+  public get bigqueryAnalyticsHubCustomEndpoint() {
+    return this._bigqueryAnalyticsHubCustomEndpoint;
+  }
+  public set bigqueryAnalyticsHubCustomEndpoint(value: string | undefined) {
+    this._bigqueryAnalyticsHubCustomEndpoint = value;
+  }
+  public resetBigqueryAnalyticsHubCustomEndpoint() {
+    this._bigqueryAnalyticsHubCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bigqueryAnalyticsHubCustomEndpointInput() {
+    return this._bigqueryAnalyticsHubCustomEndpoint;
   }
 
   // bigquery_connection_custom_endpoint - computed: false, optional: true, required: false
@@ -2419,6 +2440,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       artifact_registry_custom_endpoint: cdktf.stringToTerraform(this._artifactRegistryCustomEndpoint),
       assured_workloads_custom_endpoint: cdktf.stringToTerraform(this._assuredWorkloadsCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
+      bigquery_analytics_hub_custom_endpoint: cdktf.stringToTerraform(this._bigqueryAnalyticsHubCustomEndpoint),
       bigquery_connection_custom_endpoint: cdktf.stringToTerraform(this._bigqueryConnectionCustomEndpoint),
       bigquery_data_transfer_custom_endpoint: cdktf.stringToTerraform(this._bigqueryDataTransferCustomEndpoint),
       bigquery_reservation_custom_endpoint: cdktf.stringToTerraform(this._bigqueryReservationCustomEndpoint),

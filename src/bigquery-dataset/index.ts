@@ -54,6 +54,10 @@ expiration time indicated by this property.
   */
   readonly defaultTableExpirationMs?: number;
   /**
+  * If set to 'true', delete all the tables in the
+dataset when destroying the resource; otherwise,
+destroying the resource will fail if tables are present.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
   */
   readonly deleteContentsOnDestroy?: boolean | cdktf.IResolvable;
@@ -100,6 +104,12 @@ Changing this forces a new resource to be created.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#location BigqueryDataset#location}
   */
   readonly location?: string;
+  /**
+  * Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
+  */
+  readonly maxTimeTravelHours?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#project BigqueryDataset#project}
   */
@@ -935,7 +945,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -955,6 +965,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
     this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
+    this._maxTimeTravelHours = config.maxTimeTravelHours;
     this._project = config.project;
     this._access.internalValue = config.access;
     this._defaultEncryptionConfiguration.internalValue = config.defaultEncryptionConfiguration;
@@ -1121,6 +1132,22 @@ export class BigqueryDataset extends cdktf.TerraformResource {
     return this._location;
   }
 
+  // max_time_travel_hours - computed: false, optional: true, required: false
+  private _maxTimeTravelHours?: string; 
+  public get maxTimeTravelHours() {
+    return this.getStringAttribute('max_time_travel_hours');
+  }
+  public set maxTimeTravelHours(value: string) {
+    this._maxTimeTravelHours = value;
+  }
+  public resetMaxTimeTravelHours() {
+    this._maxTimeTravelHours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxTimeTravelHoursInput() {
+    return this._maxTimeTravelHours;
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -1205,6 +1232,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
+      max_time_travel_hours: cdktf.stringToTerraform(this._maxTimeTravelHours),
       project: cdktf.stringToTerraform(this._project),
       access: cdktf.listMapper(bigqueryDatasetAccessToTerraform, true)(this._access.internalValue),
       default_encryption_configuration: bigqueryDatasetDefaultEncryptionConfigurationToTerraform(this._defaultEncryptionConfiguration.internalValue),

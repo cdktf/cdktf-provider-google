@@ -139,6 +139,12 @@ Defaults to 30s if not set.
   */
   readonly logConfig?: ComputeRouterNatLogConfig;
   /**
+  * rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#rules ComputeRouterNat#rules}
+  */
+  readonly rules?: ComputeRouterNatRules[] | cdktf.IResolvable;
+  /**
   * subnetwork block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#subnetwork ComputeRouterNat#subnetwork}
@@ -239,6 +245,299 @@ export class ComputeRouterNatLogConfigOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
     return this._filter;
+  }
+}
+export interface ComputeRouterNatRulesAction {
+  /**
+  * A list of URLs of the IP resources used for this NAT rule.
+These IP addresses must be valid static external IP addresses assigned to the project.
+This field is used for public NAT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#source_nat_active_ips ComputeRouterNat#source_nat_active_ips}
+  */
+  readonly sourceNatActiveIps?: string[];
+  /**
+  * A list of URLs of the IP resources to be drained.
+These IPs must be valid static external IPs that have been assigned to the NAT.
+These IPs should be used for updating/patching a NAT rule only.
+This field is used for public NAT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#source_nat_drain_ips ComputeRouterNat#source_nat_drain_ips}
+  */
+  readonly sourceNatDrainIps?: string[];
+}
+
+export function computeRouterNatRulesActionToTerraform(struct?: ComputeRouterNatRulesActionOutputReference | ComputeRouterNatRulesAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    source_nat_active_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceNatActiveIps),
+    source_nat_drain_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceNatDrainIps),
+  }
+}
+
+export class ComputeRouterNatRulesActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRouterNatRulesAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sourceNatActiveIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceNatActiveIps = this._sourceNatActiveIps;
+    }
+    if (this._sourceNatDrainIps !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceNatDrainIps = this._sourceNatDrainIps;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterNatRulesAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sourceNatActiveIps = undefined;
+      this._sourceNatDrainIps = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sourceNatActiveIps = value.sourceNatActiveIps;
+      this._sourceNatDrainIps = value.sourceNatDrainIps;
+    }
+  }
+
+  // source_nat_active_ips - computed: false, optional: true, required: false
+  private _sourceNatActiveIps?: string[]; 
+  public get sourceNatActiveIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_nat_active_ips'));
+  }
+  public set sourceNatActiveIps(value: string[]) {
+    this._sourceNatActiveIps = value;
+  }
+  public resetSourceNatActiveIps() {
+    this._sourceNatActiveIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceNatActiveIpsInput() {
+    return this._sourceNatActiveIps;
+  }
+
+  // source_nat_drain_ips - computed: false, optional: true, required: false
+  private _sourceNatDrainIps?: string[]; 
+  public get sourceNatDrainIps() {
+    return cdktf.Fn.tolist(this.getListAttribute('source_nat_drain_ips'));
+  }
+  public set sourceNatDrainIps(value: string[]) {
+    this._sourceNatDrainIps = value;
+  }
+  public resetSourceNatDrainIps() {
+    this._sourceNatDrainIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceNatDrainIpsInput() {
+    return this._sourceNatDrainIps;
+  }
+}
+export interface ComputeRouterNatRules {
+  /**
+  * An optional description of this rule.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#description ComputeRouterNat#description}
+  */
+  readonly description?: string;
+  /**
+  * CEL expression that specifies the match condition that egress traffic from a VM is evaluated against.
+If it evaluates to true, the corresponding action is enforced.
+
+The following examples are valid match expressions for public NAT:
+
+"inIpRange(destination.ip, '1.1.0.0/16') || inIpRange(destination.ip, '2.2.0.0/16')"
+
+"destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'"
+
+The following example is a valid match expression for private NAT:
+
+"nexthop.hub == 'https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1'"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#match ComputeRouterNat#match}
+  */
+  readonly match: string;
+  /**
+  * An integer uniquely identifying a rule in the list.
+The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#rule_number ComputeRouterNat#rule_number}
+  */
+  readonly ruleNumber: number;
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#action ComputeRouterNat#action}
+  */
+  readonly action?: ComputeRouterNatRulesAction;
+}
+
+export function computeRouterNatRulesToTerraform(struct?: ComputeRouterNatRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    match: cdktf.stringToTerraform(struct!.match),
+    rule_number: cdktf.numberToTerraform(struct!.ruleNumber),
+    action: computeRouterNatRulesActionToTerraform(struct!.action),
+  }
+}
+
+export class ComputeRouterNatRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRouterNatRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._description !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    if (this._match !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.match = this._match;
+    }
+    if (this._ruleNumber !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleNumber = this._ruleNumber;
+    }
+    if (this._action?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRouterNatRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._description = undefined;
+      this._match = undefined;
+      this._ruleNumber = undefined;
+      this._action.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._description = value.description;
+      this._match = value.match;
+      this._ruleNumber = value.ruleNumber;
+      this._action.internalValue = value.action;
+    }
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
+  }
+
+  // match - computed: false, optional: false, required: true
+  private _match?: string; 
+  public get match() {
+    return this.getStringAttribute('match');
+  }
+  public set match(value: string) {
+    this._match = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchInput() {
+    return this._match;
+  }
+
+  // rule_number - computed: false, optional: false, required: true
+  private _ruleNumber?: number; 
+  public get ruleNumber() {
+    return this.getNumberAttribute('rule_number');
+  }
+  public set ruleNumber(value: number) {
+    this._ruleNumber = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleNumberInput() {
+    return this._ruleNumber;
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action = new ComputeRouterNatRulesActionOutputReference(this, "action");
+  public get action() {
+    return this._action;
+  }
+  public putAction(value: ComputeRouterNatRulesAction) {
+    this._action.internalValue = value;
+  }
+  public resetAction() {
+    this._action.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action.internalValue;
+  }
+}
+
+export class ComputeRouterNatRulesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRouterNatRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRouterNatRulesOutputReference {
+    return new ComputeRouterNatRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ComputeRouterNatSubnetwork {
@@ -554,7 +853,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -583,6 +882,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     this._tcpTransitoryIdleTimeoutSec = config.tcpTransitoryIdleTimeoutSec;
     this._udpIdleTimeoutSec = config.udpIdleTimeoutSec;
     this._logConfig.internalValue = config.logConfig;
+    this._rules.internalValue = config.rules;
     this._subnetwork.internalValue = config.subnetwork;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -867,6 +1167,22 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     return this._logConfig.internalValue;
   }
 
+  // rules - computed: false, optional: true, required: false
+  private _rules = new ComputeRouterNatRulesList(this, "rules", true);
+  public get rules() {
+    return this._rules;
+  }
+  public putRules(value: ComputeRouterNatRules[] | cdktf.IResolvable) {
+    this._rules.internalValue = value;
+  }
+  public resetRules() {
+    this._rules.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rulesInput() {
+    return this._rules.internalValue;
+  }
+
   // subnetwork - computed: false, optional: true, required: false
   private _subnetwork = new ComputeRouterNatSubnetworkList(this, "subnetwork", true);
   public get subnetwork() {
@@ -923,6 +1239,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       tcp_transitory_idle_timeout_sec: cdktf.numberToTerraform(this._tcpTransitoryIdleTimeoutSec),
       udp_idle_timeout_sec: cdktf.numberToTerraform(this._udpIdleTimeoutSec),
       log_config: computeRouterNatLogConfigToTerraform(this._logConfig.internalValue),
+      rules: cdktf.listMapper(computeRouterNatRulesToTerraform, true)(this._rules.internalValue),
       subnetwork: cdktf.listMapper(computeRouterNatSubnetworkToTerraform, true)(this._subnetwork.internalValue),
       timeouts: computeRouterNatTimeoutsToTerraform(this._timeouts.internalValue),
     };

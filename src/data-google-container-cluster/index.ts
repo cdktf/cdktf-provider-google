@@ -765,6 +765,16 @@ export class DataGoogleContainerClusterClusterAutoscalingAutoProvisioningDefault
     return this.getStringAttribute('boot_disk_kms_key');
   }
 
+  // disk_size - computed: true, optional: false, required: false
+  public get diskSize() {
+    return this.getNumberAttribute('disk_size');
+  }
+
+  // disk_type - computed: true, optional: false, required: false
+  public get diskType() {
+    return this.getStringAttribute('disk_type');
+  }
+
   // image_type - computed: true, optional: false, required: false
   public get imageType() {
     return this.getStringAttribute('image_type');
@@ -1011,6 +1021,70 @@ export class DataGoogleContainerClusterConfidentialNodesList extends cdktf.Compl
   */
   public get(index: number): DataGoogleContainerClusterConfidentialNodesOutputReference {
     return new DataGoogleContainerClusterConfidentialNodesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleContainerClusterCostManagementConfig {
+}
+
+export function dataGoogleContainerClusterCostManagementConfigToTerraform(struct?: DataGoogleContainerClusterCostManagementConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterCostManagementConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterCostManagementConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterCostManagementConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleContainerClusterCostManagementConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterCostManagementConfigOutputReference {
+    return new DataGoogleContainerClusterCostManagementConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterDatabaseEncryption {
@@ -4809,7 +4883,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -4863,6 +4937,12 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
   private _confidentialNodes = new DataGoogleContainerClusterConfidentialNodesList(this, "confidential_nodes", false);
   public get confidentialNodes() {
     return this._confidentialNodes;
+  }
+
+  // cost_management_config - computed: true, optional: false, required: false
+  private _costManagementConfig = new DataGoogleContainerClusterCostManagementConfigList(this, "cost_management_config", false);
+  public get costManagementConfig() {
+    return this._costManagementConfig;
   }
 
   // database_encryption - computed: true, optional: false, required: false

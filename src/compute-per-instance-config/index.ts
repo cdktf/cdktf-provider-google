@@ -21,10 +21,24 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   */
   readonly instanceGroupManager: string;
   /**
+  * The minimal action to perform on the instance during an update.
+Default is 'NONE'. Possible values are:
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#minimal_action ComputePerInstanceConfig#minimal_action}
   */
   readonly minimalAction?: string;
   /**
+  * The most disruptive action to perform on the instance during an update.
+Default is 'REPLACE'. Possible values are:
+* REPLACE
+* RESTART
+* REFRESH
+* NONE
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#most_disruptive_allowed_action ComputePerInstanceConfig#most_disruptive_allowed_action}
   */
   readonly mostDisruptiveAllowedAction?: string;
@@ -39,6 +53,10 @@ export interface ComputePerInstanceConfigConfig extends cdktf.TerraformMetaArgum
   */
   readonly project?: string;
   /**
+  * When true, deleting this config will immediately remove any specified state from the underlying instance.
+When false, deleting this config will *not* immediately remove any state from the underlying instance.
+State will be removed on the next instance recreation or update.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_per_instance_config#remove_instance_state_on_destroy ComputePerInstanceConfig#remove_instance_state_on_destroy}
   */
   readonly removeInstanceStateOnDestroy?: boolean | cdktf.IResolvable;
@@ -498,7 +516,7 @@ export class ComputePerInstanceConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_per_instance_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

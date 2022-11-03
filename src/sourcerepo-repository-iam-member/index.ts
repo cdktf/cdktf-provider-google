@@ -177,7 +177,7 @@ export class SourcerepoRepositoryIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_sourcerepo_repository_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

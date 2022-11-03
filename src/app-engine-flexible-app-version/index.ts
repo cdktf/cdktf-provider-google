@@ -21,6 +21,8 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
   */
   readonly defaultExpiration?: string;
   /**
+  * If set to 'true', the service will be deleted if it is the last version.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#delete_service_on_destroy AppEngineFlexibleAppVersion#delete_service_on_destroy}
   */
   readonly deleteServiceOnDestroy?: boolean | cdktf.IResolvable;
@@ -59,6 +61,8 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
   */
   readonly nobuildFilesRegex?: string;
   /**
+  * If set to 'true', the application version will not be deleted.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_flexible_app_version#noop_on_destroy AppEngineFlexibleAppVersion#noop_on_destroy}
   */
   readonly noopOnDestroy?: boolean | cdktf.IResolvable;
@@ -3877,7 +3881,7 @@ export class AppEngineFlexibleAppVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_flexible_app_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
