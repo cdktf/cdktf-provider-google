@@ -26,6 +26,9 @@ unique per project and between 4 and 30 characters in length.
   */
   readonly displayName: string;
   /**
+  * When deleting a spanner instance, this boolean option will delete all backups of this instance.
+This must be set to true if you created a backup manually in the console.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance#force_destroy SpannerInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
@@ -235,7 +238,7 @@ export class SpannerInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -153,7 +153,7 @@ export class ServiceAccount extends cdktf.TerraformResource {
       terraformResourceType: 'google_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -257,6 +257,11 @@ export class ServiceAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // member - computed: true, optional: false, required: false
+  public get member() {
+    return this.getStringAttribute('member');
   }
 
   // name - computed: true, optional: false, required: false

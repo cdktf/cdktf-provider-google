@@ -2501,6 +2501,12 @@ is set to true. Defaults to ZONAL.
   */
   readonly tier: string;
   /**
+  * The timezone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#time_zone SqlDatabaseInstance#time_zone}
+  */
+  readonly timeZone?: string;
+  /**
   * A set of key/value user label pairs to assign to the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#user_labels SqlDatabaseInstance#user_labels}
@@ -2577,6 +2583,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     pricing_plan: cdktf.stringToTerraform(struct!.pricingPlan),
     tier: cdktf.stringToTerraform(struct!.tier),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
     user_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.userLabels),
     active_directory_config: sqlDatabaseInstanceSettingsActiveDirectoryConfigToTerraform(struct!.activeDirectoryConfig),
     backup_configuration: sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct!.backupConfiguration),
@@ -2640,6 +2647,10 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
+    if (this._timeZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
     if (this._userLabels !== undefined) {
       hasAnyValues = true;
       internalValueResult.userLabels = this._userLabels;
@@ -2695,6 +2706,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._diskType = undefined;
       this._pricingPlan = undefined;
       this._tier = undefined;
+      this._timeZone = undefined;
       this._userLabels = undefined;
       this._activeDirectoryConfig.internalValue = undefined;
       this._backupConfiguration.internalValue = undefined;
@@ -2717,6 +2729,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._diskType = value.diskType;
       this._pricingPlan = value.pricingPlan;
       this._tier = value.tier;
+      this._timeZone = value.timeZone;
       this._userLabels = value.userLabels;
       this._activeDirectoryConfig.internalValue = value.activeDirectoryConfig;
       this._backupConfiguration.internalValue = value.backupConfiguration;
@@ -2869,6 +2882,22 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
     return this._tier;
+  }
+
+  // time_zone - computed: false, optional: true, required: false
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone;
   }
 
   // user_labels - computed: true, optional: true, required: false
@@ -3192,7 +3221,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

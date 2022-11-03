@@ -46,7 +46,7 @@ export class DataGoogleCloudRunLocations extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_run_locations',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

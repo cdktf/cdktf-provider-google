@@ -14,10 +14,15 @@ export interface PrivatecaCertificateAuthorityConfig extends cdktf.TerraformMeta
   */
   readonly certificateAuthorityId: string;
   /**
+  * Whether or not to allow Terraform to destroy the CertificateAuthority. Unless this field is set to false
+in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the instance will fail.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#deletion_protection PrivatecaCertificateAuthority#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
+  * Desired state of the CertificateAuthority. Set this field to 'STAGED' to create a 'STAGED' root CA.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#desired_state PrivatecaCertificateAuthority#desired_state}
   */
   readonly desiredState?: string;
@@ -85,6 +90,15 @@ running 'gcloud privateca locations list'.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#project PrivatecaCertificateAuthority#project}
   */
   readonly project?: string;
+  /**
+  * If this flag is set, the Certificate Authority will be deleted as soon as
+possible without a 30-day grace period where undeletion would have been
+allowed. If you proceed, there will be no way to recover this CA.
+Use with care. Defaults to 'false'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_certificate_authority#skip_grace_period PrivatecaCertificateAuthority#skip_grace_period}
+  */
+  readonly skipGracePeriod?: boolean | cdktf.IResolvable;
   /**
   * The Type of this CertificateAuthority.
 
@@ -2577,7 +2591,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2600,6 +2614,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     this._pemCaCertificate = config.pemCaCertificate;
     this._pool = config.pool;
     this._project = config.project;
+    this._skipGracePeriod = config.skipGracePeriod;
     this._type = config.type;
     this._config.internalValue = config.config;
     this._keySpec.internalValue = config.keySpec;
@@ -2815,6 +2830,22 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // skip_grace_period - computed: false, optional: true, required: false
+  private _skipGracePeriod?: boolean | cdktf.IResolvable; 
+  public get skipGracePeriod() {
+    return this.getBooleanAttribute('skip_grace_period');
+  }
+  public set skipGracePeriod(value: boolean | cdktf.IResolvable) {
+    this._skipGracePeriod = value;
+  }
+  public resetSkipGracePeriod() {
+    this._skipGracePeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipGracePeriodInput() {
+    return this._skipGracePeriod;
+  }
+
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
@@ -2917,6 +2948,7 @@ export class PrivatecaCertificateAuthority extends cdktf.TerraformResource {
       pem_ca_certificate: cdktf.stringToTerraform(this._pemCaCertificate),
       pool: cdktf.stringToTerraform(this._pool),
       project: cdktf.stringToTerraform(this._project),
+      skip_grace_period: cdktf.booleanToTerraform(this._skipGracePeriod),
       type: cdktf.stringToTerraform(this._type),
       config: privatecaCertificateAuthorityConfigAToTerraform(this._config.internalValue),
       key_spec: privatecaCertificateAuthorityKeySpecToTerraform(this._keySpec.internalValue),

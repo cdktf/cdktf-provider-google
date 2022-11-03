@@ -21,11 +21,29 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   */
   readonly ipCidrRange?: string;
   /**
+  * Machine type of VM Instance underlying connector. Default is e2-micro
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#machine_type VpcAccessConnector#machine_type}
+  */
+  readonly machineType?: string;
+  /**
+  * Maximum value of instances in autoscaling group underlying the connector.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#max_instances VpcAccessConnector#max_instances}
+  */
+  readonly maxInstances?: number;
+  /**
   * Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 300.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#max_throughput VpcAccessConnector#max_throughput}
   */
   readonly maxThroughput?: number;
+  /**
+  * Minimum value of instances in autoscaling group underlying the connector.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#min_instances VpcAccessConnector#min_instances}
+  */
+  readonly minInstances?: number;
   /**
   * Minimum throughput of the connector in Mbps. Default and min is 200.
   * 
@@ -55,11 +73,114 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   */
   readonly region?: string;
   /**
+  * subnet block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#subnet VpcAccessConnector#subnet}
+  */
+  readonly subnet?: VpcAccessConnectorSubnet;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#timeouts VpcAccessConnector#timeouts}
   */
   readonly timeouts?: VpcAccessConnectorTimeouts;
+}
+export interface VpcAccessConnectorSubnet {
+  /**
+  * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
+https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#name VpcAccessConnector#name}
+  */
+  readonly name?: string;
+  /**
+  * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vpc_access_connector#project_id VpcAccessConnector#project_id}
+  */
+  readonly projectId?: string;
+}
+
+export function vpcAccessConnectorSubnetToTerraform(struct?: VpcAccessConnectorSubnetOutputReference | VpcAccessConnectorSubnet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+  }
+}
+
+export class VpcAccessConnectorSubnetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VpcAccessConnectorSubnet | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpcAccessConnectorSubnet | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._projectId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._projectId = value.projectId;
+    }
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // project_id - computed: true, optional: true, required: false
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  public resetProjectId() {
+    this._projectId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
 }
 export interface VpcAccessConnectorTimeouts {
   /**
@@ -190,7 +311,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -203,12 +324,16 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     });
     this._id = config.id;
     this._ipCidrRange = config.ipCidrRange;
+    this._machineType = config.machineType;
+    this._maxInstances = config.maxInstances;
     this._maxThroughput = config.maxThroughput;
+    this._minInstances = config.minInstances;
     this._minThroughput = config.minThroughput;
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
     this._region = config.region;
+    this._subnet.internalValue = config.subnet;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -248,6 +373,38 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return this._ipCidrRange;
   }
 
+  // machine_type - computed: false, optional: true, required: false
+  private _machineType?: string; 
+  public get machineType() {
+    return this.getStringAttribute('machine_type');
+  }
+  public set machineType(value: string) {
+    this._machineType = value;
+  }
+  public resetMachineType() {
+    this._machineType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineTypeInput() {
+    return this._machineType;
+  }
+
+  // max_instances - computed: true, optional: true, required: false
+  private _maxInstances?: number; 
+  public get maxInstances() {
+    return this.getNumberAttribute('max_instances');
+  }
+  public set maxInstances(value: number) {
+    this._maxInstances = value;
+  }
+  public resetMaxInstances() {
+    this._maxInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInstancesInput() {
+    return this._maxInstances;
+  }
+
   // max_throughput - computed: false, optional: true, required: false
   private _maxThroughput?: number; 
   public get maxThroughput() {
@@ -262,6 +419,22 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
     return this._maxThroughput;
+  }
+
+  // min_instances - computed: true, optional: true, required: false
+  private _minInstances?: number; 
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
+  }
+  public set minInstances(value: number) {
+    this._minInstances = value;
+  }
+  public resetMinInstances() {
+    this._minInstances = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstancesInput() {
+    return this._minInstances;
   }
 
   // min_throughput - computed: false, optional: true, required: false
@@ -351,6 +524,22 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return this.getStringAttribute('state');
   }
 
+  // subnet - computed: false, optional: true, required: false
+  private _subnet = new VpcAccessConnectorSubnetOutputReference(this, "subnet");
+  public get subnet() {
+    return this._subnet;
+  }
+  public putSubnet(value: VpcAccessConnectorSubnet) {
+    this._subnet.internalValue = value;
+  }
+  public resetSubnet() {
+    this._subnet.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetInput() {
+    return this._subnet.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VpcAccessConnectorTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -375,12 +564,16 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
     return {
       id: cdktf.stringToTerraform(this._id),
       ip_cidr_range: cdktf.stringToTerraform(this._ipCidrRange),
+      machine_type: cdktf.stringToTerraform(this._machineType),
+      max_instances: cdktf.numberToTerraform(this._maxInstances),
       max_throughput: cdktf.numberToTerraform(this._maxThroughput),
+      min_instances: cdktf.numberToTerraform(this._minInstances),
       min_throughput: cdktf.numberToTerraform(this._minThroughput),
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
+      subnet: vpcAccessConnectorSubnetToTerraform(this._subnet.internalValue),
       timeouts: vpcAccessConnectorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

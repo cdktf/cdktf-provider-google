@@ -780,7 +780,7 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -882,6 +882,11 @@ export class DataGoogleStorageBucket extends cdktf.TerraformDataSource {
   // project - computed: true, optional: false, required: false
   public get project() {
     return this.getStringAttribute('project');
+  }
+
+  // public_access_prevention - computed: true, optional: false, required: false
+  public get publicAccessPrevention() {
+    return this.getStringAttribute('public_access_prevention');
   }
 
   // requester_pays - computed: true, optional: false, required: false

@@ -42,7 +42,7 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_client_openid_userinfo',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

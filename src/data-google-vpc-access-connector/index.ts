@@ -31,6 +31,75 @@ export interface DataGoogleVpcAccessConnectorConfig extends cdktf.TerraformMetaA
   */
   readonly region?: string;
 }
+export interface DataGoogleVpcAccessConnectorSubnet {
+}
+
+export function dataGoogleVpcAccessConnectorSubnetToTerraform(struct?: DataGoogleVpcAccessConnectorSubnet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleVpcAccessConnectorSubnetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleVpcAccessConnectorSubnet | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleVpcAccessConnectorSubnet | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // project_id - computed: true, optional: false, required: false
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+}
+
+export class DataGoogleVpcAccessConnectorSubnetList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleVpcAccessConnectorSubnetOutputReference {
+    return new DataGoogleVpcAccessConnectorSubnetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector google_vpc_access_connector}
@@ -58,7 +127,7 @@ export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -100,9 +169,24 @@ export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
     return this.getStringAttribute('ip_cidr_range');
   }
 
+  // machine_type - computed: true, optional: false, required: false
+  public get machineType() {
+    return this.getStringAttribute('machine_type');
+  }
+
+  // max_instances - computed: true, optional: false, required: false
+  public get maxInstances() {
+    return this.getNumberAttribute('max_instances');
+  }
+
   // max_throughput - computed: true, optional: false, required: false
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
+  }
+
+  // min_instances - computed: true, optional: false, required: false
+  public get minInstances() {
+    return this.getNumberAttribute('min_instances');
   }
 
   // min_throughput - computed: true, optional: false, required: false
@@ -168,6 +252,12 @@ export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
+  }
+
+  // subnet - computed: true, optional: false, required: false
+  private _subnet = new DataGoogleVpcAccessConnectorSubnetList(this, "subnet", false);
+  public get subnet() {
+    return this._subnet;
   }
 
   // =========

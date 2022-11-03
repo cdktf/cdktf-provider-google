@@ -51,6 +51,12 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   */
   readonly project?: string;
   /**
+  * Prevents public access to a bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
+  */
+  readonly publicAccessPrevention?: string;
+  /**
   * Enables Requester Pays on a storage bucket.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#requester_pays StorageBucket#requester_pays}
@@ -1512,7 +1518,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1530,6 +1536,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
+    this._publicAccessPrevention = config.publicAccessPrevention;
     this._requesterPays = config.requesterPays;
     this._storageClass = config.storageClass;
     this._uniformBucketLevelAccess = config.uniformBucketLevelAccess;
@@ -1652,6 +1659,22 @@ export class StorageBucket extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // public_access_prevention - computed: true, optional: true, required: false
+  private _publicAccessPrevention?: string; 
+  public get publicAccessPrevention() {
+    return this.getStringAttribute('public_access_prevention');
+  }
+  public set publicAccessPrevention(value: string) {
+    this._publicAccessPrevention = value;
+  }
+  public resetPublicAccessPrevention() {
+    this._publicAccessPrevention = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicAccessPreventionInput() {
+    return this._publicAccessPrevention;
   }
 
   // requester_pays - computed: false, optional: true, required: false
@@ -1869,6 +1892,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      public_access_prevention: cdktf.stringToTerraform(this._publicAccessPrevention),
       requester_pays: cdktf.booleanToTerraform(this._requesterPays),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),

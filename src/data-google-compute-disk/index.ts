@@ -301,7 +301,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_disk',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.41.0',
+        providerVersion: '4.42.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -432,6 +432,16 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
   // snapshot - computed: true, optional: false, required: false
   public get snapshot() {
     return this.getStringAttribute('snapshot');
+  }
+
+  // source_disk - computed: true, optional: false, required: false
+  public get sourceDisk() {
+    return this.getStringAttribute('source_disk');
+  }
+
+  // source_disk_id - computed: true, optional: false, required: false
+  public get sourceDiskId() {
+    return this.getStringAttribute('source_disk_id');
   }
 
   // source_image_encryption_key - computed: true, optional: false, required: false
