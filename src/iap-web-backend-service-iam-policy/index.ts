@@ -54,7 +54,7 @@ export class IapWebBackendServiceIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_web_backend_service_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.42.1',
+        providerVersion: '4.43.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

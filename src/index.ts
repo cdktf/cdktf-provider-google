@@ -378,6 +378,7 @@ export * as kmsCryptoKey from './kms-crypto-key';
 export * as kmsCryptoKeyIamBinding from './kms-crypto-key-iam-binding';
 export * as kmsCryptoKeyIamMember from './kms-crypto-key-iam-member';
 export * as kmsCryptoKeyIamPolicy from './kms-crypto-key-iam-policy';
+export * as kmsCryptoKeyVersion from './kms-crypto-key-version';
 export * as kmsKeyRing from './kms-key-ring';
 export * as kmsKeyRingIamBinding from './kms-key-ring-iam-binding';
 export * as kmsKeyRingIamMember from './kms-key-ring-iam-member';
