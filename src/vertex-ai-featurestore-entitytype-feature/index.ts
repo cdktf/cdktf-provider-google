@@ -207,7 +207,7 @@ export class VertexAiFeaturestoreEntitytypeFeature extends cdktf.TerraformResour
       terraformResourceType: 'google_vertex_ai_featurestore_entitytype_feature',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.42.1',
+        providerVersion: '4.43.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
