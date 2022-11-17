@@ -43,7 +43,7 @@ export class DataGoogleTagsTagValue extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_tags_tag_value',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.43.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
