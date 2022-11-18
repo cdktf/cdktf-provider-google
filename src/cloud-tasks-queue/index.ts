@@ -731,7 +731,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_tasks_queue',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.43.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
