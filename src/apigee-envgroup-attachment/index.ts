@@ -163,7 +163,7 @@ export class ApigeeEnvgroupAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_envgroup_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

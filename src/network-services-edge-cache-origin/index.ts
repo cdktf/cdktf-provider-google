@@ -115,6 +115,12 @@ Valid values are:
   */
   readonly retryConditions?: string[];
   /**
+  * aws_v4_authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#aws_v4_authentication NetworkServicesEdgeCacheOrigin#aws_v4_authentication}
+  */
+  readonly awsV4Authentication?: NetworkServicesEdgeCacheOriginAwsV4Authentication;
+  /**
   * timeout block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#timeout NetworkServicesEdgeCacheOrigin#timeout}
@@ -126,6 +132,124 @@ Valid values are:
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#timeouts NetworkServicesEdgeCacheOrigin#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheOriginTimeouts;
+}
+export interface NetworkServicesEdgeCacheOriginAwsV4Authentication {
+  /**
+  * The access key ID your origin uses to identify the key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#access_key_id NetworkServicesEdgeCacheOrigin#access_key_id}
+  */
+  readonly accessKeyId: string;
+  /**
+  * The name of the AWS region that your origin is in.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#origin_region NetworkServicesEdgeCacheOrigin#origin_region}
+  */
+  readonly originRegion: string;
+  /**
+  * The Secret Manager secret version of the secret access key used by your origin.
+
+This is the resource name of the secret version in the format 'projects/*\/secrets/*\/versions/*' where the '*' values are replaced by the project, secret, and version you require.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#secret_access_key_version NetworkServicesEdgeCacheOrigin#secret_access_key_version}
+  */
+  readonly secretAccessKeyVersion: string;
+}
+
+export function networkServicesEdgeCacheOriginAwsV4AuthenticationToTerraform(struct?: NetworkServicesEdgeCacheOriginAwsV4AuthenticationOutputReference | NetworkServicesEdgeCacheOriginAwsV4Authentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_key_id: cdktf.stringToTerraform(struct!.accessKeyId),
+    origin_region: cdktf.stringToTerraform(struct!.originRegion),
+    secret_access_key_version: cdktf.stringToTerraform(struct!.secretAccessKeyVersion),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginAwsV4AuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginAwsV4Authentication | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessKeyId = this._accessKeyId;
+    }
+    if (this._originRegion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.originRegion = this._originRegion;
+    }
+    if (this._secretAccessKeyVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretAccessKeyVersion = this._secretAccessKeyVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginAwsV4Authentication | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accessKeyId = undefined;
+      this._originRegion = undefined;
+      this._secretAccessKeyVersion = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accessKeyId = value.accessKeyId;
+      this._originRegion = value.originRegion;
+      this._secretAccessKeyVersion = value.secretAccessKeyVersion;
+    }
+  }
+
+  // access_key_id - computed: false, optional: false, required: true
+  private _accessKeyId?: string; 
+  public get accessKeyId() {
+    return this.getStringAttribute('access_key_id');
+  }
+  public set accessKeyId(value: string) {
+    this._accessKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessKeyIdInput() {
+    return this._accessKeyId;
+  }
+
+  // origin_region - computed: false, optional: false, required: true
+  private _originRegion?: string; 
+  public get originRegion() {
+    return this.getStringAttribute('origin_region');
+  }
+  public set originRegion(value: string) {
+    this._originRegion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originRegionInput() {
+    return this._originRegion;
+  }
+
+  // secret_access_key_version - computed: false, optional: false, required: true
+  private _secretAccessKeyVersion?: string; 
+  public get secretAccessKeyVersion() {
+    return this.getStringAttribute('secret_access_key_version');
+  }
+  public set secretAccessKeyVersion(value: string) {
+    this._secretAccessKeyVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretAccessKeyVersionInput() {
+    return this._secretAccessKeyVersion;
+  }
 }
 export interface NetworkServicesEdgeCacheOriginTimeout {
   /**
@@ -459,7 +583,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_origin',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -481,6 +605,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     this._project = config.project;
     this._protocol = config.protocol;
     this._retryConditions = config.retryConditions;
+    this._awsV4Authentication.internalValue = config.awsV4Authentication;
     this._timeout.internalValue = config.timeout;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -659,6 +784,22 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     return this._retryConditions;
   }
 
+  // aws_v4_authentication - computed: false, optional: true, required: false
+  private _awsV4Authentication = new NetworkServicesEdgeCacheOriginAwsV4AuthenticationOutputReference(this, "aws_v4_authentication");
+  public get awsV4Authentication() {
+    return this._awsV4Authentication;
+  }
+  public putAwsV4Authentication(value: NetworkServicesEdgeCacheOriginAwsV4Authentication) {
+    this._awsV4Authentication.internalValue = value;
+  }
+  public resetAwsV4Authentication() {
+    this._awsV4Authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get awsV4AuthenticationInput() {
+    return this._awsV4Authentication.internalValue;
+  }
+
   // timeout - computed: false, optional: true, required: false
   private _timeout = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this, "timeout");
   public get timeout() {
@@ -708,6 +849,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       protocol: cdktf.stringToTerraform(this._protocol),
       retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._retryConditions),
+      aws_v4_authentication: networkServicesEdgeCacheOriginAwsV4AuthenticationToTerraform(this._awsV4Authentication.internalValue),
       timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout.internalValue),
       timeouts: networkServicesEdgeCacheOriginTimeoutsToTerraform(this._timeouts.internalValue),
     };

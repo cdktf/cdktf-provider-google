@@ -1668,6 +1668,225 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule
     return new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures {
+  /**
+  * The actions to take to add signatures to responses. Possible values: ["GENERATE_COOKIE", "GENERATE_TOKEN_HLS_COOKIELESS", "PROPAGATE_TOKEN_HLS_COOKIELESS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#actions NetworkServicesEdgeCacheService#actions}
+  */
+  readonly actions: string[];
+  /**
+  * The parameters to copy from the verified token to the generated token.
+
+Only the following parameters may be copied:
+
+  * 'PathGlobs'
+  * 'paths'
+  * 'acl'
+  * 'URLPrefix'
+  * 'IPRanges'
+  * 'SessionID'
+  * 'id'
+  * 'Data'
+  * 'data'
+  * 'payload'
+  * 'Headers'
+
+You may specify up to 6 parameters to copy.  A given parameter is be copied only if the parameter exists in the verified token.  Parameter names are matched exactly as specified.  The order of the parameters does not matter.  Duplicates are not allowed.
+
+This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#copied_parameters NetworkServicesEdgeCacheService#copied_parameters}
+  */
+  readonly copiedParameters?: string[];
+  /**
+  * The keyset to use for signature generation.
+
+The following are both valid paths to an EdgeCacheKeyset resource:
+
+  * 'projects/project/locations/global/edgeCacheKeysets/yourKeyset'
+  * 'yourKeyset'
+
+This must be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.  This field may not be specified otherwise.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#keyset NetworkServicesEdgeCacheService#keyset}
+  */
+  readonly keyset?: string;
+  /**
+  * The query parameter in which to put the generated token.
+
+If not specified, defaults to 'edge-cache-token'.
+
+If specified, the name must be 1-64 characters long and match the regular expression '[a-zA-Z]([a-zA-Z0-9_-])*' which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+
+This field may only be set when the GENERATE_TOKEN_HLS_COOKIELESS or PROPAGATE_TOKEN_HLS_COOKIELESS actions are specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#token_query_parameter NetworkServicesEdgeCacheService#token_query_parameter}
+  */
+  readonly tokenQueryParameter?: string;
+  /**
+  * The duration the token is valid starting from the moment the token is first generated.
+
+Defaults to '86400s' (1 day).
+
+The TTL must be >= 0 and <= 604,800 seconds (1 week).
+
+This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.
+
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#token_ttl NetworkServicesEdgeCacheService#token_ttl}
+  */
+  readonly tokenTtl?: string;
+}
+
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.actions),
+    copied_parameters: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.copiedParameters),
+    keyset: cdktf.stringToTerraform(struct!.keyset),
+    token_query_parameter: cdktf.stringToTerraform(struct!.tokenQueryParameter),
+    token_ttl: cdktf.stringToTerraform(struct!.tokenTtl),
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._actions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.actions = this._actions;
+    }
+    if (this._copiedParameters !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.copiedParameters = this._copiedParameters;
+    }
+    if (this._keyset !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyset = this._keyset;
+    }
+    if (this._tokenQueryParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenQueryParameter = this._tokenQueryParameter;
+    }
+    if (this._tokenTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenTtl = this._tokenTtl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._actions = undefined;
+      this._copiedParameters = undefined;
+      this._keyset = undefined;
+      this._tokenQueryParameter = undefined;
+      this._tokenTtl = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._actions = value.actions;
+      this._copiedParameters = value.copiedParameters;
+      this._keyset = value.keyset;
+      this._tokenQueryParameter = value.tokenQueryParameter;
+      this._tokenTtl = value.tokenTtl;
+    }
+  }
+
+  // actions - computed: false, optional: false, required: true
+  private _actions?: string[]; 
+  public get actions() {
+    return this.getListAttribute('actions');
+  }
+  public set actions(value: string[]) {
+    this._actions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions;
+  }
+
+  // copied_parameters - computed: false, optional: true, required: false
+  private _copiedParameters?: string[]; 
+  public get copiedParameters() {
+    return this.getListAttribute('copied_parameters');
+  }
+  public set copiedParameters(value: string[]) {
+    this._copiedParameters = value;
+  }
+  public resetCopiedParameters() {
+    this._copiedParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copiedParametersInput() {
+    return this._copiedParameters;
+  }
+
+  // keyset - computed: false, optional: true, required: false
+  private _keyset?: string; 
+  public get keyset() {
+    return this.getStringAttribute('keyset');
+  }
+  public set keyset(value: string) {
+    this._keyset = value;
+  }
+  public resetKeyset() {
+    this._keyset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keysetInput() {
+    return this._keyset;
+  }
+
+  // token_query_parameter - computed: false, optional: true, required: false
+  private _tokenQueryParameter?: string; 
+  public get tokenQueryParameter() {
+    return this.getStringAttribute('token_query_parameter');
+  }
+  public set tokenQueryParameter(value: string) {
+    this._tokenQueryParameter = value;
+  }
+  public resetTokenQueryParameter() {
+    this._tokenQueryParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenQueryParameterInput() {
+    return this._tokenQueryParameter;
+  }
+
+  // token_ttl - computed: false, optional: true, required: false
+  private _tokenTtl?: string; 
+  public get tokenTtl() {
+    return this.getStringAttribute('token_ttl');
+  }
+  public set tokenTtl(value: string) {
+    this._tokenTtl = value;
+  }
+  public resetTokenTtl() {
+    this._tokenTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenTtlInput() {
+    return this._tokenTtl;
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
   /**
   * If true, requests to different hosts will be cached separately.
@@ -1936,6 +2155,110 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     return this._includedQueryParameters;
   }
 }
+export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions {
+  /**
+  * The allowed signature algorithms to use.
+
+Defaults to using only ED25519.
+
+You may specify up to 3 signature algorithms to use. Possible values: ["ED25519", "HMAC_SHA_256", "HMAC_SHA1"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#allowed_signature_algorithms NetworkServicesEdgeCacheService#allowed_signature_algorithms}
+  */
+  readonly allowedSignatureAlgorithms?: string[];
+  /**
+  * The query parameter in which to find the token.
+
+The name must be 1-64 characters long and match the regular expression '[a-zA-Z]([a-zA-Z0-9_-])*' which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
+
+Defaults to 'edge-cache-token'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#token_query_parameter NetworkServicesEdgeCacheService#token_query_parameter}
+  */
+  readonly tokenQueryParameter?: string;
+}
+
+export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    allowed_signature_algorithms: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedSignatureAlgorithms),
+    token_query_parameter: cdktf.stringToTerraform(struct!.tokenQueryParameter),
+  }
+}
+
+export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._allowedSignatureAlgorithms !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.allowedSignatureAlgorithms = this._allowedSignatureAlgorithms;
+    }
+    if (this._tokenQueryParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tokenQueryParameter = this._tokenQueryParameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._allowedSignatureAlgorithms = undefined;
+      this._tokenQueryParameter = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._allowedSignatureAlgorithms = value.allowedSignatureAlgorithms;
+      this._tokenQueryParameter = value.tokenQueryParameter;
+    }
+  }
+
+  // allowed_signature_algorithms - computed: false, optional: true, required: false
+  private _allowedSignatureAlgorithms?: string[]; 
+  public get allowedSignatureAlgorithms() {
+    return this.getListAttribute('allowed_signature_algorithms');
+  }
+  public set allowedSignatureAlgorithms(value: string[]) {
+    this._allowedSignatureAlgorithms = value;
+  }
+  public resetAllowedSignatureAlgorithms() {
+    this._allowedSignatureAlgorithms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedSignatureAlgorithmsInput() {
+    return this._allowedSignatureAlgorithms;
+  }
+
+  // token_query_parameter - computed: false, optional: true, required: false
+  private _tokenQueryParameter?: string; 
+  public get tokenQueryParameter() {
+    return this.getStringAttribute('token_query_parameter');
+  }
+  public set tokenQueryParameter(value: string) {
+    this._tokenQueryParameter = value;
+  }
+  public resetTokenQueryParameter() {
+    this._tokenQueryParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenQueryParameterInput() {
+    return this._tokenQueryParameter;
+  }
+}
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
   /**
   * Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
@@ -2031,21 +2354,46 @@ Note that when specifying an explicit negativeCachingPolicy, you should take car
   */
   readonly signedRequestKeyset?: string;
   /**
+  * Limit how far into the future the expiration time of a signed request may be.
+
+When set, a signed request is rejected if its expiration time is later than now + signedRequestMaximumExpirationTtl, where now is the time at which the signed request is first handled by the CDN.
+
+- The TTL must be > 0.
+- Fractions of a second are not allowed.
+
+By default, signedRequestMaximumExpirationTtl is not set and the expiration time of a signed request may be arbitrarily far into future.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#signed_request_maximum_expiration_ttl NetworkServicesEdgeCacheService#signed_request_maximum_expiration_ttl}
+  */
+  readonly signedRequestMaximumExpirationTtl?: string;
+  /**
   * Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
 
 You must also set a signedRequestKeyset to enable signed requests.
 
-When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged. Possible values: ["DISABLED", "REQUIRE_SIGNATURES"]
+When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged. Possible values: ["DISABLED", "REQUIRE_SIGNATURES", "REQUIRE_TOKENS"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#signed_request_mode NetworkServicesEdgeCacheService#signed_request_mode}
   */
   readonly signedRequestMode?: string;
+  /**
+  * add_signatures block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#add_signatures NetworkServicesEdgeCacheService#add_signatures}
+  */
+  readonly addSignatures?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures;
   /**
   * cache_key_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#cache_key_policy NetworkServicesEdgeCacheService#cache_key_policy}
   */
   readonly cacheKeyPolicy?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy;
+  /**
+  * signed_token_options block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_service#signed_token_options NetworkServicesEdgeCacheService#signed_token_options}
+  */
+  readonly signedTokenOptions?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions;
 }
 
 export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyToTerraform(struct?: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyOutputReference | NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy): any {
@@ -2061,8 +2409,11 @@ export function networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteA
     negative_caching: cdktf.booleanToTerraform(struct!.negativeCaching),
     negative_caching_policy: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.negativeCachingPolicy),
     signed_request_keyset: cdktf.stringToTerraform(struct!.signedRequestKeyset),
+    signed_request_maximum_expiration_ttl: cdktf.stringToTerraform(struct!.signedRequestMaximumExpirationTtl),
     signed_request_mode: cdktf.stringToTerraform(struct!.signedRequestMode),
+    add_signatures: networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesToTerraform(struct!.addSignatures),
     cache_key_policy: networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyToTerraform(struct!.cacheKeyPolicy),
+    signed_token_options: networkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsToTerraform(struct!.signedTokenOptions),
   }
 }
 
@@ -2108,13 +2459,25 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       hasAnyValues = true;
       internalValueResult.signedRequestKeyset = this._signedRequestKeyset;
     }
+    if (this._signedRequestMaximumExpirationTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signedRequestMaximumExpirationTtl = this._signedRequestMaximumExpirationTtl;
+    }
     if (this._signedRequestMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.signedRequestMode = this._signedRequestMode;
     }
+    if (this._addSignatures?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addSignatures = this._addSignatures?.internalValue;
+    }
     if (this._cacheKeyPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheKeyPolicy = this._cacheKeyPolicy?.internalValue;
+    }
+    if (this._signedTokenOptions?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signedTokenOptions = this._signedTokenOptions?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -2129,8 +2492,11 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._negativeCaching = undefined;
       this._negativeCachingPolicy = undefined;
       this._signedRequestKeyset = undefined;
+      this._signedRequestMaximumExpirationTtl = undefined;
       this._signedRequestMode = undefined;
+      this._addSignatures.internalValue = undefined;
       this._cacheKeyPolicy.internalValue = undefined;
+      this._signedTokenOptions.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -2141,8 +2507,11 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
       this._negativeCaching = value.negativeCaching;
       this._negativeCachingPolicy = value.negativeCachingPolicy;
       this._signedRequestKeyset = value.signedRequestKeyset;
+      this._signedRequestMaximumExpirationTtl = value.signedRequestMaximumExpirationTtl;
       this._signedRequestMode = value.signedRequestMode;
+      this._addSignatures.internalValue = value.addSignatures;
       this._cacheKeyPolicy.internalValue = value.cacheKeyPolicy;
+      this._signedTokenOptions.internalValue = value.signedTokenOptions;
     }
   }
 
@@ -2258,6 +2627,22 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     return this._signedRequestKeyset;
   }
 
+  // signed_request_maximum_expiration_ttl - computed: false, optional: true, required: false
+  private _signedRequestMaximumExpirationTtl?: string; 
+  public get signedRequestMaximumExpirationTtl() {
+    return this.getStringAttribute('signed_request_maximum_expiration_ttl');
+  }
+  public set signedRequestMaximumExpirationTtl(value: string) {
+    this._signedRequestMaximumExpirationTtl = value;
+  }
+  public resetSignedRequestMaximumExpirationTtl() {
+    this._signedRequestMaximumExpirationTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedRequestMaximumExpirationTtlInput() {
+    return this._signedRequestMaximumExpirationTtl;
+  }
+
   // signed_request_mode - computed: true, optional: true, required: false
   private _signedRequestMode?: string; 
   public get signedRequestMode() {
@@ -2274,6 +2659,22 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
     return this._signedRequestMode;
   }
 
+  // add_signatures - computed: false, optional: true, required: false
+  private _addSignatures = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignaturesOutputReference(this, "add_signatures");
+  public get addSignatures() {
+    return this._addSignatures;
+  }
+  public putAddSignatures(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures) {
+    this._addSignatures.internalValue = value;
+  }
+  public resetAddSignatures() {
+    this._addSignatures.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addSignaturesInput() {
+    return this._addSignatures.internalValue;
+  }
+
   // cache_key_policy - computed: false, optional: true, required: false
   private _cacheKeyPolicy = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyOutputReference(this, "cache_key_policy");
   public get cacheKeyPolicy() {
@@ -2288,6 +2689,22 @@ export class NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActi
   // Temporarily expose input value. Use with caution.
   public get cacheKeyPolicyInput() {
     return this._cacheKeyPolicy.internalValue;
+  }
+
+  // signed_token_options - computed: false, optional: true, required: false
+  private _signedTokenOptions = new NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptionsOutputReference(this, "signed_token_options");
+  public get signedTokenOptions() {
+    return this._signedTokenOptions;
+  }
+  public putSignedTokenOptions(value: NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions) {
+    this._signedTokenOptions.internalValue = value;
+  }
+  public resetSignedTokenOptions() {
+    this._signedTokenOptions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedTokenOptionsInput() {
+    return this._signedTokenOptions.internalValue;
   }
 }
 export interface NetworkServicesEdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
@@ -3700,7 +4117,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

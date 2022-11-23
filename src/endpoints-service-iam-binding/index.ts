@@ -173,7 +173,7 @@ export class EndpointsServiceIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_endpoints_service_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -173,7 +173,7 @@ export class HealthcareDatasetIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dataset_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -184,7 +184,7 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_ids_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -230,14 +230,14 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
     return this._description;
   }
 
-  // endpoint - computed: true, optional: false, required: false
-  public get endpoint() {
-    return this.getStringAttribute('endpoint');
-  }
-
   // endpoint_forwarding_rule - computed: true, optional: false, required: false
   public get endpointForwardingRule() {
     return this.getStringAttribute('endpoint_forwarding_rule');
+  }
+
+  // endpoint_ip - computed: true, optional: false, required: false
+  public get endpointIp() {
+    return this.getStringAttribute('endpoint_ip');
   }
 
   // id - computed: true, optional: true, required: false

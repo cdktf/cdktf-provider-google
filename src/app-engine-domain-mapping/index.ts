@@ -378,7 +378,7 @@ export class AppEngineDomainMapping extends cdktf.TerraformResource {
       terraformResourceType: 'google_app_engine_domain_mapping',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
