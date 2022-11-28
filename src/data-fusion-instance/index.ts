@@ -20,6 +20,12 @@ export interface DataFusionInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Option to enable granular role-based access control.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#enable_rbac DataFusionInstance#enable_rbac}
+  */
+  readonly enableRbac?: boolean | cdktf.IResolvable;
+  /**
   * Option to enable Stackdriver Logging.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#enable_stackdriver_logging DataFusionInstance#enable_stackdriver_logging}
@@ -428,7 +434,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_fusion_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -441,6 +447,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     });
     this._dataprocServiceAccount = config.dataprocServiceAccount;
     this._description = config.description;
+    this._enableRbac = config.enableRbac;
     this._enableStackdriverLogging = config.enableStackdriverLogging;
     this._enableStackdriverMonitoring = config.enableStackdriverMonitoring;
     this._id = config.id;
@@ -496,6 +503,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // enable_rbac - computed: false, optional: true, required: false
+  private _enableRbac?: boolean | cdktf.IResolvable; 
+  public get enableRbac() {
+    return this.getBooleanAttribute('enable_rbac');
+  }
+  public set enableRbac(value: boolean | cdktf.IResolvable) {
+    this._enableRbac = value;
+  }
+  public resetEnableRbac() {
+    this._enableRbac = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableRbacInput() {
+    return this._enableRbac;
   }
 
   // enable_stackdriver_logging - computed: false, optional: true, required: false
@@ -754,6 +777,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return {
       dataproc_service_account: cdktf.stringToTerraform(this._dataprocServiceAccount),
       description: cdktf.stringToTerraform(this._description),
+      enable_rbac: cdktf.booleanToTerraform(this._enableRbac),
       enable_stackdriver_logging: cdktf.booleanToTerraform(this._enableStackdriverLogging),
       enable_stackdriver_monitoring: cdktf.booleanToTerraform(this._enableStackdriverMonitoring),
       id: cdktf.stringToTerraform(this._id),

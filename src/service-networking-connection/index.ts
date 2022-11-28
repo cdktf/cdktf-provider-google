@@ -195,7 +195,7 @@ export class ServiceNetworkingConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_service_networking_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -56,6 +56,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableKubernetesAlpha?: boolean | cdktf.IResolvable;
   /**
+  * Whether L4ILB Subsetting is enabled for this cluster.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_l4_ilb_subsetting ContainerCluster#enable_l4_ilb_subsetting}
+  */
+  readonly enableL4IlbSubsetting?: boolean | cdktf.IResolvable;
+  /**
   * Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_legacy_abac ContainerCluster#enable_legacy_abac}
@@ -284,6 +290,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#node_pool ContainerCluster#node_pool}
   */
   readonly nodePool?: ContainerClusterNodePool[] | cdktf.IResolvable;
+  /**
+  * node_pool_defaults block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#node_pool_defaults ContainerCluster#node_pool_defaults}
+  */
+  readonly nodePoolDefaults?: ContainerClusterNodePoolDefaults;
   /**
   * notification_config block
   * 
@@ -1195,6 +1207,273 @@ export class ContainerClusterBinaryAuthorizationOutputReference extends cdktf.Co
     return this._evaluationMode;
   }
 }
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions {
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // auto_upgrade_start_time - computed: true, optional: false, required: false
+  public get autoUpgradeStartTime() {
+    return this.getStringAttribute('auto_upgrade_start_time');
+  }
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference {
+    return new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement {
+  /**
+  * Specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#auto_repair ContainerCluster#auto_repair}
+  */
+  readonly autoRepair?: boolean | cdktf.IResolvable;
+  /**
+  * Specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#auto_upgrade ContainerCluster#auto_upgrade}
+  */
+  readonly autoUpgrade?: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsManagementToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_repair: cdktf.booleanToTerraform(struct!.autoRepair),
+    auto_upgrade: cdktf.booleanToTerraform(struct!.autoUpgrade),
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._autoRepair !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoRepair = this._autoRepair;
+    }
+    if (this._autoUpgrade !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.autoUpgrade = this._autoUpgrade;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._autoRepair = undefined;
+      this._autoUpgrade = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._autoRepair = value.autoRepair;
+      this._autoUpgrade = value.autoUpgrade;
+    }
+  }
+
+  // auto_repair - computed: true, optional: true, required: false
+  private _autoRepair?: boolean | cdktf.IResolvable; 
+  public get autoRepair() {
+    return this.getBooleanAttribute('auto_repair');
+  }
+  public set autoRepair(value: boolean | cdktf.IResolvable) {
+    this._autoRepair = value;
+  }
+  public resetAutoRepair() {
+    this._autoRepair = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoRepairInput() {
+    return this._autoRepair;
+  }
+
+  // auto_upgrade - computed: true, optional: true, required: false
+  private _autoUpgrade?: boolean | cdktf.IResolvable; 
+  public get autoUpgrade() {
+    return this.getBooleanAttribute('auto_upgrade');
+  }
+  public set autoUpgrade(value: boolean | cdktf.IResolvable) {
+    this._autoUpgrade = value;
+  }
+  public resetAutoUpgrade() {
+    this._autoUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpgradeInput() {
+    return this._autoUpgrade;
+  }
+
+  // upgrade_options - computed: true, optional: false, required: false
+  private _upgradeOptions = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementUpgradeOptionsList(this, "upgrade_options", false);
+  public get upgradeOptions() {
+    return this._upgradeOptions;
+  }
+}
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig {
+  /**
+  * Defines whether the instance has integrity monitoring enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_integrity_monitoring ContainerCluster#enable_integrity_monitoring}
+  */
+  readonly enableIntegrityMonitoring?: boolean | cdktf.IResolvable;
+  /**
+  * Defines whether the instance has Secure Boot enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_secure_boot ContainerCluster#enable_secure_boot}
+  */
+  readonly enableSecureBoot?: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enable_integrity_monitoring: cdktf.booleanToTerraform(struct!.enableIntegrityMonitoring),
+    enable_secure_boot: cdktf.booleanToTerraform(struct!.enableSecureBoot),
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enableIntegrityMonitoring !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableIntegrityMonitoring = this._enableIntegrityMonitoring;
+    }
+    if (this._enableSecureBoot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enableSecureBoot = this._enableSecureBoot;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enableIntegrityMonitoring = undefined;
+      this._enableSecureBoot = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enableIntegrityMonitoring = value.enableIntegrityMonitoring;
+      this._enableSecureBoot = value.enableSecureBoot;
+    }
+  }
+
+  // enable_integrity_monitoring - computed: false, optional: true, required: false
+  private _enableIntegrityMonitoring?: boolean | cdktf.IResolvable; 
+  public get enableIntegrityMonitoring() {
+    return this.getBooleanAttribute('enable_integrity_monitoring');
+  }
+  public set enableIntegrityMonitoring(value: boolean | cdktf.IResolvable) {
+    this._enableIntegrityMonitoring = value;
+  }
+  public resetEnableIntegrityMonitoring() {
+    this._enableIntegrityMonitoring = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableIntegrityMonitoringInput() {
+    return this._enableIntegrityMonitoring;
+  }
+
+  // enable_secure_boot - computed: false, optional: true, required: false
+  private _enableSecureBoot?: boolean | cdktf.IResolvable; 
+  public get enableSecureBoot() {
+    return this.getBooleanAttribute('enable_secure_boot');
+  }
+  public set enableSecureBoot(value: boolean | cdktf.IResolvable) {
+    this._enableSecureBoot = value;
+  }
+  public resetEnableSecureBoot() {
+    this._enableSecureBoot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableSecureBootInput() {
+    return this._enableSecureBoot;
+  }
+}
 export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   /**
   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool.
@@ -1232,6 +1511,18 @@ export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#service_account ContainerCluster#service_account}
   */
   readonly serviceAccount?: string;
+  /**
+  * management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#management ContainerCluster#management}
+  */
+  readonly management?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement;
+  /**
+  * shielded_instance_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#shielded_instance_config ContainerCluster#shielded_instance_config}
+  */
+  readonly shieldedInstanceConfig?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig;
 }
 
 export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaults): any {
@@ -1246,6 +1537,8 @@ export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerr
     image_type: cdktf.stringToTerraform(struct!.imageType),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
+    management: containerClusterClusterAutoscalingAutoProvisioningDefaultsManagementToTerraform(struct!.management),
+    shielded_instance_config: containerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
   }
 }
 
@@ -1287,6 +1580,14 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
     }
+    if (this._management?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.management = this._management?.internalValue;
+    }
+    if (this._shieldedInstanceConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1299,6 +1600,8 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       this._imageType = undefined;
       this._oauthScopes = undefined;
       this._serviceAccount = undefined;
+      this._management.internalValue = undefined;
+      this._shieldedInstanceConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1308,6 +1611,8 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       this._imageType = value.imageType;
       this._oauthScopes = value.oauthScopes;
       this._serviceAccount = value.serviceAccount;
+      this._management.internalValue = value.management;
+      this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
     }
   }
 
@@ -1405,6 +1710,38 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
   // Temporarily expose input value. Use with caution.
   public get serviceAccountInput() {
     return this._serviceAccount;
+  }
+
+  // management - computed: false, optional: true, required: false
+  private _management = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagementOutputReference(this, "management");
+  public get management() {
+    return this._management;
+  }
+  public putManagement(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsManagement) {
+    this._management.internalValue = value;
+  }
+  public resetManagement() {
+    this._management.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementInput() {
+    return this._management.internalValue;
+  }
+
+  // shielded_instance_config - computed: false, optional: true, required: false
+  private _shieldedInstanceConfig = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigOutputReference(this, "shielded_instance_config");
+  public get shieldedInstanceConfig() {
+    return this._shieldedInstanceConfig;
+  }
+  public putShieldedInstanceConfig(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig) {
+    this._shieldedInstanceConfig.internalValue = value;
+  }
+  public resetShieldedInstanceConfig() {
+    this._shieldedInstanceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shieldedInstanceConfigInput() {
+    return this._shieldedInstanceConfig.internalValue;
   }
 }
 export interface ContainerClusterClusterAutoscalingResourceLimits {
@@ -1567,7 +1904,7 @@ export interface ContainerClusterClusterAutoscaling {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
   */
-  readonly enabled: boolean | cdktf.IResolvable;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * auto_provisioning_defaults block
   * 
@@ -1638,13 +1975,16 @@ export class ContainerClusterClusterAutoscalingOutputReference extends cdktf.Com
     }
   }
 
-  // enabled - computed: false, optional: false, required: true
+  // enabled - computed: true, optional: true, required: false
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
@@ -2249,7 +2589,7 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
 }
 export interface ContainerClusterLoggingConfig {
   /**
-  * GKE components exposing logs. Valid values include SYSTEM_COMPONENTS and WORKLOADS.
+  * GKE components exposing logs. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, SCHEDULER, and WORKLOADS.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_components ContainerCluster#enable_components}
   */
@@ -4311,6 +4651,12 @@ export interface ContainerClusterNodeConfig {
   */
   readonly localSsdCount?: number;
   /**
+  * Type of logging agent that is used as the default value for node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#logging_variant ContainerCluster#logging_variant}
+  */
+  readonly loggingVariant?: string;
+  /**
   * The name of a Google Compute Engine machine type.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#machine_type ContainerCluster#machine_type}
@@ -4415,6 +4761,7 @@ export function containerClusterNodeConfigToTerraform(struct?: ContainerClusterN
     image_type: cdktf.stringToTerraform(struct!.imageType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+    logging_variant: cdktf.stringToTerraform(struct!.loggingVariant),
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
@@ -4474,6 +4821,10 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
     if (this._localSsdCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsdCount = this._localSsdCount;
+    }
+    if (this._loggingVariant !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingVariant = this._loggingVariant;
     }
     if (this._machineType !== undefined) {
       hasAnyValues = true;
@@ -4548,6 +4899,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._imageType = undefined;
       this._labels = undefined;
       this._localSsdCount = undefined;
+      this._loggingVariant = undefined;
       this._machineType = undefined;
       this._metadata = undefined;
       this._minCpuPlatform = undefined;
@@ -4573,6 +4925,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._imageType = value.imageType;
       this._labels = value.labels;
       this._localSsdCount = value.localSsdCount;
+      this._loggingVariant = value.loggingVariant;
       this._machineType = value.machineType;
       this._metadata = value.metadata;
       this._minCpuPlatform = value.minCpuPlatform;
@@ -4701,6 +5054,22 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get localSsdCountInput() {
     return this._localSsdCount;
+  }
+
+  // logging_variant - computed: false, optional: true, required: false
+  private _loggingVariant?: string; 
+  public get loggingVariant() {
+    return this.getStringAttribute('logging_variant');
+  }
+  public set loggingVariant(value: string) {
+    this._loggingVariant = value;
+  }
+  public resetLoggingVariant() {
+    this._loggingVariant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingVariantInput() {
+    return this._loggingVariant;
   }
 
   // machine_type - computed: true, optional: true, required: false
@@ -6129,6 +6498,12 @@ export interface ContainerClusterNodePoolNodeConfig {
   */
   readonly localSsdCount?: number;
   /**
+  * Type of logging agent that is used as the default value for node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#logging_variant ContainerCluster#logging_variant}
+  */
+  readonly loggingVariant?: string;
+  /**
   * The name of a Google Compute Engine machine type.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#machine_type ContainerCluster#machine_type}
@@ -6233,6 +6608,7 @@ export function containerClusterNodePoolNodeConfigToTerraform(struct?: Container
     image_type: cdktf.stringToTerraform(struct!.imageType),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
     local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+    logging_variant: cdktf.stringToTerraform(struct!.loggingVariant),
     machine_type: cdktf.stringToTerraform(struct!.machineType),
     metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
     min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
@@ -6292,6 +6668,10 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
     if (this._localSsdCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.localSsdCount = this._localSsdCount;
+    }
+    if (this._loggingVariant !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingVariant = this._loggingVariant;
     }
     if (this._machineType !== undefined) {
       hasAnyValues = true;
@@ -6366,6 +6746,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._imageType = undefined;
       this._labels = undefined;
       this._localSsdCount = undefined;
+      this._loggingVariant = undefined;
       this._machineType = undefined;
       this._metadata = undefined;
       this._minCpuPlatform = undefined;
@@ -6391,6 +6772,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._imageType = value.imageType;
       this._labels = value.labels;
       this._localSsdCount = value.localSsdCount;
+      this._loggingVariant = value.loggingVariant;
       this._machineType = value.machineType;
       this._metadata = value.metadata;
       this._minCpuPlatform = value.minCpuPlatform;
@@ -6519,6 +6901,22 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get localSsdCountInput() {
     return this._localSsdCount;
+  }
+
+  // logging_variant - computed: false, optional: true, required: false
+  private _loggingVariant?: string; 
+  public get loggingVariant() {
+    return this.getStringAttribute('logging_variant');
+  }
+  public set loggingVariant(value: string) {
+    this._loggingVariant = value;
+  }
+  public resetLoggingVariant() {
+    this._loggingVariant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingVariantInput() {
+    return this._loggingVariant;
   }
 
   // machine_type - computed: true, optional: true, required: false
@@ -6761,19 +7159,249 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
     return this._workloadMetadataConfig.internalValue;
   }
 }
+export interface ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
+  /**
+  * Number of blue nodes to drain in a batch.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_node_count ContainerCluster#batch_node_count}
+  */
+  readonly batchNodeCount?: number;
+  /**
+  * Percentage of the blue pool nodes to drain in a batch.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_percentage ContainerCluster#batch_percentage}
+  */
+  readonly batchPercentage?: number;
+  /**
+  * Soak time after each batch gets drained.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_soak_duration ContainerCluster#batch_soak_duration}
+  */
+  readonly batchSoakDuration?: string;
+}
+
+export function containerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyToTerraform(struct?: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference | ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    batch_node_count: cdktf.numberToTerraform(struct!.batchNodeCount),
+    batch_percentage: cdktf.numberToTerraform(struct!.batchPercentage),
+    batch_soak_duration: cdktf.stringToTerraform(struct!.batchSoakDuration),
+  }
+}
+
+export class ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._batchNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchNodeCount = this._batchNodeCount;
+    }
+    if (this._batchPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchPercentage = this._batchPercentage;
+    }
+    if (this._batchSoakDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchSoakDuration = this._batchSoakDuration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._batchNodeCount = undefined;
+      this._batchPercentage = undefined;
+      this._batchSoakDuration = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._batchNodeCount = value.batchNodeCount;
+      this._batchPercentage = value.batchPercentage;
+      this._batchSoakDuration = value.batchSoakDuration;
+    }
+  }
+
+  // batch_node_count - computed: true, optional: true, required: false
+  private _batchNodeCount?: number; 
+  public get batchNodeCount() {
+    return this.getNumberAttribute('batch_node_count');
+  }
+  public set batchNodeCount(value: number) {
+    this._batchNodeCount = value;
+  }
+  public resetBatchNodeCount() {
+    this._batchNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchNodeCountInput() {
+    return this._batchNodeCount;
+  }
+
+  // batch_percentage - computed: true, optional: true, required: false
+  private _batchPercentage?: number; 
+  public get batchPercentage() {
+    return this.getNumberAttribute('batch_percentage');
+  }
+  public set batchPercentage(value: number) {
+    this._batchPercentage = value;
+  }
+  public resetBatchPercentage() {
+    this._batchPercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchPercentageInput() {
+    return this._batchPercentage;
+  }
+
+  // batch_soak_duration - computed: true, optional: true, required: false
+  private _batchSoakDuration?: string; 
+  public get batchSoakDuration() {
+    return this.getStringAttribute('batch_soak_duration');
+  }
+  public set batchSoakDuration(value: string) {
+    this._batchSoakDuration = value;
+  }
+  public resetBatchSoakDuration() {
+    this._batchSoakDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchSoakDurationInput() {
+    return this._batchSoakDuration;
+  }
+}
+export interface ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings {
+  /**
+  * Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#node_pool_soak_duration ContainerCluster#node_pool_soak_duration}
+  */
+  readonly nodePoolSoakDuration?: string;
+  /**
+  * standard_rollout_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#standard_rollout_policy ContainerCluster#standard_rollout_policy}
+  */
+  readonly standardRolloutPolicy: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy;
+}
+
+export function containerClusterNodePoolUpgradeSettingsBlueGreenSettingsToTerraform(struct?: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference | ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_pool_soak_duration: cdktf.stringToTerraform(struct!.nodePoolSoakDuration),
+    standard_rollout_policy: containerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyToTerraform(struct!.standardRolloutPolicy),
+  }
+}
+
+export class ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodePoolSoakDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodePoolSoakDuration = this._nodePoolSoakDuration;
+    }
+    if (this._standardRolloutPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.standardRolloutPolicy = this._standardRolloutPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodePoolSoakDuration = undefined;
+      this._standardRolloutPolicy.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodePoolSoakDuration = value.nodePoolSoakDuration;
+      this._standardRolloutPolicy.internalValue = value.standardRolloutPolicy;
+    }
+  }
+
+  // node_pool_soak_duration - computed: true, optional: true, required: false
+  private _nodePoolSoakDuration?: string; 
+  public get nodePoolSoakDuration() {
+    return this.getStringAttribute('node_pool_soak_duration');
+  }
+  public set nodePoolSoakDuration(value: string) {
+    this._nodePoolSoakDuration = value;
+  }
+  public resetNodePoolSoakDuration() {
+    this._nodePoolSoakDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePoolSoakDurationInput() {
+    return this._nodePoolSoakDuration;
+  }
+
+  // standard_rollout_policy - computed: false, optional: false, required: true
+  private _standardRolloutPolicy = new ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference(this, "standard_rollout_policy");
+  public get standardRolloutPolicy() {
+    return this._standardRolloutPolicy;
+  }
+  public putStandardRolloutPolicy(value: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy) {
+    this._standardRolloutPolicy.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get standardRolloutPolicyInput() {
+    return this._standardRolloutPolicy.internalValue;
+  }
+}
 export interface ContainerClusterNodePoolUpgradeSettings {
   /**
   * The number of additional nodes that can be added to the node pool during an upgrade. Increasing max_surge raises the number of nodes that can be upgraded simultaneously. Can be set to 0 or greater.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#max_surge ContainerCluster#max_surge}
   */
-  readonly maxSurge: number;
+  readonly maxSurge?: number;
   /**
   * The number of nodes that can be simultaneously unavailable during an upgrade. Increasing max_unavailable raises the number of nodes that can be upgraded in parallel. Can be set to 0 or greater.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#max_unavailable ContainerCluster#max_unavailable}
   */
-  readonly maxUnavailable: number;
+  readonly maxUnavailable?: number;
+  /**
+  * Update strategy for the given nodepool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#strategy ContainerCluster#strategy}
+  */
+  readonly strategy?: string;
+  /**
+  * blue_green_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#blue_green_settings ContainerCluster#blue_green_settings}
+  */
+  readonly blueGreenSettings?: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings;
 }
 
 export function containerClusterNodePoolUpgradeSettingsToTerraform(struct?: ContainerClusterNodePoolUpgradeSettingsOutputReference | ContainerClusterNodePoolUpgradeSettings): any {
@@ -6784,6 +7412,8 @@ export function containerClusterNodePoolUpgradeSettingsToTerraform(struct?: Cont
   return {
     max_surge: cdktf.numberToTerraform(struct!.maxSurge),
     max_unavailable: cdktf.numberToTerraform(struct!.maxUnavailable),
+    strategy: cdktf.stringToTerraform(struct!.strategy),
+    blue_green_settings: containerClusterNodePoolUpgradeSettingsBlueGreenSettingsToTerraform(struct!.blueGreenSettings),
   }
 }
 
@@ -6809,6 +7439,14 @@ export class ContainerClusterNodePoolUpgradeSettingsOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.maxUnavailable = this._maxUnavailable;
     }
+    if (this._strategy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.strategy = this._strategy;
+    }
+    if (this._blueGreenSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blueGreenSettings = this._blueGreenSettings?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -6817,15 +7455,19 @@ export class ContainerClusterNodePoolUpgradeSettingsOutputReference extends cdkt
       this.isEmptyObject = false;
       this._maxSurge = undefined;
       this._maxUnavailable = undefined;
+      this._strategy = undefined;
+      this._blueGreenSettings.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._maxSurge = value.maxSurge;
       this._maxUnavailable = value.maxUnavailable;
+      this._strategy = value.strategy;
+      this._blueGreenSettings.internalValue = value.blueGreenSettings;
     }
   }
 
-  // max_surge - computed: false, optional: false, required: true
+  // max_surge - computed: true, optional: true, required: false
   private _maxSurge?: number; 
   public get maxSurge() {
     return this.getNumberAttribute('max_surge');
@@ -6833,12 +7475,15 @@ export class ContainerClusterNodePoolUpgradeSettingsOutputReference extends cdkt
   public set maxSurge(value: number) {
     this._maxSurge = value;
   }
+  public resetMaxSurge() {
+    this._maxSurge = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get maxSurgeInput() {
     return this._maxSurge;
   }
 
-  // max_unavailable - computed: false, optional: false, required: true
+  // max_unavailable - computed: true, optional: true, required: false
   private _maxUnavailable?: number; 
   public get maxUnavailable() {
     return this.getNumberAttribute('max_unavailable');
@@ -6846,9 +7491,44 @@ export class ContainerClusterNodePoolUpgradeSettingsOutputReference extends cdkt
   public set maxUnavailable(value: number) {
     this._maxUnavailable = value;
   }
+  public resetMaxUnavailable() {
+    this._maxUnavailable = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get maxUnavailableInput() {
     return this._maxUnavailable;
+  }
+
+  // strategy - computed: false, optional: true, required: false
+  private _strategy?: string; 
+  public get strategy() {
+    return this.getStringAttribute('strategy');
+  }
+  public set strategy(value: string) {
+    this._strategy = value;
+  }
+  public resetStrategy() {
+    this._strategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get strategyInput() {
+    return this._strategy;
+  }
+
+  // blue_green_settings - computed: false, optional: true, required: false
+  private _blueGreenSettings = new ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsOutputReference(this, "blue_green_settings");
+  public get blueGreenSettings() {
+    return this._blueGreenSettings;
+  }
+  public putBlueGreenSettings(value: ContainerClusterNodePoolUpgradeSettingsBlueGreenSettings) {
+    this._blueGreenSettings.internalValue = value;
+  }
+  public resetBlueGreenSettings() {
+    this._blueGreenSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blueGreenSettingsInput() {
+    return this._blueGreenSettings.internalValue;
   }
 }
 export interface ContainerClusterNodePool {
@@ -7248,6 +7928,140 @@ export class ContainerClusterNodePoolList extends cdktf.ComplexList {
   */
   public get(index: number): ContainerClusterNodePoolOutputReference {
     return new ContainerClusterNodePoolOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerClusterNodePoolDefaultsNodeConfigDefaults {
+  /**
+  * Type of logging agent that is used as the default value for node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#logging_variant ContainerCluster#logging_variant}
+  */
+  readonly loggingVariant?: string;
+}
+
+export function containerClusterNodePoolDefaultsNodeConfigDefaultsToTerraform(struct?: ContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference | ContainerClusterNodePoolDefaultsNodeConfigDefaults): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    logging_variant: cdktf.stringToTerraform(struct!.loggingVariant),
+  }
+}
+
+export class ContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolDefaultsNodeConfigDefaults | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._loggingVariant !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.loggingVariant = this._loggingVariant;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolDefaultsNodeConfigDefaults | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._loggingVariant = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._loggingVariant = value.loggingVariant;
+    }
+  }
+
+  // logging_variant - computed: false, optional: true, required: false
+  private _loggingVariant?: string; 
+  public get loggingVariant() {
+    return this.getStringAttribute('logging_variant');
+  }
+  public set loggingVariant(value: string) {
+    this._loggingVariant = value;
+  }
+  public resetLoggingVariant() {
+    this._loggingVariant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loggingVariantInput() {
+    return this._loggingVariant;
+  }
+}
+export interface ContainerClusterNodePoolDefaults {
+  /**
+  * node_config_defaults block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#node_config_defaults ContainerCluster#node_config_defaults}
+  */
+  readonly nodeConfigDefaults?: ContainerClusterNodePoolDefaultsNodeConfigDefaults;
+}
+
+export function containerClusterNodePoolDefaultsToTerraform(struct?: ContainerClusterNodePoolDefaultsOutputReference | ContainerClusterNodePoolDefaults): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_config_defaults: containerClusterNodePoolDefaultsNodeConfigDefaultsToTerraform(struct!.nodeConfigDefaults),
+  }
+}
+
+export class ContainerClusterNodePoolDefaultsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolDefaults | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodeConfigDefaults?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeConfigDefaults = this._nodeConfigDefaults?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolDefaults | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodeConfigDefaults.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodeConfigDefaults.internalValue = value.nodeConfigDefaults;
+    }
+  }
+
+  // node_config_defaults - computed: false, optional: true, required: false
+  private _nodeConfigDefaults = new ContainerClusterNodePoolDefaultsNodeConfigDefaultsOutputReference(this, "node_config_defaults");
+  public get nodeConfigDefaults() {
+    return this._nodeConfigDefaults;
+  }
+  public putNodeConfigDefaults(value: ContainerClusterNodePoolDefaultsNodeConfigDefaults) {
+    this._nodeConfigDefaults.internalValue = value;
+  }
+  public resetNodeConfigDefaults() {
+    this._nodeConfigDefaults.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeConfigDefaultsInput() {
+    return this._nodeConfigDefaults.internalValue;
   }
 }
 export interface ContainerClusterNotificationConfigPubsubFilter {
@@ -8362,7 +9176,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -8381,6 +9195,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._enableBinaryAuthorization = config.enableBinaryAuthorization;
     this._enableIntranodeVisibility = config.enableIntranodeVisibility;
     this._enableKubernetesAlpha = config.enableKubernetesAlpha;
+    this._enableL4IlbSubsetting = config.enableL4IlbSubsetting;
     this._enableLegacyAbac = config.enableLegacyAbac;
     this._enableShieldedNodes = config.enableShieldedNodes;
     this._enableTpu = config.enableTpu;
@@ -8419,6 +9234,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._networkPolicy.internalValue = config.networkPolicy;
     this._nodeConfig.internalValue = config.nodeConfig;
     this._nodePool.internalValue = config.nodePool;
+    this._nodePoolDefaults.internalValue = config.nodePoolDefaults;
     this._notificationConfig.internalValue = config.notificationConfig;
     this._privateClusterConfig.internalValue = config.privateClusterConfig;
     this._releaseChannel.internalValue = config.releaseChannel;
@@ -8559,6 +9375,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableKubernetesAlphaInput() {
     return this._enableKubernetesAlpha;
+  }
+
+  // enable_l4_ilb_subsetting - computed: false, optional: true, required: false
+  private _enableL4IlbSubsetting?: boolean | cdktf.IResolvable; 
+  public get enableL4IlbSubsetting() {
+    return this.getBooleanAttribute('enable_l4_ilb_subsetting');
+  }
+  public set enableL4IlbSubsetting(value: boolean | cdktf.IResolvable) {
+    this._enableL4IlbSubsetting = value;
+  }
+  public resetEnableL4IlbSubsetting() {
+    this._enableL4IlbSubsetting = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableL4IlbSubsettingInput() {
+    return this._enableL4IlbSubsetting;
   }
 
   // enable_legacy_abac - computed: false, optional: true, required: false
@@ -9201,6 +10033,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._nodePool.internalValue;
   }
 
+  // node_pool_defaults - computed: false, optional: true, required: false
+  private _nodePoolDefaults = new ContainerClusterNodePoolDefaultsOutputReference(this, "node_pool_defaults");
+  public get nodePoolDefaults() {
+    return this._nodePoolDefaults;
+  }
+  public putNodePoolDefaults(value: ContainerClusterNodePoolDefaults) {
+    this._nodePoolDefaults.internalValue = value;
+  }
+  public resetNodePoolDefaults() {
+    this._nodePoolDefaults.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePoolDefaultsInput() {
+    return this._nodePoolDefaults.internalValue;
+  }
+
   // notification_config - computed: false, optional: true, required: false
   private _notificationConfig = new ContainerClusterNotificationConfigOutputReference(this, "notification_config");
   public get notificationConfig() {
@@ -9343,6 +10191,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       enable_binary_authorization: cdktf.booleanToTerraform(this._enableBinaryAuthorization),
       enable_intranode_visibility: cdktf.booleanToTerraform(this._enableIntranodeVisibility),
       enable_kubernetes_alpha: cdktf.booleanToTerraform(this._enableKubernetesAlpha),
+      enable_l4_ilb_subsetting: cdktf.booleanToTerraform(this._enableL4IlbSubsetting),
       enable_legacy_abac: cdktf.booleanToTerraform(this._enableLegacyAbac),
       enable_shielded_nodes: cdktf.booleanToTerraform(this._enableShieldedNodes),
       enable_tpu: cdktf.booleanToTerraform(this._enableTpu),
@@ -9381,6 +10230,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       network_policy: containerClusterNetworkPolicyToTerraform(this._networkPolicy.internalValue),
       node_config: containerClusterNodeConfigToTerraform(this._nodeConfig.internalValue),
       node_pool: cdktf.listMapper(containerClusterNodePoolToTerraform, true)(this._nodePool.internalValue),
+      node_pool_defaults: containerClusterNodePoolDefaultsToTerraform(this._nodePoolDefaults.internalValue),
       notification_config: containerClusterNotificationConfigToTerraform(this._notificationConfig.internalValue),
       private_cluster_config: containerClusterPrivateClusterConfigToTerraform(this._privateClusterConfig.internalValue),
       release_channel: containerClusterReleaseChannelToTerraform(this._releaseChannel.internalValue),

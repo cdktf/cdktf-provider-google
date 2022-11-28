@@ -46,7 +46,7 @@ export class DataGoogleIamRole extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_iam_role',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

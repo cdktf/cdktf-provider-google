@@ -57,6 +57,12 @@ If it is not provided, the provider region is used.
   */
   readonly region?: string;
   /**
+  * default_route_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#default_route_action ComputeRegionUrlMap#default_route_action}
+  */
+  readonly defaultRouteAction?: ComputeRegionUrlMapDefaultRouteAction;
+  /**
   * default_url_redirect block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#default_url_redirect ComputeRegionUrlMap#default_url_redirect}
@@ -86,6 +92,1063 @@ If it is not provided, the provider region is used.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#timeouts ComputeRegionUrlMap#timeouts}
   */
   readonly timeouts?: ComputeRegionUrlMapTimeouts;
+}
+export interface ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy {
+  /**
+  * The full or partial URL to the RegionBackendService resource being mirrored to.
+The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map.
+Serverless NEG backends are not currently supported as a mirrored backend service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
+  */
+  readonly backendService?: string;
+}
+
+export function computeRegionUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference | ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendService !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._backendService = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._backendService = value.backendService;
+    }
+  }
+
+  // backend_service - computed: false, optional: true, required: false
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  public resetBackendService() {
+    this._backendService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService;
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
+  /**
+  * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
+represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
+  */
+  readonly nanos?: number;
+  /**
+  * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
+  */
+  readonly seconds?: string;
+}
+
+export function computeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference | ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    nanos: cdktf.numberToTerraform(struct!.nanos),
+    seconds: cdktf.stringToTerraform(struct!.seconds),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nanos !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nanos = this._nanos;
+    }
+    if (this._seconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.seconds = this._seconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nanos = undefined;
+      this._seconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nanos = value.nanos;
+      this._seconds = value.seconds;
+    }
+  }
+
+  // nanos - computed: false, optional: true, required: false
+  private _nanos?: number; 
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+  public set nanos(value: number) {
+    this._nanos = value;
+  }
+  public resetNanos() {
+    this._nanos = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nanosInput() {
+    return this._nanos;
+  }
+
+  // seconds - computed: false, optional: true, required: false
+  private _seconds?: string; 
+  public get seconds() {
+    return this.getStringAttribute('seconds');
+  }
+  public set seconds(value: string) {
+    this._seconds = value;
+  }
+  public resetSeconds() {
+    this._seconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondsInput() {
+    return this._seconds;
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicy {
+  /**
+  * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#num_retries ComputeRegionUrlMap#num_retries}
+  */
+  readonly numRetries?: number;
+  /**
+  * Specifies one or more conditions when this retry policy applies.
+Valid values are listed below. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.
+  - 5xx : retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams.
+  - gateway-error : Similar to 5xx, but only applies to response codes 502, 503 or 504.
+  - connect-failure : a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts.
+  - retriable-4xx : a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409.
+  - refused-stream : a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.
+  - cancelled : a retry is attempted if the gRPC status code in the response header is set to cancelled.
+  - deadline-exceeded : a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded.
+  - internal :  a retry is attempted if the gRPC status code in the response header is set to internal.
+  - resource-exhausted : a retry is attempted if the gRPC status code in the response header is set to resource-exhausted.
+  - unavailable : a retry is attempted if the gRPC status code in the response header is set to unavailable.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
+  */
+  readonly retryConditions?: string[];
+  /**
+  * per_try_timeout block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
+  */
+  readonly perTryTimeout?: ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout;
+}
+
+export function computeRegionUrlMapDefaultRouteActionRetryPolicyToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionRetryPolicyOutputReference | ComputeRegionUrlMapDefaultRouteActionRetryPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    num_retries: cdktf.numberToTerraform(struct!.numRetries),
+    retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retryConditions),
+    per_try_timeout: computeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutToTerraform(struct!.perTryTimeout),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionRetryPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._numRetries !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.numRetries = this._numRetries;
+    }
+    if (this._retryConditions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retryConditions = this._retryConditions;
+    }
+    if (this._perTryTimeout?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.perTryTimeout = this._perTryTimeout?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionRetryPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._numRetries = undefined;
+      this._retryConditions = undefined;
+      this._perTryTimeout.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._numRetries = value.numRetries;
+      this._retryConditions = value.retryConditions;
+      this._perTryTimeout.internalValue = value.perTryTimeout;
+    }
+  }
+
+  // num_retries - computed: false, optional: true, required: false
+  private _numRetries?: number; 
+  public get numRetries() {
+    return this.getNumberAttribute('num_retries');
+  }
+  public set numRetries(value: number) {
+    this._numRetries = value;
+  }
+  public resetNumRetries() {
+    this._numRetries = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numRetriesInput() {
+    return this._numRetries;
+  }
+
+  // retry_conditions - computed: false, optional: true, required: false
+  private _retryConditions?: string[]; 
+  public get retryConditions() {
+    return this.getListAttribute('retry_conditions');
+  }
+  public set retryConditions(value: string[]) {
+    this._retryConditions = value;
+  }
+  public resetRetryConditions() {
+    this._retryConditions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryConditionsInput() {
+    return this._retryConditions;
+  }
+
+  // per_try_timeout - computed: false, optional: true, required: false
+  private _perTryTimeout = new ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutputReference(this, "per_try_timeout");
+  public get perTryTimeout() {
+    return this._perTryTimeout;
+  }
+  public putPerTryTimeout(value: ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout) {
+    this._perTryTimeout.internalValue = value;
+  }
+  public resetPerTryTimeout() {
+    this._perTryTimeout.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perTryTimeoutInput() {
+    return this._perTryTimeout.internalValue;
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
+  /**
+  * The name of the header.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
+  */
+  readonly headerName?: string;
+  /**
+  * The value of the header to add.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
+  */
+  readonly headerValue?: string;
+  /**
+  * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
+The default value is false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#replace ComputeRegionUrlMap#replace}
+  */
+  readonly replace?: boolean | cdktf.IResolvable;
+}
+
+export function computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: true, required: false
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  public resetHeaderName() {
+    this._headerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: true, required: false
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  public resetHeaderValue() {
+    this._headerValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: true, required: false
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  public resetReplace() {
+    this._replace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
+  /**
+  * The name of the header.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
+  */
+  readonly headerName?: string;
+  /**
+  * The value of the header to add.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
+  */
+  readonly headerValue?: string;
+  /**
+  * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
+The default value is false.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#replace ComputeRegionUrlMap#replace}
+  */
+  readonly replace?: boolean | cdktf.IResolvable;
+}
+
+export function computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: true, required: false
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  public resetHeaderName() {
+    this._headerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: true, required: false
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  public resetHeaderValue() {
+    this._headerValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: true, required: false
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  public resetReplace() {
+    this._replace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference {
+    return new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction {
+  /**
+  * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
+  */
+  readonly requestHeadersToRemove?: string[];
+  /**
+  * A list of header names for headers that need to be removed from the response before sending the response back to the client.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
+  */
+  readonly responseHeadersToRemove?: string[];
+  /**
+  * request_headers_to_add block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#request_headers_to_add ComputeRegionUrlMap#request_headers_to_add}
+  */
+  readonly requestHeadersToAdd?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
+  /**
+  * response_headers_to_add block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#response_headers_to_add ComputeRegionUrlMap#response_headers_to_add}
+  */
+  readonly responseHeadersToAdd?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
+}
+
+export function computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference | ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    request_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.requestHeadersToRemove),
+    response_headers_to_remove: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.responseHeadersToRemove),
+    request_headers_to_add: cdktf.listMapper(computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+    response_headers_to_add: cdktf.listMapper(computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddToTerraform, true)(struct!.responseHeadersToAdd),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToRemove !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToRemove = this._requestHeadersToRemove;
+    }
+    if (this._responseHeadersToRemove !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToRemove = this._responseHeadersToRemove;
+    }
+    if (this._requestHeadersToAdd?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd?.internalValue;
+    }
+    if (this._responseHeadersToAdd?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.responseHeadersToAdd = this._responseHeadersToAdd?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._requestHeadersToRemove = undefined;
+      this._responseHeadersToRemove = undefined;
+      this._requestHeadersToAdd.internalValue = undefined;
+      this._responseHeadersToAdd.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._requestHeadersToRemove = value.requestHeadersToRemove;
+      this._responseHeadersToRemove = value.responseHeadersToRemove;
+      this._requestHeadersToAdd.internalValue = value.requestHeadersToAdd;
+      this._responseHeadersToAdd.internalValue = value.responseHeadersToAdd;
+    }
+  }
+
+  // request_headers_to_remove - computed: false, optional: true, required: false
+  private _requestHeadersToRemove?: string[]; 
+  public get requestHeadersToRemove() {
+    return this.getListAttribute('request_headers_to_remove');
+  }
+  public set requestHeadersToRemove(value: string[]) {
+    this._requestHeadersToRemove = value;
+  }
+  public resetRequestHeadersToRemove() {
+    this._requestHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToRemoveInput() {
+    return this._requestHeadersToRemove;
+  }
+
+  // response_headers_to_remove - computed: false, optional: true, required: false
+  private _responseHeadersToRemove?: string[]; 
+  public get responseHeadersToRemove() {
+    return this.getListAttribute('response_headers_to_remove');
+  }
+  public set responseHeadersToRemove(value: string[]) {
+    this._responseHeadersToRemove = value;
+  }
+  public resetResponseHeadersToRemove() {
+    this._responseHeadersToRemove = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToRemoveInput() {
+    return this._responseHeadersToRemove;
+  }
+
+  // request_headers_to_add - computed: false, optional: true, required: false
+  private _requestHeadersToAdd = new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddList(this, "request_headers_to_add", false);
+  public get requestHeadersToAdd() {
+    return this._requestHeadersToAdd;
+  }
+  public putRequestHeadersToAdd(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
+    this._requestHeadersToAdd.internalValue = value;
+  }
+  public resetRequestHeadersToAdd() {
+    this._requestHeadersToAdd.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToAddInput() {
+    return this._requestHeadersToAdd.internalValue;
+  }
+
+  // response_headers_to_add - computed: false, optional: true, required: false
+  private _responseHeadersToAdd = new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddList(this, "response_headers_to_add", false);
+  public get responseHeadersToAdd() {
+    return this._responseHeadersToAdd;
+  }
+  public putResponseHeadersToAdd(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable) {
+    this._responseHeadersToAdd.internalValue = value;
+  }
+  public resetResponseHeadersToAdd() {
+    this._responseHeadersToAdd.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeadersToAddInput() {
+    return this._responseHeadersToAdd.internalValue;
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices {
+  /**
+  * The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the load balancer applies any relevant headerActions specified as part of this backendServiceWeight.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
+  */
+  readonly backendService?: string;
+  /**
+  * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all weightedBackendService weights in routeAction) .
+The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy.
+The value must be from 0 to 1000.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#weight ComputeRegionUrlMap#weight}
+  */
+  readonly weight?: number;
+  /**
+  * header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#header_action ComputeRegionUrlMap#header_action}
+  */
+  readonly headerAction?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction;
+}
+
+export function computeRegionUrlMapDefaultRouteActionWeightedBackendServicesToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    backend_service: cdktf.stringToTerraform(struct!.backendService),
+    weight: cdktf.numberToTerraform(struct!.weight),
+    header_action: computeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionToTerraform(struct!.headerAction),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._backendService !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.backendService = this._backendService;
+    }
+    if (this._weight !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weight = this._weight;
+    }
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._backendService = undefined;
+      this._weight = undefined;
+      this._headerAction.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._backendService = value.backendService;
+      this._weight = value.weight;
+      this._headerAction.internalValue = value.headerAction;
+    }
+  }
+
+  // backend_service - computed: false, optional: true, required: false
+  private _backendService?: string; 
+  public get backendService() {
+    return this.getStringAttribute('backend_service');
+  }
+  public set backendService(value: string) {
+    this._backendService = value;
+  }
+  public resetBackendService() {
+    this._backendService = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendServiceInput() {
+    return this._backendService;
+  }
+
+  // weight - computed: false, optional: true, required: false
+  private _weight?: number; 
+  public get weight() {
+    return this.getNumberAttribute('weight');
+  }
+  public set weight(value: number) {
+    this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight;
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesList extends cdktf.ComplexList {
+  public internalValue? : ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesOutputReference {
+    return new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ComputeRegionUrlMapDefaultRouteAction {
+  /**
+  * request_mirror_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
+  */
+  readonly requestMirrorPolicy?: ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy;
+  /**
+  * retry_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#retry_policy ComputeRegionUrlMap#retry_policy}
+  */
+  readonly retryPolicy?: ComputeRegionUrlMapDefaultRouteActionRetryPolicy;
+  /**
+  * weighted_backend_services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_url_map#weighted_backend_services ComputeRegionUrlMap#weighted_backend_services}
+  */
+  readonly weightedBackendServices?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable;
+}
+
+export function computeRegionUrlMapDefaultRouteActionToTerraform(struct?: ComputeRegionUrlMapDefaultRouteActionOutputReference | ComputeRegionUrlMapDefaultRouteAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    request_mirror_policy: computeRegionUrlMapDefaultRouteActionRequestMirrorPolicyToTerraform(struct!.requestMirrorPolicy),
+    retry_policy: computeRegionUrlMapDefaultRouteActionRetryPolicyToTerraform(struct!.retryPolicy),
+    weighted_backend_services: cdktf.listMapper(computeRegionUrlMapDefaultRouteActionWeightedBackendServicesToTerraform, true)(struct!.weightedBackendServices),
+  }
+}
+
+export class ComputeRegionUrlMapDefaultRouteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeRegionUrlMapDefaultRouteAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._requestMirrorPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestMirrorPolicy = this._requestMirrorPolicy?.internalValue;
+    }
+    if (this._retryPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.retryPolicy = this._retryPolicy?.internalValue;
+    }
+    if (this._weightedBackendServices?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.weightedBackendServices = this._weightedBackendServices?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeRegionUrlMapDefaultRouteAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._requestMirrorPolicy.internalValue = undefined;
+      this._retryPolicy.internalValue = undefined;
+      this._weightedBackendServices.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._requestMirrorPolicy.internalValue = value.requestMirrorPolicy;
+      this._retryPolicy.internalValue = value.retryPolicy;
+      this._weightedBackendServices.internalValue = value.weightedBackendServices;
+    }
+  }
+
+  // request_mirror_policy - computed: false, optional: true, required: false
+  private _requestMirrorPolicy = new ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicyOutputReference(this, "request_mirror_policy");
+  public get requestMirrorPolicy() {
+    return this._requestMirrorPolicy;
+  }
+  public putRequestMirrorPolicy(value: ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy) {
+    this._requestMirrorPolicy.internalValue = value;
+  }
+  public resetRequestMirrorPolicy() {
+    this._requestMirrorPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMirrorPolicyInput() {
+    return this._requestMirrorPolicy.internalValue;
+  }
+
+  // retry_policy - computed: false, optional: true, required: false
+  private _retryPolicy = new ComputeRegionUrlMapDefaultRouteActionRetryPolicyOutputReference(this, "retry_policy");
+  public get retryPolicy() {
+    return this._retryPolicy;
+  }
+  public putRetryPolicy(value: ComputeRegionUrlMapDefaultRouteActionRetryPolicy) {
+    this._retryPolicy.internalValue = value;
+  }
+  public resetRetryPolicy() {
+    this._retryPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryPolicyInput() {
+    return this._retryPolicy.internalValue;
+  }
+
+  // weighted_backend_services - computed: false, optional: true, required: false
+  private _weightedBackendServices = new ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesList(this, "weighted_backend_services", false);
+  public get weightedBackendServices() {
+    return this._weightedBackendServices;
+  }
+  public putWeightedBackendServices(value: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable) {
+    this._weightedBackendServices.internalValue = value;
+  }
+  public resetWeightedBackendServices() {
+    this._weightedBackendServices.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightedBackendServicesInput() {
+    return this._weightedBackendServices.internalValue;
+  }
 }
 export interface ComputeRegionUrlMapDefaultUrlRedirect {
   /**
@@ -7841,7 +8904,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_url_map',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -7858,6 +8921,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
+    this._defaultRouteAction.internalValue = config.defaultRouteAction;
     this._defaultUrlRedirect.internalValue = config.defaultUrlRedirect;
     this._hostRule.internalValue = config.hostRule;
     this._pathMatcher.internalValue = config.pathMatcher;
@@ -7982,6 +9046,22 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // default_route_action - computed: false, optional: true, required: false
+  private _defaultRouteAction = new ComputeRegionUrlMapDefaultRouteActionOutputReference(this, "default_route_action");
+  public get defaultRouteAction() {
+    return this._defaultRouteAction;
+  }
+  public putDefaultRouteAction(value: ComputeRegionUrlMapDefaultRouteAction) {
+    this._defaultRouteAction.internalValue = value;
+  }
+  public resetDefaultRouteAction() {
+    this._defaultRouteAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultRouteActionInput() {
+    return this._defaultRouteAction.internalValue;
+  }
+
   // default_url_redirect - computed: false, optional: true, required: false
   private _defaultUrlRedirect = new ComputeRegionUrlMapDefaultUrlRedirectOutputReference(this, "default_url_redirect");
   public get defaultUrlRedirect() {
@@ -8074,6 +9154,7 @@ export class ComputeRegionUrlMap extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
+      default_route_action: computeRegionUrlMapDefaultRouteActionToTerraform(this._defaultRouteAction.internalValue),
       default_url_redirect: computeRegionUrlMapDefaultUrlRedirectToTerraform(this._defaultUrlRedirect.internalValue),
       host_rule: cdktf.listMapper(computeRegionUrlMapHostRuleToTerraform, true)(this._hostRule.internalValue),
       path_matcher: cdktf.listMapper(computeRegionUrlMapPathMatcherToTerraform, true)(this._pathMatcher.internalValue),

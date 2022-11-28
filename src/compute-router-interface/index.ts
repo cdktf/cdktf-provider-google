@@ -39,6 +39,12 @@ export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArgumen
   */
   readonly project?: string;
   /**
+  * The name of the interface that is redundant to this interface.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
+  */
+  readonly redundantInterface?: string;
+  /**
   * The region this interface's router sits in. If not specified, the project region will be used. Changing this forces a new interface to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#region ComputeRouterInterface#region}
@@ -192,7 +198,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_interface',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -208,6 +214,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     this._ipRange = config.ipRange;
     this._name = config.name;
     this._project = config.project;
+    this._redundantInterface = config.redundantInterface;
     this._region = config.region;
     this._router = config.router;
     this._vpnTunnel = config.vpnTunnel;
@@ -295,6 +302,22 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // redundant_interface - computed: false, optional: true, required: false
+  private _redundantInterface?: string; 
+  public get redundantInterface() {
+    return this.getStringAttribute('redundant_interface');
+  }
+  public set redundantInterface(value: string) {
+    this._redundantInterface = value;
+  }
+  public resetRedundantInterface() {
+    this._redundantInterface = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redundantInterfaceInput() {
+    return this._redundantInterface;
+  }
+
   // region - computed: true, optional: true, required: false
   private _region?: string; 
   public get region() {
@@ -367,6 +390,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
       ip_range: cdktf.stringToTerraform(this._ipRange),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      redundant_interface: cdktf.stringToTerraform(this._redundantInterface),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
       vpn_tunnel: cdktf.stringToTerraform(this._vpnTunnel),

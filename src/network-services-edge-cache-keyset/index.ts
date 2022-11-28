@@ -43,13 +43,19 @@ and all following characters must be a dash, underscore, letter or digit.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
   */
-  readonly publicKey: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable;
+  readonly publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheKeysetTimeouts;
+  /**
+  * validation_shared_keys block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#validation_shared_keys NetworkServicesEdgeCacheKeyset#validation_shared_keys}
+  */
+  readonly validationSharedKeys?: NetworkServicesEdgeCacheKeysetValidationSharedKeys[] | cdktf.IResolvable;
 }
 export interface NetworkServicesEdgeCacheKeysetPublicKey {
   /**
@@ -64,12 +70,18 @@ which means the first character must be a letter, and all following characters m
   */
   readonly id: string;
   /**
+  * Set to true to have the CDN automatically manage this public key value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#managed NetworkServicesEdgeCacheKeyset#managed}
+  */
+  readonly managed?: boolean | cdktf.IResolvable;
+  /**
   * The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
 Representations or encodings of the public key other than this will be rejected with an error.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
   */
-  readonly value: string;
+  readonly value?: string;
 }
 
 export function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: NetworkServicesEdgeCacheKeysetPublicKey | cdktf.IResolvable): any {
@@ -79,6 +91,7 @@ export function networkServicesEdgeCacheKeysetPublicKeyToTerraform(struct?: Netw
   }
   return {
     id: cdktf.stringToTerraform(struct!.id),
+    managed: cdktf.booleanToTerraform(struct!.managed),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
@@ -107,6 +120,10 @@ export class NetworkServicesEdgeCacheKeysetPublicKeyOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
+    if (this._managed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managed = this._managed;
+    }
     if (this._value !== undefined) {
       hasAnyValues = true;
       internalValueResult.value = this._value;
@@ -119,6 +136,7 @@ export class NetworkServicesEdgeCacheKeysetPublicKeyOutputReference extends cdkt
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._id = undefined;
+      this._managed = undefined;
       this._value = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -129,6 +147,7 @@ export class NetworkServicesEdgeCacheKeysetPublicKeyOutputReference extends cdkt
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._id = value.id;
+      this._managed = value.managed;
       this._value = value.value;
     }
   }
@@ -146,13 +165,32 @@ export class NetworkServicesEdgeCacheKeysetPublicKeyOutputReference extends cdkt
     return this._id;
   }
 
-  // value - computed: false, optional: false, required: true
+  // managed - computed: false, optional: true, required: false
+  private _managed?: boolean | cdktf.IResolvable; 
+  public get managed() {
+    return this.getBooleanAttribute('managed');
+  }
+  public set managed(value: boolean | cdktf.IResolvable) {
+    this._managed = value;
+  }
+  public resetManaged() {
+    this._managed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedInput() {
+    return this._managed;
+  }
+
+  // value - computed: false, optional: true, required: false
   private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
@@ -308,6 +346,108 @@ export class NetworkServicesEdgeCacheKeysetTimeoutsOutputReference extends cdktf
     return this._update;
   }
 }
+export interface NetworkServicesEdgeCacheKeysetValidationSharedKeys {
+  /**
+  * The name of the secret version in Secret Manager.
+
+The resource name of the secret version must be in the format 'projects/*\/secrets/*\/versions/*' where the '*' values are replaced by the secrets themselves.
+The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using.
+* If you are using HMAC-SHA1, we suggest 20-byte secrets.
+* If you are using HMAC-SHA256, we suggest 32-byte secrets.
+See RFC 2104, Section 3 for more details on these recommendations.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}
+  */
+  readonly secretVersion: string;
+}
+
+export function networkServicesEdgeCacheKeysetValidationSharedKeysToTerraform(struct?: NetworkServicesEdgeCacheKeysetValidationSharedKeys | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_version: cdktf.stringToTerraform(struct!.secretVersion),
+  }
+}
+
+export class NetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheKeysetValidationSharedKeys | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretVersion !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretVersion = this._secretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheKeysetValidationSharedKeys | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretVersion = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretVersion = value.secretVersion;
+    }
+  }
+
+  // secret_version - computed: false, optional: false, required: true
+  private _secretVersion?: string; 
+  public get secretVersion() {
+    return this.getStringAttribute('secret_version');
+  }
+  public set secretVersion(value: string) {
+    this._secretVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretVersionInput() {
+    return this._secretVersion;
+  }
+}
+
+export class NetworkServicesEdgeCacheKeysetValidationSharedKeysList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheKeysetValidationSharedKeys[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference {
+    return new NetworkServicesEdgeCacheKeysetValidationSharedKeysOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_keyset google_network_services_edge_cache_keyset}
@@ -335,7 +475,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_keyset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -353,6 +493,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
     this._project = config.project;
     this._publicKey.internalValue = config.publicKey;
     this._timeouts.internalValue = config.timeouts;
+    this._validationSharedKeys.internalValue = config.validationSharedKeys;
   }
 
   // ==========
@@ -436,13 +577,16 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
     return this._project;
   }
 
-  // public_key - computed: false, optional: false, required: true
+  // public_key - computed: false, optional: true, required: false
   private _publicKey = new NetworkServicesEdgeCacheKeysetPublicKeyList(this, "public_key", false);
   public get publicKey() {
     return this._publicKey;
   }
   public putPublicKey(value: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable) {
     this._publicKey.internalValue = value;
+  }
+  public resetPublicKey() {
+    this._publicKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get publicKeyInput() {
@@ -465,6 +609,22 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
     return this._timeouts.internalValue;
   }
 
+  // validation_shared_keys - computed: false, optional: true, required: false
+  private _validationSharedKeys = new NetworkServicesEdgeCacheKeysetValidationSharedKeysList(this, "validation_shared_keys", false);
+  public get validationSharedKeys() {
+    return this._validationSharedKeys;
+  }
+  public putValidationSharedKeys(value: NetworkServicesEdgeCacheKeysetValidationSharedKeys[] | cdktf.IResolvable) {
+    this._validationSharedKeys.internalValue = value;
+  }
+  public resetValidationSharedKeys() {
+    this._validationSharedKeys.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validationSharedKeysInput() {
+    return this._validationSharedKeys.internalValue;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -478,6 +638,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       public_key: cdktf.listMapper(networkServicesEdgeCacheKeysetPublicKeyToTerraform, true)(this._publicKey.internalValue),
       timeouts: networkServicesEdgeCacheKeysetTimeoutsToTerraform(this._timeouts.internalValue),
+      validation_shared_keys: cdktf.listMapper(networkServicesEdgeCacheKeysetValidationSharedKeysToTerraform, true)(this._validationSharedKeys.internalValue),
     };
   }
 }
