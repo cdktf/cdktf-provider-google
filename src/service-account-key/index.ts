@@ -74,7 +74,7 @@ export class ServiceAccountKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_service_account_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

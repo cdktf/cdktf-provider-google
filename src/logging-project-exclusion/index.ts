@@ -70,7 +70,7 @@ export class LoggingProjectExclusion extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_project_exclusion',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

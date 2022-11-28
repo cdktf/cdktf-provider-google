@@ -58,7 +58,7 @@ export class IapTunnelInstanceIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_tunnel_instance_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

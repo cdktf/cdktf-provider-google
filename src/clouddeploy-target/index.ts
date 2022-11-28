@@ -156,6 +156,12 @@ export interface ClouddeployTargetExecutionConfigs {
   */
   readonly artifactStorage?: string;
   /**
+  * Optional. Execution timeout for a Cloud Build Execution. This must be between 10m and 24h in seconds format. If unspecified, a default timeout of 1h is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#execution_timeout ClouddeployTarget#execution_timeout}
+  */
+  readonly executionTimeout?: string;
+  /**
   * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#service_account ClouddeployTarget#service_account}
@@ -182,6 +188,7 @@ export function clouddeployTargetExecutionConfigsToTerraform(struct?: Clouddeplo
   }
   return {
     artifact_storage: cdktf.stringToTerraform(struct!.artifactStorage),
+    execution_timeout: cdktf.stringToTerraform(struct!.executionTimeout),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     usages: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.usages),
     worker_pool: cdktf.stringToTerraform(struct!.workerPool),
@@ -212,6 +219,10 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.artifactStorage = this._artifactStorage;
     }
+    if (this._executionTimeout !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.executionTimeout = this._executionTimeout;
+    }
     if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
@@ -232,6 +243,7 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._artifactStorage = undefined;
+      this._executionTimeout = undefined;
       this._serviceAccount = undefined;
       this._usages = undefined;
       this._workerPool = undefined;
@@ -244,6 +256,7 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._artifactStorage = value.artifactStorage;
+      this._executionTimeout = value.executionTimeout;
       this._serviceAccount = value.serviceAccount;
       this._usages = value.usages;
       this._workerPool = value.workerPool;
@@ -264,6 +277,22 @@ export class ClouddeployTargetExecutionConfigsOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get artifactStorageInput() {
     return this._artifactStorage;
+  }
+
+  // execution_timeout - computed: true, optional: true, required: false
+  private _executionTimeout?: string; 
+  public get executionTimeout() {
+    return this.getStringAttribute('execution_timeout');
+  }
+  public set executionTimeout(value: string) {
+    this._executionTimeout = value;
+  }
+  public resetExecutionTimeout() {
+    this._executionTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get executionTimeoutInput() {
+    return this._executionTimeout;
   }
 
   // service_account - computed: true, optional: true, required: false
@@ -583,7 +612,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_target',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
