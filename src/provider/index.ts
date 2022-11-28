@@ -44,6 +44,10 @@ export interface GoogleProviderConfig {
   */
   readonly assuredWorkloadsCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}
+  */
+  readonly beyondcorpCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}
   */
   readonly bigQueryCustomEndpoint?: string;
@@ -509,7 +513,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -523,6 +527,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
     this._artifactRegistryCustomEndpoint = config.artifactRegistryCustomEndpoint;
     this._assuredWorkloadsCustomEndpoint = config.assuredWorkloadsCustomEndpoint;
+    this._beyondcorpCustomEndpoint = config.beyondcorpCustomEndpoint;
     this._bigQueryCustomEndpoint = config.bigQueryCustomEndpoint;
     this._bigqueryAnalyticsHubCustomEndpoint = config.bigqueryAnalyticsHubCustomEndpoint;
     this._bigqueryConnectionCustomEndpoint = config.bigqueryConnectionCustomEndpoint;
@@ -774,6 +779,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get assuredWorkloadsCustomEndpointInput() {
     return this._assuredWorkloadsCustomEndpoint;
+  }
+
+  // beyondcorp_custom_endpoint - computed: false, optional: true, required: false
+  private _beyondcorpCustomEndpoint?: string; 
+  public get beyondcorpCustomEndpoint() {
+    return this._beyondcorpCustomEndpoint;
+  }
+  public set beyondcorpCustomEndpoint(value: string | undefined) {
+    this._beyondcorpCustomEndpoint = value;
+  }
+  public resetBeyondcorpCustomEndpoint() {
+    this._beyondcorpCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get beyondcorpCustomEndpointInput() {
+    return this._beyondcorpCustomEndpoint;
   }
 
   // big_query_custom_endpoint - computed: false, optional: true, required: false
@@ -2439,6 +2460,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),
       artifact_registry_custom_endpoint: cdktf.stringToTerraform(this._artifactRegistryCustomEndpoint),
       assured_workloads_custom_endpoint: cdktf.stringToTerraform(this._assuredWorkloadsCustomEndpoint),
+      beyondcorp_custom_endpoint: cdktf.stringToTerraform(this._beyondcorpCustomEndpoint),
       big_query_custom_endpoint: cdktf.stringToTerraform(this._bigQueryCustomEndpoint),
       bigquery_analytics_hub_custom_endpoint: cdktf.stringToTerraform(this._bigqueryAnalyticsHubCustomEndpoint),
       bigquery_connection_custom_endpoint: cdktf.stringToTerraform(this._bigqueryConnectionCustomEndpoint),

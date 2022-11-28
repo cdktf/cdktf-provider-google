@@ -89,6 +89,12 @@ fred@example.com
   */
   readonly dataset?: BigqueryDatasetAccessDatasetA;
   /**
+  * routine block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#routine BigqueryDatasetAccessA#routine}
+  */
+  readonly routine?: BigqueryDatasetAccessRoutineA;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#timeouts BigqueryDatasetAccessA#timeouts}
@@ -280,6 +286,124 @@ export class BigqueryDatasetAccessDatasetAOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get datasetInput() {
     return this._dataset.internalValue;
+  }
+}
+export interface BigqueryDatasetAccessRoutineA {
+  /**
+  * The ID of the dataset containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#dataset_id BigqueryDatasetAccessA#dataset_id}
+  */
+  readonly datasetId: string;
+  /**
+  * The ID of the project containing this table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#project_id BigqueryDatasetAccessA#project_id}
+  */
+  readonly projectId: string;
+  /**
+  * The ID of the routine. The ID must contain only letters (a-z,
+A-Z), numbers (0-9), or underscores (_). The maximum length
+is 256 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access#routine_id BigqueryDatasetAccessA#routine_id}
+  */
+  readonly routineId: string;
+}
+
+export function bigqueryDatasetAccessRoutineAToTerraform(struct?: BigqueryDatasetAccessRoutineAOutputReference | BigqueryDatasetAccessRoutineA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dataset_id: cdktf.stringToTerraform(struct!.datasetId),
+    project_id: cdktf.stringToTerraform(struct!.projectId),
+    routine_id: cdktf.stringToTerraform(struct!.routineId),
+  }
+}
+
+export class BigqueryDatasetAccessRoutineAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryDatasetAccessRoutineA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._datasetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.datasetId = this._datasetId;
+    }
+    if (this._projectId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.projectId = this._projectId;
+    }
+    if (this._routineId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.routineId = this._routineId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryDatasetAccessRoutineA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._datasetId = undefined;
+      this._projectId = undefined;
+      this._routineId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._datasetId = value.datasetId;
+      this._projectId = value.projectId;
+      this._routineId = value.routineId;
+    }
+  }
+
+  // dataset_id - computed: false, optional: false, required: true
+  private _datasetId?: string; 
+  public get datasetId() {
+    return this.getStringAttribute('dataset_id');
+  }
+  public set datasetId(value: string) {
+    this._datasetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get datasetIdInput() {
+    return this._datasetId;
+  }
+
+  // project_id - computed: false, optional: false, required: true
+  private _projectId?: string; 
+  public get projectId() {
+    return this.getStringAttribute('project_id');
+  }
+  public set projectId(value: string) {
+    this._projectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectIdInput() {
+    return this._projectId;
+  }
+
+  // routine_id - computed: false, optional: false, required: true
+  private _routineId?: string; 
+  public get routineId() {
+    return this.getStringAttribute('routine_id');
+  }
+  public set routineId(value: string) {
+    this._routineId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routineIdInput() {
+    return this._routineId;
   }
 }
 export interface BigqueryDatasetAccessTimeouts {
@@ -529,7 +653,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset_access',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -550,6 +674,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
     this._specialGroup = config.specialGroup;
     this._userByEmail = config.userByEmail;
     this._dataset.internalValue = config.dataset;
+    this._routine.internalValue = config.routine;
     this._timeouts.internalValue = config.timeouts;
     this._view.internalValue = config.view;
   }
@@ -720,6 +845,22 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
     return this._dataset.internalValue;
   }
 
+  // routine - computed: false, optional: true, required: false
+  private _routine = new BigqueryDatasetAccessRoutineAOutputReference(this, "routine");
+  public get routine() {
+    return this._routine;
+  }
+  public putRoutine(value: BigqueryDatasetAccessRoutineA) {
+    this._routine.internalValue = value;
+  }
+  public resetRoutine() {
+    this._routine.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routineInput() {
+    return this._routine.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new BigqueryDatasetAccessTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -768,6 +909,7 @@ export class BigqueryDatasetAccessA extends cdktf.TerraformResource {
       special_group: cdktf.stringToTerraform(this._specialGroup),
       user_by_email: cdktf.stringToTerraform(this._userByEmail),
       dataset: bigqueryDatasetAccessDatasetAToTerraform(this._dataset.internalValue),
+      routine: bigqueryDatasetAccessRoutineAToTerraform(this._routine.internalValue),
       timeouts: bigqueryDatasetAccessTimeoutsToTerraform(this._timeouts.internalValue),
       view: bigqueryDatasetAccessViewAToTerraform(this._view.internalValue),
     };

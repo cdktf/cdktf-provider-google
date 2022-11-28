@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger#channel EventarcTrigger#channel}
+  */
+  readonly channel?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_trigger#id EventarcTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -962,7 +968,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_eventarc_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -973,6 +979,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._channel = config.channel;
     this._id = config.id;
     this._labels = config.labels;
     this._location = config.location;
@@ -988,6 +995,28 @@ export class EventarcTrigger extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // channel - computed: false, optional: true, required: false
+  private _channel?: string; 
+  public get channel() {
+    return this.getStringAttribute('channel');
+  }
+  public set channel(value: string) {
+    this._channel = value;
+  }
+  public resetChannel() {
+    this._channel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get channelInput() {
+    return this._channel;
+  }
+
+  // conditions - computed: true, optional: false, required: false
+  private _conditions = new cdktf.StringMap(this, "conditions");
+  public get conditions() {
+    return this._conditions;
+  }
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -1163,6 +1192,7 @@ export class EventarcTrigger extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      channel: cdktf.stringToTerraform(this._channel),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),

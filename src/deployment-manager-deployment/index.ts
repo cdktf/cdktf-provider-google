@@ -653,7 +653,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_deployment_manager_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

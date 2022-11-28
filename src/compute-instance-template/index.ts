@@ -166,6 +166,12 @@ export interface ComputeInstanceTemplateAdvancedMachineFeatures {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#threads_per_core ComputeInstanceTemplate#threads_per_core}
   */
   readonly threadsPerCore?: number;
+  /**
+  * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance\'s nominal CPU count and the underlying platform\'s SMT width.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#visible_core_count ComputeInstanceTemplate#visible_core_count}
+  */
+  readonly visibleCoreCount?: number;
 }
 
 export function computeInstanceTemplateAdvancedMachineFeaturesToTerraform(struct?: ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference | ComputeInstanceTemplateAdvancedMachineFeatures): any {
@@ -176,6 +182,7 @@ export function computeInstanceTemplateAdvancedMachineFeaturesToTerraform(struct
   return {
     enable_nested_virtualization: cdktf.booleanToTerraform(struct!.enableNestedVirtualization),
     threads_per_core: cdktf.numberToTerraform(struct!.threadsPerCore),
+    visible_core_count: cdktf.numberToTerraform(struct!.visibleCoreCount),
   }
 }
 
@@ -201,6 +208,10 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
       hasAnyValues = true;
       internalValueResult.threadsPerCore = this._threadsPerCore;
     }
+    if (this._visibleCoreCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.visibleCoreCount = this._visibleCoreCount;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -209,11 +220,13 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
       this.isEmptyObject = false;
       this._enableNestedVirtualization = undefined;
       this._threadsPerCore = undefined;
+      this._visibleCoreCount = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._enableNestedVirtualization = value.enableNestedVirtualization;
       this._threadsPerCore = value.threadsPerCore;
+      this._visibleCoreCount = value.visibleCoreCount;
     }
   }
 
@@ -247,6 +260,22 @@ export class ComputeInstanceTemplateAdvancedMachineFeaturesOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get threadsPerCoreInput() {
     return this._threadsPerCore;
+  }
+
+  // visible_core_count - computed: false, optional: true, required: false
+  private _visibleCoreCount?: number; 
+  public get visibleCoreCount() {
+    return this.getNumberAttribute('visible_core_count');
+  }
+  public set visibleCoreCount(value: number) {
+    this._visibleCoreCount = value;
+  }
+  public resetVisibleCoreCount() {
+    this._visibleCoreCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get visibleCoreCountInput() {
+    return this._visibleCoreCount;
   }
 }
 export interface ComputeInstanceTemplateConfidentialInstanceConfig {
@@ -2627,7 +2656,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -340,7 +340,7 @@ export class LoggingOrganizationSink extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_organization_sink',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

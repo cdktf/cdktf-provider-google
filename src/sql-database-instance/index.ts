@@ -1384,6 +1384,12 @@ export interface SqlDatabaseInstanceSettingsInsightsConfig {
   */
   readonly queryInsightsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Number of query execution plans captured by Insights per minute for all queries combined. Between 0 and 20. Default to 5.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#query_plans_per_minute SqlDatabaseInstance#query_plans_per_minute}
+  */
+  readonly queryPlansPerMinute?: number;
+  /**
   * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#query_string_length SqlDatabaseInstance#query_string_length}
@@ -1410,6 +1416,7 @@ export function sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct?: Sq
   }
   return {
     query_insights_enabled: cdktf.booleanToTerraform(struct!.queryInsightsEnabled),
+    query_plans_per_minute: cdktf.numberToTerraform(struct!.queryPlansPerMinute),
     query_string_length: cdktf.numberToTerraform(struct!.queryStringLength),
     record_application_tags: cdktf.booleanToTerraform(struct!.recordApplicationTags),
     record_client_address: cdktf.booleanToTerraform(struct!.recordClientAddress),
@@ -1434,6 +1441,10 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.queryInsightsEnabled = this._queryInsightsEnabled;
     }
+    if (this._queryPlansPerMinute !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queryPlansPerMinute = this._queryPlansPerMinute;
+    }
     if (this._queryStringLength !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryStringLength = this._queryStringLength;
@@ -1453,6 +1464,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
     if (value === undefined) {
       this.isEmptyObject = false;
       this._queryInsightsEnabled = undefined;
+      this._queryPlansPerMinute = undefined;
       this._queryStringLength = undefined;
       this._recordApplicationTags = undefined;
       this._recordClientAddress = undefined;
@@ -1460,6 +1472,7 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._queryInsightsEnabled = value.queryInsightsEnabled;
+      this._queryPlansPerMinute = value.queryPlansPerMinute;
       this._queryStringLength = value.queryStringLength;
       this._recordApplicationTags = value.recordApplicationTags;
       this._recordClientAddress = value.recordClientAddress;
@@ -1480,6 +1493,22 @@ export class SqlDatabaseInstanceSettingsInsightsConfigOutputReference extends cd
   // Temporarily expose input value. Use with caution.
   public get queryInsightsEnabledInput() {
     return this._queryInsightsEnabled;
+  }
+
+  // query_plans_per_minute - computed: true, optional: true, required: false
+  private _queryPlansPerMinute?: number; 
+  public get queryPlansPerMinute() {
+    return this.getNumberAttribute('query_plans_per_minute');
+  }
+  public set queryPlansPerMinute(value: number) {
+    this._queryPlansPerMinute = value;
+  }
+  public resetQueryPlansPerMinute() {
+    this._queryPlansPerMinute = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryPlansPerMinuteInput() {
+    return this._queryPlansPerMinute;
   }
 
   // query_string_length - computed: false, optional: true, required: false
@@ -2465,6 +2494,12 @@ is set to true. Defaults to ZONAL.
   */
   readonly collation?: string;
   /**
+  * Specifies if connections must use Cloud SQL connectors.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#connector_enforcement SqlDatabaseInstance#connector_enforcement}
+  */
+  readonly connectorEnforcement?: string;
+  /**
   * Enables auto-resizing of the storage size. Defaults to true.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#disk_autoresize SqlDatabaseInstance#disk_autoresize}
@@ -2501,7 +2536,7 @@ is set to true. Defaults to ZONAL.
   */
   readonly tier: string;
   /**
-  * The timezone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format.
+  * The time_zone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#time_zone SqlDatabaseInstance#time_zone}
   */
@@ -2577,6 +2612,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     activation_policy: cdktf.stringToTerraform(struct!.activationPolicy),
     availability_type: cdktf.stringToTerraform(struct!.availabilityType),
     collation: cdktf.stringToTerraform(struct!.collation),
+    connector_enforcement: cdktf.stringToTerraform(struct!.connectorEnforcement),
     disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
     disk_autoresize_limit: cdktf.numberToTerraform(struct!.diskAutoresizeLimit),
     disk_size: cdktf.numberToTerraform(struct!.diskSize),
@@ -2622,6 +2658,10 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     if (this._collation !== undefined) {
       hasAnyValues = true;
       internalValueResult.collation = this._collation;
+    }
+    if (this._connectorEnforcement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectorEnforcement = this._connectorEnforcement;
     }
     if (this._diskAutoresize !== undefined) {
       hasAnyValues = true;
@@ -2700,6 +2740,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._activationPolicy = undefined;
       this._availabilityType = undefined;
       this._collation = undefined;
+      this._connectorEnforcement = undefined;
       this._diskAutoresize = undefined;
       this._diskAutoresizeLimit = undefined;
       this._diskSize = undefined;
@@ -2723,6 +2764,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._activationPolicy = value.activationPolicy;
       this._availabilityType = value.availabilityType;
       this._collation = value.collation;
+      this._connectorEnforcement = value.connectorEnforcement;
       this._diskAutoresize = value.diskAutoresize;
       this._diskAutoresizeLimit = value.diskAutoresizeLimit;
       this._diskSize = value.diskSize;
@@ -2789,6 +2831,22 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
     return this._collation;
+  }
+
+  // connector_enforcement - computed: true, optional: true, required: false
+  private _connectorEnforcement?: string; 
+  public get connectorEnforcement() {
+    return this.getStringAttribute('connector_enforcement');
+  }
+  public set connectorEnforcement(value: string) {
+    this._connectorEnforcement = value;
+  }
+  public resetConnectorEnforcement() {
+    this._connectorEnforcement = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectorEnforcementInput() {
+    return this._connectorEnforcement;
   }
 
   // disk_autoresize - computed: false, optional: true, required: false
@@ -3221,7 +3279,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.43.0',
+        providerVersion: '4.44.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
