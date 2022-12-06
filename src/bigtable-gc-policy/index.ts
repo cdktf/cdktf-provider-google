@@ -14,6 +14,14 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly columnFamily: string;
   /**
+  * The deletion policy for the GC policy. Setting ABANDON allows the resource
+				to be abandoned rather than deleted. This is useful for GC policy as it cannot be deleted
+				in a replicated instance. Possible values are: "ABANDON".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#deletion_policy BigtableGcPolicy#deletion_policy}
+  */
+  readonly deletionPolicy?: string;
+  /**
   * Serialized JSON string for garbage collection policy. Conflicts with "mode", "max_age" and "max_version".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#gc_rules BigtableGcPolicy#gc_rules}
@@ -33,7 +41,7 @@ export interface BigtableGcPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly instanceName: string;
   /**
-  * If multiple policies are set, you should choose between UNION OR INTERSECTION.
+  * NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_gc_policy#mode BigtableGcPolicy#mode}
   */
@@ -282,7 +290,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_gc_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -294,6 +302,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._columnFamily = config.columnFamily;
+    this._deletionPolicy = config.deletionPolicy;
     this._gcRules = config.gcRules;
     this._id = config.id;
     this._instanceName = config.instanceName;
@@ -319,6 +328,22 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get columnFamilyInput() {
     return this._columnFamily;
+  }
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string; 
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy;
   }
 
   // gc_rules - computed: false, optional: true, required: false
@@ -450,6 +475,7 @@ export class BigtableGcPolicy extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       column_family: cdktf.stringToTerraform(this._columnFamily),
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       gc_rules: cdktf.stringToTerraform(this._gcRules),
       id: cdktf.stringToTerraform(this._id),
       instance_name: cdktf.stringToTerraform(this._instanceName),

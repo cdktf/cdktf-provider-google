@@ -275,7 +275,7 @@ export class DatastreamPrivateConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_private_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

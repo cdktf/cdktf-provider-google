@@ -39,6 +39,12 @@ export interface ComputeRegionInstanceGroupManagerConfig extends cdktf.Terraform
   */
   readonly id?: string;
   /**
+  * Pagination behavior of the listManagedInstances API method for this managed instance group. Valid values are: "PAGELESS", "PAGINATED". If PAGELESS (default), Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response. If PAGINATED, pagination is enabled, maxResults and pageToken query parameters are respected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager#list_managed_instances_results ComputeRegionInstanceGroupManager#list_managed_instances_results}
+  */
+  readonly listManagedInstancesResults?: string;
+  /**
   * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager#name ComputeRegionInstanceGroupManager#name}
@@ -1427,7 +1433,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1443,6 +1449,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
     this._distributionPolicyTargetShape = config.distributionPolicyTargetShape;
     this._distributionPolicyZones = config.distributionPolicyZones;
     this._id = config.id;
+    this._listManagedInstancesResults = config.listManagedInstancesResults;
     this._name = config.name;
     this._project = config.project;
     this._region = config.region;
@@ -1547,6 +1554,22 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
   // instance_group - computed: true, optional: false, required: false
   public get instanceGroup() {
     return this.getStringAttribute('instance_group');
+  }
+
+  // list_managed_instances_results - computed: false, optional: true, required: false
+  private _listManagedInstancesResults?: string; 
+  public get listManagedInstancesResults() {
+    return this.getStringAttribute('list_managed_instances_results');
+  }
+  public set listManagedInstancesResults(value: string) {
+    this._listManagedInstancesResults = value;
+  }
+  public resetListManagedInstancesResults() {
+    this._listManagedInstancesResults = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listManagedInstancesResultsInput() {
+    return this._listManagedInstancesResults;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1773,6 +1796,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       distribution_policy_target_shape: cdktf.stringToTerraform(this._distributionPolicyTargetShape),
       distribution_policy_zones: cdktf.listMapper(cdktf.stringToTerraform, false)(this._distributionPolicyZones),
       id: cdktf.stringToTerraform(this._id),
+      list_managed_instances_results: cdktf.stringToTerraform(this._listManagedInstancesResults),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),

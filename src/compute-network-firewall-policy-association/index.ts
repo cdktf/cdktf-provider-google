@@ -174,7 +174,7 @@ export class ComputeNetworkFirewallPolicyAssociation extends cdktf.TerraformReso
       terraformResourceType: 'google_compute_network_firewall_policy_association',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -28,6 +28,15 @@ a value of 'en_US.UTF8' at creation time.
   */
   readonly collation?: string;
   /**
+  * The deletion policy for the database. Setting ABANDON allows the resource 
+to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be 
+deleted from the API if there are users other than cloudsqlsuperuser with access. Possible 
+values are: "ABANDON".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#deletion_policy SqlDatabase#deletion_policy}
+  */
+  readonly deletionPolicy?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database#id SqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -215,7 +224,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -228,6 +237,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
     });
     this._charset = config.charset;
     this._collation = config.collation;
+    this._deletionPolicy = config.deletionPolicy;
     this._id = config.id;
     this._instance = config.instance;
     this._name = config.name;
@@ -269,6 +279,22 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
     return this._collation;
+  }
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string; 
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -358,6 +384,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
     return {
       charset: cdktf.stringToTerraform(this._charset),
       collation: cdktf.stringToTerraform(this._collation),
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       id: cdktf.stringToTerraform(this._id),
       instance: cdktf.stringToTerraform(this._instance),
       name: cdktf.stringToTerraform(this._name),

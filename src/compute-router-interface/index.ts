@@ -15,13 +15,13 @@ export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArgumen
   */
   readonly id?: string;
   /**
-  * The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified.
+  * The name or resource link to the VLAN interconnect for this interface. Changing this forces a new interface to be created. Only one of interconnect_attachment, subnetwork or vpn_tunnel can be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
   */
   readonly interconnectAttachment?: string;
   /**
-  * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+  * The IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#ip_range ComputeRouterInterface#ip_range}
   */
@@ -33,13 +33,19 @@ export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArgumen
   */
   readonly name: string;
   /**
+  * The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance. Changing this forces a new interface to be created.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#private_ip_address ComputeRouterInterface#private_ip_address}
+  */
+  readonly privateIpAddress?: string;
+  /**
   * The ID of the project in which this interface's router belongs. If it is not provided, the provider project is used. Changing this forces a new interface to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#project ComputeRouterInterface#project}
   */
   readonly project?: string;
   /**
-  * The name of the interface that is redundant to this interface.
+  * The name of the interface that is redundant to this interface. Changing this forces a new interface to be created.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
   */
@@ -57,7 +63,13 @@ export interface ComputeRouterInterfaceConfig extends cdktf.TerraformMetaArgumen
   */
   readonly router: string;
   /**
-  * The name or resource link to the VPN tunnel this interface will be linked to. Changing this forces a new interface to be created. Only one of vpn_tunnel and interconnect_attachment can be specified.
+  * The URI of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. Changing this forces a new interface to be created. Only one of subnetwork, interconnect_attachment or vpn_tunnel can be specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#subnetwork ComputeRouterInterface#subnetwork}
+  */
+  readonly subnetwork?: string;
+  /**
+  * The name or resource link to the VPN tunnel this interface will be linked to. Changing this forces a new interface to be created. Only one of vpn_tunnel, interconnect_attachment or subnetwork can be specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_interface#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
   */
@@ -198,7 +210,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_interface',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -213,10 +225,12 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     this._interconnectAttachment = config.interconnectAttachment;
     this._ipRange = config.ipRange;
     this._name = config.name;
+    this._privateIpAddress = config.privateIpAddress;
     this._project = config.project;
     this._redundantInterface = config.redundantInterface;
     this._region = config.region;
     this._router = config.router;
+    this._subnetwork = config.subnetwork;
     this._vpnTunnel = config.vpnTunnel;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -257,7 +271,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     return this._interconnectAttachment;
   }
 
-  // ip_range - computed: false, optional: true, required: false
+  // ip_range - computed: true, optional: true, required: false
   private _ipRange?: string; 
   public get ipRange() {
     return this.getStringAttribute('ip_range');
@@ -284,6 +298,22 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // private_ip_address - computed: false, optional: true, required: false
+  private _privateIpAddress?: string; 
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+  public set privateIpAddress(value: string) {
+    this._privateIpAddress = value;
+  }
+  public resetPrivateIpAddress() {
+    this._privateIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressInput() {
+    return this._privateIpAddress;
   }
 
   // project - computed: true, optional: true, required: false
@@ -347,6 +377,22 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     return this._router;
   }
 
+  // subnetwork - computed: false, optional: true, required: false
+  private _subnetwork?: string; 
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+  public set subnetwork(value: string) {
+    this._subnetwork = value;
+  }
+  public resetSubnetwork() {
+    this._subnetwork = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork;
+  }
+
   // vpn_tunnel - computed: false, optional: true, required: false
   private _vpnTunnel?: string; 
   public get vpnTunnel() {
@@ -389,10 +435,12 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
       interconnect_attachment: cdktf.stringToTerraform(this._interconnectAttachment),
       ip_range: cdktf.stringToTerraform(this._ipRange),
       name: cdktf.stringToTerraform(this._name),
+      private_ip_address: cdktf.stringToTerraform(this._privateIpAddress),
       project: cdktf.stringToTerraform(this._project),
       redundant_interface: cdktf.stringToTerraform(this._redundantInterface),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
+      subnetwork: cdktf.stringToTerraform(this._subnetwork),
       vpn_tunnel: cdktf.stringToTerraform(this._vpnTunnel),
       timeouts: computeRouterInterfaceTimeoutsToTerraform(this._timeouts.internalValue),
     };

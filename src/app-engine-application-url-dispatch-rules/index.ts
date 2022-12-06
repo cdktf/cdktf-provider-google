@@ -341,7 +341,7 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
       terraformResourceType: 'google_app_engine_application_url_dispatch_rules',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
