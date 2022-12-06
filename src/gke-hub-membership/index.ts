@@ -405,7 +405,7 @@ export class GkeHubMembership extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_membership',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

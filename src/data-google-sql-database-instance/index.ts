@@ -744,6 +744,80 @@ export class DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsList extends cdkt
     return new DataGoogleSqlDatabaseInstanceSettingsDatabaseFlagsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod {
+}
+
+export function dataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodToTerraform(struct?: DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriod | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_date - computed: true, optional: false, required: false
+  public get endDate() {
+    return this.getStringAttribute('end_date');
+  }
+
+  // start_date - computed: true, optional: false, required: false
+  public get startDate() {
+    return this.getStringAttribute('start_date');
+  }
+
+  // time - computed: true, optional: false, required: false
+  public get time() {
+    return this.getStringAttribute('time');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference {
+    return new DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleSqlDatabaseInstanceSettingsInsightsConfig {
 }
 
@@ -1376,6 +1450,12 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this._databaseFlags;
   }
 
+  // deny_maintenance_period - computed: true, optional: false, required: false
+  private _denyMaintenancePeriod = new DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList(this, "deny_maintenance_period", false);
+  public get denyMaintenancePeriod() {
+    return this._denyMaintenancePeriod;
+  }
+
   // disk_autoresize - computed: true, optional: false, required: false
   public get diskAutoresize() {
     return this.getBooleanAttribute('disk_autoresize');
@@ -1504,7 +1584,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

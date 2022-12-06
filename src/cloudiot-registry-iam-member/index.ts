@@ -181,7 +181,7 @@ export class CloudiotRegistryIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudiot_registry_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

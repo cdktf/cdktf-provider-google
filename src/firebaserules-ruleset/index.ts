@@ -470,7 +470,7 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebaserules_ruleset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

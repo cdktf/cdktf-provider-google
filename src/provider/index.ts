@@ -513,7 +513,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'

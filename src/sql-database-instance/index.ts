@@ -1376,6 +1376,122 @@ export class SqlDatabaseInstanceSettingsDatabaseFlagsList extends cdktf.ComplexL
     return new SqlDatabaseInstanceSettingsDatabaseFlagsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface SqlDatabaseInstanceSettingsDenyMaintenancePeriod {
+  /**
+  * End date before which maintenance will not take place. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#end_date SqlDatabaseInstance#end_date}
+  */
+  readonly endDate: string;
+  /**
+  * Start date after which maintenance will not take place. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#start_date SqlDatabaseInstance#start_date}
+  */
+  readonly startDate: string;
+  /**
+  * Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#time SqlDatabaseInstance#time}
+  */
+  readonly time: string;
+}
+
+export function sqlDatabaseInstanceSettingsDenyMaintenancePeriodToTerraform(struct?: SqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference | SqlDatabaseInstanceSettingsDenyMaintenancePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    end_date: cdktf.stringToTerraform(struct!.endDate),
+    start_date: cdktf.stringToTerraform(struct!.startDate),
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
+export class SqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): SqlDatabaseInstanceSettingsDenyMaintenancePeriod | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endDate = this._endDate;
+    }
+    if (this._startDate !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startDate = this._startDate;
+    }
+    if (this._time !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.time = this._time;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlDatabaseInstanceSettingsDenyMaintenancePeriod | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._endDate = undefined;
+      this._startDate = undefined;
+      this._time = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._endDate = value.endDate;
+      this._startDate = value.startDate;
+      this._time = value.time;
+    }
+  }
+
+  // end_date - computed: false, optional: false, required: true
+  private _endDate?: string; 
+  public get endDate() {
+    return this.getStringAttribute('end_date');
+  }
+  public set endDate(value: string) {
+    this._endDate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endDateInput() {
+    return this._endDate;
+  }
+
+  // start_date - computed: false, optional: false, required: true
+  private _startDate?: string; 
+  public get startDate() {
+    return this.getStringAttribute('start_date');
+  }
+  public set startDate(value: string) {
+    this._startDate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startDateInput() {
+    return this._startDate;
+  }
+
+  // time - computed: false, optional: false, required: true
+  private _time?: string; 
+  public get time() {
+    return this.getStringAttribute('time');
+  }
+  public set time(value: string) {
+    this._time = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeInput() {
+    return this._time;
+  }
+}
 export interface SqlDatabaseInstanceSettingsInsightsConfig {
   /**
   * True if Query Insights feature is enabled.
@@ -2566,6 +2682,12 @@ is set to true. Defaults to ZONAL.
   */
   readonly databaseFlags?: SqlDatabaseInstanceSettingsDatabaseFlags[] | cdktf.IResolvable;
   /**
+  * deny_maintenance_period block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#deny_maintenance_period SqlDatabaseInstance#deny_maintenance_period}
+  */
+  readonly denyMaintenancePeriod?: SqlDatabaseInstanceSettingsDenyMaintenancePeriod;
+  /**
   * insights_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#insights_config SqlDatabaseInstance#insights_config}
@@ -2624,6 +2746,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     active_directory_config: sqlDatabaseInstanceSettingsActiveDirectoryConfigToTerraform(struct!.activeDirectoryConfig),
     backup_configuration: sqlDatabaseInstanceSettingsBackupConfigurationToTerraform(struct!.backupConfiguration),
     database_flags: cdktf.listMapper(sqlDatabaseInstanceSettingsDatabaseFlagsToTerraform, true)(struct!.databaseFlags),
+    deny_maintenance_period: sqlDatabaseInstanceSettingsDenyMaintenancePeriodToTerraform(struct!.denyMaintenancePeriod),
     insights_config: sqlDatabaseInstanceSettingsInsightsConfigToTerraform(struct!.insightsConfig),
     ip_configuration: sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct!.ipConfiguration),
     location_preference: sqlDatabaseInstanceSettingsLocationPreferenceToTerraform(struct!.locationPreference),
@@ -2707,6 +2830,10 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.databaseFlags = this._databaseFlags?.internalValue;
     }
+    if (this._denyMaintenancePeriod?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.denyMaintenancePeriod = this._denyMaintenancePeriod?.internalValue;
+    }
     if (this._insightsConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.insightsConfig = this._insightsConfig?.internalValue;
@@ -2752,6 +2879,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._activeDirectoryConfig.internalValue = undefined;
       this._backupConfiguration.internalValue = undefined;
       this._databaseFlags.internalValue = undefined;
+      this._denyMaintenancePeriod.internalValue = undefined;
       this._insightsConfig.internalValue = undefined;
       this._ipConfiguration.internalValue = undefined;
       this._locationPreference.internalValue = undefined;
@@ -2776,6 +2904,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._activeDirectoryConfig.internalValue = value.activeDirectoryConfig;
       this._backupConfiguration.internalValue = value.backupConfiguration;
       this._databaseFlags.internalValue = value.databaseFlags;
+      this._denyMaintenancePeriod.internalValue = value.denyMaintenancePeriod;
       this._insightsConfig.internalValue = value.insightsConfig;
       this._ipConfiguration.internalValue = value.ipConfiguration;
       this._locationPreference.internalValue = value.locationPreference;
@@ -3025,6 +3154,22 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get databaseFlagsInput() {
     return this._databaseFlags.internalValue;
+  }
+
+  // deny_maintenance_period - computed: false, optional: true, required: false
+  private _denyMaintenancePeriod = new SqlDatabaseInstanceSettingsDenyMaintenancePeriodOutputReference(this, "deny_maintenance_period");
+  public get denyMaintenancePeriod() {
+    return this._denyMaintenancePeriod;
+  }
+  public putDenyMaintenancePeriod(value: SqlDatabaseInstanceSettingsDenyMaintenancePeriod) {
+    this._denyMaintenancePeriod.internalValue = value;
+  }
+  public resetDenyMaintenancePeriod() {
+    this._denyMaintenancePeriod.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get denyMaintenancePeriodInput() {
+    return this._denyMaintenancePeriod.internalValue;
   }
 
   // insights_config - computed: false, optional: true, required: false
@@ -3279,7 +3424,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

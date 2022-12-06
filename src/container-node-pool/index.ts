@@ -87,6 +87,12 @@ export interface ContainerNodePoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly management?: ContainerNodePoolManagement;
   /**
+  * network_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#network_config ContainerNodePool#network_config}
+  */
+  readonly networkConfig?: ContainerNodePoolNetworkConfig;
+  /**
   * node_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#node_config ContainerNodePool#node_config}
@@ -382,6 +388,160 @@ export class ContainerNodePoolManagementOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get autoUpgradeInput() {
     return this._autoUpgrade;
+  }
+}
+export interface ContainerNodePoolNetworkConfig {
+  /**
+  * Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#create_pod_range ContainerNodePool#create_pod_range}
+  */
+  readonly createPodRange?: boolean | cdktf.IResolvable;
+  /**
+  * Whether nodes have internal IP addresses only.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#enable_private_nodes ContainerNodePool#enable_private_nodes}
+  */
+  readonly enablePrivateNodes?: boolean | cdktf.IResolvable;
+  /**
+  * The IP address range for pod IPs in this node pool. Only applicable if create_pod_range is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#pod_ipv4_cidr_block ContainerNodePool#pod_ipv4_cidr_block}
+  */
+  readonly podIpv4CidrBlock?: string;
+  /**
+  * The ID of the secondary range for pod IPs. If create_pod_range is true, this ID is used for the new range. If create_pod_range is false, uses an existing secondary range with this ID.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#pod_range ContainerNodePool#pod_range}
+  */
+  readonly podRange?: string;
+}
+
+export function containerNodePoolNetworkConfigToTerraform(struct?: ContainerNodePoolNetworkConfigOutputReference | ContainerNodePoolNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create_pod_range: cdktf.booleanToTerraform(struct!.createPodRange),
+    enable_private_nodes: cdktf.booleanToTerraform(struct!.enablePrivateNodes),
+    pod_ipv4_cidr_block: cdktf.stringToTerraform(struct!.podIpv4CidrBlock),
+    pod_range: cdktf.stringToTerraform(struct!.podRange),
+  }
+}
+
+export class ContainerNodePoolNetworkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNetworkConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._createPodRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.createPodRange = this._createPodRange;
+    }
+    if (this._enablePrivateNodes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePrivateNodes = this._enablePrivateNodes;
+    }
+    if (this._podIpv4CidrBlock !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podIpv4CidrBlock = this._podIpv4CidrBlock;
+    }
+    if (this._podRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podRange = this._podRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNetworkConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._createPodRange = undefined;
+      this._enablePrivateNodes = undefined;
+      this._podIpv4CidrBlock = undefined;
+      this._podRange = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._createPodRange = value.createPodRange;
+      this._enablePrivateNodes = value.enablePrivateNodes;
+      this._podIpv4CidrBlock = value.podIpv4CidrBlock;
+      this._podRange = value.podRange;
+    }
+  }
+
+  // create_pod_range - computed: false, optional: true, required: false
+  private _createPodRange?: boolean | cdktf.IResolvable; 
+  public get createPodRange() {
+    return this.getBooleanAttribute('create_pod_range');
+  }
+  public set createPodRange(value: boolean | cdktf.IResolvable) {
+    this._createPodRange = value;
+  }
+  public resetCreatePodRange() {
+    this._createPodRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createPodRangeInput() {
+    return this._createPodRange;
+  }
+
+  // enable_private_nodes - computed: true, optional: true, required: false
+  private _enablePrivateNodes?: boolean | cdktf.IResolvable; 
+  public get enablePrivateNodes() {
+    return this.getBooleanAttribute('enable_private_nodes');
+  }
+  public set enablePrivateNodes(value: boolean | cdktf.IResolvable) {
+    this._enablePrivateNodes = value;
+  }
+  public resetEnablePrivateNodes() {
+    this._enablePrivateNodes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePrivateNodesInput() {
+    return this._enablePrivateNodes;
+  }
+
+  // pod_ipv4_cidr_block - computed: true, optional: true, required: false
+  private _podIpv4CidrBlock?: string; 
+  public get podIpv4CidrBlock() {
+    return this.getStringAttribute('pod_ipv4_cidr_block');
+  }
+  public set podIpv4CidrBlock(value: string) {
+    this._podIpv4CidrBlock = value;
+  }
+  public resetPodIpv4CidrBlock() {
+    this._podIpv4CidrBlock = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podIpv4CidrBlockInput() {
+    return this._podIpv4CidrBlock;
+  }
+
+  // pod_range - computed: false, optional: true, required: false
+  private _podRange?: string; 
+  public get podRange() {
+    return this.getStringAttribute('pod_range');
+  }
+  public set podRange(value: string) {
+    this._podRange = value;
+  }
+  public resetPodRange() {
+    this._podRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podRangeInput() {
+    return this._podRange;
   }
 }
 export interface ContainerNodePoolNodeConfigGuestAcceleratorGpuSharingConfig {
@@ -1333,6 +1493,12 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly preemptible?: boolean | cdktf.IResolvable;
   /**
+  * The GCE resource labels (a map of key/value pairs) to be applied to the node pool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#resource_labels ContainerNodePool#resource_labels}
+  */
+  readonly resourceLabels?: { [key: string]: string };
+  /**
   * The Google Cloud Platform Service Account to be used by the node VMs.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#service_account ContainerNodePool#service_account}
@@ -1408,6 +1574,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     node_group: cdktf.stringToTerraform(struct!.nodeGroup),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     preemptible: cdktf.booleanToTerraform(struct!.preemptible),
+    resource_labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.resourceLabels),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
@@ -1490,6 +1657,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.preemptible = this._preemptible;
     }
+    if (this._resourceLabels !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.resourceLabels = this._resourceLabels;
+    }
     if (this._serviceAccount !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceAccount = this._serviceAccount;
@@ -1546,6 +1717,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._nodeGroup = undefined;
       this._oauthScopes = undefined;
       this._preemptible = undefined;
+      this._resourceLabels = undefined;
       this._serviceAccount = undefined;
       this._spot = undefined;
       this._tags = undefined;
@@ -1572,6 +1744,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._nodeGroup = value.nodeGroup;
       this._oauthScopes = value.oauthScopes;
       this._preemptible = value.preemptible;
+      this._resourceLabels = value.resourceLabels;
       this._serviceAccount = value.serviceAccount;
       this._spot = value.spot;
       this._tags = value.tags;
@@ -1806,6 +1979,22 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get preemptibleInput() {
     return this._preemptible;
+  }
+
+  // resource_labels - computed: false, optional: true, required: false
+  private _resourceLabels?: { [key: string]: string }; 
+  public get resourceLabels() {
+    return this.getStringMapAttribute('resource_labels');
+  }
+  public set resourceLabels(value: { [key: string]: string }) {
+    this._resourceLabels = value;
+  }
+  public resetResourceLabels() {
+    this._resourceLabels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceLabelsInput() {
+    return this._resourceLabels;
   }
 
   // service_account - computed: true, optional: true, required: false
@@ -2480,7 +2669,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2504,6 +2693,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     this._version = config.version;
     this._autoscaling.internalValue = config.autoscaling;
     this._management.internalValue = config.management;
+    this._networkConfig.internalValue = config.networkConfig;
     this._nodeConfig.internalValue = config.nodeConfig;
     this._timeouts.internalValue = config.timeouts;
     this._upgradeSettings.internalValue = config.upgradeSettings;
@@ -2733,6 +2923,22 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     return this._management.internalValue;
   }
 
+  // network_config - computed: false, optional: true, required: false
+  private _networkConfig = new ContainerNodePoolNetworkConfigOutputReference(this, "network_config");
+  public get networkConfig() {
+    return this._networkConfig;
+  }
+  public putNetworkConfig(value: ContainerNodePoolNetworkConfig) {
+    this._networkConfig.internalValue = value;
+  }
+  public resetNetworkConfig() {
+    this._networkConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkConfigInput() {
+    return this._networkConfig.internalValue;
+  }
+
   // node_config - computed: false, optional: true, required: false
   private _nodeConfig = new ContainerNodePoolNodeConfigOutputReference(this, "node_config");
   public get nodeConfig() {
@@ -2800,6 +3006,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       version: cdktf.stringToTerraform(this._version),
       autoscaling: containerNodePoolAutoscalingToTerraform(this._autoscaling.internalValue),
       management: containerNodePoolManagementToTerraform(this._management.internalValue),
+      network_config: containerNodePoolNetworkConfigToTerraform(this._networkConfig.internalValue),
       node_config: containerNodePoolNodeConfigToTerraform(this._nodeConfig.internalValue),
       timeouts: containerNodePoolTimeoutsToTerraform(this._timeouts.internalValue),
       upgrade_settings: containerNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),

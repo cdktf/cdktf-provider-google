@@ -1391,7 +1391,7 @@ export interface CloudRunServiceTemplateSpecContainersPorts {
   */
   readonly containerPort?: number;
   /**
-  * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+  * If specified, used to specify which protocol to use. Allowed values are "http1" (HTTP/1) and "h2c" (HTTP/2 end-to-end)
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_service#name CloudRunService#name}
   */
@@ -3165,7 +3165,7 @@ export class CloudRunService extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -20,6 +20,12 @@ export interface DataFusionInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
+  * Display name for an instance.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#display_name DataFusionInstance#display_name}
+  */
+  readonly displayName?: string;
+  /**
   * Option to enable granular role-based access control.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#enable_rbac DataFusionInstance#enable_rbac}
@@ -103,11 +109,23 @@ pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   */
   readonly version?: string;
   /**
+  * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#zone DataFusionInstance#zone}
+  */
+  readonly zone?: string;
+  /**
   * crypto_key_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#crypto_key_config DataFusionInstance#crypto_key_config}
   */
   readonly cryptoKeyConfig?: DataFusionInstanceCryptoKeyConfig;
+  /**
+  * event_publish_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#event_publish_config DataFusionInstance#event_publish_config}
+  */
+  readonly eventPublishConfig?: DataFusionInstanceEventPublishConfig;
   /**
   * network_config block
   * 
@@ -183,6 +201,96 @@ export class DataFusionInstanceCryptoKeyConfigOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get keyReferenceInput() {
     return this._keyReference;
+  }
+}
+export interface DataFusionInstanceEventPublishConfig {
+  /**
+  * Option to enable Event Publishing.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#enabled DataFusionInstance#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * The resource name of the Pub/Sub topic. Format: projects/{projectId}/topics/{topic_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#topic DataFusionInstance#topic}
+  */
+  readonly topic: string;
+}
+
+export function dataFusionInstanceEventPublishConfigToTerraform(struct?: DataFusionInstanceEventPublishConfigOutputReference | DataFusionInstanceEventPublishConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
+export class DataFusionInstanceEventPublishConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFusionInstanceEventPublishConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._topic !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.topic = this._topic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFusionInstanceEventPublishConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._topic = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._topic = value.topic;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // topic - computed: false, optional: false, required: true
+  private _topic?: string; 
+  public get topic() {
+    return this.getStringAttribute('topic');
+  }
+  public set topic(value: string) {
+    this._topic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicInput() {
+    return this._topic;
   }
 }
 export interface DataFusionInstanceNetworkConfig {
@@ -434,7 +542,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_fusion_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -447,6 +555,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     });
     this._dataprocServiceAccount = config.dataprocServiceAccount;
     this._description = config.description;
+    this._displayName = config.displayName;
     this._enableRbac = config.enableRbac;
     this._enableStackdriverLogging = config.enableStackdriverLogging;
     this._enableStackdriverMonitoring = config.enableStackdriverMonitoring;
@@ -459,7 +568,9 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     this._region = config.region;
     this._type = config.type;
     this._version = config.version;
+    this._zone = config.zone;
     this._cryptoKeyConfig.internalValue = config.cryptoKeyConfig;
+    this._eventPublishConfig.internalValue = config.eventPublishConfig;
     this._networkConfig.internalValue = config.networkConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -467,6 +578,11 @@ export class DataFusionInstance extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // api_endpoint - computed: true, optional: false, required: false
+  public get apiEndpoint() {
+    return this.getStringAttribute('api_endpoint');
+  }
 
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
@@ -503,6 +619,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // display_name - computed: false, optional: true, required: false
+  private _displayName?: string; 
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName;
   }
 
   // enable_rbac - computed: false, optional: true, required: false
@@ -619,6 +751,11 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return this._options;
   }
 
+  // p4_service_account - computed: true, optional: false, required: false
+  public get p4ServiceAccount() {
+    return this.getStringAttribute('p4_service_account');
+  }
+
   // private_instance - computed: false, optional: true, required: false
   private _privateInstance?: boolean | cdktf.IResolvable; 
   public get privateInstance() {
@@ -721,6 +858,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return this._version;
   }
 
+  // zone - computed: true, optional: true, required: false
+  private _zone?: string; 
+  public get zone() {
+    return this.getStringAttribute('zone');
+  }
+  public set zone(value: string) {
+    this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone;
+  }
+
   // crypto_key_config - computed: false, optional: true, required: false
   private _cryptoKeyConfig = new DataFusionInstanceCryptoKeyConfigOutputReference(this, "crypto_key_config");
   public get cryptoKeyConfig() {
@@ -735,6 +888,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get cryptoKeyConfigInput() {
     return this._cryptoKeyConfig.internalValue;
+  }
+
+  // event_publish_config - computed: false, optional: true, required: false
+  private _eventPublishConfig = new DataFusionInstanceEventPublishConfigOutputReference(this, "event_publish_config");
+  public get eventPublishConfig() {
+    return this._eventPublishConfig;
+  }
+  public putEventPublishConfig(value: DataFusionInstanceEventPublishConfig) {
+    this._eventPublishConfig.internalValue = value;
+  }
+  public resetEventPublishConfig() {
+    this._eventPublishConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventPublishConfigInput() {
+    return this._eventPublishConfig.internalValue;
   }
 
   // network_config - computed: false, optional: true, required: false
@@ -777,6 +946,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return {
       dataproc_service_account: cdktf.stringToTerraform(this._dataprocServiceAccount),
       description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
       enable_rbac: cdktf.booleanToTerraform(this._enableRbac),
       enable_stackdriver_logging: cdktf.booleanToTerraform(this._enableStackdriverLogging),
       enable_stackdriver_monitoring: cdktf.booleanToTerraform(this._enableStackdriverMonitoring),
@@ -789,7 +959,9 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       region: cdktf.stringToTerraform(this._region),
       type: cdktf.stringToTerraform(this._type),
       version: cdktf.stringToTerraform(this._version),
+      zone: cdktf.stringToTerraform(this._zone),
       crypto_key_config: dataFusionInstanceCryptoKeyConfigToTerraform(this._cryptoKeyConfig.internalValue),
+      event_publish_config: dataFusionInstanceEventPublishConfigToTerraform(this._eventPublishConfig.internalValue),
       network_config: dataFusionInstanceNetworkConfigToTerraform(this._networkConfig.internalValue),
       timeouts: dataFusionInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };

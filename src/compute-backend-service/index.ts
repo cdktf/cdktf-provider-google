@@ -692,6 +692,13 @@ export interface ComputeBackendServiceCdnPolicyCacheKeyPolicy {
   */
   readonly includeHost?: boolean | cdktf.IResolvable;
   /**
+  * Allows HTTP request headers (by name) to be used in the
+cache key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#include_http_headers ComputeBackendService#include_http_headers}
+  */
+  readonly includeHttpHeaders?: string[];
+  /**
   * Names of cookies to include in cache keys.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#include_named_cookies ComputeBackendService#include_named_cookies}
@@ -746,6 +753,7 @@ export function computeBackendServiceCdnPolicyCacheKeyPolicyToTerraform(struct?:
   }
   return {
     include_host: cdktf.booleanToTerraform(struct!.includeHost),
+    include_http_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeHttpHeaders),
     include_named_cookies: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includeNamedCookies),
     include_protocol: cdktf.booleanToTerraform(struct!.includeProtocol),
     include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
@@ -771,6 +779,10 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
     if (this._includeHost !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeHost = this._includeHost;
+    }
+    if (this._includeHttpHeaders !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeHttpHeaders = this._includeHttpHeaders;
     }
     if (this._includeNamedCookies !== undefined) {
       hasAnyValues = true;
@@ -799,6 +811,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
     if (value === undefined) {
       this.isEmptyObject = false;
       this._includeHost = undefined;
+      this._includeHttpHeaders = undefined;
       this._includeNamedCookies = undefined;
       this._includeProtocol = undefined;
       this._includeQueryString = undefined;
@@ -808,6 +821,7 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._includeHost = value.includeHost;
+      this._includeHttpHeaders = value.includeHttpHeaders;
       this._includeNamedCookies = value.includeNamedCookies;
       this._includeProtocol = value.includeProtocol;
       this._includeQueryString = value.includeQueryString;
@@ -830,6 +844,22 @@ export class ComputeBackendServiceCdnPolicyCacheKeyPolicyOutputReference extends
   // Temporarily expose input value. Use with caution.
   public get includeHostInput() {
     return this._includeHost;
+  }
+
+  // include_http_headers - computed: false, optional: true, required: false
+  private _includeHttpHeaders?: string[]; 
+  public get includeHttpHeaders() {
+    return this.getListAttribute('include_http_headers');
+  }
+  public set includeHttpHeaders(value: string[]) {
+    this._includeHttpHeaders = value;
+  }
+  public resetIncludeHttpHeaders() {
+    this._includeHttpHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeHttpHeadersInput() {
+    return this._includeHttpHeaders;
   }
 
   // include_named_cookies - computed: false, optional: true, required: false
@@ -2911,7 +2941,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

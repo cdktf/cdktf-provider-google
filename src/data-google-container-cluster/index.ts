@@ -2284,6 +2284,11 @@ export class DataGoogleContainerClusterMasterAuthorizedNetworksConfigOutputRefer
   public get cidrBlocks() {
     return this._cidrBlocks;
   }
+
+  // gcp_public_cidrs_access_enabled - computed: true, optional: false, required: false
+  public get gcpPublicCidrsAccessEnabled() {
+    return this.getBooleanAttribute('gcp_public_cidrs_access_enabled');
+  }
 }
 
 export class DataGoogleContainerClusterMasterAuthorizedNetworksConfigList extends cdktf.ComplexList {
@@ -3190,6 +3195,12 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
     return this._reservationAffinity;
   }
 
+  // resource_labels - computed: true, optional: false, required: false
+  private _resourceLabels = new cdktf.StringMap(this, "resource_labels");
+  public get resourceLabels() {
+    return this._resourceLabels;
+  }
+
   // service_account - computed: true, optional: false, required: false
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
@@ -3393,6 +3404,85 @@ export class DataGoogleContainerClusterNodePoolManagementList extends cdktf.Comp
   */
   public get(index: number): DataGoogleContainerClusterNodePoolManagementOutputReference {
     return new DataGoogleContainerClusterNodePoolManagementOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleContainerClusterNodePoolNetworkConfig {
+}
+
+export function dataGoogleContainerClusterNodePoolNetworkConfigToTerraform(struct?: DataGoogleContainerClusterNodePoolNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePoolNetworkConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePoolNetworkConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // create_pod_range - computed: true, optional: false, required: false
+  public get createPodRange() {
+    return this.getBooleanAttribute('create_pod_range');
+  }
+
+  // enable_private_nodes - computed: true, optional: false, required: false
+  public get enablePrivateNodes() {
+    return this.getBooleanAttribute('enable_private_nodes');
+  }
+
+  // pod_ipv4_cidr_block - computed: true, optional: false, required: false
+  public get podIpv4CidrBlock() {
+    return this.getStringAttribute('pod_ipv4_cidr_block');
+  }
+
+  // pod_range - computed: true, optional: false, required: false
+  public get podRange() {
+    return this.getStringAttribute('pod_range');
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNetworkConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolNetworkConfigOutputReference {
+    return new DataGoogleContainerClusterNodePoolNetworkConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleContainerClusterNodePoolNodeConfigGcfsConfig {
@@ -4084,6 +4174,12 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
     return this._reservationAffinity;
   }
 
+  // resource_labels - computed: true, optional: false, required: false
+  private _resourceLabels = new cdktf.StringMap(this, "resource_labels");
+  public get resourceLabels() {
+    return this._resourceLabels;
+  }
+
   // service_account - computed: true, optional: false, required: false
   public get serviceAccount() {
     return this.getStringAttribute('service_account');
@@ -4440,6 +4536,12 @@ export class DataGoogleContainerClusterNodePoolOutputReference extends cdktf.Com
   // name_prefix - computed: true, optional: false, required: false
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
+  }
+
+  // network_config - computed: true, optional: false, required: false
+  private _networkConfig = new DataGoogleContainerClusterNodePoolNetworkConfigList(this, "network_config", false);
+  public get networkConfig() {
+    return this._networkConfig;
   }
 
   // node_config - computed: true, optional: false, required: false
@@ -4956,6 +5058,11 @@ export class DataGoogleContainerClusterPrivateClusterConfigOutputReference exten
     return this.getStringAttribute('private_endpoint');
   }
 
+  // private_endpoint_subnetwork - computed: true, optional: false, required: false
+  public get privateEndpointSubnetwork() {
+    return this.getStringAttribute('private_endpoint_subnetwork');
+  }
+
   // public_endpoint - computed: true, optional: false, required: false
   public get publicEndpoint() {
     return this.getStringAttribute('public_endpoint');
@@ -5402,7 +5509,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.44.1',
+        providerVersion: '4.45.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
