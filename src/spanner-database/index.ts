@@ -298,7 +298,7 @@ export class SpannerDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

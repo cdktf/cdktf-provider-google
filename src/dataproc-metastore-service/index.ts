@@ -90,6 +90,12 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
   */
   readonly maintenanceWindow?: DataprocMetastoreServiceMaintenanceWindow;
   /**
+  * network_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#network_config DataprocMetastoreService#network_config}
+  */
+  readonly networkConfig?: DataprocMetastoreServiceNetworkConfig;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#timeouts DataprocMetastoreService#timeouts}
@@ -556,6 +562,174 @@ export class DataprocMetastoreServiceMaintenanceWindowOutputReference extends cd
     return this._hourOfDay;
   }
 }
+export interface DataprocMetastoreServiceNetworkConfigConsumers {
+  /**
+  * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint.
+It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network.
+There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form:
+'projects/{projectNumber}/regions/{region_id}/subnetworks/{subnetwork_id}
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#subnetwork DataprocMetastoreService#subnetwork}
+  */
+  readonly subnetwork: string;
+}
+
+export function dataprocMetastoreServiceNetworkConfigConsumersToTerraform(struct?: DataprocMetastoreServiceNetworkConfigConsumers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
+  }
+}
+
+export class DataprocMetastoreServiceNetworkConfigConsumersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocMetastoreServiceNetworkConfigConsumers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._subnetwork !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetwork = this._subnetwork;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocMetastoreServiceNetworkConfigConsumers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._subnetwork = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._subnetwork = value.subnetwork;
+    }
+  }
+
+  // endpoint_uri - computed: true, optional: false, required: false
+  public get endpointUri() {
+    return this.getStringAttribute('endpoint_uri');
+  }
+
+  // subnetwork - computed: false, optional: false, required: true
+  private _subnetwork?: string; 
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+  public set subnetwork(value: string) {
+    this._subnetwork = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetworkInput() {
+    return this._subnetwork;
+  }
+}
+
+export class DataprocMetastoreServiceNetworkConfigConsumersList extends cdktf.ComplexList {
+  public internalValue? : DataprocMetastoreServiceNetworkConfigConsumers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocMetastoreServiceNetworkConfigConsumersOutputReference {
+    return new DataprocMetastoreServiceNetworkConfigConsumersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataprocMetastoreServiceNetworkConfig {
+  /**
+  * consumers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#consumers DataprocMetastoreService#consumers}
+  */
+  readonly consumers: DataprocMetastoreServiceNetworkConfigConsumers[] | cdktf.IResolvable;
+}
+
+export function dataprocMetastoreServiceNetworkConfigToTerraform(struct?: DataprocMetastoreServiceNetworkConfigOutputReference | DataprocMetastoreServiceNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    consumers: cdktf.listMapper(dataprocMetastoreServiceNetworkConfigConsumersToTerraform, true)(struct!.consumers),
+  }
+}
+
+export class DataprocMetastoreServiceNetworkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocMetastoreServiceNetworkConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumers = this._consumers?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocMetastoreServiceNetworkConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._consumers.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._consumers.internalValue = value.consumers;
+    }
+  }
+
+  // consumers - computed: false, optional: false, required: true
+  private _consumers = new DataprocMetastoreServiceNetworkConfigConsumersList(this, "consumers", false);
+  public get consumers() {
+    return this._consumers;
+  }
+  public putConsumers(value: DataprocMetastoreServiceNetworkConfigConsumers[] | cdktf.IResolvable) {
+    this._consumers.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumersInput() {
+    return this._consumers.internalValue;
+  }
+}
 export interface DataprocMetastoreServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#create DataprocMetastoreService#create}
@@ -712,7 +886,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_metastore_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -736,6 +910,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
     this._encryptionConfig.internalValue = config.encryptionConfig;
     this._hiveMetastoreConfig.internalValue = config.hiveMetastoreConfig;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._networkConfig.internalValue = config.networkConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -978,6 +1153,22 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
     return this._maintenanceWindow.internalValue;
   }
 
+  // network_config - computed: false, optional: true, required: false
+  private _networkConfig = new DataprocMetastoreServiceNetworkConfigOutputReference(this, "network_config");
+  public get networkConfig() {
+    return this._networkConfig;
+  }
+  public putNetworkConfig(value: DataprocMetastoreServiceNetworkConfig) {
+    this._networkConfig.internalValue = value;
+  }
+  public resetNetworkConfig() {
+    this._networkConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkConfigInput() {
+    return this._networkConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataprocMetastoreServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1013,6 +1204,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
       encryption_config: dataprocMetastoreServiceEncryptionConfigToTerraform(this._encryptionConfig.internalValue),
       hive_metastore_config: dataprocMetastoreServiceHiveMetastoreConfigToTerraform(this._hiveMetastoreConfig.internalValue),
       maintenance_window: dataprocMetastoreServiceMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
+      network_config: dataprocMetastoreServiceNetworkConfigToTerraform(this._networkConfig.internalValue),
       timeouts: dataprocMetastoreServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

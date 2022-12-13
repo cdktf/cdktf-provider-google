@@ -284,7 +284,7 @@ export class HealthcareDicomStore extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dicom_store',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

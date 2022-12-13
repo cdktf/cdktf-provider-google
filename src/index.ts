@@ -100,6 +100,8 @@ export * as cloudRunService from './cloud-run-service';
 export * as cloudRunServiceIamBinding from './cloud-run-service-iam-binding';
 export * as cloudRunServiceIamMember from './cloud-run-service-iam-member';
 export * as cloudRunServiceIamPolicy from './cloud-run-service-iam-policy';
+export * as cloudRunV2Job from './cloud-run-v2-job';
+export * as cloudRunV2Service from './cloud-run-v2-service';
 export * as cloudSchedulerJob from './cloud-scheduler-job';
 export * as cloudTasksQueue from './cloud-tasks-queue';
 export * as cloudTasksQueueIamBinding from './cloud-tasks-queue-iam-binding';
