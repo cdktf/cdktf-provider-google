@@ -181,7 +181,7 @@ export class DataCatalogEntryGroupIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_entry_group_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

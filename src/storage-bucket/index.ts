@@ -75,6 +75,12 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   */
   readonly uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
   /**
+  * autoclass block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#autoclass StorageBucket#autoclass}
+  */
+  readonly autoclass?: StorageBucketAutoclass;
+  /**
   * cors block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#cors StorageBucket#cors}
@@ -128,6 +134,70 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#website StorageBucket#website}
   */
   readonly website?: StorageBucketWebsite;
+}
+export interface StorageBucketAutoclass {
+  /**
+  * While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#enabled StorageBucket#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function storageBucketAutoclassToTerraform(struct?: StorageBucketAutoclassOutputReference | StorageBucketAutoclass): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class StorageBucketAutoclassOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): StorageBucketAutoclass | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBucketAutoclass | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
 }
 export interface StorageBucketCors {
   /**
@@ -451,7 +521,7 @@ export interface StorageBucketLifecycleRuleAction {
   */
   readonly storageClass?: string;
   /**
-  * The type of the action of this Lifecycle Rule. Supported values include: Delete and SetStorageClass.
+  * The type of the action of this Lifecycle Rule. Supported values include: Delete, SetStorageClass and AbortIncompleteMultipartUpload.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket#type StorageBucket#type}
   */
@@ -1518,7 +1588,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1540,6 +1610,7 @@ export class StorageBucket extends cdktf.TerraformResource {
     this._requesterPays = config.requesterPays;
     this._storageClass = config.storageClass;
     this._uniformBucketLevelAccess = config.uniformBucketLevelAccess;
+    this._autoclass.internalValue = config.autoclass;
     this._cors.internalValue = config.cors;
     this._customPlacementConfig.internalValue = config.customPlacementConfig;
     this._encryption.internalValue = config.encryption;
@@ -1735,6 +1806,22 @@ export class StorageBucket extends cdktf.TerraformResource {
     return this.getStringAttribute('url');
   }
 
+  // autoclass - computed: false, optional: true, required: false
+  private _autoclass = new StorageBucketAutoclassOutputReference(this, "autoclass");
+  public get autoclass() {
+    return this._autoclass;
+  }
+  public putAutoclass(value: StorageBucketAutoclass) {
+    this._autoclass.internalValue = value;
+  }
+  public resetAutoclass() {
+    this._autoclass.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoclassInput() {
+    return this._autoclass.internalValue;
+  }
+
   // cors - computed: false, optional: true, required: false
   private _cors = new StorageBucketCorsList(this, "cors", false);
   public get cors() {
@@ -1896,6 +1983,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       requester_pays: cdktf.booleanToTerraform(this._requesterPays),
       storage_class: cdktf.stringToTerraform(this._storageClass),
       uniform_bucket_level_access: cdktf.booleanToTerraform(this._uniformBucketLevelAccess),
+      autoclass: storageBucketAutoclassToTerraform(this._autoclass.internalValue),
       cors: cdktf.listMapper(storageBucketCorsToTerraform, true)(this._cors.internalValue),
       custom_placement_config: storageBucketCustomPlacementConfigToTerraform(this._customPlacementConfig.internalValue),
       encryption: storageBucketEncryptionToTerraform(this._encryption.internalValue),

@@ -45,7 +45,7 @@ export interface VertexAiIndexConfig extends cdktf.TerraformMetaArguments {
   */
   readonly project?: string;
   /**
-  * The region of the Metadata Store. eg us-central1
+  * The region of the index. eg us-central1
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_index#region VertexAiIndex#region}
   */
@@ -908,7 +908,7 @@ export class VertexAiIndex extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_index',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

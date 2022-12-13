@@ -173,7 +173,7 @@ export class TagsTagKeyIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_tags_tag_key_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

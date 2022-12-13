@@ -201,7 +201,7 @@ export class PubsubLiteReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_lite_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

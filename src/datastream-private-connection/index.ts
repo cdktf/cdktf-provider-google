@@ -55,6 +55,76 @@ export interface DatastreamPrivateConnectionConfig extends cdktf.TerraformMetaAr
   */
   readonly vpcPeeringConfig: DatastreamPrivateConnectionVpcPeeringConfig;
 }
+export interface DatastreamPrivateConnectionError {
+}
+
+export function datastreamPrivateConnectionErrorToTerraform(struct?: DatastreamPrivateConnectionError): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatastreamPrivateConnectionErrorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamPrivateConnectionError | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamPrivateConnectionError | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // details - computed: true, optional: false, required: false
+  private _details = new cdktf.StringMap(this, "details");
+  public get details() {
+    return this._details;
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+}
+
+export class DatastreamPrivateConnectionErrorList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamPrivateConnectionErrorOutputReference {
+    return new DatastreamPrivateConnectionErrorOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DatastreamPrivateConnectionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_private_connection#create DatastreamPrivateConnection#create}
@@ -275,7 +345,7 @@ export class DatastreamPrivateConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_private_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -311,6 +381,12 @@ export class DatastreamPrivateConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName;
+  }
+
+  // error - computed: true, optional: false, required: false
+  private _error = new DatastreamPrivateConnectionErrorList(this, "error", false);
+  public get error() {
+    return this._error;
   }
 
   // id - computed: true, optional: true, required: false
@@ -390,6 +466,11 @@ export class DatastreamPrivateConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // state - computed: true, optional: false, required: false
+  public get state() {
+    return this.getStringAttribute('state');
   }
 
   // timeouts - computed: false, optional: true, required: false

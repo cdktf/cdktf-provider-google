@@ -3616,6 +3616,70 @@ export class ContainerClusterMeshCertificatesOutputReference extends cdktf.Compl
     return this._enableCertificates;
   }
 }
+export interface ContainerClusterMonitoringConfigManagedPrometheus {
+  /**
+  * Whether or not the managed collection is enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterMonitoringConfigManagedPrometheusToTerraform(struct?: ContainerClusterMonitoringConfigManagedPrometheusOutputReference | ContainerClusterMonitoringConfigManagedPrometheus): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerClusterMonitoringConfigManagedPrometheusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterMonitoringConfigManagedPrometheus | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterMonitoringConfigManagedPrometheus | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
 export interface ContainerClusterMonitoringConfig {
   /**
   * GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER.
@@ -3623,6 +3687,12 @@ export interface ContainerClusterMonitoringConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enable_components ContainerCluster#enable_components}
   */
   readonly enableComponents: string[];
+  /**
+  * managed_prometheus block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#managed_prometheus ContainerCluster#managed_prometheus}
+  */
+  readonly managedPrometheus?: ContainerClusterMonitoringConfigManagedPrometheus;
 }
 
 export function containerClusterMonitoringConfigToTerraform(struct?: ContainerClusterMonitoringConfigOutputReference | ContainerClusterMonitoringConfig): any {
@@ -3632,6 +3702,7 @@ export function containerClusterMonitoringConfigToTerraform(struct?: ContainerCl
   }
   return {
     enable_components: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.enableComponents),
+    managed_prometheus: containerClusterMonitoringConfigManagedPrometheusToTerraform(struct!.managedPrometheus),
   }
 }
 
@@ -3653,6 +3724,10 @@ export class ContainerClusterMonitoringConfigOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.enableComponents = this._enableComponents;
     }
+    if (this._managedPrometheus?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.managedPrometheus = this._managedPrometheus?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -3660,10 +3735,12 @@ export class ContainerClusterMonitoringConfigOutputReference extends cdktf.Compl
     if (value === undefined) {
       this.isEmptyObject = false;
       this._enableComponents = undefined;
+      this._managedPrometheus.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._enableComponents = value.enableComponents;
+      this._managedPrometheus.internalValue = value.managedPrometheus;
     }
   }
 
@@ -3678,6 +3755,22 @@ export class ContainerClusterMonitoringConfigOutputReference extends cdktf.Compl
   // Temporarily expose input value. Use with caution.
   public get enableComponentsInput() {
     return this._enableComponents;
+  }
+
+  // managed_prometheus - computed: false, optional: true, required: false
+  private _managedPrometheus = new ContainerClusterMonitoringConfigManagedPrometheusOutputReference(this, "managed_prometheus");
+  public get managedPrometheus() {
+    return this._managedPrometheus;
+  }
+  public putManagedPrometheus(value: ContainerClusterMonitoringConfigManagedPrometheus) {
+    this._managedPrometheus.internalValue = value;
+  }
+  public resetManagedPrometheus() {
+    this._managedPrometheus.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedPrometheusInput() {
+    return this._managedPrometheus.internalValue;
   }
 }
 export interface ContainerClusterNetworkPolicy {
@@ -9478,7 +9571,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

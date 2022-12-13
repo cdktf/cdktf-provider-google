@@ -128,6 +128,10 @@ export interface GoogleProviderConfig {
   */
   readonly cloudRunCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}
+  */
+  readonly cloudRunV2CustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}
   */
   readonly cloudSchedulerCustomEndpoint?: string;
@@ -513,7 +517,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -548,6 +552,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._cloudIotCustomEndpoint = config.cloudIotCustomEndpoint;
     this._cloudResourceManagerCustomEndpoint = config.cloudResourceManagerCustomEndpoint;
     this._cloudRunCustomEndpoint = config.cloudRunCustomEndpoint;
+    this._cloudRunV2CustomEndpoint = config.cloudRunV2CustomEndpoint;
     this._cloudSchedulerCustomEndpoint = config.cloudSchedulerCustomEndpoint;
     this._cloudTasksCustomEndpoint = config.cloudTasksCustomEndpoint;
     this._clouddeployCustomEndpoint = config.clouddeployCustomEndpoint;
@@ -1115,6 +1120,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get cloudRunCustomEndpointInput() {
     return this._cloudRunCustomEndpoint;
+  }
+
+  // cloud_run_v2_custom_endpoint - computed: false, optional: true, required: false
+  private _cloudRunV2CustomEndpoint?: string; 
+  public get cloudRunV2CustomEndpoint() {
+    return this._cloudRunV2CustomEndpoint;
+  }
+  public set cloudRunV2CustomEndpoint(value: string | undefined) {
+    this._cloudRunV2CustomEndpoint = value;
+  }
+  public resetCloudRunV2CustomEndpoint() {
+    this._cloudRunV2CustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudRunV2CustomEndpointInput() {
+    return this._cloudRunV2CustomEndpoint;
   }
 
   // cloud_scheduler_custom_endpoint - computed: false, optional: true, required: false
@@ -2481,6 +2502,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       cloud_iot_custom_endpoint: cdktf.stringToTerraform(this._cloudIotCustomEndpoint),
       cloud_resource_manager_custom_endpoint: cdktf.stringToTerraform(this._cloudResourceManagerCustomEndpoint),
       cloud_run_custom_endpoint: cdktf.stringToTerraform(this._cloudRunCustomEndpoint),
+      cloud_run_v2_custom_endpoint: cdktf.stringToTerraform(this._cloudRunV2CustomEndpoint),
       cloud_scheduler_custom_endpoint: cdktf.stringToTerraform(this._cloudSchedulerCustomEndpoint),
       cloud_tasks_custom_endpoint: cdktf.stringToTerraform(this._cloudTasksCustomEndpoint),
       clouddeploy_custom_endpoint: cdktf.stringToTerraform(this._clouddeployCustomEndpoint),

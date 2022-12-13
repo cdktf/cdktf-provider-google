@@ -121,6 +121,18 @@ Valid values are:
   */
   readonly awsV4Authentication?: NetworkServicesEdgeCacheOriginAwsV4Authentication;
   /**
+  * origin_override_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#origin_override_action NetworkServicesEdgeCacheOrigin#origin_override_action}
+  */
+  readonly originOverrideAction?: NetworkServicesEdgeCacheOriginOriginOverrideAction;
+  /**
+  * origin_redirect block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#origin_redirect NetworkServicesEdgeCacheOrigin#origin_redirect}
+  */
+  readonly originRedirect?: NetworkServicesEdgeCacheOriginOriginRedirect;
+  /**
   * timeout block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#timeout NetworkServicesEdgeCacheOrigin#timeout}
@@ -249,6 +261,468 @@ export class NetworkServicesEdgeCacheOriginAwsV4AuthenticationOutputReference ex
   // Temporarily expose input value. Use with caution.
   public get secretAccessKeyVersionInput() {
     return this._secretAccessKeyVersion;
+  }
+}
+export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd {
+  /**
+  * The name of the header to add.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#header_name NetworkServicesEdgeCacheOrigin#header_name}
+  */
+  readonly headerName: string;
+  /**
+  * The value of the header to add.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#header_value NetworkServicesEdgeCacheOrigin#header_value}
+  */
+  readonly headerValue: string;
+  /**
+  * Whether to replace all existing headers with the same name.
+
+By default, added header values are appended
+to the response or request headers with the
+same field names. The added values are
+separated by commas.
+
+To overwrite existing values, set 'replace' to 'true'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#replace NetworkServicesEdgeCacheOrigin#replace}
+  */
+  readonly replace?: boolean | cdktf.IResolvable;
+}
+
+export function networkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddToTerraform(struct?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+    replace: cdktf.booleanToTerraform(struct!.replace),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerName = this._headerName;
+    }
+    if (this._headerValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerValue = this._headerValue;
+    }
+    if (this._replace !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replace = this._replace;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._headerName = undefined;
+      this._headerValue = undefined;
+      this._replace = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._headerName = value.headerName;
+      this._headerValue = value.headerValue;
+      this._replace = value.replace;
+    }
+  }
+
+  // header_name - computed: false, optional: false, required: true
+  private _headerName?: string; 
+  public get headerName() {
+    return this.getStringAttribute('header_name');
+  }
+  public set headerName(value: string) {
+    this._headerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerNameInput() {
+    return this._headerName;
+  }
+
+  // header_value - computed: false, optional: false, required: true
+  private _headerValue?: string; 
+  public get headerValue() {
+    return this.getStringAttribute('header_value');
+  }
+  public set headerValue(value: string) {
+    this._headerValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerValueInput() {
+    return this._headerValue;
+  }
+
+  // replace - computed: false, optional: true, required: false
+  private _replace?: boolean | cdktf.IResolvable; 
+  public get replace() {
+    return this.getBooleanAttribute('replace');
+  }
+  public set replace(value: boolean | cdktf.IResolvable) {
+    this._replace = value;
+  }
+  public resetReplace() {
+    this._replace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replaceInput() {
+    return this._replace;
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddList extends cdktf.ComplexList {
+  public internalValue? : NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddOutputReference {
+    return new NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction {
+  /**
+  * request_headers_to_add block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#request_headers_to_add NetworkServicesEdgeCacheOrigin#request_headers_to_add}
+  */
+  readonly requestHeadersToAdd?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
+}
+
+export function networkServicesEdgeCacheOriginOriginOverrideActionHeaderActionToTerraform(struct?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionOutputReference | NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    request_headers_to_add: cdktf.listMapper(networkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddToTerraform, true)(struct!.requestHeadersToAdd),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._requestHeadersToAdd?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.requestHeadersToAdd = this._requestHeadersToAdd?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._requestHeadersToAdd.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._requestHeadersToAdd.internalValue = value.requestHeadersToAdd;
+    }
+  }
+
+  // request_headers_to_add - computed: false, optional: true, required: false
+  private _requestHeadersToAdd = new NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAddList(this, "request_headers_to_add", false);
+  public get requestHeadersToAdd() {
+    return this._requestHeadersToAdd;
+  }
+  public putRequestHeadersToAdd(value: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable) {
+    this._requestHeadersToAdd.internalValue = value;
+  }
+  public resetRequestHeadersToAdd() {
+    this._requestHeadersToAdd.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeadersToAddInput() {
+    return this._requestHeadersToAdd.internalValue;
+  }
+}
+export interface NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite {
+  /**
+  * Prior to forwarding the request to the selected
+origin, the request's host header is replaced with
+contents of the hostRewrite.
+
+This value must be between 1 and 255 characters.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#host_rewrite NetworkServicesEdgeCacheOrigin#host_rewrite}
+  */
+  readonly hostRewrite?: string;
+}
+
+export function networkServicesEdgeCacheOriginOriginOverrideActionUrlRewriteToTerraform(struct?: NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewriteOutputReference | NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    host_rewrite: cdktf.stringToTerraform(struct!.hostRewrite),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewriteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hostRewrite !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hostRewrite = this._hostRewrite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hostRewrite = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hostRewrite = value.hostRewrite;
+    }
+  }
+
+  // host_rewrite - computed: false, optional: true, required: false
+  private _hostRewrite?: string; 
+  public get hostRewrite() {
+    return this.getStringAttribute('host_rewrite');
+  }
+  public set hostRewrite(value: string) {
+    this._hostRewrite = value;
+  }
+  public resetHostRewrite() {
+    this._hostRewrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostRewriteInput() {
+    return this._hostRewrite;
+  }
+}
+export interface NetworkServicesEdgeCacheOriginOriginOverrideAction {
+  /**
+  * header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#header_action NetworkServicesEdgeCacheOrigin#header_action}
+  */
+  readonly headerAction?: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction;
+  /**
+  * url_rewrite block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#url_rewrite NetworkServicesEdgeCacheOrigin#url_rewrite}
+  */
+  readonly urlRewrite?: NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite;
+}
+
+export function networkServicesEdgeCacheOriginOriginOverrideActionToTerraform(struct?: NetworkServicesEdgeCacheOriginOriginOverrideActionOutputReference | NetworkServicesEdgeCacheOriginOriginOverrideAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    header_action: networkServicesEdgeCacheOriginOriginOverrideActionHeaderActionToTerraform(struct!.headerAction),
+    url_rewrite: networkServicesEdgeCacheOriginOriginOverrideActionUrlRewriteToTerraform(struct!.urlRewrite),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginOverrideActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginOriginOverrideAction | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._headerAction?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.headerAction = this._headerAction?.internalValue;
+    }
+    if (this._urlRewrite?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.urlRewrite = this._urlRewrite?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginOriginOverrideAction | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._headerAction.internalValue = undefined;
+      this._urlRewrite.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._headerAction.internalValue = value.headerAction;
+      this._urlRewrite.internalValue = value.urlRewrite;
+    }
+  }
+
+  // header_action - computed: false, optional: true, required: false
+  private _headerAction = new NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderActionOutputReference(this, "header_action");
+  public get headerAction() {
+    return this._headerAction;
+  }
+  public putHeaderAction(value: NetworkServicesEdgeCacheOriginOriginOverrideActionHeaderAction) {
+    this._headerAction.internalValue = value;
+  }
+  public resetHeaderAction() {
+    this._headerAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headerActionInput() {
+    return this._headerAction.internalValue;
+  }
+
+  // url_rewrite - computed: false, optional: true, required: false
+  private _urlRewrite = new NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewriteOutputReference(this, "url_rewrite");
+  public get urlRewrite() {
+    return this._urlRewrite;
+  }
+  public putUrlRewrite(value: NetworkServicesEdgeCacheOriginOriginOverrideActionUrlRewrite) {
+    this._urlRewrite.internalValue = value;
+  }
+  public resetUrlRewrite() {
+    this._urlRewrite.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlRewriteInput() {
+    return this._urlRewrite.internalValue;
+  }
+}
+export interface NetworkServicesEdgeCacheOriginOriginRedirect {
+  /**
+  * The set of redirect response codes that the CDN
+follows. Values of
+[RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions)
+are accepted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin#redirect_conditions NetworkServicesEdgeCacheOrigin#redirect_conditions}
+  */
+  readonly redirectConditions?: string[];
+}
+
+export function networkServicesEdgeCacheOriginOriginRedirectToTerraform(struct?: NetworkServicesEdgeCacheOriginOriginRedirectOutputReference | NetworkServicesEdgeCacheOriginOriginRedirect): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    redirect_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.redirectConditions),
+  }
+}
+
+export class NetworkServicesEdgeCacheOriginOriginRedirectOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): NetworkServicesEdgeCacheOriginOriginRedirect | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._redirectConditions !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.redirectConditions = this._redirectConditions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkServicesEdgeCacheOriginOriginRedirect | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._redirectConditions = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._redirectConditions = value.redirectConditions;
+    }
+  }
+
+  // redirect_conditions - computed: false, optional: true, required: false
+  private _redirectConditions?: string[]; 
+  public get redirectConditions() {
+    return this.getListAttribute('redirect_conditions');
+  }
+  public set redirectConditions(value: string[]) {
+    this._redirectConditions = value;
+  }
+  public resetRedirectConditions() {
+    this._redirectConditions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectConditionsInput() {
+    return this._redirectConditions;
   }
 }
 export interface NetworkServicesEdgeCacheOriginTimeout {
@@ -583,7 +1057,7 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_origin',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -606,6 +1080,8 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     this._protocol = config.protocol;
     this._retryConditions = config.retryConditions;
     this._awsV4Authentication.internalValue = config.awsV4Authentication;
+    this._originOverrideAction.internalValue = config.originOverrideAction;
+    this._originRedirect.internalValue = config.originRedirect;
     this._timeout.internalValue = config.timeout;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -800,6 +1276,38 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
     return this._awsV4Authentication.internalValue;
   }
 
+  // origin_override_action - computed: false, optional: true, required: false
+  private _originOverrideAction = new NetworkServicesEdgeCacheOriginOriginOverrideActionOutputReference(this, "origin_override_action");
+  public get originOverrideAction() {
+    return this._originOverrideAction;
+  }
+  public putOriginOverrideAction(value: NetworkServicesEdgeCacheOriginOriginOverrideAction) {
+    this._originOverrideAction.internalValue = value;
+  }
+  public resetOriginOverrideAction() {
+    this._originOverrideAction.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originOverrideActionInput() {
+    return this._originOverrideAction.internalValue;
+  }
+
+  // origin_redirect - computed: false, optional: true, required: false
+  private _originRedirect = new NetworkServicesEdgeCacheOriginOriginRedirectOutputReference(this, "origin_redirect");
+  public get originRedirect() {
+    return this._originRedirect;
+  }
+  public putOriginRedirect(value: NetworkServicesEdgeCacheOriginOriginRedirect) {
+    this._originRedirect.internalValue = value;
+  }
+  public resetOriginRedirect() {
+    this._originRedirect.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get originRedirectInput() {
+    return this._originRedirect.internalValue;
+  }
+
   // timeout - computed: false, optional: true, required: false
   private _timeout = new NetworkServicesEdgeCacheOriginTimeoutOutputReference(this, "timeout");
   public get timeout() {
@@ -850,6 +1358,8 @@ export class NetworkServicesEdgeCacheOrigin extends cdktf.TerraformResource {
       protocol: cdktf.stringToTerraform(this._protocol),
       retry_conditions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._retryConditions),
       aws_v4_authentication: networkServicesEdgeCacheOriginAwsV4AuthenticationToTerraform(this._awsV4Authentication.internalValue),
+      origin_override_action: networkServicesEdgeCacheOriginOriginOverrideActionToTerraform(this._originOverrideAction.internalValue),
+      origin_redirect: networkServicesEdgeCacheOriginOriginRedirectToTerraform(this._originRedirect.internalValue),
       timeout: networkServicesEdgeCacheOriginTimeoutToTerraform(this._timeout.internalValue),
       timeouts: networkServicesEdgeCacheOriginTimeoutsToTerraform(this._timeouts.internalValue),
     };

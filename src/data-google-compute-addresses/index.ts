@@ -175,7 +175,7 @@ export class DataGoogleComputeAddresses extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_addresses',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

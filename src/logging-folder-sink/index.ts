@@ -340,7 +340,7 @@ export class LoggingFolderSink extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_folder_sink',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -382,6 +382,140 @@ export class DataGoogleDataprocMetastoreServiceMaintenanceWindowList extends cdk
     return new DataGoogleDataprocMetastoreServiceMaintenanceWindowOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleDataprocMetastoreServiceNetworkConfigConsumers {
+}
+
+export function dataGoogleDataprocMetastoreServiceNetworkConfigConsumersToTerraform(struct?: DataGoogleDataprocMetastoreServiceNetworkConfigConsumers): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceNetworkConfigConsumersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDataprocMetastoreServiceNetworkConfigConsumers | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDataprocMetastoreServiceNetworkConfigConsumers | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // endpoint_uri - computed: true, optional: false, required: false
+  public get endpointUri() {
+    return this.getStringAttribute('endpoint_uri');
+  }
+
+  // subnetwork - computed: true, optional: false, required: false
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceNetworkConfigConsumersList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDataprocMetastoreServiceNetworkConfigConsumersOutputReference {
+    return new DataGoogleDataprocMetastoreServiceNetworkConfigConsumersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleDataprocMetastoreServiceNetworkConfig {
+}
+
+export function dataGoogleDataprocMetastoreServiceNetworkConfigToTerraform(struct?: DataGoogleDataprocMetastoreServiceNetworkConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceNetworkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleDataprocMetastoreServiceNetworkConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleDataprocMetastoreServiceNetworkConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // consumers - computed: true, optional: false, required: false
+  private _consumers = new DataGoogleDataprocMetastoreServiceNetworkConfigConsumersList(this, "consumers", false);
+  public get consumers() {
+    return this._consumers;
+  }
+}
+
+export class DataGoogleDataprocMetastoreServiceNetworkConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleDataprocMetastoreServiceNetworkConfigOutputReference {
+    return new DataGoogleDataprocMetastoreServiceNetworkConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/google/d/dataproc_metastore_service google_dataproc_metastore_service}
@@ -409,7 +543,7 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
       terraformResourceType: 'google_dataproc_metastore_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.45.0',
+        providerVersion: '4.46.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -506,6 +640,12 @@ export class DataGoogleDataprocMetastoreService extends cdktf.TerraformDataSourc
   // network - computed: true, optional: false, required: false
   public get network() {
     return this.getStringAttribute('network');
+  }
+
+  // network_config - computed: true, optional: false, required: false
+  private _networkConfig = new DataGoogleDataprocMetastoreServiceNetworkConfigList(this, "network_config", false);
+  public get networkConfig() {
+    return this._networkConfig;
   }
 
   // port - computed: true, optional: false, required: false
