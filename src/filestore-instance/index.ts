@@ -407,6 +407,11 @@ export class FilestoreInstanceFileSharesOutputReference extends cdktf.ComplexObj
     return this._name;
   }
 
+  // source_backup - computed: true, optional: false, required: false
+  public get sourceBackup() {
+    return this.getStringAttribute('source_backup');
+  }
+
   // nfs_export_options - computed: false, optional: true, required: false
   private _nfsExportOptions = new FilestoreInstanceFileSharesNfsExportOptionsList(this, "nfs_export_options", false);
   public get nfsExportOptions() {
@@ -769,7 +774,7 @@ export class FilestoreInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_filestore_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

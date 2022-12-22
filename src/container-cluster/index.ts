@@ -231,6 +231,12 @@ export interface ContainerClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsConfig?: ContainerClusterDnsConfig;
   /**
+  * gateway_api_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#gateway_api_config ContainerCluster#gateway_api_config}
+  */
+  readonly gatewayApiConfig?: ContainerClusterGatewayApiConfig;
+  /**
   * ip_allocation_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#ip_allocation_policy ContainerCluster#ip_allocation_policy}
@@ -620,6 +626,68 @@ export class ContainerClusterAddonsConfigGcpFilestoreCsiDriverConfigOutputRefere
     return this._enabled;
   }
 }
+export interface ContainerClusterAddonsConfigGkeBackupAgentConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterAddonsConfigGkeBackupAgentConfigToTerraform(struct?: ContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference | ContainerClusterAddonsConfigGkeBackupAgentConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterAddonsConfigGkeBackupAgentConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterAddonsConfigGkeBackupAgentConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
 export interface ContainerClusterAddonsConfigHorizontalPodAutoscaling {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disabled ContainerCluster#disabled}
@@ -832,6 +900,12 @@ export interface ContainerClusterAddonsConfig {
   */
   readonly gcpFilestoreCsiDriverConfig?: ContainerClusterAddonsConfigGcpFilestoreCsiDriverConfig;
   /**
+  * gke_backup_agent_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#gke_backup_agent_config ContainerCluster#gke_backup_agent_config}
+  */
+  readonly gkeBackupAgentConfig?: ContainerClusterAddonsConfigGkeBackupAgentConfig;
+  /**
   * horizontal_pod_autoscaling block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#horizontal_pod_autoscaling ContainerCluster#horizontal_pod_autoscaling}
@@ -861,6 +935,7 @@ export function containerClusterAddonsConfigToTerraform(struct?: ContainerCluste
     dns_cache_config: containerClusterAddonsConfigDnsCacheConfigToTerraform(struct!.dnsCacheConfig),
     gce_persistent_disk_csi_driver_config: containerClusterAddonsConfigGcePersistentDiskCsiDriverConfigToTerraform(struct!.gcePersistentDiskCsiDriverConfig),
     gcp_filestore_csi_driver_config: containerClusterAddonsConfigGcpFilestoreCsiDriverConfigToTerraform(struct!.gcpFilestoreCsiDriverConfig),
+    gke_backup_agent_config: containerClusterAddonsConfigGkeBackupAgentConfigToTerraform(struct!.gkeBackupAgentConfig),
     horizontal_pod_autoscaling: containerClusterAddonsConfigHorizontalPodAutoscalingToTerraform(struct!.horizontalPodAutoscaling),
     http_load_balancing: containerClusterAddonsConfigHttpLoadBalancingToTerraform(struct!.httpLoadBalancing),
     network_policy_config: containerClusterAddonsConfigNetworkPolicyConfigToTerraform(struct!.networkPolicyConfig),
@@ -897,6 +972,10 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.gcpFilestoreCsiDriverConfig = this._gcpFilestoreCsiDriverConfig?.internalValue;
     }
+    if (this._gkeBackupAgentConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.gkeBackupAgentConfig = this._gkeBackupAgentConfig?.internalValue;
+    }
     if (this._horizontalPodAutoscaling?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.horizontalPodAutoscaling = this._horizontalPodAutoscaling?.internalValue;
@@ -919,6 +998,7 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
       this._dnsCacheConfig.internalValue = undefined;
       this._gcePersistentDiskCsiDriverConfig.internalValue = undefined;
       this._gcpFilestoreCsiDriverConfig.internalValue = undefined;
+      this._gkeBackupAgentConfig.internalValue = undefined;
       this._horizontalPodAutoscaling.internalValue = undefined;
       this._httpLoadBalancing.internalValue = undefined;
       this._networkPolicyConfig.internalValue = undefined;
@@ -929,6 +1009,7 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
       this._dnsCacheConfig.internalValue = value.dnsCacheConfig;
       this._gcePersistentDiskCsiDriverConfig.internalValue = value.gcePersistentDiskCsiDriverConfig;
       this._gcpFilestoreCsiDriverConfig.internalValue = value.gcpFilestoreCsiDriverConfig;
+      this._gkeBackupAgentConfig.internalValue = value.gkeBackupAgentConfig;
       this._horizontalPodAutoscaling.internalValue = value.horizontalPodAutoscaling;
       this._httpLoadBalancing.internalValue = value.httpLoadBalancing;
       this._networkPolicyConfig.internalValue = value.networkPolicyConfig;
@@ -997,6 +1078,22 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get gcpFilestoreCsiDriverConfigInput() {
     return this._gcpFilestoreCsiDriverConfig.internalValue;
+  }
+
+  // gke_backup_agent_config - computed: false, optional: true, required: false
+  private _gkeBackupAgentConfig = new ContainerClusterAddonsConfigGkeBackupAgentConfigOutputReference(this, "gke_backup_agent_config");
+  public get gkeBackupAgentConfig() {
+    return this._gkeBackupAgentConfig;
+  }
+  public putGkeBackupAgentConfig(value: ContainerClusterAddonsConfigGkeBackupAgentConfig) {
+    this._gkeBackupAgentConfig.internalValue = value;
+  }
+  public resetGkeBackupAgentConfig() {
+    this._gkeBackupAgentConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gkeBackupAgentConfigInput() {
+    return this._gkeBackupAgentConfig.internalValue;
   }
 
   // horizontal_pod_autoscaling - computed: false, optional: true, required: false
@@ -1474,6 +1571,385 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedI
     return this._enableSecureBoot;
   }
 }
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
+  /**
+  * Number of blue nodes to drain in a batch.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_node_count ContainerCluster#batch_node_count}
+  */
+  readonly batchNodeCount?: number;
+  /**
+  * Percentage of the bool pool nodes to drain in a batch. The range of this field should be (0.0, 1.0].
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_percentage ContainerCluster#batch_percentage}
+  */
+  readonly batchPercentage?: number;
+  /**
+  * Soak time after each batch gets drained.
+
+																			A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#batch_soak_duration ContainerCluster#batch_soak_duration}
+  */
+  readonly batchSoakDuration?: string;
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    batch_node_count: cdktf.numberToTerraform(struct!.batchNodeCount),
+    batch_percentage: cdktf.numberToTerraform(struct!.batchPercentage),
+    batch_soak_duration: cdktf.stringToTerraform(struct!.batchSoakDuration),
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._batchNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchNodeCount = this._batchNodeCount;
+    }
+    if (this._batchPercentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchPercentage = this._batchPercentage;
+    }
+    if (this._batchSoakDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.batchSoakDuration = this._batchSoakDuration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._batchNodeCount = undefined;
+      this._batchPercentage = undefined;
+      this._batchSoakDuration = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._batchNodeCount = value.batchNodeCount;
+      this._batchPercentage = value.batchPercentage;
+      this._batchSoakDuration = value.batchSoakDuration;
+    }
+  }
+
+  // batch_node_count - computed: true, optional: true, required: false
+  private _batchNodeCount?: number; 
+  public get batchNodeCount() {
+    return this.getNumberAttribute('batch_node_count');
+  }
+  public set batchNodeCount(value: number) {
+    this._batchNodeCount = value;
+  }
+  public resetBatchNodeCount() {
+    this._batchNodeCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchNodeCountInput() {
+    return this._batchNodeCount;
+  }
+
+  // batch_percentage - computed: true, optional: true, required: false
+  private _batchPercentage?: number; 
+  public get batchPercentage() {
+    return this.getNumberAttribute('batch_percentage');
+  }
+  public set batchPercentage(value: number) {
+    this._batchPercentage = value;
+  }
+  public resetBatchPercentage() {
+    this._batchPercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchPercentageInput() {
+    return this._batchPercentage;
+  }
+
+  // batch_soak_duration - computed: false, optional: true, required: false
+  private _batchSoakDuration?: string; 
+  public get batchSoakDuration() {
+    return this.getStringAttribute('batch_soak_duration');
+  }
+  public set batchSoakDuration(value: string) {
+    this._batchSoakDuration = value;
+  }
+  public resetBatchSoakDuration() {
+    this._batchSoakDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchSoakDurationInput() {
+    return this._batchSoakDuration;
+  }
+}
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings {
+  /**
+  * Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.
+
+																A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#node_pool_soak_duration ContainerCluster#node_pool_soak_duration}
+  */
+  readonly nodePoolSoakDuration?: string;
+  /**
+  * standard_rollout_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#standard_rollout_policy ContainerCluster#standard_rollout_policy}
+  */
+  readonly standardRolloutPolicy?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy;
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_pool_soak_duration: cdktf.stringToTerraform(struct!.nodePoolSoakDuration),
+    standard_rollout_policy: containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyToTerraform(struct!.standardRolloutPolicy),
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodePoolSoakDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodePoolSoakDuration = this._nodePoolSoakDuration;
+    }
+    if (this._standardRolloutPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.standardRolloutPolicy = this._standardRolloutPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodePoolSoakDuration = undefined;
+      this._standardRolloutPolicy.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodePoolSoakDuration = value.nodePoolSoakDuration;
+      this._standardRolloutPolicy.internalValue = value.standardRolloutPolicy;
+    }
+  }
+
+  // node_pool_soak_duration - computed: true, optional: true, required: false
+  private _nodePoolSoakDuration?: string; 
+  public get nodePoolSoakDuration() {
+    return this.getStringAttribute('node_pool_soak_duration');
+  }
+  public set nodePoolSoakDuration(value: string) {
+    this._nodePoolSoakDuration = value;
+  }
+  public resetNodePoolSoakDuration() {
+    this._nodePoolSoakDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodePoolSoakDurationInput() {
+    return this._nodePoolSoakDuration;
+  }
+
+  // standard_rollout_policy - computed: false, optional: true, required: false
+  private _standardRolloutPolicy = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicyOutputReference(this, "standard_rollout_policy");
+  public get standardRolloutPolicy() {
+    return this._standardRolloutPolicy;
+  }
+  public putStandardRolloutPolicy(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy) {
+    this._standardRolloutPolicy.internalValue = value;
+  }
+  public resetStandardRolloutPolicy() {
+    this._standardRolloutPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get standardRolloutPolicyInput() {
+    return this._standardRolloutPolicy.internalValue;
+  }
+}
+export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings {
+  /**
+  * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#max_surge ContainerCluster#max_surge}
+  */
+  readonly maxSurge?: number;
+  /**
+  * The maximum number of nodes that can be simultaneously unavailable during the upgrade process.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#max_unavailable ContainerCluster#max_unavailable}
+  */
+  readonly maxUnavailable?: number;
+  /**
+  * Update strategy of the node pool.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#strategy ContainerCluster#strategy}
+  */
+  readonly strategy?: string;
+  /**
+  * blue_green_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#blue_green_settings ContainerCluster#blue_green_settings}
+  */
+  readonly blueGreenSettings?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings;
+}
+
+export function containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_surge: cdktf.numberToTerraform(struct!.maxSurge),
+    max_unavailable: cdktf.numberToTerraform(struct!.maxUnavailable),
+    strategy: cdktf.stringToTerraform(struct!.strategy),
+    blue_green_settings: containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsToTerraform(struct!.blueGreenSettings),
+  }
+}
+
+export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxSurge !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxSurge = this._maxSurge;
+    }
+    if (this._maxUnavailable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxUnavailable = this._maxUnavailable;
+    }
+    if (this._strategy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.strategy = this._strategy;
+    }
+    if (this._blueGreenSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.blueGreenSettings = this._blueGreenSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxSurge = undefined;
+      this._maxUnavailable = undefined;
+      this._strategy = undefined;
+      this._blueGreenSettings.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxSurge = value.maxSurge;
+      this._maxUnavailable = value.maxUnavailable;
+      this._strategy = value.strategy;
+      this._blueGreenSettings.internalValue = value.blueGreenSettings;
+    }
+  }
+
+  // max_surge - computed: false, optional: true, required: false
+  private _maxSurge?: number; 
+  public get maxSurge() {
+    return this.getNumberAttribute('max_surge');
+  }
+  public set maxSurge(value: number) {
+    this._maxSurge = value;
+  }
+  public resetMaxSurge() {
+    this._maxSurge = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSurgeInput() {
+    return this._maxSurge;
+  }
+
+  // max_unavailable - computed: false, optional: true, required: false
+  private _maxUnavailable?: number; 
+  public get maxUnavailable() {
+    return this.getNumberAttribute('max_unavailable');
+  }
+  public set maxUnavailable(value: number) {
+    this._maxUnavailable = value;
+  }
+  public resetMaxUnavailable() {
+    this._maxUnavailable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxUnavailableInput() {
+    return this._maxUnavailable;
+  }
+
+  // strategy - computed: true, optional: true, required: false
+  private _strategy?: string; 
+  public get strategy() {
+    return this.getStringAttribute('strategy');
+  }
+  public set strategy(value: string) {
+    this._strategy = value;
+  }
+  public resetStrategy() {
+    this._strategy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get strategyInput() {
+    return this._strategy;
+  }
+
+  // blue_green_settings - computed: false, optional: true, required: false
+  private _blueGreenSettings = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettingsOutputReference(this, "blue_green_settings");
+  public get blueGreenSettings() {
+    return this._blueGreenSettings;
+  }
+  public putBlueGreenSettings(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsBlueGreenSettings) {
+    this._blueGreenSettings.internalValue = value;
+  }
+  public resetBlueGreenSettings() {
+    this._blueGreenSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blueGreenSettingsInput() {
+    return this._blueGreenSettings.internalValue;
+  }
+}
 export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   /**
   * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool.
@@ -1500,6 +1976,12 @@ export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   */
   readonly imageType?: string;
   /**
+  * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as Intel Haswell.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#min_cpu_platform ContainerCluster#min_cpu_platform}
+  */
+  readonly minCpuPlatform?: string;
+  /**
   * Scopes that are used by NAP when creating node pools.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#oauth_scopes ContainerCluster#oauth_scopes}
@@ -1523,6 +2005,12 @@ export interface ContainerClusterClusterAutoscalingAutoProvisioningDefaults {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#shielded_instance_config ContainerCluster#shielded_instance_config}
   */
   readonly shieldedInstanceConfig?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig;
+  /**
+  * upgrade_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#upgrade_settings ContainerCluster#upgrade_settings}
+  */
+  readonly upgradeSettings?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings;
 }
 
 export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerraform(struct?: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputReference | ContainerClusterClusterAutoscalingAutoProvisioningDefaults): any {
@@ -1535,10 +2023,12 @@ export function containerClusterClusterAutoscalingAutoProvisioningDefaultsToTerr
     disk_size: cdktf.numberToTerraform(struct!.diskSize),
     disk_type: cdktf.stringToTerraform(struct!.diskType),
     image_type: cdktf.stringToTerraform(struct!.imageType),
+    min_cpu_platform: cdktf.stringToTerraform(struct!.minCpuPlatform),
     oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.oauthScopes),
     service_account: cdktf.stringToTerraform(struct!.serviceAccount),
     management: containerClusterClusterAutoscalingAutoProvisioningDefaultsManagementToTerraform(struct!.management),
     shielded_instance_config: containerClusterClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
+    upgrade_settings: containerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsToTerraform(struct!.upgradeSettings),
   }
 }
 
@@ -1572,6 +2062,10 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       hasAnyValues = true;
       internalValueResult.imageType = this._imageType;
     }
+    if (this._minCpuPlatform !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minCpuPlatform = this._minCpuPlatform;
+    }
     if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
@@ -1588,6 +2082,10 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
     }
+    if (this._upgradeSettings?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.upgradeSettings = this._upgradeSettings?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1598,10 +2096,12 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       this._diskSize = undefined;
       this._diskType = undefined;
       this._imageType = undefined;
+      this._minCpuPlatform = undefined;
       this._oauthScopes = undefined;
       this._serviceAccount = undefined;
       this._management.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
+      this._upgradeSettings.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1609,10 +2109,12 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
       this._diskSize = value.diskSize;
       this._diskType = value.diskType;
       this._imageType = value.imageType;
+      this._minCpuPlatform = value.minCpuPlatform;
       this._oauthScopes = value.oauthScopes;
       this._serviceAccount = value.serviceAccount;
       this._management.internalValue = value.management;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
+      this._upgradeSettings.internalValue = value.upgradeSettings;
     }
   }
 
@@ -1680,6 +2182,22 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
     return this._imageType;
   }
 
+  // min_cpu_platform - computed: false, optional: true, required: false
+  private _minCpuPlatform?: string; 
+  public get minCpuPlatform() {
+    return this.getStringAttribute('min_cpu_platform');
+  }
+  public set minCpuPlatform(value: string) {
+    this._minCpuPlatform = value;
+  }
+  public resetMinCpuPlatform() {
+    this._minCpuPlatform = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCpuPlatformInput() {
+    return this._minCpuPlatform;
+  }
+
   // oauth_scopes - computed: true, optional: true, required: false
   private _oauthScopes?: string[]; 
   public get oauthScopes() {
@@ -1742,6 +2260,22 @@ export class ContainerClusterClusterAutoscalingAutoProvisioningDefaultsOutputRef
   // Temporarily expose input value. Use with caution.
   public get shieldedInstanceConfigInput() {
     return this._shieldedInstanceConfig.internalValue;
+  }
+
+  // upgrade_settings - computed: false, optional: true, required: false
+  private _upgradeSettings = new ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettingsOutputReference(this, "upgrade_settings");
+  public get upgradeSettings() {
+    return this._upgradeSettings;
+  }
+  public putUpgradeSettings(value: ContainerClusterClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings) {
+    this._upgradeSettings.internalValue = value;
+  }
+  public resetUpgradeSettings() {
+    this._upgradeSettings.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradeSettingsInput() {
+    return this._upgradeSettings.internalValue;
   }
 }
 export interface ContainerClusterClusterAutoscalingResourceLimits {
@@ -2431,6 +2965,70 @@ export class ContainerClusterDnsConfigOutputReference extends cdktf.ComplexObjec
   // Temporarily expose input value. Use with caution.
   public get clusterDnsScopeInput() {
     return this._clusterDnsScope;
+  }
+}
+export interface ContainerClusterGatewayApiConfig {
+  /**
+  * The Gateway API release channel to use for Gateway API.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#channel ContainerCluster#channel}
+  */
+  readonly channel: string;
+}
+
+export function containerClusterGatewayApiConfigToTerraform(struct?: ContainerClusterGatewayApiConfigOutputReference | ContainerClusterGatewayApiConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    channel: cdktf.stringToTerraform(struct!.channel),
+  }
+}
+
+export class ContainerClusterGatewayApiConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterGatewayApiConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._channel !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.channel = this._channel;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterGatewayApiConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._channel = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._channel = value.channel;
+    }
+  }
+
+  // channel - computed: false, optional: false, required: true
+  private _channel?: string; 
+  public get channel() {
+    return this.getStringAttribute('channel');
+  }
+  public set channel(value: string) {
+    this._channel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get channelInput() {
+    return this._channel;
   }
 }
 export interface ContainerClusterIpAllocationPolicy {
@@ -9571,7 +10169,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -9619,6 +10217,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
     this._databaseEncryption.internalValue = config.databaseEncryption;
     this._defaultSnatStatus.internalValue = config.defaultSnatStatus;
     this._dnsConfig.internalValue = config.dnsConfig;
+    this._gatewayApiConfig.internalValue = config.gatewayApiConfig;
     this._ipAllocationPolicy.internalValue = config.ipAllocationPolicy;
     this._loggingConfig.internalValue = config.loggingConfig;
     this._maintenancePolicy.internalValue = config.maintenancePolicy;
@@ -10268,6 +10867,22 @@ export class ContainerCluster extends cdktf.TerraformResource {
     return this._dnsConfig.internalValue;
   }
 
+  // gateway_api_config - computed: false, optional: true, required: false
+  private _gatewayApiConfig = new ContainerClusterGatewayApiConfigOutputReference(this, "gateway_api_config");
+  public get gatewayApiConfig() {
+    return this._gatewayApiConfig;
+  }
+  public putGatewayApiConfig(value: ContainerClusterGatewayApiConfig) {
+    this._gatewayApiConfig.internalValue = value;
+  }
+  public resetGatewayApiConfig() {
+    this._gatewayApiConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayApiConfigInput() {
+    return this._gatewayApiConfig.internalValue;
+  }
+
   // ip_allocation_policy - computed: false, optional: true, required: false
   private _ipAllocationPolicy = new ContainerClusterIpAllocationPolicyOutputReference(this, "ip_allocation_policy");
   public get ipAllocationPolicy() {
@@ -10615,6 +11230,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       database_encryption: containerClusterDatabaseEncryptionToTerraform(this._databaseEncryption.internalValue),
       default_snat_status: containerClusterDefaultSnatStatusToTerraform(this._defaultSnatStatus.internalValue),
       dns_config: containerClusterDnsConfigToTerraform(this._dnsConfig.internalValue),
+      gateway_api_config: containerClusterGatewayApiConfigToTerraform(this._gatewayApiConfig.internalValue),
       ip_allocation_policy: containerClusterIpAllocationPolicyToTerraform(this._ipAllocationPolicy.internalValue),
       logging_config: containerClusterLoggingConfigToTerraform(this._loggingConfig.internalValue),
       maintenance_policy: containerClusterMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),

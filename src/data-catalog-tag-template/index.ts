@@ -280,7 +280,7 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
     }
   }
 
-  // primitive_type - computed: false, optional: true, required: false
+  // primitive_type - computed: true, optional: true, required: false
   private _primitiveType?: string; 
   public get primitiveType() {
     return this.getStringAttribute('primitive_type');
@@ -440,7 +440,7 @@ export class DataCatalogTagTemplateFieldsOutputReference extends cdktf.ComplexOb
     }
   }
 
-  // description - computed: false, optional: true, required: false
+  // description - computed: true, optional: true, required: false
   private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
@@ -456,7 +456,7 @@ export class DataCatalogTagTemplateFieldsOutputReference extends cdktf.ComplexOb
     return this._description;
   }
 
-  // display_name - computed: false, optional: true, required: false
+  // display_name - computed: true, optional: true, required: false
   private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
@@ -485,7 +485,7 @@ export class DataCatalogTagTemplateFieldsOutputReference extends cdktf.ComplexOb
     return this._fieldId;
   }
 
-  // is_required - computed: false, optional: true, required: false
+  // is_required - computed: true, optional: true, required: false
   private _isRequired?: boolean | cdktf.IResolvable; 
   public get isRequired() {
     return this.getBooleanAttribute('is_required');
@@ -506,7 +506,7 @@ export class DataCatalogTagTemplateFieldsOutputReference extends cdktf.ComplexOb
     return this.getStringAttribute('name');
   }
 
-  // order - computed: false, optional: true, required: false
+  // order - computed: true, optional: true, required: false
   private _order?: number; 
   public get order() {
     return this.getNumberAttribute('order');
@@ -711,7 +711,7 @@ export class DataCatalogTagTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_tag_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
