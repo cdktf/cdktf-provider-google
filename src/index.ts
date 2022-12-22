@@ -311,6 +311,7 @@ export * as essentialContactsContact from './essential-contacts-contact';
 export * as eventarcChannel from './eventarc-channel';
 export * as eventarcGoogleChannelConfig from './eventarc-google-channel-config';
 export * as eventarcTrigger from './eventarc-trigger';
+export * as filestoreBackup from './filestore-backup';
 export * as filestoreInstance from './filestore-instance';
 export * as filestoreSnapshot from './filestore-snapshot';
 export * as firebaserulesRelease from './firebaserules-release';

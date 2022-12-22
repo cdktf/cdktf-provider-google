@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LoggingMetricConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects
+are supported. The bucket has to be in the same project as the metric.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#bucket_name LoggingMetric#bucket_name}
+  */
+  readonly bucketName?: string;
+  /**
   * A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
   * 
@@ -74,7 +81,7 @@ error to specify a regex that does not include exactly one capture group.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#metric_descriptor LoggingMetric#metric_descriptor}
   */
-  readonly metricDescriptor: LoggingMetricMetricDescriptor;
+  readonly metricDescriptor?: LoggingMetricMetricDescriptor;
   /**
   * timeouts block
   * 
@@ -1016,7 +1023,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_metric',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.46.0',
+        providerVersion: '4.47.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1027,6 +1034,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._bucketName = config.bucketName;
     this._description = config.description;
     this._filter = config.filter;
     this._id = config.id;
@@ -1042,6 +1050,22 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // bucket_name - computed: false, optional: true, required: false
+  private _bucketName?: string; 
+  public get bucketName() {
+    return this.getStringAttribute('bucket_name');
+  }
+  public set bucketName(value: string) {
+    this._bucketName = value;
+  }
+  public resetBucketName() {
+    this._bucketName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bucketNameInput() {
+    return this._bucketName;
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -1165,13 +1189,16 @@ export class LoggingMetric extends cdktf.TerraformResource {
     return this._bucketOptions.internalValue;
   }
 
-  // metric_descriptor - computed: false, optional: false, required: true
+  // metric_descriptor - computed: false, optional: true, required: false
   private _metricDescriptor = new LoggingMetricMetricDescriptorOutputReference(this, "metric_descriptor");
   public get metricDescriptor() {
     return this._metricDescriptor;
   }
   public putMetricDescriptor(value: LoggingMetricMetricDescriptor) {
     this._metricDescriptor.internalValue = value;
+  }
+  public resetMetricDescriptor() {
+    this._metricDescriptor.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricDescriptorInput() {
@@ -1200,6 +1227,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      bucket_name: cdktf.stringToTerraform(this._bucketName),
       description: cdktf.stringToTerraform(this._description),
       filter: cdktf.stringToTerraform(this._filter),
       id: cdktf.stringToTerraform(this._id),
