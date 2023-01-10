@@ -749,6 +749,12 @@ at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  */
+  readonly version?: string;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes | cdktf.IResolvable): any {
@@ -758,6 +764,7 @@ export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerrafo
   }
   return {
     name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
   }
 }
 
@@ -785,6 +792,10 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -793,6 +804,7 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._name = undefined;
+      this._version = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -802,6 +814,7 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._name = value.name;
+      this._version = value.version;
     }
   }
 
@@ -816,6 +829,22 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
   }
 }
 
@@ -2956,7 +2985,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_loss_prevention_inspect_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

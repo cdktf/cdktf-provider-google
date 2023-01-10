@@ -406,6 +406,198 @@ export class ComputeInstanceTemplateDiskDiskEncryptionKeyOutputReference extends
     return this._kmsKeySelfLink;
   }
 }
+export interface ComputeInstanceTemplateDiskSourceImageEncryptionKey {
+  /**
+  * The self link of the encryption key that is stored in
+Google Cloud KMS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink: string;
+  /**
+  * The service account being used for the encryption
+request for the given KMS key. If absent, the Compute
+Engine default service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+}
+
+export function computeInstanceTemplateDiskSourceImageEncryptionKeyToTerraform(struct?: ComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference | ComputeInstanceTemplateDiskSourceImageEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+  }
+}
+
+export class ComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeInstanceTemplateDiskSourceImageEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateDiskSourceImageEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+    }
+  }
+
+  // kms_key_self_link - computed: false, optional: false, required: true
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: false, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+}
+export interface ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey {
+  /**
+  * The self link of the encryption key that is stored in
+Google Cloud KMS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#kms_key_self_link ComputeInstanceTemplate#kms_key_self_link}
+  */
+  readonly kmsKeySelfLink: string;
+  /**
+  * The service account being used for the encryption
+request for the given KMS key. If absent, the Compute
+Engine default service account is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#kms_key_service_account ComputeInstanceTemplate#kms_key_service_account}
+  */
+  readonly kmsKeyServiceAccount?: string;
+}
+
+export function computeInstanceTemplateDiskSourceSnapshotEncryptionKeyToTerraform(struct?: ComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference | ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    kms_key_self_link: cdktf.stringToTerraform(struct!.kmsKeySelfLink),
+    kms_key_service_account: cdktf.stringToTerraform(struct!.kmsKeyServiceAccount),
+  }
+}
+
+export class ComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._kmsKeySelfLink !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeySelfLink = this._kmsKeySelfLink;
+    }
+    if (this._kmsKeyServiceAccount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyServiceAccount = this._kmsKeyServiceAccount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._kmsKeySelfLink = undefined;
+      this._kmsKeyServiceAccount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._kmsKeySelfLink = value.kmsKeySelfLink;
+      this._kmsKeyServiceAccount = value.kmsKeyServiceAccount;
+    }
+  }
+
+  // kms_key_self_link - computed: false, optional: false, required: true
+  private _kmsKeySelfLink?: string; 
+  public get kmsKeySelfLink() {
+    return this.getStringAttribute('kms_key_self_link');
+  }
+  public set kmsKeySelfLink(value: string) {
+    this._kmsKeySelfLink = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeySelfLinkInput() {
+    return this._kmsKeySelfLink;
+  }
+
+  // kms_key_service_account - computed: false, optional: true, required: false
+  private _kmsKeyServiceAccount?: string; 
+  public get kmsKeyServiceAccount() {
+    return this.getStringAttribute('kms_key_service_account');
+  }
+  public set kmsKeyServiceAccount(value: string) {
+    this._kmsKeyServiceAccount = value;
+  }
+  public resetKmsKeyServiceAccount() {
+    this._kmsKeyServiceAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyServiceAccountInput() {
+    return this._kmsKeyServiceAccount;
+  }
+}
 export interface ComputeInstanceTemplateDisk {
   /**
   * Whether or not the disk should be auto-deleted. This defaults to true.
@@ -480,6 +672,15 @@ export interface ComputeInstanceTemplateDisk {
   */
   readonly sourceImage?: string;
   /**
+  * The source snapshot to create this disk. When creating
+a new instance, one of initializeParams.sourceSnapshot,
+initializeParams.sourceImage, or disks.source is
+required except for local SSD.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#source_snapshot ComputeInstanceTemplate#source_snapshot}
+  */
+  readonly sourceSnapshot?: string;
+  /**
   * The type of Google Compute Engine disk, can be either "SCRATCH" or "PERSISTENT".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#type ComputeInstanceTemplate#type}
@@ -491,6 +692,18 @@ export interface ComputeInstanceTemplateDisk {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#disk_encryption_key ComputeInstanceTemplate#disk_encryption_key}
   */
   readonly diskEncryptionKey?: ComputeInstanceTemplateDiskDiskEncryptionKey;
+  /**
+  * source_image_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#source_image_encryption_key ComputeInstanceTemplate#source_image_encryption_key}
+  */
+  readonly sourceImageEncryptionKey?: ComputeInstanceTemplateDiskSourceImageEncryptionKey;
+  /**
+  * source_snapshot_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#source_snapshot_encryption_key ComputeInstanceTemplate#source_snapshot_encryption_key}
+  */
+  readonly sourceSnapshotEncryptionKey?: ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey;
 }
 
 export function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceTemplateDisk | cdktf.IResolvable): any {
@@ -511,8 +724,11 @@ export function computeInstanceTemplateDiskToTerraform(struct?: ComputeInstanceT
     resource_policies: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.resourcePolicies),
     source: cdktf.stringToTerraform(struct!.source),
     source_image: cdktf.stringToTerraform(struct!.sourceImage),
+    source_snapshot: cdktf.stringToTerraform(struct!.sourceSnapshot),
     type: cdktf.stringToTerraform(struct!.type),
     disk_encryption_key: computeInstanceTemplateDiskDiskEncryptionKeyToTerraform(struct!.diskEncryptionKey),
+    source_image_encryption_key: computeInstanceTemplateDiskSourceImageEncryptionKeyToTerraform(struct!.sourceImageEncryptionKey),
+    source_snapshot_encryption_key: computeInstanceTemplateDiskSourceSnapshotEncryptionKeyToTerraform(struct!.sourceSnapshotEncryptionKey),
   }
 }
 
@@ -584,6 +800,10 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.sourceImage = this._sourceImage;
     }
+    if (this._sourceSnapshot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSnapshot = this._sourceSnapshot;
+    }
     if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
@@ -591,6 +811,14 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
     if (this._diskEncryptionKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionKey = this._diskEncryptionKey?.internalValue;
+    }
+    if (this._sourceImageEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceImageEncryptionKey = this._sourceImageEncryptionKey?.internalValue;
+    }
+    if (this._sourceSnapshotEncryptionKey?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceSnapshotEncryptionKey = this._sourceSnapshotEncryptionKey?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -611,8 +839,11 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
       this._resourcePolicies = undefined;
       this._source = undefined;
       this._sourceImage = undefined;
+      this._sourceSnapshot = undefined;
       this._type = undefined;
       this._diskEncryptionKey.internalValue = undefined;
+      this._sourceImageEncryptionKey.internalValue = undefined;
+      this._sourceSnapshotEncryptionKey.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -633,8 +864,11 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
       this._resourcePolicies = value.resourcePolicies;
       this._source = value.source;
       this._sourceImage = value.sourceImage;
+      this._sourceSnapshot = value.sourceSnapshot;
       this._type = value.type;
       this._diskEncryptionKey.internalValue = value.diskEncryptionKey;
+      this._sourceImageEncryptionKey.internalValue = value.sourceImageEncryptionKey;
+      this._sourceSnapshotEncryptionKey.internalValue = value.sourceSnapshotEncryptionKey;
     }
   }
 
@@ -830,6 +1064,22 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
     return this._sourceImage;
   }
 
+  // source_snapshot - computed: false, optional: true, required: false
+  private _sourceSnapshot?: string; 
+  public get sourceSnapshot() {
+    return this.getStringAttribute('source_snapshot');
+  }
+  public set sourceSnapshot(value: string) {
+    this._sourceSnapshot = value;
+  }
+  public resetSourceSnapshot() {
+    this._sourceSnapshot = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotInput() {
+    return this._sourceSnapshot;
+  }
+
   // type - computed: true, optional: true, required: false
   private _type?: string; 
   public get type() {
@@ -860,6 +1110,38 @@ export class ComputeInstanceTemplateDiskOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionKeyInput() {
     return this._diskEncryptionKey.internalValue;
+  }
+
+  // source_image_encryption_key - computed: false, optional: true, required: false
+  private _sourceImageEncryptionKey = new ComputeInstanceTemplateDiskSourceImageEncryptionKeyOutputReference(this, "source_image_encryption_key");
+  public get sourceImageEncryptionKey() {
+    return this._sourceImageEncryptionKey;
+  }
+  public putSourceImageEncryptionKey(value: ComputeInstanceTemplateDiskSourceImageEncryptionKey) {
+    this._sourceImageEncryptionKey.internalValue = value;
+  }
+  public resetSourceImageEncryptionKey() {
+    this._sourceImageEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageEncryptionKeyInput() {
+    return this._sourceImageEncryptionKey.internalValue;
+  }
+
+  // source_snapshot_encryption_key - computed: false, optional: true, required: false
+  private _sourceSnapshotEncryptionKey = new ComputeInstanceTemplateDiskSourceSnapshotEncryptionKeyOutputReference(this, "source_snapshot_encryption_key");
+  public get sourceSnapshotEncryptionKey() {
+    return this._sourceSnapshotEncryptionKey;
+  }
+  public putSourceSnapshotEncryptionKey(value: ComputeInstanceTemplateDiskSourceSnapshotEncryptionKey) {
+    this._sourceSnapshotEncryptionKey.internalValue = value;
+  }
+  public resetSourceSnapshotEncryptionKey() {
+    this._sourceSnapshotEncryptionKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceSnapshotEncryptionKeyInput() {
+    return this._sourceSnapshotEncryptionKey.internalValue;
   }
 }
 
@@ -2656,7 +2938,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

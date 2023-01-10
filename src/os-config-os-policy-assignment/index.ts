@@ -39,6 +39,12 @@ export interface OsConfigOsPolicyAssignmentConfig extends cdktf.TerraformMetaArg
   */
   readonly project?: string;
   /**
+  * Set to true to skip awaiting rollout during resource creation and update.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#skip_await_rollout OsConfigOsPolicyAssignment#skip_await_rollout}
+  */
+  readonly skipAwaitRollout?: boolean | cdktf.IResolvable;
+  /**
   * instance_filter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_config_os_policy_assignment#instance_filter OsConfigOsPolicyAssignment#instance_filter}
@@ -5877,7 +5883,7 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
       terraformResourceType: 'google_os_config_os_policy_assignment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -5893,6 +5899,7 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._project = config.project;
+    this._skipAwaitRollout = config.skipAwaitRollout;
     this._instanceFilter.internalValue = config.instanceFilter;
     this._osPolicies.internalValue = config.osPolicies;
     this._rollout.internalValue = config.rollout;
@@ -6012,6 +6019,22 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
     return this.getStringAttribute('rollout_state');
   }
 
+  // skip_await_rollout - computed: false, optional: true, required: false
+  private _skipAwaitRollout?: boolean | cdktf.IResolvable; 
+  public get skipAwaitRollout() {
+    return this.getBooleanAttribute('skip_await_rollout');
+  }
+  public set skipAwaitRollout(value: boolean | cdktf.IResolvable) {
+    this._skipAwaitRollout = value;
+  }
+  public resetSkipAwaitRollout() {
+    this._skipAwaitRollout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipAwaitRolloutInput() {
+    return this._skipAwaitRollout;
+  }
+
   // uid - computed: true, optional: false, required: false
   public get uid() {
     return this.getStringAttribute('uid');
@@ -6083,6 +6106,7 @@ export class OsConfigOsPolicyAssignment extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      skip_await_rollout: cdktf.booleanToTerraform(this._skipAwaitRollout),
       instance_filter: osConfigOsPolicyAssignmentInstanceFilterToTerraform(this._instanceFilter.internalValue),
       os_policies: cdktf.listMapper(osConfigOsPolicyAssignmentOsPoliciesToTerraform, true)(this._osPolicies.internalValue),
       rollout: osConfigOsPolicyAssignmentRolloutToTerraform(this._rollout.internalValue),

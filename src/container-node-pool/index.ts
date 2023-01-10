@@ -99,6 +99,12 @@ export interface ContainerNodePoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly nodeConfig?: ContainerNodePoolNodeConfig;
   /**
+  * placement_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#placement_policy ContainerNodePool#placement_policy}
+  */
+  readonly placementPolicy?: ContainerNodePoolPlacementPolicy;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#timeouts ContainerNodePool#timeouts}
@@ -214,7 +220,7 @@ export class ContainerNodePoolAutoscalingOutputReference extends cdktf.ComplexOb
     }
   }
 
-  // location_policy - computed: false, optional: true, required: false
+  // location_policy - computed: true, optional: true, required: false
   private _locationPolicy?: string; 
   public get locationPolicy() {
     return this.getStringAttribute('location_policy');
@@ -2141,6 +2147,70 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
     return this._workloadMetadataConfig.internalValue;
   }
 }
+export interface ContainerNodePoolPlacementPolicy {
+  /**
+  * Type defines the type of placement policy
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#type ContainerNodePool#type}
+  */
+  readonly type: string;
+}
+
+export function containerNodePoolPlacementPolicyToTerraform(struct?: ContainerNodePoolPlacementPolicyOutputReference | ContainerNodePoolPlacementPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class ContainerNodePoolPlacementPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolPlacementPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolPlacementPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface ContainerNodePoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#create ContainerNodePool#create}
@@ -2669,7 +2739,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2695,6 +2765,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     this._management.internalValue = config.management;
     this._networkConfig.internalValue = config.networkConfig;
     this._nodeConfig.internalValue = config.nodeConfig;
+    this._placementPolicy.internalValue = config.placementPolicy;
     this._timeouts.internalValue = config.timeouts;
     this._upgradeSettings.internalValue = config.upgradeSettings;
   }
@@ -2955,6 +3026,22 @@ export class ContainerNodePool extends cdktf.TerraformResource {
     return this._nodeConfig.internalValue;
   }
 
+  // placement_policy - computed: false, optional: true, required: false
+  private _placementPolicy = new ContainerNodePoolPlacementPolicyOutputReference(this, "placement_policy");
+  public get placementPolicy() {
+    return this._placementPolicy;
+  }
+  public putPlacementPolicy(value: ContainerNodePoolPlacementPolicy) {
+    this._placementPolicy.internalValue = value;
+  }
+  public resetPlacementPolicy() {
+    this._placementPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementPolicyInput() {
+    return this._placementPolicy.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ContainerNodePoolTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -3008,6 +3095,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       management: containerNodePoolManagementToTerraform(this._management.internalValue),
       network_config: containerNodePoolNetworkConfigToTerraform(this._networkConfig.internalValue),
       node_config: containerNodePoolNodeConfigToTerraform(this._nodeConfig.internalValue),
+      placement_policy: containerNodePoolPlacementPolicyToTerraform(this._placementPolicy.internalValue),
       timeouts: containerNodePoolTimeoutsToTerraform(this._timeouts.internalValue),
       upgrade_settings: containerNodePoolUpgradeSettingsToTerraform(this._upgradeSettings.internalValue),
     };

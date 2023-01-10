@@ -1450,6 +1450,11 @@ export class DataGoogleSqlDatabaseInstanceSettingsOutputReference extends cdktf.
     return this._databaseFlags;
   }
 
+  // deletion_protection_enabled - computed: true, optional: false, required: false
+  public get deletionProtectionEnabled() {
+    return this.getBooleanAttribute('deletion_protection_enabled');
+  }
+
   // deny_maintenance_period - computed: true, optional: false, required: false
   private _denyMaintenancePeriod = new DataGoogleSqlDatabaseInstanceSettingsDenyMaintenancePeriodList(this, "deny_maintenance_period", false);
   public get denyMaintenancePeriod() {
@@ -1584,7 +1589,7 @@ export class DataGoogleSqlDatabaseInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

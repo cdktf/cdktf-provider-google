@@ -111,6 +111,15 @@ If it is not provided, the provider region is used.
   */
   readonly router: string;
   /**
+  * The URI of the VM instance that is used as third-party router appliances
+such as Next Gen Firewalls, Virtual Routers, or Router Appliances.
+The VM instance must be located in zones contained in the same region as
+this Cloud Router. The VM instance is the peer side of the BGP session.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
+  */
+  readonly routerApplianceInstance?: string;
+  /**
   * advertised_ip_ranges block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
@@ -576,7 +585,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_peer',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -600,6 +609,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     this._project = config.project;
     this._region = config.region;
     this._router = config.router;
+    this._routerApplianceInstance = config.routerApplianceInstance;
     this._advertisedIpRanges.internalValue = config.advertisedIpRanges;
     this._bfd.internalValue = config.bfd;
     this._timeouts.internalValue = config.timeouts;
@@ -807,6 +817,22 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
     return this._router;
   }
 
+  // router_appliance_instance - computed: false, optional: true, required: false
+  private _routerApplianceInstance?: string; 
+  public get routerApplianceInstance() {
+    return this.getStringAttribute('router_appliance_instance');
+  }
+  public set routerApplianceInstance(value: string) {
+    this._routerApplianceInstance = value;
+  }
+  public resetRouterApplianceInstance() {
+    this._routerApplianceInstance = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routerApplianceInstanceInput() {
+    return this._routerApplianceInstance;
+  }
+
   // advertised_ip_ranges - computed: false, optional: true, required: false
   private _advertisedIpRanges = new ComputeRouterPeerAdvertisedIpRangesList(this, "advertised_ip_ranges", false);
   public get advertisedIpRanges() {
@@ -874,6 +900,7 @@ export class ComputeRouterPeer extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
       router: cdktf.stringToTerraform(this._router),
+      router_appliance_instance: cdktf.stringToTerraform(this._routerApplianceInstance),
       advertised_ip_ranges: cdktf.listMapper(computeRouterPeerAdvertisedIpRangesToTerraform, true)(this._advertisedIpRanges.internalValue),
       bfd: computeRouterPeerBfdToTerraform(this._bfd.internalValue),
       timeouts: computeRouterPeerTimeoutsToTerraform(this._timeouts.internalValue),

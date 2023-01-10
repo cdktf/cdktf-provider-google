@@ -160,6 +160,10 @@ export interface GoogleProviderConfig {
   */
   readonly containerAnalysisCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}
+  */
+  readonly containerAttachedCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}
   */
   readonly containerAwsCustomEndpoint?: string;
@@ -256,6 +260,10 @@ export interface GoogleProviderConfig {
   */
   readonly gameServicesCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}
+  */
+  readonly gkeBackupCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}
   */
   readonly gkeHubCustomEndpoint?: string;
@@ -275,6 +283,10 @@ export interface GoogleProviderConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}
   */
   readonly iamCustomEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}
+  */
+  readonly iamWorkforcePoolCustomEndpoint?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}
   */
@@ -517,7 +529,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -560,6 +572,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._composerCustomEndpoint = config.composerCustomEndpoint;
     this._computeCustomEndpoint = config.computeCustomEndpoint;
     this._containerAnalysisCustomEndpoint = config.containerAnalysisCustomEndpoint;
+    this._containerAttachedCustomEndpoint = config.containerAttachedCustomEndpoint;
     this._containerAwsCustomEndpoint = config.containerAwsCustomEndpoint;
     this._containerAzureCustomEndpoint = config.containerAzureCustomEndpoint;
     this._containerCustomEndpoint = config.containerCustomEndpoint;
@@ -584,11 +597,13 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._firebaserulesCustomEndpoint = config.firebaserulesCustomEndpoint;
     this._firestoreCustomEndpoint = config.firestoreCustomEndpoint;
     this._gameServicesCustomEndpoint = config.gameServicesCustomEndpoint;
+    this._gkeBackupCustomEndpoint = config.gkeBackupCustomEndpoint;
     this._gkeHubCustomEndpoint = config.gkeHubCustomEndpoint;
     this._healthcareCustomEndpoint = config.healthcareCustomEndpoint;
     this._iamBetaCustomEndpoint = config.iamBetaCustomEndpoint;
     this._iamCredentialsCustomEndpoint = config.iamCredentialsCustomEndpoint;
     this._iamCustomEndpoint = config.iamCustomEndpoint;
+    this._iamWorkforcePoolCustomEndpoint = config.iamWorkforcePoolCustomEndpoint;
     this._iapCustomEndpoint = config.iapCustomEndpoint;
     this._identityPlatformCustomEndpoint = config.identityPlatformCustomEndpoint;
     this._impersonateServiceAccount = config.impersonateServiceAccount;
@@ -1250,6 +1265,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._containerAnalysisCustomEndpoint;
   }
 
+  // container_attached_custom_endpoint - computed: false, optional: true, required: false
+  private _containerAttachedCustomEndpoint?: string; 
+  public get containerAttachedCustomEndpoint() {
+    return this._containerAttachedCustomEndpoint;
+  }
+  public set containerAttachedCustomEndpoint(value: string | undefined) {
+    this._containerAttachedCustomEndpoint = value;
+  }
+  public resetContainerAttachedCustomEndpoint() {
+    this._containerAttachedCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerAttachedCustomEndpointInput() {
+    return this._containerAttachedCustomEndpoint;
+  }
+
   // container_aws_custom_endpoint - computed: false, optional: true, required: false
   private _containerAwsCustomEndpoint?: string; 
   public get containerAwsCustomEndpoint() {
@@ -1634,6 +1665,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._gameServicesCustomEndpoint;
   }
 
+  // gke_backup_custom_endpoint - computed: false, optional: true, required: false
+  private _gkeBackupCustomEndpoint?: string; 
+  public get gkeBackupCustomEndpoint() {
+    return this._gkeBackupCustomEndpoint;
+  }
+  public set gkeBackupCustomEndpoint(value: string | undefined) {
+    this._gkeBackupCustomEndpoint = value;
+  }
+  public resetGkeBackupCustomEndpoint() {
+    this._gkeBackupCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gkeBackupCustomEndpointInput() {
+    return this._gkeBackupCustomEndpoint;
+  }
+
   // gke_hub_custom_endpoint - computed: false, optional: true, required: false
   private _gkeHubCustomEndpoint?: string; 
   public get gkeHubCustomEndpoint() {
@@ -1712,6 +1759,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get iamCustomEndpointInput() {
     return this._iamCustomEndpoint;
+  }
+
+  // iam_workforce_pool_custom_endpoint - computed: false, optional: true, required: false
+  private _iamWorkforcePoolCustomEndpoint?: string; 
+  public get iamWorkforcePoolCustomEndpoint() {
+    return this._iamWorkforcePoolCustomEndpoint;
+  }
+  public set iamWorkforcePoolCustomEndpoint(value: string | undefined) {
+    this._iamWorkforcePoolCustomEndpoint = value;
+  }
+  public resetIamWorkforcePoolCustomEndpoint() {
+    this._iamWorkforcePoolCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iamWorkforcePoolCustomEndpointInput() {
+    return this._iamWorkforcePoolCustomEndpoint;
   }
 
   // iap_custom_endpoint - computed: false, optional: true, required: false
@@ -2510,6 +2573,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       composer_custom_endpoint: cdktf.stringToTerraform(this._composerCustomEndpoint),
       compute_custom_endpoint: cdktf.stringToTerraform(this._computeCustomEndpoint),
       container_analysis_custom_endpoint: cdktf.stringToTerraform(this._containerAnalysisCustomEndpoint),
+      container_attached_custom_endpoint: cdktf.stringToTerraform(this._containerAttachedCustomEndpoint),
       container_aws_custom_endpoint: cdktf.stringToTerraform(this._containerAwsCustomEndpoint),
       container_azure_custom_endpoint: cdktf.stringToTerraform(this._containerAzureCustomEndpoint),
       container_custom_endpoint: cdktf.stringToTerraform(this._containerCustomEndpoint),
@@ -2534,11 +2598,13 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       firebaserules_custom_endpoint: cdktf.stringToTerraform(this._firebaserulesCustomEndpoint),
       firestore_custom_endpoint: cdktf.stringToTerraform(this._firestoreCustomEndpoint),
       game_services_custom_endpoint: cdktf.stringToTerraform(this._gameServicesCustomEndpoint),
+      gke_backup_custom_endpoint: cdktf.stringToTerraform(this._gkeBackupCustomEndpoint),
       gke_hub_custom_endpoint: cdktf.stringToTerraform(this._gkeHubCustomEndpoint),
       healthcare_custom_endpoint: cdktf.stringToTerraform(this._healthcareCustomEndpoint),
       iam_beta_custom_endpoint: cdktf.stringToTerraform(this._iamBetaCustomEndpoint),
       iam_credentials_custom_endpoint: cdktf.stringToTerraform(this._iamCredentialsCustomEndpoint),
       iam_custom_endpoint: cdktf.stringToTerraform(this._iamCustomEndpoint),
+      iam_workforce_pool_custom_endpoint: cdktf.stringToTerraform(this._iamWorkforcePoolCustomEndpoint),
       iap_custom_endpoint: cdktf.stringToTerraform(this._iapCustomEndpoint),
       identity_platform_custom_endpoint: cdktf.stringToTerraform(this._identityPlatformCustomEndpoint),
       impersonate_service_account: cdktf.stringToTerraform(this._impersonateServiceAccount),

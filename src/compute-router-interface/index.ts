@@ -210,7 +210,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_interface',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -332,7 +332,7 @@ export class ComputeRouterInterface extends cdktf.TerraformResource {
     return this._project;
   }
 
-  // redundant_interface - computed: false, optional: true, required: false
+  // redundant_interface - computed: true, optional: true, required: false
   private _redundantInterface?: string; 
   public get redundantInterface() {
     return this.getStringAttribute('redundant_interface');
