@@ -2469,7 +2469,7 @@ export interface SqlDatabaseInstanceSettingsSqlServerAuditConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#bucket SqlDatabaseInstance#bucket}
   */
-  readonly bucket: string;
+  readonly bucket?: string;
   /**
   * How long to keep generated audit files. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"..
   * 
@@ -2540,13 +2540,16 @@ export class SqlDatabaseInstanceSettingsSqlServerAuditConfigOutputReference exte
     }
   }
 
-  // bucket - computed: false, optional: false, required: true
+  // bucket - computed: false, optional: true, required: false
   private _bucket?: string; 
   public get bucket() {
     return this.getStringAttribute('bucket');
   }
   public set bucket(value: string) {
     this._bucket = value;
+  }
+  public resetBucket() {
+    this._bucket = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bucketInput() {
@@ -2615,6 +2618,12 @@ is set to true. Defaults to ZONAL.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#connector_enforcement SqlDatabaseInstance#connector_enforcement}
   */
   readonly connectorEnforcement?: string;
+  /**
+  * Configuration to protect against accidental instance deletion.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#deletion_protection_enabled SqlDatabaseInstance#deletion_protection_enabled}
+  */
+  readonly deletionProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Enables auto-resizing of the storage size. Defaults to true.
   * 
@@ -2735,6 +2744,7 @@ export function sqlDatabaseInstanceSettingsToTerraform(struct?: SqlDatabaseInsta
     availability_type: cdktf.stringToTerraform(struct!.availabilityType),
     collation: cdktf.stringToTerraform(struct!.collation),
     connector_enforcement: cdktf.stringToTerraform(struct!.connectorEnforcement),
+    deletion_protection_enabled: cdktf.booleanToTerraform(struct!.deletionProtectionEnabled),
     disk_autoresize: cdktf.booleanToTerraform(struct!.diskAutoresize),
     disk_autoresize_limit: cdktf.numberToTerraform(struct!.diskAutoresizeLimit),
     disk_size: cdktf.numberToTerraform(struct!.diskSize),
@@ -2785,6 +2795,10 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
     if (this._connectorEnforcement !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectorEnforcement = this._connectorEnforcement;
+    }
+    if (this._deletionProtectionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.deletionProtectionEnabled = this._deletionProtectionEnabled;
     }
     if (this._diskAutoresize !== undefined) {
       hasAnyValues = true;
@@ -2868,6 +2882,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._availabilityType = undefined;
       this._collation = undefined;
       this._connectorEnforcement = undefined;
+      this._deletionProtectionEnabled = undefined;
       this._diskAutoresize = undefined;
       this._diskAutoresizeLimit = undefined;
       this._diskSize = undefined;
@@ -2893,6 +2908,7 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
       this._availabilityType = value.availabilityType;
       this._collation = value.collation;
       this._connectorEnforcement = value.connectorEnforcement;
+      this._deletionProtectionEnabled = value.deletionProtectionEnabled;
       this._diskAutoresize = value.diskAutoresize;
       this._diskAutoresizeLimit = value.diskAutoresizeLimit;
       this._diskSize = value.diskSize;
@@ -2976,6 +2992,22 @@ export class SqlDatabaseInstanceSettingsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get connectorEnforcementInput() {
     return this._connectorEnforcement;
+  }
+
+  // deletion_protection_enabled - computed: false, optional: true, required: false
+  private _deletionProtectionEnabled?: boolean | cdktf.IResolvable; 
+  public get deletionProtectionEnabled() {
+    return this.getBooleanAttribute('deletion_protection_enabled');
+  }
+  public set deletionProtectionEnabled(value: boolean | cdktf.IResolvable) {
+    this._deletionProtectionEnabled = value;
+  }
+  public resetDeletionProtectionEnabled() {
+    this._deletionProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionProtectionEnabledInput() {
+    return this._deletionProtectionEnabled;
   }
 
   // disk_autoresize - computed: false, optional: true, required: false
@@ -3424,7 +3456,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

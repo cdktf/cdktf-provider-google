@@ -809,6 +809,11 @@ export class DataGoogleCloudfunctions2FunctionServiceConfigOutputReference exten
     return this.getBooleanAttribute('all_traffic_on_latest_revision');
   }
 
+  // available_cpu - computed: true, optional: false, required: false
+  public get availableCpu() {
+    return this.getStringAttribute('available_cpu');
+  }
+
   // available_memory - computed: true, optional: false, required: false
   public get availableMemory() {
     return this.getStringAttribute('available_memory');
@@ -833,6 +838,11 @@ export class DataGoogleCloudfunctions2FunctionServiceConfigOutputReference exten
   // max_instance_count - computed: true, optional: false, required: false
   public get maxInstanceCount() {
     return this.getNumberAttribute('max_instance_count');
+  }
+
+  // max_instance_request_concurrency - computed: true, optional: false, required: false
+  public get maxInstanceRequestConcurrency() {
+    return this.getNumberAttribute('max_instance_request_concurrency');
   }
 
   // min_instance_count - computed: true, optional: false, required: false
@@ -928,7 +938,7 @@ export class DataGoogleCloudfunctions2Function extends cdktf.TerraformDataSource
       terraformResourceType: 'google_cloudfunctions2_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

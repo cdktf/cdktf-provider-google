@@ -1616,6 +1616,12 @@ export interface Cloudfunctions2FunctionServiceConfig {
   */
   readonly allTrafficOnLatestRevision?: boolean | cdktf.IResolvable;
   /**
+  * The number of CPUs used in a single container instance. Default value is calculated from available memory.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions2_function#available_cpu Cloudfunctions2Function#available_cpu}
+  */
+  readonly availableCpu?: string;
+  /**
   * The amount of memory available for a function.
 Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
 supplied the value is interpreted as bytes.
@@ -1642,6 +1648,12 @@ given time.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions2_function#max_instance_count Cloudfunctions2Function#max_instance_count}
   */
   readonly maxInstanceCount?: number;
+  /**
+  * Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions2_function#max_instance_request_concurrency Cloudfunctions2Function#max_instance_request_concurrency}
+  */
+  readonly maxInstanceRequestConcurrency?: number;
   /**
   * The limit on the minimum number of function instances that may coexist at a
 given time.
@@ -1702,10 +1714,12 @@ export function cloudfunctions2FunctionServiceConfigToTerraform(struct?: Cloudfu
   }
   return {
     all_traffic_on_latest_revision: cdktf.booleanToTerraform(struct!.allTrafficOnLatestRevision),
+    available_cpu: cdktf.stringToTerraform(struct!.availableCpu),
     available_memory: cdktf.stringToTerraform(struct!.availableMemory),
     environment_variables: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.environmentVariables),
     ingress_settings: cdktf.stringToTerraform(struct!.ingressSettings),
     max_instance_count: cdktf.numberToTerraform(struct!.maxInstanceCount),
+    max_instance_request_concurrency: cdktf.numberToTerraform(struct!.maxInstanceRequestConcurrency),
     min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
     service: cdktf.stringToTerraform(struct!.service),
     service_account_email: cdktf.stringToTerraform(struct!.serviceAccountEmail),
@@ -1735,6 +1749,10 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.allTrafficOnLatestRevision = this._allTrafficOnLatestRevision;
     }
+    if (this._availableCpu !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.availableCpu = this._availableCpu;
+    }
     if (this._availableMemory !== undefined) {
       hasAnyValues = true;
       internalValueResult.availableMemory = this._availableMemory;
@@ -1750,6 +1768,10 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
     if (this._maxInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxInstanceCount = this._maxInstanceCount;
+    }
+    if (this._maxInstanceRequestConcurrency !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxInstanceRequestConcurrency = this._maxInstanceRequestConcurrency;
     }
     if (this._minInstanceCount !== undefined) {
       hasAnyValues = true;
@@ -1790,10 +1812,12 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
     if (value === undefined) {
       this.isEmptyObject = false;
       this._allTrafficOnLatestRevision = undefined;
+      this._availableCpu = undefined;
       this._availableMemory = undefined;
       this._environmentVariables = undefined;
       this._ingressSettings = undefined;
       this._maxInstanceCount = undefined;
+      this._maxInstanceRequestConcurrency = undefined;
       this._minInstanceCount = undefined;
       this._service = undefined;
       this._serviceAccountEmail = undefined;
@@ -1806,10 +1830,12 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allTrafficOnLatestRevision = value.allTrafficOnLatestRevision;
+      this._availableCpu = value.availableCpu;
       this._availableMemory = value.availableMemory;
       this._environmentVariables = value.environmentVariables;
       this._ingressSettings = value.ingressSettings;
       this._maxInstanceCount = value.maxInstanceCount;
+      this._maxInstanceRequestConcurrency = value.maxInstanceRequestConcurrency;
       this._minInstanceCount = value.minInstanceCount;
       this._service = value.service;
       this._serviceAccountEmail = value.serviceAccountEmail;
@@ -1835,6 +1861,22 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get allTrafficOnLatestRevisionInput() {
     return this._allTrafficOnLatestRevision;
+  }
+
+  // available_cpu - computed: true, optional: true, required: false
+  private _availableCpu?: string; 
+  public get availableCpu() {
+    return this.getStringAttribute('available_cpu');
+  }
+  public set availableCpu(value: string) {
+    this._availableCpu = value;
+  }
+  public resetAvailableCpu() {
+    this._availableCpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availableCpuInput() {
+    return this._availableCpu;
   }
 
   // available_memory - computed: false, optional: true, required: false
@@ -1904,6 +1946,22 @@ export class Cloudfunctions2FunctionServiceConfigOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get maxInstanceCountInput() {
     return this._maxInstanceCount;
+  }
+
+  // max_instance_request_concurrency - computed: true, optional: true, required: false
+  private _maxInstanceRequestConcurrency?: number; 
+  public get maxInstanceRequestConcurrency() {
+    return this.getNumberAttribute('max_instance_request_concurrency');
+  }
+  public set maxInstanceRequestConcurrency(value: number) {
+    this._maxInstanceRequestConcurrency = value;
+  }
+  public resetMaxInstanceRequestConcurrency() {
+    this._maxInstanceRequestConcurrency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInstanceRequestConcurrencyInput() {
+    return this._maxInstanceRequestConcurrency;
   }
 
   // min_instance_count - computed: false, optional: true, required: false
@@ -2195,7 +2253,7 @@ export class Cloudfunctions2Function extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions2_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

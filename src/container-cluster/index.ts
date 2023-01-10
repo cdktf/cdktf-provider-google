@@ -6164,7 +6164,7 @@ export class ContainerClusterNodePoolAutoscalingOutputReference extends cdktf.Co
     }
   }
 
-  // location_policy - computed: false, optional: true, required: false
+  // location_policy - computed: true, optional: true, required: false
   private _locationPolicy?: string; 
   public get locationPolicy() {
     return this.getStringAttribute('location_policy');
@@ -8091,6 +8091,70 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
     return this._workloadMetadataConfig.internalValue;
   }
 }
+export interface ContainerClusterNodePoolPlacementPolicy {
+  /**
+  * Type defines the type of placement policy
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#type ContainerCluster#type}
+  */
+  readonly type: string;
+}
+
+export function containerClusterNodePoolPlacementPolicyToTerraform(struct?: ContainerClusterNodePoolPlacementPolicyOutputReference | ContainerClusterNodePoolPlacementPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class ContainerClusterNodePoolPlacementPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolPlacementPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolPlacementPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._type = value.type;
+    }
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface ContainerClusterNodePoolUpgradeSettingsBlueGreenSettingsStandardRolloutPolicy {
   /**
   * Number of blue nodes to drain in a batch.
@@ -8531,6 +8595,12 @@ export interface ContainerClusterNodePool {
   */
   readonly nodeConfig?: ContainerClusterNodePoolNodeConfig;
   /**
+  * placement_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#placement_policy ContainerCluster#placement_policy}
+  */
+  readonly placementPolicy?: ContainerClusterNodePoolPlacementPolicy;
+  /**
   * upgrade_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#upgrade_settings ContainerCluster#upgrade_settings}
@@ -8555,6 +8625,7 @@ export function containerClusterNodePoolToTerraform(struct?: ContainerClusterNod
     management: containerClusterNodePoolManagementToTerraform(struct!.management),
     network_config: containerClusterNodePoolNetworkConfigToTerraform(struct!.networkConfig),
     node_config: containerClusterNodePoolNodeConfigToTerraform(struct!.nodeConfig),
+    placement_policy: containerClusterNodePoolPlacementPolicyToTerraform(struct!.placementPolicy),
     upgrade_settings: containerClusterNodePoolUpgradeSettingsToTerraform(struct!.upgradeSettings),
   }
 }
@@ -8623,6 +8694,10 @@ export class ContainerClusterNodePoolOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.nodeConfig = this._nodeConfig?.internalValue;
     }
+    if (this._placementPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placementPolicy = this._placementPolicy?.internalValue;
+    }
     if (this._upgradeSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.upgradeSettings = this._upgradeSettings?.internalValue;
@@ -8645,6 +8720,7 @@ export class ContainerClusterNodePoolOutputReference extends cdktf.ComplexObject
       this._management.internalValue = undefined;
       this._networkConfig.internalValue = undefined;
       this._nodeConfig.internalValue = undefined;
+      this._placementPolicy.internalValue = undefined;
       this._upgradeSettings.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -8665,6 +8741,7 @@ export class ContainerClusterNodePoolOutputReference extends cdktf.ComplexObject
       this._management.internalValue = value.management;
       this._networkConfig.internalValue = value.networkConfig;
       this._nodeConfig.internalValue = value.nodeConfig;
+      this._placementPolicy.internalValue = value.placementPolicy;
       this._upgradeSettings.internalValue = value.upgradeSettings;
     }
   }
@@ -8853,6 +8930,22 @@ export class ContainerClusterNodePoolOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get nodeConfigInput() {
     return this._nodeConfig.internalValue;
+  }
+
+  // placement_policy - computed: false, optional: true, required: false
+  private _placementPolicy = new ContainerClusterNodePoolPlacementPolicyOutputReference(this, "placement_policy");
+  public get placementPolicy() {
+    return this._placementPolicy;
+  }
+  public putPlacementPolicy(value: ContainerClusterNodePoolPlacementPolicy) {
+    this._placementPolicy.internalValue = value;
+  }
+  public resetPlacementPolicy() {
+    this._placementPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementPolicyInput() {
+    return this._placementPolicy.internalValue;
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
@@ -10169,7 +10262,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

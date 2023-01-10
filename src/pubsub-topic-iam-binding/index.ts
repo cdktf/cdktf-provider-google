@@ -177,7 +177,7 @@ export class PubsubTopicIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_pubsub_topic_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -311,7 +311,7 @@ export class VpcAccessConnector extends cdktf.TerraformResource {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -611,7 +611,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_subnetwork',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -756,7 +756,7 @@ export class ComputeSubnetwork extends cdktf.TerraformResource {
     return this._network;
   }
 
-  // private_ip_google_access - computed: false, optional: true, required: false
+  // private_ip_google_access - computed: true, optional: true, required: false
   private _privateIpGoogleAccess?: boolean | cdktf.IResolvable; 
   public get privateIpGoogleAccess() {
     return this.getBooleanAttribute('private_ip_google_access');
