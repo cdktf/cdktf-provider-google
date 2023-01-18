@@ -96,6 +96,12 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
   */
   readonly networkConfig?: DataprocMetastoreServiceNetworkConfig;
   /**
+  * telemetry_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#telemetry_config DataprocMetastoreService#telemetry_config}
+  */
+  readonly telemetryConfig?: DataprocMetastoreServiceTelemetryConfig;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#timeouts DataprocMetastoreService#timeouts}
@@ -730,6 +736,73 @@ export class DataprocMetastoreServiceNetworkConfigOutputReference extends cdktf.
     return this._consumers.internalValue;
   }
 }
+export interface DataprocMetastoreServiceTelemetryConfig {
+  /**
+  * The output format of the Dataproc Metastore service's logs. Default value: "JSON" Possible values: ["LEGACY", "JSON"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#log_format DataprocMetastoreService#log_format}
+  */
+  readonly logFormat?: string;
+}
+
+export function dataprocMetastoreServiceTelemetryConfigToTerraform(struct?: DataprocMetastoreServiceTelemetryConfigOutputReference | DataprocMetastoreServiceTelemetryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    log_format: cdktf.stringToTerraform(struct!.logFormat),
+  }
+}
+
+export class DataprocMetastoreServiceTelemetryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocMetastoreServiceTelemetryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._logFormat !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logFormat = this._logFormat;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocMetastoreServiceTelemetryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._logFormat = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._logFormat = value.logFormat;
+    }
+  }
+
+  // log_format - computed: false, optional: true, required: false
+  private _logFormat?: string; 
+  public get logFormat() {
+    return this.getStringAttribute('log_format');
+  }
+  public set logFormat(value: string) {
+    this._logFormat = value;
+  }
+  public resetLogFormat() {
+    this._logFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logFormatInput() {
+    return this._logFormat;
+  }
+}
 export interface DataprocMetastoreServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service#create DataprocMetastoreService#create}
@@ -886,7 +959,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_metastore_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -911,6 +984,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
     this._hiveMetastoreConfig.internalValue = config.hiveMetastoreConfig;
     this._maintenanceWindow.internalValue = config.maintenanceWindow;
     this._networkConfig.internalValue = config.networkConfig;
+    this._telemetryConfig.internalValue = config.telemetryConfig;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -1169,6 +1243,22 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
     return this._networkConfig.internalValue;
   }
 
+  // telemetry_config - computed: false, optional: true, required: false
+  private _telemetryConfig = new DataprocMetastoreServiceTelemetryConfigOutputReference(this, "telemetry_config");
+  public get telemetryConfig() {
+    return this._telemetryConfig;
+  }
+  public putTelemetryConfig(value: DataprocMetastoreServiceTelemetryConfig) {
+    this._telemetryConfig.internalValue = value;
+  }
+  public resetTelemetryConfig() {
+    this._telemetryConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get telemetryConfigInput() {
+    return this._telemetryConfig.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataprocMetastoreServiceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1205,6 +1295,7 @@ export class DataprocMetastoreService extends cdktf.TerraformResource {
       hive_metastore_config: dataprocMetastoreServiceHiveMetastoreConfigToTerraform(this._hiveMetastoreConfig.internalValue),
       maintenance_window: dataprocMetastoreServiceMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
       network_config: dataprocMetastoreServiceNetworkConfigToTerraform(this._networkConfig.internalValue),
+      telemetry_config: dataprocMetastoreServiceTelemetryConfigToTerraform(this._telemetryConfig.internalValue),
       timeouts: dataprocMetastoreServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

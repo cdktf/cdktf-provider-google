@@ -54,7 +54,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
       terraformResourceType: 'google_container_engine_versions',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -142,6 +142,12 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
   private _releaseChannelDefaultVersion = new cdktf.StringMap(this, "release_channel_default_version");
   public get releaseChannelDefaultVersion() {
     return this._releaseChannelDefaultVersion;
+  }
+
+  // release_channel_latest_version - computed: true, optional: false, required: false
+  private _releaseChannelLatestVersion = new cdktf.StringMap(this, "release_channel_latest_version");
+  public get releaseChannelLatestVersion() {
+    return this._releaseChannelLatestVersion;
   }
 
   // valid_master_versions - computed: true, optional: false, required: false
