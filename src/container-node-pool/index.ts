@@ -1131,6 +1131,192 @@ export class ContainerNodePoolNodeConfigGvnicOutputReference extends cdktf.Compl
     return this._enabled;
   }
 }
+export interface ContainerNodePoolNodeConfigKubeletConfig {
+  /**
+  * Enable CPU CFS quota enforcement for containers that specify CPU limits.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#cpu_cfs_quota ContainerNodePool#cpu_cfs_quota}
+  */
+  readonly cpuCfsQuota?: boolean | cdktf.IResolvable;
+  /**
+  * Set the CPU CFS quota period value 'cpu.cfs_period_us'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#cpu_cfs_quota_period ContainerNodePool#cpu_cfs_quota_period}
+  */
+  readonly cpuCfsQuotaPeriod?: string;
+  /**
+  * Control the CPU management policy on the node.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#cpu_manager_policy ContainerNodePool#cpu_manager_policy}
+  */
+  readonly cpuManagerPolicy: string;
+}
+
+export function containerNodePoolNodeConfigKubeletConfigToTerraform(struct?: ContainerNodePoolNodeConfigKubeletConfigOutputReference | ContainerNodePoolNodeConfigKubeletConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cpu_cfs_quota: cdktf.booleanToTerraform(struct!.cpuCfsQuota),
+    cpu_cfs_quota_period: cdktf.stringToTerraform(struct!.cpuCfsQuotaPeriod),
+    cpu_manager_policy: cdktf.stringToTerraform(struct!.cpuManagerPolicy),
+  }
+}
+
+export class ContainerNodePoolNodeConfigKubeletConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigKubeletConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cpuCfsQuota !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuCfsQuota = this._cpuCfsQuota;
+    }
+    if (this._cpuCfsQuotaPeriod !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuCfsQuotaPeriod = this._cpuCfsQuotaPeriod;
+    }
+    if (this._cpuManagerPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cpuManagerPolicy = this._cpuManagerPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigKubeletConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cpuCfsQuota = undefined;
+      this._cpuCfsQuotaPeriod = undefined;
+      this._cpuManagerPolicy = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cpuCfsQuota = value.cpuCfsQuota;
+      this._cpuCfsQuotaPeriod = value.cpuCfsQuotaPeriod;
+      this._cpuManagerPolicy = value.cpuManagerPolicy;
+    }
+  }
+
+  // cpu_cfs_quota - computed: false, optional: true, required: false
+  private _cpuCfsQuota?: boolean | cdktf.IResolvable; 
+  public get cpuCfsQuota() {
+    return this.getBooleanAttribute('cpu_cfs_quota');
+  }
+  public set cpuCfsQuota(value: boolean | cdktf.IResolvable) {
+    this._cpuCfsQuota = value;
+  }
+  public resetCpuCfsQuota() {
+    this._cpuCfsQuota = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuCfsQuotaInput() {
+    return this._cpuCfsQuota;
+  }
+
+  // cpu_cfs_quota_period - computed: false, optional: true, required: false
+  private _cpuCfsQuotaPeriod?: string; 
+  public get cpuCfsQuotaPeriod() {
+    return this.getStringAttribute('cpu_cfs_quota_period');
+  }
+  public set cpuCfsQuotaPeriod(value: string) {
+    this._cpuCfsQuotaPeriod = value;
+  }
+  public resetCpuCfsQuotaPeriod() {
+    this._cpuCfsQuotaPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuCfsQuotaPeriodInput() {
+    return this._cpuCfsQuotaPeriod;
+  }
+
+  // cpu_manager_policy - computed: false, optional: false, required: true
+  private _cpuManagerPolicy?: string; 
+  public get cpuManagerPolicy() {
+    return this.getStringAttribute('cpu_manager_policy');
+  }
+  public set cpuManagerPolicy(value: string) {
+    this._cpuManagerPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuManagerPolicyInput() {
+    return this._cpuManagerPolicy;
+  }
+}
+export interface ContainerNodePoolNodeConfigLinuxNodeConfig {
+  /**
+  * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#sysctls ContainerNodePool#sysctls}
+  */
+  readonly sysctls: { [key: string]: string };
+}
+
+export function containerNodePoolNodeConfigLinuxNodeConfigToTerraform(struct?: ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference | ContainerNodePoolNodeConfigLinuxNodeConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    sysctls: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.sysctls),
+  }
+}
+
+export class ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigLinuxNodeConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._sysctls !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sysctls = this._sysctls;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigLinuxNodeConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._sysctls = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._sysctls = value.sysctls;
+    }
+  }
+
+  // sysctls - computed: false, optional: false, required: true
+  private _sysctls?: { [key: string]: string }; 
+  public get sysctls() {
+    return this.getStringMapAttribute('sysctls');
+  }
+  public set sysctls(value: { [key: string]: string }) {
+    this._sysctls = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sysctlsInput() {
+    return this._sysctls;
+  }
+}
 export interface ContainerNodePoolNodeConfigReservationAffinity {
   /**
   * Corresponds to the type of reservation consumption.
@@ -1541,6 +1727,18 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly gvnic?: ContainerNodePoolNodeConfigGvnic;
   /**
+  * kubelet_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#kubelet_config ContainerNodePool#kubelet_config}
+  */
+  readonly kubeletConfig?: ContainerNodePoolNodeConfigKubeletConfig;
+  /**
+  * linux_node_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#linux_node_config ContainerNodePool#linux_node_config}
+  */
+  readonly linuxNodeConfig?: ContainerNodePoolNodeConfigLinuxNodeConfig;
+  /**
   * reservation_affinity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#reservation_affinity ContainerNodePool#reservation_affinity}
@@ -1587,6 +1785,8 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     taint: cdktf.listMapper(containerNodePoolNodeConfigTaintToTerraform, false)(struct!.taint),
     gcfs_config: containerNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
+    kubelet_config: containerNodePoolNodeConfigKubeletConfigToTerraform(struct!.kubeletConfig),
+    linux_node_config: containerNodePoolNodeConfigLinuxNodeConfigToTerraform(struct!.linuxNodeConfig),
     reservation_affinity: containerNodePoolNodeConfigReservationAffinityToTerraform(struct!.reservationAffinity),
     shielded_instance_config: containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
     workload_metadata_config: containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct!.workloadMetadataConfig),
@@ -1691,6 +1891,14 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.gvnic = this._gvnic?.internalValue;
     }
+    if (this._kubeletConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kubeletConfig = this._kubeletConfig?.internalValue;
+    }
+    if (this._linuxNodeConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.linuxNodeConfig = this._linuxNodeConfig?.internalValue;
+    }
     if (this._reservationAffinity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
@@ -1730,6 +1938,8 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._taint.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
       this._gvnic.internalValue = undefined;
+      this._kubeletConfig.internalValue = undefined;
+      this._linuxNodeConfig.internalValue = undefined;
       this._reservationAffinity.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
       this._workloadMetadataConfig.internalValue = undefined;
@@ -1757,6 +1967,8 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._taint.internalValue = value.taint;
       this._gcfsConfig.internalValue = value.gcfsConfig;
       this._gvnic.internalValue = value.gvnic;
+      this._kubeletConfig.internalValue = value.kubeletConfig;
+      this._linuxNodeConfig.internalValue = value.linuxNodeConfig;
       this._reservationAffinity.internalValue = value.reservationAffinity;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
       this._workloadMetadataConfig.internalValue = value.workloadMetadataConfig;
@@ -2097,6 +2309,38 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get gvnicInput() {
     return this._gvnic.internalValue;
+  }
+
+  // kubelet_config - computed: false, optional: true, required: false
+  private _kubeletConfig = new ContainerNodePoolNodeConfigKubeletConfigOutputReference(this, "kubelet_config");
+  public get kubeletConfig() {
+    return this._kubeletConfig;
+  }
+  public putKubeletConfig(value: ContainerNodePoolNodeConfigKubeletConfig) {
+    this._kubeletConfig.internalValue = value;
+  }
+  public resetKubeletConfig() {
+    this._kubeletConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kubeletConfigInput() {
+    return this._kubeletConfig.internalValue;
+  }
+
+  // linux_node_config - computed: false, optional: true, required: false
+  private _linuxNodeConfig = new ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference(this, "linux_node_config");
+  public get linuxNodeConfig() {
+    return this._linuxNodeConfig;
+  }
+  public putLinuxNodeConfig(value: ContainerNodePoolNodeConfigLinuxNodeConfig) {
+    this._linuxNodeConfig.internalValue = value;
+  }
+  public resetLinuxNodeConfig() {
+    this._linuxNodeConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linuxNodeConfigInput() {
+    return this._linuxNodeConfig.internalValue;
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
@@ -2739,7 +2983,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
