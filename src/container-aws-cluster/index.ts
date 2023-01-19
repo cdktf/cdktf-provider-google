@@ -1739,7 +1739,7 @@ export class ContainerAwsCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_aws_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
