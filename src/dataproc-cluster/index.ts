@@ -261,6 +261,195 @@ export class DataprocClusterClusterConfigEndpointConfigOutputReference extends c
     return this._httpPorts;
   }
 }
+export interface DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity {
+  /**
+  * The URI of a sole-tenant that the cluster will be created on.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#node_group_uri DataprocCluster#node_group_uri}
+  */
+  readonly nodeGroupUri: string;
+}
+
+export function dataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference | DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    node_group_uri: cdktf.stringToTerraform(struct!.nodeGroupUri),
+  }
+}
+
+export class DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._nodeGroupUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroupUri = this._nodeGroupUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._nodeGroupUri = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._nodeGroupUri = value.nodeGroupUri;
+    }
+  }
+
+  // node_group_uri - computed: false, optional: false, required: true
+  private _nodeGroupUri?: string; 
+  public get nodeGroupUri() {
+    return this.getStringAttribute('node_group_uri');
+  }
+  public set nodeGroupUri(value: string) {
+    this._nodeGroupUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupUriInput() {
+    return this._nodeGroupUri;
+  }
+}
+export interface DataprocClusterClusterConfigGceClusterConfigReservationAffinity {
+  /**
+  * Type of reservation to consume.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#consume_reservation_type DataprocCluster#consume_reservation_type}
+  */
+  readonly consumeReservationType?: string;
+  /**
+  * Corresponds to the label key of reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#key DataprocCluster#key}
+  */
+  readonly key?: string;
+  /**
+  * Corresponds to the label values of reservation resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#values DataprocCluster#values}
+  */
+  readonly values?: string[];
+}
+
+export function dataprocClusterClusterConfigGceClusterConfigReservationAffinityToTerraform(struct?: DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference | DataprocClusterClusterConfigGceClusterConfigReservationAffinity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    consume_reservation_type: cdktf.stringToTerraform(struct!.consumeReservationType),
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
+  }
+}
+
+export class DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigGceClusterConfigReservationAffinity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._consumeReservationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.consumeReservationType = this._consumeReservationType;
+    }
+    if (this._key !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._values !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigGceClusterConfigReservationAffinity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._consumeReservationType = undefined;
+      this._key = undefined;
+      this._values = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._consumeReservationType = value.consumeReservationType;
+      this._key = value.key;
+      this._values = value.values;
+    }
+  }
+
+  // consume_reservation_type - computed: false, optional: true, required: false
+  private _consumeReservationType?: string; 
+  public get consumeReservationType() {
+    return this.getStringAttribute('consume_reservation_type');
+  }
+  public set consumeReservationType(value: string) {
+    this._consumeReservationType = value;
+  }
+  public resetConsumeReservationType() {
+    this._consumeReservationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumeReservationTypeInput() {
+    return this._consumeReservationType;
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key;
+  }
+
+  // values - computed: false, optional: true, required: false
+  private _values?: string[]; 
+  public get values() {
+    return cdktf.Fn.tolist(this.getListAttribute('values'));
+  }
+  public set values(value: string[]) {
+    this._values = value;
+  }
+  public resetValues() {
+    this._values = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valuesInput() {
+    return this._values;
+  }
+}
 export interface DataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
   /**
   * Defines whether instances have integrity monitoring enabled.
@@ -436,6 +625,18 @@ export interface DataprocClusterClusterConfigGceClusterConfig {
   */
   readonly zone?: string;
   /**
+  * node_group_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#node_group_affinity DataprocCluster#node_group_affinity}
+  */
+  readonly nodeGroupAffinity?: DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity;
+  /**
+  * reservation_affinity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#reservation_affinity DataprocCluster#reservation_affinity}
+  */
+  readonly reservationAffinity?: DataprocClusterClusterConfigGceClusterConfigReservationAffinity;
+  /**
   * shielded_instance_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#shielded_instance_config DataprocCluster#shielded_instance_config}
@@ -457,6 +658,8 @@ export function dataprocClusterClusterConfigGceClusterConfigToTerraform(struct?:
     subnetwork: cdktf.stringToTerraform(struct!.subnetwork),
     tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     zone: cdktf.stringToTerraform(struct!.zone),
+    node_group_affinity: dataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityToTerraform(struct!.nodeGroupAffinity),
+    reservation_affinity: dataprocClusterClusterConfigGceClusterConfigReservationAffinityToTerraform(struct!.reservationAffinity),
     shielded_instance_config: dataprocClusterClusterConfigGceClusterConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
   }
 }
@@ -507,6 +710,14 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
       hasAnyValues = true;
       internalValueResult.zone = this._zone;
     }
+    if (this._nodeGroupAffinity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nodeGroupAffinity = this._nodeGroupAffinity?.internalValue;
+    }
+    if (this._reservationAffinity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
+    }
     if (this._shieldedInstanceConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.shieldedInstanceConfig = this._shieldedInstanceConfig?.internalValue;
@@ -525,6 +736,8 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
       this._subnetwork = undefined;
       this._tags = undefined;
       this._zone = undefined;
+      this._nodeGroupAffinity.internalValue = undefined;
+      this._reservationAffinity.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
     }
     else {
@@ -537,6 +750,8 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
       this._subnetwork = value.subnetwork;
       this._tags = value.tags;
       this._zone = value.zone;
+      this._nodeGroupAffinity.internalValue = value.nodeGroupAffinity;
+      this._reservationAffinity.internalValue = value.reservationAffinity;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
     }
   }
@@ -667,6 +882,38 @@ export class DataprocClusterClusterConfigGceClusterConfigOutputReference extends
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
     return this._zone;
+  }
+
+  // node_group_affinity - computed: false, optional: true, required: false
+  private _nodeGroupAffinity = new DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinityOutputReference(this, "node_group_affinity");
+  public get nodeGroupAffinity() {
+    return this._nodeGroupAffinity;
+  }
+  public putNodeGroupAffinity(value: DataprocClusterClusterConfigGceClusterConfigNodeGroupAffinity) {
+    this._nodeGroupAffinity.internalValue = value;
+  }
+  public resetNodeGroupAffinity() {
+    this._nodeGroupAffinity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeGroupAffinityInput() {
+    return this._nodeGroupAffinity.internalValue;
+  }
+
+  // reservation_affinity - computed: false, optional: true, required: false
+  private _reservationAffinity = new DataprocClusterClusterConfigGceClusterConfigReservationAffinityOutputReference(this, "reservation_affinity");
+  public get reservationAffinity() {
+    return this._reservationAffinity;
+  }
+  public putReservationAffinity(value: DataprocClusterClusterConfigGceClusterConfigReservationAffinity) {
+    this._reservationAffinity.internalValue = value;
+  }
+  public resetReservationAffinity() {
+    this._reservationAffinity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationAffinityInput() {
+    return this._reservationAffinity.internalValue;
   }
 
   // shielded_instance_config - computed: false, optional: true, required: false
@@ -4643,7 +4890,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

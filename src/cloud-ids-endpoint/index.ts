@@ -49,6 +49,12 @@ export interface CloudIdsEndpointConfig extends cdktf.TerraformMetaArguments {
   */
   readonly severity: string;
   /**
+  * Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#threat_exceptions CloudIdsEndpoint#threat_exceptions}
+  */
+  readonly threatExceptions?: string[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#timeouts CloudIdsEndpoint#timeouts}
@@ -64,6 +70,10 @@ export interface CloudIdsEndpointTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#delete CloudIdsEndpoint#delete}
   */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#update CloudIdsEndpoint#update}
+  */
+  readonly update?: string;
 }
 
 export function cloudIdsEndpointTimeoutsToTerraform(struct?: CloudIdsEndpointTimeoutsOutputReference | CloudIdsEndpointTimeouts | cdktf.IResolvable): any {
@@ -74,6 +84,7 @@ export function cloudIdsEndpointTimeoutsToTerraform(struct?: CloudIdsEndpointTim
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -103,6 +114,10 @@ export class CloudIdsEndpointTimeoutsOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -112,6 +127,7 @@ export class CloudIdsEndpointTimeoutsOutputReference extends cdktf.ComplexObject
       this.resolvableValue = undefined;
       this._create = undefined;
       this._delete = undefined;
+      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -122,6 +138,7 @@ export class CloudIdsEndpointTimeoutsOutputReference extends cdktf.ComplexObject
       this.resolvableValue = undefined;
       this._create = value.create;
       this._delete = value.delete;
+      this._update = value.update;
     }
   }
 
@@ -156,6 +173,22 @@ export class CloudIdsEndpointTimeoutsOutputReference extends cdktf.ComplexObject
   public get deleteInput() {
     return this._delete;
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
 }
 
 /**
@@ -184,7 +217,7 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_ids_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -202,6 +235,7 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._severity = config.severity;
+    this._threatExceptions = config.threatExceptions;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -324,6 +358,22 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
     return this._severity;
   }
 
+  // threat_exceptions - computed: false, optional: true, required: false
+  private _threatExceptions?: string[]; 
+  public get threatExceptions() {
+    return this.getListAttribute('threat_exceptions');
+  }
+  public set threatExceptions(value: string[]) {
+    this._threatExceptions = value;
+  }
+  public resetThreatExceptions() {
+    this._threatExceptions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threatExceptionsInput() {
+    return this._threatExceptions;
+  }
+
   // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
@@ -358,6 +408,7 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       severity: cdktf.stringToTerraform(this._severity),
+      threat_exceptions: cdktf.listMapper(cdktf.stringToTerraform, false)(this._threatExceptions),
       timeouts: cloudIdsEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

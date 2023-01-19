@@ -276,7 +276,7 @@ export class VertexAiTensorboard extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_tensorboard',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

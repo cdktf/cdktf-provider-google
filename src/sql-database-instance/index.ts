@@ -3456,7 +3456,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3562,6 +3562,11 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // instance_type - computed: true, optional: false, required: false
+  public get instanceType() {
+    return this.getStringAttribute('instance_type');
   }
 
   // ip_address - computed: true, optional: false, required: false
