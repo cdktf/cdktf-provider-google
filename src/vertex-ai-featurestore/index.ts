@@ -125,13 +125,109 @@ export class VertexAiFeaturestoreEncryptionSpecOutputReference extends cdktf.Com
     return this._kmsKeyName;
   }
 }
+export interface VertexAiFeaturestoreOnlineServingConfigScaling {
+  /**
+  * The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of 'minNodeCount'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore#max_node_count VertexAiFeaturestore#max_node_count}
+  */
+  readonly maxNodeCount: number;
+  /**
+  * The minimum number of nodes to scale down to. Must be greater than or equal to 1.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore#min_node_count VertexAiFeaturestore#min_node_count}
+  */
+  readonly minNodeCount: number;
+}
+
+export function vertexAiFeaturestoreOnlineServingConfigScalingToTerraform(struct?: VertexAiFeaturestoreOnlineServingConfigScalingOutputReference | VertexAiFeaturestoreOnlineServingConfigScaling): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
+    min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
+  }
+}
+
+export class VertexAiFeaturestoreOnlineServingConfigScalingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VertexAiFeaturestoreOnlineServingConfigScaling | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxNodeCount = this._maxNodeCount;
+    }
+    if (this._minNodeCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minNodeCount = this._minNodeCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VertexAiFeaturestoreOnlineServingConfigScaling | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxNodeCount = undefined;
+      this._minNodeCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxNodeCount = value.maxNodeCount;
+      this._minNodeCount = value.minNodeCount;
+    }
+  }
+
+  // max_node_count - computed: false, optional: false, required: true
+  private _maxNodeCount?: number; 
+  public get maxNodeCount() {
+    return this.getNumberAttribute('max_node_count');
+  }
+  public set maxNodeCount(value: number) {
+    this._maxNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodeCountInput() {
+    return this._maxNodeCount;
+  }
+
+  // min_node_count - computed: false, optional: false, required: true
+  private _minNodeCount?: number; 
+  public get minNodeCount() {
+    return this.getNumberAttribute('min_node_count');
+  }
+  public set minNodeCount(value: number) {
+    this._minNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodeCountInput() {
+    return this._minNodeCount;
+  }
+}
 export interface VertexAiFeaturestoreOnlineServingConfig {
   /**
   * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore#fixed_node_count VertexAiFeaturestore#fixed_node_count}
   */
-  readonly fixedNodeCount: number;
+  readonly fixedNodeCount?: number;
+  /**
+  * scaling block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore#scaling VertexAiFeaturestore#scaling}
+  */
+  readonly scaling?: VertexAiFeaturestoreOnlineServingConfigScaling;
 }
 
 export function vertexAiFeaturestoreOnlineServingConfigToTerraform(struct?: VertexAiFeaturestoreOnlineServingConfigOutputReference | VertexAiFeaturestoreOnlineServingConfig): any {
@@ -141,6 +237,7 @@ export function vertexAiFeaturestoreOnlineServingConfigToTerraform(struct?: Vert
   }
   return {
     fixed_node_count: cdktf.numberToTerraform(struct!.fixedNodeCount),
+    scaling: vertexAiFeaturestoreOnlineServingConfigScalingToTerraform(struct!.scaling),
   }
 }
 
@@ -162,6 +259,10 @@ export class VertexAiFeaturestoreOnlineServingConfigOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.fixedNodeCount = this._fixedNodeCount;
     }
+    if (this._scaling?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scaling = this._scaling?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -169,14 +270,16 @@ export class VertexAiFeaturestoreOnlineServingConfigOutputReference extends cdkt
     if (value === undefined) {
       this.isEmptyObject = false;
       this._fixedNodeCount = undefined;
+      this._scaling.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._fixedNodeCount = value.fixedNodeCount;
+      this._scaling.internalValue = value.scaling;
     }
   }
 
-  // fixed_node_count - computed: false, optional: false, required: true
+  // fixed_node_count - computed: false, optional: true, required: false
   private _fixedNodeCount?: number; 
   public get fixedNodeCount() {
     return this.getNumberAttribute('fixed_node_count');
@@ -184,9 +287,28 @@ export class VertexAiFeaturestoreOnlineServingConfigOutputReference extends cdkt
   public set fixedNodeCount(value: number) {
     this._fixedNodeCount = value;
   }
+  public resetFixedNodeCount() {
+    this._fixedNodeCount = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get fixedNodeCountInput() {
     return this._fixedNodeCount;
+  }
+
+  // scaling - computed: false, optional: true, required: false
+  private _scaling = new VertexAiFeaturestoreOnlineServingConfigScalingOutputReference(this, "scaling");
+  public get scaling() {
+    return this._scaling;
+  }
+  public putScaling(value: VertexAiFeaturestoreOnlineServingConfigScaling) {
+    this._scaling.internalValue = value;
+  }
+  public resetScaling() {
+    this._scaling.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scalingInput() {
+    return this._scaling.internalValue;
   }
 }
 export interface VertexAiFeaturestoreTimeouts {
@@ -345,7 +467,7 @@ export class VertexAiFeaturestore extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_featurestore',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

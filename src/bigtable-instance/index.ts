@@ -39,7 +39,7 @@ export interface BigtableInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly labels?: { [key: string]: string };
   /**
-  * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+  * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#name BigtableInstance#name}
   */
@@ -204,7 +204,7 @@ export class BigtableInstanceClusterAutoscalingConfigOutputReference extends cdk
 }
 export interface BigtableInstanceCluster {
   /**
-  * The ID of the Cloud Bigtable cluster.
+  * The ID of the Cloud Bigtable cluster. Must be 6-30 characters and must only contain hyphens, lowercase letters and numbers.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#cluster_id BigtableInstance#cluster_id}
   */
@@ -216,7 +216,7 @@ export interface BigtableInstanceCluster {
   */
   readonly kmsKeyName?: string;
   /**
-  * The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance.
+  * The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for each cluster in an instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance#num_nodes BigtableInstance#num_nodes}
   */
@@ -470,7 +470,7 @@ export class BigtableInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

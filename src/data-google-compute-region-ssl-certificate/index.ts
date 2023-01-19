@@ -68,7 +68,7 @@ export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_region_ssl_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -107,6 +107,11 @@ export class DataGoogleComputeRegionSslCertificate extends cdktf.TerraformDataSo
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // expire_time - computed: true, optional: false, required: false
+  public get expireTime() {
+    return this.getStringAttribute('expire_time');
   }
 
   // id - computed: true, optional: true, required: false
