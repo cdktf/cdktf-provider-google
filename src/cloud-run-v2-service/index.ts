@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunV2ServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v2_service#annotations CloudRunV2Service#annotations}
+  */
+  readonly annotations?: { [key: string]: string };
+  /**
   * Arbitrary identifier for the API client.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v2_service#client CloudRunV2Service#client}
@@ -3203,6 +3209,12 @@ export class CloudRunV2ServiceTemplateVpcAccessOutputReference extends cdktf.Com
 }
 export interface CloudRunV2ServiceTemplate {
   /**
+  * KRM-style annotations for the resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v2_service#annotations CloudRunV2Service#annotations}
+  */
+  readonly annotations?: { [key: string]: string };
+  /**
   * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v2_service#encryption_key CloudRunV2Service#encryption_key}
@@ -3278,6 +3290,7 @@ export function cloudRunV2ServiceTemplateToTerraform(struct?: CloudRunV2ServiceT
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    annotations: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.annotations),
     encryption_key: cdktf.stringToTerraform(struct!.encryptionKey),
     execution_environment: cdktf.stringToTerraform(struct!.executionEnvironment),
     labels: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.labels),
@@ -3306,6 +3319,10 @@ export class CloudRunV2ServiceTemplateOutputReference extends cdktf.ComplexObjec
   public get internalValue(): CloudRunV2ServiceTemplate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._annotations !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.annotations = this._annotations;
+    }
     if (this._encryptionKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.encryptionKey = this._encryptionKey;
@@ -3356,6 +3373,7 @@ export class CloudRunV2ServiceTemplateOutputReference extends cdktf.ComplexObjec
   public set internalValue(value: CloudRunV2ServiceTemplate | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._annotations = undefined;
       this._encryptionKey = undefined;
       this._executionEnvironment = undefined;
       this._labels = undefined;
@@ -3370,6 +3388,7 @@ export class CloudRunV2ServiceTemplateOutputReference extends cdktf.ComplexObjec
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._annotations = value.annotations;
       this._encryptionKey = value.encryptionKey;
       this._executionEnvironment = value.executionEnvironment;
       this._labels = value.labels;
@@ -3382,6 +3401,22 @@ export class CloudRunV2ServiceTemplateOutputReference extends cdktf.ComplexObjec
       this._volumes.internalValue = value.volumes;
       this._vpcAccess.internalValue = value.vpcAccess;
     }
+  }
+
+  // annotations - computed: false, optional: true, required: false
+  private _annotations?: { [key: string]: string }; 
+  public get annotations() {
+    return this.getStringMapAttribute('annotations');
+  }
+  public set annotations(value: { [key: string]: string }) {
+    this._annotations = value;
+  }
+  public resetAnnotations() {
+    this._annotations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsInput() {
+    return this._annotations;
   }
 
   // encryption_key - computed: false, optional: true, required: false
@@ -3902,7 +3937,7 @@ export class CloudRunV2Service extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3913,6 +3948,7 @@ export class CloudRunV2Service extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._annotations = config.annotations;
     this._client = config.client;
     this._clientVersion = config.clientVersion;
     this._description = config.description;
@@ -3932,6 +3968,22 @@ export class CloudRunV2Service extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // annotations - computed: false, optional: true, required: false
+  private _annotations?: { [key: string]: string }; 
+  public get annotations() {
+    return this.getStringMapAttribute('annotations');
+  }
+  public set annotations(value: { [key: string]: string }) {
+    this._annotations = value;
+  }
+  public resetAnnotations() {
+    this._annotations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsInput() {
+    return this._annotations;
+  }
 
   // client - computed: false, optional: true, required: false
   private _client?: string; 
@@ -4215,6 +4267,7 @@ export class CloudRunV2Service extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      annotations: cdktf.hashMapper(cdktf.stringToTerraform)(this._annotations),
       client: cdktf.stringToTerraform(this._client),
       client_version: cdktf.stringToTerraform(this._clientVersion),
       description: cdktf.stringToTerraform(this._description),

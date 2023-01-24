@@ -127,6 +127,195 @@ export class DataprocClusterClusterConfigAutoscalingConfigOutputReference extend
     return this._policyUri;
   }
 }
+export interface DataprocClusterClusterConfigDataprocMetricConfigMetrics {
+  /**
+  * Specify one or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#metric_overrides DataprocCluster#metric_overrides}
+  */
+  readonly metricOverrides?: string[];
+  /**
+  * A source for the collection of Dataproc OSS metrics (see [available OSS metrics] (https://cloud.google.com//dataproc/docs/guides/monitoring#available_oss_metrics)).
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#metric_source DataprocCluster#metric_source}
+  */
+  readonly metricSource: string;
+}
+
+export function dataprocClusterClusterConfigDataprocMetricConfigMetricsToTerraform(struct?: DataprocClusterClusterConfigDataprocMetricConfigMetrics | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    metric_overrides: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.metricOverrides),
+    metric_source: cdktf.stringToTerraform(struct!.metricSource),
+  }
+}
+
+export class DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigDataprocMetricConfigMetrics | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._metricOverrides !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metricOverrides = this._metricOverrides;
+    }
+    if (this._metricSource !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metricSource = this._metricSource;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigDataprocMetricConfigMetrics | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._metricOverrides = undefined;
+      this._metricSource = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._metricOverrides = value.metricOverrides;
+      this._metricSource = value.metricSource;
+    }
+  }
+
+  // metric_overrides - computed: false, optional: true, required: false
+  private _metricOverrides?: string[]; 
+  public get metricOverrides() {
+    return cdktf.Fn.tolist(this.getListAttribute('metric_overrides'));
+  }
+  public set metricOverrides(value: string[]) {
+    this._metricOverrides = value;
+  }
+  public resetMetricOverrides() {
+    this._metricOverrides = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricOverridesInput() {
+    return this._metricOverrides;
+  }
+
+  // metric_source - computed: false, optional: false, required: true
+  private _metricSource?: string; 
+  public get metricSource() {
+    return this.getStringAttribute('metric_source');
+  }
+  public set metricSource(value: string) {
+    this._metricSource = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricSourceInput() {
+    return this._metricSource;
+  }
+}
+
+export class DataprocClusterClusterConfigDataprocMetricConfigMetricsList extends cdktf.ComplexList {
+  public internalValue? : DataprocClusterClusterConfigDataprocMetricConfigMetrics[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference {
+    return new DataprocClusterClusterConfigDataprocMetricConfigMetricsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataprocClusterClusterConfigDataprocMetricConfig {
+  /**
+  * metrics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#metrics DataprocCluster#metrics}
+  */
+  readonly metrics: DataprocClusterClusterConfigDataprocMetricConfigMetrics[] | cdktf.IResolvable;
+}
+
+export function dataprocClusterClusterConfigDataprocMetricConfigToTerraform(struct?: DataprocClusterClusterConfigDataprocMetricConfigOutputReference | DataprocClusterClusterConfigDataprocMetricConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    metrics: cdktf.listMapper(dataprocClusterClusterConfigDataprocMetricConfigMetricsToTerraform, true)(struct!.metrics),
+  }
+}
+
+export class DataprocClusterClusterConfigDataprocMetricConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataprocClusterClusterConfigDataprocMetricConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._metrics?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metrics = this._metrics?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataprocClusterClusterConfigDataprocMetricConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._metrics.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._metrics.internalValue = value.metrics;
+    }
+  }
+
+  // metrics - computed: false, optional: false, required: true
+  private _metrics = new DataprocClusterClusterConfigDataprocMetricConfigMetricsList(this, "metrics", false);
+  public get metrics() {
+    return this._metrics;
+  }
+  public putMetrics(value: DataprocClusterClusterConfigDataprocMetricConfigMetrics[] | cdktf.IResolvable) {
+    this._metrics.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricsInput() {
+    return this._metrics.internalValue;
+  }
+}
 export interface DataprocClusterClusterConfigEncryptionConfig {
   /**
   * The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
@@ -3090,6 +3279,12 @@ export interface DataprocClusterClusterConfig {
   */
   readonly autoscalingConfig?: DataprocClusterClusterConfigAutoscalingConfig;
   /**
+  * dataproc_metric_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#dataproc_metric_config DataprocCluster#dataproc_metric_config}
+  */
+  readonly dataprocMetricConfig?: DataprocClusterClusterConfigDataprocMetricConfig;
+  /**
   * encryption_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataproc_cluster#encryption_config DataprocCluster#encryption_config}
@@ -3166,6 +3361,7 @@ export function dataprocClusterClusterConfigToTerraform(struct?: DataprocCluster
     staging_bucket: cdktf.stringToTerraform(struct!.stagingBucket),
     temp_bucket: cdktf.stringToTerraform(struct!.tempBucket),
     autoscaling_config: dataprocClusterClusterConfigAutoscalingConfigToTerraform(struct!.autoscalingConfig),
+    dataproc_metric_config: dataprocClusterClusterConfigDataprocMetricConfigToTerraform(struct!.dataprocMetricConfig),
     encryption_config: dataprocClusterClusterConfigEncryptionConfigToTerraform(struct!.encryptionConfig),
     endpoint_config: dataprocClusterClusterConfigEndpointConfigToTerraform(struct!.endpointConfig),
     gce_cluster_config: dataprocClusterClusterConfigGceClusterConfigToTerraform(struct!.gceClusterConfig),
@@ -3205,6 +3401,10 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
     if (this._autoscalingConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoscalingConfig = this._autoscalingConfig?.internalValue;
+    }
+    if (this._dataprocMetricConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataprocMetricConfig = this._dataprocMetricConfig?.internalValue;
     }
     if (this._encryptionConfig?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -3259,6 +3459,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       this._stagingBucket = undefined;
       this._tempBucket = undefined;
       this._autoscalingConfig.internalValue = undefined;
+      this._dataprocMetricConfig.internalValue = undefined;
       this._encryptionConfig.internalValue = undefined;
       this._endpointConfig.internalValue = undefined;
       this._gceClusterConfig.internalValue = undefined;
@@ -3276,6 +3477,7 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
       this._stagingBucket = value.stagingBucket;
       this._tempBucket = value.tempBucket;
       this._autoscalingConfig.internalValue = value.autoscalingConfig;
+      this._dataprocMetricConfig.internalValue = value.dataprocMetricConfig;
       this._encryptionConfig.internalValue = value.encryptionConfig;
       this._endpointConfig.internalValue = value.endpointConfig;
       this._gceClusterConfig.internalValue = value.gceClusterConfig;
@@ -3341,6 +3543,22 @@ export class DataprocClusterClusterConfigOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get autoscalingConfigInput() {
     return this._autoscalingConfig.internalValue;
+  }
+
+  // dataproc_metric_config - computed: false, optional: true, required: false
+  private _dataprocMetricConfig = new DataprocClusterClusterConfigDataprocMetricConfigOutputReference(this, "dataproc_metric_config");
+  public get dataprocMetricConfig() {
+    return this._dataprocMetricConfig;
+  }
+  public putDataprocMetricConfig(value: DataprocClusterClusterConfigDataprocMetricConfig) {
+    this._dataprocMetricConfig.internalValue = value;
+  }
+  public resetDataprocMetricConfig() {
+    this._dataprocMetricConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataprocMetricConfigInput() {
+    return this._dataprocMetricConfig.internalValue;
   }
 
   // encryption_config - computed: false, optional: true, required: false
@@ -4890,7 +5108,7 @@ export class DataprocCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

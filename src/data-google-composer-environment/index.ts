@@ -662,6 +662,150 @@ export class DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigList ext
     return new DataGoogleComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig {
+}
+
+export function dataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // snapshot_creation_schedule - computed: true, optional: false, required: false
+  public get snapshotCreationSchedule() {
+    return this.getStringAttribute('snapshot_creation_schedule');
+  }
+
+  // snapshot_location - computed: true, optional: false, required: false
+  public get snapshotLocation() {
+    return this.getStringAttribute('snapshot_location');
+  }
+
+  // time_zone - computed: true, optional: false, required: false
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference {
+    return new DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComposerEnvironmentConfigRecoveryConfig {
+}
+
+export function dataGoogleComposerEnvironmentConfigRecoveryConfigToTerraform(struct?: DataGoogleComposerEnvironmentConfigRecoveryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigRecoveryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComposerEnvironmentConfigRecoveryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComposerEnvironmentConfigRecoveryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // scheduled_snapshots_config - computed: true, optional: false, required: false
+  private _scheduledSnapshotsConfig = new DataGoogleComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigList(this, "scheduled_snapshots_config", false);
+  public get scheduledSnapshotsConfig() {
+    return this._scheduledSnapshotsConfig;
+  }
+}
+
+export class DataGoogleComposerEnvironmentConfigRecoveryConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComposerEnvironmentConfigRecoveryConfigOutputReference {
+    return new DataGoogleComposerEnvironmentConfigRecoveryConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleComposerEnvironmentConfigSoftwareConfig {
 }
 
@@ -1367,6 +1511,12 @@ export class DataGoogleComposerEnvironmentConfigAOutputReference extends cdktf.C
     return this._privateEnvironmentConfig;
   }
 
+  // recovery_config - computed: true, optional: false, required: false
+  private _recoveryConfig = new DataGoogleComposerEnvironmentConfigRecoveryConfigList(this, "recovery_config", false);
+  public get recoveryConfig() {
+    return this._recoveryConfig;
+  }
+
   // software_config - computed: true, optional: false, required: false
   private _softwareConfig = new DataGoogleComposerEnvironmentConfigSoftwareConfigList(this, "software_config", false);
   public get softwareConfig() {
@@ -1437,7 +1587,7 @@ export class DataGoogleComposerEnvironment extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
