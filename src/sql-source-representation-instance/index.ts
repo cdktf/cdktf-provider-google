@@ -8,11 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The CA certificate on the external server. Include only if SSL/TLS is used on the external server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#ca_certificate SqlSourceRepresentationInstance#ca_certificate}
+  */
+  readonly caCertificate?: string;
+  /**
+  * The client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#client_certificate SqlSourceRepresentationInstance#client_certificate}
+  */
+  readonly clientCertificate?: string;
+  /**
+  * The private key file for the client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#client_key SqlSourceRepresentationInstance#client_key}
+  */
+  readonly clientKey?: string;
+  /**
   * The MySQL version running on your source database server. Possible values: ["MYSQL_5_5", "MYSQL_5_6", "MYSQL_5_7", "MYSQL_8_0"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#database_version SqlSourceRepresentationInstance#database_version}
   */
   readonly databaseVersion: string;
+  /**
+  * A file in the bucket that contains the data from the external server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#dump_file_path SqlSourceRepresentationInstance#dump_file_path}
+  */
+  readonly dumpFilePath?: string;
   /**
   * The externally accessible IPv4 address for the source database server.
   * 
@@ -33,6 +57,12 @@ export interface SqlSourceRepresentationInstanceConfig extends cdktf.TerraformMe
   */
   readonly name: string;
   /**
+  * The password for the replication user account.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#password SqlSourceRepresentationInstance#password}
+  */
+  readonly password?: string;
+  /**
   * The externally accessible port for the source database server.
 Defaults to 3306.
   * 
@@ -50,6 +80,12 @@ If it is not provided, the provider region is used.
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#region SqlSourceRepresentationInstance#region}
   */
   readonly region?: string;
+  /**
+  * The replication user account on the external server.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_source_representation_instance#username SqlSourceRepresentationInstance#username}
+  */
+  readonly username?: string;
   /**
   * timeouts block
   * 
@@ -186,7 +222,7 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_source_representation_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -197,19 +233,73 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._caCertificate = config.caCertificate;
+    this._clientCertificate = config.clientCertificate;
+    this._clientKey = config.clientKey;
     this._databaseVersion = config.databaseVersion;
+    this._dumpFilePath = config.dumpFilePath;
     this._host = config.host;
     this._id = config.id;
     this._name = config.name;
+    this._password = config.password;
     this._port = config.port;
     this._project = config.project;
     this._region = config.region;
+    this._username = config.username;
     this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // ca_certificate - computed: false, optional: true, required: false
+  private _caCertificate?: string; 
+  public get caCertificate() {
+    return this.getStringAttribute('ca_certificate');
+  }
+  public set caCertificate(value: string) {
+    this._caCertificate = value;
+  }
+  public resetCaCertificate() {
+    this._caCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get caCertificateInput() {
+    return this._caCertificate;
+  }
+
+  // client_certificate - computed: false, optional: true, required: false
+  private _clientCertificate?: string; 
+  public get clientCertificate() {
+    return this.getStringAttribute('client_certificate');
+  }
+  public set clientCertificate(value: string) {
+    this._clientCertificate = value;
+  }
+  public resetClientCertificate() {
+    this._clientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateInput() {
+    return this._clientCertificate;
+  }
+
+  // client_key - computed: false, optional: true, required: false
+  private _clientKey?: string; 
+  public get clientKey() {
+    return this.getStringAttribute('client_key');
+  }
+  public set clientKey(value: string) {
+    this._clientKey = value;
+  }
+  public resetClientKey() {
+    this._clientKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientKeyInput() {
+    return this._clientKey;
+  }
 
   // database_version - computed: false, optional: false, required: true
   private _databaseVersion?: string; 
@@ -222,6 +312,22 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get databaseVersionInput() {
     return this._databaseVersion;
+  }
+
+  // dump_file_path - computed: false, optional: true, required: false
+  private _dumpFilePath?: string; 
+  public get dumpFilePath() {
+    return this.getStringAttribute('dump_file_path');
+  }
+  public set dumpFilePath(value: string) {
+    this._dumpFilePath = value;
+  }
+  public resetDumpFilePath() {
+    this._dumpFilePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dumpFilePathInput() {
+    return this._dumpFilePath;
   }
 
   // host - computed: false, optional: false, required: true
@@ -264,6 +370,22 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password;
   }
 
   // port - computed: false, optional: true, required: false
@@ -314,6 +436,22 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
     return this._region;
   }
 
+  // username - computed: false, optional: true, required: false
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  public resetUsername() {
+    this._username = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SqlSourceRepresentationInstanceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -336,13 +474,19 @@ export class SqlSourceRepresentationInstance extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      ca_certificate: cdktf.stringToTerraform(this._caCertificate),
+      client_certificate: cdktf.stringToTerraform(this._clientCertificate),
+      client_key: cdktf.stringToTerraform(this._clientKey),
       database_version: cdktf.stringToTerraform(this._databaseVersion),
+      dump_file_path: cdktf.stringToTerraform(this._dumpFilePath),
       host: cdktf.stringToTerraform(this._host),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      password: cdktf.stringToTerraform(this._password),
       port: cdktf.numberToTerraform(this._port),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
+      username: cdktf.stringToTerraform(this._username),
       timeouts: sqlSourceRepresentationInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

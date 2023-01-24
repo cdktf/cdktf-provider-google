@@ -793,6 +793,8 @@ Exactly one of 'calendar_period', 'custom_period' must be provided. Possible val
   * Optional. If creditTypesTreatment is INCLUDE_SPECIFIED_CREDITS,
 this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See a list of acceptable credit type values.
 If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty.
+
+**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#credit_types BillingBudget#credit_types}
   */
@@ -839,6 +841,8 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
+
+**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_budget#subaccounts BillingBudget#subaccounts}
   */
@@ -1353,7 +1357,7 @@ export class BillingBudget extends cdktf.TerraformResource {
       terraformResourceType: 'google_billing_budget',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

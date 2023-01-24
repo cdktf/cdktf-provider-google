@@ -52,6 +52,12 @@ responses.
   */
   readonly description?: string;
   /**
+  * The resource URL for the edge security policy associated with this backend service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#edge_security_policy ComputeBackendService#edge_security_policy}
+  */
+  readonly edgeSecurityPolicy?: string;
+  /**
   * If true, enable Cloud CDN for this BackendService.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#enable_cdn ComputeBackendService#enable_cdn}
@@ -2941,7 +2947,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2958,6 +2964,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._customRequestHeaders = config.customRequestHeaders;
     this._customResponseHeaders = config.customResponseHeaders;
     this._description = config.description;
+    this._edgeSecurityPolicy = config.edgeSecurityPolicy;
     this._enableCdn = config.enableCdn;
     this._healthChecks = config.healthChecks;
     this._id = config.id;
@@ -3084,6 +3091,22 @@ export class ComputeBackendService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // edge_security_policy - computed: false, optional: true, required: false
+  private _edgeSecurityPolicy?: string; 
+  public get edgeSecurityPolicy() {
+    return this.getStringAttribute('edge_security_policy');
+  }
+  public set edgeSecurityPolicy(value: string) {
+    this._edgeSecurityPolicy = value;
+  }
+  public resetEdgeSecurityPolicy() {
+    this._edgeSecurityPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get edgeSecurityPolicyInput() {
+    return this._edgeSecurityPolicy;
   }
 
   // enable_cdn - computed: false, optional: true, required: false
@@ -3446,6 +3469,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       custom_request_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customRequestHeaders),
       custom_response_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(this._customResponseHeaders),
       description: cdktf.stringToTerraform(this._description),
+      edge_security_policy: cdktf.stringToTerraform(this._edgeSecurityPolicy),
       enable_cdn: cdktf.booleanToTerraform(this._enableCdn),
       health_checks: cdktf.listMapper(cdktf.stringToTerraform, false)(this._healthChecks),
       id: cdktf.stringToTerraform(this._id),

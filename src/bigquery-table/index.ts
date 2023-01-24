@@ -706,6 +706,12 @@ export interface BigqueryTableExternalDataConfiguration {
   */
   readonly maxBadRecords?: number;
   /**
+  * When creating an external table, the user can provide a reference file with the table schema. This is enabled for the following formats: AVRO, PARQUET, ORC.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#reference_file_schema_uri BigqueryTable#reference_file_schema_uri}
+  */
+  readonly referenceFileSchemaUri?: string;
+  /**
   * A JSON schema for the external table. Schema is required for CSV and JSON formats and is disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats when using external tables.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_table#schema BigqueryTable#schema}
@@ -760,6 +766,7 @@ export function bigqueryTableExternalDataConfigurationToTerraform(struct?: Bigqu
     connection_id: cdktf.stringToTerraform(struct!.connectionId),
     ignore_unknown_values: cdktf.booleanToTerraform(struct!.ignoreUnknownValues),
     max_bad_records: cdktf.numberToTerraform(struct!.maxBadRecords),
+    reference_file_schema_uri: cdktf.stringToTerraform(struct!.referenceFileSchemaUri),
     schema: cdktf.stringToTerraform(struct!.schema),
     source_format: cdktf.stringToTerraform(struct!.sourceFormat),
     source_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceUris),
@@ -804,6 +811,10 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.maxBadRecords = this._maxBadRecords;
     }
+    if (this._referenceFileSchemaUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.referenceFileSchemaUri = this._referenceFileSchemaUri;
+    }
     if (this._schema !== undefined) {
       hasAnyValues = true;
       internalValueResult.schema = this._schema;
@@ -843,6 +854,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._connectionId = undefined;
       this._ignoreUnknownValues = undefined;
       this._maxBadRecords = undefined;
+      this._referenceFileSchemaUri = undefined;
       this._schema = undefined;
       this._sourceFormat = undefined;
       this._sourceUris = undefined;
@@ -858,6 +870,7 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
       this._connectionId = value.connectionId;
       this._ignoreUnknownValues = value.ignoreUnknownValues;
       this._maxBadRecords = value.maxBadRecords;
+      this._referenceFileSchemaUri = value.referenceFileSchemaUri;
       this._schema = value.schema;
       this._sourceFormat = value.sourceFormat;
       this._sourceUris = value.sourceUris;
@@ -943,6 +956,22 @@ export class BigqueryTableExternalDataConfigurationOutputReference extends cdktf
   // Temporarily expose input value. Use with caution.
   public get maxBadRecordsInput() {
     return this._maxBadRecords;
+  }
+
+  // reference_file_schema_uri - computed: false, optional: true, required: false
+  private _referenceFileSchemaUri?: string; 
+  public get referenceFileSchemaUri() {
+    return this.getStringAttribute('reference_file_schema_uri');
+  }
+  public set referenceFileSchemaUri(value: string) {
+    this._referenceFileSchemaUri = value;
+  }
+  public resetReferenceFileSchemaUri() {
+    this._referenceFileSchemaUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get referenceFileSchemaUriInput() {
+    return this._referenceFileSchemaUri;
   }
 
   // schema - computed: true, optional: true, required: false
@@ -1650,7 +1679,7 @@ export class BigqueryTable extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_table',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

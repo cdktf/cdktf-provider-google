@@ -205,7 +205,7 @@ export class ComputeNetworkPeeringRoutesConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_peering_routes_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

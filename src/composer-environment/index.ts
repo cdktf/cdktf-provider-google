@@ -1287,6 +1287,224 @@ export class ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference ex
     return this._webServerIpv4CidrBlock;
   }
 }
+export interface ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig {
+  /**
+  * When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#enabled ComposerEnvironment#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Snapshot schedule, in the unix-cron format.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#snapshot_creation_schedule ComposerEnvironment#snapshot_creation_schedule}
+  */
+  readonly snapshotCreationSchedule?: string;
+  /**
+  * the URI of a bucket folder where to save the snapshot.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#snapshot_location ComposerEnvironment#snapshot_location}
+  */
+  readonly snapshotLocation?: string;
+  /**
+  * A time zone for the schedule. This value is a time offset and does not take into account daylight saving time changes. Valid values are from UTC-12 to UTC+12. Examples: UTC, UTC-01, UTC+03.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#time_zone ComposerEnvironment#time_zone}
+  */
+  readonly timeZone?: string;
+}
+
+export function composerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigToTerraform(struct?: ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference | ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    snapshot_creation_schedule: cdktf.stringToTerraform(struct!.snapshotCreationSchedule),
+    snapshot_location: cdktf.stringToTerraform(struct!.snapshotLocation),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
+  }
+}
+
+export class ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._snapshotCreationSchedule !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshotCreationSchedule = this._snapshotCreationSchedule;
+    }
+    if (this._snapshotLocation !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshotLocation = this._snapshotLocation;
+    }
+    if (this._timeZone !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._snapshotCreationSchedule = undefined;
+      this._snapshotLocation = undefined;
+      this._timeZone = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._snapshotCreationSchedule = value.snapshotCreationSchedule;
+      this._snapshotLocation = value.snapshotLocation;
+      this._timeZone = value.timeZone;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // snapshot_creation_schedule - computed: false, optional: true, required: false
+  private _snapshotCreationSchedule?: string; 
+  public get snapshotCreationSchedule() {
+    return this.getStringAttribute('snapshot_creation_schedule');
+  }
+  public set snapshotCreationSchedule(value: string) {
+    this._snapshotCreationSchedule = value;
+  }
+  public resetSnapshotCreationSchedule() {
+    this._snapshotCreationSchedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotCreationScheduleInput() {
+    return this._snapshotCreationSchedule;
+  }
+
+  // snapshot_location - computed: false, optional: true, required: false
+  private _snapshotLocation?: string; 
+  public get snapshotLocation() {
+    return this.getStringAttribute('snapshot_location');
+  }
+  public set snapshotLocation(value: string) {
+    this._snapshotLocation = value;
+  }
+  public resetSnapshotLocation() {
+    this._snapshotLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotLocationInput() {
+    return this._snapshotLocation;
+  }
+
+  // time_zone - computed: false, optional: true, required: false
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone;
+  }
+}
+export interface ComposerEnvironmentConfigRecoveryConfig {
+  /**
+  * scheduled_snapshots_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#scheduled_snapshots_config ComposerEnvironment#scheduled_snapshots_config}
+  */
+  readonly scheduledSnapshotsConfig?: ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig;
+}
+
+export function composerEnvironmentConfigRecoveryConfigToTerraform(struct?: ComposerEnvironmentConfigRecoveryConfigOutputReference | ComposerEnvironmentConfigRecoveryConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    scheduled_snapshots_config: composerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigToTerraform(struct!.scheduledSnapshotsConfig),
+  }
+}
+
+export class ComposerEnvironmentConfigRecoveryConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComposerEnvironmentConfigRecoveryConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._scheduledSnapshotsConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.scheduledSnapshotsConfig = this._scheduledSnapshotsConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComposerEnvironmentConfigRecoveryConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._scheduledSnapshotsConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._scheduledSnapshotsConfig.internalValue = value.scheduledSnapshotsConfig;
+    }
+  }
+
+  // scheduled_snapshots_config - computed: false, optional: true, required: false
+  private _scheduledSnapshotsConfig = new ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference(this, "scheduled_snapshots_config");
+  public get scheduledSnapshotsConfig() {
+    return this._scheduledSnapshotsConfig;
+  }
+  public putScheduledSnapshotsConfig(value: ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig) {
+    this._scheduledSnapshotsConfig.internalValue = value;
+  }
+  public resetScheduledSnapshotsConfig() {
+    this._scheduledSnapshotsConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduledSnapshotsConfigInput() {
+    return this._scheduledSnapshotsConfig.internalValue;
+  }
+}
 export interface ComposerEnvironmentConfigSoftwareConfig {
   /**
   * Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and cannot contain "=" or ";". Section and property names cannot contain characters: "." Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden.
@@ -2392,6 +2610,12 @@ export interface ComposerEnvironmentConfigA {
   */
   readonly privateEnvironmentConfig?: ComposerEnvironmentConfigPrivateEnvironmentConfig;
   /**
+  * recovery_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#recovery_config ComposerEnvironment#recovery_config}
+  */
+  readonly recoveryConfig?: ComposerEnvironmentConfigRecoveryConfig;
+  /**
   * software_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/composer_environment#software_config ComposerEnvironment#software_config}
@@ -2431,6 +2655,7 @@ export function composerEnvironmentConfigAToTerraform(struct?: ComposerEnvironme
     master_authorized_networks_config: composerEnvironmentConfigMasterAuthorizedNetworksConfigToTerraform(struct!.masterAuthorizedNetworksConfig),
     node_config: composerEnvironmentConfigNodeConfigToTerraform(struct!.nodeConfig),
     private_environment_config: composerEnvironmentConfigPrivateEnvironmentConfigToTerraform(struct!.privateEnvironmentConfig),
+    recovery_config: composerEnvironmentConfigRecoveryConfigToTerraform(struct!.recoveryConfig),
     software_config: composerEnvironmentConfigSoftwareConfigToTerraform(struct!.softwareConfig),
     web_server_config: composerEnvironmentConfigWebServerConfigToTerraform(struct!.webServerConfig),
     web_server_network_access_control: composerEnvironmentConfigWebServerNetworkAccessControlToTerraform(struct!.webServerNetworkAccessControl),
@@ -2484,6 +2709,10 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.privateEnvironmentConfig = this._privateEnvironmentConfig?.internalValue;
     }
+    if (this._recoveryConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.recoveryConfig = this._recoveryConfig?.internalValue;
+    }
     if (this._softwareConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.softwareConfig = this._softwareConfig?.internalValue;
@@ -2514,6 +2743,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
       this._masterAuthorizedNetworksConfig.internalValue = undefined;
       this._nodeConfig.internalValue = undefined;
       this._privateEnvironmentConfig.internalValue = undefined;
+      this._recoveryConfig.internalValue = undefined;
       this._softwareConfig.internalValue = undefined;
       this._webServerConfig.internalValue = undefined;
       this._webServerNetworkAccessControl.internalValue = undefined;
@@ -2529,6 +2759,7 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
       this._masterAuthorizedNetworksConfig.internalValue = value.masterAuthorizedNetworksConfig;
       this._nodeConfig.internalValue = value.nodeConfig;
       this._privateEnvironmentConfig.internalValue = value.privateEnvironmentConfig;
+      this._recoveryConfig.internalValue = value.recoveryConfig;
       this._softwareConfig.internalValue = value.softwareConfig;
       this._webServerConfig.internalValue = value.webServerConfig;
       this._webServerNetworkAccessControl.internalValue = value.webServerNetworkAccessControl;
@@ -2677,6 +2908,22 @@ export class ComposerEnvironmentConfigAOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get privateEnvironmentConfigInput() {
     return this._privateEnvironmentConfig.internalValue;
+  }
+
+  // recovery_config - computed: false, optional: true, required: false
+  private _recoveryConfig = new ComposerEnvironmentConfigRecoveryConfigOutputReference(this, "recovery_config");
+  public get recoveryConfig() {
+    return this._recoveryConfig;
+  }
+  public putRecoveryConfig(value: ComposerEnvironmentConfigRecoveryConfig) {
+    this._recoveryConfig.internalValue = value;
+  }
+  public resetRecoveryConfig() {
+    this._recoveryConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryConfigInput() {
+    return this._recoveryConfig.internalValue;
   }
 
   // software_config - computed: false, optional: true, required: false
@@ -2899,7 +3146,7 @@ export class ComposerEnvironment extends cdktf.TerraformResource {
       terraformResourceType: 'google_composer_environment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.49.0',
+        providerVersion: '4.50.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
