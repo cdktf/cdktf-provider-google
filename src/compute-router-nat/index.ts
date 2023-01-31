@@ -120,6 +120,13 @@ Defaults to 1200s if not set.
   */
   readonly tcpEstablishedIdleTimeoutSec?: number;
   /**
+  * Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+Defaults to 120s if not set.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router_nat#tcp_time_wait_timeout_sec ComputeRouterNat#tcp_time_wait_timeout_sec}
+  */
+  readonly tcpTimeWaitTimeoutSec?: number;
+  /**
   * Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
   * 
@@ -853,7 +860,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -879,6 +886,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     this._router = config.router;
     this._sourceSubnetworkIpRangesToNat = config.sourceSubnetworkIpRangesToNat;
     this._tcpEstablishedIdleTimeoutSec = config.tcpEstablishedIdleTimeoutSec;
+    this._tcpTimeWaitTimeoutSec = config.tcpTimeWaitTimeoutSec;
     this._tcpTransitoryIdleTimeoutSec = config.tcpTransitoryIdleTimeoutSec;
     this._udpIdleTimeoutSec = config.udpIdleTimeoutSec;
     this._logConfig.internalValue = config.logConfig;
@@ -1119,6 +1127,22 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
     return this._tcpEstablishedIdleTimeoutSec;
   }
 
+  // tcp_time_wait_timeout_sec - computed: false, optional: true, required: false
+  private _tcpTimeWaitTimeoutSec?: number; 
+  public get tcpTimeWaitTimeoutSec() {
+    return this.getNumberAttribute('tcp_time_wait_timeout_sec');
+  }
+  public set tcpTimeWaitTimeoutSec(value: number) {
+    this._tcpTimeWaitTimeoutSec = value;
+  }
+  public resetTcpTimeWaitTimeoutSec() {
+    this._tcpTimeWaitTimeoutSec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpTimeWaitTimeoutSecInput() {
+    return this._tcpTimeWaitTimeoutSec;
+  }
+
   // tcp_transitory_idle_timeout_sec - computed: false, optional: true, required: false
   private _tcpTransitoryIdleTimeoutSec?: number; 
   public get tcpTransitoryIdleTimeoutSec() {
@@ -1236,6 +1260,7 @@ export class ComputeRouterNat extends cdktf.TerraformResource {
       router: cdktf.stringToTerraform(this._router),
       source_subnetwork_ip_ranges_to_nat: cdktf.stringToTerraform(this._sourceSubnetworkIpRangesToNat),
       tcp_established_idle_timeout_sec: cdktf.numberToTerraform(this._tcpEstablishedIdleTimeoutSec),
+      tcp_time_wait_timeout_sec: cdktf.numberToTerraform(this._tcpTimeWaitTimeoutSec),
       tcp_transitory_idle_timeout_sec: cdktf.numberToTerraform(this._tcpTransitoryIdleTimeoutSec),
       udp_idle_timeout_sec: cdktf.numberToTerraform(this._udpIdleTimeoutSec),
       log_config: computeRouterNatLogConfigToTerraform(this._logConfig.internalValue),

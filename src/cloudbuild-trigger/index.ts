@@ -2854,6 +2854,13 @@ export class CloudbuildTriggerBuildOutputReference extends cdktf.ComplexObject {
 }
 export interface CloudbuildTriggerGitFileSource {
   /**
+  * The full resource name of the github enterprise config.
+Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
+  */
+  readonly githubEnterpriseConfig?: string;
+  /**
   * The path of the file, with the repo root as the root of the path.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#path CloudbuildTrigger#path}
@@ -2889,6 +2896,7 @@ export function cloudbuildTriggerGitFileSourceToTerraform(struct?: CloudbuildTri
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    github_enterprise_config: cdktf.stringToTerraform(struct!.githubEnterpriseConfig),
     path: cdktf.stringToTerraform(struct!.path),
     repo_type: cdktf.stringToTerraform(struct!.repoType),
     revision: cdktf.stringToTerraform(struct!.revision),
@@ -2910,6 +2918,10 @@ export class CloudbuildTriggerGitFileSourceOutputReference extends cdktf.Complex
   public get internalValue(): CloudbuildTriggerGitFileSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._githubEnterpriseConfig !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.githubEnterpriseConfig = this._githubEnterpriseConfig;
+    }
     if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
@@ -2932,6 +2944,7 @@ export class CloudbuildTriggerGitFileSourceOutputReference extends cdktf.Complex
   public set internalValue(value: CloudbuildTriggerGitFileSource | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._githubEnterpriseConfig = undefined;
       this._path = undefined;
       this._repoType = undefined;
       this._revision = undefined;
@@ -2939,11 +2952,28 @@ export class CloudbuildTriggerGitFileSourceOutputReference extends cdktf.Complex
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._githubEnterpriseConfig = value.githubEnterpriseConfig;
       this._path = value.path;
       this._repoType = value.repoType;
       this._revision = value.revision;
       this._uri = value.uri;
     }
+  }
+
+  // github_enterprise_config - computed: false, optional: true, required: false
+  private _githubEnterpriseConfig?: string; 
+  public get githubEnterpriseConfig() {
+    return this.getStringAttribute('github_enterprise_config');
+  }
+  public set githubEnterpriseConfig(value: string) {
+    this._githubEnterpriseConfig = value;
+  }
+  public resetGithubEnterpriseConfig() {
+    this._githubEnterpriseConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get githubEnterpriseConfigInput() {
+    return this._githubEnterpriseConfig;
   }
 
   // path - computed: false, optional: false, required: true
@@ -3512,6 +3542,13 @@ export class CloudbuildTriggerPubsubConfigOutputReference extends cdktf.ComplexO
 }
 export interface CloudbuildTriggerSourceToBuild {
   /**
+  * The full resource name of the github enterprise config.
+Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#github_enterprise_config CloudbuildTrigger#github_enterprise_config}
+  */
+  readonly githubEnterpriseConfig?: string;
+  /**
   * The branch or tag to use. Must start with "refs/" (required).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_trigger#ref CloudbuildTrigger#ref}
@@ -3538,6 +3575,7 @@ export function cloudbuildTriggerSourceToBuildToTerraform(struct?: CloudbuildTri
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    github_enterprise_config: cdktf.stringToTerraform(struct!.githubEnterpriseConfig),
     ref: cdktf.stringToTerraform(struct!.ref),
     repo_type: cdktf.stringToTerraform(struct!.repoType),
     uri: cdktf.stringToTerraform(struct!.uri),
@@ -3558,6 +3596,10 @@ export class CloudbuildTriggerSourceToBuildOutputReference extends cdktf.Complex
   public get internalValue(): CloudbuildTriggerSourceToBuild | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._githubEnterpriseConfig !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.githubEnterpriseConfig = this._githubEnterpriseConfig;
+    }
     if (this._ref !== undefined) {
       hasAnyValues = true;
       internalValueResult.ref = this._ref;
@@ -3576,16 +3618,34 @@ export class CloudbuildTriggerSourceToBuildOutputReference extends cdktf.Complex
   public set internalValue(value: CloudbuildTriggerSourceToBuild | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._githubEnterpriseConfig = undefined;
       this._ref = undefined;
       this._repoType = undefined;
       this._uri = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._githubEnterpriseConfig = value.githubEnterpriseConfig;
       this._ref = value.ref;
       this._repoType = value.repoType;
       this._uri = value.uri;
     }
+  }
+
+  // github_enterprise_config - computed: false, optional: true, required: false
+  private _githubEnterpriseConfig?: string; 
+  public get githubEnterpriseConfig() {
+    return this.getStringAttribute('github_enterprise_config');
+  }
+  public set githubEnterpriseConfig(value: string) {
+    this._githubEnterpriseConfig = value;
+  }
+  public resetGithubEnterpriseConfig() {
+    this._githubEnterpriseConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get githubEnterpriseConfigInput() {
+    return this._githubEnterpriseConfig;
   }
 
   // ref - computed: false, optional: false, required: true
@@ -4100,7 +4160,7 @@ export class CloudbuildTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

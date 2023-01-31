@@ -815,7 +815,7 @@ export interface RedisInstancePersistenceConfig {
 - ONE_HOUR:	Snapshot every 1 hour.
 - SIX_HOURS:	Snapshot every 6 hours.
 - TWELVE_HOURS:	Snapshot every 12 hours.
-- TWENTY_FOUR_HOURS:	Snapshot every 24 horus. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
+- TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
   */
@@ -1098,7 +1098,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

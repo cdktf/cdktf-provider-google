@@ -357,7 +357,7 @@ export class DataGoogleComputeRouterNat extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_router_nat',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -519,6 +519,11 @@ export class DataGoogleComputeRouterNat extends cdktf.TerraformDataSource {
   // tcp_established_idle_timeout_sec - computed: true, optional: false, required: false
   public get tcpEstablishedIdleTimeoutSec() {
     return this.getNumberAttribute('tcp_established_idle_timeout_sec');
+  }
+
+  // tcp_time_wait_timeout_sec - computed: true, optional: false, required: false
+  public get tcpTimeWaitTimeoutSec() {
+    return this.getNumberAttribute('tcp_time_wait_timeout_sec');
   }
 
   // tcp_transitory_idle_timeout_sec - computed: true, optional: false, required: false
