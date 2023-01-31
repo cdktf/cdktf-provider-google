@@ -1303,6 +1303,11 @@ export class DataGoogleCloudbuildTriggerGitFileSourceOutputReference extends cdk
     }
   }
 
+  // github_enterprise_config - computed: true, optional: false, required: false
+  public get githubEnterpriseConfig() {
+    return this.getStringAttribute('github_enterprise_config');
+  }
+
   // path - computed: true, optional: false, required: false
   public get path() {
     return this.getStringAttribute('path');
@@ -1690,6 +1695,11 @@ export class DataGoogleCloudbuildTriggerSourceToBuildOutputReference extends cdk
     }
   }
 
+  // github_enterprise_config - computed: true, optional: false, required: false
+  public get githubEnterpriseConfig() {
+    return this.getStringAttribute('github_enterprise_config');
+  }
+
   // ref - computed: true, optional: false, required: false
   public get ref() {
     return this.getStringAttribute('ref');
@@ -1914,7 +1924,7 @@ export class DataGoogleCloudbuildTrigger extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

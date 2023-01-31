@@ -122,6 +122,82 @@ export class DataLossPreventionJobTriggerInspectJobActionsPubSubOutputReference 
     return this._topic;
   }
 }
+export interface DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog {
+}
+
+export function dataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference | DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc {
+}
+
+export function dataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccToTerraform(struct?: DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference | DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable {
   /**
   * Dataset ID of the table.
@@ -414,6 +490,18 @@ export interface DataLossPreventionJobTriggerInspectJobActions {
   */
   readonly pubSub?: DataLossPreventionJobTriggerInspectJobActionsPubSub;
   /**
+  * publish_findings_to_cloud_data_catalog block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger#publish_findings_to_cloud_data_catalog DataLossPreventionJobTrigger#publish_findings_to_cloud_data_catalog}
+  */
+  readonly publishFindingsToCloudDataCatalog?: DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog;
+  /**
+  * publish_summary_to_cscc block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger#publish_summary_to_cscc DataLossPreventionJobTrigger#publish_summary_to_cscc}
+  */
+  readonly publishSummaryToCscc?: DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc;
+  /**
   * save_findings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_loss_prevention_job_trigger#save_findings DataLossPreventionJobTrigger#save_findings}
@@ -428,6 +516,8 @@ export function dataLossPreventionJobTriggerInspectJobActionsToTerraform(struct?
   }
   return {
     pub_sub: dataLossPreventionJobTriggerInspectJobActionsPubSubToTerraform(struct!.pubSub),
+    publish_findings_to_cloud_data_catalog: dataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogToTerraform(struct!.publishFindingsToCloudDataCatalog),
+    publish_summary_to_cscc: dataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccToTerraform(struct!.publishSummaryToCscc),
     save_findings: dataLossPreventionJobTriggerInspectJobActionsSaveFindingsToTerraform(struct!.saveFindings),
   }
 }
@@ -456,6 +546,14 @@ export class DataLossPreventionJobTriggerInspectJobActionsOutputReference extend
       hasAnyValues = true;
       internalValueResult.pubSub = this._pubSub?.internalValue;
     }
+    if (this._publishFindingsToCloudDataCatalog?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publishFindingsToCloudDataCatalog = this._publishFindingsToCloudDataCatalog?.internalValue;
+    }
+    if (this._publishSummaryToCscc?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publishSummaryToCscc = this._publishSummaryToCscc?.internalValue;
+    }
     if (this._saveFindings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.saveFindings = this._saveFindings?.internalValue;
@@ -468,6 +566,8 @@ export class DataLossPreventionJobTriggerInspectJobActionsOutputReference extend
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._pubSub.internalValue = undefined;
+      this._publishFindingsToCloudDataCatalog.internalValue = undefined;
+      this._publishSummaryToCscc.internalValue = undefined;
       this._saveFindings.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -478,6 +578,8 @@ export class DataLossPreventionJobTriggerInspectJobActionsOutputReference extend
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._pubSub.internalValue = value.pubSub;
+      this._publishFindingsToCloudDataCatalog.internalValue = value.publishFindingsToCloudDataCatalog;
+      this._publishSummaryToCscc.internalValue = value.publishSummaryToCscc;
       this._saveFindings.internalValue = value.saveFindings;
     }
   }
@@ -496,6 +598,38 @@ export class DataLossPreventionJobTriggerInspectJobActionsOutputReference extend
   // Temporarily expose input value. Use with caution.
   public get pubSubInput() {
     return this._pubSub.internalValue;
+  }
+
+  // publish_findings_to_cloud_data_catalog - computed: false, optional: true, required: false
+  private _publishFindingsToCloudDataCatalog = new DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference(this, "publish_findings_to_cloud_data_catalog");
+  public get publishFindingsToCloudDataCatalog() {
+    return this._publishFindingsToCloudDataCatalog;
+  }
+  public putPublishFindingsToCloudDataCatalog(value: DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog) {
+    this._publishFindingsToCloudDataCatalog.internalValue = value;
+  }
+  public resetPublishFindingsToCloudDataCatalog() {
+    this._publishFindingsToCloudDataCatalog.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publishFindingsToCloudDataCatalogInput() {
+    return this._publishFindingsToCloudDataCatalog.internalValue;
+  }
+
+  // publish_summary_to_cscc - computed: false, optional: true, required: false
+  private _publishSummaryToCscc = new DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference(this, "publish_summary_to_cscc");
+  public get publishSummaryToCscc() {
+    return this._publishSummaryToCscc;
+  }
+  public putPublishSummaryToCscc(value: DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc) {
+    this._publishSummaryToCscc.internalValue = value;
+  }
+  public resetPublishSummaryToCscc() {
+    this._publishSummaryToCscc.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publishSummaryToCsccInput() {
+    return this._publishSummaryToCscc.internalValue;
   }
 
   // save_findings - computed: false, optional: true, required: false
@@ -2442,7 +2576,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_loss_prevention_job_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

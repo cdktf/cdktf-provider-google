@@ -243,7 +243,7 @@ export class DataflowJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataflow_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

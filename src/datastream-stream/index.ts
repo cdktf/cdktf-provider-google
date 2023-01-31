@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DatastreamStreamConfig extends cdktf.TerraformMetaArguments {
   /**
+  * A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data
+will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#customer_managed_encryption_key DatastreamStream#customer_managed_encryption_key}
+  */
+  readonly customerManagedEncryptionKey?: string;
+  /**
   * Desired state of the Stream. Set this field to 'RUNNING' to start the stream, and 'PAUSED' to pause the stream.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#desired_state DatastreamStream#desired_state}
@@ -821,6 +828,15 @@ The prefix and name will be separated by an underscore. i.e. _.
   */
   readonly datasetIdPrefix?: string;
   /**
+  * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery
+table. The BigQuery Service Account associated with your project requires access to this
+encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
+See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#kms_key_name DatastreamStream#kms_key_name}
+  */
+  readonly kmsKeyName?: string;
+  /**
   * The geographic location where the dataset should reside.
 See https://cloud.google.com/bigquery/docs/locations for supported locations.
   * 
@@ -836,6 +852,7 @@ export function datastreamStreamDestinationConfigBigqueryDestinationConfigSource
   }
   return {
     dataset_id_prefix: cdktf.stringToTerraform(struct!.datasetIdPrefix),
+    kms_key_name: cdktf.stringToTerraform(struct!.kmsKeyName),
     location: cdktf.stringToTerraform(struct!.location),
   }
 }
@@ -858,6 +875,10 @@ export class DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHie
       hasAnyValues = true;
       internalValueResult.datasetIdPrefix = this._datasetIdPrefix;
     }
+    if (this._kmsKeyName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.kmsKeyName = this._kmsKeyName;
+    }
     if (this._location !== undefined) {
       hasAnyValues = true;
       internalValueResult.location = this._location;
@@ -869,11 +890,13 @@ export class DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHie
     if (value === undefined) {
       this.isEmptyObject = false;
       this._datasetIdPrefix = undefined;
+      this._kmsKeyName = undefined;
       this._location = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._datasetIdPrefix = value.datasetIdPrefix;
+      this._kmsKeyName = value.kmsKeyName;
       this._location = value.location;
     }
   }
@@ -892,6 +915,22 @@ export class DatastreamStreamDestinationConfigBigqueryDestinationConfigSourceHie
   // Temporarily expose input value. Use with caution.
   public get datasetIdPrefixInput() {
     return this._datasetIdPrefix;
+  }
+
+  // kms_key_name - computed: false, optional: true, required: false
+  private _kmsKeyName?: string; 
+  public get kmsKeyName() {
+    return this.getStringAttribute('kms_key_name');
+  }
+  public set kmsKeyName(value: string) {
+    this._kmsKeyName = value;
+  }
+  public resetKmsKeyName() {
+    this._kmsKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kmsKeyNameInput() {
+    return this._kmsKeyName;
   }
 
   // location - computed: false, optional: false, required: true
@@ -3039,7 +3078,7 @@ export class DatastreamStream extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_stream',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3050,6 +3089,7 @@ export class DatastreamStream extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._customerManagedEncryptionKey = config.customerManagedEncryptionKey;
     this._desiredState = config.desiredState;
     this._displayName = config.displayName;
     this._id = config.id;
@@ -3067,6 +3107,22 @@ export class DatastreamStream extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // customer_managed_encryption_key - computed: false, optional: true, required: false
+  private _customerManagedEncryptionKey?: string; 
+  public get customerManagedEncryptionKey() {
+    return this.getStringAttribute('customer_managed_encryption_key');
+  }
+  public set customerManagedEncryptionKey(value: string) {
+    this._customerManagedEncryptionKey = value;
+  }
+  public resetCustomerManagedEncryptionKey() {
+    this._customerManagedEncryptionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedEncryptionKeyInput() {
+    return this._customerManagedEncryptionKey;
+  }
 
   // desired_state - computed: false, optional: true, required: false
   private _desiredState?: string; 
@@ -3261,6 +3317,7 @@ export class DatastreamStream extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      customer_managed_encryption_key: cdktf.stringToTerraform(this._customerManagedEncryptionKey),
       desired_state: cdktf.stringToTerraform(this._desiredState),
       display_name: cdktf.stringToTerraform(this._displayName),
       id: cdktf.stringToTerraform(this._id),

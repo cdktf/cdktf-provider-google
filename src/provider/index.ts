@@ -272,6 +272,10 @@ export interface GoogleProviderConfig {
   */
   readonly healthcareCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}
+  */
+  readonly iam2CustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}
   */
   readonly iamBetaCustomEndpoint?: string;
@@ -444,6 +448,10 @@ export interface GoogleProviderConfig {
   */
   readonly tagsCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}
+  */
+  readonly tagsLocationCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}
   */
   readonly tpuCustomEndpoint?: string;
@@ -529,7 +537,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -600,6 +608,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._gkeBackupCustomEndpoint = config.gkeBackupCustomEndpoint;
     this._gkeHubCustomEndpoint = config.gkeHubCustomEndpoint;
     this._healthcareCustomEndpoint = config.healthcareCustomEndpoint;
+    this._iam2CustomEndpoint = config.iam2CustomEndpoint;
     this._iamBetaCustomEndpoint = config.iamBetaCustomEndpoint;
     this._iamCredentialsCustomEndpoint = config.iamCredentialsCustomEndpoint;
     this._iamCustomEndpoint = config.iamCustomEndpoint;
@@ -643,6 +652,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._storageCustomEndpoint = config.storageCustomEndpoint;
     this._storageTransferCustomEndpoint = config.storageTransferCustomEndpoint;
     this._tagsCustomEndpoint = config.tagsCustomEndpoint;
+    this._tagsLocationCustomEndpoint = config.tagsLocationCustomEndpoint;
     this._tpuCustomEndpoint = config.tpuCustomEndpoint;
     this._userProjectOverride = config.userProjectOverride;
     this._vertexAiCustomEndpoint = config.vertexAiCustomEndpoint;
@@ -1713,6 +1723,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._healthcareCustomEndpoint;
   }
 
+  // iam2_custom_endpoint - computed: false, optional: true, required: false
+  private _iam2CustomEndpoint?: string; 
+  public get iam2CustomEndpoint() {
+    return this._iam2CustomEndpoint;
+  }
+  public set iam2CustomEndpoint(value: string | undefined) {
+    this._iam2CustomEndpoint = value;
+  }
+  public resetIam2CustomEndpoint() {
+    this._iam2CustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iam2CustomEndpointInput() {
+    return this._iam2CustomEndpoint;
+  }
+
   // iam_beta_custom_endpoint - computed: false, optional: true, required: false
   private _iamBetaCustomEndpoint?: string; 
   public get iamBetaCustomEndpoint() {
@@ -2401,6 +2427,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     return this._tagsCustomEndpoint;
   }
 
+  // tags_location_custom_endpoint - computed: false, optional: true, required: false
+  private _tagsLocationCustomEndpoint?: string; 
+  public get tagsLocationCustomEndpoint() {
+    return this._tagsLocationCustomEndpoint;
+  }
+  public set tagsLocationCustomEndpoint(value: string | undefined) {
+    this._tagsLocationCustomEndpoint = value;
+  }
+  public resetTagsLocationCustomEndpoint() {
+    this._tagsLocationCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsLocationCustomEndpointInput() {
+    return this._tagsLocationCustomEndpoint;
+  }
+
   // tpu_custom_endpoint - computed: false, optional: true, required: false
   private _tpuCustomEndpoint?: string; 
   public get tpuCustomEndpoint() {
@@ -2601,6 +2643,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       gke_backup_custom_endpoint: cdktf.stringToTerraform(this._gkeBackupCustomEndpoint),
       gke_hub_custom_endpoint: cdktf.stringToTerraform(this._gkeHubCustomEndpoint),
       healthcare_custom_endpoint: cdktf.stringToTerraform(this._healthcareCustomEndpoint),
+      iam2_custom_endpoint: cdktf.stringToTerraform(this._iam2CustomEndpoint),
       iam_beta_custom_endpoint: cdktf.stringToTerraform(this._iamBetaCustomEndpoint),
       iam_credentials_custom_endpoint: cdktf.stringToTerraform(this._iamCredentialsCustomEndpoint),
       iam_custom_endpoint: cdktf.stringToTerraform(this._iamCustomEndpoint),
@@ -2644,6 +2687,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       storage_custom_endpoint: cdktf.stringToTerraform(this._storageCustomEndpoint),
       storage_transfer_custom_endpoint: cdktf.stringToTerraform(this._storageTransferCustomEndpoint),
       tags_custom_endpoint: cdktf.stringToTerraform(this._tagsCustomEndpoint),
+      tags_location_custom_endpoint: cdktf.stringToTerraform(this._tagsLocationCustomEndpoint),
       tpu_custom_endpoint: cdktf.stringToTerraform(this._tpuCustomEndpoint),
       user_project_override: cdktf.booleanToTerraform(this._userProjectOverride),
       vertex_ai_custom_endpoint: cdktf.stringToTerraform(this._vertexAiCustomEndpoint),

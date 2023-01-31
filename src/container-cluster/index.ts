@@ -440,6 +440,68 @@ export class ContainerClusterAddonsConfigCloudrunConfigOutputReference extends c
     return this._loadBalancerType;
   }
 }
+export interface ContainerClusterAddonsConfigConfigConnectorConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterAddonsConfigConfigConnectorConfigToTerraform(struct?: ContainerClusterAddonsConfigConfigConnectorConfigOutputReference | ContainerClusterAddonsConfigConfigConnectorConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class ContainerClusterAddonsConfigConfigConnectorConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterAddonsConfigConfigConnectorConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterAddonsConfigConfigConnectorConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+}
 export interface ContainerClusterAddonsConfigDnsCacheConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#enabled ContainerCluster#enabled}
@@ -882,6 +944,12 @@ export interface ContainerClusterAddonsConfig {
   */
   readonly cloudrunConfig?: ContainerClusterAddonsConfigCloudrunConfig;
   /**
+  * config_connector_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#config_connector_config ContainerCluster#config_connector_config}
+  */
+  readonly configConnectorConfig?: ContainerClusterAddonsConfigConfigConnectorConfig;
+  /**
   * dns_cache_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#dns_cache_config ContainerCluster#dns_cache_config}
@@ -932,6 +1000,7 @@ export function containerClusterAddonsConfigToTerraform(struct?: ContainerCluste
   }
   return {
     cloudrun_config: containerClusterAddonsConfigCloudrunConfigToTerraform(struct!.cloudrunConfig),
+    config_connector_config: containerClusterAddonsConfigConfigConnectorConfigToTerraform(struct!.configConnectorConfig),
     dns_cache_config: containerClusterAddonsConfigDnsCacheConfigToTerraform(struct!.dnsCacheConfig),
     gce_persistent_disk_csi_driver_config: containerClusterAddonsConfigGcePersistentDiskCsiDriverConfigToTerraform(struct!.gcePersistentDiskCsiDriverConfig),
     gcp_filestore_csi_driver_config: containerClusterAddonsConfigGcpFilestoreCsiDriverConfigToTerraform(struct!.gcpFilestoreCsiDriverConfig),
@@ -959,6 +1028,10 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
     if (this._cloudrunConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cloudrunConfig = this._cloudrunConfig?.internalValue;
+    }
+    if (this._configConnectorConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configConnectorConfig = this._configConnectorConfig?.internalValue;
     }
     if (this._dnsCacheConfig?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -995,6 +1068,7 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
     if (value === undefined) {
       this.isEmptyObject = false;
       this._cloudrunConfig.internalValue = undefined;
+      this._configConnectorConfig.internalValue = undefined;
       this._dnsCacheConfig.internalValue = undefined;
       this._gcePersistentDiskCsiDriverConfig.internalValue = undefined;
       this._gcpFilestoreCsiDriverConfig.internalValue = undefined;
@@ -1006,6 +1080,7 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._cloudrunConfig.internalValue = value.cloudrunConfig;
+      this._configConnectorConfig.internalValue = value.configConnectorConfig;
       this._dnsCacheConfig.internalValue = value.dnsCacheConfig;
       this._gcePersistentDiskCsiDriverConfig.internalValue = value.gcePersistentDiskCsiDriverConfig;
       this._gcpFilestoreCsiDriverConfig.internalValue = value.gcpFilestoreCsiDriverConfig;
@@ -1030,6 +1105,22 @@ export class ContainerClusterAddonsConfigOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get cloudrunConfigInput() {
     return this._cloudrunConfig.internalValue;
+  }
+
+  // config_connector_config - computed: false, optional: true, required: false
+  private _configConnectorConfig = new ContainerClusterAddonsConfigConfigConnectorConfigOutputReference(this, "config_connector_config");
+  public get configConnectorConfig() {
+    return this._configConnectorConfig;
+  }
+  public putConfigConnectorConfig(value: ContainerClusterAddonsConfigConfigConnectorConfig) {
+    this._configConnectorConfig.internalValue = value;
+  }
+  public resetConfigConnectorConfig() {
+    this._configConnectorConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configConnectorConfigInput() {
+    return this._configConnectorConfig.internalValue;
   }
 
   // dns_cache_config - computed: false, optional: true, required: false
@@ -10750,7 +10841,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.50.0',
+        providerVersion: '4.51.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
