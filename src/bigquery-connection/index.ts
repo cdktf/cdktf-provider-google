@@ -225,6 +225,12 @@ export interface BigqueryConnectionAzure {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#customer_tenant_id BigqueryConnection#customer_tenant_id}
   */
   readonly customerTenantId: string;
+  /**
+  * The Azure Application (client) ID where the federated credentials will be hosted.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#federated_application_client_id BigqueryConnection#federated_application_client_id}
+  */
+  readonly federatedApplicationClientId?: string;
 }
 
 export function bigqueryConnectionAzureToTerraform(struct?: BigqueryConnectionAzureOutputReference | BigqueryConnectionAzure): any {
@@ -234,6 +240,7 @@ export function bigqueryConnectionAzureToTerraform(struct?: BigqueryConnectionAz
   }
   return {
     customer_tenant_id: cdktf.stringToTerraform(struct!.customerTenantId),
+    federated_application_client_id: cdktf.stringToTerraform(struct!.federatedApplicationClientId),
   }
 }
 
@@ -255,6 +262,10 @@ export class BigqueryConnectionAzureOutputReference extends cdktf.ComplexObject 
       hasAnyValues = true;
       internalValueResult.customerTenantId = this._customerTenantId;
     }
+    if (this._federatedApplicationClientId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.federatedApplicationClientId = this._federatedApplicationClientId;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -262,10 +273,12 @@ export class BigqueryConnectionAzureOutputReference extends cdktf.ComplexObject 
     if (value === undefined) {
       this.isEmptyObject = false;
       this._customerTenantId = undefined;
+      this._federatedApplicationClientId = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._customerTenantId = value.customerTenantId;
+      this._federatedApplicationClientId = value.federatedApplicationClientId;
     }
   }
 
@@ -290,6 +303,27 @@ export class BigqueryConnectionAzureOutputReference extends cdktf.ComplexObject 
   // Temporarily expose input value. Use with caution.
   public get customerTenantIdInput() {
     return this._customerTenantId;
+  }
+
+  // federated_application_client_id - computed: false, optional: true, required: false
+  private _federatedApplicationClientId?: string; 
+  public get federatedApplicationClientId() {
+    return this.getStringAttribute('federated_application_client_id');
+  }
+  public set federatedApplicationClientId(value: string) {
+    this._federatedApplicationClientId = value;
+  }
+  public resetFederatedApplicationClientId() {
+    this._federatedApplicationClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get federatedApplicationClientIdInput() {
+    return this._federatedApplicationClientId;
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public get identity() {
+    return this.getStringAttribute('identity');
   }
 
   // object_id - computed: true, optional: false, required: false
@@ -358,6 +392,12 @@ export interface BigqueryConnectionCloudSpanner {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#use_parallelism BigqueryConnection#use_parallelism}
   */
   readonly useParallelism?: boolean | cdktf.IResolvable;
+  /**
+  * If the serverless analytics service should be used to read data from Cloud Spanner. useParallelism must be set when using serverless analytics
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection#use_serverless_analytics BigqueryConnection#use_serverless_analytics}
+  */
+  readonly useServerlessAnalytics?: boolean | cdktf.IResolvable;
 }
 
 export function bigqueryConnectionCloudSpannerToTerraform(struct?: BigqueryConnectionCloudSpannerOutputReference | BigqueryConnectionCloudSpanner): any {
@@ -368,6 +408,7 @@ export function bigqueryConnectionCloudSpannerToTerraform(struct?: BigqueryConne
   return {
     database: cdktf.stringToTerraform(struct!.database),
     use_parallelism: cdktf.booleanToTerraform(struct!.useParallelism),
+    use_serverless_analytics: cdktf.booleanToTerraform(struct!.useServerlessAnalytics),
   }
 }
 
@@ -393,6 +434,10 @@ export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.useParallelism = this._useParallelism;
     }
+    if (this._useServerlessAnalytics !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useServerlessAnalytics = this._useServerlessAnalytics;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -401,11 +446,13 @@ export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.Complex
       this.isEmptyObject = false;
       this._database = undefined;
       this._useParallelism = undefined;
+      this._useServerlessAnalytics = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._database = value.database;
       this._useParallelism = value.useParallelism;
+      this._useServerlessAnalytics = value.useServerlessAnalytics;
     }
   }
 
@@ -436,6 +483,22 @@ export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get useParallelismInput() {
     return this._useParallelism;
+  }
+
+  // use_serverless_analytics - computed: false, optional: true, required: false
+  private _useServerlessAnalytics?: boolean | cdktf.IResolvable; 
+  public get useServerlessAnalytics() {
+    return this.getBooleanAttribute('use_serverless_analytics');
+  }
+  public set useServerlessAnalytics(value: boolean | cdktf.IResolvable) {
+    this._useServerlessAnalytics = value;
+  }
+  public resetUseServerlessAnalytics() {
+    this._useServerlessAnalytics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useServerlessAnalyticsInput() {
+    return this._useServerlessAnalytics;
   }
 }
 export interface BigqueryConnectionCloudSqlCredential {
@@ -644,6 +707,11 @@ export class BigqueryConnectionCloudSqlOutputReference extends cdktf.ComplexObje
     return this._instanceId;
   }
 
+  // service_account_id - computed: true, optional: false, required: false
+  public get serviceAccountId() {
+    return this.getStringAttribute('service_account_id');
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -826,7 +894,7 @@ export class BigqueryConnection extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_connection',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.51.0',
+        providerVersion: '4.52.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

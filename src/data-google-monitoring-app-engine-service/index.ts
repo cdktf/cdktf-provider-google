@@ -118,7 +118,7 @@ export class DataGoogleMonitoringAppEngineService extends cdktf.TerraformDataSou
       terraformResourceType: 'google_monitoring_app_engine_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.51.0',
+        providerVersion: '4.52.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
