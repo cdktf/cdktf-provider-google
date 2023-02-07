@@ -682,6 +682,7 @@ export * as dataGooglePubsubTopic from './data-google-pubsub-topic';
 export * as dataGoogleRedisInstance from './data-google-redis-instance';
 export * as dataGoogleSecretManagerSecret from './data-google-secret-manager-secret';
 export * as dataGoogleSecretManagerSecretVersion from './data-google-secret-manager-secret-version';
+export * as dataGoogleSecretManagerSecretVersionAccess from './data-google-secret-manager-secret-version-access';
 export * as dataGoogleServiceAccount from './data-google-service-account';
 export * as dataGoogleServiceAccountAccessToken from './data-google-service-account-access-token';
 export * as dataGoogleServiceAccountIdToken from './data-google-service-account-id-token';

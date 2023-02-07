@@ -733,7 +733,7 @@ export class ComputeRegionNetworkFirewallPolicyRule extends cdktf.TerraformResou
       terraformResourceType: 'google_compute_region_network_firewall_policy_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.51.0',
+        providerVersion: '4.52.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

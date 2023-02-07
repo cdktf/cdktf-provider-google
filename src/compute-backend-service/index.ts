@@ -221,6 +221,12 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
   */
   readonly iap?: ComputeBackendServiceIap;
   /**
+  * locality_lb_policies block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#locality_lb_policies ComputeBackendService#locality_lb_policies}
+  */
+  readonly localityLbPolicies?: ComputeBackendServiceLocalityLbPolicies[] | cdktf.IResolvable;
+  /**
   * log_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#log_config ComputeBackendService#log_config}
@@ -2026,6 +2032,334 @@ export class ComputeBackendServiceIapOutputReference extends cdktf.ComplexObject
     return this.getStringAttribute('oauth2_client_secret_sha256');
   }
 }
+export interface ComputeBackendServiceLocalityLbPoliciesCustomPolicy {
+  /**
+  * An optional, arbitrary JSON object with configuration data, understood
+by a locally installed custom policy implementation.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#data ComputeBackendService#data}
+  */
+  readonly data?: string;
+  /**
+  * Identifies the custom policy.
+
+The value should match the type the custom implementation is registered
+with on the gRPC clients. It should follow protocol buffer
+message naming conventions and include the full path (e.g.
+myorg.CustomLbPolicy). The maximum length is 256 characters.
+
+Note that specifying the same custom policy more than once for a
+backend is not a valid configuration and will be rejected.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#name ComputeBackendService#name}
+  */
+  readonly name: string;
+}
+
+export function computeBackendServiceLocalityLbPoliciesCustomPolicyToTerraform(struct?: ComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference | ComputeBackendServiceLocalityLbPoliciesCustomPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    data: cdktf.stringToTerraform(struct!.data),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class ComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeBackendServiceLocalityLbPoliciesCustomPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._data !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.data = this._data;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceLocalityLbPoliciesCustomPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._data = undefined;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._data = value.data;
+      this._name = value.name;
+    }
+  }
+
+  // data - computed: false, optional: true, required: false
+  private _data?: string; 
+  public get data() {
+    return this.getStringAttribute('data');
+  }
+  public set data(value: string) {
+    this._data = value;
+  }
+  public resetData() {
+    this._data = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataInput() {
+    return this._data;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface ComputeBackendServiceLocalityLbPoliciesPolicy {
+  /**
+  * The name of a locality load balancer policy to be used. The value
+should be one of the predefined ones as supported by localityLbPolicy,
+although at the moment only ROUND_ROBIN is supported.
+
+This field should only be populated when the customPolicy field is not
+used.
+
+Note that specifying the same policy more than once for a backend is
+not a valid configuration and will be rejected.
+
+The possible values are:
+
+* 'ROUND_ROBIN': This is a simple policy in which each healthy backend
+                is selected in round robin order.
+
+* 'LEAST_REQUEST': An O(1) algorithm which selects two random healthy
+                  hosts and picks the host which has fewer active requests.
+
+* 'RING_HASH': The ring/modulo hash load balancer implements consistent
+              hashing to backends. The algorithm has the property that the
+              addition/removal of a host from a set of N hosts only affects
+              1/N of the requests.
+
+* 'RANDOM': The load balancer selects a random healthy host.
+
+* 'ORIGINAL_DESTINATION': Backend host is selected based on the client
+                          connection metadata, i.e., connections are opened
+                          to the same address as the destination address of
+                          the incoming connection before the connection
+                          was redirected to the load balancer.
+
+* 'MAGLEV': used as a drop in replacement for the ring hash load balancer.
+            Maglev is not as stable as ring hash but has faster table lookup
+            build times and host selection times. For more information about
+            Maglev, refer to https://ai.google/research/pubs/pub44824 Possible values: ["ROUND_ROBIN", "LEAST_REQUEST", "RING_HASH", "RANDOM", "ORIGINAL_DESTINATION", "MAGLEV"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#name ComputeBackendService#name}
+  */
+  readonly name: string;
+}
+
+export function computeBackendServiceLocalityLbPoliciesPolicyToTerraform(struct?: ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference | ComputeBackendServiceLocalityLbPoliciesPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ComputeBackendServiceLocalityLbPoliciesPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceLocalityLbPoliciesPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface ComputeBackendServiceLocalityLbPolicies {
+  /**
+  * custom_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#custom_policy ComputeBackendService#custom_policy}
+  */
+  readonly customPolicy?: ComputeBackendServiceLocalityLbPoliciesCustomPolicy;
+  /**
+  * policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service#policy ComputeBackendService#policy}
+  */
+  readonly policy?: ComputeBackendServiceLocalityLbPoliciesPolicy;
+}
+
+export function computeBackendServiceLocalityLbPoliciesToTerraform(struct?: ComputeBackendServiceLocalityLbPolicies | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    custom_policy: computeBackendServiceLocalityLbPoliciesCustomPolicyToTerraform(struct!.customPolicy),
+    policy: computeBackendServiceLocalityLbPoliciesPolicyToTerraform(struct!.policy),
+  }
+}
+
+export class ComputeBackendServiceLocalityLbPoliciesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ComputeBackendServiceLocalityLbPolicies | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customPolicy = this._customPolicy?.internalValue;
+    }
+    if (this._policy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policy = this._policy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ComputeBackendServiceLocalityLbPolicies | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._customPolicy.internalValue = undefined;
+      this._policy.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._customPolicy.internalValue = value.customPolicy;
+      this._policy.internalValue = value.policy;
+    }
+  }
+
+  // custom_policy - computed: false, optional: true, required: false
+  private _customPolicy = new ComputeBackendServiceLocalityLbPoliciesCustomPolicyOutputReference(this, "custom_policy");
+  public get customPolicy() {
+    return this._customPolicy;
+  }
+  public putCustomPolicy(value: ComputeBackendServiceLocalityLbPoliciesCustomPolicy) {
+    this._customPolicy.internalValue = value;
+  }
+  public resetCustomPolicy() {
+    this._customPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPolicyInput() {
+    return this._customPolicy.internalValue;
+  }
+
+  // policy - computed: false, optional: true, required: false
+  private _policy = new ComputeBackendServiceLocalityLbPoliciesPolicyOutputReference(this, "policy");
+  public get policy() {
+    return this._policy;
+  }
+  public putPolicy(value: ComputeBackendServiceLocalityLbPoliciesPolicy) {
+    this._policy.internalValue = value;
+  }
+  public resetPolicy() {
+    this._policy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy.internalValue;
+  }
+}
+
+export class ComputeBackendServiceLocalityLbPoliciesList extends cdktf.ComplexList {
+  public internalValue? : ComputeBackendServiceLocalityLbPolicies[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ComputeBackendServiceLocalityLbPoliciesOutputReference {
+    return new ComputeBackendServiceLocalityLbPoliciesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ComputeBackendServiceLogConfig {
   /**
   * Whether to enable logging for the load balancer traffic served by this backend service.
@@ -2947,7 +3281,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.51.0',
+        providerVersion: '4.52.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2982,6 +3316,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     this._circuitBreakers.internalValue = config.circuitBreakers;
     this._consistentHash.internalValue = config.consistentHash;
     this._iap.internalValue = config.iap;
+    this._localityLbPolicies.internalValue = config.localityLbPolicies;
     this._logConfig.internalValue = config.logConfig;
     this._outlierDetection.internalValue = config.outlierDetection;
     this._securitySettings.internalValue = config.securitySettings;
@@ -3393,6 +3728,22 @@ export class ComputeBackendService extends cdktf.TerraformResource {
     return this._iap.internalValue;
   }
 
+  // locality_lb_policies - computed: false, optional: true, required: false
+  private _localityLbPolicies = new ComputeBackendServiceLocalityLbPoliciesList(this, "locality_lb_policies", false);
+  public get localityLbPolicies() {
+    return this._localityLbPolicies;
+  }
+  public putLocalityLbPolicies(value: ComputeBackendServiceLocalityLbPolicies[] | cdktf.IResolvable) {
+    this._localityLbPolicies.internalValue = value;
+  }
+  public resetLocalityLbPolicies() {
+    this._localityLbPolicies.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localityLbPoliciesInput() {
+    return this._localityLbPolicies.internalValue;
+  }
+
   // log_config - computed: false, optional: true, required: false
   private _logConfig = new ComputeBackendServiceLogConfigOutputReference(this, "log_config");
   public get logConfig() {
@@ -3487,6 +3838,7 @@ export class ComputeBackendService extends cdktf.TerraformResource {
       circuit_breakers: computeBackendServiceCircuitBreakersToTerraform(this._circuitBreakers.internalValue),
       consistent_hash: computeBackendServiceConsistentHashToTerraform(this._consistentHash.internalValue),
       iap: computeBackendServiceIapToTerraform(this._iap.internalValue),
+      locality_lb_policies: cdktf.listMapper(computeBackendServiceLocalityLbPoliciesToTerraform, true)(this._localityLbPolicies.internalValue),
       log_config: computeBackendServiceLogConfigToTerraform(this._logConfig.internalValue),
       outlier_detection: computeBackendServiceOutlierDetectionToTerraform(this._outlierDetection.internalValue),
       security_settings: computeBackendServiceSecuritySettingsToTerraform(this._securitySettings.internalValue),
