@@ -24,6 +24,10 @@ export interface GoogleProviderConfig {
   */
   readonly activeDirectoryCustomEndpoint?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}
+  */
+  readonly alloydbCustomEndpoint?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}
   */
   readonly apigeeCustomEndpoint?: string;
@@ -537,7 +541,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'
@@ -546,6 +550,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
     this._accessContextManagerCustomEndpoint = config.accessContextManagerCustomEndpoint;
     this._accessToken = config.accessToken;
     this._activeDirectoryCustomEndpoint = config.activeDirectoryCustomEndpoint;
+    this._alloydbCustomEndpoint = config.alloydbCustomEndpoint;
     this._apigeeCustomEndpoint = config.apigeeCustomEndpoint;
     this._apikeysCustomEndpoint = config.apikeysCustomEndpoint;
     this._appEngineCustomEndpoint = config.appEngineCustomEndpoint;
@@ -729,6 +734,22 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryCustomEndpointInput() {
     return this._activeDirectoryCustomEndpoint;
+  }
+
+  // alloydb_custom_endpoint - computed: false, optional: true, required: false
+  private _alloydbCustomEndpoint?: string; 
+  public get alloydbCustomEndpoint() {
+    return this._alloydbCustomEndpoint;
+  }
+  public set alloydbCustomEndpoint(value: string | undefined) {
+    this._alloydbCustomEndpoint = value;
+  }
+  public resetAlloydbCustomEndpoint() {
+    this._alloydbCustomEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alloydbCustomEndpointInput() {
+    return this._alloydbCustomEndpoint;
   }
 
   // apigee_custom_endpoint - computed: false, optional: true, required: false
@@ -2581,6 +2602,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       access_context_manager_custom_endpoint: cdktf.stringToTerraform(this._accessContextManagerCustomEndpoint),
       access_token: cdktf.stringToTerraform(this._accessToken),
       active_directory_custom_endpoint: cdktf.stringToTerraform(this._activeDirectoryCustomEndpoint),
+      alloydb_custom_endpoint: cdktf.stringToTerraform(this._alloydbCustomEndpoint),
       apigee_custom_endpoint: cdktf.stringToTerraform(this._apigeeCustomEndpoint),
       apikeys_custom_endpoint: cdktf.stringToTerraform(this._apikeysCustomEndpoint),
       app_engine_custom_endpoint: cdktf.stringToTerraform(this._appEngineCustomEndpoint),

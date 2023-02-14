@@ -87,6 +87,12 @@ export interface ComputeInstanceTemplateConfig extends cdktf.TerraformMetaArgume
   */
   readonly region?: string;
   /**
+  * A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#resource_policies ComputeInstanceTemplate#resource_policies}
+  */
+  readonly resourcePolicies?: string[];
+  /**
   * Tags to attach to the instance.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#tags ComputeInstanceTemplate#tags}
@@ -2938,7 +2944,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -2962,6 +2968,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     this._namePrefix = config.namePrefix;
     this._project = config.project;
     this._region = config.region;
+    this._resourcePolicies = config.resourcePolicies;
     this._tags = config.tags;
     this._advancedMachineFeatures.internalValue = config.advancedMachineFeatures;
     this._confidentialInstanceConfig.internalValue = config.confidentialInstanceConfig;
@@ -3189,6 +3196,22 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
     return this._region;
   }
 
+  // resource_policies - computed: false, optional: true, required: false
+  private _resourcePolicies?: string[]; 
+  public get resourcePolicies() {
+    return this.getListAttribute('resource_policies');
+  }
+  public set resourcePolicies(value: string[]) {
+    this._resourcePolicies = value;
+  }
+  public resetResourcePolicies() {
+    this._resourcePolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourcePoliciesInput() {
+    return this._resourcePolicies;
+  }
+
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
@@ -3391,6 +3414,7 @@ export class ComputeInstanceTemplate extends cdktf.TerraformResource {
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
+      resource_policies: cdktf.listMapper(cdktf.stringToTerraform, false)(this._resourcePolicies),
       tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._tags),
       advanced_machine_features: computeInstanceTemplateAdvancedMachineFeaturesToTerraform(this._advancedMachineFeatures.internalValue),
       confidential_instance_config: computeInstanceTemplateConfidentialInstanceConfigToTerraform(this._confidentialInstanceConfig.internalValue),

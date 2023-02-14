@@ -650,6 +650,1029 @@ export class DatastreamStreamBackfillAllMysqlExcludedObjectsOutputReference exte
     return this._mysqlDatabases.internalValue;
   }
 }
+export interface DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The Oracle data type. Full data types list can be found here:
+https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+}
+
+export function datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsToTerraform(struct?: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // encoding - computed: true, optional: false, required: false
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: true, optional: false, required: false
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+
+  // ordinal_position - computed: true, optional: false, required: false
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference {
+    return new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * oracle_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+  */
+  readonly oracleColumns?: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesToTerraform(struct?: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    oracle_columns: cdktf.listMapper(datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsToTerraform, true)(struct!.oracleColumns),
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._oracleColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleColumns = this._oracleColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._oracleColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._oracleColumns.internalValue = value.oracleColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // oracle_columns - computed: false, optional: true, required: false
+  private _oracleColumns = new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumnsList(this, "oracle_columns", false);
+  public get oracleColumns() {
+    return this._oracleColumns;
+  }
+  public putOracleColumns(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable) {
+    this._oracleColumns.internalValue = value;
+  }
+  public resetOracleColumns() {
+    this._oracleColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleColumnsInput() {
+    return this._oracleColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference {
+    return new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas {
+  /**
+  * Schema name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * oracle_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+  */
+  readonly oracleTables?: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasToTerraform(struct?: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    oracle_tables: cdktf.listMapper(datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesToTerraform, true)(struct!.oracleTables),
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._oracleTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleTables = this._oracleTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._oracleTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._oracleTables.internalValue = value.oracleTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // oracle_tables - computed: false, optional: true, required: false
+  private _oracleTables = new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesList(this, "oracle_tables", false);
+  public get oracleTables() {
+    return this._oracleTables;
+  }
+  public putOracleTables(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOracleTables[] | cdktf.IResolvable) {
+    this._oracleTables.internalValue = value;
+  }
+  public resetOracleTables() {
+    this._oracleTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleTablesInput() {
+    return this._oracleTables.internalValue;
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference {
+    return new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllOracleExcludedObjects {
+  /**
+  * oracle_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+  */
+  readonly oracleSchemas: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllOracleExcludedObjectsToTerraform(struct?: DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference | DatastreamStreamBackfillAllOracleExcludedObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    oracle_schemas: cdktf.listMapper(datastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasToTerraform, true)(struct!.oracleSchemas),
+  }
+}
+
+export class DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllOracleExcludedObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._oracleSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleSchemas = this._oracleSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllOracleExcludedObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._oracleSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._oracleSchemas.internalValue = value.oracleSchemas;
+    }
+  }
+
+  // oracle_schemas - computed: false, optional: false, required: true
+  private _oracleSchemas = new DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemasList(this, "oracle_schemas", false);
+  public get oracleSchemas() {
+    return this._oracleSchemas;
+  }
+  public putOracleSchemas(value: DatastreamStreamBackfillAllOracleExcludedObjectsOracleSchemas[] | cdktf.IResolvable) {
+    this._oracleSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleSchemasInput() {
+    return this._oracleSchemas.internalValue;
+  }
+}
+export interface DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The PostgreSQL data type. Full data types list can be found here:
+https://www.postgresql.org/docs/current/datatype.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+  /**
+  * Whether or not the column can accept a null value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#nullable DatastreamStream#nullable}
+  */
+  readonly nullable?: boolean | cdktf.IResolvable;
+  /**
+  * The ordinal position of the column in the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+  */
+  readonly ordinalPosition?: number;
+  /**
+  * Whether or not the column represents a primary key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#primary_key DatastreamStream#primary_key}
+  */
+  readonly primaryKey?: boolean | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform(struct?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+    nullable: cdktf.booleanToTerraform(struct!.nullable),
+    ordinal_position: cdktf.numberToTerraform(struct!.ordinalPosition),
+    primary_key: cdktf.booleanToTerraform(struct!.primaryKey),
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    if (this._nullable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nullable = this._nullable;
+    }
+    if (this._ordinalPosition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ordinalPosition = this._ordinalPosition;
+    }
+    if (this._primaryKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+      this._nullable = undefined;
+      this._ordinalPosition = undefined;
+      this._primaryKey = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+      this._nullable = value.nullable;
+      this._ordinalPosition = value.ordinalPosition;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: false, optional: true, required: false
+  private _nullable?: boolean | cdktf.IResolvable; 
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+  public set nullable(value: boolean | cdktf.IResolvable) {
+    this._nullable = value;
+  }
+  public resetNullable() {
+    this._nullable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nullableInput() {
+    return this._nullable;
+  }
+
+  // ordinal_position - computed: false, optional: true, required: false
+  private _ordinalPosition?: number; 
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+  public set ordinalPosition(value: number) {
+    this._ordinalPosition = value;
+  }
+  public resetOrdinalPosition() {
+    this._ordinalPosition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ordinalPositionInput() {
+    return this._ordinalPosition;
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: false, optional: true, required: false
+  private _primaryKey?: boolean | cdktf.IResolvable; 
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+  public set primaryKey(value: boolean | cdktf.IResolvable) {
+    this._primaryKey = value;
+  }
+  public resetPrimaryKey() {
+    this._primaryKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey;
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference {
+    return new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * postgresql_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+  */
+  readonly postgresqlColumns?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesToTerraform(struct?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    postgresql_columns: cdktf.listMapper(datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform, true)(struct!.postgresqlColumns),
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._postgresqlColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlColumns = this._postgresqlColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._postgresqlColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._postgresqlColumns.internalValue = value.postgresqlColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // postgresql_columns - computed: false, optional: true, required: false
+  private _postgresqlColumns = new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList(this, "postgresql_columns", false);
+  public get postgresqlColumns() {
+    return this._postgresqlColumns;
+  }
+  public putPostgresqlColumns(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable) {
+    this._postgresqlColumns.internalValue = value;
+  }
+  public resetPostgresqlColumns() {
+    this._postgresqlColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlColumnsInput() {
+    return this._postgresqlColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference {
+    return new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas {
+  /**
+  * Database name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * postgresql_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+  */
+  readonly postgresqlTables?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasToTerraform(struct?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    postgresql_tables: cdktf.listMapper(datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesToTerraform, true)(struct!.postgresqlTables),
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._postgresqlTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlTables = this._postgresqlTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._postgresqlTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._postgresqlTables.internalValue = value.postgresqlTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // postgresql_tables - computed: false, optional: true, required: false
+  private _postgresqlTables = new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesList(this, "postgresql_tables", false);
+  public get postgresqlTables() {
+    return this._postgresqlTables;
+  }
+  public putPostgresqlTables(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable) {
+    this._postgresqlTables.internalValue = value;
+  }
+  public resetPostgresqlTables() {
+    this._postgresqlTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlTablesInput() {
+    return this._postgresqlTables.internalValue;
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference {
+    return new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamBackfillAllPostgresqlExcludedObjects {
+  /**
+  * postgresql_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+  */
+  readonly postgresqlSchemas: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamBackfillAllPostgresqlExcludedObjectsToTerraform(struct?: DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference | DatastreamStreamBackfillAllPostgresqlExcludedObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    postgresql_schemas: cdktf.listMapper(datastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasToTerraform, true)(struct!.postgresqlSchemas),
+  }
+}
+
+export class DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamBackfillAllPostgresqlExcludedObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._postgresqlSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlSchemas = this._postgresqlSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamBackfillAllPostgresqlExcludedObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._postgresqlSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._postgresqlSchemas.internalValue = value.postgresqlSchemas;
+    }
+  }
+
+  // postgresql_schemas - computed: false, optional: false, required: true
+  private _postgresqlSchemas = new DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasList(this, "postgresql_schemas", false);
+  public get postgresqlSchemas() {
+    return this._postgresqlSchemas;
+  }
+  public putPostgresqlSchemas(value: DatastreamStreamBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas[] | cdktf.IResolvable) {
+    this._postgresqlSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlSchemasInput() {
+    return this._postgresqlSchemas.internalValue;
+  }
+}
 export interface DatastreamStreamBackfillAll {
   /**
   * mysql_excluded_objects block
@@ -657,6 +1680,18 @@ export interface DatastreamStreamBackfillAll {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#mysql_excluded_objects DatastreamStream#mysql_excluded_objects}
   */
   readonly mysqlExcludedObjects?: DatastreamStreamBackfillAllMysqlExcludedObjects;
+  /**
+  * oracle_excluded_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_excluded_objects DatastreamStream#oracle_excluded_objects}
+  */
+  readonly oracleExcludedObjects?: DatastreamStreamBackfillAllOracleExcludedObjects;
+  /**
+  * postgresql_excluded_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_excluded_objects DatastreamStream#postgresql_excluded_objects}
+  */
+  readonly postgresqlExcludedObjects?: DatastreamStreamBackfillAllPostgresqlExcludedObjects;
 }
 
 export function datastreamStreamBackfillAllToTerraform(struct?: DatastreamStreamBackfillAllOutputReference | DatastreamStreamBackfillAll): any {
@@ -666,6 +1701,8 @@ export function datastreamStreamBackfillAllToTerraform(struct?: DatastreamStream
   }
   return {
     mysql_excluded_objects: datastreamStreamBackfillAllMysqlExcludedObjectsToTerraform(struct!.mysqlExcludedObjects),
+    oracle_excluded_objects: datastreamStreamBackfillAllOracleExcludedObjectsToTerraform(struct!.oracleExcludedObjects),
+    postgresql_excluded_objects: datastreamStreamBackfillAllPostgresqlExcludedObjectsToTerraform(struct!.postgresqlExcludedObjects),
   }
 }
 
@@ -687,6 +1724,14 @@ export class DatastreamStreamBackfillAllOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.mysqlExcludedObjects = this._mysqlExcludedObjects?.internalValue;
     }
+    if (this._oracleExcludedObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleExcludedObjects = this._oracleExcludedObjects?.internalValue;
+    }
+    if (this._postgresqlExcludedObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlExcludedObjects = this._postgresqlExcludedObjects?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -694,10 +1739,14 @@ export class DatastreamStreamBackfillAllOutputReference extends cdktf.ComplexObj
     if (value === undefined) {
       this.isEmptyObject = false;
       this._mysqlExcludedObjects.internalValue = undefined;
+      this._oracleExcludedObjects.internalValue = undefined;
+      this._postgresqlExcludedObjects.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._mysqlExcludedObjects.internalValue = value.mysqlExcludedObjects;
+      this._oracleExcludedObjects.internalValue = value.oracleExcludedObjects;
+      this._postgresqlExcludedObjects.internalValue = value.postgresqlExcludedObjects;
     }
   }
 
@@ -715,6 +1764,38 @@ export class DatastreamStreamBackfillAllOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get mysqlExcludedObjectsInput() {
     return this._mysqlExcludedObjects.internalValue;
+  }
+
+  // oracle_excluded_objects - computed: false, optional: true, required: false
+  private _oracleExcludedObjects = new DatastreamStreamBackfillAllOracleExcludedObjectsOutputReference(this, "oracle_excluded_objects");
+  public get oracleExcludedObjects() {
+    return this._oracleExcludedObjects;
+  }
+  public putOracleExcludedObjects(value: DatastreamStreamBackfillAllOracleExcludedObjects) {
+    this._oracleExcludedObjects.internalValue = value;
+  }
+  public resetOracleExcludedObjects() {
+    this._oracleExcludedObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleExcludedObjectsInput() {
+    return this._oracleExcludedObjects.internalValue;
+  }
+
+  // postgresql_excluded_objects - computed: false, optional: true, required: false
+  private _postgresqlExcludedObjects = new DatastreamStreamBackfillAllPostgresqlExcludedObjectsOutputReference(this, "postgresql_excluded_objects");
+  public get postgresqlExcludedObjects() {
+    return this._postgresqlExcludedObjects;
+  }
+  public putPostgresqlExcludedObjects(value: DatastreamStreamBackfillAllPostgresqlExcludedObjects) {
+    this._postgresqlExcludedObjects.internalValue = value;
+  }
+  public resetPostgresqlExcludedObjects() {
+    this._postgresqlExcludedObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlExcludedObjectsInput() {
+    return this._postgresqlExcludedObjects.internalValue;
   }
 }
 export interface DatastreamStreamBackfillNone {
@@ -2832,6 +3913,2522 @@ export class DatastreamStreamSourceConfigMysqlSourceConfigOutputReference extend
     return this._includeObjects.internalValue;
   }
 }
+export interface DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects {
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigDropLargeObjectsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjectsOutputReference | DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The Oracle data type. Full data types list can be found here:
+https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // encoding - computed: true, optional: false, required: false
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: true, optional: false, required: false
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+
+  // ordinal_position - computed: true, optional: false, required: false
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * oracle_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+  */
+  readonly oracleColumns?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    oracle_columns: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsToTerraform, true)(struct!.oracleColumns),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._oracleColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleColumns = this._oracleColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._oracleColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._oracleColumns.internalValue = value.oracleColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // oracle_columns - computed: false, optional: true, required: false
+  private _oracleColumns = new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumnsList(this, "oracle_columns", false);
+  public get oracleColumns() {
+    return this._oracleColumns;
+  }
+  public putOracleColumns(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable) {
+    this._oracleColumns.internalValue = value;
+  }
+  public resetOracleColumns() {
+    this._oracleColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleColumnsInput() {
+    return this._oracleColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas {
+  /**
+  * Schema name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * oracle_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+  */
+  readonly oracleTables?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    oracle_tables: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesToTerraform, true)(struct!.oracleTables),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._oracleTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleTables = this._oracleTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._oracleTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._oracleTables.internalValue = value.oracleTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // oracle_tables - computed: false, optional: true, required: false
+  private _oracleTables = new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesList(this, "oracle_tables", false);
+  public get oracleTables() {
+    return this._oracleTables;
+  }
+  public putOracleTables(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable) {
+    this._oracleTables.internalValue = value;
+  }
+  public resetOracleTables() {
+    this._oracleTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleTablesInput() {
+    return this._oracleTables.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects {
+  /**
+  * oracle_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+  */
+  readonly oracleSchemas: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference | DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    oracle_schemas: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasToTerraform, true)(struct!.oracleSchemas),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._oracleSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleSchemas = this._oracleSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._oracleSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._oracleSchemas.internalValue = value.oracleSchemas;
+    }
+  }
+
+  // oracle_schemas - computed: false, optional: false, required: true
+  private _oracleSchemas = new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasList(this, "oracle_schemas", false);
+  public get oracleSchemas() {
+    return this._oracleSchemas;
+  }
+  public putOracleSchemas(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas[] | cdktf.IResolvable) {
+    this._oracleSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleSchemasInput() {
+    return this._oracleSchemas.internalValue;
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The Oracle data type. Full data types list can be found here:
+https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // encoding - computed: true, optional: false, required: false
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: true, optional: false, required: false
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+
+  // ordinal_position - computed: true, optional: false, required: false
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * oracle_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_columns DatastreamStream#oracle_columns}
+  */
+  readonly oracleColumns?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    oracle_columns: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsToTerraform, true)(struct!.oracleColumns),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._oracleColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleColumns = this._oracleColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._oracleColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._oracleColumns.internalValue = value.oracleColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // oracle_columns - computed: false, optional: true, required: false
+  private _oracleColumns = new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumnsList(this, "oracle_columns", false);
+  public get oracleColumns() {
+    return this._oracleColumns;
+  }
+  public putOracleColumns(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns[] | cdktf.IResolvable) {
+    this._oracleColumns.internalValue = value;
+  }
+  public resetOracleColumns() {
+    this._oracleColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleColumnsInput() {
+    return this._oracleColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas {
+  /**
+  * Schema name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * oracle_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_tables DatastreamStream#oracle_tables}
+  */
+  readonly oracleTables?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    oracle_tables: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesToTerraform, true)(struct!.oracleTables),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._oracleTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleTables = this._oracleTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._oracleTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._oracleTables.internalValue = value.oracleTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // oracle_tables - computed: false, optional: true, required: false
+  private _oracleTables = new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesList(this, "oracle_tables", false);
+  public get oracleTables() {
+    return this._oracleTables;
+  }
+  public putOracleTables(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables[] | cdktf.IResolvable) {
+    this._oracleTables.internalValue = value;
+  }
+  public resetOracleTables() {
+    this._oracleTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleTablesInput() {
+    return this._oracleTables.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference {
+    return new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects {
+  /**
+  * oracle_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_schemas DatastreamStream#oracle_schemas}
+  */
+  readonly oracleSchemas: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference | DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    oracle_schemas: cdktf.listMapper(datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasToTerraform, true)(struct!.oracleSchemas),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._oracleSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleSchemas = this._oracleSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._oracleSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._oracleSchemas.internalValue = value.oracleSchemas;
+    }
+  }
+
+  // oracle_schemas - computed: false, optional: false, required: true
+  private _oracleSchemas = new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasList(this, "oracle_schemas", false);
+  public get oracleSchemas() {
+    return this._oracleSchemas;
+  }
+  public putOracleSchemas(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas[] | cdktf.IResolvable) {
+    this._oracleSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleSchemasInput() {
+    return this._oracleSchemas.internalValue;
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects {
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsOutputReference | DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+export interface DatastreamStreamSourceConfigOracleSourceConfig {
+  /**
+  * Maximum number of concurrent backfill tasks. The number should be non negative.
+If not set (or set to 0), the system's default value will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+  */
+  readonly maxConcurrentBackfillTasks?: number;
+  /**
+  * Maximum number of concurrent CDC tasks. The number should be non negative.
+If not set (or set to 0), the system's default value will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#max_concurrent_cdc_tasks DatastreamStream#max_concurrent_cdc_tasks}
+  */
+  readonly maxConcurrentCdcTasks?: number;
+  /**
+  * drop_large_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#drop_large_objects DatastreamStream#drop_large_objects}
+  */
+  readonly dropLargeObjects?: DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects;
+  /**
+  * exclude_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+  */
+  readonly excludeObjects?: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects;
+  /**
+  * include_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#include_objects DatastreamStream#include_objects}
+  */
+  readonly includeObjects?: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects;
+  /**
+  * stream_large_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#stream_large_objects DatastreamStream#stream_large_objects}
+  */
+  readonly streamLargeObjects?: DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects;
+}
+
+export function datastreamStreamSourceConfigOracleSourceConfigToTerraform(struct?: DatastreamStreamSourceConfigOracleSourceConfigOutputReference | DatastreamStreamSourceConfigOracleSourceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_concurrent_backfill_tasks: cdktf.numberToTerraform(struct!.maxConcurrentBackfillTasks),
+    max_concurrent_cdc_tasks: cdktf.numberToTerraform(struct!.maxConcurrentCdcTasks),
+    drop_large_objects: datastreamStreamSourceConfigOracleSourceConfigDropLargeObjectsToTerraform(struct!.dropLargeObjects),
+    exclude_objects: datastreamStreamSourceConfigOracleSourceConfigExcludeObjectsToTerraform(struct!.excludeObjects),
+    include_objects: datastreamStreamSourceConfigOracleSourceConfigIncludeObjectsToTerraform(struct!.includeObjects),
+    stream_large_objects: datastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsToTerraform(struct!.streamLargeObjects),
+  }
+}
+
+export class DatastreamStreamSourceConfigOracleSourceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigOracleSourceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxConcurrentBackfillTasks !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentBackfillTasks = this._maxConcurrentBackfillTasks;
+    }
+    if (this._maxConcurrentCdcTasks !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentCdcTasks = this._maxConcurrentCdcTasks;
+    }
+    if (this._dropLargeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dropLargeObjects = this._dropLargeObjects?.internalValue;
+    }
+    if (this._excludeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeObjects = this._excludeObjects?.internalValue;
+    }
+    if (this._includeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeObjects = this._includeObjects?.internalValue;
+    }
+    if (this._streamLargeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.streamLargeObjects = this._streamLargeObjects?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigOracleSourceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxConcurrentBackfillTasks = undefined;
+      this._maxConcurrentCdcTasks = undefined;
+      this._dropLargeObjects.internalValue = undefined;
+      this._excludeObjects.internalValue = undefined;
+      this._includeObjects.internalValue = undefined;
+      this._streamLargeObjects.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxConcurrentBackfillTasks = value.maxConcurrentBackfillTasks;
+      this._maxConcurrentCdcTasks = value.maxConcurrentCdcTasks;
+      this._dropLargeObjects.internalValue = value.dropLargeObjects;
+      this._excludeObjects.internalValue = value.excludeObjects;
+      this._includeObjects.internalValue = value.includeObjects;
+      this._streamLargeObjects.internalValue = value.streamLargeObjects;
+    }
+  }
+
+  // max_concurrent_backfill_tasks - computed: true, optional: true, required: false
+  private _maxConcurrentBackfillTasks?: number; 
+  public get maxConcurrentBackfillTasks() {
+    return this.getNumberAttribute('max_concurrent_backfill_tasks');
+  }
+  public set maxConcurrentBackfillTasks(value: number) {
+    this._maxConcurrentBackfillTasks = value;
+  }
+  public resetMaxConcurrentBackfillTasks() {
+    this._maxConcurrentBackfillTasks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrentBackfillTasksInput() {
+    return this._maxConcurrentBackfillTasks;
+  }
+
+  // max_concurrent_cdc_tasks - computed: true, optional: true, required: false
+  private _maxConcurrentCdcTasks?: number; 
+  public get maxConcurrentCdcTasks() {
+    return this.getNumberAttribute('max_concurrent_cdc_tasks');
+  }
+  public set maxConcurrentCdcTasks(value: number) {
+    this._maxConcurrentCdcTasks = value;
+  }
+  public resetMaxConcurrentCdcTasks() {
+    this._maxConcurrentCdcTasks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrentCdcTasksInput() {
+    return this._maxConcurrentCdcTasks;
+  }
+
+  // drop_large_objects - computed: false, optional: true, required: false
+  private _dropLargeObjects = new DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjectsOutputReference(this, "drop_large_objects");
+  public get dropLargeObjects() {
+    return this._dropLargeObjects;
+  }
+  public putDropLargeObjects(value: DatastreamStreamSourceConfigOracleSourceConfigDropLargeObjects) {
+    this._dropLargeObjects.internalValue = value;
+  }
+  public resetDropLargeObjects() {
+    this._dropLargeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dropLargeObjectsInput() {
+    return this._dropLargeObjects.internalValue;
+  }
+
+  // exclude_objects - computed: false, optional: true, required: false
+  private _excludeObjects = new DatastreamStreamSourceConfigOracleSourceConfigExcludeObjectsOutputReference(this, "exclude_objects");
+  public get excludeObjects() {
+    return this._excludeObjects;
+  }
+  public putExcludeObjects(value: DatastreamStreamSourceConfigOracleSourceConfigExcludeObjects) {
+    this._excludeObjects.internalValue = value;
+  }
+  public resetExcludeObjects() {
+    this._excludeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeObjectsInput() {
+    return this._excludeObjects.internalValue;
+  }
+
+  // include_objects - computed: false, optional: true, required: false
+  private _includeObjects = new DatastreamStreamSourceConfigOracleSourceConfigIncludeObjectsOutputReference(this, "include_objects");
+  public get includeObjects() {
+    return this._includeObjects;
+  }
+  public putIncludeObjects(value: DatastreamStreamSourceConfigOracleSourceConfigIncludeObjects) {
+    this._includeObjects.internalValue = value;
+  }
+  public resetIncludeObjects() {
+    this._includeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeObjectsInput() {
+    return this._includeObjects.internalValue;
+  }
+
+  // stream_large_objects - computed: false, optional: true, required: false
+  private _streamLargeObjects = new DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjectsOutputReference(this, "stream_large_objects");
+  public get streamLargeObjects() {
+    return this._streamLargeObjects;
+  }
+  public putStreamLargeObjects(value: DatastreamStreamSourceConfigOracleSourceConfigStreamLargeObjects) {
+    this._streamLargeObjects.internalValue = value;
+  }
+  public resetStreamLargeObjects() {
+    this._streamLargeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamLargeObjectsInput() {
+    return this._streamLargeObjects.internalValue;
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The PostgreSQL data type. Full data types list can be found here:
+https://www.postgresql.org/docs/current/datatype.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+  /**
+  * Whether or not the column can accept a null value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#nullable DatastreamStream#nullable}
+  */
+  readonly nullable?: boolean | cdktf.IResolvable;
+  /**
+  * The ordinal position of the column in the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+  */
+  readonly ordinalPosition?: number;
+  /**
+  * Whether or not the column represents a primary key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#primary_key DatastreamStream#primary_key}
+  */
+  readonly primaryKey?: boolean | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+    nullable: cdktf.booleanToTerraform(struct!.nullable),
+    ordinal_position: cdktf.numberToTerraform(struct!.ordinalPosition),
+    primary_key: cdktf.booleanToTerraform(struct!.primaryKey),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    if (this._nullable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nullable = this._nullable;
+    }
+    if (this._ordinalPosition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ordinalPosition = this._ordinalPosition;
+    }
+    if (this._primaryKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+      this._nullable = undefined;
+      this._ordinalPosition = undefined;
+      this._primaryKey = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+      this._nullable = value.nullable;
+      this._ordinalPosition = value.ordinalPosition;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: false, optional: true, required: false
+  private _nullable?: boolean | cdktf.IResolvable; 
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+  public set nullable(value: boolean | cdktf.IResolvable) {
+    this._nullable = value;
+  }
+  public resetNullable() {
+    this._nullable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nullableInput() {
+    return this._nullable;
+  }
+
+  // ordinal_position - computed: false, optional: true, required: false
+  private _ordinalPosition?: number; 
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+  public set ordinalPosition(value: number) {
+    this._ordinalPosition = value;
+  }
+  public resetOrdinalPosition() {
+    this._ordinalPosition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ordinalPositionInput() {
+    return this._ordinalPosition;
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: false, optional: true, required: false
+  private _primaryKey?: boolean | cdktf.IResolvable; 
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+  public set primaryKey(value: boolean | cdktf.IResolvable) {
+    this._primaryKey = value;
+  }
+  public resetPrimaryKey() {
+    this._primaryKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey;
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * postgresql_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+  */
+  readonly postgresqlColumns?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    postgresql_columns: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform, true)(struct!.postgresqlColumns),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._postgresqlColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlColumns = this._postgresqlColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._postgresqlColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._postgresqlColumns.internalValue = value.postgresqlColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // postgresql_columns - computed: false, optional: true, required: false
+  private _postgresqlColumns = new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList(this, "postgresql_columns", false);
+  public get postgresqlColumns() {
+    return this._postgresqlColumns;
+  }
+  public putPostgresqlColumns(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable) {
+    this._postgresqlColumns.internalValue = value;
+  }
+  public resetPostgresqlColumns() {
+    this._postgresqlColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlColumnsInput() {
+    return this._postgresqlColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas {
+  /**
+  * Database name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * postgresql_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+  */
+  readonly postgresqlTables?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    postgresql_tables: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesToTerraform, true)(struct!.postgresqlTables),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._postgresqlTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlTables = this._postgresqlTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._postgresqlTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._postgresqlTables.internalValue = value.postgresqlTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // postgresql_tables - computed: false, optional: true, required: false
+  private _postgresqlTables = new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesList(this, "postgresql_tables", false);
+  public get postgresqlTables() {
+    return this._postgresqlTables;
+  }
+  public putPostgresqlTables(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable) {
+    this._postgresqlTables.internalValue = value;
+  }
+  public resetPostgresqlTables() {
+    this._postgresqlTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlTablesInput() {
+    return this._postgresqlTables.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects {
+  /**
+  * postgresql_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+  */
+  readonly postgresqlSchemas: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference | DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    postgresql_schemas: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasToTerraform, true)(struct!.postgresqlSchemas),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._postgresqlSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlSchemas = this._postgresqlSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._postgresqlSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._postgresqlSchemas.internalValue = value.postgresqlSchemas;
+    }
+  }
+
+  // postgresql_schemas - computed: false, optional: false, required: true
+  private _postgresqlSchemas = new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasList(this, "postgresql_schemas", false);
+  public get postgresqlSchemas() {
+    return this._postgresqlSchemas;
+  }
+  public putPostgresqlSchemas(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas[] | cdktf.IResolvable) {
+    this._postgresqlSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlSchemasInput() {
+    return this._postgresqlSchemas.internalValue;
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
+  /**
+  * Column name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#column DatastreamStream#column}
+  */
+  readonly column?: string;
+  /**
+  * The PostgreSQL data type. Full data types list can be found here:
+https://www.postgresql.org/docs/current/datatype.html
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#data_type DatastreamStream#data_type}
+  */
+  readonly dataType?: string;
+  /**
+  * Whether or not the column can accept a null value.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#nullable DatastreamStream#nullable}
+  */
+  readonly nullable?: boolean | cdktf.IResolvable;
+  /**
+  * The ordinal position of the column in the table.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#ordinal_position DatastreamStream#ordinal_position}
+  */
+  readonly ordinalPosition?: number;
+  /**
+  * Whether or not the column represents a primary key.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#primary_key DatastreamStream#primary_key}
+  */
+  readonly primaryKey?: boolean | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    column: cdktf.stringToTerraform(struct!.column),
+    data_type: cdktf.stringToTerraform(struct!.dataType),
+    nullable: cdktf.booleanToTerraform(struct!.nullable),
+    ordinal_position: cdktf.numberToTerraform(struct!.ordinalPosition),
+    primary_key: cdktf.booleanToTerraform(struct!.primaryKey),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._column !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._dataType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dataType = this._dataType;
+    }
+    if (this._nullable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nullable = this._nullable;
+    }
+    if (this._ordinalPosition !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ordinalPosition = this._ordinalPosition;
+    }
+    if (this._primaryKey !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._column = undefined;
+      this._dataType = undefined;
+      this._nullable = undefined;
+      this._ordinalPosition = undefined;
+      this._primaryKey = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._column = value.column;
+      this._dataType = value.dataType;
+      this._nullable = value.nullable;
+      this._ordinalPosition = value.ordinalPosition;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
+  // column - computed: false, optional: true, required: false
+  private _column?: string; 
+  public get column() {
+    return this.getStringAttribute('column');
+  }
+  public set column(value: string) {
+    this._column = value;
+  }
+  public resetColumn() {
+    this._column = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get columnInput() {
+    return this._column;
+  }
+
+  // data_type - computed: false, optional: true, required: false
+  private _dataType?: string; 
+  public get dataType() {
+    return this.getStringAttribute('data_type');
+  }
+  public set dataType(value: string) {
+    this._dataType = value;
+  }
+  public resetDataType() {
+    this._dataType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataTypeInput() {
+    return this._dataType;
+  }
+
+  // length - computed: true, optional: false, required: false
+  public get length() {
+    return this.getNumberAttribute('length');
+  }
+
+  // nullable - computed: false, optional: true, required: false
+  private _nullable?: boolean | cdktf.IResolvable; 
+  public get nullable() {
+    return this.getBooleanAttribute('nullable');
+  }
+  public set nullable(value: boolean | cdktf.IResolvable) {
+    this._nullable = value;
+  }
+  public resetNullable() {
+    this._nullable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nullableInput() {
+    return this._nullable;
+  }
+
+  // ordinal_position - computed: false, optional: true, required: false
+  private _ordinalPosition?: number; 
+  public get ordinalPosition() {
+    return this.getNumberAttribute('ordinal_position');
+  }
+  public set ordinalPosition(value: number) {
+    this._ordinalPosition = value;
+  }
+  public resetOrdinalPosition() {
+    this._ordinalPosition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ordinalPositionInput() {
+    return this._ordinalPosition;
+  }
+
+  // precision - computed: true, optional: false, required: false
+  public get precision() {
+    return this.getNumberAttribute('precision');
+  }
+
+  // primary_key - computed: false, optional: true, required: false
+  private _primaryKey?: boolean | cdktf.IResolvable; 
+  public get primaryKey() {
+    return this.getBooleanAttribute('primary_key');
+  }
+  public set primaryKey(value: boolean | cdktf.IResolvable) {
+    this._primaryKey = value;
+  }
+  public resetPrimaryKey() {
+    this._primaryKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey;
+  }
+
+  // scale - computed: true, optional: false, required: false
+  public get scale() {
+    return this.getNumberAttribute('scale');
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables {
+  /**
+  * Table name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#table DatastreamStream#table}
+  */
+  readonly table: string;
+  /**
+  * postgresql_columns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_columns DatastreamStream#postgresql_columns}
+  */
+  readonly postgresqlColumns?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    table: cdktf.stringToTerraform(struct!.table),
+    postgresql_columns: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsToTerraform, true)(struct!.postgresqlColumns),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._table !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    if (this._postgresqlColumns?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlColumns = this._postgresqlColumns?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._table = undefined;
+      this._postgresqlColumns.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._table = value.table;
+      this._postgresqlColumns.internalValue = value.postgresqlColumns;
+    }
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: string; 
+  public get table() {
+    return this.getStringAttribute('table');
+  }
+  public set table(value: string) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table;
+  }
+
+  // postgresql_columns - computed: false, optional: true, required: false
+  private _postgresqlColumns = new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumnsList(this, "postgresql_columns", false);
+  public get postgresqlColumns() {
+    return this._postgresqlColumns;
+  }
+  public putPostgresqlColumns(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns[] | cdktf.IResolvable) {
+    this._postgresqlColumns.internalValue = value;
+  }
+  public resetPostgresqlColumns() {
+    this._postgresqlColumns.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlColumnsInput() {
+    return this._postgresqlColumns.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas {
+  /**
+  * Database name.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#schema DatastreamStream#schema}
+  */
+  readonly schema: string;
+  /**
+  * postgresql_tables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_tables DatastreamStream#postgresql_tables}
+  */
+  readonly postgresqlTables?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema: cdktf.stringToTerraform(struct!.schema),
+    postgresql_tables: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesToTerraform, true)(struct!.postgresqlTables),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._schema !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.schema = this._schema;
+    }
+    if (this._postgresqlTables?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlTables = this._postgresqlTables?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._schema = undefined;
+      this._postgresqlTables.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._schema = value.schema;
+      this._postgresqlTables.internalValue = value.postgresqlTables;
+    }
+  }
+
+  // schema - computed: false, optional: false, required: true
+  private _schema?: string; 
+  public get schema() {
+    return this.getStringAttribute('schema');
+  }
+  public set schema(value: string) {
+    this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema;
+  }
+
+  // postgresql_tables - computed: false, optional: true, required: false
+  private _postgresqlTables = new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesList(this, "postgresql_tables", false);
+  public get postgresqlTables() {
+    return this._postgresqlTables;
+  }
+  public putPostgresqlTables(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables[] | cdktf.IResolvable) {
+    this._postgresqlTables.internalValue = value;
+  }
+  public resetPostgresqlTables() {
+    this._postgresqlTables.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlTablesInput() {
+    return this._postgresqlTables.internalValue;
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList extends cdktf.ComplexList {
+  public internalValue? : DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference {
+    return new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects {
+  /**
+  * postgresql_schemas block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_schemas DatastreamStream#postgresql_schemas}
+  */
+  readonly postgresqlSchemas: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] | cdktf.IResolvable;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference | DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    postgresql_schemas: cdktf.listMapper(datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasToTerraform, true)(struct!.postgresqlSchemas),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._postgresqlSchemas?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlSchemas = this._postgresqlSchemas?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._postgresqlSchemas.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._postgresqlSchemas.internalValue = value.postgresqlSchemas;
+    }
+  }
+
+  // postgresql_schemas - computed: false, optional: false, required: true
+  private _postgresqlSchemas = new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasList(this, "postgresql_schemas", false);
+  public get postgresqlSchemas() {
+    return this._postgresqlSchemas;
+  }
+  public putPostgresqlSchemas(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas[] | cdktf.IResolvable) {
+    this._postgresqlSchemas.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlSchemasInput() {
+    return this._postgresqlSchemas.internalValue;
+  }
+}
+export interface DatastreamStreamSourceConfigPostgresqlSourceConfig {
+  /**
+  * Maximum number of concurrent backfill tasks. The number should be non
+negative. If not set (or set to 0), the system's default value will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#max_concurrent_backfill_tasks DatastreamStream#max_concurrent_backfill_tasks}
+  */
+  readonly maxConcurrentBackfillTasks?: number;
+  /**
+  * The name of the publication that includes the set of all tables
+that are defined in the stream's include_objects.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#publication DatastreamStream#publication}
+  */
+  readonly publication: string;
+  /**
+  * The name of the logical replication slot that's configured with
+the pgoutput plugin.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#replication_slot DatastreamStream#replication_slot}
+  */
+  readonly replicationSlot: string;
+  /**
+  * exclude_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#exclude_objects DatastreamStream#exclude_objects}
+  */
+  readonly excludeObjects?: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects;
+  /**
+  * include_objects block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#include_objects DatastreamStream#include_objects}
+  */
+  readonly includeObjects?: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects;
+}
+
+export function datastreamStreamSourceConfigPostgresqlSourceConfigToTerraform(struct?: DatastreamStreamSourceConfigPostgresqlSourceConfigOutputReference | DatastreamStreamSourceConfigPostgresqlSourceConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_concurrent_backfill_tasks: cdktf.numberToTerraform(struct!.maxConcurrentBackfillTasks),
+    publication: cdktf.stringToTerraform(struct!.publication),
+    replication_slot: cdktf.stringToTerraform(struct!.replicationSlot),
+    exclude_objects: datastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsToTerraform(struct!.excludeObjects),
+    include_objects: datastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsToTerraform(struct!.includeObjects),
+  }
+}
+
+export class DatastreamStreamSourceConfigPostgresqlSourceConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DatastreamStreamSourceConfigPostgresqlSourceConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxConcurrentBackfillTasks !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxConcurrentBackfillTasks = this._maxConcurrentBackfillTasks;
+    }
+    if (this._publication !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publication = this._publication;
+    }
+    if (this._replicationSlot !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.replicationSlot = this._replicationSlot;
+    }
+    if (this._excludeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeObjects = this._excludeObjects?.internalValue;
+    }
+    if (this._includeObjects?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeObjects = this._includeObjects?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatastreamStreamSourceConfigPostgresqlSourceConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxConcurrentBackfillTasks = undefined;
+      this._publication = undefined;
+      this._replicationSlot = undefined;
+      this._excludeObjects.internalValue = undefined;
+      this._includeObjects.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxConcurrentBackfillTasks = value.maxConcurrentBackfillTasks;
+      this._publication = value.publication;
+      this._replicationSlot = value.replicationSlot;
+      this._excludeObjects.internalValue = value.excludeObjects;
+      this._includeObjects.internalValue = value.includeObjects;
+    }
+  }
+
+  // max_concurrent_backfill_tasks - computed: true, optional: true, required: false
+  private _maxConcurrentBackfillTasks?: number; 
+  public get maxConcurrentBackfillTasks() {
+    return this.getNumberAttribute('max_concurrent_backfill_tasks');
+  }
+  public set maxConcurrentBackfillTasks(value: number) {
+    this._maxConcurrentBackfillTasks = value;
+  }
+  public resetMaxConcurrentBackfillTasks() {
+    this._maxConcurrentBackfillTasks = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxConcurrentBackfillTasksInput() {
+    return this._maxConcurrentBackfillTasks;
+  }
+
+  // publication - computed: false, optional: false, required: true
+  private _publication?: string; 
+  public get publication() {
+    return this.getStringAttribute('publication');
+  }
+  public set publication(value: string) {
+    this._publication = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicationInput() {
+    return this._publication;
+  }
+
+  // replication_slot - computed: false, optional: false, required: true
+  private _replicationSlot?: string; 
+  public get replicationSlot() {
+    return this.getStringAttribute('replication_slot');
+  }
+  public set replicationSlot(value: string) {
+    this._replicationSlot = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicationSlotInput() {
+    return this._replicationSlot;
+  }
+
+  // exclude_objects - computed: false, optional: true, required: false
+  private _excludeObjects = new DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjectsOutputReference(this, "exclude_objects");
+  public get excludeObjects() {
+    return this._excludeObjects;
+  }
+  public putExcludeObjects(value: DatastreamStreamSourceConfigPostgresqlSourceConfigExcludeObjects) {
+    this._excludeObjects.internalValue = value;
+  }
+  public resetExcludeObjects() {
+    this._excludeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeObjectsInput() {
+    return this._excludeObjects.internalValue;
+  }
+
+  // include_objects - computed: false, optional: true, required: false
+  private _includeObjects = new DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjectsOutputReference(this, "include_objects");
+  public get includeObjects() {
+    return this._includeObjects;
+  }
+  public putIncludeObjects(value: DatastreamStreamSourceConfigPostgresqlSourceConfigIncludeObjects) {
+    this._includeObjects.internalValue = value;
+  }
+  public resetIncludeObjects() {
+    this._includeObjects.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeObjectsInput() {
+    return this._includeObjects.internalValue;
+  }
+}
 export interface DatastreamStreamSourceConfig {
   /**
   * Source connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}
@@ -2844,7 +6441,19 @@ export interface DatastreamStreamSourceConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#mysql_source_config DatastreamStream#mysql_source_config}
   */
-  readonly mysqlSourceConfig: DatastreamStreamSourceConfigMysqlSourceConfig;
+  readonly mysqlSourceConfig?: DatastreamStreamSourceConfigMysqlSourceConfig;
+  /**
+  * oracle_source_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#oracle_source_config DatastreamStream#oracle_source_config}
+  */
+  readonly oracleSourceConfig?: DatastreamStreamSourceConfigOracleSourceConfig;
+  /**
+  * postgresql_source_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#postgresql_source_config DatastreamStream#postgresql_source_config}
+  */
+  readonly postgresqlSourceConfig?: DatastreamStreamSourceConfigPostgresqlSourceConfig;
 }
 
 export function datastreamStreamSourceConfigToTerraform(struct?: DatastreamStreamSourceConfigOutputReference | DatastreamStreamSourceConfig): any {
@@ -2855,6 +6464,8 @@ export function datastreamStreamSourceConfigToTerraform(struct?: DatastreamStrea
   return {
     source_connection_profile: cdktf.stringToTerraform(struct!.sourceConnectionProfile),
     mysql_source_config: datastreamStreamSourceConfigMysqlSourceConfigToTerraform(struct!.mysqlSourceConfig),
+    oracle_source_config: datastreamStreamSourceConfigOracleSourceConfigToTerraform(struct!.oracleSourceConfig),
+    postgresql_source_config: datastreamStreamSourceConfigPostgresqlSourceConfigToTerraform(struct!.postgresqlSourceConfig),
   }
 }
 
@@ -2880,6 +6491,14 @@ export class DatastreamStreamSourceConfigOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.mysqlSourceConfig = this._mysqlSourceConfig?.internalValue;
     }
+    if (this._oracleSourceConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.oracleSourceConfig = this._oracleSourceConfig?.internalValue;
+    }
+    if (this._postgresqlSourceConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.postgresqlSourceConfig = this._postgresqlSourceConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2888,11 +6507,15 @@ export class DatastreamStreamSourceConfigOutputReference extends cdktf.ComplexOb
       this.isEmptyObject = false;
       this._sourceConnectionProfile = undefined;
       this._mysqlSourceConfig.internalValue = undefined;
+      this._oracleSourceConfig.internalValue = undefined;
+      this._postgresqlSourceConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._sourceConnectionProfile = value.sourceConnectionProfile;
       this._mysqlSourceConfig.internalValue = value.mysqlSourceConfig;
+      this._oracleSourceConfig.internalValue = value.oracleSourceConfig;
+      this._postgresqlSourceConfig.internalValue = value.postgresqlSourceConfig;
     }
   }
 
@@ -2909,7 +6532,7 @@ export class DatastreamStreamSourceConfigOutputReference extends cdktf.ComplexOb
     return this._sourceConnectionProfile;
   }
 
-  // mysql_source_config - computed: false, optional: false, required: true
+  // mysql_source_config - computed: false, optional: true, required: false
   private _mysqlSourceConfig = new DatastreamStreamSourceConfigMysqlSourceConfigOutputReference(this, "mysql_source_config");
   public get mysqlSourceConfig() {
     return this._mysqlSourceConfig;
@@ -2917,9 +6540,44 @@ export class DatastreamStreamSourceConfigOutputReference extends cdktf.ComplexOb
   public putMysqlSourceConfig(value: DatastreamStreamSourceConfigMysqlSourceConfig) {
     this._mysqlSourceConfig.internalValue = value;
   }
+  public resetMysqlSourceConfig() {
+    this._mysqlSourceConfig.internalValue = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get mysqlSourceConfigInput() {
     return this._mysqlSourceConfig.internalValue;
+  }
+
+  // oracle_source_config - computed: false, optional: true, required: false
+  private _oracleSourceConfig = new DatastreamStreamSourceConfigOracleSourceConfigOutputReference(this, "oracle_source_config");
+  public get oracleSourceConfig() {
+    return this._oracleSourceConfig;
+  }
+  public putOracleSourceConfig(value: DatastreamStreamSourceConfigOracleSourceConfig) {
+    this._oracleSourceConfig.internalValue = value;
+  }
+  public resetOracleSourceConfig() {
+    this._oracleSourceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oracleSourceConfigInput() {
+    return this._oracleSourceConfig.internalValue;
+  }
+
+  // postgresql_source_config - computed: false, optional: true, required: false
+  private _postgresqlSourceConfig = new DatastreamStreamSourceConfigPostgresqlSourceConfigOutputReference(this, "postgresql_source_config");
+  public get postgresqlSourceConfig() {
+    return this._postgresqlSourceConfig;
+  }
+  public putPostgresqlSourceConfig(value: DatastreamStreamSourceConfigPostgresqlSourceConfig) {
+    this._postgresqlSourceConfig.internalValue = value;
+  }
+  public resetPostgresqlSourceConfig() {
+    this._postgresqlSourceConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postgresqlSourceConfigInput() {
+    return this._postgresqlSourceConfig.internalValue;
   }
 }
 export interface DatastreamStreamTimeouts {
@@ -3078,7 +6736,7 @@ export class DatastreamStream extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_stream',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

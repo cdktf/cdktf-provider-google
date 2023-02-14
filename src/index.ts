@@ -12,6 +12,10 @@ export * as accessContextManagerServicePerimeterResource from './access-context-
 export * as accessContextManagerServicePerimeters from './access-context-manager-service-perimeters';
 export * as activeDirectoryDomain from './active-directory-domain';
 export * as activeDirectoryDomainTrust from './active-directory-domain-trust';
+export * as alloydbBackup from './alloydb-backup';
+export * as alloydbCluster from './alloydb-cluster';
+export * as alloydbInstance from './alloydb-instance';
+export * as apigeeAddonsConfig from './apigee-addons-config';
 export * as apigeeEndpointAttachment from './apigee-endpoint-attachment';
 export * as apigeeEnvgroup from './apigee-envgroup';
 export * as apigeeEnvgroupAttachment from './apigee-envgroup-attachment';
@@ -206,6 +210,7 @@ export * as computeRegionPerInstanceConfig from './compute-region-per-instance-c
 export * as computeRegionSslCertificate from './compute-region-ssl-certificate';
 export * as computeRegionTargetHttpProxy from './compute-region-target-http-proxy';
 export * as computeRegionTargetHttpsProxy from './compute-region-target-https-proxy';
+export * as computeRegionTargetTcpProxy from './compute-region-target-tcp-proxy';
 export * as computeRegionUrlMap from './compute-region-url-map';
 export * as computeReservation from './compute-reservation';
 export * as computeResourcePolicy from './compute-resource-policy';

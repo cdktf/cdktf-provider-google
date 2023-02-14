@@ -8,6 +8,12 @@ import * as cdktf from 'cdktf';
 
 export interface VertexAiFeaturestoreEntitytypeConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Optional. Description of the EntityType.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#description VertexAiFeaturestoreEntitytype#description}
+  */
+  readonly description?: string;
+  /**
   * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#featurestore VertexAiFeaturestoreEntitytype#featurestore}
@@ -711,7 +717,7 @@ export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_featurestore_entitytype',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -722,6 +728,7 @@ export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._description = config.description;
     this._featurestore = config.featurestore;
     this._id = config.id;
     this._labels = config.labels;
@@ -737,6 +744,22 @@ export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
   // create_time - computed: true, optional: false, required: false
   public get createTime() {
     return this.getStringAttribute('create_time');
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description;
   }
 
   // etag - computed: true, optional: false, required: false
@@ -853,6 +876,7 @@ export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      description: cdktf.stringToTerraform(this._description),
       featurestore: cdktf.stringToTerraform(this._featurestore),
       id: cdktf.stringToTerraform(this._id),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),

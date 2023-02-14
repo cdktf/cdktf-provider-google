@@ -50,7 +50,7 @@ export class DataGoogleContainerAttachedVersions extends cdktf.TerraformDataSour
       terraformResourceType: 'google_container_attached_versions',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

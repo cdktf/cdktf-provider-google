@@ -1831,6 +1831,12 @@ export interface SqlDatabaseInstanceSettingsIpConfiguration {
   */
   readonly allocatedIpRange?: string;
   /**
+  * Whether Google Cloud services such as BigQuery are allowed to access data in this Cloud SQL instance over a private IP connection. SQLSERVER database type is not supported.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#enable_private_path_for_google_cloud_services SqlDatabaseInstance#enable_private_path_for_google_cloud_services}
+  */
+  readonly enablePrivatePathForGoogleCloudServices?: boolean | cdktf.IResolvable;
+  /**
   * Whether this Cloud SQL instance should be assigned a public IPV4 address. At least ipv4_enabled must be enabled or a private_network must be configured.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#ipv4_enabled SqlDatabaseInstance#ipv4_enabled}
@@ -1861,6 +1867,7 @@ export function sqlDatabaseInstanceSettingsIpConfigurationToTerraform(struct?: S
   }
   return {
     allocated_ip_range: cdktf.stringToTerraform(struct!.allocatedIpRange),
+    enable_private_path_for_google_cloud_services: cdktf.booleanToTerraform(struct!.enablePrivatePathForGoogleCloudServices),
     ipv4_enabled: cdktf.booleanToTerraform(struct!.ipv4Enabled),
     private_network: cdktf.stringToTerraform(struct!.privateNetwork),
     require_ssl: cdktf.booleanToTerraform(struct!.requireSsl),
@@ -1886,6 +1893,10 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
       hasAnyValues = true;
       internalValueResult.allocatedIpRange = this._allocatedIpRange;
     }
+    if (this._enablePrivatePathForGoogleCloudServices !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enablePrivatePathForGoogleCloudServices = this._enablePrivatePathForGoogleCloudServices;
+    }
     if (this._ipv4Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipv4Enabled = this._ipv4Enabled;
@@ -1909,6 +1920,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
     if (value === undefined) {
       this.isEmptyObject = false;
       this._allocatedIpRange = undefined;
+      this._enablePrivatePathForGoogleCloudServices = undefined;
       this._ipv4Enabled = undefined;
       this._privateNetwork = undefined;
       this._requireSsl = undefined;
@@ -1917,6 +1929,7 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allocatedIpRange = value.allocatedIpRange;
+      this._enablePrivatePathForGoogleCloudServices = value.enablePrivatePathForGoogleCloudServices;
       this._ipv4Enabled = value.ipv4Enabled;
       this._privateNetwork = value.privateNetwork;
       this._requireSsl = value.requireSsl;
@@ -1938,6 +1951,22 @@ export class SqlDatabaseInstanceSettingsIpConfigurationOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get allocatedIpRangeInput() {
     return this._allocatedIpRange;
+  }
+
+  // enable_private_path_for_google_cloud_services - computed: false, optional: true, required: false
+  private _enablePrivatePathForGoogleCloudServices?: boolean | cdktf.IResolvable; 
+  public get enablePrivatePathForGoogleCloudServices() {
+    return this.getBooleanAttribute('enable_private_path_for_google_cloud_services');
+  }
+  public set enablePrivatePathForGoogleCloudServices(value: boolean | cdktf.IResolvable) {
+    this._enablePrivatePathForGoogleCloudServices = value;
+  }
+  public resetEnablePrivatePathForGoogleCloudServices() {
+    this._enablePrivatePathForGoogleCloudServices = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePrivatePathForGoogleCloudServicesInput() {
+    return this._enablePrivatePathForGoogleCloudServices;
   }
 
   // ipv4_enabled - computed: false, optional: true, required: false
@@ -3456,7 +3485,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

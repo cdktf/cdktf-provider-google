@@ -21,6 +21,12 @@ export interface ComputeExternalVpnGatewayConfig extends cdktf.TerraformMetaArgu
   */
   readonly id?: string;
   /**
+  * Labels for the external VPN gateway resource.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_external_vpn_gateway#labels ComputeExternalVpnGateway#labels}
+  */
+  readonly labels?: { [key: string]: string };
+  /**
   * Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -322,7 +328,7 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_external_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -335,6 +341,7 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
     });
     this._description = config.description;
     this._id = config.id;
+    this._labels = config.labels;
     this._name = config.name;
     this._project = config.project;
     this._redundancyType = config.redundancyType;
@@ -376,6 +383,22 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // labels - computed: false, optional: true, required: false
+  private _labels?: { [key: string]: string }; 
+  public get labels() {
+    return this.getStringMapAttribute('labels');
+  }
+  public set labels(value: { [key: string]: string }) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels;
   }
 
   // name - computed: false, optional: false, required: true
@@ -468,6 +491,7 @@ export class ComputeExternalVpnGateway extends cdktf.TerraformResource {
     return {
       description: cdktf.stringToTerraform(this._description),
       id: cdktf.stringToTerraform(this._id),
+      labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       redundancy_type: cdktf.stringToTerraform(this._redundancyType),

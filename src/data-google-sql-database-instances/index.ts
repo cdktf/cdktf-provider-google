@@ -1051,6 +1051,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesSettingsIpConfigurationOutpu
     return this._authorizedNetworks;
   }
 
+  // enable_private_path_for_google_cloud_services - computed: true, optional: false, required: false
+  public get enablePrivatePathForGoogleCloudServices() {
+    return this.getBooleanAttribute('enable_private_path_for_google_cloud_services');
+  }
+
   // ipv4_enabled - computed: true, optional: false, required: false
   public get ipv4Enabled() {
     return this.getBooleanAttribute('ipv4_enabled');
@@ -1793,7 +1798,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instances',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
