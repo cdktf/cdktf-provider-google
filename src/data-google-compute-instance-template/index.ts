@@ -1414,7 +1414,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1607,6 +1607,11 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
   private _reservationAffinity = new DataGoogleComputeInstanceTemplateReservationAffinityList(this, "reservation_affinity", false);
   public get reservationAffinity() {
     return this._reservationAffinity;
+  }
+
+  // resource_policies - computed: true, optional: false, required: false
+  public get resourcePolicies() {
+    return this.getListAttribute('resource_policies');
   }
 
   // scheduling - computed: true, optional: false, required: false

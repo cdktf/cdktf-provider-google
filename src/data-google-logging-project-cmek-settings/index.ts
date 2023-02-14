@@ -57,7 +57,7 @@ export class DataGoogleLoggingProjectCmekSettings extends cdktf.TerraformDataSou
       terraformResourceType: 'google_logging_project_cmek_settings',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
