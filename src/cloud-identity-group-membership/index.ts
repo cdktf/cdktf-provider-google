@@ -402,7 +402,7 @@ export class CloudIdentityGroupMembership extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_identity_group_membership',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

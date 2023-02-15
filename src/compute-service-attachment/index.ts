@@ -446,7 +446,7 @@ export class ComputeServiceAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_service_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

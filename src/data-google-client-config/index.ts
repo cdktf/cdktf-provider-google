@@ -42,7 +42,7 @@ export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_client_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

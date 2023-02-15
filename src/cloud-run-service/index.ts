@@ -3165,7 +3165,7 @@ export class CloudRunService extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
