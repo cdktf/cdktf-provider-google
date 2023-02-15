@@ -183,7 +183,7 @@ export class ProjectIamAuditConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_iam_audit_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

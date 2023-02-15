@@ -46,7 +46,7 @@ export class DataGoogleAccessApprovalFolderServiceAccount extends cdktf.Terrafor
       terraformResourceType: 'google_access_approval_folder_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

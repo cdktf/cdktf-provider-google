@@ -269,7 +269,7 @@ export class DialogflowAgent extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_agent',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.0',
+        providerVersion: '4.53.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
