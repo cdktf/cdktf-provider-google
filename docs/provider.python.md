@@ -1,0 +1,6753 @@
+# `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-google.provider"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### GoogleProvider <a name="GoogleProvider" id="@cdktf/provider-google.provider.GoogleProvider"></a>
+
+Represents a {@link https://www.terraform.io/docs/providers/google google}.
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.provider.GoogleProvider.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProvider(
+  scope: Construct,
+  id: str,
+  access_approval_custom_endpoint: str = None,
+  access_context_manager_custom_endpoint: str = None,
+  access_token: str = None,
+  active_directory_custom_endpoint: str = None,
+  alias: str = None,
+  alloydb_custom_endpoint: str = None,
+  apigee_custom_endpoint: str = None,
+  apikeys_custom_endpoint: str = None,
+  app_engine_custom_endpoint: str = None,
+  artifact_registry_custom_endpoint: str = None,
+  assured_workloads_custom_endpoint: str = None,
+  batching: GoogleProviderBatching = None,
+  beyondcorp_custom_endpoint: str = None,
+  bigquery_analytics_hub_custom_endpoint: str = None,
+  bigquery_connection_custom_endpoint: str = None,
+  big_query_custom_endpoint: str = None,
+  bigquery_data_transfer_custom_endpoint: str = None,
+  bigquery_reservation_custom_endpoint: str = None,
+  bigtable_custom_endpoint: str = None,
+  billing_custom_endpoint: str = None,
+  billing_project: str = None,
+  binary_authorization_custom_endpoint: str = None,
+  certificate_manager_custom_endpoint: str = None,
+  cloud_asset_custom_endpoint: str = None,
+  cloud_billing_custom_endpoint: str = None,
+  cloud_build_custom_endpoint: str = None,
+  cloud_build_worker_pool_custom_endpoint: str = None,
+  clouddeploy_custom_endpoint: str = None,
+  cloudfunctions2_custom_endpoint: str = None,
+  cloud_functions_custom_endpoint: str = None,
+  cloud_identity_custom_endpoint: str = None,
+  cloud_ids_custom_endpoint: str = None,
+  cloud_iot_custom_endpoint: str = None,
+  cloud_resource_manager_custom_endpoint: str = None,
+  cloud_run_custom_endpoint: str = None,
+  cloud_run_v2_custom_endpoint: str = None,
+  cloud_scheduler_custom_endpoint: str = None,
+  cloud_tasks_custom_endpoint: str = None,
+  composer_custom_endpoint: str = None,
+  compute_custom_endpoint: str = None,
+  container_analysis_custom_endpoint: str = None,
+  container_attached_custom_endpoint: str = None,
+  container_aws_custom_endpoint: str = None,
+  container_azure_custom_endpoint: str = None,
+  container_custom_endpoint: str = None,
+  credentials: str = None,
+  data_catalog_custom_endpoint: str = None,
+  dataflow_custom_endpoint: str = None,
+  data_fusion_custom_endpoint: str = None,
+  data_loss_prevention_custom_endpoint: str = None,
+  dataplex_custom_endpoint: str = None,
+  dataproc_custom_endpoint: str = None,
+  dataproc_metastore_custom_endpoint: str = None,
+  datastore_custom_endpoint: str = None,
+  datastream_custom_endpoint: str = None,
+  deployment_manager_custom_endpoint: str = None,
+  dialogflow_custom_endpoint: str = None,
+  dialogflow_cx_custom_endpoint: str = None,
+  dns_custom_endpoint: str = None,
+  document_ai_custom_endpoint: str = None,
+  essential_contacts_custom_endpoint: str = None,
+  eventarc_custom_endpoint: str = None,
+  filestore_custom_endpoint: str = None,
+  firebaserules_custom_endpoint: str = None,
+  firestore_custom_endpoint: str = None,
+  game_services_custom_endpoint: str = None,
+  gke_backup_custom_endpoint: str = None,
+  gke_hub_custom_endpoint: str = None,
+  healthcare_custom_endpoint: str = None,
+  iam2_custom_endpoint: str = None,
+  iam_beta_custom_endpoint: str = None,
+  iam_credentials_custom_endpoint: str = None,
+  iam_custom_endpoint: str = None,
+  iam_workforce_pool_custom_endpoint: str = None,
+  iap_custom_endpoint: str = None,
+  identity_platform_custom_endpoint: str = None,
+  impersonate_service_account: str = None,
+  impersonate_service_account_delegates: typing.List[str] = None,
+  kms_custom_endpoint: str = None,
+  logging_custom_endpoint: str = None,
+  memcache_custom_endpoint: str = None,
+  ml_engine_custom_endpoint: str = None,
+  monitoring_custom_endpoint: str = None,
+  network_connectivity_custom_endpoint: str = None,
+  network_management_custom_endpoint: str = None,
+  network_services_custom_endpoint: str = None,
+  notebooks_custom_endpoint: str = None,
+  org_policy_custom_endpoint: str = None,
+  os_config_custom_endpoint: str = None,
+  os_login_custom_endpoint: str = None,
+  privateca_custom_endpoint: str = None,
+  project: str = None,
+  pubsub_custom_endpoint: str = None,
+  pubsub_lite_custom_endpoint: str = None,
+  recaptcha_enterprise_custom_endpoint: str = None,
+  redis_custom_endpoint: str = None,
+  region: str = None,
+  request_reason: str = None,
+  request_timeout: str = None,
+  resource_manager_custom_endpoint: str = None,
+  resource_manager_v3_custom_endpoint: str = None,
+  scopes: typing.List[str] = None,
+  secret_manager_custom_endpoint: str = None,
+  security_center_custom_endpoint: str = None,
+  service_management_custom_endpoint: str = None,
+  service_networking_custom_endpoint: str = None,
+  service_usage_custom_endpoint: str = None,
+  source_repo_custom_endpoint: str = None,
+  spanner_custom_endpoint: str = None,
+  sql_custom_endpoint: str = None,
+  storage_custom_endpoint: str = None,
+  storage_transfer_custom_endpoint: str = None,
+  tags_custom_endpoint: str = None,
+  tags_location_custom_endpoint: str = None,
+  tpu_custom_endpoint: str = None,
+  user_project_override: typing.Union[bool, IResolvable] = None,
+  vertex_ai_custom_endpoint: str = None,
+  vpc_access_custom_endpoint: str = None,
+  workflows_custom_endpoint: str = None,
+  zone: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessApprovalCustomEndpoint">access_approval_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessToken">access_token</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_token GoogleProvider#access_token}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alias">alias</a></code> | <code>str</code> | Alias name. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apikeysCustomEndpoint">apikeys_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.appEngineCustomEndpoint">app_engine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching">batching</a></code> | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a></code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryConnectionCustomEndpoint">bigquery_connection_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigQueryCustomEndpoint">big_query_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryDataTransferCustomEndpoint">bigquery_data_transfer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryReservationCustomEndpoint">bigquery_reservation_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigtableCustomEndpoint">bigtable_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.billingCustomEndpoint">billing_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.billingProject">billing_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_project GoogleProvider#billing_project}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.binaryAuthorizationCustomEndpoint">binary_authorization_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.certificateManagerCustomEndpoint">certificate_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudAssetCustomEndpoint">cloud_asset_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBillingCustomEndpoint">cloud_billing_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBuildCustomEndpoint">cloud_build_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBuildWorkerPoolCustomEndpoint">cloud_build_worker_pool_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.clouddeployCustomEndpoint">clouddeploy_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudfunctions2CustomEndpoint">cloudfunctions2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudFunctionsCustomEndpoint">cloud_functions_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIdentityCustomEndpoint">cloud_identity_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIdsCustomEndpoint">cloud_ids_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIotCustomEndpoint">cloud_iot_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudResourceManagerCustomEndpoint">cloud_resource_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudRunCustomEndpoint">cloud_run_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudRunV2CustomEndpoint">cloud_run_v2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudSchedulerCustomEndpoint">cloud_scheduler_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudTasksCustomEndpoint">cloud_tasks_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.composerCustomEndpoint">composer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.computeCustomEndpoint">compute_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAnalysisCustomEndpoint">container_analysis_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAttachedCustomEndpoint">container_attached_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAwsCustomEndpoint">container_aws_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAzureCustomEndpoint">container_azure_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerCustomEndpoint">container_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_custom_endpoint GoogleProvider#container_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.credentials">credentials</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#credentials GoogleProvider#credentials}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataCatalogCustomEndpoint">data_catalog_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataflowCustomEndpoint">dataflow_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataFusionCustomEndpoint">data_fusion_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataLossPreventionCustomEndpoint">data_loss_prevention_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataplexCustomEndpoint">dataplex_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataprocCustomEndpoint">dataproc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataprocMetastoreCustomEndpoint">dataproc_metastore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.datastoreCustomEndpoint">datastore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.datastreamCustomEndpoint">datastream_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.deploymentManagerCustomEndpoint">deployment_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dialogflowCustomEndpoint">dialogflow_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dialogflowCxCustomEndpoint">dialogflow_cx_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dnsCustomEndpoint">dns_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.documentAiCustomEndpoint">document_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaserulesCustomEndpoint">firebaserules_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firestoreCustomEndpoint">firestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gameServicesCustomEndpoint">game_services_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gkeBackupCustomEndpoint">gke_backup_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gkeHubCustomEndpoint">gke_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.healthcareCustomEndpoint">healthcare_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iam2CustomEndpoint">iam2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamBetaCustomEndpoint">iam_beta_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamCredentialsCustomEndpoint">iam_credentials_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamCustomEndpoint">iam_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamWorkforcePoolCustomEndpoint">iam_workforce_pool_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iapCustomEndpoint">iap_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.identityPlatformCustomEndpoint">identity_platform_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.impersonateServiceAccount">impersonate_service_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account GoogleProvider#impersonate_service_account}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.impersonateServiceAccountDelegates">impersonate_service_account_delegates</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.kmsCustomEndpoint">kms_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.loggingCustomEndpoint">logging_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.memcacheCustomEndpoint">memcache_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.mlEngineCustomEndpoint">ml_engine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.monitoringCustomEndpoint">monitoring_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkConnectivityCustomEndpoint">network_connectivity_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkManagementCustomEndpoint">network_management_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkServicesCustomEndpoint">network_services_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.notebooksCustomEndpoint">notebooks_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.orgPolicyCustomEndpoint">org_policy_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.osConfigCustomEndpoint">os_config_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.osLoginCustomEndpoint">os_login_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.privatecaCustomEndpoint">privateca_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#project GoogleProvider#project}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.pubsubCustomEndpoint">pubsub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.pubsubLiteCustomEndpoint">pubsub_lite_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.recaptchaEnterpriseCustomEndpoint">recaptcha_enterprise_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.redisCustomEndpoint">redis_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#region GoogleProvider#region}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.requestReason">request_reason</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_reason GoogleProvider#request_reason}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.requestTimeout">request_timeout</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_timeout GoogleProvider#request_timeout}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.resourceManagerCustomEndpoint">resource_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.resourceManagerV3CustomEndpoint">resource_manager_v3_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.scopes">scopes</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#scopes GoogleProvider#scopes}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.secretManagerCustomEndpoint">secret_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.securityCenterCustomEndpoint">security_center_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceManagementCustomEndpoint">service_management_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceNetworkingCustomEndpoint">service_networking_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceUsageCustomEndpoint">service_usage_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.sourceRepoCustomEndpoint">source_repo_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.spannerCustomEndpoint">spanner_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.sqlCustomEndpoint">sql_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.storageCustomEndpoint">storage_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.storageTransferCustomEndpoint">storage_transfer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tagsCustomEndpoint">tags_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tagsLocationCustomEndpoint">tags_location_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.workflowsCustomEndpoint">workflows_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#zone GoogleProvider#zone}. |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `access_approval_custom_endpoint`<sup>Optional</sup> <a name="access_approval_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessApprovalCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}.
+
+---
+
+##### `access_context_manager_custom_endpoint`<sup>Optional</sup> <a name="access_context_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessContextManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}.
+
+---
+
+##### `access_token`<sup>Optional</sup> <a name="access_token" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.accessToken"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_token GoogleProvider#access_token}.
+
+---
+
+##### `active_directory_custom_endpoint`<sup>Optional</sup> <a name="active_directory_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.activeDirectoryCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}.
+
+---
+
+##### `alias`<sup>Optional</sup> <a name="alias" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alias"></a>
+
+- *Type:* str
+
+Alias name.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alias GoogleProvider#alias}
+
+---
+
+##### `alloydb_custom_endpoint`<sup>Optional</sup> <a name="alloydb_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.alloydbCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}.
+
+---
+
+##### `apigee_custom_endpoint`<sup>Optional</sup> <a name="apigee_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apigeeCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}.
+
+---
+
+##### `apikeys_custom_endpoint`<sup>Optional</sup> <a name="apikeys_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.apikeysCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}.
+
+---
+
+##### `app_engine_custom_endpoint`<sup>Optional</sup> <a name="app_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.appEngineCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}.
+
+---
+
+##### `artifact_registry_custom_endpoint`<sup>Optional</sup> <a name="artifact_registry_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.artifactRegistryCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}.
+
+---
+
+##### `assured_workloads_custom_endpoint`<sup>Optional</sup> <a name="assured_workloads_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.assuredWorkloadsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}.
+
+---
+
+##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.batching"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>
+
+batching block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#batching GoogleProvider#batching}
+
+---
+
+##### `beyondcorp_custom_endpoint`<sup>Optional</sup> <a name="beyondcorp_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.beyondcorpCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}.
+
+---
+
+##### `bigquery_analytics_hub_custom_endpoint`<sup>Optional</sup> <a name="bigquery_analytics_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryAnalyticsHubCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}.
+
+---
+
+##### `bigquery_connection_custom_endpoint`<sup>Optional</sup> <a name="bigquery_connection_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryConnectionCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}.
+
+---
+
+##### `big_query_custom_endpoint`<sup>Optional</sup> <a name="big_query_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigQueryCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}.
+
+---
+
+##### `bigquery_data_transfer_custom_endpoint`<sup>Optional</sup> <a name="bigquery_data_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryDataTransferCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}.
+
+---
+
+##### `bigquery_reservation_custom_endpoint`<sup>Optional</sup> <a name="bigquery_reservation_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigqueryReservationCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}.
+
+---
+
+##### `bigtable_custom_endpoint`<sup>Optional</sup> <a name="bigtable_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.bigtableCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}.
+
+---
+
+##### `billing_custom_endpoint`<sup>Optional</sup> <a name="billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.billingCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}.
+
+---
+
+##### `billing_project`<sup>Optional</sup> <a name="billing_project" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.billingProject"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_project GoogleProvider#billing_project}.
+
+---
+
+##### `binary_authorization_custom_endpoint`<sup>Optional</sup> <a name="binary_authorization_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.binaryAuthorizationCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}.
+
+---
+
+##### `certificate_manager_custom_endpoint`<sup>Optional</sup> <a name="certificate_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.certificateManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}.
+
+---
+
+##### `cloud_asset_custom_endpoint`<sup>Optional</sup> <a name="cloud_asset_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudAssetCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}.
+
+---
+
+##### `cloud_billing_custom_endpoint`<sup>Optional</sup> <a name="cloud_billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBillingCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}.
+
+---
+
+##### `cloud_build_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBuildCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}.
+
+---
+
+##### `cloud_build_worker_pool_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_worker_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudBuildWorkerPoolCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}.
+
+---
+
+##### `clouddeploy_custom_endpoint`<sup>Optional</sup> <a name="clouddeploy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.clouddeployCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}.
+
+---
+
+##### `cloudfunctions2_custom_endpoint`<sup>Optional</sup> <a name="cloudfunctions2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudfunctions2CustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}.
+
+---
+
+##### `cloud_functions_custom_endpoint`<sup>Optional</sup> <a name="cloud_functions_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudFunctionsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}.
+
+---
+
+##### `cloud_identity_custom_endpoint`<sup>Optional</sup> <a name="cloud_identity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIdentityCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}.
+
+---
+
+##### `cloud_ids_custom_endpoint`<sup>Optional</sup> <a name="cloud_ids_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIdsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}.
+
+---
+
+##### `cloud_iot_custom_endpoint`<sup>Optional</sup> <a name="cloud_iot_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudIotCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}.
+
+---
+
+##### `cloud_resource_manager_custom_endpoint`<sup>Optional</sup> <a name="cloud_resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudResourceManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}.
+
+---
+
+##### `cloud_run_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudRunCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}.
+
+---
+
+##### `cloud_run_v2_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_v2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudRunV2CustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}.
+
+---
+
+##### `cloud_scheduler_custom_endpoint`<sup>Optional</sup> <a name="cloud_scheduler_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudSchedulerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}.
+
+---
+
+##### `cloud_tasks_custom_endpoint`<sup>Optional</sup> <a name="cloud_tasks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.cloudTasksCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}.
+
+---
+
+##### `composer_custom_endpoint`<sup>Optional</sup> <a name="composer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.composerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}.
+
+---
+
+##### `compute_custom_endpoint`<sup>Optional</sup> <a name="compute_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.computeCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}.
+
+---
+
+##### `container_analysis_custom_endpoint`<sup>Optional</sup> <a name="container_analysis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAnalysisCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}.
+
+---
+
+##### `container_attached_custom_endpoint`<sup>Optional</sup> <a name="container_attached_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAttachedCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}.
+
+---
+
+##### `container_aws_custom_endpoint`<sup>Optional</sup> <a name="container_aws_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAwsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}.
+
+---
+
+##### `container_azure_custom_endpoint`<sup>Optional</sup> <a name="container_azure_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerAzureCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}.
+
+---
+
+##### `container_custom_endpoint`<sup>Optional</sup> <a name="container_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.containerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_custom_endpoint GoogleProvider#container_custom_endpoint}.
+
+---
+
+##### `credentials`<sup>Optional</sup> <a name="credentials" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.credentials"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#credentials GoogleProvider#credentials}.
+
+---
+
+##### `data_catalog_custom_endpoint`<sup>Optional</sup> <a name="data_catalog_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataCatalogCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}.
+
+---
+
+##### `dataflow_custom_endpoint`<sup>Optional</sup> <a name="dataflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataflowCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}.
+
+---
+
+##### `data_fusion_custom_endpoint`<sup>Optional</sup> <a name="data_fusion_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataFusionCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}.
+
+---
+
+##### `data_loss_prevention_custom_endpoint`<sup>Optional</sup> <a name="data_loss_prevention_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataLossPreventionCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}.
+
+---
+
+##### `dataplex_custom_endpoint`<sup>Optional</sup> <a name="dataplex_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataplexCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}.
+
+---
+
+##### `dataproc_custom_endpoint`<sup>Optional</sup> <a name="dataproc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataprocCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}.
+
+---
+
+##### `dataproc_metastore_custom_endpoint`<sup>Optional</sup> <a name="dataproc_metastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dataprocMetastoreCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}.
+
+---
+
+##### `datastore_custom_endpoint`<sup>Optional</sup> <a name="datastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.datastoreCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}.
+
+---
+
+##### `datastream_custom_endpoint`<sup>Optional</sup> <a name="datastream_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.datastreamCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}.
+
+---
+
+##### `deployment_manager_custom_endpoint`<sup>Optional</sup> <a name="deployment_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.deploymentManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}.
+
+---
+
+##### `dialogflow_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dialogflowCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}.
+
+---
+
+##### `dialogflow_cx_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_cx_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dialogflowCxCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}.
+
+---
+
+##### `dns_custom_endpoint`<sup>Optional</sup> <a name="dns_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.dnsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}.
+
+---
+
+##### `document_ai_custom_endpoint`<sup>Optional</sup> <a name="document_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.documentAiCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}.
+
+---
+
+##### `essential_contacts_custom_endpoint`<sup>Optional</sup> <a name="essential_contacts_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.essentialContactsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}.
+
+---
+
+##### `eventarc_custom_endpoint`<sup>Optional</sup> <a name="eventarc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.eventarcCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}.
+
+---
+
+##### `filestore_custom_endpoint`<sup>Optional</sup> <a name="filestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.filestoreCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}.
+
+---
+
+##### `firebaserules_custom_endpoint`<sup>Optional</sup> <a name="firebaserules_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firebaserulesCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}.
+
+---
+
+##### `firestore_custom_endpoint`<sup>Optional</sup> <a name="firestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.firestoreCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}.
+
+---
+
+##### `game_services_custom_endpoint`<sup>Optional</sup> <a name="game_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gameServicesCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}.
+
+---
+
+##### `gke_backup_custom_endpoint`<sup>Optional</sup> <a name="gke_backup_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gkeBackupCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}.
+
+---
+
+##### `gke_hub_custom_endpoint`<sup>Optional</sup> <a name="gke_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.gkeHubCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}.
+
+---
+
+##### `healthcare_custom_endpoint`<sup>Optional</sup> <a name="healthcare_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.healthcareCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}.
+
+---
+
+##### `iam2_custom_endpoint`<sup>Optional</sup> <a name="iam2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iam2CustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}.
+
+---
+
+##### `iam_beta_custom_endpoint`<sup>Optional</sup> <a name="iam_beta_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamBetaCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}.
+
+---
+
+##### `iam_credentials_custom_endpoint`<sup>Optional</sup> <a name="iam_credentials_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamCredentialsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}.
+
+---
+
+##### `iam_custom_endpoint`<sup>Optional</sup> <a name="iam_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}.
+
+---
+
+##### `iam_workforce_pool_custom_endpoint`<sup>Optional</sup> <a name="iam_workforce_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iamWorkforcePoolCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}.
+
+---
+
+##### `iap_custom_endpoint`<sup>Optional</sup> <a name="iap_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.iapCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}.
+
+---
+
+##### `identity_platform_custom_endpoint`<sup>Optional</sup> <a name="identity_platform_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.identityPlatformCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}.
+
+---
+
+##### `impersonate_service_account`<sup>Optional</sup> <a name="impersonate_service_account" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.impersonateServiceAccount"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account GoogleProvider#impersonate_service_account}.
+
+---
+
+##### `impersonate_service_account_delegates`<sup>Optional</sup> <a name="impersonate_service_account_delegates" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.impersonateServiceAccountDelegates"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}.
+
+---
+
+##### `kms_custom_endpoint`<sup>Optional</sup> <a name="kms_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.kmsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}.
+
+---
+
+##### `logging_custom_endpoint`<sup>Optional</sup> <a name="logging_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.loggingCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}.
+
+---
+
+##### `memcache_custom_endpoint`<sup>Optional</sup> <a name="memcache_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.memcacheCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}.
+
+---
+
+##### `ml_engine_custom_endpoint`<sup>Optional</sup> <a name="ml_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.mlEngineCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}.
+
+---
+
+##### `monitoring_custom_endpoint`<sup>Optional</sup> <a name="monitoring_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.monitoringCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}.
+
+---
+
+##### `network_connectivity_custom_endpoint`<sup>Optional</sup> <a name="network_connectivity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkConnectivityCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}.
+
+---
+
+##### `network_management_custom_endpoint`<sup>Optional</sup> <a name="network_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkManagementCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}.
+
+---
+
+##### `network_services_custom_endpoint`<sup>Optional</sup> <a name="network_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.networkServicesCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}.
+
+---
+
+##### `notebooks_custom_endpoint`<sup>Optional</sup> <a name="notebooks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.notebooksCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}.
+
+---
+
+##### `org_policy_custom_endpoint`<sup>Optional</sup> <a name="org_policy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.orgPolicyCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}.
+
+---
+
+##### `os_config_custom_endpoint`<sup>Optional</sup> <a name="os_config_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.osConfigCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}.
+
+---
+
+##### `os_login_custom_endpoint`<sup>Optional</sup> <a name="os_login_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.osLoginCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}.
+
+---
+
+##### `privateca_custom_endpoint`<sup>Optional</sup> <a name="privateca_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.privatecaCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}.
+
+---
+
+##### `project`<sup>Optional</sup> <a name="project" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.project"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#project GoogleProvider#project}.
+
+---
+
+##### `pubsub_custom_endpoint`<sup>Optional</sup> <a name="pubsub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.pubsubCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}.
+
+---
+
+##### `pubsub_lite_custom_endpoint`<sup>Optional</sup> <a name="pubsub_lite_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.pubsubLiteCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}.
+
+---
+
+##### `recaptcha_enterprise_custom_endpoint`<sup>Optional</sup> <a name="recaptcha_enterprise_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.recaptchaEnterpriseCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}.
+
+---
+
+##### `redis_custom_endpoint`<sup>Optional</sup> <a name="redis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.redisCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}.
+
+---
+
+##### `region`<sup>Optional</sup> <a name="region" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.region"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#region GoogleProvider#region}.
+
+---
+
+##### `request_reason`<sup>Optional</sup> <a name="request_reason" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.requestReason"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_reason GoogleProvider#request_reason}.
+
+---
+
+##### `request_timeout`<sup>Optional</sup> <a name="request_timeout" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.requestTimeout"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_timeout GoogleProvider#request_timeout}.
+
+---
+
+##### `resource_manager_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.resourceManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}.
+
+---
+
+##### `resource_manager_v3_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_v3_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.resourceManagerV3CustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}.
+
+---
+
+##### `scopes`<sup>Optional</sup> <a name="scopes" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.scopes"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#scopes GoogleProvider#scopes}.
+
+---
+
+##### `secret_manager_custom_endpoint`<sup>Optional</sup> <a name="secret_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.secretManagerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}.
+
+---
+
+##### `security_center_custom_endpoint`<sup>Optional</sup> <a name="security_center_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.securityCenterCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}.
+
+---
+
+##### `service_management_custom_endpoint`<sup>Optional</sup> <a name="service_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceManagementCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}.
+
+---
+
+##### `service_networking_custom_endpoint`<sup>Optional</sup> <a name="service_networking_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceNetworkingCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}.
+
+---
+
+##### `service_usage_custom_endpoint`<sup>Optional</sup> <a name="service_usage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.serviceUsageCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}.
+
+---
+
+##### `source_repo_custom_endpoint`<sup>Optional</sup> <a name="source_repo_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.sourceRepoCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}.
+
+---
+
+##### `spanner_custom_endpoint`<sup>Optional</sup> <a name="spanner_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.spannerCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}.
+
+---
+
+##### `sql_custom_endpoint`<sup>Optional</sup> <a name="sql_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.sqlCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}.
+
+---
+
+##### `storage_custom_endpoint`<sup>Optional</sup> <a name="storage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.storageCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}.
+
+---
+
+##### `storage_transfer_custom_endpoint`<sup>Optional</sup> <a name="storage_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.storageTransferCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}.
+
+---
+
+##### `tags_custom_endpoint`<sup>Optional</sup> <a name="tags_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tagsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}.
+
+---
+
+##### `tags_location_custom_endpoint`<sup>Optional</sup> <a name="tags_location_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tagsLocationCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}.
+
+---
+
+##### `tpu_custom_endpoint`<sup>Optional</sup> <a name="tpu_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.tpuCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}.
+
+---
+
+##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.userProjectOverride"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#user_project_override GoogleProvider#user_project_override}.
+
+---
+
+##### `vertex_ai_custom_endpoint`<sup>Optional</sup> <a name="vertex_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vertexAiCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}.
+
+---
+
+##### `vpc_access_custom_endpoint`<sup>Optional</sup> <a name="vpc_access_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.vpcAccessCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}.
+
+---
+
+##### `workflows_custom_endpoint`<sup>Optional</sup> <a name="workflows_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.workflowsCustomEndpoint"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}.
+
+---
+
+##### `zone`<sup>Optional</sup> <a name="zone" id="@cdktf/provider-google.provider.GoogleProvider.Initializer.parameter.zone"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#zone GoogleProvider#zone}.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.toString">to_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.addOverride">add_override</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.toMetadata">to_metadata</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAccessApprovalCustomEndpoint">reset_access_approval_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAccessContextManagerCustomEndpoint">reset_access_context_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAccessToken">reset_access_token</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetActiveDirectoryCustomEndpoint">reset_active_directory_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAlias">reset_alias</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAlloydbCustomEndpoint">reset_alloydb_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetApigeeCustomEndpoint">reset_apigee_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetApikeysCustomEndpoint">reset_apikeys_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAppEngineCustomEndpoint">reset_app_engine_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetArtifactRegistryCustomEndpoint">reset_artifact_registry_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetAssuredWorkloadsCustomEndpoint">reset_assured_workloads_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBatching">reset_batching</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBeyondcorpCustomEndpoint">reset_beyondcorp_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigqueryAnalyticsHubCustomEndpoint">reset_bigquery_analytics_hub_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigqueryConnectionCustomEndpoint">reset_bigquery_connection_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigQueryCustomEndpoint">reset_big_query_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigqueryDataTransferCustomEndpoint">reset_bigquery_data_transfer_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigqueryReservationCustomEndpoint">reset_bigquery_reservation_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBigtableCustomEndpoint">reset_bigtable_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBillingCustomEndpoint">reset_billing_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBillingProject">reset_billing_project</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetBinaryAuthorizationCustomEndpoint">reset_binary_authorization_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCertificateManagerCustomEndpoint">reset_certificate_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudAssetCustomEndpoint">reset_cloud_asset_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudBillingCustomEndpoint">reset_cloud_billing_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudBuildCustomEndpoint">reset_cloud_build_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudBuildWorkerPoolCustomEndpoint">reset_cloud_build_worker_pool_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetClouddeployCustomEndpoint">reset_clouddeploy_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudfunctions2CustomEndpoint">reset_cloudfunctions2_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudFunctionsCustomEndpoint">reset_cloud_functions_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudIdentityCustomEndpoint">reset_cloud_identity_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudIdsCustomEndpoint">reset_cloud_ids_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudIotCustomEndpoint">reset_cloud_iot_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudResourceManagerCustomEndpoint">reset_cloud_resource_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudRunCustomEndpoint">reset_cloud_run_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudRunV2CustomEndpoint">reset_cloud_run_v2_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudSchedulerCustomEndpoint">reset_cloud_scheduler_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCloudTasksCustomEndpoint">reset_cloud_tasks_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetComposerCustomEndpoint">reset_composer_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetComputeCustomEndpoint">reset_compute_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetContainerAnalysisCustomEndpoint">reset_container_analysis_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetContainerAttachedCustomEndpoint">reset_container_attached_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetContainerAwsCustomEndpoint">reset_container_aws_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetContainerAzureCustomEndpoint">reset_container_azure_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetContainerCustomEndpoint">reset_container_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetCredentials">reset_credentials</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataCatalogCustomEndpoint">reset_data_catalog_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataflowCustomEndpoint">reset_dataflow_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataFusionCustomEndpoint">reset_data_fusion_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataLossPreventionCustomEndpoint">reset_data_loss_prevention_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataplexCustomEndpoint">reset_dataplex_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataprocCustomEndpoint">reset_dataproc_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDataprocMetastoreCustomEndpoint">reset_dataproc_metastore_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDatastoreCustomEndpoint">reset_datastore_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDatastreamCustomEndpoint">reset_datastream_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDeploymentManagerCustomEndpoint">reset_deployment_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDialogflowCustomEndpoint">reset_dialogflow_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDialogflowCxCustomEndpoint">reset_dialogflow_cx_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDnsCustomEndpoint">reset_dns_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetDocumentAiCustomEndpoint">reset_document_ai_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetEssentialContactsCustomEndpoint">reset_essential_contacts_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetEventarcCustomEndpoint">reset_eventarc_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetFilestoreCustomEndpoint">reset_filestore_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetFirebaserulesCustomEndpoint">reset_firebaserules_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetFirestoreCustomEndpoint">reset_firestore_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetGameServicesCustomEndpoint">reset_game_services_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetGkeBackupCustomEndpoint">reset_gke_backup_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetGkeHubCustomEndpoint">reset_gke_hub_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetHealthcareCustomEndpoint">reset_healthcare_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIam2CustomEndpoint">reset_iam2_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIamBetaCustomEndpoint">reset_iam_beta_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIamCredentialsCustomEndpoint">reset_iam_credentials_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIamCustomEndpoint">reset_iam_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIamWorkforcePoolCustomEndpoint">reset_iam_workforce_pool_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIapCustomEndpoint">reset_iap_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetIdentityPlatformCustomEndpoint">reset_identity_platform_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetImpersonateServiceAccount">reset_impersonate_service_account</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetImpersonateServiceAccountDelegates">reset_impersonate_service_account_delegates</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetKmsCustomEndpoint">reset_kms_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetLoggingCustomEndpoint">reset_logging_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetMemcacheCustomEndpoint">reset_memcache_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetMlEngineCustomEndpoint">reset_ml_engine_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetMonitoringCustomEndpoint">reset_monitoring_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetNetworkConnectivityCustomEndpoint">reset_network_connectivity_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetNetworkManagementCustomEndpoint">reset_network_management_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetNetworkServicesCustomEndpoint">reset_network_services_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetNotebooksCustomEndpoint">reset_notebooks_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetOrgPolicyCustomEndpoint">reset_org_policy_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetOsConfigCustomEndpoint">reset_os_config_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetOsLoginCustomEndpoint">reset_os_login_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetPrivatecaCustomEndpoint">reset_privateca_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetProject">reset_project</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetPubsubCustomEndpoint">reset_pubsub_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetPubsubLiteCustomEndpoint">reset_pubsub_lite_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetRecaptchaEnterpriseCustomEndpoint">reset_recaptcha_enterprise_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetRedisCustomEndpoint">reset_redis_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetRegion">reset_region</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetRequestReason">reset_request_reason</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetRequestTimeout">reset_request_timeout</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetResourceManagerCustomEndpoint">reset_resource_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetResourceManagerV3CustomEndpoint">reset_resource_manager_v3_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetScopes">reset_scopes</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetSecretManagerCustomEndpoint">reset_secret_manager_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetSecurityCenterCustomEndpoint">reset_security_center_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetServiceManagementCustomEndpoint">reset_service_management_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetServiceNetworkingCustomEndpoint">reset_service_networking_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetServiceUsageCustomEndpoint">reset_service_usage_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetSourceRepoCustomEndpoint">reset_source_repo_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetSpannerCustomEndpoint">reset_spanner_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetSqlCustomEndpoint">reset_sql_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetStorageCustomEndpoint">reset_storage_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetStorageTransferCustomEndpoint">reset_storage_transfer_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetTagsCustomEndpoint">reset_tags_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetTagsLocationCustomEndpoint">reset_tags_location_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetTpuCustomEndpoint">reset_tpu_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetUserProjectOverride">reset_user_project_override</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetVertexAiCustomEndpoint">reset_vertex_ai_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetVpcAccessCustomEndpoint">reset_vpc_access_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetWorkflowsCustomEndpoint">reset_workflows_custom_endpoint</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.resetZone">reset_zone</a></code> | *No description.* |
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.provider.GoogleProvider.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+##### `add_override` <a name="add_override" id="@cdktf/provider-google.provider.GoogleProvider.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="@cdktf/provider-google.provider.GoogleProvider.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.provider.GoogleProvider.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `override_logical_id` <a name="override_logical_id" id="@cdktf/provider-google.provider.GoogleProvider.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="@cdktf/provider-google.provider.GoogleProvider.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `reset_override_logical_id` <a name="reset_override_logical_id" id="@cdktf/provider-google.provider.GoogleProvider.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_metadata` <a name="to_metadata" id="@cdktf/provider-google.provider.GoogleProvider.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+##### `to_terraform` <a name="to_terraform" id="@cdktf/provider-google.provider.GoogleProvider.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `reset_access_approval_custom_endpoint` <a name="reset_access_approval_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetAccessApprovalCustomEndpoint"></a>
+
+```python
+def reset_access_approval_custom_endpoint() -> None
+```
+
+##### `reset_access_context_manager_custom_endpoint` <a name="reset_access_context_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetAccessContextManagerCustomEndpoint"></a>
+
+```python
+def reset_access_context_manager_custom_endpoint() -> None
+```
+
+##### `reset_access_token` <a name="reset_access_token" id="@cdktf/provider-google.provider.GoogleProvider.resetAccessToken"></a>
+
+```python
+def reset_access_token() -> None
+```
+
+##### `reset_active_directory_custom_endpoint` <a name="reset_active_directory_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetActiveDirectoryCustomEndpoint"></a>
+
+```python
+def reset_active_directory_custom_endpoint() -> None
+```
+
+##### `reset_alias` <a name="reset_alias" id="@cdktf/provider-google.provider.GoogleProvider.resetAlias"></a>
+
+```python
+def reset_alias() -> None
+```
+
+##### `reset_alloydb_custom_endpoint` <a name="reset_alloydb_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetAlloydbCustomEndpoint"></a>
+
+```python
+def reset_alloydb_custom_endpoint() -> None
+```
+
+##### `reset_apigee_custom_endpoint` <a name="reset_apigee_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetApigeeCustomEndpoint"></a>
+
+```python
+def reset_apigee_custom_endpoint() -> None
+```
+
+##### `reset_apikeys_custom_endpoint` <a name="reset_apikeys_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetApikeysCustomEndpoint"></a>
+
+```python
+def reset_apikeys_custom_endpoint() -> None
+```
+
+##### `reset_app_engine_custom_endpoint` <a name="reset_app_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetAppEngineCustomEndpoint"></a>
+
+```python
+def reset_app_engine_custom_endpoint() -> None
+```
+
+##### `reset_artifact_registry_custom_endpoint` <a name="reset_artifact_registry_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetArtifactRegistryCustomEndpoint"></a>
+
+```python
+def reset_artifact_registry_custom_endpoint() -> None
+```
+
+##### `reset_assured_workloads_custom_endpoint` <a name="reset_assured_workloads_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetAssuredWorkloadsCustomEndpoint"></a>
+
+```python
+def reset_assured_workloads_custom_endpoint() -> None
+```
+
+##### `reset_batching` <a name="reset_batching" id="@cdktf/provider-google.provider.GoogleProvider.resetBatching"></a>
+
+```python
+def reset_batching() -> None
+```
+
+##### `reset_beyondcorp_custom_endpoint` <a name="reset_beyondcorp_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBeyondcorpCustomEndpoint"></a>
+
+```python
+def reset_beyondcorp_custom_endpoint() -> None
+```
+
+##### `reset_bigquery_analytics_hub_custom_endpoint` <a name="reset_bigquery_analytics_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigqueryAnalyticsHubCustomEndpoint"></a>
+
+```python
+def reset_bigquery_analytics_hub_custom_endpoint() -> None
+```
+
+##### `reset_bigquery_connection_custom_endpoint` <a name="reset_bigquery_connection_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigqueryConnectionCustomEndpoint"></a>
+
+```python
+def reset_bigquery_connection_custom_endpoint() -> None
+```
+
+##### `reset_big_query_custom_endpoint` <a name="reset_big_query_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigQueryCustomEndpoint"></a>
+
+```python
+def reset_big_query_custom_endpoint() -> None
+```
+
+##### `reset_bigquery_data_transfer_custom_endpoint` <a name="reset_bigquery_data_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigqueryDataTransferCustomEndpoint"></a>
+
+```python
+def reset_bigquery_data_transfer_custom_endpoint() -> None
+```
+
+##### `reset_bigquery_reservation_custom_endpoint` <a name="reset_bigquery_reservation_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigqueryReservationCustomEndpoint"></a>
+
+```python
+def reset_bigquery_reservation_custom_endpoint() -> None
+```
+
+##### `reset_bigtable_custom_endpoint` <a name="reset_bigtable_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBigtableCustomEndpoint"></a>
+
+```python
+def reset_bigtable_custom_endpoint() -> None
+```
+
+##### `reset_billing_custom_endpoint` <a name="reset_billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBillingCustomEndpoint"></a>
+
+```python
+def reset_billing_custom_endpoint() -> None
+```
+
+##### `reset_billing_project` <a name="reset_billing_project" id="@cdktf/provider-google.provider.GoogleProvider.resetBillingProject"></a>
+
+```python
+def reset_billing_project() -> None
+```
+
+##### `reset_binary_authorization_custom_endpoint` <a name="reset_binary_authorization_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetBinaryAuthorizationCustomEndpoint"></a>
+
+```python
+def reset_binary_authorization_custom_endpoint() -> None
+```
+
+##### `reset_certificate_manager_custom_endpoint` <a name="reset_certificate_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCertificateManagerCustomEndpoint"></a>
+
+```python
+def reset_certificate_manager_custom_endpoint() -> None
+```
+
+##### `reset_cloud_asset_custom_endpoint` <a name="reset_cloud_asset_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudAssetCustomEndpoint"></a>
+
+```python
+def reset_cloud_asset_custom_endpoint() -> None
+```
+
+##### `reset_cloud_billing_custom_endpoint` <a name="reset_cloud_billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudBillingCustomEndpoint"></a>
+
+```python
+def reset_cloud_billing_custom_endpoint() -> None
+```
+
+##### `reset_cloud_build_custom_endpoint` <a name="reset_cloud_build_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudBuildCustomEndpoint"></a>
+
+```python
+def reset_cloud_build_custom_endpoint() -> None
+```
+
+##### `reset_cloud_build_worker_pool_custom_endpoint` <a name="reset_cloud_build_worker_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudBuildWorkerPoolCustomEndpoint"></a>
+
+```python
+def reset_cloud_build_worker_pool_custom_endpoint() -> None
+```
+
+##### `reset_clouddeploy_custom_endpoint` <a name="reset_clouddeploy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetClouddeployCustomEndpoint"></a>
+
+```python
+def reset_clouddeploy_custom_endpoint() -> None
+```
+
+##### `reset_cloudfunctions2_custom_endpoint` <a name="reset_cloudfunctions2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudfunctions2CustomEndpoint"></a>
+
+```python
+def reset_cloudfunctions2_custom_endpoint() -> None
+```
+
+##### `reset_cloud_functions_custom_endpoint` <a name="reset_cloud_functions_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudFunctionsCustomEndpoint"></a>
+
+```python
+def reset_cloud_functions_custom_endpoint() -> None
+```
+
+##### `reset_cloud_identity_custom_endpoint` <a name="reset_cloud_identity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudIdentityCustomEndpoint"></a>
+
+```python
+def reset_cloud_identity_custom_endpoint() -> None
+```
+
+##### `reset_cloud_ids_custom_endpoint` <a name="reset_cloud_ids_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudIdsCustomEndpoint"></a>
+
+```python
+def reset_cloud_ids_custom_endpoint() -> None
+```
+
+##### `reset_cloud_iot_custom_endpoint` <a name="reset_cloud_iot_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudIotCustomEndpoint"></a>
+
+```python
+def reset_cloud_iot_custom_endpoint() -> None
+```
+
+##### `reset_cloud_resource_manager_custom_endpoint` <a name="reset_cloud_resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudResourceManagerCustomEndpoint"></a>
+
+```python
+def reset_cloud_resource_manager_custom_endpoint() -> None
+```
+
+##### `reset_cloud_run_custom_endpoint` <a name="reset_cloud_run_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudRunCustomEndpoint"></a>
+
+```python
+def reset_cloud_run_custom_endpoint() -> None
+```
+
+##### `reset_cloud_run_v2_custom_endpoint` <a name="reset_cloud_run_v2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudRunV2CustomEndpoint"></a>
+
+```python
+def reset_cloud_run_v2_custom_endpoint() -> None
+```
+
+##### `reset_cloud_scheduler_custom_endpoint` <a name="reset_cloud_scheduler_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudSchedulerCustomEndpoint"></a>
+
+```python
+def reset_cloud_scheduler_custom_endpoint() -> None
+```
+
+##### `reset_cloud_tasks_custom_endpoint` <a name="reset_cloud_tasks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetCloudTasksCustomEndpoint"></a>
+
+```python
+def reset_cloud_tasks_custom_endpoint() -> None
+```
+
+##### `reset_composer_custom_endpoint` <a name="reset_composer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetComposerCustomEndpoint"></a>
+
+```python
+def reset_composer_custom_endpoint() -> None
+```
+
+##### `reset_compute_custom_endpoint` <a name="reset_compute_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetComputeCustomEndpoint"></a>
+
+```python
+def reset_compute_custom_endpoint() -> None
+```
+
+##### `reset_container_analysis_custom_endpoint` <a name="reset_container_analysis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetContainerAnalysisCustomEndpoint"></a>
+
+```python
+def reset_container_analysis_custom_endpoint() -> None
+```
+
+##### `reset_container_attached_custom_endpoint` <a name="reset_container_attached_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetContainerAttachedCustomEndpoint"></a>
+
+```python
+def reset_container_attached_custom_endpoint() -> None
+```
+
+##### `reset_container_aws_custom_endpoint` <a name="reset_container_aws_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetContainerAwsCustomEndpoint"></a>
+
+```python
+def reset_container_aws_custom_endpoint() -> None
+```
+
+##### `reset_container_azure_custom_endpoint` <a name="reset_container_azure_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetContainerAzureCustomEndpoint"></a>
+
+```python
+def reset_container_azure_custom_endpoint() -> None
+```
+
+##### `reset_container_custom_endpoint` <a name="reset_container_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetContainerCustomEndpoint"></a>
+
+```python
+def reset_container_custom_endpoint() -> None
+```
+
+##### `reset_credentials` <a name="reset_credentials" id="@cdktf/provider-google.provider.GoogleProvider.resetCredentials"></a>
+
+```python
+def reset_credentials() -> None
+```
+
+##### `reset_data_catalog_custom_endpoint` <a name="reset_data_catalog_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataCatalogCustomEndpoint"></a>
+
+```python
+def reset_data_catalog_custom_endpoint() -> None
+```
+
+##### `reset_dataflow_custom_endpoint` <a name="reset_dataflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataflowCustomEndpoint"></a>
+
+```python
+def reset_dataflow_custom_endpoint() -> None
+```
+
+##### `reset_data_fusion_custom_endpoint` <a name="reset_data_fusion_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataFusionCustomEndpoint"></a>
+
+```python
+def reset_data_fusion_custom_endpoint() -> None
+```
+
+##### `reset_data_loss_prevention_custom_endpoint` <a name="reset_data_loss_prevention_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataLossPreventionCustomEndpoint"></a>
+
+```python
+def reset_data_loss_prevention_custom_endpoint() -> None
+```
+
+##### `reset_dataplex_custom_endpoint` <a name="reset_dataplex_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataplexCustomEndpoint"></a>
+
+```python
+def reset_dataplex_custom_endpoint() -> None
+```
+
+##### `reset_dataproc_custom_endpoint` <a name="reset_dataproc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataprocCustomEndpoint"></a>
+
+```python
+def reset_dataproc_custom_endpoint() -> None
+```
+
+##### `reset_dataproc_metastore_custom_endpoint` <a name="reset_dataproc_metastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDataprocMetastoreCustomEndpoint"></a>
+
+```python
+def reset_dataproc_metastore_custom_endpoint() -> None
+```
+
+##### `reset_datastore_custom_endpoint` <a name="reset_datastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDatastoreCustomEndpoint"></a>
+
+```python
+def reset_datastore_custom_endpoint() -> None
+```
+
+##### `reset_datastream_custom_endpoint` <a name="reset_datastream_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDatastreamCustomEndpoint"></a>
+
+```python
+def reset_datastream_custom_endpoint() -> None
+```
+
+##### `reset_deployment_manager_custom_endpoint` <a name="reset_deployment_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDeploymentManagerCustomEndpoint"></a>
+
+```python
+def reset_deployment_manager_custom_endpoint() -> None
+```
+
+##### `reset_dialogflow_custom_endpoint` <a name="reset_dialogflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDialogflowCustomEndpoint"></a>
+
+```python
+def reset_dialogflow_custom_endpoint() -> None
+```
+
+##### `reset_dialogflow_cx_custom_endpoint` <a name="reset_dialogflow_cx_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDialogflowCxCustomEndpoint"></a>
+
+```python
+def reset_dialogflow_cx_custom_endpoint() -> None
+```
+
+##### `reset_dns_custom_endpoint` <a name="reset_dns_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDnsCustomEndpoint"></a>
+
+```python
+def reset_dns_custom_endpoint() -> None
+```
+
+##### `reset_document_ai_custom_endpoint` <a name="reset_document_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetDocumentAiCustomEndpoint"></a>
+
+```python
+def reset_document_ai_custom_endpoint() -> None
+```
+
+##### `reset_essential_contacts_custom_endpoint` <a name="reset_essential_contacts_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetEssentialContactsCustomEndpoint"></a>
+
+```python
+def reset_essential_contacts_custom_endpoint() -> None
+```
+
+##### `reset_eventarc_custom_endpoint` <a name="reset_eventarc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetEventarcCustomEndpoint"></a>
+
+```python
+def reset_eventarc_custom_endpoint() -> None
+```
+
+##### `reset_filestore_custom_endpoint` <a name="reset_filestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetFilestoreCustomEndpoint"></a>
+
+```python
+def reset_filestore_custom_endpoint() -> None
+```
+
+##### `reset_firebaserules_custom_endpoint` <a name="reset_firebaserules_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetFirebaserulesCustomEndpoint"></a>
+
+```python
+def reset_firebaserules_custom_endpoint() -> None
+```
+
+##### `reset_firestore_custom_endpoint` <a name="reset_firestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetFirestoreCustomEndpoint"></a>
+
+```python
+def reset_firestore_custom_endpoint() -> None
+```
+
+##### `reset_game_services_custom_endpoint` <a name="reset_game_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetGameServicesCustomEndpoint"></a>
+
+```python
+def reset_game_services_custom_endpoint() -> None
+```
+
+##### `reset_gke_backup_custom_endpoint` <a name="reset_gke_backup_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetGkeBackupCustomEndpoint"></a>
+
+```python
+def reset_gke_backup_custom_endpoint() -> None
+```
+
+##### `reset_gke_hub_custom_endpoint` <a name="reset_gke_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetGkeHubCustomEndpoint"></a>
+
+```python
+def reset_gke_hub_custom_endpoint() -> None
+```
+
+##### `reset_healthcare_custom_endpoint` <a name="reset_healthcare_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetHealthcareCustomEndpoint"></a>
+
+```python
+def reset_healthcare_custom_endpoint() -> None
+```
+
+##### `reset_iam2_custom_endpoint` <a name="reset_iam2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIam2CustomEndpoint"></a>
+
+```python
+def reset_iam2_custom_endpoint() -> None
+```
+
+##### `reset_iam_beta_custom_endpoint` <a name="reset_iam_beta_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIamBetaCustomEndpoint"></a>
+
+```python
+def reset_iam_beta_custom_endpoint() -> None
+```
+
+##### `reset_iam_credentials_custom_endpoint` <a name="reset_iam_credentials_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIamCredentialsCustomEndpoint"></a>
+
+```python
+def reset_iam_credentials_custom_endpoint() -> None
+```
+
+##### `reset_iam_custom_endpoint` <a name="reset_iam_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIamCustomEndpoint"></a>
+
+```python
+def reset_iam_custom_endpoint() -> None
+```
+
+##### `reset_iam_workforce_pool_custom_endpoint` <a name="reset_iam_workforce_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIamWorkforcePoolCustomEndpoint"></a>
+
+```python
+def reset_iam_workforce_pool_custom_endpoint() -> None
+```
+
+##### `reset_iap_custom_endpoint` <a name="reset_iap_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIapCustomEndpoint"></a>
+
+```python
+def reset_iap_custom_endpoint() -> None
+```
+
+##### `reset_identity_platform_custom_endpoint` <a name="reset_identity_platform_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetIdentityPlatformCustomEndpoint"></a>
+
+```python
+def reset_identity_platform_custom_endpoint() -> None
+```
+
+##### `reset_impersonate_service_account` <a name="reset_impersonate_service_account" id="@cdktf/provider-google.provider.GoogleProvider.resetImpersonateServiceAccount"></a>
+
+```python
+def reset_impersonate_service_account() -> None
+```
+
+##### `reset_impersonate_service_account_delegates` <a name="reset_impersonate_service_account_delegates" id="@cdktf/provider-google.provider.GoogleProvider.resetImpersonateServiceAccountDelegates"></a>
+
+```python
+def reset_impersonate_service_account_delegates() -> None
+```
+
+##### `reset_kms_custom_endpoint` <a name="reset_kms_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetKmsCustomEndpoint"></a>
+
+```python
+def reset_kms_custom_endpoint() -> None
+```
+
+##### `reset_logging_custom_endpoint` <a name="reset_logging_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetLoggingCustomEndpoint"></a>
+
+```python
+def reset_logging_custom_endpoint() -> None
+```
+
+##### `reset_memcache_custom_endpoint` <a name="reset_memcache_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetMemcacheCustomEndpoint"></a>
+
+```python
+def reset_memcache_custom_endpoint() -> None
+```
+
+##### `reset_ml_engine_custom_endpoint` <a name="reset_ml_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetMlEngineCustomEndpoint"></a>
+
+```python
+def reset_ml_engine_custom_endpoint() -> None
+```
+
+##### `reset_monitoring_custom_endpoint` <a name="reset_monitoring_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetMonitoringCustomEndpoint"></a>
+
+```python
+def reset_monitoring_custom_endpoint() -> None
+```
+
+##### `reset_network_connectivity_custom_endpoint` <a name="reset_network_connectivity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetNetworkConnectivityCustomEndpoint"></a>
+
+```python
+def reset_network_connectivity_custom_endpoint() -> None
+```
+
+##### `reset_network_management_custom_endpoint` <a name="reset_network_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetNetworkManagementCustomEndpoint"></a>
+
+```python
+def reset_network_management_custom_endpoint() -> None
+```
+
+##### `reset_network_services_custom_endpoint` <a name="reset_network_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetNetworkServicesCustomEndpoint"></a>
+
+```python
+def reset_network_services_custom_endpoint() -> None
+```
+
+##### `reset_notebooks_custom_endpoint` <a name="reset_notebooks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetNotebooksCustomEndpoint"></a>
+
+```python
+def reset_notebooks_custom_endpoint() -> None
+```
+
+##### `reset_org_policy_custom_endpoint` <a name="reset_org_policy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetOrgPolicyCustomEndpoint"></a>
+
+```python
+def reset_org_policy_custom_endpoint() -> None
+```
+
+##### `reset_os_config_custom_endpoint` <a name="reset_os_config_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetOsConfigCustomEndpoint"></a>
+
+```python
+def reset_os_config_custom_endpoint() -> None
+```
+
+##### `reset_os_login_custom_endpoint` <a name="reset_os_login_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetOsLoginCustomEndpoint"></a>
+
+```python
+def reset_os_login_custom_endpoint() -> None
+```
+
+##### `reset_privateca_custom_endpoint` <a name="reset_privateca_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetPrivatecaCustomEndpoint"></a>
+
+```python
+def reset_privateca_custom_endpoint() -> None
+```
+
+##### `reset_project` <a name="reset_project" id="@cdktf/provider-google.provider.GoogleProvider.resetProject"></a>
+
+```python
+def reset_project() -> None
+```
+
+##### `reset_pubsub_custom_endpoint` <a name="reset_pubsub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetPubsubCustomEndpoint"></a>
+
+```python
+def reset_pubsub_custom_endpoint() -> None
+```
+
+##### `reset_pubsub_lite_custom_endpoint` <a name="reset_pubsub_lite_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetPubsubLiteCustomEndpoint"></a>
+
+```python
+def reset_pubsub_lite_custom_endpoint() -> None
+```
+
+##### `reset_recaptcha_enterprise_custom_endpoint` <a name="reset_recaptcha_enterprise_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetRecaptchaEnterpriseCustomEndpoint"></a>
+
+```python
+def reset_recaptcha_enterprise_custom_endpoint() -> None
+```
+
+##### `reset_redis_custom_endpoint` <a name="reset_redis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetRedisCustomEndpoint"></a>
+
+```python
+def reset_redis_custom_endpoint() -> None
+```
+
+##### `reset_region` <a name="reset_region" id="@cdktf/provider-google.provider.GoogleProvider.resetRegion"></a>
+
+```python
+def reset_region() -> None
+```
+
+##### `reset_request_reason` <a name="reset_request_reason" id="@cdktf/provider-google.provider.GoogleProvider.resetRequestReason"></a>
+
+```python
+def reset_request_reason() -> None
+```
+
+##### `reset_request_timeout` <a name="reset_request_timeout" id="@cdktf/provider-google.provider.GoogleProvider.resetRequestTimeout"></a>
+
+```python
+def reset_request_timeout() -> None
+```
+
+##### `reset_resource_manager_custom_endpoint` <a name="reset_resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetResourceManagerCustomEndpoint"></a>
+
+```python
+def reset_resource_manager_custom_endpoint() -> None
+```
+
+##### `reset_resource_manager_v3_custom_endpoint` <a name="reset_resource_manager_v3_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetResourceManagerV3CustomEndpoint"></a>
+
+```python
+def reset_resource_manager_v3_custom_endpoint() -> None
+```
+
+##### `reset_scopes` <a name="reset_scopes" id="@cdktf/provider-google.provider.GoogleProvider.resetScopes"></a>
+
+```python
+def reset_scopes() -> None
+```
+
+##### `reset_secret_manager_custom_endpoint` <a name="reset_secret_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetSecretManagerCustomEndpoint"></a>
+
+```python
+def reset_secret_manager_custom_endpoint() -> None
+```
+
+##### `reset_security_center_custom_endpoint` <a name="reset_security_center_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetSecurityCenterCustomEndpoint"></a>
+
+```python
+def reset_security_center_custom_endpoint() -> None
+```
+
+##### `reset_service_management_custom_endpoint` <a name="reset_service_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetServiceManagementCustomEndpoint"></a>
+
+```python
+def reset_service_management_custom_endpoint() -> None
+```
+
+##### `reset_service_networking_custom_endpoint` <a name="reset_service_networking_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetServiceNetworkingCustomEndpoint"></a>
+
+```python
+def reset_service_networking_custom_endpoint() -> None
+```
+
+##### `reset_service_usage_custom_endpoint` <a name="reset_service_usage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetServiceUsageCustomEndpoint"></a>
+
+```python
+def reset_service_usage_custom_endpoint() -> None
+```
+
+##### `reset_source_repo_custom_endpoint` <a name="reset_source_repo_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetSourceRepoCustomEndpoint"></a>
+
+```python
+def reset_source_repo_custom_endpoint() -> None
+```
+
+##### `reset_spanner_custom_endpoint` <a name="reset_spanner_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetSpannerCustomEndpoint"></a>
+
+```python
+def reset_spanner_custom_endpoint() -> None
+```
+
+##### `reset_sql_custom_endpoint` <a name="reset_sql_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetSqlCustomEndpoint"></a>
+
+```python
+def reset_sql_custom_endpoint() -> None
+```
+
+##### `reset_storage_custom_endpoint` <a name="reset_storage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetStorageCustomEndpoint"></a>
+
+```python
+def reset_storage_custom_endpoint() -> None
+```
+
+##### `reset_storage_transfer_custom_endpoint` <a name="reset_storage_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetStorageTransferCustomEndpoint"></a>
+
+```python
+def reset_storage_transfer_custom_endpoint() -> None
+```
+
+##### `reset_tags_custom_endpoint` <a name="reset_tags_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetTagsCustomEndpoint"></a>
+
+```python
+def reset_tags_custom_endpoint() -> None
+```
+
+##### `reset_tags_location_custom_endpoint` <a name="reset_tags_location_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetTagsLocationCustomEndpoint"></a>
+
+```python
+def reset_tags_location_custom_endpoint() -> None
+```
+
+##### `reset_tpu_custom_endpoint` <a name="reset_tpu_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetTpuCustomEndpoint"></a>
+
+```python
+def reset_tpu_custom_endpoint() -> None
+```
+
+##### `reset_user_project_override` <a name="reset_user_project_override" id="@cdktf/provider-google.provider.GoogleProvider.resetUserProjectOverride"></a>
+
+```python
+def reset_user_project_override() -> None
+```
+
+##### `reset_vertex_ai_custom_endpoint` <a name="reset_vertex_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetVertexAiCustomEndpoint"></a>
+
+```python
+def reset_vertex_ai_custom_endpoint() -> None
+```
+
+##### `reset_vpc_access_custom_endpoint` <a name="reset_vpc_access_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetVpcAccessCustomEndpoint"></a>
+
+```python
+def reset_vpc_access_custom_endpoint() -> None
+```
+
+##### `reset_workflows_custom_endpoint` <a name="reset_workflows_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.resetWorkflowsCustomEndpoint"></a>
+
+```python
+def reset_workflows_custom_endpoint() -> None
+```
+
+##### `reset_zone` <a name="reset_zone" id="@cdktf/provider-google.provider.GoogleProvider.resetZone"></a>
+
+```python
+def reset_zone() -> None
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.isTerraformElement">is_terraform_element</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.isTerraformProvider">is_terraform_provider</a></code> | *No description.* |
+
+---
+
+##### `is_construct` <a name="is_construct" id="@cdktf/provider-google.provider.GoogleProvider.isConstruct"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProvider.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.provider.GoogleProvider.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/provider-google.provider.GoogleProvider.isTerraformElement"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProvider.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.provider.GoogleProvider.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `is_terraform_provider` <a name="is_terraform_provider" id="@cdktf/provider-google.provider.GoogleProvider.isTerraformProvider"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProvider.is_terraform_provider(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-google.provider.GoogleProvider.isTerraformProvider.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.metaAttributes">meta_attributes</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.terraformProviderSource">terraform_provider_source</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alias">alias</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessApprovalCustomEndpointInput">access_approval_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpointInput">access_context_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessTokenInput">access_token_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpointInput">active_directory_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.aliasInput">alias_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpointInput">alloydb_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpointInput">apigee_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apikeysCustomEndpointInput">apikeys_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.appEngineCustomEndpointInput">app_engine_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpointInput">artifact_registry_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpointInput">assured_workloads_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batchingInput">batching_input</a></code> | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpointInput">beyondcorp_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpointInput">bigquery_analytics_hub_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryConnectionCustomEndpointInput">bigquery_connection_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigQueryCustomEndpointInput">big_query_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryDataTransferCustomEndpointInput">bigquery_data_transfer_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryReservationCustomEndpointInput">bigquery_reservation_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigtableCustomEndpointInput">bigtable_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.billingCustomEndpointInput">billing_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.billingProjectInput">billing_project_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.binaryAuthorizationCustomEndpointInput">binary_authorization_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.certificateManagerCustomEndpointInput">certificate_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudAssetCustomEndpointInput">cloud_asset_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBillingCustomEndpointInput">cloud_billing_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildCustomEndpointInput">cloud_build_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildWorkerPoolCustomEndpointInput">cloud_build_worker_pool_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.clouddeployCustomEndpointInput">clouddeploy_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudfunctions2CustomEndpointInput">cloudfunctions2_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudFunctionsCustomEndpointInput">cloud_functions_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIdentityCustomEndpointInput">cloud_identity_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIdsCustomEndpointInput">cloud_ids_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIotCustomEndpointInput">cloud_iot_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudResourceManagerCustomEndpointInput">cloud_resource_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudRunCustomEndpointInput">cloud_run_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudRunV2CustomEndpointInput">cloud_run_v2_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudSchedulerCustomEndpointInput">cloud_scheduler_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudTasksCustomEndpointInput">cloud_tasks_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.composerCustomEndpointInput">composer_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.computeCustomEndpointInput">compute_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAnalysisCustomEndpointInput">container_analysis_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAttachedCustomEndpointInput">container_attached_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAwsCustomEndpointInput">container_aws_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAzureCustomEndpointInput">container_azure_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerCustomEndpointInput">container_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.credentialsInput">credentials_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataCatalogCustomEndpointInput">data_catalog_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataflowCustomEndpointInput">dataflow_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataFusionCustomEndpointInput">data_fusion_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataLossPreventionCustomEndpointInput">data_loss_prevention_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataplexCustomEndpointInput">dataplex_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataprocCustomEndpointInput">dataproc_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataprocMetastoreCustomEndpointInput">dataproc_metastore_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.datastoreCustomEndpointInput">datastore_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.datastreamCustomEndpointInput">datastream_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.deploymentManagerCustomEndpointInput">deployment_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCustomEndpointInput">dialogflow_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCxCustomEndpointInput">dialogflow_cx_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dnsCustomEndpointInput">dns_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.documentAiCustomEndpointInput">document_ai_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpointInput">essential_contacts_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpointInput">eventarc_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpointInput">filestore_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaserulesCustomEndpointInput">firebaserules_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firestoreCustomEndpointInput">firestore_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gameServicesCustomEndpointInput">game_services_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gkeBackupCustomEndpointInput">gke_backup_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gkeHubCustomEndpointInput">gke_hub_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.healthcareCustomEndpointInput">healthcare_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iam2CustomEndpointInput">iam2_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamBetaCustomEndpointInput">iam_beta_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamCredentialsCustomEndpointInput">iam_credentials_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamCustomEndpointInput">iam_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamWorkforcePoolCustomEndpointInput">iam_workforce_pool_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iapCustomEndpointInput">iap_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.identityPlatformCustomEndpointInput">identity_platform_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountDelegatesInput">impersonate_service_account_delegates_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountInput">impersonate_service_account_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.kmsCustomEndpointInput">kms_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.loggingCustomEndpointInput">logging_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.memcacheCustomEndpointInput">memcache_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.mlEngineCustomEndpointInput">ml_engine_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.monitoringCustomEndpointInput">monitoring_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkConnectivityCustomEndpointInput">network_connectivity_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkManagementCustomEndpointInput">network_management_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkServicesCustomEndpointInput">network_services_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.notebooksCustomEndpointInput">notebooks_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.orgPolicyCustomEndpointInput">org_policy_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.osConfigCustomEndpointInput">os_config_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.osLoginCustomEndpointInput">os_login_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.privatecaCustomEndpointInput">privateca_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.pubsubCustomEndpointInput">pubsub_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.pubsubLiteCustomEndpointInput">pubsub_lite_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.recaptchaEnterpriseCustomEndpointInput">recaptcha_enterprise_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.redisCustomEndpointInput">redis_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.regionInput">region_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.requestReasonInput">request_reason_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.requestTimeoutInput">request_timeout_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerCustomEndpointInput">resource_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerV3CustomEndpointInput">resource_manager_v3_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.scopesInput">scopes_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.secretManagerCustomEndpointInput">secret_manager_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.securityCenterCustomEndpointInput">security_center_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceManagementCustomEndpointInput">service_management_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceNetworkingCustomEndpointInput">service_networking_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceUsageCustomEndpointInput">service_usage_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.sourceRepoCustomEndpointInput">source_repo_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.spannerCustomEndpointInput">spanner_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.sqlCustomEndpointInput">sql_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.storageCustomEndpointInput">storage_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.storageTransferCustomEndpointInput">storage_transfer_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tagsCustomEndpointInput">tags_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tagsLocationCustomEndpointInput">tags_location_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpointInput">tpu_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput">user_project_override_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpointInput">vertex_ai_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpointInput">vpc_access_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.workflowsCustomEndpointInput">workflows_custom_endpoint_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.zoneInput">zone_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessApprovalCustomEndpoint">access_approval_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.accessToken">access_token</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.apikeysCustomEndpoint">apikeys_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.appEngineCustomEndpoint">app_engine_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.batching">batching</a></code> | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryConnectionCustomEndpoint">bigquery_connection_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigQueryCustomEndpoint">big_query_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryDataTransferCustomEndpoint">bigquery_data_transfer_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigqueryReservationCustomEndpoint">bigquery_reservation_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.bigtableCustomEndpoint">bigtable_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.billingCustomEndpoint">billing_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.billingProject">billing_project</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.binaryAuthorizationCustomEndpoint">binary_authorization_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.certificateManagerCustomEndpoint">certificate_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudAssetCustomEndpoint">cloud_asset_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBillingCustomEndpoint">cloud_billing_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildCustomEndpoint">cloud_build_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildWorkerPoolCustomEndpoint">cloud_build_worker_pool_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.clouddeployCustomEndpoint">clouddeploy_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudfunctions2CustomEndpoint">cloudfunctions2_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudFunctionsCustomEndpoint">cloud_functions_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIdentityCustomEndpoint">cloud_identity_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIdsCustomEndpoint">cloud_ids_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudIotCustomEndpoint">cloud_iot_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudResourceManagerCustomEndpoint">cloud_resource_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudRunCustomEndpoint">cloud_run_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudRunV2CustomEndpoint">cloud_run_v2_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudSchedulerCustomEndpoint">cloud_scheduler_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.cloudTasksCustomEndpoint">cloud_tasks_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.composerCustomEndpoint">composer_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.computeCustomEndpoint">compute_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAnalysisCustomEndpoint">container_analysis_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAttachedCustomEndpoint">container_attached_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAwsCustomEndpoint">container_aws_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerAzureCustomEndpoint">container_azure_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.containerCustomEndpoint">container_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.credentials">credentials</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataCatalogCustomEndpoint">data_catalog_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataflowCustomEndpoint">dataflow_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataFusionCustomEndpoint">data_fusion_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataLossPreventionCustomEndpoint">data_loss_prevention_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataplexCustomEndpoint">dataplex_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataprocCustomEndpoint">dataproc_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dataprocMetastoreCustomEndpoint">dataproc_metastore_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.datastoreCustomEndpoint">datastore_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.datastreamCustomEndpoint">datastream_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.deploymentManagerCustomEndpoint">deployment_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCustomEndpoint">dialogflow_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCxCustomEndpoint">dialogflow_cx_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.dnsCustomEndpoint">dns_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.documentAiCustomEndpoint">document_ai_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firebaserulesCustomEndpoint">firebaserules_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.firestoreCustomEndpoint">firestore_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gameServicesCustomEndpoint">game_services_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gkeBackupCustomEndpoint">gke_backup_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.gkeHubCustomEndpoint">gke_hub_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.healthcareCustomEndpoint">healthcare_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iam2CustomEndpoint">iam2_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamBetaCustomEndpoint">iam_beta_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamCredentialsCustomEndpoint">iam_credentials_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamCustomEndpoint">iam_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iamWorkforcePoolCustomEndpoint">iam_workforce_pool_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.iapCustomEndpoint">iap_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.identityPlatformCustomEndpoint">identity_platform_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccount">impersonate_service_account</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountDelegates">impersonate_service_account_delegates</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.kmsCustomEndpoint">kms_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.loggingCustomEndpoint">logging_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.memcacheCustomEndpoint">memcache_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.mlEngineCustomEndpoint">ml_engine_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.monitoringCustomEndpoint">monitoring_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkConnectivityCustomEndpoint">network_connectivity_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkManagementCustomEndpoint">network_management_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.networkServicesCustomEndpoint">network_services_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.notebooksCustomEndpoint">notebooks_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.orgPolicyCustomEndpoint">org_policy_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.osConfigCustomEndpoint">os_config_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.osLoginCustomEndpoint">os_login_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.privatecaCustomEndpoint">privateca_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.project">project</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.pubsubCustomEndpoint">pubsub_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.pubsubLiteCustomEndpoint">pubsub_lite_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.recaptchaEnterpriseCustomEndpoint">recaptcha_enterprise_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.redisCustomEndpoint">redis_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.region">region</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.requestReason">request_reason</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.requestTimeout">request_timeout</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerCustomEndpoint">resource_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerV3CustomEndpoint">resource_manager_v3_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.secretManagerCustomEndpoint">secret_manager_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.securityCenterCustomEndpoint">security_center_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceManagementCustomEndpoint">service_management_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceNetworkingCustomEndpoint">service_networking_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.serviceUsageCustomEndpoint">service_usage_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.sourceRepoCustomEndpoint">source_repo_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.spannerCustomEndpoint">spanner_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.sqlCustomEndpoint">sql_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.storageCustomEndpoint">storage_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.storageTransferCustomEndpoint">storage_transfer_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tagsCustomEndpoint">tags_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tagsLocationCustomEndpoint">tags_location_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.workflowsCustomEndpoint">workflows_custom_endpoint</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.zone">zone</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="@cdktf/provider-google.provider.GoogleProvider.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="@cdktf/provider-google.provider.GoogleProvider.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.provider.GoogleProvider.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="@cdktf/provider-google.provider.GoogleProvider.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `meta_attributes`<sup>Required</sup> <a name="meta_attributes" id="@cdktf/provider-google.provider.GoogleProvider.property.metaAttributes"></a>
+
+```python
+meta_attributes: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping[typing.Any]
+
+---
+
+##### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="@cdktf/provider-google.provider.GoogleProvider.property.terraformResourceType"></a>
+
+```python
+terraform_resource_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="@cdktf/provider-google.provider.GoogleProvider.property.terraformGeneratorMetadata"></a>
+
+```python
+terraform_generator_metadata: TerraformProviderGeneratorMetadata
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `terraform_provider_source`<sup>Optional</sup> <a name="terraform_provider_source" id="@cdktf/provider-google.provider.GoogleProvider.property.terraformProviderSource"></a>
+
+```python
+terraform_provider_source: str
+```
+
+- *Type:* str
+
+---
+
+##### `alias`<sup>Optional</sup> <a name="alias" id="@cdktf/provider-google.provider.GoogleProvider.property.alias"></a>
+
+```python
+alias: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_approval_custom_endpoint_input`<sup>Optional</sup> <a name="access_approval_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.accessApprovalCustomEndpointInput"></a>
+
+```python
+access_approval_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_context_manager_custom_endpoint_input`<sup>Optional</sup> <a name="access_context_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpointInput"></a>
+
+```python
+access_context_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_token_input`<sup>Optional</sup> <a name="access_token_input" id="@cdktf/provider-google.provider.GoogleProvider.property.accessTokenInput"></a>
+
+```python
+access_token_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `active_directory_custom_endpoint_input`<sup>Optional</sup> <a name="active_directory_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpointInput"></a>
+
+```python
+active_directory_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `alias_input`<sup>Optional</sup> <a name="alias_input" id="@cdktf/provider-google.provider.GoogleProvider.property.aliasInput"></a>
+
+```python
+alias_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `alloydb_custom_endpoint_input`<sup>Optional</sup> <a name="alloydb_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpointInput"></a>
+
+```python
+alloydb_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `apigee_custom_endpoint_input`<sup>Optional</sup> <a name="apigee_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpointInput"></a>
+
+```python
+apigee_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `apikeys_custom_endpoint_input`<sup>Optional</sup> <a name="apikeys_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.apikeysCustomEndpointInput"></a>
+
+```python
+apikeys_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `app_engine_custom_endpoint_input`<sup>Optional</sup> <a name="app_engine_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.appEngineCustomEndpointInput"></a>
+
+```python
+app_engine_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `artifact_registry_custom_endpoint_input`<sup>Optional</sup> <a name="artifact_registry_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpointInput"></a>
+
+```python
+artifact_registry_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `assured_workloads_custom_endpoint_input`<sup>Optional</sup> <a name="assured_workloads_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpointInput"></a>
+
+```python
+assured_workloads_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `batching_input`<sup>Optional</sup> <a name="batching_input" id="@cdktf/provider-google.provider.GoogleProvider.property.batchingInput"></a>
+
+```python
+batching_input: GoogleProviderBatching
+```
+
+- *Type:* <a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>
+
+---
+
+##### `beyondcorp_custom_endpoint_input`<sup>Optional</sup> <a name="beyondcorp_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpointInput"></a>
+
+```python
+beyondcorp_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_analytics_hub_custom_endpoint_input`<sup>Optional</sup> <a name="bigquery_analytics_hub_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpointInput"></a>
+
+```python
+bigquery_analytics_hub_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_connection_custom_endpoint_input`<sup>Optional</sup> <a name="bigquery_connection_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryConnectionCustomEndpointInput"></a>
+
+```python
+bigquery_connection_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `big_query_custom_endpoint_input`<sup>Optional</sup> <a name="big_query_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigQueryCustomEndpointInput"></a>
+
+```python
+big_query_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_data_transfer_custom_endpoint_input`<sup>Optional</sup> <a name="bigquery_data_transfer_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryDataTransferCustomEndpointInput"></a>
+
+```python
+bigquery_data_transfer_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_reservation_custom_endpoint_input`<sup>Optional</sup> <a name="bigquery_reservation_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryReservationCustomEndpointInput"></a>
+
+```python
+bigquery_reservation_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigtable_custom_endpoint_input`<sup>Optional</sup> <a name="bigtable_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.bigtableCustomEndpointInput"></a>
+
+```python
+bigtable_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `billing_custom_endpoint_input`<sup>Optional</sup> <a name="billing_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.billingCustomEndpointInput"></a>
+
+```python
+billing_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `billing_project_input`<sup>Optional</sup> <a name="billing_project_input" id="@cdktf/provider-google.provider.GoogleProvider.property.billingProjectInput"></a>
+
+```python
+billing_project_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `binary_authorization_custom_endpoint_input`<sup>Optional</sup> <a name="binary_authorization_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.binaryAuthorizationCustomEndpointInput"></a>
+
+```python
+binary_authorization_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `certificate_manager_custom_endpoint_input`<sup>Optional</sup> <a name="certificate_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.certificateManagerCustomEndpointInput"></a>
+
+```python
+certificate_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_asset_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_asset_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudAssetCustomEndpointInput"></a>
+
+```python
+cloud_asset_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_billing_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_billing_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBillingCustomEndpointInput"></a>
+
+```python
+cloud_billing_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_build_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_build_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildCustomEndpointInput"></a>
+
+```python
+cloud_build_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_build_worker_pool_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_build_worker_pool_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildWorkerPoolCustomEndpointInput"></a>
+
+```python
+cloud_build_worker_pool_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `clouddeploy_custom_endpoint_input`<sup>Optional</sup> <a name="clouddeploy_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.clouddeployCustomEndpointInput"></a>
+
+```python
+clouddeploy_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloudfunctions2_custom_endpoint_input`<sup>Optional</sup> <a name="cloudfunctions2_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudfunctions2CustomEndpointInput"></a>
+
+```python
+cloudfunctions2_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_functions_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_functions_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudFunctionsCustomEndpointInput"></a>
+
+```python
+cloud_functions_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_identity_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_identity_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIdentityCustomEndpointInput"></a>
+
+```python
+cloud_identity_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_ids_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_ids_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIdsCustomEndpointInput"></a>
+
+```python
+cloud_ids_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_iot_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_iot_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIotCustomEndpointInput"></a>
+
+```python
+cloud_iot_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_resource_manager_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_resource_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudResourceManagerCustomEndpointInput"></a>
+
+```python
+cloud_resource_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_run_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_run_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudRunCustomEndpointInput"></a>
+
+```python
+cloud_run_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_run_v2_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_run_v2_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudRunV2CustomEndpointInput"></a>
+
+```python
+cloud_run_v2_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_scheduler_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_scheduler_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudSchedulerCustomEndpointInput"></a>
+
+```python
+cloud_scheduler_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_tasks_custom_endpoint_input`<sup>Optional</sup> <a name="cloud_tasks_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudTasksCustomEndpointInput"></a>
+
+```python
+cloud_tasks_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `composer_custom_endpoint_input`<sup>Optional</sup> <a name="composer_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.composerCustomEndpointInput"></a>
+
+```python
+composer_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `compute_custom_endpoint_input`<sup>Optional</sup> <a name="compute_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.computeCustomEndpointInput"></a>
+
+```python
+compute_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_analysis_custom_endpoint_input`<sup>Optional</sup> <a name="container_analysis_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAnalysisCustomEndpointInput"></a>
+
+```python
+container_analysis_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_attached_custom_endpoint_input`<sup>Optional</sup> <a name="container_attached_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAttachedCustomEndpointInput"></a>
+
+```python
+container_attached_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_aws_custom_endpoint_input`<sup>Optional</sup> <a name="container_aws_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAwsCustomEndpointInput"></a>
+
+```python
+container_aws_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_azure_custom_endpoint_input`<sup>Optional</sup> <a name="container_azure_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAzureCustomEndpointInput"></a>
+
+```python
+container_azure_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_custom_endpoint_input`<sup>Optional</sup> <a name="container_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.containerCustomEndpointInput"></a>
+
+```python
+container_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `credentials_input`<sup>Optional</sup> <a name="credentials_input" id="@cdktf/provider-google.provider.GoogleProvider.property.credentialsInput"></a>
+
+```python
+credentials_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_catalog_custom_endpoint_input`<sup>Optional</sup> <a name="data_catalog_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataCatalogCustomEndpointInput"></a>
+
+```python
+data_catalog_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataflow_custom_endpoint_input`<sup>Optional</sup> <a name="dataflow_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataflowCustomEndpointInput"></a>
+
+```python
+dataflow_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_fusion_custom_endpoint_input`<sup>Optional</sup> <a name="data_fusion_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataFusionCustomEndpointInput"></a>
+
+```python
+data_fusion_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_loss_prevention_custom_endpoint_input`<sup>Optional</sup> <a name="data_loss_prevention_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataLossPreventionCustomEndpointInput"></a>
+
+```python
+data_loss_prevention_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataplex_custom_endpoint_input`<sup>Optional</sup> <a name="dataplex_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataplexCustomEndpointInput"></a>
+
+```python
+dataplex_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataproc_custom_endpoint_input`<sup>Optional</sup> <a name="dataproc_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataprocCustomEndpointInput"></a>
+
+```python
+dataproc_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataproc_metastore_custom_endpoint_input`<sup>Optional</sup> <a name="dataproc_metastore_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dataprocMetastoreCustomEndpointInput"></a>
+
+```python
+dataproc_metastore_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `datastore_custom_endpoint_input`<sup>Optional</sup> <a name="datastore_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.datastoreCustomEndpointInput"></a>
+
+```python
+datastore_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `datastream_custom_endpoint_input`<sup>Optional</sup> <a name="datastream_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.datastreamCustomEndpointInput"></a>
+
+```python
+datastream_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `deployment_manager_custom_endpoint_input`<sup>Optional</sup> <a name="deployment_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.deploymentManagerCustomEndpointInput"></a>
+
+```python
+deployment_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dialogflow_custom_endpoint_input`<sup>Optional</sup> <a name="dialogflow_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCustomEndpointInput"></a>
+
+```python
+dialogflow_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dialogflow_cx_custom_endpoint_input`<sup>Optional</sup> <a name="dialogflow_cx_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCxCustomEndpointInput"></a>
+
+```python
+dialogflow_cx_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `dns_custom_endpoint_input`<sup>Optional</sup> <a name="dns_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.dnsCustomEndpointInput"></a>
+
+```python
+dns_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `document_ai_custom_endpoint_input`<sup>Optional</sup> <a name="document_ai_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.documentAiCustomEndpointInput"></a>
+
+```python
+document_ai_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `essential_contacts_custom_endpoint_input`<sup>Optional</sup> <a name="essential_contacts_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpointInput"></a>
+
+```python
+essential_contacts_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `eventarc_custom_endpoint_input`<sup>Optional</sup> <a name="eventarc_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpointInput"></a>
+
+```python
+eventarc_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `filestore_custom_endpoint_input`<sup>Optional</sup> <a name="filestore_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpointInput"></a>
+
+```python
+filestore_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `firebaserules_custom_endpoint_input`<sup>Optional</sup> <a name="firebaserules_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.firebaserulesCustomEndpointInput"></a>
+
+```python
+firebaserules_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `firestore_custom_endpoint_input`<sup>Optional</sup> <a name="firestore_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.firestoreCustomEndpointInput"></a>
+
+```python
+firestore_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `game_services_custom_endpoint_input`<sup>Optional</sup> <a name="game_services_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.gameServicesCustomEndpointInput"></a>
+
+```python
+game_services_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `gke_backup_custom_endpoint_input`<sup>Optional</sup> <a name="gke_backup_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.gkeBackupCustomEndpointInput"></a>
+
+```python
+gke_backup_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `gke_hub_custom_endpoint_input`<sup>Optional</sup> <a name="gke_hub_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.gkeHubCustomEndpointInput"></a>
+
+```python
+gke_hub_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `healthcare_custom_endpoint_input`<sup>Optional</sup> <a name="healthcare_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.healthcareCustomEndpointInput"></a>
+
+```python
+healthcare_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam2_custom_endpoint_input`<sup>Optional</sup> <a name="iam2_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iam2CustomEndpointInput"></a>
+
+```python
+iam2_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_beta_custom_endpoint_input`<sup>Optional</sup> <a name="iam_beta_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iamBetaCustomEndpointInput"></a>
+
+```python
+iam_beta_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_credentials_custom_endpoint_input`<sup>Optional</sup> <a name="iam_credentials_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iamCredentialsCustomEndpointInput"></a>
+
+```python
+iam_credentials_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_custom_endpoint_input`<sup>Optional</sup> <a name="iam_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iamCustomEndpointInput"></a>
+
+```python
+iam_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_workforce_pool_custom_endpoint_input`<sup>Optional</sup> <a name="iam_workforce_pool_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iamWorkforcePoolCustomEndpointInput"></a>
+
+```python
+iam_workforce_pool_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `iap_custom_endpoint_input`<sup>Optional</sup> <a name="iap_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.iapCustomEndpointInput"></a>
+
+```python
+iap_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `identity_platform_custom_endpoint_input`<sup>Optional</sup> <a name="identity_platform_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.identityPlatformCustomEndpointInput"></a>
+
+```python
+identity_platform_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `impersonate_service_account_delegates_input`<sup>Optional</sup> <a name="impersonate_service_account_delegates_input" id="@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountDelegatesInput"></a>
+
+```python
+impersonate_service_account_delegates_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `impersonate_service_account_input`<sup>Optional</sup> <a name="impersonate_service_account_input" id="@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountInput"></a>
+
+```python
+impersonate_service_account_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `kms_custom_endpoint_input`<sup>Optional</sup> <a name="kms_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.kmsCustomEndpointInput"></a>
+
+```python
+kms_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `logging_custom_endpoint_input`<sup>Optional</sup> <a name="logging_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.loggingCustomEndpointInput"></a>
+
+```python
+logging_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `memcache_custom_endpoint_input`<sup>Optional</sup> <a name="memcache_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.memcacheCustomEndpointInput"></a>
+
+```python
+memcache_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `ml_engine_custom_endpoint_input`<sup>Optional</sup> <a name="ml_engine_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.mlEngineCustomEndpointInput"></a>
+
+```python
+ml_engine_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `monitoring_custom_endpoint_input`<sup>Optional</sup> <a name="monitoring_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.monitoringCustomEndpointInput"></a>
+
+```python
+monitoring_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_connectivity_custom_endpoint_input`<sup>Optional</sup> <a name="network_connectivity_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.networkConnectivityCustomEndpointInput"></a>
+
+```python
+network_connectivity_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_management_custom_endpoint_input`<sup>Optional</sup> <a name="network_management_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.networkManagementCustomEndpointInput"></a>
+
+```python
+network_management_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_services_custom_endpoint_input`<sup>Optional</sup> <a name="network_services_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.networkServicesCustomEndpointInput"></a>
+
+```python
+network_services_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `notebooks_custom_endpoint_input`<sup>Optional</sup> <a name="notebooks_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.notebooksCustomEndpointInput"></a>
+
+```python
+notebooks_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `org_policy_custom_endpoint_input`<sup>Optional</sup> <a name="org_policy_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.orgPolicyCustomEndpointInput"></a>
+
+```python
+org_policy_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `os_config_custom_endpoint_input`<sup>Optional</sup> <a name="os_config_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.osConfigCustomEndpointInput"></a>
+
+```python
+os_config_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `os_login_custom_endpoint_input`<sup>Optional</sup> <a name="os_login_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.osLoginCustomEndpointInput"></a>
+
+```python
+os_login_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `privateca_custom_endpoint_input`<sup>Optional</sup> <a name="privateca_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.privatecaCustomEndpointInput"></a>
+
+```python
+privateca_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `project_input`<sup>Optional</sup> <a name="project_input" id="@cdktf/provider-google.provider.GoogleProvider.property.projectInput"></a>
+
+```python
+project_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `pubsub_custom_endpoint_input`<sup>Optional</sup> <a name="pubsub_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.pubsubCustomEndpointInput"></a>
+
+```python
+pubsub_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `pubsub_lite_custom_endpoint_input`<sup>Optional</sup> <a name="pubsub_lite_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.pubsubLiteCustomEndpointInput"></a>
+
+```python
+pubsub_lite_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `recaptcha_enterprise_custom_endpoint_input`<sup>Optional</sup> <a name="recaptcha_enterprise_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.recaptchaEnterpriseCustomEndpointInput"></a>
+
+```python
+recaptcha_enterprise_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `redis_custom_endpoint_input`<sup>Optional</sup> <a name="redis_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.redisCustomEndpointInput"></a>
+
+```python
+redis_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `region_input`<sup>Optional</sup> <a name="region_input" id="@cdktf/provider-google.provider.GoogleProvider.property.regionInput"></a>
+
+```python
+region_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `request_reason_input`<sup>Optional</sup> <a name="request_reason_input" id="@cdktf/provider-google.provider.GoogleProvider.property.requestReasonInput"></a>
+
+```python
+request_reason_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `request_timeout_input`<sup>Optional</sup> <a name="request_timeout_input" id="@cdktf/provider-google.provider.GoogleProvider.property.requestTimeoutInput"></a>
+
+```python
+request_timeout_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `resource_manager_custom_endpoint_input`<sup>Optional</sup> <a name="resource_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerCustomEndpointInput"></a>
+
+```python
+resource_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `resource_manager_v3_custom_endpoint_input`<sup>Optional</sup> <a name="resource_manager_v3_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerV3CustomEndpointInput"></a>
+
+```python
+resource_manager_v3_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `scopes_input`<sup>Optional</sup> <a name="scopes_input" id="@cdktf/provider-google.provider.GoogleProvider.property.scopesInput"></a>
+
+```python
+scopes_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `secret_manager_custom_endpoint_input`<sup>Optional</sup> <a name="secret_manager_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.secretManagerCustomEndpointInput"></a>
+
+```python
+secret_manager_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `security_center_custom_endpoint_input`<sup>Optional</sup> <a name="security_center_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.securityCenterCustomEndpointInput"></a>
+
+```python
+security_center_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_management_custom_endpoint_input`<sup>Optional</sup> <a name="service_management_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceManagementCustomEndpointInput"></a>
+
+```python
+service_management_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_networking_custom_endpoint_input`<sup>Optional</sup> <a name="service_networking_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceNetworkingCustomEndpointInput"></a>
+
+```python
+service_networking_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_usage_custom_endpoint_input`<sup>Optional</sup> <a name="service_usage_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceUsageCustomEndpointInput"></a>
+
+```python
+service_usage_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_repo_custom_endpoint_input`<sup>Optional</sup> <a name="source_repo_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.sourceRepoCustomEndpointInput"></a>
+
+```python
+source_repo_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `spanner_custom_endpoint_input`<sup>Optional</sup> <a name="spanner_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.spannerCustomEndpointInput"></a>
+
+```python
+spanner_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `sql_custom_endpoint_input`<sup>Optional</sup> <a name="sql_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.sqlCustomEndpointInput"></a>
+
+```python
+sql_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `storage_custom_endpoint_input`<sup>Optional</sup> <a name="storage_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.storageCustomEndpointInput"></a>
+
+```python
+storage_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `storage_transfer_custom_endpoint_input`<sup>Optional</sup> <a name="storage_transfer_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.storageTransferCustomEndpointInput"></a>
+
+```python
+storage_transfer_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `tags_custom_endpoint_input`<sup>Optional</sup> <a name="tags_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.tagsCustomEndpointInput"></a>
+
+```python
+tags_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `tags_location_custom_endpoint_input`<sup>Optional</sup> <a name="tags_location_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.tagsLocationCustomEndpointInput"></a>
+
+```python
+tags_location_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `tpu_custom_endpoint_input`<sup>Optional</sup> <a name="tpu_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpointInput"></a>
+
+```python
+tpu_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `user_project_override_input`<sup>Optional</sup> <a name="user_project_override_input" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverrideInput"></a>
+
+```python
+user_project_override_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
+##### `vertex_ai_custom_endpoint_input`<sup>Optional</sup> <a name="vertex_ai_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpointInput"></a>
+
+```python
+vertex_ai_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `vpc_access_custom_endpoint_input`<sup>Optional</sup> <a name="vpc_access_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpointInput"></a>
+
+```python
+vpc_access_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `workflows_custom_endpoint_input`<sup>Optional</sup> <a name="workflows_custom_endpoint_input" id="@cdktf/provider-google.provider.GoogleProvider.property.workflowsCustomEndpointInput"></a>
+
+```python
+workflows_custom_endpoint_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `zone_input`<sup>Optional</sup> <a name="zone_input" id="@cdktf/provider-google.provider.GoogleProvider.property.zoneInput"></a>
+
+```python
+zone_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_approval_custom_endpoint`<sup>Optional</sup> <a name="access_approval_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.accessApprovalCustomEndpoint"></a>
+
+```python
+access_approval_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_context_manager_custom_endpoint`<sup>Optional</sup> <a name="access_context_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.accessContextManagerCustomEndpoint"></a>
+
+```python
+access_context_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `access_token`<sup>Optional</sup> <a name="access_token" id="@cdktf/provider-google.provider.GoogleProvider.property.accessToken"></a>
+
+```python
+access_token: str
+```
+
+- *Type:* str
+
+---
+
+##### `active_directory_custom_endpoint`<sup>Optional</sup> <a name="active_directory_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.activeDirectoryCustomEndpoint"></a>
+
+```python
+active_directory_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `alloydb_custom_endpoint`<sup>Optional</sup> <a name="alloydb_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.alloydbCustomEndpoint"></a>
+
+```python
+alloydb_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `apigee_custom_endpoint`<sup>Optional</sup> <a name="apigee_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.apigeeCustomEndpoint"></a>
+
+```python
+apigee_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `apikeys_custom_endpoint`<sup>Optional</sup> <a name="apikeys_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.apikeysCustomEndpoint"></a>
+
+```python
+apikeys_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `app_engine_custom_endpoint`<sup>Optional</sup> <a name="app_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.appEngineCustomEndpoint"></a>
+
+```python
+app_engine_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `artifact_registry_custom_endpoint`<sup>Optional</sup> <a name="artifact_registry_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.artifactRegistryCustomEndpoint"></a>
+
+```python
+artifact_registry_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `assured_workloads_custom_endpoint`<sup>Optional</sup> <a name="assured_workloads_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.assuredWorkloadsCustomEndpoint"></a>
+
+```python
+assured_workloads_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProvider.property.batching"></a>
+
+```python
+batching: GoogleProviderBatching
+```
+
+- *Type:* <a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>
+
+---
+
+##### `beyondcorp_custom_endpoint`<sup>Optional</sup> <a name="beyondcorp_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.beyondcorpCustomEndpoint"></a>
+
+```python
+beyondcorp_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_analytics_hub_custom_endpoint`<sup>Optional</sup> <a name="bigquery_analytics_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryAnalyticsHubCustomEndpoint"></a>
+
+```python
+bigquery_analytics_hub_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_connection_custom_endpoint`<sup>Optional</sup> <a name="bigquery_connection_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryConnectionCustomEndpoint"></a>
+
+```python
+bigquery_connection_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `big_query_custom_endpoint`<sup>Optional</sup> <a name="big_query_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigQueryCustomEndpoint"></a>
+
+```python
+big_query_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_data_transfer_custom_endpoint`<sup>Optional</sup> <a name="bigquery_data_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryDataTransferCustomEndpoint"></a>
+
+```python
+bigquery_data_transfer_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigquery_reservation_custom_endpoint`<sup>Optional</sup> <a name="bigquery_reservation_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigqueryReservationCustomEndpoint"></a>
+
+```python
+bigquery_reservation_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `bigtable_custom_endpoint`<sup>Optional</sup> <a name="bigtable_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.bigtableCustomEndpoint"></a>
+
+```python
+bigtable_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `billing_custom_endpoint`<sup>Optional</sup> <a name="billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.billingCustomEndpoint"></a>
+
+```python
+billing_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `billing_project`<sup>Optional</sup> <a name="billing_project" id="@cdktf/provider-google.provider.GoogleProvider.property.billingProject"></a>
+
+```python
+billing_project: str
+```
+
+- *Type:* str
+
+---
+
+##### `binary_authorization_custom_endpoint`<sup>Optional</sup> <a name="binary_authorization_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.binaryAuthorizationCustomEndpoint"></a>
+
+```python
+binary_authorization_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `certificate_manager_custom_endpoint`<sup>Optional</sup> <a name="certificate_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.certificateManagerCustomEndpoint"></a>
+
+```python
+certificate_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_asset_custom_endpoint`<sup>Optional</sup> <a name="cloud_asset_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudAssetCustomEndpoint"></a>
+
+```python
+cloud_asset_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_billing_custom_endpoint`<sup>Optional</sup> <a name="cloud_billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBillingCustomEndpoint"></a>
+
+```python
+cloud_billing_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_build_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildCustomEndpoint"></a>
+
+```python
+cloud_build_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_build_worker_pool_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_worker_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudBuildWorkerPoolCustomEndpoint"></a>
+
+```python
+cloud_build_worker_pool_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `clouddeploy_custom_endpoint`<sup>Optional</sup> <a name="clouddeploy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.clouddeployCustomEndpoint"></a>
+
+```python
+clouddeploy_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloudfunctions2_custom_endpoint`<sup>Optional</sup> <a name="cloudfunctions2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudfunctions2CustomEndpoint"></a>
+
+```python
+cloudfunctions2_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_functions_custom_endpoint`<sup>Optional</sup> <a name="cloud_functions_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudFunctionsCustomEndpoint"></a>
+
+```python
+cloud_functions_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_identity_custom_endpoint`<sup>Optional</sup> <a name="cloud_identity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIdentityCustomEndpoint"></a>
+
+```python
+cloud_identity_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_ids_custom_endpoint`<sup>Optional</sup> <a name="cloud_ids_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIdsCustomEndpoint"></a>
+
+```python
+cloud_ids_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_iot_custom_endpoint`<sup>Optional</sup> <a name="cloud_iot_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudIotCustomEndpoint"></a>
+
+```python
+cloud_iot_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_resource_manager_custom_endpoint`<sup>Optional</sup> <a name="cloud_resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudResourceManagerCustomEndpoint"></a>
+
+```python
+cloud_resource_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_run_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudRunCustomEndpoint"></a>
+
+```python
+cloud_run_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_run_v2_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_v2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudRunV2CustomEndpoint"></a>
+
+```python
+cloud_run_v2_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_scheduler_custom_endpoint`<sup>Optional</sup> <a name="cloud_scheduler_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudSchedulerCustomEndpoint"></a>
+
+```python
+cloud_scheduler_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `cloud_tasks_custom_endpoint`<sup>Optional</sup> <a name="cloud_tasks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.cloudTasksCustomEndpoint"></a>
+
+```python
+cloud_tasks_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `composer_custom_endpoint`<sup>Optional</sup> <a name="composer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.composerCustomEndpoint"></a>
+
+```python
+composer_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `compute_custom_endpoint`<sup>Optional</sup> <a name="compute_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.computeCustomEndpoint"></a>
+
+```python
+compute_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_analysis_custom_endpoint`<sup>Optional</sup> <a name="container_analysis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAnalysisCustomEndpoint"></a>
+
+```python
+container_analysis_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_attached_custom_endpoint`<sup>Optional</sup> <a name="container_attached_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAttachedCustomEndpoint"></a>
+
+```python
+container_attached_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_aws_custom_endpoint`<sup>Optional</sup> <a name="container_aws_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAwsCustomEndpoint"></a>
+
+```python
+container_aws_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_azure_custom_endpoint`<sup>Optional</sup> <a name="container_azure_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.containerAzureCustomEndpoint"></a>
+
+```python
+container_azure_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `container_custom_endpoint`<sup>Optional</sup> <a name="container_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.containerCustomEndpoint"></a>
+
+```python
+container_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `credentials`<sup>Optional</sup> <a name="credentials" id="@cdktf/provider-google.provider.GoogleProvider.property.credentials"></a>
+
+```python
+credentials: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_catalog_custom_endpoint`<sup>Optional</sup> <a name="data_catalog_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataCatalogCustomEndpoint"></a>
+
+```python
+data_catalog_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataflow_custom_endpoint`<sup>Optional</sup> <a name="dataflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataflowCustomEndpoint"></a>
+
+```python
+dataflow_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_fusion_custom_endpoint`<sup>Optional</sup> <a name="data_fusion_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataFusionCustomEndpoint"></a>
+
+```python
+data_fusion_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `data_loss_prevention_custom_endpoint`<sup>Optional</sup> <a name="data_loss_prevention_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataLossPreventionCustomEndpoint"></a>
+
+```python
+data_loss_prevention_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataplex_custom_endpoint`<sup>Optional</sup> <a name="dataplex_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataplexCustomEndpoint"></a>
+
+```python
+dataplex_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataproc_custom_endpoint`<sup>Optional</sup> <a name="dataproc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataprocCustomEndpoint"></a>
+
+```python
+dataproc_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dataproc_metastore_custom_endpoint`<sup>Optional</sup> <a name="dataproc_metastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dataprocMetastoreCustomEndpoint"></a>
+
+```python
+dataproc_metastore_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `datastore_custom_endpoint`<sup>Optional</sup> <a name="datastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.datastoreCustomEndpoint"></a>
+
+```python
+datastore_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `datastream_custom_endpoint`<sup>Optional</sup> <a name="datastream_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.datastreamCustomEndpoint"></a>
+
+```python
+datastream_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `deployment_manager_custom_endpoint`<sup>Optional</sup> <a name="deployment_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.deploymentManagerCustomEndpoint"></a>
+
+```python
+deployment_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dialogflow_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCustomEndpoint"></a>
+
+```python
+dialogflow_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dialogflow_cx_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_cx_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dialogflowCxCustomEndpoint"></a>
+
+```python
+dialogflow_cx_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `dns_custom_endpoint`<sup>Optional</sup> <a name="dns_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.dnsCustomEndpoint"></a>
+
+```python
+dns_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `document_ai_custom_endpoint`<sup>Optional</sup> <a name="document_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.documentAiCustomEndpoint"></a>
+
+```python
+document_ai_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `essential_contacts_custom_endpoint`<sup>Optional</sup> <a name="essential_contacts_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.essentialContactsCustomEndpoint"></a>
+
+```python
+essential_contacts_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `eventarc_custom_endpoint`<sup>Optional</sup> <a name="eventarc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.eventarcCustomEndpoint"></a>
+
+```python
+eventarc_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `filestore_custom_endpoint`<sup>Optional</sup> <a name="filestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.filestoreCustomEndpoint"></a>
+
+```python
+filestore_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `firebaserules_custom_endpoint`<sup>Optional</sup> <a name="firebaserules_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.firebaserulesCustomEndpoint"></a>
+
+```python
+firebaserules_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `firestore_custom_endpoint`<sup>Optional</sup> <a name="firestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.firestoreCustomEndpoint"></a>
+
+```python
+firestore_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `game_services_custom_endpoint`<sup>Optional</sup> <a name="game_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.gameServicesCustomEndpoint"></a>
+
+```python
+game_services_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `gke_backup_custom_endpoint`<sup>Optional</sup> <a name="gke_backup_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.gkeBackupCustomEndpoint"></a>
+
+```python
+gke_backup_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `gke_hub_custom_endpoint`<sup>Optional</sup> <a name="gke_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.gkeHubCustomEndpoint"></a>
+
+```python
+gke_hub_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `healthcare_custom_endpoint`<sup>Optional</sup> <a name="healthcare_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.healthcareCustomEndpoint"></a>
+
+```python
+healthcare_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam2_custom_endpoint`<sup>Optional</sup> <a name="iam2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iam2CustomEndpoint"></a>
+
+```python
+iam2_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_beta_custom_endpoint`<sup>Optional</sup> <a name="iam_beta_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iamBetaCustomEndpoint"></a>
+
+```python
+iam_beta_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_credentials_custom_endpoint`<sup>Optional</sup> <a name="iam_credentials_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iamCredentialsCustomEndpoint"></a>
+
+```python
+iam_credentials_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_custom_endpoint`<sup>Optional</sup> <a name="iam_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iamCustomEndpoint"></a>
+
+```python
+iam_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iam_workforce_pool_custom_endpoint`<sup>Optional</sup> <a name="iam_workforce_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iamWorkforcePoolCustomEndpoint"></a>
+
+```python
+iam_workforce_pool_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `iap_custom_endpoint`<sup>Optional</sup> <a name="iap_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.iapCustomEndpoint"></a>
+
+```python
+iap_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `identity_platform_custom_endpoint`<sup>Optional</sup> <a name="identity_platform_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.identityPlatformCustomEndpoint"></a>
+
+```python
+identity_platform_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `impersonate_service_account`<sup>Optional</sup> <a name="impersonate_service_account" id="@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccount"></a>
+
+```python
+impersonate_service_account: str
+```
+
+- *Type:* str
+
+---
+
+##### `impersonate_service_account_delegates`<sup>Optional</sup> <a name="impersonate_service_account_delegates" id="@cdktf/provider-google.provider.GoogleProvider.property.impersonateServiceAccountDelegates"></a>
+
+```python
+impersonate_service_account_delegates: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `kms_custom_endpoint`<sup>Optional</sup> <a name="kms_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.kmsCustomEndpoint"></a>
+
+```python
+kms_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `logging_custom_endpoint`<sup>Optional</sup> <a name="logging_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.loggingCustomEndpoint"></a>
+
+```python
+logging_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `memcache_custom_endpoint`<sup>Optional</sup> <a name="memcache_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.memcacheCustomEndpoint"></a>
+
+```python
+memcache_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `ml_engine_custom_endpoint`<sup>Optional</sup> <a name="ml_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.mlEngineCustomEndpoint"></a>
+
+```python
+ml_engine_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `monitoring_custom_endpoint`<sup>Optional</sup> <a name="monitoring_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.monitoringCustomEndpoint"></a>
+
+```python
+monitoring_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_connectivity_custom_endpoint`<sup>Optional</sup> <a name="network_connectivity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.networkConnectivityCustomEndpoint"></a>
+
+```python
+network_connectivity_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_management_custom_endpoint`<sup>Optional</sup> <a name="network_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.networkManagementCustomEndpoint"></a>
+
+```python
+network_management_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `network_services_custom_endpoint`<sup>Optional</sup> <a name="network_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.networkServicesCustomEndpoint"></a>
+
+```python
+network_services_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `notebooks_custom_endpoint`<sup>Optional</sup> <a name="notebooks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.notebooksCustomEndpoint"></a>
+
+```python
+notebooks_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `org_policy_custom_endpoint`<sup>Optional</sup> <a name="org_policy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.orgPolicyCustomEndpoint"></a>
+
+```python
+org_policy_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `os_config_custom_endpoint`<sup>Optional</sup> <a name="os_config_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.osConfigCustomEndpoint"></a>
+
+```python
+os_config_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `os_login_custom_endpoint`<sup>Optional</sup> <a name="os_login_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.osLoginCustomEndpoint"></a>
+
+```python
+os_login_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `privateca_custom_endpoint`<sup>Optional</sup> <a name="privateca_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.privatecaCustomEndpoint"></a>
+
+```python
+privateca_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `project`<sup>Optional</sup> <a name="project" id="@cdktf/provider-google.provider.GoogleProvider.property.project"></a>
+
+```python
+project: str
+```
+
+- *Type:* str
+
+---
+
+##### `pubsub_custom_endpoint`<sup>Optional</sup> <a name="pubsub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.pubsubCustomEndpoint"></a>
+
+```python
+pubsub_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `pubsub_lite_custom_endpoint`<sup>Optional</sup> <a name="pubsub_lite_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.pubsubLiteCustomEndpoint"></a>
+
+```python
+pubsub_lite_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `recaptcha_enterprise_custom_endpoint`<sup>Optional</sup> <a name="recaptcha_enterprise_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.recaptchaEnterpriseCustomEndpoint"></a>
+
+```python
+recaptcha_enterprise_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `redis_custom_endpoint`<sup>Optional</sup> <a name="redis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.redisCustomEndpoint"></a>
+
+```python
+redis_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `region`<sup>Optional</sup> <a name="region" id="@cdktf/provider-google.provider.GoogleProvider.property.region"></a>
+
+```python
+region: str
+```
+
+- *Type:* str
+
+---
+
+##### `request_reason`<sup>Optional</sup> <a name="request_reason" id="@cdktf/provider-google.provider.GoogleProvider.property.requestReason"></a>
+
+```python
+request_reason: str
+```
+
+- *Type:* str
+
+---
+
+##### `request_timeout`<sup>Optional</sup> <a name="request_timeout" id="@cdktf/provider-google.provider.GoogleProvider.property.requestTimeout"></a>
+
+```python
+request_timeout: str
+```
+
+- *Type:* str
+
+---
+
+##### `resource_manager_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerCustomEndpoint"></a>
+
+```python
+resource_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `resource_manager_v3_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_v3_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.resourceManagerV3CustomEndpoint"></a>
+
+```python
+resource_manager_v3_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `scopes`<sup>Optional</sup> <a name="scopes" id="@cdktf/provider-google.provider.GoogleProvider.property.scopes"></a>
+
+```python
+scopes: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `secret_manager_custom_endpoint`<sup>Optional</sup> <a name="secret_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.secretManagerCustomEndpoint"></a>
+
+```python
+secret_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `security_center_custom_endpoint`<sup>Optional</sup> <a name="security_center_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.securityCenterCustomEndpoint"></a>
+
+```python
+security_center_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_management_custom_endpoint`<sup>Optional</sup> <a name="service_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceManagementCustomEndpoint"></a>
+
+```python
+service_management_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_networking_custom_endpoint`<sup>Optional</sup> <a name="service_networking_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceNetworkingCustomEndpoint"></a>
+
+```python
+service_networking_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `service_usage_custom_endpoint`<sup>Optional</sup> <a name="service_usage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.serviceUsageCustomEndpoint"></a>
+
+```python
+service_usage_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_repo_custom_endpoint`<sup>Optional</sup> <a name="source_repo_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.sourceRepoCustomEndpoint"></a>
+
+```python
+source_repo_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `spanner_custom_endpoint`<sup>Optional</sup> <a name="spanner_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.spannerCustomEndpoint"></a>
+
+```python
+spanner_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `sql_custom_endpoint`<sup>Optional</sup> <a name="sql_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.sqlCustomEndpoint"></a>
+
+```python
+sql_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `storage_custom_endpoint`<sup>Optional</sup> <a name="storage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.storageCustomEndpoint"></a>
+
+```python
+storage_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `storage_transfer_custom_endpoint`<sup>Optional</sup> <a name="storage_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.storageTransferCustomEndpoint"></a>
+
+```python
+storage_transfer_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `tags_custom_endpoint`<sup>Optional</sup> <a name="tags_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.tagsCustomEndpoint"></a>
+
+```python
+tags_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `tags_location_custom_endpoint`<sup>Optional</sup> <a name="tags_location_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.tagsLocationCustomEndpoint"></a>
+
+```python
+tags_location_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `tpu_custom_endpoint`<sup>Optional</sup> <a name="tpu_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.tpuCustomEndpoint"></a>
+
+```python
+tpu_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProvider.property.userProjectOverride"></a>
+
+```python
+user_project_override: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
+##### `vertex_ai_custom_endpoint`<sup>Optional</sup> <a name="vertex_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.vertexAiCustomEndpoint"></a>
+
+```python
+vertex_ai_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `vpc_access_custom_endpoint`<sup>Optional</sup> <a name="vpc_access_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.vpcAccessCustomEndpoint"></a>
+
+```python
+vpc_access_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `workflows_custom_endpoint`<sup>Optional</sup> <a name="workflows_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProvider.property.workflowsCustomEndpoint"></a>
+
+```python
+workflows_custom_endpoint: str
+```
+
+- *Type:* str
+
+---
+
+##### `zone`<sup>Optional</sup> <a name="zone" id="@cdktf/provider-google.provider.GoogleProvider.property.zone"></a>
+
+```python
+zone: str
+```
+
+- *Type:* str
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProvider.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="@cdktf/provider-google.provider.GoogleProvider.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### GoogleProviderBatching <a name="GoogleProviderBatching" id="@cdktf/provider-google.provider.GoogleProviderBatching"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.provider.GoogleProviderBatching.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProviderBatching(
+  enable_batching: typing.Union[bool, IResolvable] = None,
+  send_after: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching">enable_batching</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#enable_batching GoogleProvider#enable_batching}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching.property.sendAfter">send_after</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#send_after GoogleProvider#send_after}. |
+
+---
+
+##### `enable_batching`<sup>Optional</sup> <a name="enable_batching" id="@cdktf/provider-google.provider.GoogleProviderBatching.property.enableBatching"></a>
+
+```python
+enable_batching: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#enable_batching GoogleProvider#enable_batching}.
+
+---
+
+##### `send_after`<sup>Optional</sup> <a name="send_after" id="@cdktf/provider-google.provider.GoogleProviderBatching.property.sendAfter"></a>
+
+```python
+send_after: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#send_after GoogleProvider#send_after}.
+
+---
+
+### GoogleProviderConfig <a name="GoogleProviderConfig" id="@cdktf/provider-google.provider.GoogleProviderConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.provider.GoogleProviderConfig.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import provider
+
+provider.GoogleProviderConfig(
+  access_approval_custom_endpoint: str = None,
+  access_context_manager_custom_endpoint: str = None,
+  access_token: str = None,
+  active_directory_custom_endpoint: str = None,
+  alias: str = None,
+  alloydb_custom_endpoint: str = None,
+  apigee_custom_endpoint: str = None,
+  apikeys_custom_endpoint: str = None,
+  app_engine_custom_endpoint: str = None,
+  artifact_registry_custom_endpoint: str = None,
+  assured_workloads_custom_endpoint: str = None,
+  batching: GoogleProviderBatching = None,
+  beyondcorp_custom_endpoint: str = None,
+  bigquery_analytics_hub_custom_endpoint: str = None,
+  bigquery_connection_custom_endpoint: str = None,
+  big_query_custom_endpoint: str = None,
+  bigquery_data_transfer_custom_endpoint: str = None,
+  bigquery_reservation_custom_endpoint: str = None,
+  bigtable_custom_endpoint: str = None,
+  billing_custom_endpoint: str = None,
+  billing_project: str = None,
+  binary_authorization_custom_endpoint: str = None,
+  certificate_manager_custom_endpoint: str = None,
+  cloud_asset_custom_endpoint: str = None,
+  cloud_billing_custom_endpoint: str = None,
+  cloud_build_custom_endpoint: str = None,
+  cloud_build_worker_pool_custom_endpoint: str = None,
+  clouddeploy_custom_endpoint: str = None,
+  cloudfunctions2_custom_endpoint: str = None,
+  cloud_functions_custom_endpoint: str = None,
+  cloud_identity_custom_endpoint: str = None,
+  cloud_ids_custom_endpoint: str = None,
+  cloud_iot_custom_endpoint: str = None,
+  cloud_resource_manager_custom_endpoint: str = None,
+  cloud_run_custom_endpoint: str = None,
+  cloud_run_v2_custom_endpoint: str = None,
+  cloud_scheduler_custom_endpoint: str = None,
+  cloud_tasks_custom_endpoint: str = None,
+  composer_custom_endpoint: str = None,
+  compute_custom_endpoint: str = None,
+  container_analysis_custom_endpoint: str = None,
+  container_attached_custom_endpoint: str = None,
+  container_aws_custom_endpoint: str = None,
+  container_azure_custom_endpoint: str = None,
+  container_custom_endpoint: str = None,
+  credentials: str = None,
+  data_catalog_custom_endpoint: str = None,
+  dataflow_custom_endpoint: str = None,
+  data_fusion_custom_endpoint: str = None,
+  data_loss_prevention_custom_endpoint: str = None,
+  dataplex_custom_endpoint: str = None,
+  dataproc_custom_endpoint: str = None,
+  dataproc_metastore_custom_endpoint: str = None,
+  datastore_custom_endpoint: str = None,
+  datastream_custom_endpoint: str = None,
+  deployment_manager_custom_endpoint: str = None,
+  dialogflow_custom_endpoint: str = None,
+  dialogflow_cx_custom_endpoint: str = None,
+  dns_custom_endpoint: str = None,
+  document_ai_custom_endpoint: str = None,
+  essential_contacts_custom_endpoint: str = None,
+  eventarc_custom_endpoint: str = None,
+  filestore_custom_endpoint: str = None,
+  firebaserules_custom_endpoint: str = None,
+  firestore_custom_endpoint: str = None,
+  game_services_custom_endpoint: str = None,
+  gke_backup_custom_endpoint: str = None,
+  gke_hub_custom_endpoint: str = None,
+  healthcare_custom_endpoint: str = None,
+  iam2_custom_endpoint: str = None,
+  iam_beta_custom_endpoint: str = None,
+  iam_credentials_custom_endpoint: str = None,
+  iam_custom_endpoint: str = None,
+  iam_workforce_pool_custom_endpoint: str = None,
+  iap_custom_endpoint: str = None,
+  identity_platform_custom_endpoint: str = None,
+  impersonate_service_account: str = None,
+  impersonate_service_account_delegates: typing.List[str] = None,
+  kms_custom_endpoint: str = None,
+  logging_custom_endpoint: str = None,
+  memcache_custom_endpoint: str = None,
+  ml_engine_custom_endpoint: str = None,
+  monitoring_custom_endpoint: str = None,
+  network_connectivity_custom_endpoint: str = None,
+  network_management_custom_endpoint: str = None,
+  network_services_custom_endpoint: str = None,
+  notebooks_custom_endpoint: str = None,
+  org_policy_custom_endpoint: str = None,
+  os_config_custom_endpoint: str = None,
+  os_login_custom_endpoint: str = None,
+  privateca_custom_endpoint: str = None,
+  project: str = None,
+  pubsub_custom_endpoint: str = None,
+  pubsub_lite_custom_endpoint: str = None,
+  recaptcha_enterprise_custom_endpoint: str = None,
+  redis_custom_endpoint: str = None,
+  region: str = None,
+  request_reason: str = None,
+  request_timeout: str = None,
+  resource_manager_custom_endpoint: str = None,
+  resource_manager_v3_custom_endpoint: str = None,
+  scopes: typing.List[str] = None,
+  secret_manager_custom_endpoint: str = None,
+  security_center_custom_endpoint: str = None,
+  service_management_custom_endpoint: str = None,
+  service_networking_custom_endpoint: str = None,
+  service_usage_custom_endpoint: str = None,
+  source_repo_custom_endpoint: str = None,
+  spanner_custom_endpoint: str = None,
+  sql_custom_endpoint: str = None,
+  storage_custom_endpoint: str = None,
+  storage_transfer_custom_endpoint: str = None,
+  tags_custom_endpoint: str = None,
+  tags_location_custom_endpoint: str = None,
+  tpu_custom_endpoint: str = None,
+  user_project_override: typing.Union[bool, IResolvable] = None,
+  vertex_ai_custom_endpoint: str = None,
+  vpc_access_custom_endpoint: str = None,
+  workflows_custom_endpoint: str = None,
+  zone: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessApprovalCustomEndpoint">access_approval_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessContextManagerCustomEndpoint">access_context_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.accessToken">access_token</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_token GoogleProvider#access_token}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.activeDirectoryCustomEndpoint">active_directory_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alias">alias</a></code> | <code>str</code> | Alias name. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.alloydbCustomEndpoint">alloydb_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.apigeeCustomEndpoint">apigee_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.apikeysCustomEndpoint">apikeys_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.appEngineCustomEndpoint">app_engine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.artifactRegistryCustomEndpoint">artifact_registry_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.assuredWorkloadsCustomEndpoint">assured_workloads_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.batching">batching</a></code> | <code><a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a></code> | batching block. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.beyondcorpCustomEndpoint">beyondcorp_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryAnalyticsHubCustomEndpoint">bigquery_analytics_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryConnectionCustomEndpoint">bigquery_connection_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigQueryCustomEndpoint">big_query_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryDataTransferCustomEndpoint">bigquery_data_transfer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryReservationCustomEndpoint">bigquery_reservation_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.bigtableCustomEndpoint">bigtable_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.billingCustomEndpoint">billing_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.billingProject">billing_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_project GoogleProvider#billing_project}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.binaryAuthorizationCustomEndpoint">binary_authorization_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.certificateManagerCustomEndpoint">certificate_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudAssetCustomEndpoint">cloud_asset_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBillingCustomEndpoint">cloud_billing_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBuildCustomEndpoint">cloud_build_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBuildWorkerPoolCustomEndpoint">cloud_build_worker_pool_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.clouddeployCustomEndpoint">clouddeploy_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudfunctions2CustomEndpoint">cloudfunctions2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudFunctionsCustomEndpoint">cloud_functions_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIdentityCustomEndpoint">cloud_identity_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIdsCustomEndpoint">cloud_ids_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIotCustomEndpoint">cloud_iot_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudResourceManagerCustomEndpoint">cloud_resource_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudRunCustomEndpoint">cloud_run_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudRunV2CustomEndpoint">cloud_run_v2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudSchedulerCustomEndpoint">cloud_scheduler_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudTasksCustomEndpoint">cloud_tasks_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.composerCustomEndpoint">composer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.computeCustomEndpoint">compute_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAnalysisCustomEndpoint">container_analysis_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAttachedCustomEndpoint">container_attached_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAwsCustomEndpoint">container_aws_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAzureCustomEndpoint">container_azure_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.containerCustomEndpoint">container_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_custom_endpoint GoogleProvider#container_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.credentials">credentials</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#credentials GoogleProvider#credentials}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataCatalogCustomEndpoint">data_catalog_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataflowCustomEndpoint">dataflow_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataFusionCustomEndpoint">data_fusion_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataLossPreventionCustomEndpoint">data_loss_prevention_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataplexCustomEndpoint">dataplex_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataprocCustomEndpoint">dataproc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dataprocMetastoreCustomEndpoint">dataproc_metastore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.datastoreCustomEndpoint">datastore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.datastreamCustomEndpoint">datastream_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.deploymentManagerCustomEndpoint">deployment_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dialogflowCustomEndpoint">dialogflow_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dialogflowCxCustomEndpoint">dialogflow_cx_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.dnsCustomEndpoint">dns_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.documentAiCustomEndpoint">document_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.essentialContactsCustomEndpoint">essential_contacts_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.eventarcCustomEndpoint">eventarc_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.filestoreCustomEndpoint">filestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaserulesCustomEndpoint">firebaserules_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.firestoreCustomEndpoint">firestore_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.gameServicesCustomEndpoint">game_services_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.gkeBackupCustomEndpoint">gke_backup_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.gkeHubCustomEndpoint">gke_hub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.healthcareCustomEndpoint">healthcare_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iam2CustomEndpoint">iam2_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iamBetaCustomEndpoint">iam_beta_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iamCredentialsCustomEndpoint">iam_credentials_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iamCustomEndpoint">iam_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iamWorkforcePoolCustomEndpoint">iam_workforce_pool_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.iapCustomEndpoint">iap_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.identityPlatformCustomEndpoint">identity_platform_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.impersonateServiceAccount">impersonate_service_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account GoogleProvider#impersonate_service_account}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.impersonateServiceAccountDelegates">impersonate_service_account_delegates</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.kmsCustomEndpoint">kms_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.loggingCustomEndpoint">logging_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.memcacheCustomEndpoint">memcache_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.mlEngineCustomEndpoint">ml_engine_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.monitoringCustomEndpoint">monitoring_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.networkConnectivityCustomEndpoint">network_connectivity_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.networkManagementCustomEndpoint">network_management_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.networkServicesCustomEndpoint">network_services_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.notebooksCustomEndpoint">notebooks_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.orgPolicyCustomEndpoint">org_policy_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.osConfigCustomEndpoint">os_config_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.osLoginCustomEndpoint">os_login_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.privatecaCustomEndpoint">privateca_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#project GoogleProvider#project}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.pubsubCustomEndpoint">pubsub_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.pubsubLiteCustomEndpoint">pubsub_lite_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.recaptchaEnterpriseCustomEndpoint">recaptcha_enterprise_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.redisCustomEndpoint">redis_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#region GoogleProvider#region}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.requestReason">request_reason</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_reason GoogleProvider#request_reason}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.requestTimeout">request_timeout</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_timeout GoogleProvider#request_timeout}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.resourceManagerCustomEndpoint">resource_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.resourceManagerV3CustomEndpoint">resource_manager_v3_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#scopes GoogleProvider#scopes}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.secretManagerCustomEndpoint">secret_manager_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.securityCenterCustomEndpoint">security_center_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceManagementCustomEndpoint">service_management_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceNetworkingCustomEndpoint">service_networking_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceUsageCustomEndpoint">service_usage_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.sourceRepoCustomEndpoint">source_repo_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.spannerCustomEndpoint">spanner_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.sqlCustomEndpoint">sql_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.storageCustomEndpoint">storage_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.storageTransferCustomEndpoint">storage_transfer_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.tagsCustomEndpoint">tags_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.tagsLocationCustomEndpoint">tags_location_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.tpuCustomEndpoint">tpu_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride">user_project_override</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#user_project_override GoogleProvider#user_project_override}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vertexAiCustomEndpoint">vertex_ai_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.vpcAccessCustomEndpoint">vpc_access_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.workflowsCustomEndpoint">workflows_custom_endpoint</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}. |
+| <code><a href="#@cdktf/provider-google.provider.GoogleProviderConfig.property.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#zone GoogleProvider#zone}. |
+
+---
+
+##### `access_approval_custom_endpoint`<sup>Optional</sup> <a name="access_approval_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.accessApprovalCustomEndpoint"></a>
+
+```python
+access_approval_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}.
+
+---
+
+##### `access_context_manager_custom_endpoint`<sup>Optional</sup> <a name="access_context_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.accessContextManagerCustomEndpoint"></a>
+
+```python
+access_context_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}.
+
+---
+
+##### `access_token`<sup>Optional</sup> <a name="access_token" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.accessToken"></a>
+
+```python
+access_token: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#access_token GoogleProvider#access_token}.
+
+---
+
+##### `active_directory_custom_endpoint`<sup>Optional</sup> <a name="active_directory_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.activeDirectoryCustomEndpoint"></a>
+
+```python
+active_directory_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}.
+
+---
+
+##### `alias`<sup>Optional</sup> <a name="alias" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.alias"></a>
+
+```python
+alias: str
+```
+
+- *Type:* str
+
+Alias name.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alias GoogleProvider#alias}
+
+---
+
+##### `alloydb_custom_endpoint`<sup>Optional</sup> <a name="alloydb_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.alloydbCustomEndpoint"></a>
+
+```python
+alloydb_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}.
+
+---
+
+##### `apigee_custom_endpoint`<sup>Optional</sup> <a name="apigee_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.apigeeCustomEndpoint"></a>
+
+```python
+apigee_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}.
+
+---
+
+##### `apikeys_custom_endpoint`<sup>Optional</sup> <a name="apikeys_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.apikeysCustomEndpoint"></a>
+
+```python
+apikeys_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}.
+
+---
+
+##### `app_engine_custom_endpoint`<sup>Optional</sup> <a name="app_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.appEngineCustomEndpoint"></a>
+
+```python
+app_engine_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}.
+
+---
+
+##### `artifact_registry_custom_endpoint`<sup>Optional</sup> <a name="artifact_registry_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.artifactRegistryCustomEndpoint"></a>
+
+```python
+artifact_registry_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}.
+
+---
+
+##### `assured_workloads_custom_endpoint`<sup>Optional</sup> <a name="assured_workloads_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.assuredWorkloadsCustomEndpoint"></a>
+
+```python
+assured_workloads_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}.
+
+---
+
+##### `batching`<sup>Optional</sup> <a name="batching" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.batching"></a>
+
+```python
+batching: GoogleProviderBatching
+```
+
+- *Type:* <a href="#@cdktf/provider-google.provider.GoogleProviderBatching">GoogleProviderBatching</a>
+
+batching block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#batching GoogleProvider#batching}
+
+---
+
+##### `beyondcorp_custom_endpoint`<sup>Optional</sup> <a name="beyondcorp_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.beyondcorpCustomEndpoint"></a>
+
+```python
+beyondcorp_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}.
+
+---
+
+##### `bigquery_analytics_hub_custom_endpoint`<sup>Optional</sup> <a name="bigquery_analytics_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryAnalyticsHubCustomEndpoint"></a>
+
+```python
+bigquery_analytics_hub_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}.
+
+---
+
+##### `bigquery_connection_custom_endpoint`<sup>Optional</sup> <a name="bigquery_connection_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryConnectionCustomEndpoint"></a>
+
+```python
+bigquery_connection_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}.
+
+---
+
+##### `big_query_custom_endpoint`<sup>Optional</sup> <a name="big_query_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigQueryCustomEndpoint"></a>
+
+```python
+big_query_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}.
+
+---
+
+##### `bigquery_data_transfer_custom_endpoint`<sup>Optional</sup> <a name="bigquery_data_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryDataTransferCustomEndpoint"></a>
+
+```python
+bigquery_data_transfer_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}.
+
+---
+
+##### `bigquery_reservation_custom_endpoint`<sup>Optional</sup> <a name="bigquery_reservation_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigqueryReservationCustomEndpoint"></a>
+
+```python
+bigquery_reservation_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}.
+
+---
+
+##### `bigtable_custom_endpoint`<sup>Optional</sup> <a name="bigtable_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.bigtableCustomEndpoint"></a>
+
+```python
+bigtable_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}.
+
+---
+
+##### `billing_custom_endpoint`<sup>Optional</sup> <a name="billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.billingCustomEndpoint"></a>
+
+```python
+billing_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}.
+
+---
+
+##### `billing_project`<sup>Optional</sup> <a name="billing_project" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.billingProject"></a>
+
+```python
+billing_project: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#billing_project GoogleProvider#billing_project}.
+
+---
+
+##### `binary_authorization_custom_endpoint`<sup>Optional</sup> <a name="binary_authorization_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.binaryAuthorizationCustomEndpoint"></a>
+
+```python
+binary_authorization_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}.
+
+---
+
+##### `certificate_manager_custom_endpoint`<sup>Optional</sup> <a name="certificate_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.certificateManagerCustomEndpoint"></a>
+
+```python
+certificate_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}.
+
+---
+
+##### `cloud_asset_custom_endpoint`<sup>Optional</sup> <a name="cloud_asset_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudAssetCustomEndpoint"></a>
+
+```python
+cloud_asset_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}.
+
+---
+
+##### `cloud_billing_custom_endpoint`<sup>Optional</sup> <a name="cloud_billing_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBillingCustomEndpoint"></a>
+
+```python
+cloud_billing_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}.
+
+---
+
+##### `cloud_build_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBuildCustomEndpoint"></a>
+
+```python
+cloud_build_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}.
+
+---
+
+##### `cloud_build_worker_pool_custom_endpoint`<sup>Optional</sup> <a name="cloud_build_worker_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudBuildWorkerPoolCustomEndpoint"></a>
+
+```python
+cloud_build_worker_pool_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}.
+
+---
+
+##### `clouddeploy_custom_endpoint`<sup>Optional</sup> <a name="clouddeploy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.clouddeployCustomEndpoint"></a>
+
+```python
+clouddeploy_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}.
+
+---
+
+##### `cloudfunctions2_custom_endpoint`<sup>Optional</sup> <a name="cloudfunctions2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudfunctions2CustomEndpoint"></a>
+
+```python
+cloudfunctions2_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}.
+
+---
+
+##### `cloud_functions_custom_endpoint`<sup>Optional</sup> <a name="cloud_functions_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudFunctionsCustomEndpoint"></a>
+
+```python
+cloud_functions_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}.
+
+---
+
+##### `cloud_identity_custom_endpoint`<sup>Optional</sup> <a name="cloud_identity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIdentityCustomEndpoint"></a>
+
+```python
+cloud_identity_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}.
+
+---
+
+##### `cloud_ids_custom_endpoint`<sup>Optional</sup> <a name="cloud_ids_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIdsCustomEndpoint"></a>
+
+```python
+cloud_ids_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}.
+
+---
+
+##### `cloud_iot_custom_endpoint`<sup>Optional</sup> <a name="cloud_iot_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudIotCustomEndpoint"></a>
+
+```python
+cloud_iot_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}.
+
+---
+
+##### `cloud_resource_manager_custom_endpoint`<sup>Optional</sup> <a name="cloud_resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudResourceManagerCustomEndpoint"></a>
+
+```python
+cloud_resource_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}.
+
+---
+
+##### `cloud_run_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudRunCustomEndpoint"></a>
+
+```python
+cloud_run_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}.
+
+---
+
+##### `cloud_run_v2_custom_endpoint`<sup>Optional</sup> <a name="cloud_run_v2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudRunV2CustomEndpoint"></a>
+
+```python
+cloud_run_v2_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}.
+
+---
+
+##### `cloud_scheduler_custom_endpoint`<sup>Optional</sup> <a name="cloud_scheduler_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudSchedulerCustomEndpoint"></a>
+
+```python
+cloud_scheduler_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}.
+
+---
+
+##### `cloud_tasks_custom_endpoint`<sup>Optional</sup> <a name="cloud_tasks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.cloudTasksCustomEndpoint"></a>
+
+```python
+cloud_tasks_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}.
+
+---
+
+##### `composer_custom_endpoint`<sup>Optional</sup> <a name="composer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.composerCustomEndpoint"></a>
+
+```python
+composer_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}.
+
+---
+
+##### `compute_custom_endpoint`<sup>Optional</sup> <a name="compute_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.computeCustomEndpoint"></a>
+
+```python
+compute_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}.
+
+---
+
+##### `container_analysis_custom_endpoint`<sup>Optional</sup> <a name="container_analysis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAnalysisCustomEndpoint"></a>
+
+```python
+container_analysis_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}.
+
+---
+
+##### `container_attached_custom_endpoint`<sup>Optional</sup> <a name="container_attached_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAttachedCustomEndpoint"></a>
+
+```python
+container_attached_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}.
+
+---
+
+##### `container_aws_custom_endpoint`<sup>Optional</sup> <a name="container_aws_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAwsCustomEndpoint"></a>
+
+```python
+container_aws_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}.
+
+---
+
+##### `container_azure_custom_endpoint`<sup>Optional</sup> <a name="container_azure_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.containerAzureCustomEndpoint"></a>
+
+```python
+container_azure_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}.
+
+---
+
+##### `container_custom_endpoint`<sup>Optional</sup> <a name="container_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.containerCustomEndpoint"></a>
+
+```python
+container_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#container_custom_endpoint GoogleProvider#container_custom_endpoint}.
+
+---
+
+##### `credentials`<sup>Optional</sup> <a name="credentials" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.credentials"></a>
+
+```python
+credentials: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#credentials GoogleProvider#credentials}.
+
+---
+
+##### `data_catalog_custom_endpoint`<sup>Optional</sup> <a name="data_catalog_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataCatalogCustomEndpoint"></a>
+
+```python
+data_catalog_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}.
+
+---
+
+##### `dataflow_custom_endpoint`<sup>Optional</sup> <a name="dataflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataflowCustomEndpoint"></a>
+
+```python
+dataflow_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}.
+
+---
+
+##### `data_fusion_custom_endpoint`<sup>Optional</sup> <a name="data_fusion_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataFusionCustomEndpoint"></a>
+
+```python
+data_fusion_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}.
+
+---
+
+##### `data_loss_prevention_custom_endpoint`<sup>Optional</sup> <a name="data_loss_prevention_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataLossPreventionCustomEndpoint"></a>
+
+```python
+data_loss_prevention_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}.
+
+---
+
+##### `dataplex_custom_endpoint`<sup>Optional</sup> <a name="dataplex_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataplexCustomEndpoint"></a>
+
+```python
+dataplex_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}.
+
+---
+
+##### `dataproc_custom_endpoint`<sup>Optional</sup> <a name="dataproc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataprocCustomEndpoint"></a>
+
+```python
+dataproc_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}.
+
+---
+
+##### `dataproc_metastore_custom_endpoint`<sup>Optional</sup> <a name="dataproc_metastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dataprocMetastoreCustomEndpoint"></a>
+
+```python
+dataproc_metastore_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}.
+
+---
+
+##### `datastore_custom_endpoint`<sup>Optional</sup> <a name="datastore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.datastoreCustomEndpoint"></a>
+
+```python
+datastore_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}.
+
+---
+
+##### `datastream_custom_endpoint`<sup>Optional</sup> <a name="datastream_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.datastreamCustomEndpoint"></a>
+
+```python
+datastream_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}.
+
+---
+
+##### `deployment_manager_custom_endpoint`<sup>Optional</sup> <a name="deployment_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.deploymentManagerCustomEndpoint"></a>
+
+```python
+deployment_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}.
+
+---
+
+##### `dialogflow_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dialogflowCustomEndpoint"></a>
+
+```python
+dialogflow_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}.
+
+---
+
+##### `dialogflow_cx_custom_endpoint`<sup>Optional</sup> <a name="dialogflow_cx_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dialogflowCxCustomEndpoint"></a>
+
+```python
+dialogflow_cx_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}.
+
+---
+
+##### `dns_custom_endpoint`<sup>Optional</sup> <a name="dns_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.dnsCustomEndpoint"></a>
+
+```python
+dns_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}.
+
+---
+
+##### `document_ai_custom_endpoint`<sup>Optional</sup> <a name="document_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.documentAiCustomEndpoint"></a>
+
+```python
+document_ai_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}.
+
+---
+
+##### `essential_contacts_custom_endpoint`<sup>Optional</sup> <a name="essential_contacts_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.essentialContactsCustomEndpoint"></a>
+
+```python
+essential_contacts_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}.
+
+---
+
+##### `eventarc_custom_endpoint`<sup>Optional</sup> <a name="eventarc_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.eventarcCustomEndpoint"></a>
+
+```python
+eventarc_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}.
+
+---
+
+##### `filestore_custom_endpoint`<sup>Optional</sup> <a name="filestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.filestoreCustomEndpoint"></a>
+
+```python
+filestore_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}.
+
+---
+
+##### `firebaserules_custom_endpoint`<sup>Optional</sup> <a name="firebaserules_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.firebaserulesCustomEndpoint"></a>
+
+```python
+firebaserules_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}.
+
+---
+
+##### `firestore_custom_endpoint`<sup>Optional</sup> <a name="firestore_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.firestoreCustomEndpoint"></a>
+
+```python
+firestore_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}.
+
+---
+
+##### `game_services_custom_endpoint`<sup>Optional</sup> <a name="game_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.gameServicesCustomEndpoint"></a>
+
+```python
+game_services_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}.
+
+---
+
+##### `gke_backup_custom_endpoint`<sup>Optional</sup> <a name="gke_backup_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.gkeBackupCustomEndpoint"></a>
+
+```python
+gke_backup_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}.
+
+---
+
+##### `gke_hub_custom_endpoint`<sup>Optional</sup> <a name="gke_hub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.gkeHubCustomEndpoint"></a>
+
+```python
+gke_hub_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}.
+
+---
+
+##### `healthcare_custom_endpoint`<sup>Optional</sup> <a name="healthcare_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.healthcareCustomEndpoint"></a>
+
+```python
+healthcare_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}.
+
+---
+
+##### `iam2_custom_endpoint`<sup>Optional</sup> <a name="iam2_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iam2CustomEndpoint"></a>
+
+```python
+iam2_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}.
+
+---
+
+##### `iam_beta_custom_endpoint`<sup>Optional</sup> <a name="iam_beta_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iamBetaCustomEndpoint"></a>
+
+```python
+iam_beta_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}.
+
+---
+
+##### `iam_credentials_custom_endpoint`<sup>Optional</sup> <a name="iam_credentials_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iamCredentialsCustomEndpoint"></a>
+
+```python
+iam_credentials_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}.
+
+---
+
+##### `iam_custom_endpoint`<sup>Optional</sup> <a name="iam_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iamCustomEndpoint"></a>
+
+```python
+iam_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}.
+
+---
+
+##### `iam_workforce_pool_custom_endpoint`<sup>Optional</sup> <a name="iam_workforce_pool_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iamWorkforcePoolCustomEndpoint"></a>
+
+```python
+iam_workforce_pool_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}.
+
+---
+
+##### `iap_custom_endpoint`<sup>Optional</sup> <a name="iap_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.iapCustomEndpoint"></a>
+
+```python
+iap_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}.
+
+---
+
+##### `identity_platform_custom_endpoint`<sup>Optional</sup> <a name="identity_platform_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.identityPlatformCustomEndpoint"></a>
+
+```python
+identity_platform_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}.
+
+---
+
+##### `impersonate_service_account`<sup>Optional</sup> <a name="impersonate_service_account" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.impersonateServiceAccount"></a>
+
+```python
+impersonate_service_account: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account GoogleProvider#impersonate_service_account}.
+
+---
+
+##### `impersonate_service_account_delegates`<sup>Optional</sup> <a name="impersonate_service_account_delegates" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.impersonateServiceAccountDelegates"></a>
+
+```python
+impersonate_service_account_delegates: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}.
+
+---
+
+##### `kms_custom_endpoint`<sup>Optional</sup> <a name="kms_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.kmsCustomEndpoint"></a>
+
+```python
+kms_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}.
+
+---
+
+##### `logging_custom_endpoint`<sup>Optional</sup> <a name="logging_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.loggingCustomEndpoint"></a>
+
+```python
+logging_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}.
+
+---
+
+##### `memcache_custom_endpoint`<sup>Optional</sup> <a name="memcache_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.memcacheCustomEndpoint"></a>
+
+```python
+memcache_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}.
+
+---
+
+##### `ml_engine_custom_endpoint`<sup>Optional</sup> <a name="ml_engine_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.mlEngineCustomEndpoint"></a>
+
+```python
+ml_engine_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}.
+
+---
+
+##### `monitoring_custom_endpoint`<sup>Optional</sup> <a name="monitoring_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.monitoringCustomEndpoint"></a>
+
+```python
+monitoring_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}.
+
+---
+
+##### `network_connectivity_custom_endpoint`<sup>Optional</sup> <a name="network_connectivity_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.networkConnectivityCustomEndpoint"></a>
+
+```python
+network_connectivity_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}.
+
+---
+
+##### `network_management_custom_endpoint`<sup>Optional</sup> <a name="network_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.networkManagementCustomEndpoint"></a>
+
+```python
+network_management_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}.
+
+---
+
+##### `network_services_custom_endpoint`<sup>Optional</sup> <a name="network_services_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.networkServicesCustomEndpoint"></a>
+
+```python
+network_services_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}.
+
+---
+
+##### `notebooks_custom_endpoint`<sup>Optional</sup> <a name="notebooks_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.notebooksCustomEndpoint"></a>
+
+```python
+notebooks_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}.
+
+---
+
+##### `org_policy_custom_endpoint`<sup>Optional</sup> <a name="org_policy_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.orgPolicyCustomEndpoint"></a>
+
+```python
+org_policy_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}.
+
+---
+
+##### `os_config_custom_endpoint`<sup>Optional</sup> <a name="os_config_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.osConfigCustomEndpoint"></a>
+
+```python
+os_config_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}.
+
+---
+
+##### `os_login_custom_endpoint`<sup>Optional</sup> <a name="os_login_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.osLoginCustomEndpoint"></a>
+
+```python
+os_login_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}.
+
+---
+
+##### `privateca_custom_endpoint`<sup>Optional</sup> <a name="privateca_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.privatecaCustomEndpoint"></a>
+
+```python
+privateca_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}.
+
+---
+
+##### `project`<sup>Optional</sup> <a name="project" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.project"></a>
+
+```python
+project: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#project GoogleProvider#project}.
+
+---
+
+##### `pubsub_custom_endpoint`<sup>Optional</sup> <a name="pubsub_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.pubsubCustomEndpoint"></a>
+
+```python
+pubsub_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}.
+
+---
+
+##### `pubsub_lite_custom_endpoint`<sup>Optional</sup> <a name="pubsub_lite_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.pubsubLiteCustomEndpoint"></a>
+
+```python
+pubsub_lite_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}.
+
+---
+
+##### `recaptcha_enterprise_custom_endpoint`<sup>Optional</sup> <a name="recaptcha_enterprise_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.recaptchaEnterpriseCustomEndpoint"></a>
+
+```python
+recaptcha_enterprise_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}.
+
+---
+
+##### `redis_custom_endpoint`<sup>Optional</sup> <a name="redis_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.redisCustomEndpoint"></a>
+
+```python
+redis_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}.
+
+---
+
+##### `region`<sup>Optional</sup> <a name="region" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.region"></a>
+
+```python
+region: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#region GoogleProvider#region}.
+
+---
+
+##### `request_reason`<sup>Optional</sup> <a name="request_reason" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.requestReason"></a>
+
+```python
+request_reason: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_reason GoogleProvider#request_reason}.
+
+---
+
+##### `request_timeout`<sup>Optional</sup> <a name="request_timeout" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.requestTimeout"></a>
+
+```python
+request_timeout: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#request_timeout GoogleProvider#request_timeout}.
+
+---
+
+##### `resource_manager_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.resourceManagerCustomEndpoint"></a>
+
+```python
+resource_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}.
+
+---
+
+##### `resource_manager_v3_custom_endpoint`<sup>Optional</sup> <a name="resource_manager_v3_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.resourceManagerV3CustomEndpoint"></a>
+
+```python
+resource_manager_v3_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}.
+
+---
+
+##### `scopes`<sup>Optional</sup> <a name="scopes" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.scopes"></a>
+
+```python
+scopes: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#scopes GoogleProvider#scopes}.
+
+---
+
+##### `secret_manager_custom_endpoint`<sup>Optional</sup> <a name="secret_manager_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.secretManagerCustomEndpoint"></a>
+
+```python
+secret_manager_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}.
+
+---
+
+##### `security_center_custom_endpoint`<sup>Optional</sup> <a name="security_center_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.securityCenterCustomEndpoint"></a>
+
+```python
+security_center_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}.
+
+---
+
+##### `service_management_custom_endpoint`<sup>Optional</sup> <a name="service_management_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceManagementCustomEndpoint"></a>
+
+```python
+service_management_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}.
+
+---
+
+##### `service_networking_custom_endpoint`<sup>Optional</sup> <a name="service_networking_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceNetworkingCustomEndpoint"></a>
+
+```python
+service_networking_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}.
+
+---
+
+##### `service_usage_custom_endpoint`<sup>Optional</sup> <a name="service_usage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.serviceUsageCustomEndpoint"></a>
+
+```python
+service_usage_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}.
+
+---
+
+##### `source_repo_custom_endpoint`<sup>Optional</sup> <a name="source_repo_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.sourceRepoCustomEndpoint"></a>
+
+```python
+source_repo_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}.
+
+---
+
+##### `spanner_custom_endpoint`<sup>Optional</sup> <a name="spanner_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.spannerCustomEndpoint"></a>
+
+```python
+spanner_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}.
+
+---
+
+##### `sql_custom_endpoint`<sup>Optional</sup> <a name="sql_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.sqlCustomEndpoint"></a>
+
+```python
+sql_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}.
+
+---
+
+##### `storage_custom_endpoint`<sup>Optional</sup> <a name="storage_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.storageCustomEndpoint"></a>
+
+```python
+storage_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}.
+
+---
+
+##### `storage_transfer_custom_endpoint`<sup>Optional</sup> <a name="storage_transfer_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.storageTransferCustomEndpoint"></a>
+
+```python
+storage_transfer_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}.
+
+---
+
+##### `tags_custom_endpoint`<sup>Optional</sup> <a name="tags_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.tagsCustomEndpoint"></a>
+
+```python
+tags_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}.
+
+---
+
+##### `tags_location_custom_endpoint`<sup>Optional</sup> <a name="tags_location_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.tagsLocationCustomEndpoint"></a>
+
+```python
+tags_location_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}.
+
+---
+
+##### `tpu_custom_endpoint`<sup>Optional</sup> <a name="tpu_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.tpuCustomEndpoint"></a>
+
+```python
+tpu_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}.
+
+---
+
+##### `user_project_override`<sup>Optional</sup> <a name="user_project_override" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.userProjectOverride"></a>
+
+```python
+user_project_override: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#user_project_override GoogleProvider#user_project_override}.
+
+---
+
+##### `vertex_ai_custom_endpoint`<sup>Optional</sup> <a name="vertex_ai_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.vertexAiCustomEndpoint"></a>
+
+```python
+vertex_ai_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}.
+
+---
+
+##### `vpc_access_custom_endpoint`<sup>Optional</sup> <a name="vpc_access_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.vpcAccessCustomEndpoint"></a>
+
+```python
+vpc_access_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}.
+
+---
+
+##### `workflows_custom_endpoint`<sup>Optional</sup> <a name="workflows_custom_endpoint" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.workflowsCustomEndpoint"></a>
+
+```python
+workflows_custom_endpoint: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}.
+
+---
+
+##### `zone`<sup>Optional</sup> <a name="zone" id="@cdktf/provider-google.provider.GoogleProviderConfig.property.zone"></a>
+
+```python
+zone: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google#zone GoogleProvider#zone}.
+
+---
+
+
+
