@@ -26,6 +26,7 @@ sqlDatabaseInstance.SqlDatabaseInstance(
   deletion_protection: typing.Union[bool, IResolvable] = None,
   encryption_key_name: str = None,
   id: str = None,
+  instance_type: str = None,
   maintenance_version: str = None,
   master_instance_name: str = None,
   name: str = None,
@@ -55,6 +56,7 @@ sqlDatabaseInstance.SqlDatabaseInstance(
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.deletionProtection">deletion_protection</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Used to block Terraform from deleting a SQL Instance. Defaults to true. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.encryptionKeyName">encryption_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#encryption_key_name SqlDatabaseInstance#encryption_key_name}. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#id SqlDatabaseInstance#id}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.instanceType">instance_type</a></code> | <code>str</code> | The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | Maintenance version. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.masterInstanceName">master_instance_name</a></code> | <code>str</code> | The name of the instance that will act as the master in the replication setup. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the instance. |
@@ -176,6 +178,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `instance_type`<sup>Optional</sup> <a name="instance_type" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.Initializer.parameter.instanceType"></a>
+
+- *Type:* str
+
+The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#instance_type SqlDatabaseInstance#instance_type}
 
 ---
 
@@ -316,6 +328,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetDeletionProtection">reset_deletion_protection</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetEncryptionKeyName">reset_encryption_key_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetInstanceType">reset_instance_type</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetMaintenanceVersion">reset_maintenance_version</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetMasterInstanceName">reset_master_instance_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetName">reset_name</a></code> | *No description.* |
@@ -1080,6 +1093,12 @@ def reset_encryption_key_name() -> None
 def reset_id() -> None
 ```
 
+##### `reset_instance_type` <a name="reset_instance_type" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetInstanceType"></a>
+
+```python
+def reset_instance_type() -> None
+```
+
 ##### `reset_maintenance_version` <a name="reset_maintenance_version" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.resetMaintenanceVersion"></a>
 
 ```python
@@ -1238,7 +1257,6 @@ sqlDatabaseInstance.SqlDatabaseInstance.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.clone">clone</a></code> | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference">SqlDatabaseInstanceCloneOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.connectionName">connection_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.firstIpAddress">first_ip_address</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceType">instance_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.ipAddress">ip_address</a></code> | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceIpAddressList">SqlDatabaseInstanceIpAddressList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.privateIpAddress">private_ip_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.publicIpAddress">public_ip_address</a></code> | <code>str</code> | *No description.* |
@@ -1254,6 +1272,7 @@ sqlDatabaseInstance.SqlDatabaseInstance.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.deletionProtectionInput">deletion_protection_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.encryptionKeyNameInput">encryption_key_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceTypeInput">instance_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.maintenanceVersionInput">maintenance_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.masterInstanceNameInput">master_instance_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
@@ -1268,6 +1287,7 @@ sqlDatabaseInstance.SqlDatabaseInstance.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.deletionProtection">deletion_protection</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.encryptionKeyName">encryption_key_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceType">instance_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.masterInstanceName">master_instance_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -1459,16 +1479,6 @@ first_ip_address: str
 
 ---
 
-##### `instance_type`<sup>Required</sup> <a name="instance_type" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceType"></a>
-
-```python
-instance_type: str
-```
-
-- *Type:* str
-
----
-
 ##### `ip_address`<sup>Required</sup> <a name="ip_address" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.ipAddress"></a>
 
 ```python
@@ -1619,6 +1629,16 @@ id_input: str
 
 ---
 
+##### `instance_type_input`<sup>Optional</sup> <a name="instance_type_input" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceTypeInput"></a>
+
+```python
+instance_type_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `maintenance_version_input`<sup>Optional</sup> <a name="maintenance_version_input" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.maintenanceVersionInput"></a>
 
 ```python
@@ -1753,6 +1773,16 @@ encryption_key_name: str
 
 ```python
 id: str
+```
+
+- *Type:* str
+
+---
+
+##### `instance_type`<sup>Required</sup> <a name="instance_type" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstance.property.instanceType"></a>
+
+```python
+instance_type: str
 ```
 
 - *Type:* str
@@ -1927,6 +1957,7 @@ sqlDatabaseInstance.SqlDatabaseInstanceConfig(
   deletion_protection: typing.Union[bool, IResolvable] = None,
   encryption_key_name: str = None,
   id: str = None,
+  instance_type: str = None,
   maintenance_version: str = None,
   master_instance_name: str = None,
   name: str = None,
@@ -1956,6 +1987,7 @@ sqlDatabaseInstance.SqlDatabaseInstanceConfig(
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.deletionProtection">deletion_protection</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Used to block Terraform from deleting a SQL Instance. Defaults to true. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.encryptionKeyName">encryption_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#encryption_key_name SqlDatabaseInstance#encryption_key_name}. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#id SqlDatabaseInstance#id}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.instanceType">instance_type</a></code> | <code>str</code> | The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.maintenanceVersion">maintenance_version</a></code> | <code>str</code> | Maintenance version. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.masterInstanceName">master_instance_name</a></code> | <code>str</code> | The name of the instance that will act as the master in the replication setup. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.name">name</a></code> | <code>str</code> | The name of the instance. |
@@ -2107,6 +2139,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `instance_type`<sup>Optional</sup> <a name="instance_type" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceConfig.property.instanceType"></a>
+
+```python
+instance_type: str
+```
+
+- *Type:* str
+
+The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#instance_type SqlDatabaseInstance#instance_type}
 
 ---
 

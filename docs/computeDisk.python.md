@@ -619,7 +619,8 @@ def interpolation_for_attribute(
 def put_disk_encryption_key(
   kms_key_self_link: str = None,
   kms_key_service_account: str = None,
-  raw_key: str = None
+  raw_key: str = None,
+  rsa_encrypted_key: str = None
 ) -> None
 ```
 
@@ -658,6 +659,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk#raw_key ComputeDisk#raw_key}
+
+---
+
+###### `rsa_encrypted_key`<sup>Optional</sup> <a name="rsa_encrypted_key" id="@cdktf/provider-google.computeDisk.ComputeDisk.putDiskEncryptionKey.parameter.rsaEncryptedKey"></a>
+
+- *Type:* str
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit  customer-supplied encryption key to either encrypt or decrypt  this resource.
+
+You can provide either the rawKey or the rsaEncryptedKey.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk#rsa_encrypted_key ComputeDisk#rsa_encrypted_key}
 
 ---
 
@@ -2062,7 +2075,8 @@ from cdktf_cdktf_provider_google import compute_disk
 computeDisk.ComputeDiskDiskEncryptionKey(
   kms_key_self_link: str = None,
   kms_key_service_account: str = None,
-  raw_key: str = None
+  raw_key: str = None,
+  rsa_encrypted_key: str = None
 )
 ```
 
@@ -2073,6 +2087,7 @@ computeDisk.ComputeDiskDiskEncryptionKey(
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.property.kmsKeySelfLink">kms_key_self_link</a></code> | <code>str</code> | The self link of the encryption key used to encrypt the disk. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.property.kmsKeyServiceAccount">kms_key_service_account</a></code> | <code>str</code> | The service account used for the encryption request for the given KMS key. |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.property.rawKey">raw_key</a></code> | <code>str</code> | Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.property.rsaEncryptedKey">rsa_encrypted_key</a></code> | <code>str</code> | Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit  customer-supplied encryption key to either encrypt or decrypt  this resource. |
 
 ---
 
@@ -2123,6 +2138,22 @@ raw_key: str
 Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk#raw_key ComputeDisk#raw_key}
+
+---
+
+##### `rsa_encrypted_key`<sup>Optional</sup> <a name="rsa_encrypted_key" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey.property.rsaEncryptedKey"></a>
+
+```python
+rsa_encrypted_key: str
+```
+
+- *Type:* str
+
+Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit  customer-supplied encryption key to either encrypt or decrypt  this resource.
+
+You can provide either the rawKey or the rsaEncryptedKey.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_disk#rsa_encrypted_key ComputeDisk#rsa_encrypted_key}
 
 ---
 
@@ -2392,6 +2423,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.resetKmsKeySelfLink">reset_kms_key_self_link</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.resetKmsKeyServiceAccount">reset_kms_key_service_account</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.resetRawKey">reset_raw_key</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.resetRsaEncryptedKey">reset_rsa_encrypted_key</a></code> | *No description.* |
 
 ---
 
@@ -2585,6 +2617,12 @@ def reset_kms_key_service_account() -> None
 def reset_raw_key() -> None
 ```
 
+##### `reset_rsa_encrypted_key` <a name="reset_rsa_encrypted_key" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.resetRsaEncryptedKey"></a>
+
+```python
+def reset_rsa_encrypted_key() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -2596,9 +2634,11 @@ def reset_raw_key() -> None
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.kmsKeySelfLinkInput">kms_key_self_link_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.kmsKeyServiceAccountInput">kms_key_service_account_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rawKeyInput">raw_key_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rsaEncryptedKeyInput">rsa_encrypted_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.kmsKeySelfLink">kms_key_self_link</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.kmsKeyServiceAccount">kms_key_service_account</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rawKey">raw_key</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rsaEncryptedKey">rsa_encrypted_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKey">ComputeDiskDiskEncryptionKey</a></code> | *No description.* |
 
 ---
@@ -2667,6 +2707,16 @@ raw_key_input: str
 
 ---
 
+##### `rsa_encrypted_key_input`<sup>Optional</sup> <a name="rsa_encrypted_key_input" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rsaEncryptedKeyInput"></a>
+
+```python
+rsa_encrypted_key_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `kms_key_self_link`<sup>Required</sup> <a name="kms_key_self_link" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.kmsKeySelfLink"></a>
 
 ```python
@@ -2691,6 +2741,16 @@ kms_key_service_account: str
 
 ```python
 raw_key: str
+```
+
+- *Type:* str
+
+---
+
+##### `rsa_encrypted_key`<sup>Required</sup> <a name="rsa_encrypted_key" id="@cdktf/provider-google.computeDisk.ComputeDiskDiskEncryptionKeyOutputReference.property.rsaEncryptedKey"></a>
+
+```python
+rsa_encrypted_key: str
 ```
 
 - *Type:* str

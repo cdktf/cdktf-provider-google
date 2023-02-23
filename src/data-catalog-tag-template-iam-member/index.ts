@@ -181,7 +181,7 @@ export class DataCatalogTagTemplateIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_tag_template_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

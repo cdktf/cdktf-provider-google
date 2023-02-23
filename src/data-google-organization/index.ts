@@ -50,7 +50,7 @@ export class DataGoogleOrganization extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_organization',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

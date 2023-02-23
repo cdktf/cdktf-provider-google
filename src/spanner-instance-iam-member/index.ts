@@ -177,7 +177,7 @@ export class SpannerInstanceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
