@@ -92,6 +92,11 @@ export class DataGoogleComputeDiskDiskEncryptionKeyOutputReference extends cdktf
     return this.getStringAttribute('raw_key');
   }
 
+  // rsa_encrypted_key - computed: true, optional: false, required: false
+  public get rsaEncryptedKey() {
+    return this.getStringAttribute('rsa_encrypted_key');
+  }
+
   // sha256 - computed: true, optional: false, required: false
   public get sha256() {
     return this.getStringAttribute('sha256');
@@ -301,7 +306,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_disk',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

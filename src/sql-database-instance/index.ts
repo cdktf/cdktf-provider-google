@@ -31,6 +31,12 @@ export interface SqlDatabaseInstanceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly id?: string;
   /**
+  * The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#instance_type SqlDatabaseInstance#instance_type}
+  */
+  readonly instanceType?: string;
+  /**
   * Maintenance version.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#maintenance_version SqlDatabaseInstance#maintenance_version}
@@ -3485,7 +3491,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3500,6 +3506,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     this._deletionProtection = config.deletionProtection;
     this._encryptionKeyName = config.encryptionKeyName;
     this._id = config.id;
+    this._instanceType = config.instanceType;
     this._maintenanceVersion = config.maintenanceVersion;
     this._masterInstanceName = config.masterInstanceName;
     this._name = config.name;
@@ -3593,9 +3600,20 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // instance_type - computed: true, optional: false, required: false
+  // instance_type - computed: true, optional: true, required: false
+  private _instanceType?: string; 
   public get instanceType() {
     return this.getStringAttribute('instance_type');
+  }
+  public set instanceType(value: string) {
+    this._instanceType = value;
+  }
+  public resetInstanceType() {
+    this._instanceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instanceTypeInput() {
+    return this._instanceType;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -3816,6 +3834,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       deletion_protection: cdktf.booleanToTerraform(this._deletionProtection),
       encryption_key_name: cdktf.stringToTerraform(this._encryptionKeyName),
       id: cdktf.stringToTerraform(this._id),
+      instance_type: cdktf.stringToTerraform(this._instanceType),
       maintenance_version: cdktf.stringToTerraform(this._maintenanceVersion),
       master_instance_name: cdktf.stringToTerraform(this._masterInstanceName),
       name: cdktf.stringToTerraform(this._name),

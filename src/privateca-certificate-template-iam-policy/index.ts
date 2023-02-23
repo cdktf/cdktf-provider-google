@@ -58,7 +58,7 @@ export class PrivatecaCertificateTemplateIamPolicy extends cdktf.TerraformResour
       terraformResourceType: 'google_privateca_certificate_template_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

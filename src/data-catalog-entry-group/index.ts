@@ -206,7 +206,7 @@ export class DataCatalogEntryGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_entry_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1433,7 +1433,7 @@ export class ComputeRegionInstanceGroupManager extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.53.1',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
