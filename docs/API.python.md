@@ -121,6 +121,7 @@ The following submodules are available:
 - [cloudTasksQueueIamBinding](./cloudTasksQueueIamBinding.python.md)
 - [cloudTasksQueueIamMember](./cloudTasksQueueIamMember.python.md)
 - [cloudTasksQueueIamPolicy](./cloudTasksQueueIamPolicy.python.md)
+- [cloudbuildBitbucketServerConfig](./cloudbuildBitbucketServerConfig.python.md)
 - [cloudbuildTrigger](./cloudbuildTrigger.python.md)
 - [cloudbuildWorkerPool](./cloudbuildWorkerPool.python.md)
 - [clouddeployDeliveryPipeline](./clouddeployDeliveryPipeline.python.md)

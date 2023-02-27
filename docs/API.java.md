@@ -121,6 +121,7 @@ The following submodules are available:
 - [cloudTasksQueueIamBinding](./cloudTasksQueueIamBinding.java.md)
 - [cloudTasksQueueIamMember](./cloudTasksQueueIamMember.java.md)
 - [cloudTasksQueueIamPolicy](./cloudTasksQueueIamPolicy.java.md)
+- [cloudbuildBitbucketServerConfig](./cloudbuildBitbucketServerConfig.java.md)
 - [cloudbuildTrigger](./cloudbuildTrigger.java.md)
 - [cloudbuildWorkerPool](./cloudbuildWorkerPool.java.md)
 - [clouddeployDeliveryPipeline](./clouddeployDeliveryPipeline.java.md)

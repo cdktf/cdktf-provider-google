@@ -121,6 +121,7 @@ The following submodules are available:
 - [cloudTasksQueueIamBinding](./cloudTasksQueueIamBinding.typescript.md)
 - [cloudTasksQueueIamMember](./cloudTasksQueueIamMember.typescript.md)
 - [cloudTasksQueueIamPolicy](./cloudTasksQueueIamPolicy.typescript.md)
+- [cloudbuildBitbucketServerConfig](./cloudbuildBitbucketServerConfig.typescript.md)
 - [cloudbuildTrigger](./cloudbuildTrigger.typescript.md)
 - [cloudbuildWorkerPool](./cloudbuildWorkerPool.typescript.md)
 - [clouddeployDeliveryPipeline](./clouddeployDeliveryPipeline.typescript.md)
