@@ -56,7 +56,7 @@
     "jsii-pacmak": "^1.76.0",
     "node-fetch": "cjs",
     "npm-check-updates": "^16",
-    "projen": "^0.67.66",
+    "projen": "^0.67.67",
     "standard-version": "^9",
     "typescript": "^3.9.10"
   },
