@@ -1310,7 +1310,7 @@ export class DatastreamConnectionProfile extends cdktf.TerraformResource {
       terraformResourceType: 'google_datastream_connection_profile',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

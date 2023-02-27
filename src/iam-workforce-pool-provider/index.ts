@@ -479,7 +479,7 @@ export class IamWorkforcePoolProvider extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_workforce_pool_provider',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

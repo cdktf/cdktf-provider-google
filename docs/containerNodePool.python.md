@@ -3232,7 +3232,8 @@ from cdktf_cdktf_provider_google import container_node_pool
 containerNodePool.ContainerNodePoolNodeConfigKubeletConfig(
   cpu_manager_policy: str,
   cpu_cfs_quota: typing.Union[bool, IResolvable] = None,
-  cpu_cfs_quota_period: str = None
+  cpu_cfs_quota_period: str = None,
+  pod_pids_limit: typing.Union[int, float] = None
 )
 ```
 
@@ -3243,6 +3244,7 @@ containerNodePool.ContainerNodePoolNodeConfigKubeletConfig(
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuManagerPolicy">cpu_manager_policy</a></code> | <code>str</code> | Control the CPU management policy on the node. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuota">cpu_cfs_quota</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Enable CPU CFS quota enforcement for containers that specify CPU limits. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.cpuCfsQuotaPeriod">cpu_cfs_quota_period</a></code> | <code>str</code> | Set the CPU CFS quota period value 'cpu.cfs_period_us'. |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.podPidsLimit">pod_pids_limit</a></code> | <code>typing.Union[int, float]</code> | Controls the maximum number of processes allowed to run in a pod. |
 
 ---
 
@@ -3285,6 +3287,20 @@ cpu_cfs_quota_period: str
 Set the CPU CFS quota period value 'cpu.cfs_period_us'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#cpu_cfs_quota_period ContainerNodePool#cpu_cfs_quota_period}
+
+---
+
+##### `pod_pids_limit`<sup>Optional</sup> <a name="pod_pids_limit" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig.property.podPidsLimit"></a>
+
+```python
+pod_pids_limit: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Controls the maximum number of processes allowed to run in a pod.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#pod_pids_limit ContainerNodePool#pod_pids_limit}
 
 ---
 
@@ -6697,6 +6713,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.resetCpuCfsQuota">reset_cpu_cfs_quota</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.resetCpuCfsQuotaPeriod">reset_cpu_cfs_quota_period</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.resetPodPidsLimit">reset_pod_pids_limit</a></code> | *No description.* |
 
 ---
 
@@ -6884,6 +6901,12 @@ def reset_cpu_cfs_quota() -> None
 def reset_cpu_cfs_quota_period() -> None
 ```
 
+##### `reset_pod_pids_limit` <a name="reset_pod_pids_limit" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.resetPodPidsLimit"></a>
+
+```python
+def reset_pod_pids_limit() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -6894,9 +6917,11 @@ def reset_cpu_cfs_quota_period() -> None
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaInput">cpu_cfs_quota_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriodInput">cpu_cfs_quota_period_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicyInput">cpu_manager_policy_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimitInput">pod_pids_limit_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota">cpu_cfs_quota</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriod">cpu_cfs_quota_period</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicy">cpu_manager_policy</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimit">pod_pids_limit</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfig">ContainerNodePoolNodeConfigKubeletConfig</a></code> | *No description.* |
 
 ---
@@ -6955,6 +6980,16 @@ cpu_manager_policy_input: str
 
 ---
 
+##### `pod_pids_limit_input`<sup>Optional</sup> <a name="pod_pids_limit_input" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimitInput"></a>
+
+```python
+pod_pids_limit_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
 ##### `cpu_cfs_quota`<sup>Required</sup> <a name="cpu_cfs_quota" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota"></a>
 
 ```python
@@ -6982,6 +7017,16 @@ cpu_manager_policy: str
 ```
 
 - *Type:* str
+
+---
+
+##### `pod_pids_limit`<sup>Required</sup> <a name="pod_pids_limit" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimit"></a>
+
+```python
+pod_pids_limit: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
 
 ---
 
@@ -7611,7 +7656,8 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 def put_kubelet_config(
   cpu_manager_policy: str,
   cpu_cfs_quota: typing.Union[bool, IResolvable] = None,
-  cpu_cfs_quota_period: str = None
+  cpu_cfs_quota_period: str = None,
+  pod_pids_limit: typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -7642,6 +7688,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 Set the CPU CFS quota period value 'cpu.cfs_period_us'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#cpu_cfs_quota_period ContainerNodePool#cpu_cfs_quota_period}
+
+---
+
+###### `pod_pids_limit`<sup>Optional</sup> <a name="pod_pids_limit" id="@cdktf/provider-google.containerNodePool.ContainerNodePoolNodeConfigOutputReference.putKubeletConfig.parameter.podPidsLimit"></a>
+
+- *Type:* typing.Union[int, float]
+
+Controls the maximum number of processes allowed to run in a pod.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#pod_pids_limit ContainerNodePool#pod_pids_limit}
 
 ---
 

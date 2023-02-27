@@ -121,6 +121,7 @@ The following submodules are available:
 - [cloudTasksQueueIamBinding](./cloudTasksQueueIamBinding.csharp.md)
 - [cloudTasksQueueIamMember](./cloudTasksQueueIamMember.csharp.md)
 - [cloudTasksQueueIamPolicy](./cloudTasksQueueIamPolicy.csharp.md)
+- [cloudbuildBitbucketServerConfig](./cloudbuildBitbucketServerConfig.csharp.md)
 - [cloudbuildTrigger](./cloudbuildTrigger.csharp.md)
 - [cloudbuildWorkerPool](./cloudbuildWorkerPool.csharp.md)
 - [clouddeployDeliveryPipeline](./clouddeployDeliveryPipeline.csharp.md)

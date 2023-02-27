@@ -22199,6 +22199,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriod">cpuCfsQuotaPeriod</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicy">cpuManagerPolicy</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.podPidsLimit">podPidsLimit</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfig">DataGoogleContainerClusterNodeConfigKubeletConfig</a></code> | *No description.* |
 
 ---
@@ -22254,6 +22255,16 @@ public readonly cpuManagerPolicy: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `podPidsLimit`<sup>Required</sup> <a name="podPidsLimit" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodeConfigKubeletConfigOutputReference.property.podPidsLimit"></a>
+
+```typescript
+public readonly podPidsLimit: number;
+```
+
+- *Type:* number
 
 ---
 
@@ -29375,6 +29386,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuota">cpuCfsQuota</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.cpuCfsQuotaPeriod">cpuCfsQuotaPeriod</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.cpuManagerPolicy">cpuManagerPolicy</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimit">podPidsLimit</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfig">DataGoogleContainerClusterNodePoolNodeConfigKubeletConfig</a></code> | *No description.* |
 
 ---
@@ -29430,6 +29442,16 @@ public readonly cpuManagerPolicy: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `podPidsLimit`<sup>Required</sup> <a name="podPidsLimit" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterNodePoolNodeConfigKubeletConfigOutputReference.property.podPidsLimit"></a>
+
+```typescript
+public readonly podPidsLimit: number;
+```
+
+- *Type:* number
 
 ---
 

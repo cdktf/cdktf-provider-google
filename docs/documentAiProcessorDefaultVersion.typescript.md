@@ -743,6 +743,9 @@ public readonly version: string;
 
 The version to set.
 
+Using 'stable' or 'rc' will cause the API to return the latest version in that release channel.
+Apply 'lifecycle.ignore_changes' to the 'version' field to suppress this diff.
+
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/document_ai_processor_default_version#version DocumentAiProcessorDefaultVersion#version}
 
 ---

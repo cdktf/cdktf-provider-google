@@ -272,7 +272,7 @@ export class StorageTransferAgentPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_agent_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

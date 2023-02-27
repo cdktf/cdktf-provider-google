@@ -173,7 +173,7 @@ export class TagsTagValueIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_tags_tag_value_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -119,6 +119,7 @@ export * as cloudTasksQueue from './cloud-tasks-queue';
 export * as cloudTasksQueueIamBinding from './cloud-tasks-queue-iam-binding';
 export * as cloudTasksQueueIamMember from './cloud-tasks-queue-iam-member';
 export * as cloudTasksQueueIamPolicy from './cloud-tasks-queue-iam-policy';
+export * as cloudbuildBitbucketServerConfig from './cloudbuild-bitbucket-server-config';
 export * as cloudbuildTrigger from './cloudbuild-trigger';
 export * as cloudbuildWorkerPool from './cloudbuild-worker-pool';
 export * as clouddeployDeliveryPipeline from './clouddeploy-delivery-pipeline';
