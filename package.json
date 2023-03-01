@@ -29,6 +29,7 @@
     "release": "npx projen release",
     "test": "jest --passWithNoTests",
     "unbump": "npx projen unbump",
+    "unconditional-bump": "npx projen unconditional-bump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen",
@@ -56,7 +57,7 @@
     "jsii-pacmak": "^1.76.0",
     "node-fetch": "cjs",
     "npm-check-updates": "^16",
-    "projen": "^0.67.68",
+    "projen": "^0.67.69",
     "standard-version": "^9",
     "typescript": "^3.9.10"
   },
