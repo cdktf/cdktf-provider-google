@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/data_fusion
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.NewDataFusionInstance(scope Construct, id *string, config DataFusionInstanceConfig) DataFusionInstance
 ```
@@ -444,7 +444,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.DataFusionInstance_IsConstruct(x interface{}) *bool
 ```
@@ -476,7 +476,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.DataFusionInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -490,7 +490,7 @@ datafusioninstance.DataFusionInstance_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.DataFusionInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -1228,7 +1228,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 &datafusioninstance.DataFusionInstanceConfig {
 	Connection: interface{},
@@ -1240,22 +1240,22 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
 	Provisioners: *[]interface{},
 	Name: *string,
 	Type: *string,
-	CryptoKeyConfig: github.com/cdktf/cdktf-provider-google-go/google.dataFusionInstance.DataFusionInstanceCryptoKeyConfig,
+	CryptoKeyConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.dataFusionInstance.DataFusionInstanceCryptoKeyConfig,
 	DataprocServiceAccount: *string,
 	Description: *string,
 	DisplayName: *string,
 	EnableRbac: interface{},
 	EnableStackdriverLogging: interface{},
 	EnableStackdriverMonitoring: interface{},
-	EventPublishConfig: github.com/cdktf/cdktf-provider-google-go/google.dataFusionInstance.DataFusionInstanceEventPublishConfig,
+	EventPublishConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.dataFusionInstance.DataFusionInstanceEventPublishConfig,
 	Id: *string,
 	Labels: *map[string]*string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.dataFusionInstance.DataFusionInstanceNetworkConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.dataFusionInstance.DataFusionInstanceNetworkConfig,
 	Options: *map[string]*string,
 	PrivateInstance: interface{},
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataFusionInstance.DataFusionInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.dataFusionInstance.DataFusionInstanceTimeouts,
 	Version: *string,
 	Zone: *string,
 }
@@ -1665,7 +1665,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceCryptoKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 &datafusioninstance.DataFusionInstanceCryptoKeyConfig {
 	KeyReference: *string,
@@ -1701,7 +1701,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceEventPublishConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 &datafusioninstance.DataFusionInstanceEventPublishConfig {
 	Enabled: interface{},
@@ -1751,7 +1751,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 &datafusioninstance.DataFusionInstanceNetworkConfig {
 	IpAllocation: *string,
@@ -1806,7 +1806,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 &datafusioninstance.DataFusionInstanceTimeouts {
 	Create: *string,
@@ -1868,7 +1868,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceCryptoKeyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.NewDataFusionInstanceCryptoKeyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFusionInstanceCryptoKeyConfigOutputReference
 ```
@@ -2139,7 +2139,7 @@ func InternalValue() DataFusionInstanceCryptoKeyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceEventPublishConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.NewDataFusionInstanceEventPublishConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFusionInstanceEventPublishConfigOutputReference
 ```
@@ -2432,7 +2432,7 @@ func InternalValue() DataFusionInstanceEventPublishConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.NewDataFusionInstanceNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFusionInstanceNetworkConfigOutputReference
 ```
@@ -2725,7 +2725,7 @@ func InternalValue() DataFusionInstanceNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstance.DataFusionInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstance"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/datafusioninstance"
 
 datafusioninstance.NewDataFusionInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFusionInstanceTimeoutsOutputReference
 ```
