@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/artifact_re
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.NewArtifactRegistryRepository(scope Construct, id *string, config ArtifactRegistryRepositoryConfig) ArtifactRegistryRepository
 ```
@@ -348,7 +348,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepository.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.ArtifactRegistryRepository_IsConstruct(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepository.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.ArtifactRegistryRepository_IsTerraformElement(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ artifactregistryrepository.ArtifactRegistryRepository_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepository.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.ArtifactRegistryRepository_IsTerraformResource(x interface{}) *bool
 ```
@@ -846,7 +846,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepositoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 &artifactregistryrepository.ArtifactRegistryRepositoryConfig {
 	Connection: interface{},
@@ -863,9 +863,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryreposit
 	KmsKeyName: *string,
 	Labels: *map[string]*string,
 	Location: *string,
-	MavenConfig: github.com/cdktf/cdktf-provider-google-go/google.artifactRegistryRepository.ArtifactRegistryRepositoryMavenConfig,
+	MavenConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.artifactRegistryRepository.ArtifactRegistryRepositoryMavenConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.artifactRegistryRepository.ArtifactRegistryRepositoryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.artifactRegistryRepository.ArtifactRegistryRepositoryTimeouts,
 }
 ```
 
@@ -1121,7 +1121,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepositoryMavenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 &artifactregistryrepository.ArtifactRegistryRepositoryMavenConfig {
 	AllowSnapshotOverwrites: interface{},
@@ -1171,7 +1171,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepositoryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 &artifactregistryrepository.ArtifactRegistryRepositoryTimeouts {
 	Create: *string,
@@ -1233,7 +1233,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepositoryMavenConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.NewArtifactRegistryRepositoryMavenConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArtifactRegistryRepositoryMavenConfigOutputReference
 ```
@@ -1540,7 +1540,7 @@ func InternalValue() ArtifactRegistryRepositoryMavenConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepository.ArtifactRegistryRepositoryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/artifactregistryrepository"
+import "github.com/cdktf/cdktf-provider-google-go/google/v5/artifactregistryrepository"
 
 artifactregistryrepository.NewArtifactRegistryRepositoryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArtifactRegistryRepositoryTimeoutsOutputReference
 ```
