@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamPolicy.ComputeSubnetworkIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiampolicy"
 
 computesubnetworkiampolicy.NewComputeSubnetworkIamPolicy(scope Construct, id *string, config ComputeSubnetworkIamPolicyConfig) ComputeSubnetworkIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSubnetworkIamPolicy.ComputeSubnetworkIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiampolicy"
 
 computesubnetworkiampolicy.ComputeSubnetworkIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSubnetworkIamPolicy.ComputeSubnetworkIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiampolicy"
 
 computesubnetworkiampolicy.ComputeSubnetworkIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ computesubnetworkiampolicy.ComputeSubnetworkIamPolicy_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSubnetworkIamPolicy.ComputeSubnetworkIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiampolicy"
 
 computesubnetworkiampolicy.ComputeSubnetworkIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetworkIamPolicy.ComputeSubnetworkIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiampolicy"
 
 &computesubnetworkiampolicy.ComputeSubnetworkIamPolicyConfig {
 	Connection: interface{},

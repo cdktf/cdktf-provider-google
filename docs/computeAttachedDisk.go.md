@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_att
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 computeattacheddisk.NewComputeAttachedDisk(scope Construct, id *string, config ComputeAttachedDiskConfig) ComputeAttachedDisk
 ```
@@ -321,7 +321,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDisk.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 computeattacheddisk.ComputeAttachedDisk_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDisk.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 computeattacheddisk.ComputeAttachedDisk_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ computeattacheddisk.ComputeAttachedDisk_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDisk.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 computeattacheddisk.ComputeAttachedDisk_IsTerraformResource(x interface{}) *bool
 ```
@@ -742,7 +742,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 &computeattacheddisk.ComputeAttachedDiskConfig {
 	Connection: interface{},
@@ -758,7 +758,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
 	Id: *string,
 	Mode: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeAttachedDisk.ComputeAttachedDiskTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeAttachedDisk.ComputeAttachedDiskTimeouts,
 	Zone: *string,
 }
 ```
@@ -983,7 +983,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDiskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 &computeattacheddisk.ComputeAttachedDiskTimeouts {
 	Create: *string,
@@ -1031,7 +1031,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAttachedDisk.ComputeAttachedDiskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeattacheddisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeattacheddisk"
 
 computeattacheddisk.NewComputeAttachedDiskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAttachedDiskTimeoutsOutputReference
 ```

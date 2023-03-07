@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_i
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 notebooksinstanceiammember.NewNotebooksInstanceIamMember(scope Construct, id *string, config NotebooksInstanceIamMemberConfig) NotebooksInstanceIamMember
 ```
@@ -307,7 +307,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 notebooksinstanceiammember.NotebooksInstanceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 notebooksinstanceiammember.NotebooksInstanceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ notebooksinstanceiammember.NotebooksInstanceIamMember_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 notebooksinstanceiammember.NotebooksInstanceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 &notebooksinstanceiammember.NotebooksInstanceIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 &notebooksinstanceiammember.NotebooksInstanceIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiam
 	InstanceName: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.notebooksInstanceIamMember.NotebooksInstanceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.notebooksInstanceIamMember.NotebooksInstanceIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksInstanceIamMember.NotebooksInstanceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/notebooksinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/notebooksinstanceiammember"
 
 notebooksinstanceiammember.NewNotebooksInstanceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NotebooksInstanceIamMemberConditionOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_net
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 computenetworkendpointgroup.NewComputeNetworkEndpointGroup(scope Construct, id *string, config ComputeNetworkEndpointGroupConfig) ComputeNetworkEndpointGroup
 ```
@@ -335,7 +335,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 computenetworkendpointgroup.ComputeNetworkEndpointGroup_IsConstruct(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 computenetworkendpointgroup.ComputeNetworkEndpointGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -381,7 +381,7 @@ computenetworkendpointgroup.ComputeNetworkEndpointGroup_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 computenetworkendpointgroup.ComputeNetworkEndpointGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -822,7 +822,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 &computenetworkendpointgroup.ComputeNetworkEndpointGroupConfig {
 	Connection: interface{},
@@ -840,7 +840,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoi
 	NetworkEndpointType: *string,
 	Project: *string,
 	Subnetwork: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeNetworkEndpointGroup.ComputeNetworkEndpointGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroupTimeouts,
 	Zone: *string,
 }
 ```
@@ -1100,7 +1100,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 &computenetworkendpointgroup.ComputeNetworkEndpointGroupTimeouts {
 	Create: *string,
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpointGroup.ComputeNetworkEndpointGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpointgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpointgroup"
 
 computenetworkendpointgroup.NewComputeNetworkEndpointGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkEndpointGroupTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudiot_re
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 cloudiotregistryiammember.NewCloudiotRegistryIamMember(scope Construct, id *string, config CloudiotRegistryIamMemberConfig) CloudiotRegistryIamMember
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 cloudiotregistryiammember.CloudiotRegistryIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 cloudiotregistryiammember.CloudiotRegistryIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ cloudiotregistryiammember.CloudiotRegistryIamMember_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 cloudiotregistryiammember.CloudiotRegistryIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 &cloudiotregistryiammember.CloudiotRegistryIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 &cloudiotregistryiammember.CloudiotRegistryIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiamm
 	Member: *string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudiotRegistryIamMember.CloudiotRegistryIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudiotRegistryIamMember.CloudiotRegistryIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistryIamMember.CloudiotRegistryIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiammember"
 
 cloudiotregistryiammember.NewCloudiotRegistryIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudiotRegistryIamMemberConditionOutputReference
 ```

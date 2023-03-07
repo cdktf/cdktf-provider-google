@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sna
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshot(scope Construct, id *string, config ComputeSnapshotConfig) ComputeSnapshot
 ```
@@ -375,7 +375,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ computesnapshot.ComputeSnapshot_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsTerraformResource(x interface{}) *bool
 ```
@@ -961,7 +961,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotConfig {
 	Connection: interface{},
@@ -978,10 +978,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	SnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey,
-	SourceDiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey,
+	SnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey,
+	SourceDiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey,
 	StorageLocations: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSnapshot.ComputeSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotTimeouts,
 	Zone: *string,
 }
 ```
@@ -1268,7 +1268,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotSnapshotEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -1336,7 +1336,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotSourceDiskEncryptionKey {
 	KmsKeyServiceAccount: *string,
@@ -1388,7 +1388,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotTimeouts {
 	Create: *string,
@@ -1450,7 +1450,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotSnapshotEncryptionKeyOutputReference
 ```
@@ -1797,7 +1797,7 @@ func InternalValue() ComputeSnapshotSnapshotEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotSourceDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotSourceDiskEncryptionKeyOutputReference
 ```
@@ -2104,7 +2104,7 @@ func InternalValue() ComputeSnapshotSourceDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotTimeoutsOutputReference
 ```

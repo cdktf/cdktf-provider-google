@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.NewDataGoogleMonitoringUptimeCheckIps(scope Construct, id *string, config DataGoogleMonitoringUptimeCheckIpsConfig) DataGoogleMonitoringUptimeCheckIps
 ```
@@ -273,7 +273,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIps.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIps_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +305,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIps.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIps_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIps_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIps.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIps_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -529,7 +529,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIpsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 &datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIpsConfig {
 	Connection: interface{},
@@ -648,7 +648,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 &datagooglemonitoringuptimecheckips.DataGoogleMonitoringUptimeCheckIpsUptimeCheckIps {
 
@@ -663,7 +663,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoring
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.NewDataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsList
 ```
@@ -795,7 +795,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringUptimeCheckIps.DataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringuptimecheckips"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringuptimecheckips"
 
 datagooglemonitoringuptimecheckips.NewDataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringUptimeCheckIpsUptimeCheckIpsOutputReference
 ```

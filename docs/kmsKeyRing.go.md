@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_rin
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 kmskeyring.NewKmsKeyRing(scope Construct, id *string, config KmsKeyRingConfig) KmsKeyRing
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 kmskeyring.KmsKeyRing_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 kmskeyring.KmsKeyRing_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ kmskeyring.KmsKeyRing_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 kmskeyring.KmsKeyRing_IsTerraformResource(x interface{}) *bool
 ```
@@ -655,7 +655,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 &kmskeyring.KmsKeyRingConfig {
 	Connection: interface{},
@@ -669,7 +669,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
 	Name: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.kmsKeyRing.KmsKeyRingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.kmsKeyRing.KmsKeyRingTimeouts,
 }
 ```
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 &kmskeyring.KmsKeyRingTimeouts {
 	Create: *string,
@@ -884,7 +884,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/kmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmskeyring"
 
 kmskeyring.NewKmsKeyRingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsKeyRingTimeoutsOutputReference
 ```

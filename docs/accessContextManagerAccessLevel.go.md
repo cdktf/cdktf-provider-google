@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/access_cont
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevel(scope Construct, id *string, config AccessContextManagerAccessLevelConfig) AccessContextManagerAccessLevel
 ```
@@ -340,7 +340,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevel.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.AccessContextManagerAccessLevel_IsConstruct(x interface{}) *bool
 ```
@@ -372,7 +372,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevel.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.AccessContextManagerAccessLevel_IsTerraformElement(x interface{}) *bool
 ```
@@ -386,7 +386,7 @@ accesscontextmanageraccesslevel.AccessContextManagerAccessLevel_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevel.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.AccessContextManagerAccessLevel_IsTerraformResource(x interface{}) *bool
 ```
@@ -761,7 +761,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelBasic {
 	Conditions: interface{},
@@ -816,10 +816,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelBasicConditions {
-	DevicePolicy: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicy,
+	DevicePolicy: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicy,
 	IpSubnetworks: *[]*string,
 	Members: *[]*string,
 	Negate: interface{},
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicy {
 	AllowedDeviceManagementLevels: *[]*string,
@@ -1070,7 +1070,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraints {
 	OsType: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelConfig {
 	Connection: interface{},
@@ -1153,11 +1153,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanager
 	Name: *string,
 	Parent: *string,
 	Title: *string,
-	Basic: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasic,
-	Custom: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustom,
+	Basic: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasic,
+	Custom: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustom,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessLevel.AccessContextManagerAccessLevelTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelTimeouts,
 }
 ```
 
@@ -1375,10 +1375,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelCustom {
-	Expr: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustomExpr,
+	Expr: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustomExpr,
 }
 ```
 
@@ -1409,7 +1409,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustomExpr.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelCustomExpr {
 	Expression: *string,
@@ -1491,7 +1491,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 &accesscontextmanageraccesslevel.AccessContextManagerAccessLevelTimeouts {
 	Create: *string,
@@ -1553,7 +1553,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsList
 ```
@@ -1696,7 +1696,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AccessContextManagerAccessLevelBasicConditionsDevicePolicyOsConstraintsOutputReference
 ```
@@ -2043,7 +2043,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessLevelBasicConditionsDevicePolicyOutputReference
 ```
@@ -2479,7 +2479,7 @@ func InternalValue() AccessContextManagerAccessLevelBasicConditionsDevicePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AccessContextManagerAccessLevelBasicConditionsList
 ```
@@ -2622,7 +2622,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AccessContextManagerAccessLevelBasicConditionsOutputReference
 ```
@@ -3076,7 +3076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelBasicOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelBasicOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessLevelBasicOutputReference
 ```
@@ -3389,7 +3389,7 @@ func InternalValue() AccessContextManagerAccessLevelBasic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustomExprOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelCustomExprOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessLevelCustomExprOutputReference
 ```
@@ -3747,7 +3747,7 @@ func InternalValue() AccessContextManagerAccessLevelCustomExpr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelCustomOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelCustomOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessLevelCustomOutputReference
 ```
@@ -4031,7 +4031,7 @@ func InternalValue() AccessContextManagerAccessLevelCustom
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessLevel.AccessContextManagerAccessLevelTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesslevel"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesslevel"
 
 accesscontextmanageraccesslevel.NewAccessContextManagerAccessLevelTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessLevelTimeoutsOutputReference
 ```
