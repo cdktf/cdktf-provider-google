@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 iaptunneliambinding.NewIapTunnelIamBinding(scope Construct, id *string, config IapTunnelIamBindingConfig) IapTunnelIamBinding
 ```
@@ -300,7 +300,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 iaptunneliambinding.IapTunnelIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 iaptunneliambinding.IapTunnelIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ iaptunneliambinding.IapTunnelIamBinding_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 iaptunneliambinding.IapTunnelIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -666,7 +666,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 &iaptunneliambinding.IapTunnelIamBindingCondition {
 	Expression: *string,
@@ -726,7 +726,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 &iaptunneliambinding.IapTunnelIamBindingConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
 	Provisioners: *[]interface{},
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.iapTunnelIamBinding.IapTunnelIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapTunnelIamBinding.IapTunnelIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelIamBinding.IapTunnelIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iaptunneliambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iaptunneliambinding"
 
 iaptunneliambinding.NewIapTunnelIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapTunnelIamBindingConditionOutputReference
 ```

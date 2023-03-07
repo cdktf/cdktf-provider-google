@@ -532,6 +532,8 @@ def put_transfer_spec(
   object_conditions: StorageTransferJobTransferSpecObjectConditions = None,
   posix_data_sink: StorageTransferJobTransferSpecPosixDataSink = None,
   posix_data_source: StorageTransferJobTransferSpecPosixDataSource = None,
+  sink_agent_pool_name: str = None,
+  source_agent_pool_name: str = None,
   transfer_options: StorageTransferJobTransferSpecTransferOptions = None
 ) -> None
 ```
@@ -613,6 +615,26 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 posix_data_source block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#posix_data_source StorageTransferJob#posix_data_source}
+
+---
+
+###### `sink_agent_pool_name`<sup>Optional</sup> <a name="sink_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJob.putTransferSpec.parameter.sinkAgentPoolName"></a>
+
+- *Type:* str
+
+Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#sink_agent_pool_name StorageTransferJob#sink_agent_pool_name}
+
+---
+
+###### `source_agent_pool_name`<sup>Optional</sup> <a name="source_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJob.putTransferSpec.parameter.sourceAgentPoolName"></a>
+
+- *Type:* str
+
+Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#source_agent_pool_name StorageTransferJob#source_agent_pool_name}
 
 ---
 
@@ -1712,6 +1734,8 @@ storageTransferJob.StorageTransferJobTransferSpec(
   object_conditions: StorageTransferJobTransferSpecObjectConditions = None,
   posix_data_sink: StorageTransferJobTransferSpecPosixDataSink = None,
   posix_data_source: StorageTransferJobTransferSpecPosixDataSource = None,
+  sink_agent_pool_name: str = None,
+  source_agent_pool_name: str = None,
   transfer_options: StorageTransferJobTransferSpecTransferOptions = None
 )
 ```
@@ -1728,6 +1752,8 @@ storageTransferJob.StorageTransferJobTransferSpec(
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.objectConditions">object_conditions</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecObjectConditions">StorageTransferJobTransferSpecObjectConditions</a></code> | object_conditions block. |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.posixDataSink">posix_data_sink</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecPosixDataSink">StorageTransferJobTransferSpecPosixDataSink</a></code> | posix_data_sink block. |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.posixDataSource">posix_data_source</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecPosixDataSource">StorageTransferJobTransferSpecPosixDataSource</a></code> | posix_data_source block. |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.sinkAgentPoolName">sink_agent_pool_name</a></code> | <code>str</code> | Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used. |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.sourceAgentPoolName">source_agent_pool_name</a></code> | <code>str</code> | Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used. |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.transferOptions">transfer_options</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecTransferOptions">StorageTransferJobTransferSpecTransferOptions</a></code> | transfer_options block. |
 
 ---
@@ -1841,6 +1867,34 @@ posix_data_source: StorageTransferJobTransferSpecPosixDataSource
 posix_data_source block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#posix_data_source StorageTransferJob#posix_data_source}
+
+---
+
+##### `sink_agent_pool_name`<sup>Optional</sup> <a name="sink_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.sinkAgentPoolName"></a>
+
+```python
+sink_agent_pool_name: str
+```
+
+- *Type:* str
+
+Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#sink_agent_pool_name StorageTransferJob#sink_agent_pool_name}
+
+---
+
+##### `source_agent_pool_name`<sup>Optional</sup> <a name="source_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec.property.sourceAgentPoolName"></a>
+
+```python
+source_agent_pool_name: str
+```
+
+- *Type:* str
+
+Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#source_agent_pool_name StorageTransferJob#source_agent_pool_name}
 
 ---
 
@@ -7168,6 +7222,8 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetObjectConditions">reset_object_conditions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetPosixDataSink">reset_posix_data_sink</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetPosixDataSource">reset_posix_data_source</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetSinkAgentPoolName">reset_sink_agent_pool_name</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetSourceAgentPoolName">reset_source_agent_pool_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetTransferOptions">reset_transfer_options</a></code> | *No description.* |
 
 ---
@@ -7709,6 +7765,18 @@ def reset_posix_data_sink() -> None
 def reset_posix_data_source() -> None
 ```
 
+##### `reset_sink_agent_pool_name` <a name="reset_sink_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetSinkAgentPoolName"></a>
+
+```python
+def reset_sink_agent_pool_name() -> None
+```
+
+##### `reset_source_agent_pool_name` <a name="reset_source_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetSourceAgentPoolName"></a>
+
+```python
+def reset_source_agent_pool_name() -> None
+```
+
 ##### `reset_transfer_options` <a name="reset_transfer_options" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.resetTransferOptions"></a>
 
 ```python
@@ -7739,7 +7807,11 @@ def reset_transfer_options() -> None
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.objectConditionsInput">object_conditions_input</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecObjectConditions">StorageTransferJobTransferSpecObjectConditions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.posixDataSinkInput">posix_data_sink_input</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecPosixDataSink">StorageTransferJobTransferSpecPosixDataSink</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.posixDataSourceInput">posix_data_source_input</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecPosixDataSource">StorageTransferJobTransferSpecPosixDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sinkAgentPoolNameInput">sink_agent_pool_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sourceAgentPoolNameInput">source_agent_pool_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.transferOptionsInput">transfer_options_input</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecTransferOptions">StorageTransferJobTransferSpecTransferOptions</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sinkAgentPoolName">sink_agent_pool_name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sourceAgentPoolName">source_agent_pool_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpec">StorageTransferJobTransferSpec</a></code> | *No description.* |
 
 ---
@@ -7938,6 +8010,26 @@ posix_data_source_input: StorageTransferJobTransferSpecPosixDataSource
 
 ---
 
+##### `sink_agent_pool_name_input`<sup>Optional</sup> <a name="sink_agent_pool_name_input" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sinkAgentPoolNameInput"></a>
+
+```python
+sink_agent_pool_name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_agent_pool_name_input`<sup>Optional</sup> <a name="source_agent_pool_name_input" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sourceAgentPoolNameInput"></a>
+
+```python
+source_agent_pool_name_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `transfer_options_input`<sup>Optional</sup> <a name="transfer_options_input" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.transferOptionsInput"></a>
 
 ```python
@@ -7945,6 +8037,26 @@ transfer_options_input: StorageTransferJobTransferSpecTransferOptions
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecTransferOptions">StorageTransferJobTransferSpecTransferOptions</a>
+
+---
+
+##### `sink_agent_pool_name`<sup>Required</sup> <a name="sink_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sinkAgentPoolName"></a>
+
+```python
+sink_agent_pool_name: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_agent_pool_name`<sup>Required</sup> <a name="source_agent_pool_name" id="@cdktf/provider-google.storageTransferJob.StorageTransferJobTransferSpecOutputReference.property.sourceAgentPoolName"></a>
+
+```python
+source_agent_pool_name: str
+```
+
+- *Type:* str
 
 ---
 

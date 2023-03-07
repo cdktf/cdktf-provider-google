@@ -24,7 +24,7 @@ export interface ContainerAzureClusterConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#client ContainerAzureCluster#client}
   */
-  readonly client: string;
+  readonly client?: string;
   /**
   * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
   * 
@@ -68,6 +68,12 @@ export interface ContainerAzureClusterConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#authorization ContainerAzureCluster#authorization}
   */
   readonly authorization: ContainerAzureClusterAuthorization;
+  /**
+  * azure_services_authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#azure_services_authentication ContainerAzureCluster#azure_services_authentication}
+  */
+  readonly azureServicesAuthentication?: ContainerAzureClusterAzureServicesAuthentication;
   /**
   * control_plane block
   * 
@@ -325,6 +331,96 @@ export class ContainerAzureClusterAuthorizationOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get adminUsersInput() {
     return this._adminUsers.internalValue;
+  }
+}
+export interface ContainerAzureClusterAzureServicesAuthentication {
+  /**
+  * The Azure Active Directory Application ID for Authentication configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#application_id ContainerAzureCluster#application_id}
+  */
+  readonly applicationId: string;
+  /**
+  * The Azure Active Directory Tenant ID for Authentication configuration.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_azure_cluster#tenant_id ContainerAzureCluster#tenant_id}
+  */
+  readonly tenantId: string;
+}
+
+export function containerAzureClusterAzureServicesAuthenticationToTerraform(struct?: ContainerAzureClusterAzureServicesAuthenticationOutputReference | ContainerAzureClusterAzureServicesAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    application_id: cdktf.stringToTerraform(struct!.applicationId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+export class ContainerAzureClusterAzureServicesAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerAzureClusterAzureServicesAuthentication | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._applicationId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.applicationId = this._applicationId;
+    }
+    if (this._tenantId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAzureClusterAzureServicesAuthentication | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._applicationId = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._applicationId = value.applicationId;
+      this._tenantId = value.tenantId;
+    }
+  }
+
+  // application_id - computed: false, optional: false, required: true
+  private _applicationId?: string; 
+  public get applicationId() {
+    return this.getStringAttribute('application_id');
+  }
+  public set applicationId(value: string) {
+    this._applicationId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationIdInput() {
+    return this._applicationId;
+  }
+
+  // tenant_id - computed: false, optional: false, required: true
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId;
   }
 }
 export interface ContainerAzureClusterControlPlaneDatabaseEncryption {
@@ -1464,7 +1560,7 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_azure_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.55.0',
+        providerVersion: '4.56.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1485,6 +1581,7 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
     this._project = config.project;
     this._resourceGroupId = config.resourceGroupId;
     this._authorization.internalValue = config.authorization;
+    this._azureServicesAuthentication.internalValue = config.azureServicesAuthentication;
     this._controlPlane.internalValue = config.controlPlane;
     this._fleet.internalValue = config.fleet;
     this._networking.internalValue = config.networking;
@@ -1524,13 +1621,16 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
     return this._azureRegion;
   }
 
-  // client - computed: false, optional: false, required: true
+  // client - computed: false, optional: true, required: false
   private _client?: string; 
   public get client() {
     return this.getStringAttribute('client');
   }
   public set client(value: string) {
     this._client = value;
+  }
+  public resetClient() {
+    this._client = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get clientInput() {
@@ -1678,6 +1778,22 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
     return this._authorization.internalValue;
   }
 
+  // azure_services_authentication - computed: false, optional: true, required: false
+  private _azureServicesAuthentication = new ContainerAzureClusterAzureServicesAuthenticationOutputReference(this, "azure_services_authentication");
+  public get azureServicesAuthentication() {
+    return this._azureServicesAuthentication;
+  }
+  public putAzureServicesAuthentication(value: ContainerAzureClusterAzureServicesAuthentication) {
+    this._azureServicesAuthentication.internalValue = value;
+  }
+  public resetAzureServicesAuthentication() {
+    this._azureServicesAuthentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureServicesAuthenticationInput() {
+    return this._azureServicesAuthentication.internalValue;
+  }
+
   // control_plane - computed: false, optional: false, required: true
   private _controlPlane = new ContainerAzureClusterControlPlaneOutputReference(this, "control_plane");
   public get controlPlane() {
@@ -1749,6 +1865,7 @@ export class ContainerAzureCluster extends cdktf.TerraformResource {
       project: cdktf.stringToTerraform(this._project),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       authorization: containerAzureClusterAuthorizationToTerraform(this._authorization.internalValue),
+      azure_services_authentication: containerAzureClusterAzureServicesAuthenticationToTerraform(this._azureServicesAuthentication.internalValue),
       control_plane: containerAzureClusterControlPlaneToTerraform(this._controlPlane.internalValue),
       fleet: containerAzureClusterFleetToTerraform(this._fleet.internalValue),
       networking: containerAzureClusterNetworkingToTerraform(this._networking.internalValue),

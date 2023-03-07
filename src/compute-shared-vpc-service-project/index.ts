@@ -8,6 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMetaArguments {
   /**
+  * The deletion policy for the shared VPC service. Setting ABANDON allows the resource
+				to be abandoned rather than deleted. Possible values are: "ABANDON".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project#deletion_policy ComputeSharedVpcServiceProject#deletion_policy}
+  */
+  readonly deletionPolicy?: string;
+  /**
   * The ID of a host project to associate.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_service_project#host_project ComputeSharedVpcServiceProject#host_project}
@@ -162,7 +169,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_shared_vpc_service_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.55.0',
+        providerVersion: '4.56.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -173,6 +180,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._deletionPolicy = config.deletionPolicy;
     this._hostProject = config.hostProject;
     this._id = config.id;
     this._serviceProject = config.serviceProject;
@@ -182,6 +190,22 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // deletion_policy - computed: false, optional: true, required: false
+  private _deletionPolicy?: string; 
+  public get deletionPolicy() {
+    return this.getStringAttribute('deletion_policy');
+  }
+  public set deletionPolicy(value: string) {
+    this._deletionPolicy = value;
+  }
+  public resetDeletionPolicy() {
+    this._deletionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionPolicyInput() {
+    return this._deletionPolicy;
+  }
 
   // host_project - computed: false, optional: false, required: true
   private _hostProject?: string; 
@@ -247,6 +271,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      deletion_policy: cdktf.stringToTerraform(this._deletionPolicy),
       host_project: cdktf.stringToTerraform(this._hostProject),
       id: cdktf.stringToTerraform(this._id),
       service_project: cdktf.stringToTerraform(this._serviceProject),

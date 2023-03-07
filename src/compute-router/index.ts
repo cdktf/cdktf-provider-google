@@ -544,7 +544,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.55.0',
+        providerVersion: '4.56.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

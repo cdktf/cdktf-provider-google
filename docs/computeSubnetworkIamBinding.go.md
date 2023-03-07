@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 computesubnetworkiambinding.NewComputeSubnetworkIamBinding(scope Construct, id *string, config ComputeSubnetworkIamBindingConfig) ComputeSubnetworkIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 computesubnetworkiambinding.ComputeSubnetworkIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 computesubnetworkiambinding.ComputeSubnetworkIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ computesubnetworkiambinding.ComputeSubnetworkIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 computesubnetworkiambinding.ComputeSubnetworkIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 &computesubnetworkiambinding.ComputeSubnetworkIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 &computesubnetworkiambinding.ComputeSubnetworkIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiam
 	Members: *[]*string,
 	Role: *string,
 	Subnetwork: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSubnetworkIamBinding.ComputeSubnetworkIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeSubnetworkIamBinding.ComputeSubnetworkIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamBinding.ComputeSubnetworkIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiambinding"
 
 computesubnetworkiambinding.NewComputeSubnetworkIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSubnetworkIamBindingConditionOutputReference
 ```

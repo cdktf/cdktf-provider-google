@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPool(scope Construct, id *string, config CloudbuildWorkerPoolConfig) CloudbuildWorkerPool
 ```
@@ -354,7 +354,7 @@ func ResetWorkerConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsConstruct(x interface{}) *bool
 ```
@@ -386,7 +386,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -400,7 +400,7 @@ cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -852,7 +852,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolConfig {
 	Connection: interface{},
@@ -867,10 +867,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool
 	Annotations: *map[string]*string,
 	DisplayName: *string,
 	Id: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts,
-	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts,
+	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig,
 }
 ```
 
@@ -1099,10 +1099,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolNetworkConfig {
 	PeeredNetwork: *string,
+	PeeredNetworkIpRange: *string,
 }
 ```
 
@@ -1111,6 +1112,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig.property.peeredNetwork">PeeredNetwork</a></code> | <code>*string</code> | Required. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig.property.peeredNetworkIpRange">PeeredNetworkIpRange</a></code> | <code>*string</code> | Optional. |
 
 ---
 
@@ -1130,12 +1132,28 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `PeeredNetworkIpRange`<sup>Optional</sup> <a name="PeeredNetworkIpRange" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig.property.peeredNetworkIpRange"></a>
+
+```go
+PeeredNetworkIpRange *string
+```
+
+- *Type:* *string
+
+Optional.
+
+Immutable. Subnet IP range within the peered network. This is specified in CIDR notation with a slash and the subnet prefix size. You can optionally specify an IP address before the subnet prefix value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a prefix size of 29 bits. `/16` would specify a prefix size of 16 bits, with an automatically determined IP within the peered VPC. If unspecified, a value of `/24` will be used.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_worker_pool#peered_network_ip_range CloudbuildWorkerPool#peered_network_ip_range}
+
+---
+
 ### CloudbuildWorkerPoolTimeouts <a name="CloudbuildWorkerPoolTimeouts" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts"></a>
 
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolTimeouts {
 	Create: *string,
@@ -1195,7 +1213,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolWorkerConfig {
 	DiskSizeGb: *f64,
@@ -1267,7 +1285,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolNetworkConfigOutputReference
 ```
@@ -1312,6 +1330,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.resetPeeredNetworkIpRange">ResetPeeredNetworkIpRange</a></code> | *No description.* |
 
 ---
 
@@ -1465,6 +1484,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetPeeredNetworkIpRange` <a name="ResetPeeredNetworkIpRange" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.resetPeeredNetworkIpRange"></a>
+
+```go
+func ResetPeeredNetworkIpRange()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1473,7 +1498,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetworkInput">PeeredNetworkInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetworkIpRangeInput">PeeredNetworkIpRangeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetwork">PeeredNetwork</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetworkIpRange">PeeredNetworkIpRange</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig">CloudbuildWorkerPoolNetworkConfig</a></code> | *No description.* |
 
 ---
@@ -1512,10 +1539,30 @@ func PeeredNetworkInput() *string
 
 ---
 
+##### `PeeredNetworkIpRangeInput`<sup>Optional</sup> <a name="PeeredNetworkIpRangeInput" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetworkIpRangeInput"></a>
+
+```go
+func PeeredNetworkIpRangeInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `PeeredNetwork`<sup>Required</sup> <a name="PeeredNetwork" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetwork"></a>
 
 ```go
 func PeeredNetwork() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PeeredNetworkIpRange`<sup>Required</sup> <a name="PeeredNetworkIpRange" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.property.peeredNetworkIpRange"></a>
+
+```go
+func PeeredNetworkIpRange() *string
 ```
 
 - *Type:* *string
@@ -1538,7 +1585,7 @@ func InternalValue() CloudbuildWorkerPoolNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolTimeoutsOutputReference
 ```
@@ -1874,7 +1921,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolWorkerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolWorkerConfigOutputReference
 ```
