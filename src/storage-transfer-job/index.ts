@@ -1804,6 +1804,18 @@ export class StorageTransferJobTransferSpecTransferOptionsOutputReference extend
 }
 export interface StorageTransferJobTransferSpec {
   /**
+  * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#sink_agent_pool_name StorageTransferJob#sink_agent_pool_name}
+  */
+  readonly sinkAgentPoolName?: string;
+  /**
+  * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#source_agent_pool_name StorageTransferJob#source_agent_pool_name}
+  */
+  readonly sourceAgentPoolName?: string;
+  /**
   * aws_s3_data_source block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#aws_s3_data_source StorageTransferJob#aws_s3_data_source}
@@ -1865,6 +1877,8 @@ export function storageTransferJobTransferSpecToTerraform(struct?: StorageTransf
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    sink_agent_pool_name: cdktf.stringToTerraform(struct!.sinkAgentPoolName),
+    source_agent_pool_name: cdktf.stringToTerraform(struct!.sourceAgentPoolName),
     aws_s3_data_source: storageTransferJobTransferSpecAwsS3DataSourceToTerraform(struct!.awsS3DataSource),
     azure_blob_storage_data_source: storageTransferJobTransferSpecAzureBlobStorageDataSourceToTerraform(struct!.azureBlobStorageDataSource),
     gcs_data_sink: storageTransferJobTransferSpecGcsDataSinkToTerraform(struct!.gcsDataSink),
@@ -1891,6 +1905,14 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   public get internalValue(): StorageTransferJobTransferSpec | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
+    if (this._sinkAgentPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sinkAgentPoolName = this._sinkAgentPoolName;
+    }
+    if (this._sourceAgentPoolName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceAgentPoolName = this._sourceAgentPoolName;
+    }
     if (this._awsS3DataSource?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.awsS3DataSource = this._awsS3DataSource?.internalValue;
@@ -1933,6 +1955,8 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
   public set internalValue(value: StorageTransferJobTransferSpec | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
+      this._sinkAgentPoolName = undefined;
+      this._sourceAgentPoolName = undefined;
       this._awsS3DataSource.internalValue = undefined;
       this._azureBlobStorageDataSource.internalValue = undefined;
       this._gcsDataSink.internalValue = undefined;
@@ -1945,6 +1969,8 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
+      this._sinkAgentPoolName = value.sinkAgentPoolName;
+      this._sourceAgentPoolName = value.sourceAgentPoolName;
       this._awsS3DataSource.internalValue = value.awsS3DataSource;
       this._azureBlobStorageDataSource.internalValue = value.azureBlobStorageDataSource;
       this._gcsDataSink.internalValue = value.gcsDataSink;
@@ -1955,6 +1981,38 @@ export class StorageTransferJobTransferSpecOutputReference extends cdktf.Complex
       this._posixDataSource.internalValue = value.posixDataSource;
       this._transferOptions.internalValue = value.transferOptions;
     }
+  }
+
+  // sink_agent_pool_name - computed: true, optional: true, required: false
+  private _sinkAgentPoolName?: string; 
+  public get sinkAgentPoolName() {
+    return this.getStringAttribute('sink_agent_pool_name');
+  }
+  public set sinkAgentPoolName(value: string) {
+    this._sinkAgentPoolName = value;
+  }
+  public resetSinkAgentPoolName() {
+    this._sinkAgentPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sinkAgentPoolNameInput() {
+    return this._sinkAgentPoolName;
+  }
+
+  // source_agent_pool_name - computed: true, optional: true, required: false
+  private _sourceAgentPoolName?: string; 
+  public get sourceAgentPoolName() {
+    return this.getStringAttribute('source_agent_pool_name');
+  }
+  public set sourceAgentPoolName(value: string) {
+    this._sourceAgentPoolName = value;
+  }
+  public resetSourceAgentPoolName() {
+    this._sourceAgentPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceAgentPoolNameInput() {
+    return this._sourceAgentPoolName;
   }
 
   // aws_s3_data_source - computed: false, optional: true, required: false
@@ -2128,7 +2186,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.55.0',
+        providerVersion: '4.56.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

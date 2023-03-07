@@ -70,6 +70,12 @@ export interface CloudbuildWorkerPoolNetworkConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_worker_pool#peered_network CloudbuildWorkerPool#peered_network}
   */
   readonly peeredNetwork: string;
+  /**
+  * Optional. Immutable. Subnet IP range within the peered network. This is specified in CIDR notation with a slash and the subnet prefix size. You can optionally specify an IP address before the subnet prefix value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a prefix size of 29 bits. `/16` would specify a prefix size of 16 bits, with an automatically determined IP within the peered VPC. If unspecified, a value of `/24` will be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudbuild_worker_pool#peered_network_ip_range CloudbuildWorkerPool#peered_network_ip_range}
+  */
+  readonly peeredNetworkIpRange?: string;
 }
 
 export function cloudbuildWorkerPoolNetworkConfigToTerraform(struct?: CloudbuildWorkerPoolNetworkConfigOutputReference | CloudbuildWorkerPoolNetworkConfig): any {
@@ -79,6 +85,7 @@ export function cloudbuildWorkerPoolNetworkConfigToTerraform(struct?: Cloudbuild
   }
   return {
     peered_network: cdktf.stringToTerraform(struct!.peeredNetwork),
+    peered_network_ip_range: cdktf.stringToTerraform(struct!.peeredNetworkIpRange),
   }
 }
 
@@ -100,6 +107,10 @@ export class CloudbuildWorkerPoolNetworkConfigOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.peeredNetwork = this._peeredNetwork;
     }
+    if (this._peeredNetworkIpRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.peeredNetworkIpRange = this._peeredNetworkIpRange;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -107,10 +118,12 @@ export class CloudbuildWorkerPoolNetworkConfigOutputReference extends cdktf.Comp
     if (value === undefined) {
       this.isEmptyObject = false;
       this._peeredNetwork = undefined;
+      this._peeredNetworkIpRange = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._peeredNetwork = value.peeredNetwork;
+      this._peeredNetworkIpRange = value.peeredNetworkIpRange;
     }
   }
 
@@ -125,6 +138,22 @@ export class CloudbuildWorkerPoolNetworkConfigOutputReference extends cdktf.Comp
   // Temporarily expose input value. Use with caution.
   public get peeredNetworkInput() {
     return this._peeredNetwork;
+  }
+
+  // peered_network_ip_range - computed: false, optional: true, required: false
+  private _peeredNetworkIpRange?: string; 
+  public get peeredNetworkIpRange() {
+    return this.getStringAttribute('peered_network_ip_range');
+  }
+  public set peeredNetworkIpRange(value: string) {
+    this._peeredNetworkIpRange = value;
+  }
+  public resetPeeredNetworkIpRange() {
+    this._peeredNetworkIpRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeredNetworkIpRangeInput() {
+    return this._peeredNetworkIpRange;
   }
 }
 export interface CloudbuildWorkerPoolTimeouts {
@@ -408,7 +437,7 @@ export class CloudbuildWorkerPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_worker_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.55.0',
+        providerVersion: '4.56.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
