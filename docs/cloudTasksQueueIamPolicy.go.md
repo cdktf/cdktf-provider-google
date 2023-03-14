@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueueIamPolicy.CloudTasksQueueIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudtasksqueueiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiampolicy"
 
 cloudtasksqueueiampolicy.NewCloudTasksQueueIamPolicy(scope Construct, id *string, config CloudTasksQueueIamPolicyConfig) CloudTasksQueueIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudTasksQueueIamPolicy.CloudTasksQueueIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudtasksqueueiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiampolicy"
 
 cloudtasksqueueiampolicy.CloudTasksQueueIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudTasksQueueIamPolicy.CloudTasksQueueIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudtasksqueueiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiampolicy"
 
 cloudtasksqueueiampolicy.CloudTasksQueueIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ cloudtasksqueueiampolicy.CloudTasksQueueIamPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudTasksQueueIamPolicy.CloudTasksQueueIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudtasksqueueiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiampolicy"
 
 cloudtasksqueueiampolicy.CloudTasksQueueIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueueIamPolicy.CloudTasksQueueIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudtasksqueueiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiampolicy"
 
 &cloudtasksqueueiampolicy.CloudTasksQueueIamPolicyConfig {
 	Connection: interface{},

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfuncti
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 cloudfunctionsfunctioniammember.NewCloudfunctionsFunctionIamMember(scope Construct, id *string, config CloudfunctionsFunctionIamMemberConfig) CloudfunctionsFunctionIamMember
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMember_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 &cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 &cloudfunctionsfunctioniammember.CloudfunctionsFunctionIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfuncti
 	CloudFunction: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunctionIamMember.CloudfunctionsFunctionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudfunctionsfunctioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniammember"
 
 cloudfunctionsfunctioniammember.NewCloudfunctionsFunctionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudfunctionsFunctionIamMemberConditionOutputReference
 ```

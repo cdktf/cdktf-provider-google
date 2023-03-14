@@ -197,7 +197,7 @@ export class ProjectDefaultServiceAccounts extends cdktf.TerraformResource {
       terraformResourceType: 'google_project_default_service_accounts',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

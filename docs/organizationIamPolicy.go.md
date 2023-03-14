@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/organizatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationIamPolicy.OrganizationIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiampolicy"
 
 organizationiampolicy.NewOrganizationIamPolicy(scope Construct, id *string, config OrganizationIamPolicyConfig) OrganizationIamPolicy
 ```
@@ -273,7 +273,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.organizationIamPolicy.OrganizationIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiampolicy"
 
 organizationiampolicy.OrganizationIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +305,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.organizationIamPolicy.OrganizationIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiampolicy"
 
 organizationiampolicy.OrganizationIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ organizationiampolicy.OrganizationIamPolicy_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.organizationIamPolicy.OrganizationIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiampolicy"
 
 organizationiampolicy.OrganizationIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationIamPolicy.OrganizationIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationiampolicy"
 
 &organizationiampolicy.OrganizationIamPolicyConfig {
 	Connection: interface{},

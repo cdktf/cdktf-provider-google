@@ -58,7 +58,7 @@ export class GkeBackupBackupPlanIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_backup_backup_plan_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

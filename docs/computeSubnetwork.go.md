@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.NewComputeSubnetwork(scope Construct, id *string, config ComputeSubnetworkConfig) ComputeSubnetwork
 ```
@@ -396,7 +396,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.ComputeSubnetwork_IsConstruct(x interface{}) *bool
 ```
@@ -428,7 +428,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.ComputeSubnetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -442,7 +442,7 @@ computesubnetwork.ComputeSubnetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.ComputeSubnetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -1059,7 +1059,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 &computesubnetwork.ComputeSubnetworkConfig {
 	Connection: interface{},
@@ -1075,7 +1075,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
 	Description: *string,
 	Id: *string,
 	Ipv6AccessType: *string,
-	LogConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSubnetwork.ComputeSubnetworkLogConfig,
+	LogConfig: github.com/cdktf/cdktf-provider-google-go/google.computeSubnetwork.ComputeSubnetworkLogConfig,
 	PrivateIpGoogleAccess: interface{},
 	PrivateIpv6GoogleAccess: *string,
 	Project: *string,
@@ -1084,7 +1084,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
 	Role: *string,
 	SecondaryIpRange: interface{},
 	StackType: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSubnetwork.ComputeSubnetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeSubnetwork.ComputeSubnetworkTimeouts,
 }
 ```
 
@@ -1459,7 +1459,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 &computesubnetwork.ComputeSubnetworkLogConfig {
 	AggregationInterval: *string,
@@ -1575,7 +1575,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkSecondaryIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 &computesubnetwork.ComputeSubnetworkSecondaryIpRange {
 	IpCidrRange: *string,
@@ -1621,7 +1621,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 &computesubnetwork.ComputeSubnetworkTimeouts {
 	Create: *string,
@@ -1683,7 +1683,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkLogConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.NewComputeSubnetworkLogConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSubnetworkLogConfigOutputReference
 ```
@@ -2077,7 +2077,7 @@ func InternalValue() ComputeSubnetworkLogConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkSecondaryIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.NewComputeSubnetworkSecondaryIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeSubnetworkSecondaryIpRangeList
 ```
@@ -2220,7 +2220,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkSecondaryIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.NewComputeSubnetworkSecondaryIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeSubnetworkSecondaryIpRangeOutputReference
 ```
@@ -2545,7 +2545,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetwork.ComputeSubnetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetwork"
 
 computesubnetwork.NewComputeSubnetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSubnetworkTimeoutsOutputReference
 ```

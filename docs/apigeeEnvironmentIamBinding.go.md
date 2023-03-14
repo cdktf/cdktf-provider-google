@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_envi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 apigeeenvironmentiambinding.NewApigeeEnvironmentIamBinding(scope Construct, id *string, config ApigeeEnvironmentIamBindingConfig) ApigeeEnvironmentIamBinding
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 apigeeenvironmentiambinding.ApigeeEnvironmentIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 apigeeenvironmentiambinding.ApigeeEnvironmentIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ apigeeenvironmentiambinding.ApigeeEnvironmentIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 apigeeenvironmentiambinding.ApigeeEnvironmentIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 &apigeeenvironmentiambinding.ApigeeEnvironmentIamBindingCondition {
 	Expression: *string,
@@ -741,7 +741,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 &apigeeenvironmentiambinding.ApigeeEnvironmentIamBindingConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiam
 	Members: *[]*string,
 	OrgId: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -934,7 +934,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvironmentIamBinding.ApigeeEnvironmentIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeeenvironmentiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvironmentiambinding"
 
 apigeeenvironmentiambinding.NewApigeeEnvironmentIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEnvironmentIamBindingConditionOutputReference
 ```

@@ -566,7 +566,7 @@ export class DialogflowCxWebhook extends cdktf.TerraformResource {
       terraformResourceType: 'google_dialogflow_cx_webhook',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_co
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 bigqueryconnectioniambinding.NewBigqueryConnectionIamBinding(scope Construct, id *string, config BigqueryConnectionIamBindingConfig) BigqueryConnectionIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 bigqueryconnectioniambinding.BigqueryConnectionIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 bigqueryconnectioniambinding.BigqueryConnectionIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ bigqueryconnectioniambinding.BigqueryConnectionIamBinding_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 bigqueryconnectioniambinding.BigqueryConnectionIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 &bigqueryconnectioniambinding.BigqueryConnectionIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 &bigqueryconnectioniambinding.BigqueryConnectionIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectionia
 	ConnectionId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryConnectionIamBinding.BigqueryConnectionIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigqueryConnectionIamBinding.BigqueryConnectionIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnectionIamBinding.BigqueryConnectionIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryconnectioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniambinding"
 
 bigqueryconnectioniambinding.NewBigqueryConnectionIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryConnectionIamBindingConditionOutputReference
 ```

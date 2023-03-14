@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_obj
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageObjectSignedUrl.DataGoogleStorageObjectSignedUrl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestorageobjectsignedurl"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestorageobjectsignedurl"
 
 datagooglestorageobjectsignedurl.NewDataGoogleStorageObjectSignedUrl(scope Construct, id *string, config DataGoogleStorageObjectSignedUrlConfig) DataGoogleStorageObjectSignedUrl
 ```
@@ -315,7 +315,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleStorageObjectSignedUrl.DataGoogleStorageObjectSignedUrl.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestorageobjectsignedurl"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestorageobjectsignedurl"
 
 datagooglestorageobjectsignedurl.DataGoogleStorageObjectSignedUrl_IsConstruct(x interface{}) *bool
 ```
@@ -347,7 +347,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleStorageObjectSignedUrl.DataGoogleStorageObjectSignedUrl.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestorageobjectsignedurl"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestorageobjectsignedurl"
 
 datagooglestorageobjectsignedurl.DataGoogleStorageObjectSignedUrl_IsTerraformElement(x interface{}) *bool
 ```
@@ -361,7 +361,7 @@ datagooglestorageobjectsignedurl.DataGoogleStorageObjectSignedUrl_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleStorageObjectSignedUrl.DataGoogleStorageObjectSignedUrl.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestorageobjectsignedurl"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestorageobjectsignedurl"
 
 datagooglestorageobjectsignedurl.DataGoogleStorageObjectSignedUrl_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -747,7 +747,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageObjectSignedUrl.DataGoogleStorageObjectSignedUrlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestorageobjectsignedurl"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestorageobjectsignedurl"
 
 &datagooglestorageobjectsignedurl.DataGoogleStorageObjectSignedUrlConfig {
 	Connection: interface{},

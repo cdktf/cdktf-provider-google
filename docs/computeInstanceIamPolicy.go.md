@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ins
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceIamPolicy.ComputeInstanceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiampolicy"
 
 computeinstanceiampolicy.NewComputeInstanceIamPolicy(scope Construct, id *string, config ComputeInstanceIamPolicyConfig) ComputeInstanceIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceIamPolicy.ComputeInstanceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiampolicy"
 
 computeinstanceiampolicy.ComputeInstanceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceIamPolicy.ComputeInstanceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiampolicy"
 
 computeinstanceiampolicy.ComputeInstanceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ computeinstanceiampolicy.ComputeInstanceIamPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceIamPolicy.ComputeInstanceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiampolicy"
 
 computeinstanceiampolicy.ComputeInstanceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceIamPolicy.ComputeInstanceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiampolicy"
 
 &computeinstanceiampolicy.ComputeInstanceIamPolicyConfig {
 	Connection: interface{},

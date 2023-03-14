@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_locati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 tagslocationtagbinding.NewTagsLocationTagBinding(scope Construct, id *string, config TagsLocationTagBindingConfig) TagsLocationTagBinding
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 tagslocationtagbinding.TagsLocationTagBinding_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 tagslocationtagbinding.TagsLocationTagBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ tagslocationtagbinding.TagsLocationTagBinding_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 tagslocationtagbinding.TagsLocationTagBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -666,7 +666,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 &tagslocationtagbinding.TagsLocationTagBindingConfig {
 	Connection: interface{},
@@ -680,7 +680,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbindi
 	TagValue: *string,
 	Id: *string,
 	Location: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.tagsLocationTagBinding.TagsLocationTagBindingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.tagsLocationTagBinding.TagsLocationTagBindingTimeouts,
 }
 ```
 
@@ -849,7 +849,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 &tagslocationtagbinding.TagsLocationTagBindingTimeouts {
 	Create: *string,
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsLocationTagBinding.TagsLocationTagBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagslocationtagbinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagslocationtagbinding"
 
 tagslocationtagbinding.NewTagsLocationTagBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TagsLocationTagBindingTimeoutsOutputReference
 ```

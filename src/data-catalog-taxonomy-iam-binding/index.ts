@@ -181,7 +181,7 @@ export class DataCatalogTaxonomyIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_taxonomy_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
