@@ -1988,7 +1988,7 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
     }
   }
 
-  // disable_connection_drain_on_failover - computed: false, optional: true, required: false
+  // disable_connection_drain_on_failover - computed: true, optional: true, required: false
   private _disableConnectionDrainOnFailover?: boolean | cdktf.IResolvable; 
   public get disableConnectionDrainOnFailover() {
     return this.getBooleanAttribute('disable_connection_drain_on_failover');
@@ -2004,7 +2004,7 @@ export class ComputeRegionBackendServiceFailoverPolicyOutputReference extends cd
     return this._disableConnectionDrainOnFailover;
   }
 
-  // drop_traffic_if_unhealthy - computed: false, optional: true, required: false
+  // drop_traffic_if_unhealthy - computed: true, optional: true, required: false
   private _dropTrafficIfUnhealthy?: boolean | cdktf.IResolvable; 
   public get dropTrafficIfUnhealthy() {
     return this.getBooleanAttribute('drop_traffic_if_unhealthy');
@@ -2958,7 +2958,7 @@ export class ComputeRegionBackendService extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_region_backend_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

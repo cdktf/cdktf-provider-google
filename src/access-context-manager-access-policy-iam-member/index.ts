@@ -173,7 +173,7 @@ export class AccessContextManagerAccessPolicyIamMember extends cdktf.TerraformRe
       terraformResourceType: 'google_access_context_manager_access_policy_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

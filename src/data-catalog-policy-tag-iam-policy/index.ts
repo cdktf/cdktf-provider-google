@@ -50,7 +50,7 @@ export class DataCatalogPolicyTagIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_policy_tag_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.56.0',
+        providerVersion: '4.57.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
