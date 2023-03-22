@@ -952,7 +952,7 @@ const computeAddressConfig: computeAddress.ComputeAddressConfig = { ... }
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.networkTier">networkTier</a></code> | <code>string</code> | The networking tier used for configuring this address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.prefixLength">prefixLength</a></code> | <code>number</code> | The prefix length if the resource represents an IP range. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#project ComputeAddress#project}. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.purpose">purpose</a></code> | <code>string</code> | The purpose of this resource, which can be one of the following values:. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.purpose">purpose</a></code> | <code>string</code> | The purpose of this resource, which can be one of the following values. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.region">region</a></code> | <code>string</code> | The Region in which the created address should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.subnetwork">subnetwork</a></code> | <code>string</code> | The URL of the subnetwork in which to reserve the address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts">ComputeAddressTimeouts</a></code> | timeouts block. |
@@ -1181,23 +1181,24 @@ public readonly purpose: string;
 
 - *Type:* string
 
-The purpose of this resource, which can be one of the following values:.
+The purpose of this resource, which can be one of the following values.
 
 GCE_ENDPOINT for addresses that are used by VM instances, alias IP
-ranges, internal load balancers, and similar resources.
+ranges, load balancers, and similar resources.
 
 SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 
 VPC_PEERING for addresses that are reserved for VPC peer networks.
 
-IPSEC_INTERCONNECT for addresses created from a private IP range
-that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
-Interconnect configuration. These addresses are regional resources.
+IPSEC_INTERCONNECT for addresses created from a private IP range that
+are reserved for a VLAN attachment in an HA VPN over Cloud Interconnect
+configuration. These addresses are regional resources.
 
-PRIVATE_SERVICE_CONNECT for a private network address that is used
-to configure Private Service Connect. Only global internal addresses
-can use this purpose.
+PRIVATE_SERVICE_CONNECT for a private network address that is used to
+configure Private Service Connect. Only global internal addresses can use
+this purpose.
+
 
 This should only be set when using an Internal address.
 

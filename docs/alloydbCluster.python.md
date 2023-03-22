@@ -468,25 +468,15 @@ def interpolation_for_attribute(
 
 ```python
 def put_automated_backup_policy(
-  weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule,
   backup_window: str = None,
   enabled: typing.Union[bool, IResolvable] = None,
   labels: typing.Mapping[str] = None,
   location: str = None,
   quantity_based_retention: AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention = None,
-  time_based_retention: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention = None
+  time_based_retention: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention = None,
+  weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule = None
 ) -> None
 ```
-
-###### `weekly_schedule`<sup>Required</sup> <a name="weekly_schedule" id="@cdktf/provider-google.alloydbCluster.AlloydbCluster.putAutomatedBackupPolicy.parameter.weeklySchedule"></a>
-
-- *Type:* <a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a>
-
-weekly_schedule block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
-
----
 
 ###### `backup_window`<sup>Optional</sup> <a name="backup_window" id="@cdktf/provider-google.alloydbCluster.AlloydbCluster.putAutomatedBackupPolicy.parameter.backupWindow"></a>
 
@@ -553,6 +543,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 time_based_retention block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#time_based_retention AlloydbCluster#time_based_retention}
+
+---
+
+###### `weekly_schedule`<sup>Optional</sup> <a name="weekly_schedule" id="@cdktf/provider-google.alloydbCluster.AlloydbCluster.putAutomatedBackupPolicy.parameter.weeklySchedule"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a>
+
+weekly_schedule block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
 
 ---
 
@@ -1209,13 +1209,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_google import alloydb_cluster
 
 alloydbCluster.AlloydbClusterAutomatedBackupPolicy(
-  weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule,
   backup_window: str = None,
   enabled: typing.Union[bool, IResolvable] = None,
   labels: typing.Mapping[str] = None,
   location: str = None,
   quantity_based_retention: AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention = None,
-  time_based_retention: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention = None
+  time_based_retention: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention = None,
+  weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule = None
 )
 ```
 
@@ -1223,27 +1223,13 @@ alloydbCluster.AlloydbClusterAutomatedBackupPolicy(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.weeklySchedule">weekly_schedule</a></code> | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a></code> | weekly_schedule block. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.backupWindow">backup_window</a></code> | <code>str</code> | The length of the time window during which a backup can be taken. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether automated backups are enabled. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Labels to apply to backups created using this configuration. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.location">location</a></code> | <code>str</code> | The location where the backup will be stored. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.quantityBasedRetention">quantity_based_retention</a></code> | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention">AlloydbClusterAutomatedBackupPolicyQuantityBasedRetention</a></code> | quantity_based_retention block. |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.timeBasedRetention">time_based_retention</a></code> | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyTimeBasedRetention">AlloydbClusterAutomatedBackupPolicyTimeBasedRetention</a></code> | time_based_retention block. |
-
----
-
-##### `weekly_schedule`<sup>Required</sup> <a name="weekly_schedule" id="@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.weeklySchedule"></a>
-
-```python
-weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule
-```
-
-- *Type:* <a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a>
-
-weekly_schedule block.
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
+| <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.weeklySchedule">weekly_schedule</a></code> | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a></code> | weekly_schedule block. |
 
 ---
 
@@ -1336,6 +1322,20 @@ time_based_retention: AlloydbClusterAutomatedBackupPolicyTimeBasedRetention
 time_based_retention block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#time_based_retention AlloydbCluster#time_based_retention}
+
+---
+
+##### `weekly_schedule`<sup>Optional</sup> <a name="weekly_schedule" id="@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicy.property.weeklySchedule"></a>
+
+```python
+weekly_schedule: AlloydbClusterAutomatedBackupPolicyWeeklySchedule
+```
+
+- *Type:* <a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyWeeklySchedule">AlloydbClusterAutomatedBackupPolicyWeeklySchedule</a>
+
+weekly_schedule block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_cluster#weekly_schedule AlloydbCluster#weekly_schedule}
 
 ---
 
@@ -2006,6 +2006,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyOutputReference.resetLocation">reset_location</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyOutputReference.resetQuantityBasedRetention">reset_quantity_based_retention</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyOutputReference.resetTimeBasedRetention">reset_time_based_retention</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyOutputReference.resetWeeklySchedule">reset_weekly_schedule</a></code> | *No description.* |
 
 ---
 
@@ -2282,6 +2283,12 @@ def reset_quantity_based_retention() -> None
 
 ```python
 def reset_time_based_retention() -> None
+```
+
+##### `reset_weekly_schedule` <a name="reset_weekly_schedule" id="@cdktf/provider-google.alloydbCluster.AlloydbClusterAutomatedBackupPolicyOutputReference.resetWeeklySchedule"></a>
+
+```python
+def reset_weekly_schedule() -> None
 ```
 
 

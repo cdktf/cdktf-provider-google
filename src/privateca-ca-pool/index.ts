@@ -1542,6 +1542,326 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsageOutputReference 
     return this._unknownExtendedKeyUsages.internalValue;
   }
 }
+export interface PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints {
+  /**
+  * Indicates whether or not the name constraints are marked critical.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#critical PrivatecaCaPool#critical}
+  */
+  readonly critical: boolean | cdktf.IResolvable;
+  /**
+  * Contains excluded DNS names. Any DNS name that can be
+constructed by simply adding zero or more labels to
+the left-hand side of the name satisfies the name constraint.
+For example, 'example.com', 'www.example.com', 'www.sub.example.com'
+would satisfy 'example.com' while 'example1.com' does not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#excluded_dns_names PrivatecaCaPool#excluded_dns_names}
+  */
+  readonly excludedDnsNames?: string[];
+  /**
+  * Contains the excluded email addresses. The value can be a particular
+email address, a hostname to indicate all email addresses on that host or
+a domain with a leading period (e.g. '.example.com') to indicate
+all email addresses in that domain.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#excluded_email_addresses PrivatecaCaPool#excluded_email_addresses}
+  */
+  readonly excludedEmailAddresses?: string[];
+  /**
+  * Contains the excluded IP ranges. For IPv4 addresses, the ranges
+are expressed using CIDR notation as specified in RFC 4632.
+For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+addresses.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#excluded_ip_ranges PrivatecaCaPool#excluded_ip_ranges}
+  */
+  readonly excludedIpRanges?: string[];
+  /**
+  * Contains the excluded URIs that apply to the host part of the name.
+The value can be a hostname or a domain with a
+leading period (like '.example.com')
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#excluded_uris PrivatecaCaPool#excluded_uris}
+  */
+  readonly excludedUris?: string[];
+  /**
+  * Contains permitted DNS names. Any DNS name that can be
+constructed by simply adding zero or more labels to
+the left-hand side of the name satisfies the name constraint.
+For example, 'example.com', 'www.example.com', 'www.sub.example.com'
+would satisfy 'example.com' while 'example1.com' does not.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#permitted_dns_names PrivatecaCaPool#permitted_dns_names}
+  */
+  readonly permittedDnsNames?: string[];
+  /**
+  * Contains the permitted email addresses. The value can be a particular
+email address, a hostname to indicate all email addresses on that host or
+a domain with a leading period (e.g. '.example.com') to indicate
+all email addresses in that domain.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#permitted_email_addresses PrivatecaCaPool#permitted_email_addresses}
+  */
+  readonly permittedEmailAddresses?: string[];
+  /**
+  * Contains the permitted IP ranges. For IPv4 addresses, the ranges
+are expressed using CIDR notation as specified in RFC 4632.
+For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+addresses.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#permitted_ip_ranges PrivatecaCaPool#permitted_ip_ranges}
+  */
+  readonly permittedIpRanges?: string[];
+  /**
+  * Contains the permitted URIs that apply to the host part of the name.
+The value can be a hostname or a domain with a
+leading period (like '.example.com')
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#permitted_uris PrivatecaCaPool#permitted_uris}
+  */
+  readonly permittedUris?: string[];
+}
+
+export function privatecaCaPoolIssuancePolicyBaselineValuesNameConstraintsToTerraform(struct?: PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraintsOutputReference | PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    critical: cdktf.booleanToTerraform(struct!.critical),
+    excluded_dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedDnsNames),
+    excluded_email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedEmailAddresses),
+    excluded_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedIpRanges),
+    excluded_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludedUris),
+    permitted_dns_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedDnsNames),
+    permitted_email_addresses: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedEmailAddresses),
+    permitted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedIpRanges),
+    permitted_uris: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.permittedUris),
+  }
+}
+
+export class PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraintsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._critical !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.critical = this._critical;
+    }
+    if (this._excludedDnsNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedDnsNames = this._excludedDnsNames;
+    }
+    if (this._excludedEmailAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedEmailAddresses = this._excludedEmailAddresses;
+    }
+    if (this._excludedIpRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedIpRanges = this._excludedIpRanges;
+    }
+    if (this._excludedUris !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludedUris = this._excludedUris;
+    }
+    if (this._permittedDnsNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permittedDnsNames = this._permittedDnsNames;
+    }
+    if (this._permittedEmailAddresses !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permittedEmailAddresses = this._permittedEmailAddresses;
+    }
+    if (this._permittedIpRanges !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permittedIpRanges = this._permittedIpRanges;
+    }
+    if (this._permittedUris !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.permittedUris = this._permittedUris;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._critical = undefined;
+      this._excludedDnsNames = undefined;
+      this._excludedEmailAddresses = undefined;
+      this._excludedIpRanges = undefined;
+      this._excludedUris = undefined;
+      this._permittedDnsNames = undefined;
+      this._permittedEmailAddresses = undefined;
+      this._permittedIpRanges = undefined;
+      this._permittedUris = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._critical = value.critical;
+      this._excludedDnsNames = value.excludedDnsNames;
+      this._excludedEmailAddresses = value.excludedEmailAddresses;
+      this._excludedIpRanges = value.excludedIpRanges;
+      this._excludedUris = value.excludedUris;
+      this._permittedDnsNames = value.permittedDnsNames;
+      this._permittedEmailAddresses = value.permittedEmailAddresses;
+      this._permittedIpRanges = value.permittedIpRanges;
+      this._permittedUris = value.permittedUris;
+    }
+  }
+
+  // critical - computed: false, optional: false, required: true
+  private _critical?: boolean | cdktf.IResolvable; 
+  public get critical() {
+    return this.getBooleanAttribute('critical');
+  }
+  public set critical(value: boolean | cdktf.IResolvable) {
+    this._critical = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get criticalInput() {
+    return this._critical;
+  }
+
+  // excluded_dns_names - computed: false, optional: true, required: false
+  private _excludedDnsNames?: string[]; 
+  public get excludedDnsNames() {
+    return this.getListAttribute('excluded_dns_names');
+  }
+  public set excludedDnsNames(value: string[]) {
+    this._excludedDnsNames = value;
+  }
+  public resetExcludedDnsNames() {
+    this._excludedDnsNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedDnsNamesInput() {
+    return this._excludedDnsNames;
+  }
+
+  // excluded_email_addresses - computed: false, optional: true, required: false
+  private _excludedEmailAddresses?: string[]; 
+  public get excludedEmailAddresses() {
+    return this.getListAttribute('excluded_email_addresses');
+  }
+  public set excludedEmailAddresses(value: string[]) {
+    this._excludedEmailAddresses = value;
+  }
+  public resetExcludedEmailAddresses() {
+    this._excludedEmailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedEmailAddressesInput() {
+    return this._excludedEmailAddresses;
+  }
+
+  // excluded_ip_ranges - computed: false, optional: true, required: false
+  private _excludedIpRanges?: string[]; 
+  public get excludedIpRanges() {
+    return this.getListAttribute('excluded_ip_ranges');
+  }
+  public set excludedIpRanges(value: string[]) {
+    this._excludedIpRanges = value;
+  }
+  public resetExcludedIpRanges() {
+    this._excludedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedIpRangesInput() {
+    return this._excludedIpRanges;
+  }
+
+  // excluded_uris - computed: false, optional: true, required: false
+  private _excludedUris?: string[]; 
+  public get excludedUris() {
+    return this.getListAttribute('excluded_uris');
+  }
+  public set excludedUris(value: string[]) {
+    this._excludedUris = value;
+  }
+  public resetExcludedUris() {
+    this._excludedUris = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludedUrisInput() {
+    return this._excludedUris;
+  }
+
+  // permitted_dns_names - computed: false, optional: true, required: false
+  private _permittedDnsNames?: string[]; 
+  public get permittedDnsNames() {
+    return this.getListAttribute('permitted_dns_names');
+  }
+  public set permittedDnsNames(value: string[]) {
+    this._permittedDnsNames = value;
+  }
+  public resetPermittedDnsNames() {
+    this._permittedDnsNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permittedDnsNamesInput() {
+    return this._permittedDnsNames;
+  }
+
+  // permitted_email_addresses - computed: false, optional: true, required: false
+  private _permittedEmailAddresses?: string[]; 
+  public get permittedEmailAddresses() {
+    return this.getListAttribute('permitted_email_addresses');
+  }
+  public set permittedEmailAddresses(value: string[]) {
+    this._permittedEmailAddresses = value;
+  }
+  public resetPermittedEmailAddresses() {
+    this._permittedEmailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permittedEmailAddressesInput() {
+    return this._permittedEmailAddresses;
+  }
+
+  // permitted_ip_ranges - computed: false, optional: true, required: false
+  private _permittedIpRanges?: string[]; 
+  public get permittedIpRanges() {
+    return this.getListAttribute('permitted_ip_ranges');
+  }
+  public set permittedIpRanges(value: string[]) {
+    this._permittedIpRanges = value;
+  }
+  public resetPermittedIpRanges() {
+    this._permittedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permittedIpRangesInput() {
+    return this._permittedIpRanges;
+  }
+
+  // permitted_uris - computed: false, optional: true, required: false
+  private _permittedUris?: string[]; 
+  public get permittedUris() {
+    return this.getListAttribute('permitted_uris');
+  }
+  public set permittedUris(value: string[]) {
+    this._permittedUris = value;
+  }
+  public resetPermittedUris() {
+    this._permittedUris = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permittedUrisInput() {
+    return this._permittedUris;
+  }
+}
 export interface PrivatecaCaPoolIssuancePolicyBaselineValuesPolicyIds {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
@@ -1665,6 +1985,12 @@ export interface PrivatecaCaPoolIssuancePolicyBaselineValues {
   */
   readonly keyUsage: PrivatecaCaPoolIssuancePolicyBaselineValuesKeyUsage;
   /**
+  * name_constraints block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#name_constraints PrivatecaCaPool#name_constraints}
+  */
+  readonly nameConstraints?: PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints;
+  /**
   * policy_ids block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/privateca_ca_pool#policy_ids PrivatecaCaPool#policy_ids}
@@ -1682,6 +2008,7 @@ export function privatecaCaPoolIssuancePolicyBaselineValuesToTerraform(struct?: 
     additional_extensions: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesAdditionalExtensionsToTerraform, true)(struct!.additionalExtensions),
     ca_options: privatecaCaPoolIssuancePolicyBaselineValuesCaOptionsToTerraform(struct!.caOptions),
     key_usage: privatecaCaPoolIssuancePolicyBaselineValuesKeyUsageToTerraform(struct!.keyUsage),
+    name_constraints: privatecaCaPoolIssuancePolicyBaselineValuesNameConstraintsToTerraform(struct!.nameConstraints),
     policy_ids: cdktf.listMapper(privatecaCaPoolIssuancePolicyBaselineValuesPolicyIdsToTerraform, true)(struct!.policyIds),
   }
 }
@@ -1716,6 +2043,10 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage?.internalValue;
     }
+    if (this._nameConstraints?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.nameConstraints = this._nameConstraints?.internalValue;
+    }
     if (this._policyIds?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyIds = this._policyIds?.internalValue;
@@ -1730,6 +2061,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
       this._additionalExtensions.internalValue = undefined;
       this._caOptions.internalValue = undefined;
       this._keyUsage.internalValue = undefined;
+      this._nameConstraints.internalValue = undefined;
       this._policyIds.internalValue = undefined;
     }
     else {
@@ -1738,6 +2070,7 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
       this._additionalExtensions.internalValue = value.additionalExtensions;
       this._caOptions.internalValue = value.caOptions;
       this._keyUsage.internalValue = value.keyUsage;
+      this._nameConstraints.internalValue = value.nameConstraints;
       this._policyIds.internalValue = value.policyIds;
     }
   }
@@ -1798,6 +2131,22 @@ export class PrivatecaCaPoolIssuancePolicyBaselineValuesOutputReference extends 
   // Temporarily expose input value. Use with caution.
   public get keyUsageInput() {
     return this._keyUsage.internalValue;
+  }
+
+  // name_constraints - computed: false, optional: true, required: false
+  private _nameConstraints = new PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraintsOutputReference(this, "name_constraints");
+  public get nameConstraints() {
+    return this._nameConstraints;
+  }
+  public putNameConstraints(value: PrivatecaCaPoolIssuancePolicyBaselineValuesNameConstraints) {
+    this._nameConstraints.internalValue = value;
+  }
+  public resetNameConstraints() {
+    this._nameConstraints.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameConstraintsInput() {
+    return this._nameConstraints.internalValue;
   }
 
   // policy_ids - computed: false, optional: true, required: false
@@ -2523,7 +2872,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_ca_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.57.0',
+        providerVersion: '4.58.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

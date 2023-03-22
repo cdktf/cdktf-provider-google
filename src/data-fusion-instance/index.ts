@@ -115,6 +115,12 @@ pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   */
   readonly zone?: string;
   /**
+  * accelerators block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#accelerators DataFusionInstance#accelerators}
+  */
+  readonly accelerators?: DataFusionInstanceAccelerators[] | cdktf.IResolvable;
+  /**
   * crypto_key_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#crypto_key_config DataFusionInstance#crypto_key_config}
@@ -138,6 +144,128 @@ pipelines at low cost. Possible values: ["BASIC", "ENTERPRISE", "DEVELOPER"]
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#timeouts DataFusionInstance#timeouts}
   */
   readonly timeouts?: DataFusionInstanceTimeouts;
+}
+export interface DataFusionInstanceAccelerators {
+  /**
+  * The type of an accelator for a CDF instance. Possible values: ["CDC", "HEALTHCARE", "CCAI_INSIGHTS"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#accelerator_type DataFusionInstance#accelerator_type}
+  */
+  readonly acceleratorType: string;
+  /**
+  * The type of an accelator for a CDF instance. Possible values: ["ENABLED", "DISABLED"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/data_fusion_instance#state DataFusionInstance#state}
+  */
+  readonly state: string;
+}
+
+export function dataFusionInstanceAcceleratorsToTerraform(struct?: DataFusionInstanceAccelerators | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    accelerator_type: cdktf.stringToTerraform(struct!.acceleratorType),
+    state: cdktf.stringToTerraform(struct!.state),
+  }
+}
+
+export class DataFusionInstanceAcceleratorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataFusionInstanceAccelerators | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._acceleratorType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.acceleratorType = this._acceleratorType;
+    }
+    if (this._state !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.state = this._state;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFusionInstanceAccelerators | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._acceleratorType = undefined;
+      this._state = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._acceleratorType = value.acceleratorType;
+      this._state = value.state;
+    }
+  }
+
+  // accelerator_type - computed: false, optional: false, required: true
+  private _acceleratorType?: string; 
+  public get acceleratorType() {
+    return this.getStringAttribute('accelerator_type');
+  }
+  public set acceleratorType(value: string) {
+    this._acceleratorType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorTypeInput() {
+    return this._acceleratorType;
+  }
+
+  // state - computed: false, optional: false, required: true
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state;
+  }
+}
+
+export class DataFusionInstanceAcceleratorsList extends cdktf.ComplexList {
+  public internalValue? : DataFusionInstanceAccelerators[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataFusionInstanceAcceleratorsOutputReference {
+    return new DataFusionInstanceAcceleratorsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataFusionInstanceCryptoKeyConfig {
   /**
@@ -542,7 +670,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_fusion_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.57.0',
+        providerVersion: '4.58.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -569,6 +697,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     this._type = config.type;
     this._version = config.version;
     this._zone = config.zone;
+    this._accelerators.internalValue = config.accelerators;
     this._cryptoKeyConfig.internalValue = config.cryptoKeyConfig;
     this._eventPublishConfig.internalValue = config.eventPublishConfig;
     this._networkConfig.internalValue = config.networkConfig;
@@ -735,7 +864,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // options - computed: false, optional: true, required: false
+  // options - computed: true, optional: true, required: false
   private _options?: { [key: string]: string }; 
   public get options() {
     return this.getStringMapAttribute('options');
@@ -874,6 +1003,22 @@ export class DataFusionInstance extends cdktf.TerraformResource {
     return this._zone;
   }
 
+  // accelerators - computed: false, optional: true, required: false
+  private _accelerators = new DataFusionInstanceAcceleratorsList(this, "accelerators", false);
+  public get accelerators() {
+    return this._accelerators;
+  }
+  public putAccelerators(value: DataFusionInstanceAccelerators[] | cdktf.IResolvable) {
+    this._accelerators.internalValue = value;
+  }
+  public resetAccelerators() {
+    this._accelerators.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorsInput() {
+    return this._accelerators.internalValue;
+  }
+
   // crypto_key_config - computed: false, optional: true, required: false
   private _cryptoKeyConfig = new DataFusionInstanceCryptoKeyConfigOutputReference(this, "crypto_key_config");
   public get cryptoKeyConfig() {
@@ -960,6 +1105,7 @@ export class DataFusionInstance extends cdktf.TerraformResource {
       type: cdktf.stringToTerraform(this._type),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
+      accelerators: cdktf.listMapper(dataFusionInstanceAcceleratorsToTerraform, true)(this._accelerators.internalValue),
       crypto_key_config: dataFusionInstanceCryptoKeyConfigToTerraform(this._cryptoKeyConfig.internalValue),
       event_publish_config: dataFusionInstanceEventPublishConfigToTerraform(this._eventPublishConfig.internalValue),
       network_config: dataFusionInstanceNetworkConfigToTerraform(this._networkConfig.internalValue),

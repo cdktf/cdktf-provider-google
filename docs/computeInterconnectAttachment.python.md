@@ -59,7 +59,7 @@ computeInterconnectAttachment.ComputeInterconnectAttachment(
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.candidateSubnets">candidate_subnets</a></code> | <code>typing.List[str]</code> | Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.description">description</a></code> | <code>str</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.edgeAvailabilityDomain">edge_availability_domain</a></code> | <code>str</code> | Desired availability domain for the attachment. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.encryption">encryption</a></code> | <code>str</code> | Indicates the user-supplied encryption option of this interconnect attachment:. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.encryption">encryption</a></code> | <code>str</code> | Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.interconnect">interconnect</a></code> | <code>str</code> | URL of the underlying Interconnect object that this attachment's traffic will traverse through. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachment.Initializer.parameter.ipsecInternalAddresses">ipsec_internal_addresses</a></code> | <code>typing.List[str]</code> | URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. |
@@ -236,19 +236,17 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Indicates the user-supplied encryption option of this interconnect attachment:.
+Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments.
 
-NONE is the default value, which means that the attachment carries
-unencrypted traffic. VMs can send traffic to, or receive traffic
-from, this type of attachment.
+NONE - This is the default value, which means that the VLAN attachment
+carries unencrypted traffic. VMs are able to send traffic to, or receive
+traffic from, such a VLAN attachment.
 
-IPSEC indicates that the attachment carries only traffic encrypted by
-an IPsec device such as an HA VPN gateway. VMs cannot directly send
-traffic to, or receive traffic from, such an attachment. To use
-IPsec-encrypted Cloud Interconnect create the attachment using this
-option.
-
-Not currently available publicly. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
+IPSEC - The VLAN attachment carries only encrypted traffic that is
+encrypted by an IPsec device, such as an HA VPN gateway or third-party
+IPsec VPN. VMs cannot directly send traffic to, or receive traffic from,
+such a VLAN attachment. To use HA VPN over Cloud Interconnect, the VLAN
+attachment must be created with this option. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#encryption ComputeInterconnectAttachment#encryption}
 
@@ -284,20 +282,19 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC.
 
-The addresses must be RFC 1918 IP address ranges. When creating HA
-VPN gateway over the interconnect attachment, if the attachment is
-configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified
-here.
+The addresses must be RFC 1918 IP address ranges. When creating HA VPN
+gateway over the interconnect attachment, if the attachment is configured
+to use an RFC 1918 IP address, then the VPN gateway's IP address will be
+allocated from the IP address range specified here.
 
 For example, if the HA VPN gateway's interface 0 is paired to this
-interconnect attachment, then an RFC 1918 IP address for the VPN
-gateway interface 0 will be allocated from the IP address specified
-for this interconnect attachment.
+interconnect attachment, then an RFC 1918 IP address for the VPN gateway
+interface 0 will be allocated from the IP address specified for this
+interconnect attachment.
 
 If this field is not specified for interconnect attachment that has
-encryption option as IPSEC, later on when creating HA VPN gateway on
-this interconnect attachment, the HA VPN gateway's IP address will be
+encryption option as IPSEC, later on when creating HA VPN gateway on this
+interconnect attachment, the HA VPN gateway's IP address will be
 allocated from regional external IP address pool.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#ipsec_internal_addresses ComputeInterconnectAttachment#ipsec_internal_addresses}
@@ -1521,7 +1518,7 @@ computeInterconnectAttachment.ComputeInterconnectAttachmentConfig(
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.candidateSubnets">candidate_subnets</a></code> | <code>typing.List[str]</code> | Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.description">description</a></code> | <code>str</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.edgeAvailabilityDomain">edge_availability_domain</a></code> | <code>str</code> | Desired availability domain for the attachment. |
-| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.encryption">encryption</a></code> | <code>str</code> | Indicates the user-supplied encryption option of this interconnect attachment:. |
+| <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.encryption">encryption</a></code> | <code>str</code> | Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#id ComputeInterconnectAttachment#id}. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.interconnect">interconnect</a></code> | <code>str</code> | URL of the underlying Interconnect object that this attachment's traffic will traverse through. |
 | <code><a href="#@cdktf/provider-google.computeInterconnectAttachment.ComputeInterconnectAttachmentConfig.property.ipsecInternalAddresses">ipsec_internal_addresses</a></code> | <code>typing.List[str]</code> | URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC. |
@@ -1740,19 +1737,17 @@ encryption: str
 
 - *Type:* str
 
-Indicates the user-supplied encryption option of this interconnect attachment:.
+Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments.
 
-NONE is the default value, which means that the attachment carries
-unencrypted traffic. VMs can send traffic to, or receive traffic
-from, this type of attachment.
+NONE - This is the default value, which means that the VLAN attachment
+carries unencrypted traffic. VMs are able to send traffic to, or receive
+traffic from, such a VLAN attachment.
 
-IPSEC indicates that the attachment carries only traffic encrypted by
-an IPsec device such as an HA VPN gateway. VMs cannot directly send
-traffic to, or receive traffic from, such an attachment. To use
-IPsec-encrypted Cloud Interconnect create the attachment using this
-option.
-
-Not currently available publicly. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
+IPSEC - The VLAN attachment carries only encrypted traffic that is
+encrypted by an IPsec device, such as an HA VPN gateway or third-party
+IPsec VPN. VMs cannot directly send traffic to, or receive traffic from,
+such a VLAN attachment. To use HA VPN over Cloud Interconnect, the VLAN
+attachment must be created with this option. Default value: "NONE" Possible values: ["NONE", "IPSEC"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#encryption ComputeInterconnectAttachment#encryption}
 
@@ -1800,20 +1795,19 @@ ipsec_internal_addresses: typing.List[str]
 
 URL of addresses that have been reserved for the interconnect attachment, Used only for interconnect attachment that has the encryption option as IPSEC.
 
-The addresses must be RFC 1918 IP address ranges. When creating HA
-VPN gateway over the interconnect attachment, if the attachment is
-configured to use an RFC 1918 IP address, then the VPN gateway's IP
-address will be allocated from the IP address range specified
-here.
+The addresses must be RFC 1918 IP address ranges. When creating HA VPN
+gateway over the interconnect attachment, if the attachment is configured
+to use an RFC 1918 IP address, then the VPN gateway's IP address will be
+allocated from the IP address range specified here.
 
 For example, if the HA VPN gateway's interface 0 is paired to this
-interconnect attachment, then an RFC 1918 IP address for the VPN
-gateway interface 0 will be allocated from the IP address specified
-for this interconnect attachment.
+interconnect attachment, then an RFC 1918 IP address for the VPN gateway
+interface 0 will be allocated from the IP address specified for this
+interconnect attachment.
 
 If this field is not specified for interconnect attachment that has
-encryption option as IPSEC, later on when creating HA VPN gateway on
-this interconnect attachment, the HA VPN gateway's IP address will be
+encryption option as IPSEC, later on when creating HA VPN gateway on this
+interconnect attachment, the HA VPN gateway's IP address will be
 allocated from regional external IP address pool.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_interconnect_attachment#ipsec_internal_addresses ComputeInterconnectAttachment#ipsec_internal_addresses}
