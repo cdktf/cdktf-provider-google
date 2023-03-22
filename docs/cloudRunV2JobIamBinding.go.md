@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 cloudrunv2jobiambinding.NewCloudRunV2JobIamBinding(scope Construct, id *string, config CloudRunV2JobIamBindingConfig) CloudRunV2JobIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 cloudrunv2jobiambinding.CloudRunV2JobIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 cloudrunv2jobiambinding.CloudRunV2JobIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ cloudrunv2jobiambinding.CloudRunV2JobIamBinding_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 cloudrunv2jobiambinding.CloudRunV2JobIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 &cloudrunv2jobiambinding.CloudRunV2JobIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 &cloudrunv2jobiambinding.CloudRunV2JobIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambind
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudRunV2JobIamBinding.CloudRunV2JobIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudRunV2JobIamBinding.CloudRunV2JobIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2JobIamBinding.CloudRunV2JobIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiambinding"
 
 cloudrunv2jobiambinding.NewCloudRunV2JobIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudRunV2JobIamBindingConditionOutputReference
 ```

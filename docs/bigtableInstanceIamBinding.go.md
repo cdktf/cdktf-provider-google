@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_in
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 bigtableinstanceiambinding.NewBigtableInstanceIamBinding(scope Construct, id *string, config BigtableInstanceIamBindingConfig) BigtableInstanceIamBinding
 ```
@@ -300,7 +300,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 bigtableinstanceiambinding.BigtableInstanceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 bigtableinstanceiambinding.BigtableInstanceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ bigtableinstanceiambinding.BigtableInstanceIamBinding_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 bigtableinstanceiambinding.BigtableInstanceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -688,7 +688,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 &bigtableinstanceiambinding.BigtableInstanceIamBindingCondition {
 	Expression: *string,
@@ -748,7 +748,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 &bigtableinstanceiambinding.BigtableInstanceIamBindingConfig {
 	Connection: interface{},
@@ -761,7 +761,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiamb
 	Instance: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigtableinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiambinding"
 
 bigtableinstanceiambinding.NewBigtableInstanceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableInstanceIamBindingConditionOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ins
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 computeinstanceiammember.NewComputeInstanceIamMember(scope Construct, id *string, config ComputeInstanceIamMemberConfig) ComputeInstanceIamMember
 ```
@@ -307,7 +307,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 computeinstanceiammember.ComputeInstanceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 computeinstanceiammember.ComputeInstanceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ computeinstanceiammember.ComputeInstanceIamMember_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 computeinstanceiammember.ComputeInstanceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 &computeinstanceiammember.ComputeInstanceIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 &computeinstanceiammember.ComputeInstanceIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiamme
 	InstanceName: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.computeInstanceIamMember.ComputeInstanceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceIamMember.ComputeInstanceIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Zone: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceIamMember.ComputeInstanceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiammember"
 
 computeinstanceiammember.NewComputeInstanceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceIamMemberConditionOutputReference
 ```

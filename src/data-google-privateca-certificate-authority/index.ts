@@ -908,6 +908,110 @@ export class DataGooglePrivatecaCertificateAuthorityConfigX509ConfigKeyUsageList
     return new DataGooglePrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraints {
+}
+
+export function dataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsToTerraform(struct?: DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraints): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraints | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraints | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // critical - computed: true, optional: false, required: false
+  public get critical() {
+    return this.getBooleanAttribute('critical');
+  }
+
+  // excluded_dns_names - computed: true, optional: false, required: false
+  public get excludedDnsNames() {
+    return this.getListAttribute('excluded_dns_names');
+  }
+
+  // excluded_email_addresses - computed: true, optional: false, required: false
+  public get excludedEmailAddresses() {
+    return this.getListAttribute('excluded_email_addresses');
+  }
+
+  // excluded_ip_ranges - computed: true, optional: false, required: false
+  public get excludedIpRanges() {
+    return this.getListAttribute('excluded_ip_ranges');
+  }
+
+  // excluded_uris - computed: true, optional: false, required: false
+  public get excludedUris() {
+    return this.getListAttribute('excluded_uris');
+  }
+
+  // permitted_dns_names - computed: true, optional: false, required: false
+  public get permittedDnsNames() {
+    return this.getListAttribute('permitted_dns_names');
+  }
+
+  // permitted_email_addresses - computed: true, optional: false, required: false
+  public get permittedEmailAddresses() {
+    return this.getListAttribute('permitted_email_addresses');
+  }
+
+  // permitted_ip_ranges - computed: true, optional: false, required: false
+  public get permittedIpRanges() {
+    return this.getListAttribute('permitted_ip_ranges');
+  }
+
+  // permitted_uris - computed: true, optional: false, required: false
+  public get permittedUris() {
+    return this.getListAttribute('permitted_uris');
+  }
+}
+
+export class DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputReference {
+    return new DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGooglePrivatecaCertificateAuthorityConfigX509ConfigPolicyIds {
 }
 
@@ -1033,6 +1137,12 @@ export class DataGooglePrivatecaCertificateAuthorityConfigX509ConfigOutputRefere
   private _keyUsage = new DataGooglePrivatecaCertificateAuthorityConfigX509ConfigKeyUsageList(this, "key_usage", false);
   public get keyUsage() {
     return this._keyUsage;
+  }
+
+  // name_constraints - computed: true, optional: false, required: false
+  private _nameConstraints = new DataGooglePrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsList(this, "name_constraints", false);
+  public get nameConstraints() {
+    return this._nameConstraints;
   }
 
   // policy_ids - computed: true, optional: false, required: false
@@ -1361,7 +1471,7 @@ export class DataGooglePrivatecaCertificateAuthority extends cdktf.TerraformData
       terraformResourceType: 'google_privateca_certificate_authority',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.57.0',
+        providerVersion: '4.58.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

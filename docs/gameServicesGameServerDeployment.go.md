@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/game_servic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 gameservicesgameserverdeployment.NewGameServicesGameServerDeployment(scope Construct, id *string, config GameServicesGameServerDeploymentConfig) GameServicesGameServerDeployment
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 gameservicesgameserverdeployment.GameServicesGameServerDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 gameservicesgameserverdeployment.GameServicesGameServerDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ gameservicesgameserverdeployment.GameServicesGameServerDeployment_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 gameservicesgameserverdeployment.GameServicesGameServerDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -731,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 &gameservicesgameserverdeployment.GameServicesGameServerDeploymentConfig {
 	Connection: interface{},
@@ -747,7 +747,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserv
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.gameServicesGameServerDeployment.GameServicesGameServerDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gameServicesGameServerDeployment.GameServicesGameServerDeploymentTimeouts,
 }
 ```
 
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 &gameservicesgameserverdeployment.GameServicesGameServerDeploymentTimeouts {
 	Create: *string,
@@ -1006,7 +1006,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerDeployment.GameServicesGameServerDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/gameservicesgameserverdeployment"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameserverdeployment"
 
 gameservicesgameserverdeployment.NewGameServicesGameServerDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesGameServerDeploymentTimeoutsOutputReference
 ```

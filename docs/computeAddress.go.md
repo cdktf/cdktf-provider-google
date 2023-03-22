@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_add
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAddress.ComputeAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 computeaddress.NewComputeAddress(scope Construct, id *string, config ComputeAddressConfig) ComputeAddress
 ```
@@ -363,7 +363,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeAddress.ComputeAddress.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 computeaddress.ComputeAddress_IsConstruct(x interface{}) *bool
 ```
@@ -395,7 +395,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeAddress.ComputeAddress.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 computeaddress.ComputeAddress_IsTerraformElement(x interface{}) *bool
 ```
@@ -409,7 +409,7 @@ computeaddress.ComputeAddress_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeAddress.ComputeAddress.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 computeaddress.ComputeAddress_IsTerraformResource(x interface{}) *bool
 ```
@@ -927,7 +927,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAddress.ComputeAddressConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 &computeaddress.ComputeAddressConfig {
 	Connection: interface{},
@@ -949,7 +949,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
 	Purpose: *string,
 	Region: *string,
 	Subnetwork: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeAddress.ComputeAddressTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeAddress.ComputeAddressTimeouts,
 }
 ```
 
@@ -973,7 +973,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.networkTier">NetworkTier</a></code> | <code>*string</code> | The networking tier used for configuring this address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.prefixLength">PrefixLength</a></code> | <code>*f64</code> | The prefix length if the resource represents an IP range. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#project ComputeAddress#project}. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.purpose">Purpose</a></code> | <code>*string</code> | The purpose of this resource, which can be one of the following values:. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.purpose">Purpose</a></code> | <code>*string</code> | The purpose of this resource, which can be one of the following values. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.region">Region</a></code> | <code>*string</code> | The Region in which the created address should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.subnetwork">Subnetwork</a></code> | <code>*string</code> | The URL of the subnetwork in which to reserve the address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts">ComputeAddressTimeouts</a></code> | timeouts block. |
@@ -1202,23 +1202,23 @@ Purpose *string
 
 - *Type:* *string
 
-The purpose of this resource, which can be one of the following values:.
+The purpose of this resource, which can be one of the following values.
 
 GCE_ENDPOINT for addresses that are used by VM instances, alias IP
-ranges, internal load balancers, and similar resources.
+ranges, load balancers, and similar resources.
 
 SHARED_LOADBALANCER_VIP for an address that can be used by multiple
 internal load balancers.
 
 VPC_PEERING for addresses that are reserved for VPC peer networks.
 
-IPSEC_INTERCONNECT for addresses created from a private IP range
-that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
-Interconnect configuration. These addresses are regional resources.
+IPSEC_INTERCONNECT for addresses created from a private IP range that
+are reserved for a VLAN attachment in an HA VPN over Cloud Interconnect
+configuration. These addresses are regional resources.
 
-PRIVATE_SERVICE_CONNECT for a private network address that is used
-to configure Private Service Connect. Only global internal addresses
-can use this purpose.
+PRIVATE_SERVICE_CONNECT for a private network address that is used to
+configure Private Service Connect. Only global internal addresses can use
+this purpose.
 
 This should only be set when using an Internal address.
 
@@ -1278,7 +1278,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAddress.ComputeAddressTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 &computeaddress.ComputeAddressTimeouts {
 	Create: *string,
@@ -1326,7 +1326,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAddress.ComputeAddressTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeaddress"
 
 computeaddress.NewComputeAddressTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAddressTimeoutsOutputReference
 ```

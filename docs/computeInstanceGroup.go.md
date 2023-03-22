@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ins
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.NewComputeInstanceGroup(scope Construct, id *string, config ComputeInstanceGroupConfig) ComputeInstanceGroup
 ```
@@ -348,7 +348,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.ComputeInstanceGroup_IsConstruct(x interface{}) *bool
 ```
@@ -380,7 +380,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.ComputeInstanceGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ computeinstancegroup.ComputeInstanceGroup_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.ComputeInstanceGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -813,7 +813,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 &computeinstancegroup.ComputeInstanceGroupConfig {
 	Connection: interface{},
@@ -830,7 +830,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup
 	NamedPort: interface{},
 	Network: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeInstanceGroup.ComputeInstanceGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceGroup.ComputeInstanceGroupTimeouts,
 	Zone: *string,
 }
 ```
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupNamedPort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 &computeinstancegroup.ComputeInstanceGroupNamedPort {
 	Name: *string,
@@ -1118,7 +1118,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 &computeinstancegroup.ComputeInstanceGroupTimeouts {
 	Create: *string,
@@ -1180,7 +1180,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupNamedPortList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.NewComputeInstanceGroupNamedPortList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeInstanceGroupNamedPortList
 ```
@@ -1323,7 +1323,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupNamedPortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.NewComputeInstanceGroupNamedPortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeInstanceGroupNamedPortOutputReference
 ```
@@ -1634,7 +1634,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceGroup.ComputeInstanceGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstancegroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstancegroup"
 
 computeinstancegroup.NewComputeInstanceGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceGroupTimeoutsOutputReference
 ```

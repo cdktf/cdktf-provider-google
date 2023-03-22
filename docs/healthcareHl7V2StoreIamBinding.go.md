@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 healthcarehl7v2storeiambinding.NewHealthcareHl7V2StoreIamBinding(scope Construct, id *string, config HealthcareHl7V2StoreIamBindingConfig) HealthcareHl7V2StoreIamBinding
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBinding_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 &healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBindingCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 &healthcarehl7v2storeiambinding.HealthcareHl7V2StoreIamBindingConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2store
 	Hl7V2StoreId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2StoreIamBinding.HealthcareHl7V2StoreIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcarehl7v2storeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcarehl7v2storeiambinding"
 
 healthcarehl7v2storeiambinding.NewHealthcareHl7V2StoreIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareHl7V2StoreIamBindingConditionOutputReference
 ```

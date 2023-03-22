@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfig(scope Construct, id *string, config MonitoringUptimeCheckConfigConfig) MonitoringUptimeCheckConfig
 ```
@@ -421,7 +421,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +467,7 @@ monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.MonitoringUptimeCheckConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -974,7 +974,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigConfig {
 	Connection: interface{},
@@ -988,15 +988,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimechec
 	Timeout: *string,
 	CheckerType: *string,
 	ContentMatchers: interface{},
-	HttpCheck: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck,
+	HttpCheck: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck,
 	Id: *string,
-	MonitoredResource: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource,
+	MonitoredResource: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource,
 	Period: *string,
 	Project: *string,
-	ResourceGroup: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup,
+	ResourceGroup: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup,
 	SelectedRegions: *[]*string,
-	TcpCheck: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts,
+	TcpCheck: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts,
 }
 ```
 
@@ -1293,11 +1293,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigContentMatchers {
 	Content: *string,
-	JsonPathMatcher: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher,
+	JsonPathMatcher: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher,
 	Matcher: *string,
 }
 ```
@@ -1361,7 +1361,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher {
 	JsonPath: *string,
@@ -1411,11 +1411,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheck {
 	AcceptedResponseStatusCodes: interface{},
-	AuthInfo: github.com/cdktf/cdktf-provider-google-go/google/v5.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo,
+	AuthInfo: github.com/cdktf/cdktf-provider-google-go/google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo,
 	Body: *string,
 	ContentType: *string,
 	Headers: *map[string]*string,
@@ -1619,7 +1619,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodes {
 	StatusClass: *string,
@@ -1669,7 +1669,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigHttpCheckAuthInfo {
 	Password: *string,
@@ -1719,7 +1719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigMonitoredResource {
 	Labels: *map[string]*string,
@@ -1773,7 +1773,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigResourceGroup {
 	GroupId: *string,
@@ -1823,7 +1823,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigTcpCheck {
 	Port: *f64,
@@ -1859,7 +1859,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 &monitoringuptimecheckconfig.MonitoringUptimeCheckConfigTimeouts {
 	Create: *string,
@@ -1921,7 +1921,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigContentMatchersJsonPathMatcherOutputReference
 ```
@@ -2221,7 +2221,7 @@ func InternalValue() MonitoringUptimeCheckConfigContentMatchersJsonPathMatcher
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringUptimeCheckConfigContentMatchersList
 ```
@@ -2364,7 +2364,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigContentMatchersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigContentMatchersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringUptimeCheckConfigContentMatchersOutputReference
 ```
@@ -2724,7 +2724,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesList
 ```
@@ -2867,7 +2867,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitoringUptimeCheckConfigHttpCheckAcceptedResponseStatusCodesOutputReference
 ```
@@ -3192,7 +3192,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigHttpCheckAuthInfoOutputReference
 ```
@@ -3485,7 +3485,7 @@ func InternalValue() MonitoringUptimeCheckConfigHttpCheckAuthInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigHttpCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigHttpCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigHttpCheckOutputReference
 ```
@@ -4079,7 +4079,7 @@ func InternalValue() MonitoringUptimeCheckConfigHttpCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigMonitoredResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigMonitoredResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigMonitoredResourceOutputReference
 ```
@@ -4372,7 +4372,7 @@ func InternalValue() MonitoringUptimeCheckConfigMonitoredResource
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigResourceGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigResourceGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigResourceGroupOutputReference
 ```
@@ -4679,7 +4679,7 @@ func InternalValue() MonitoringUptimeCheckConfigResourceGroup
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTcpCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigTcpCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigTcpCheckOutputReference
 ```
@@ -4950,7 +4950,7 @@ func InternalValue() MonitoringUptimeCheckConfigTcpCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringUptimeCheckConfig.MonitoringUptimeCheckConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/monitoringuptimecheckconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/monitoringuptimecheckconfig"
 
 monitoringuptimecheckconfig.NewMonitoringUptimeCheckConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringUptimeCheckConfigTimeoutsOutputReference
 ```

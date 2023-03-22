@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_ca_cert
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.NewDataGoogleSqlCaCerts(scope Construct, id *string, config DataGoogleSqlCaCertsConfig) DataGoogleSqlCaCerts
 ```
@@ -280,7 +280,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.DataGoogleSqlCaCerts_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.DataGoogleSqlCaCerts_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ datagooglesqlcacerts.DataGoogleSqlCaCerts_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.DataGoogleSqlCaCerts_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -591,7 +591,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsCerts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 &datagooglesqlcacerts.DataGoogleSqlCaCertsCerts {
 
@@ -604,7 +604,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 &datagooglesqlcacerts.DataGoogleSqlCaCertsConfig {
 	Connection: interface{},
@@ -753,7 +753,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsCertsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.NewDataGoogleSqlCaCertsCertsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlCaCertsCertsList
 ```
@@ -885,7 +885,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsCertsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqlcacerts"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqlcacerts"
 
 datagooglesqlcacerts.NewDataGoogleSqlCaCertsCertsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlCaCertsCertsOutputReference
 ```

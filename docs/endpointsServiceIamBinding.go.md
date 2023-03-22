@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_s
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 endpointsserviceiambinding.NewEndpointsServiceIamBinding(scope Construct, id *string, config EndpointsServiceIamBindingConfig) EndpointsServiceIamBinding
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 endpointsserviceiambinding.EndpointsServiceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 endpointsserviceiambinding.EndpointsServiceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ endpointsserviceiambinding.EndpointsServiceIamBinding_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 endpointsserviceiambinding.EndpointsServiceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 &endpointsserviceiambinding.EndpointsServiceIamBindingCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 &endpointsserviceiambinding.EndpointsServiceIamBindingConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiamb
 	Members: *[]*string,
 	Role: *string,
 	ServiceName: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/endpointsserviceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceiambinding"
 
 endpointsserviceiambinding.NewEndpointsServiceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EndpointsServiceIamBindingConditionOutputReference
 ```

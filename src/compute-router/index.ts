@@ -14,10 +14,8 @@ export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly description?: string;
   /**
-  * Field to indicate if a router is dedicated to use with encrypted
-Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
-
-Not currently available publicly.
+  * Indicates if a router is dedicated for use with encrypted VLAN
+attachments (interconnectAttachments).
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
   */
@@ -224,11 +222,16 @@ will have the same local ASN.
   */
   readonly asn: number;
   /**
-  * The interval in seconds between BGP keepalive messages that are sent to the peer.
-Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
-maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
-BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for
-the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+  * The interval in seconds between BGP keepalive messages that are sent
+to the peer. Hold time is three times the interval at which keepalive
+messages are sent, and the hold time is the maximum number of seconds
+allowed to elapse between successive keepalive messages that BGP
+receives from a peer.
+
+BGP will use the smaller of either the local hold time value or the
+peer's hold time value as the hold time for the BGP connection
+between the two peers. If set, this value must be between 20 and 60.
+The default is 20.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
   */
@@ -544,7 +547,7 @@ export class ComputeRouter extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_router',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.57.0',
+        providerVersion: '4.58.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

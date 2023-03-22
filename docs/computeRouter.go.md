@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_rou
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.NewComputeRouter(scope Construct, id *string, config ComputeRouterConfig) ComputeRouter
 ```
@@ -341,7 +341,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRouter.ComputeRouter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.ComputeRouter_IsConstruct(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRouter.ComputeRouter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.ComputeRouter_IsTerraformElement(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ computerouter.ComputeRouter_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRouter.ComputeRouter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.ComputeRouter_IsTerraformResource(x interface{}) *bool
 ```
@@ -806,7 +806,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouter.ComputeRouterBgp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 &computerouter.ComputeRouterBgp {
 	Asn: *f64,
@@ -907,10 +907,15 @@ KeepaliveInterval *f64
 
 The interval in seconds between BGP keepalive messages that are sent to the peer.
 
-Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
-maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
-BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for
-the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+Hold time is three times the interval at which keepalive
+messages are sent, and the hold time is the maximum number of seconds
+allowed to elapse between successive keepalive messages that BGP
+receives from a peer.
+
+BGP will use the smaller of either the local hold time value or the
+peer's hold time value as the hold time for the BGP connection
+between the two peers. If set, this value must be between 20 and 60.
+The default is 20.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
 
@@ -921,7 +926,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouter.ComputeRouterBgpAdvertisedIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 &computerouter.ComputeRouterBgpAdvertisedIpRanges {
 	Range: *string,
@@ -971,7 +976,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouter.ComputeRouterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 &computerouter.ComputeRouterConfig {
 	Connection: interface{},
@@ -983,13 +988,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
 	Provisioners: *[]interface{},
 	Name: *string,
 	Network: *string,
-	Bgp: github.com/cdktf/cdktf-provider-google-go/google/v5.computeRouter.ComputeRouterBgp,
+	Bgp: github.com/cdktf/cdktf-provider-google-go/google.computeRouter.ComputeRouterBgp,
 	Description: *string,
 	EncryptedInterconnectRouter: interface{},
 	Id: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeRouter.ComputeRouterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRouter.ComputeRouterTimeouts,
 }
 ```
 
@@ -1008,7 +1013,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.network">Network</a></code> | <code>*string</code> | A reference to the network to which this router belongs. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.bgp">Bgp</a></code> | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterBgp">ComputeRouterBgp</a></code> | bgp block. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.encryptedInterconnectRouter">EncryptedInterconnectRouter</a></code> | <code>interface{}</code> | Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature). |
+| <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.encryptedInterconnectRouter">EncryptedInterconnectRouter</a></code> | <code>interface{}</code> | Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#id ComputeRouter#id}. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#project ComputeRouter#project}. |
 | <code><a href="#@cdktf/provider-google.computeRouter.ComputeRouterConfig.property.region">Region</a></code> | <code>*string</code> | Region where the router resides. |
@@ -1157,9 +1162,7 @@ EncryptedInterconnectRouter interface{}
 
 - *Type:* interface{}
 
-Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
-
-Not currently available publicly.
+Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
 
@@ -1225,7 +1228,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRouter.ComputeRouterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 &computerouter.ComputeRouterTimeouts {
 	Create: *string,
@@ -1287,7 +1290,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouterBgpAdvertisedIpRangesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.NewComputeRouterBgpAdvertisedIpRangesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeRouterBgpAdvertisedIpRangesList
 ```
@@ -1430,7 +1433,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouterBgpAdvertisedIpRangesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.NewComputeRouterBgpAdvertisedIpRangesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeRouterBgpAdvertisedIpRangesOutputReference
 ```
@@ -1748,7 +1751,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouterBgpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.NewComputeRouterBgpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouterBgpOutputReference
 ```
@@ -2148,7 +2151,7 @@ func InternalValue() ComputeRouterBgp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouter.ComputeRouterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computerouter"
+import "github.com/cdktf/cdktf-provider-google-go/google/computerouter"
 
 computerouter.NewComputeRouterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRouterTimeoutsOutputReference
 ```
