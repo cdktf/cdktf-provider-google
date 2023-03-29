@@ -1346,6 +1346,70 @@ export class ContainerNodePoolNodeConfigLinuxNodeConfigOutputReference extends c
     return this._sysctls;
   }
 }
+export interface ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig {
+  /**
+  * Number of raw-block local NVMe SSD disks to be attached to the node. Each local SSD is 375 GB in size.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#local_ssd_count ContainerNodePool#local_ssd_count}
+  */
+  readonly localSsdCount: number;
+}
+
+export function containerNodePoolNodeConfigLocalNvmeSsdBlockConfigToTerraform(struct?: ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference | ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    local_ssd_count: cdktf.numberToTerraform(struct!.localSsdCount),
+  }
+}
+
+export class ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._localSsdCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localSsdCount = this._localSsdCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._localSsdCount = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._localSsdCount = value.localSsdCount;
+    }
+  }
+
+  // local_ssd_count - computed: false, optional: false, required: true
+  private _localSsdCount?: number; 
+  public get localSsdCount() {
+    return this.getNumberAttribute('local_ssd_count');
+  }
+  public set localSsdCount(value: number) {
+    this._localSsdCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localSsdCountInput() {
+    return this._localSsdCount;
+  }
+}
 export interface ContainerNodePoolNodeConfigReservationAffinity {
   /**
   * Corresponds to the type of reservation consumption.
@@ -1768,6 +1832,12 @@ export interface ContainerNodePoolNodeConfig {
   */
   readonly linuxNodeConfig?: ContainerNodePoolNodeConfigLinuxNodeConfig;
   /**
+  * local_nvme_ssd_block_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#local_nvme_ssd_block_config ContainerNodePool#local_nvme_ssd_block_config}
+  */
+  readonly localNvmeSsdBlockConfig?: ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig;
+  /**
   * reservation_affinity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_node_pool#reservation_affinity ContainerNodePool#reservation_affinity}
@@ -1816,6 +1886,7 @@ export function containerNodePoolNodeConfigToTerraform(struct?: ContainerNodePoo
     gvnic: containerNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
     kubelet_config: containerNodePoolNodeConfigKubeletConfigToTerraform(struct!.kubeletConfig),
     linux_node_config: containerNodePoolNodeConfigLinuxNodeConfigToTerraform(struct!.linuxNodeConfig),
+    local_nvme_ssd_block_config: containerNodePoolNodeConfigLocalNvmeSsdBlockConfigToTerraform(struct!.localNvmeSsdBlockConfig),
     reservation_affinity: containerNodePoolNodeConfigReservationAffinityToTerraform(struct!.reservationAffinity),
     shielded_instance_config: containerNodePoolNodeConfigShieldedInstanceConfigToTerraform(struct!.shieldedInstanceConfig),
     workload_metadata_config: containerNodePoolNodeConfigWorkloadMetadataConfigToTerraform(struct!.workloadMetadataConfig),
@@ -1928,6 +1999,10 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.linuxNodeConfig = this._linuxNodeConfig?.internalValue;
     }
+    if (this._localNvmeSsdBlockConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.localNvmeSsdBlockConfig = this._localNvmeSsdBlockConfig?.internalValue;
+    }
     if (this._reservationAffinity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.reservationAffinity = this._reservationAffinity?.internalValue;
@@ -1969,6 +2044,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._gvnic.internalValue = undefined;
       this._kubeletConfig.internalValue = undefined;
       this._linuxNodeConfig.internalValue = undefined;
+      this._localNvmeSsdBlockConfig.internalValue = undefined;
       this._reservationAffinity.internalValue = undefined;
       this._shieldedInstanceConfig.internalValue = undefined;
       this._workloadMetadataConfig.internalValue = undefined;
@@ -1998,6 +2074,7 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
       this._gvnic.internalValue = value.gvnic;
       this._kubeletConfig.internalValue = value.kubeletConfig;
       this._linuxNodeConfig.internalValue = value.linuxNodeConfig;
+      this._localNvmeSsdBlockConfig.internalValue = value.localNvmeSsdBlockConfig;
       this._reservationAffinity.internalValue = value.reservationAffinity;
       this._shieldedInstanceConfig.internalValue = value.shieldedInstanceConfig;
       this._workloadMetadataConfig.internalValue = value.workloadMetadataConfig;
@@ -2370,6 +2447,22 @@ export class ContainerNodePoolNodeConfigOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get linuxNodeConfigInput() {
     return this._linuxNodeConfig.internalValue;
+  }
+
+  // local_nvme_ssd_block_config - computed: false, optional: true, required: false
+  private _localNvmeSsdBlockConfig = new ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference(this, "local_nvme_ssd_block_config");
+  public get localNvmeSsdBlockConfig() {
+    return this._localNvmeSsdBlockConfig;
+  }
+  public putLocalNvmeSsdBlockConfig(value: ContainerNodePoolNodeConfigLocalNvmeSsdBlockConfig) {
+    this._localNvmeSsdBlockConfig.internalValue = value;
+  }
+  public resetLocalNvmeSsdBlockConfig() {
+    this._localNvmeSsdBlockConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localNvmeSsdBlockConfigInput() {
+    return this._localNvmeSsdBlockConfig.internalValue;
   }
 
   // reservation_affinity - computed: false, optional: true, required: false
@@ -3012,7 +3105,7 @@ export class ContainerNodePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_node_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

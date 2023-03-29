@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_net
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 computenetworkendpoint.NewComputeNetworkEndpoint(scope Construct, id *string, config ComputeNetworkEndpointConfig) ComputeNetworkEndpoint
 ```
@@ -321,7 +321,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 computenetworkendpoint.ComputeNetworkEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 computenetworkendpoint.ComputeNetworkEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ computenetworkendpoint.ComputeNetworkEndpoint_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 computenetworkendpoint.ComputeNetworkEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -742,7 +742,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 &computenetworkendpoint.ComputeNetworkEndpointConfig {
 	Connection: interface{},
@@ -758,7 +758,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoi
 	Instance: *string,
 	Port: *f64,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeNetworkEndpoint.ComputeNetworkEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNetworkEndpoint.ComputeNetworkEndpointTimeouts,
 	Zone: *string,
 }
 ```
@@ -778,7 +778,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoi
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.networkEndpointGroup">NetworkEndpointGroup</a></code> | <code>*string</code> | The network endpoint group this endpoint is part of. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#id ComputeNetworkEndpoint#id}. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.instance">Instance</a></code> | <code>*string</code> | The name for a specific VM instance that the IP address belongs to. |
-| <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.port">Port</a></code> | <code>*f64</code> | Port number of network endpoint. |
+| <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.port">Port</a></code> | <code>*f64</code> | Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#project ComputeNetworkEndpoint#project}. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointTimeouts">ComputeNetworkEndpointTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointConfig.property.zone">Zone</a></code> | <code>*string</code> | Zone where the containing network endpoint group is located. |
@@ -927,7 +927,7 @@ Port *f64
 
 - *Type:* *f64
 
-Port number of network endpoint.
+Port number of network endpoint. *Note** 'port' is required unless the Network Endpoint Group is created with the type of 'GCE_VM_IP'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#port ComputeNetworkEndpoint#port}
 
@@ -978,7 +978,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 &computenetworkendpoint.ComputeNetworkEndpointTimeouts {
 	Create: *string,
@@ -1026,7 +1026,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetworkEndpoint.ComputeNetworkEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenetworkendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetworkendpoint"
 
 computenetworkendpoint.NewComputeNetworkEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkEndpointTimeoutsOutputReference
 ```

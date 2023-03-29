@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_ta
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTable(scope Construct, id *string, config BigqueryTableConfig) BigqueryTable
 ```
@@ -449,7 +449,7 @@ func ResetView()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.BigqueryTable_IsConstruct(x interface{}) *bool
 ```
@@ -481,7 +481,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.BigqueryTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -495,7 +495,7 @@ bigquerytable.BigqueryTable_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryTable.BigqueryTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.BigqueryTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -1167,7 +1167,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableConfig {
 	Connection: interface{},
@@ -1182,18 +1182,18 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
 	Clustering: *[]*string,
 	DeletionProtection: interface{},
 	Description: *string,
-	EncryptionConfiguration: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableEncryptionConfiguration,
+	EncryptionConfiguration: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableEncryptionConfiguration,
 	ExpirationTime: *f64,
-	ExternalDataConfiguration: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableExternalDataConfiguration,
+	ExternalDataConfiguration: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableExternalDataConfiguration,
 	FriendlyName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	MaterializedView: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableMaterializedView,
+	MaterializedView: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableMaterializedView,
 	Project: *string,
-	RangePartitioning: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableRangePartitioning,
+	RangePartitioning: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableRangePartitioning,
 	Schema: *string,
-	TimePartitioning: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableTimePartitioning,
-	View: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableView,
+	TimePartitioning: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableTimePartitioning,
+	View: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableView,
 }
 ```
 
@@ -1548,7 +1548,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableEncryptionConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableEncryptionConfiguration {
 	KmsKeyName: *string,
@@ -1584,18 +1584,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableExternalDataConfiguration {
 	Autodetect: interface{},
 	SourceFormat: *string,
 	SourceUris: *[]*string,
-	AvroOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions,
+	AvroOptions: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions,
 	Compression: *string,
 	ConnectionId: *string,
-	CsvOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions,
-	GoogleSheetsOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions,
-	HivePartitioningOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions,
+	CsvOptions: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions,
+	GoogleSheetsOptions: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions,
+	HivePartitioningOptions: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions,
 	IgnoreUnknownValues: interface{},
 	MaxBadRecords: *f64,
 	ReferenceFileSchemaUri: *string,
@@ -1820,7 +1820,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableExternalDataConfigurationAvroOptions {
 	UseAvroLogicalTypes: interface{},
@@ -1854,7 +1854,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableExternalDataConfigurationCsvOptions {
 	Quote: *string,
@@ -1972,7 +1972,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableExternalDataConfigurationGoogleSheetsOptions {
 	Range: *string,
@@ -2026,7 +2026,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableExternalDataConfigurationHivePartitioningOptions {
 	Mode: *string,
@@ -2094,7 +2094,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedView.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableMaterializedView {
 	Query: *string,
@@ -2160,11 +2160,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioning.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableRangePartitioning {
 	Field: *string,
-	Range: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryTable.BigqueryTableRangePartitioningRange,
+	Range: github.com/cdktf/cdktf-provider-google-go/google.bigqueryTable.BigqueryTableRangePartitioningRange,
 }
 ```
 
@@ -2210,7 +2210,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioningRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableRangePartitioningRange {
 	End: *f64,
@@ -2276,7 +2276,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioning.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableTimePartitioning {
 	Type: *string,
@@ -2360,7 +2360,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryTable.BigqueryTableView.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 &bigquerytable.BigqueryTableView {
 	Query: *string,
@@ -2414,7 +2414,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableEncryptionConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableEncryptionConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableEncryptionConfigurationOutputReference
 ```
@@ -2696,7 +2696,7 @@ func InternalValue() BigqueryTableEncryptionConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationAvroOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableExternalDataConfigurationAvroOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableExternalDataConfigurationAvroOptionsOutputReference
 ```
@@ -2967,7 +2967,7 @@ func InternalValue() BigqueryTableExternalDataConfigurationAvroOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationCsvOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableExternalDataConfigurationCsvOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableExternalDataConfigurationCsvOptionsOutputReference
 ```
@@ -3383,7 +3383,7 @@ func InternalValue() BigqueryTableExternalDataConfigurationCsvOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableExternalDataConfigurationGoogleSheetsOptionsOutputReference
 ```
@@ -3690,7 +3690,7 @@ func InternalValue() BigqueryTableExternalDataConfigurationGoogleSheetsOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableExternalDataConfigurationHivePartitioningOptionsOutputReference
 ```
@@ -4026,7 +4026,7 @@ func InternalValue() BigqueryTableExternalDataConfigurationHivePartitioningOptio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableExternalDataConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableExternalDataConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableExternalDataConfigurationOutputReference
 ```
@@ -4683,7 +4683,7 @@ func InternalValue() BigqueryTableExternalDataConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableMaterializedViewOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableMaterializedViewOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableMaterializedViewOutputReference
 ```
@@ -5012,7 +5012,7 @@ func InternalValue() BigqueryTableMaterializedView
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioningOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableRangePartitioningOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableRangePartitioningOutputReference
 ```
@@ -5318,7 +5318,7 @@ func InternalValue() BigqueryTableRangePartitioning
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableRangePartitioningRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableRangePartitioningRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableRangePartitioningRangeOutputReference
 ```
@@ -5633,7 +5633,7 @@ func InternalValue() BigqueryTableRangePartitioningRange
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableTimePartitioningOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableTimePartitioningOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableTimePartitioningOutputReference
 ```
@@ -5991,7 +5991,7 @@ func InternalValue() BigqueryTableTimePartitioning
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryTable.BigqueryTableViewOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerytable"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerytable"
 
 bigquerytable.NewBigqueryTableViewOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryTableViewOutputReference
 ```

@@ -16,6 +16,21 @@ underscores (_). The maximum length is 1,024 characters.
   */
   readonly datasetId: string;
   /**
+  * Defines the default collation specification of future tables created
+in the dataset. If a table is created in this dataset without table-level
+default collation, then the table inherits the dataset default collation,
+which is applied to the string fields that do not have explicit collation
+specified. A change to this field affects only tables created afterwards,
+and does not alter the existing tables.
+
+The following values are supported:
+- 'und:ci': undetermined locale, case insensitive.
+- '': empty string. Default to case-sensitive behavior.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#default_collation BigqueryDataset#default_collation}
+  */
+  readonly defaultCollation?: string;
+  /**
   * The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
@@ -80,6 +95,14 @@ destroying the resource will fail if tables are present.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
+  /**
+  * TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
+By default, this is FALSE, which means the dataset and its table names are
+case-sensitive. This field does not affect routine references.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
+  */
+  readonly isCaseInsensitive?: boolean | cdktf.IResolvable;
   /**
   * The labels associated with this dataset. You can use these to
 organize and group your datasets
@@ -1092,7 +1115,7 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_dataset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1104,12 +1127,14 @@ export class BigqueryDataset extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._datasetId = config.datasetId;
+    this._defaultCollation = config.defaultCollation;
     this._defaultPartitionExpirationMs = config.defaultPartitionExpirationMs;
     this._defaultTableExpirationMs = config.defaultTableExpirationMs;
     this._deleteContentsOnDestroy = config.deleteContentsOnDestroy;
     this._description = config.description;
     this._friendlyName = config.friendlyName;
     this._id = config.id;
+    this._isCaseInsensitive = config.isCaseInsensitive;
     this._labels = config.labels;
     this._location = config.location;
     this._maxTimeTravelHours = config.maxTimeTravelHours;
@@ -1139,6 +1164,22 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get datasetIdInput() {
     return this._datasetId;
+  }
+
+  // default_collation - computed: true, optional: true, required: false
+  private _defaultCollation?: string; 
+  public get defaultCollation() {
+    return this.getStringAttribute('default_collation');
+  }
+  public set defaultCollation(value: string) {
+    this._defaultCollation = value;
+  }
+  public resetDefaultCollation() {
+    this._defaultCollation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultCollationInput() {
+    return this._defaultCollation;
   }
 
   // default_partition_expiration_ms - computed: false, optional: true, required: false
@@ -1240,6 +1281,22 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get idInput() {
     return this._id;
+  }
+
+  // is_case_insensitive - computed: true, optional: true, required: false
+  private _isCaseInsensitive?: boolean | cdktf.IResolvable; 
+  public get isCaseInsensitive() {
+    return this.getBooleanAttribute('is_case_insensitive');
+  }
+  public set isCaseInsensitive(value: boolean | cdktf.IResolvable) {
+    this._isCaseInsensitive = value;
+  }
+  public resetIsCaseInsensitive() {
+    this._isCaseInsensitive = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isCaseInsensitiveInput() {
+    return this._isCaseInsensitive;
   }
 
   // labels - computed: true, optional: true, required: false
@@ -1371,12 +1428,14 @@ export class BigqueryDataset extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dataset_id: cdktf.stringToTerraform(this._datasetId),
+      default_collation: cdktf.stringToTerraform(this._defaultCollation),
       default_partition_expiration_ms: cdktf.numberToTerraform(this._defaultPartitionExpirationMs),
       default_table_expiration_ms: cdktf.numberToTerraform(this._defaultTableExpirationMs),
       delete_contents_on_destroy: cdktf.booleanToTerraform(this._deleteContentsOnDestroy),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
       id: cdktf.stringToTerraform(this._id),
+      is_case_insensitive: cdktf.booleanToTerraform(this._isCaseInsensitive),
       labels: cdktf.hashMapper(cdktf.stringToTerraform)(this._labels),
       location: cdktf.stringToTerraform(this._location),
       max_time_travel_hours: cdktf.stringToTerraform(this._maxTimeTravelHours),

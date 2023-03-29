@@ -3436,6 +3436,70 @@ export class DataGoogleContainerClusterNodeConfigLinuxNodeConfigList extends cdk
     return new DataGoogleContainerClusterNodeConfigLinuxNodeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig {
+}
+
+export function dataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigToTerraform(struct?: DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // local_ssd_count - computed: true, optional: false, required: false
+  public get localSsdCount() {
+    return this.getNumberAttribute('local_ssd_count');
+  }
+}
+
+export class DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference {
+    return new DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodeConfigReservationAffinity {
 }
 
@@ -3811,6 +3875,12 @@ export class DataGoogleContainerClusterNodeConfigOutputReference extends cdktf.C
   private _linuxNodeConfig = new DataGoogleContainerClusterNodeConfigLinuxNodeConfigList(this, "linux_node_config", false);
   public get linuxNodeConfig() {
     return this._linuxNodeConfig;
+  }
+
+  // local_nvme_ssd_block_config - computed: true, optional: false, required: false
+  private _localNvmeSsdBlockConfig = new DataGoogleContainerClusterNodeConfigLocalNvmeSsdBlockConfigList(this, "local_nvme_ssd_block_config", false);
+  public get localNvmeSsdBlockConfig() {
+    return this._localNvmeSsdBlockConfig;
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -4571,6 +4641,70 @@ export class DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList ext
     return new DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig {
+}
+
+export function dataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigToTerraform(struct?: DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // local_ssd_count - computed: true, optional: false, required: false
+  public get localSsdCount() {
+    return this.getNumberAttribute('local_ssd_count');
+  }
+}
+
+export class DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference {
+    return new DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleContainerClusterNodePoolNodeConfigReservationAffinity {
 }
 
@@ -4946,6 +5080,12 @@ export class DataGoogleContainerClusterNodePoolNodeConfigOutputReference extends
   private _linuxNodeConfig = new DataGoogleContainerClusterNodePoolNodeConfigLinuxNodeConfigList(this, "linux_node_config", false);
   public get linuxNodeConfig() {
     return this._linuxNodeConfig;
+  }
+
+  // local_nvme_ssd_block_config - computed: true, optional: false, required: false
+  private _localNvmeSsdBlockConfig = new DataGoogleContainerClusterNodePoolNodeConfigLocalNvmeSsdBlockConfigList(this, "local_nvme_ssd_block_config", false);
+  public get localNvmeSsdBlockConfig() {
+    return this._localNvmeSsdBlockConfig;
   }
 
   // local_ssd_count - computed: true, optional: false, required: false
@@ -6400,7 +6540,7 @@ export class DataGoogleContainerCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

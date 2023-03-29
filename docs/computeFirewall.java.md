@@ -206,7 +206,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these ranges.
 
 These ranges
-must be expressed in CIDR format. Only IPv4 is supported.
+must be expressed in CIDR format. IPv4 or IPv6 ranges are supported.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#destination_ranges ComputeFirewall#destination_ranges}
 
@@ -308,8 +308,8 @@ sourceTags may be set. If both properties are set, the firewall will
 apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
-apply. Only IPv4 is supported. For INGRESS traffic, one of 'source_ranges',
-'source_tags' or 'source_service_accounts' is required.
+apply. IPv4 or IPv6 ranges are supported. For INGRESS traffic, one of
+'source_ranges', 'source_tags' or 'source_service_accounts' is required.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_ranges ComputeFirewall#source_ranges}
 
@@ -1764,7 +1764,7 @@ public java.util.List<java.lang.String> getDestinationRanges();
 If destination ranges are specified, the firewall will apply only to traffic that has destination IP address in these ranges.
 
 These ranges
-must be expressed in CIDR format. Only IPv4 is supported.
+must be expressed in CIDR format. IPv4 or IPv6 ranges are supported.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#destination_ranges ComputeFirewall#destination_ranges}
 
@@ -1898,8 +1898,8 @@ sourceTags may be set. If both properties are set, the firewall will
 apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
-apply. Only IPv4 is supported. For INGRESS traffic, one of 'source_ranges',
-'source_tags' or 'source_service_accounts' is required.
+apply. IPv4 or IPv6 ranges are supported. For INGRESS traffic, one of
+'source_ranges', 'source_tags' or 'source_service_accounts' is required.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_firewall#source_ranges ComputeFirewall#source_ranges}
 

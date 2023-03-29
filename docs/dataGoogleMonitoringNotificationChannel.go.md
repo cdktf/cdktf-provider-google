@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/monitoring_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannel(scope Construct, id *string, config DataGoogleMonitoringNotificationChannelConfig) DataGoogleMonitoringNotificationChannel
 ```
@@ -308,7 +308,7 @@ func ResetUserLabels()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsConstruct(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsTerraformElement(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannel.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannel_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -729,7 +729,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 &datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannelConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 &datagooglemonitoringnotificationchannel.DataGoogleMonitoringNotificationChannelSensitiveLabels {
 
@@ -955,7 +955,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoring
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannelSensitiveLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringNotificationChannelSensitiveLabelsList
 ```
@@ -1087,7 +1087,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringNotificationChannel.DataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglemonitoringnotificationchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringnotificationchannel"
 
 datagooglemonitoringnotificationchannel.NewDataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringNotificationChannelSensitiveLabelsOutputReference
 ```

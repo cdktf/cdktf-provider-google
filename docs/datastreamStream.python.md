@@ -2496,7 +2496,7 @@ datastreamStream.DatastreamStreamDestinationConfigBigqueryDestinationConfigSingl
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDataset.property.datasetId">dataset_id</a></code> | <code>str</code> | Dataset ID in the format projects/{project}/datasets/{dataset_id}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDataset.property.datasetId">dataset_id</a></code> | <code>str</code> | Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}. |
 
 ---
 
@@ -2508,7 +2508,7 @@ dataset_id: str
 
 - *Type:* str
 
-Dataset ID in the format projects/{project}/datasets/{dataset_id}.
+Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#dataset_id DatastreamStream#dataset_id}
 
@@ -11334,7 +11334,7 @@ def put_single_target_dataset(
 
 - *Type:* str
 
-Dataset ID in the format projects/{project}/datasets/{dataset_id}.
+Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#dataset_id DatastreamStream#dataset_id}
 

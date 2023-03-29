@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/access_cont
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 accesscontextmanageraccesspolicy.NewAccessContextManagerAccessPolicy(scope Construct, id *string, config AccessContextManagerAccessPolicyConfig) AccessContextManagerAccessPolicy
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicy_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -688,7 +688,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 &accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicyConfig {
 	Connection: interface{},
@@ -702,7 +702,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanager
 	Title: *string,
 	Id: *string,
 	Scopes: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicyTimeouts,
 }
 ```
 
@@ -871,7 +871,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 &accesscontextmanageraccesspolicy.AccessContextManagerAccessPolicyTimeouts {
 	Create: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicy.AccessContextManagerAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/accesscontextmanageraccesspolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicy"
 
 accesscontextmanageraccesspolicy.NewAccessContextManagerAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessPolicyTimeoutsOutputReference
 ```

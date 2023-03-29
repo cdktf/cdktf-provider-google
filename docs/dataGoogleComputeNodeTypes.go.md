@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_nod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.NewDataGoogleComputeNodeTypes(scope Construct, id *string, config DataGoogleComputeNodeTypesConfig) DataGoogleComputeNodeTypes
 ```
@@ -287,7 +287,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenodetypes"
 
 datagooglecomputenodetypes.DataGoogleComputeNodeTypes_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -587,7 +587,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputenodetypes"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenodetypes"
 
 &datagooglecomputenodetypes.DataGoogleComputeNodeTypesConfig {
 	Connection: interface{},

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_pro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.NewLoggingProjectBucketConfig(scope Construct, id *string, config LoggingProjectBucketConfigConfig) LoggingProjectBucketConfig
 ```
@@ -69,6 +69,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.putCmekSettings">PutCmekSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetCmekSettings">ResetCmekSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetEnableAnalytics">ResetEnableAnalytics</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetRetentionDays">ResetRetentionDays</a></code> | *No description.* |
 
@@ -282,6 +283,12 @@ func ResetCmekSettings()
 func ResetDescription()
 ```
 
+##### `ResetEnableAnalytics` <a name="ResetEnableAnalytics" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetEnableAnalytics"></a>
+
+```go
+func ResetEnableAnalytics()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.resetId"></a>
 
 ```go
@@ -307,7 +314,7 @@ func ResetRetentionDays()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +360,7 @@ loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -388,12 +395,14 @@ loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformResource(x inte
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.bucketIdInput">BucketIdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.cmekSettingsInput">CmekSettingsInput</a></code> | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings">LoggingProjectBucketConfigCmekSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.enableAnalyticsInput">EnableAnalyticsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.locationInput">LocationInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.retentionDaysInput">RetentionDaysInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.bucketId">BucketId</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.description">Description</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.enableAnalytics">EnableAnalytics</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.location">Location</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.project">Project</a></code> | <code>*string</code> | *No description.* |
@@ -603,6 +612,16 @@ func DescriptionInput() *string
 
 ---
 
+##### `EnableAnalyticsInput`<sup>Optional</sup> <a name="EnableAnalyticsInput" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.enableAnalyticsInput"></a>
+
+```go
+func EnableAnalyticsInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.idInput"></a>
 
 ```go
@@ -660,6 +679,16 @@ func Description() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `EnableAnalytics`<sup>Required</sup> <a name="EnableAnalytics" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.property.enableAnalytics"></a>
+
+```go
+func EnableAnalytics() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -728,7 +757,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 &loggingprojectbucketconfig.LoggingProjectBucketConfigCmekSettings {
 	KmsKeyName: *string,
@@ -768,7 +797,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 &loggingprojectbucketconfig.LoggingProjectBucketConfigConfig {
 	Connection: interface{},
@@ -781,8 +810,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucket
 	BucketId: *string,
 	Location: *string,
 	Project: *string,
-	CmekSettings: github.com/cdktf/cdktf-provider-google-go/google/v5.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings,
+	CmekSettings: github.com/cdktf/cdktf-provider-google-go/google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings,
 	Description: *string,
+	EnableAnalytics: interface{},
 	Id: *string,
 	RetentionDays: *f64,
 }
@@ -804,6 +834,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucket
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.project">Project</a></code> | <code>*string</code> | The parent project that contains the logging bucket. |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.cmekSettings">CmekSettings</a></code> | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings">LoggingProjectBucketConfigCmekSettings</a></code> | cmek_settings block. |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.description">Description</a></code> | <code>*string</code> | An optional description for this bucket. |
+| <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.enableAnalytics">EnableAnalytics</a></code> | <code>interface{}</code> | Enable log analytics for the bucket. Cannot be disabled once enabled. |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#id LoggingProjectBucketConfig#id}. |
 | <code><a href="#@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.retentionDays">RetentionDays</a></code> | <code>*f64</code> | Logs will be retained by default for this amount of time, after which they will automatically be deleted. |
 
@@ -949,6 +980,20 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `EnableAnalytics`<sup>Optional</sup> <a name="EnableAnalytics" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.enableAnalytics"></a>
+
+```go
+EnableAnalytics interface{}
+```
+
+- *Type:* interface{}
+
+Enable log analytics for the bucket. Cannot be disabled once enabled.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#enable_analytics LoggingProjectBucketConfig#enable_analytics}
+
+---
+
 ##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.property.id"></a>
 
 ```go
@@ -987,7 +1032,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.NewLoggingProjectBucketConfigCmekSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingProjectBucketConfigCmekSettingsOutputReference
 ```

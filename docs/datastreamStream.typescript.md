@@ -2067,7 +2067,7 @@ const datastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetData
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDataset.property.datasetId">datasetId</a></code> | <code>string</code> | Dataset ID in the format projects/{project}/datasets/{dataset_id}. |
+| <code><a href="#@cdktf/provider-google.datastreamStream.DatastreamStreamDestinationConfigBigqueryDestinationConfigSingleTargetDataset.property.datasetId">datasetId</a></code> | <code>string</code> | Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}. |
 
 ---
 
@@ -2079,7 +2079,7 @@ public readonly datasetId: string;
 
 - *Type:* string
 
-Dataset ID in the format projects/{project}/datasets/{dataset_id}.
+Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/datastream_stream#dataset_id DatastreamStream#dataset_id}
 

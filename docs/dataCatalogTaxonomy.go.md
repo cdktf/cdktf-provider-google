@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 datacatalogtaxonomy.NewDataCatalogTaxonomy(scope Construct, id *string, config DataCatalogTaxonomyConfig) DataCatalogTaxonomy
 ```
@@ -321,7 +321,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 datacatalogtaxonomy.DataCatalogTaxonomy_IsConstruct(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 datacatalogtaxonomy.DataCatalogTaxonomy_IsTerraformElement(x interface{}) *bool
 ```
@@ -367,7 +367,7 @@ datacatalogtaxonomy.DataCatalogTaxonomy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 datacatalogtaxonomy.DataCatalogTaxonomy_IsTerraformResource(x interface{}) *bool
 ```
@@ -731,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 &datacatalogtaxonomy.DataCatalogTaxonomyConfig {
 	Connection: interface{},
@@ -747,7 +747,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
 	Id: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.dataCatalogTaxonomy.DataCatalogTaxonomyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogTaxonomy.DataCatalogTaxonomyTimeouts,
 }
 ```
 
@@ -955,7 +955,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 &datacatalogtaxonomy.DataCatalogTaxonomyTimeouts {
 	Create: *string,
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomy.DataCatalogTaxonomyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomy"
 
 datacatalogtaxonomy.NewDataCatalogTaxonomyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogTaxonomyTimeoutsOutputReference
 ```

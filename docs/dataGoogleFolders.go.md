@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/folders goo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFolders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.NewDataGoogleFolders(scope Construct, id *string, config DataGoogleFoldersConfig) DataGoogleFolders
 ```
@@ -273,7 +273,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFolders.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.DataGoogleFolders_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +305,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFolders.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.DataGoogleFolders_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ datagooglefolders.DataGoogleFolders_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFolders.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.DataGoogleFolders_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -551,7 +551,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFoldersConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 &datagooglefolders.DataGoogleFoldersConfig {
 	Connection: interface{},
@@ -684,7 +684,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFoldersFolders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 &datagooglefolders.DataGoogleFoldersFolders {
 
@@ -699,7 +699,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFoldersFoldersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.NewDataGoogleFoldersFoldersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleFoldersFoldersList
 ```
@@ -831,7 +831,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleFolders.DataGoogleFoldersFoldersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglefolders"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglefolders"
 
 datagooglefolders.NewDataGoogleFoldersFoldersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleFoldersFoldersOutputReference
 ```

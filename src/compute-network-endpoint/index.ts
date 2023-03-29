@@ -38,6 +38,8 @@ range).
   readonly networkEndpointGroup: string;
   /**
   * Port number of network endpoint.
+**Note** 'port' is required unless the Network Endpoint Group is created
+with the type of 'GCE_VM_IP'
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#port ComputeNetworkEndpoint#port}
   */
@@ -188,7 +190,7 @@ export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_jo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.NewDataprocJobIamMember(scope Construct, id *string, config DataprocJobIamMemberConfig) DataprocJobIamMember
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ dataprocjobiammember.DataprocJobIamMember_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 &dataprocjobiammember.DataprocJobIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 &dataprocjobiammember.DataprocJobIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember
 	JobId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.dataprocJobIamMember.DataprocJobIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataprocJobIamMember.DataprocJobIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.NewDataprocJobIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobIamMemberConditionOutputReference
 ```

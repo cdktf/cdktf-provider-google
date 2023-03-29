@@ -1211,6 +1211,11 @@ export class DataGoogleComputeInstanceScratchDiskOutputReference extends cdktf.C
   public get interface() {
     return this.getStringAttribute('interface');
   }
+
+  // size - computed: true, optional: false, required: false
+  public get size() {
+    return this.getNumberAttribute('size');
+  }
 }
 
 export class DataGoogleComputeInstanceScratchDiskList extends cdktf.ComplexList {
@@ -1401,7 +1406,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

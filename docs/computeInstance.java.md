@@ -3743,6 +3743,7 @@ import com.hashicorp.cdktf.providers.google.compute_instance.ComputeInstanceScra
 
 ComputeInstanceScratchDisk.builder()
     .interface(java.lang.String)
+//  .size(java.lang.Number)
     .build();
 ```
 
@@ -3751,6 +3752,7 @@ ComputeInstanceScratchDisk.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDisk.property.interface">interface</a></code> | <code>java.lang.String</code> | The disk interface used for attaching this disk. One of SCSI or NVME. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDisk.property.size">size</a></code> | <code>java.lang.Number</code> | The size of the disk in gigabytes. One of 375 or 3000. |
 
 ---
 
@@ -3765,6 +3767,20 @@ public java.lang.String getInterface();
 The disk interface used for attaching this disk. One of SCSI or NVME.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance#interface ComputeInstance#interface}
+
+---
+
+##### `size`<sup>Optional</sup> <a name="size" id="@cdktf/provider-google.computeInstance.ComputeInstanceScratchDisk.property.size"></a>
+
+```java
+public java.lang.Number getSize();
+```
+
+- *Type:* java.lang.Number
+
+The size of the disk in gigabytes. One of 375 or 3000.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance#size ComputeInstance#size}
 
 ---
 
@@ -10384,6 +10400,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.resetSize">resetSize</a></code> | *No description.* |
 
 ---
 
@@ -10537,6 +10554,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `resetSize` <a name="resetSize" id="@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.resetSize"></a>
+
+```java
+public void resetSize()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -10545,7 +10568,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.interfaceInput">interfaceInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.sizeInput">sizeInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.interface">interface</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.size">size</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScratchDisk">ComputeInstanceScratchDisk</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
@@ -10584,6 +10609,16 @@ public java.lang.String getInterfaceInput();
 
 ---
 
+##### `sizeInput`<sup>Optional</sup> <a name="sizeInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.sizeInput"></a>
+
+```java
+public java.lang.Number getSizeInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
 ##### `interface`<sup>Required</sup> <a name="interface" id="@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.interface"></a>
 
 ```java
@@ -10591,6 +10626,16 @@ public java.lang.String getInterface();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `size`<sup>Required</sup> <a name="size" id="@cdktf/provider-google.computeInstance.ComputeInstanceScratchDiskOutputReference.property.size"></a>
+
+```java
+public java.lang.Number getSize();
+```
+
+- *Type:* java.lang.Number
 
 ---
 

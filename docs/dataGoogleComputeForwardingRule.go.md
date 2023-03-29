@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_for
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.NewDataGoogleComputeForwardingRule(scope Construct, id *string, config DataGoogleComputeForwardingRuleConfig) DataGoogleComputeForwardingRule
 ```
@@ -287,7 +287,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.DataGoogleComputeForwardingRule_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.DataGoogleComputeForwardingRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagooglecomputeforwardingrule.DataGoogleComputeForwardingRule_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.DataGoogleComputeForwardingRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -851,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 &datagooglecomputeforwardingrule.DataGoogleComputeForwardingRuleConfig {
 	Connection: interface{},
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRuleServiceDirectoryRegistrations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 &datagooglecomputeforwardingrule.DataGoogleComputeForwardingRuleServiceDirectoryRegistrations {
 
@@ -1035,7 +1035,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputefor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.NewDataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList
 ```
@@ -1167,7 +1167,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeForwardingRule.DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeforwardingrule"
 
 datagooglecomputeforwardingrule.NewDataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsOutputReference
 ```
