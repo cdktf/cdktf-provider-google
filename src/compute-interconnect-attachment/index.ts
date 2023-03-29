@@ -387,7 +387,7 @@ export class ComputeInterconnectAttachment extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_interconnect_attachment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -2133,7 +2133,7 @@ DiskSizeGb *f64
 
 The size of the image in gigabytes.
 
-If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be exactly 375GB.
+If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be one of 375 or 3000 GB, with a default of 375 GB.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_instance_template#disk_size_gb ComputeInstanceTemplate#disk_size_gb}
 

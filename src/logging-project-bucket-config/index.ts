@@ -20,6 +20,12 @@ export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArg
   */
   readonly description?: string;
   /**
+  * Enable log analytics for the bucket. Cannot be disabled once enabled.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#enable_analytics LoggingProjectBucketConfig#enable_analytics}
+  */
+  readonly enableAnalytics?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config#id LoggingProjectBucketConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -162,7 +168,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_project_bucket_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.58.0',
+        providerVersion: '4.59.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -175,6 +181,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
     });
     this._bucketId = config.bucketId;
     this._description = config.description;
+    this._enableAnalytics = config.enableAnalytics;
     this._id = config.id;
     this._location = config.location;
     this._project = config.project;
@@ -213,6 +220,22 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // enable_analytics - computed: false, optional: true, required: false
+  private _enableAnalytics?: boolean | cdktf.IResolvable; 
+  public get enableAnalytics() {
+    return this.getBooleanAttribute('enable_analytics');
+  }
+  public set enableAnalytics(value: boolean | cdktf.IResolvable) {
+    this._enableAnalytics = value;
+  }
+  public resetEnableAnalytics() {
+    this._enableAnalytics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAnalyticsInput() {
+    return this._enableAnalytics;
   }
 
   // id - computed: true, optional: true, required: false
@@ -307,6 +330,7 @@ export class LoggingProjectBucketConfig extends cdktf.TerraformResource {
     return {
       bucket_id: cdktf.stringToTerraform(this._bucketId),
       description: cdktf.stringToTerraform(this._description),
+      enable_analytics: cdktf.booleanToTerraform(this._enableAnalytics),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
       project: cdktf.stringToTerraform(this._project),
