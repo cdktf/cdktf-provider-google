@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/project_iam
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamMember.ProjectIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 projectiammember.NewProjectIamMember(scope Construct, id *string, config ProjectIamMemberConfig) ProjectIamMember
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectIamMember.ProjectIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 projectiammember.ProjectIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectIamMember.ProjectIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 projectiammember.ProjectIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ projectiammember.ProjectIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectIamMember.ProjectIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 projectiammember.ProjectIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectIamMember.ProjectIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 &projectiammember.ProjectIamMemberCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectIamMember.ProjectIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 &projectiammember.ProjectIamMemberConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
 	Member: *string,
 	Project: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.projectIamMember.ProjectIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.projectIamMember.ProjectIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectIamMember.ProjectIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectiammember"
 
 projectiammember.NewProjectIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProjectIamMemberConditionOutputReference
 ```

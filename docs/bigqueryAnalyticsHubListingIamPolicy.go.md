@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_an
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamPolicy.BigqueryAnalyticsHubListingIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryanalyticshublistingiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshublistingiampolicy"
 
 bigqueryanalyticshublistingiampolicy.NewBigqueryAnalyticsHubListingIamPolicy(scope Construct, id *string, config BigqueryAnalyticsHubListingIamPolicyConfig) BigqueryAnalyticsHubListingIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamPolicy.BigqueryAnalyticsHubListingIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryanalyticshublistingiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshublistingiampolicy"
 
 bigqueryanalyticshublistingiampolicy.BigqueryAnalyticsHubListingIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamPolicy.BigqueryAnalyticsHubListingIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryanalyticshublistingiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshublistingiampolicy"
 
 bigqueryanalyticshublistingiampolicy.BigqueryAnalyticsHubListingIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ bigqueryanalyticshublistingiampolicy.BigqueryAnalyticsHubListingIamPolicy_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamPolicy.BigqueryAnalyticsHubListingIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryanalyticshublistingiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshublistingiampolicy"
 
 bigqueryanalyticshublistingiampolicy.BigqueryAnalyticsHubListingIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -675,7 +675,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryAnalyticsHubListingIamPolicy.BigqueryAnalyticsHubListingIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigqueryanalyticshublistingiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryanalyticshublistingiampolicy"
 
 &bigqueryanalyticshublistingiampolicy.BigqueryAnalyticsHubListingIamPolicyConfig {
 	Connection: interface{},

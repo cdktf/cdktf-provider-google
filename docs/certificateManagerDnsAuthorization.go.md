@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/certificate
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.NewCertificateManagerDnsAuthorization(scope Construct, id *string, config CertificateManagerDnsAuthorizationConfig) CertificateManagerDnsAuthorization
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.CertificateManagerDnsAuthorization_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.CertificateManagerDnsAuthorization_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ certificatemanagerdnsauthorization.CertificateManagerDnsAuthorization_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorization.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.CertificateManagerDnsAuthorization_IsTerraformResource(x interface{}) *bool
 ```
@@ -724,7 +724,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 &certificatemanagerdnsauthorization.CertificateManagerDnsAuthorizationConfig {
 	Connection: interface{},
@@ -740,7 +740,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdn
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationTimeouts,
 }
 ```
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationDnsResourceRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 &certificatemanagerdnsauthorization.CertificateManagerDnsAuthorizationDnsResourceRecord {
 
@@ -958,7 +958,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdn
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 &certificatemanagerdnsauthorization.CertificateManagerDnsAuthorizationTimeouts {
 	Create: *string,
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationDnsResourceRecordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.NewCertificateManagerDnsAuthorizationDnsResourceRecordList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CertificateManagerDnsAuthorizationDnsResourceRecordList
 ```
@@ -1152,7 +1152,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationDnsResourceRecordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.NewCertificateManagerDnsAuthorizationDnsResourceRecordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CertificateManagerDnsAuthorizationDnsResourceRecordOutputReference
 ```
@@ -1452,7 +1452,7 @@ func InternalValue() CertificateManagerDnsAuthorizationDnsResourceRecord
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.certificateManagerDnsAuthorization.CertificateManagerDnsAuthorizationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/certificatemanagerdnsauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/certificatemanagerdnsauthorization"
 
 certificatemanagerdnsauthorization.NewCertificateManagerDnsAuthorizationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CertificateManagerDnsAuthorizationTimeoutsOutputReference
 ```

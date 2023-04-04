@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMember(scope Construct, id *string, config PubsubSubscriptionIamMemberConfig) PubsubSubscriptionIamMember
 ```
@@ -300,7 +300,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.PubsubSubscriptionIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -688,7 +688,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberCondition {
 	Expression: *string,
@@ -748,7 +748,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 &pubsubsubscriptioniammember.PubsubSubscriptionIamMemberConfig {
 	Connection: interface{},
@@ -761,7 +761,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptionia
 	Member: *string,
 	Role: *string,
 	Subscription: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamMember.PubsubSubscriptionIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniammember"
 
 pubsubsubscriptioniammember.NewPubsubSubscriptionIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSubscriptionIamMemberConditionOutputReference
 ```

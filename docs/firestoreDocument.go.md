@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/firestore_d
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreDocument.FirestoreDocument.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 firestoredocument.NewFirestoreDocument(scope Construct, id *string, config FirestoreDocumentConfig) FirestoreDocument
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firestoreDocument.FirestoreDocument.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 firestoredocument.FirestoreDocument_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firestoreDocument.FirestoreDocument.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 firestoredocument.FirestoreDocument_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ firestoredocument.FirestoreDocument_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firestoreDocument.FirestoreDocument.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 firestoredocument.FirestoreDocument_IsTerraformResource(x interface{}) *bool
 ```
@@ -750,7 +750,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreDocument.FirestoreDocumentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 &firestoredocument.FirestoreDocumentConfig {
 	Connection: interface{},
@@ -766,7 +766,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
 	Database: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.firestoreDocument.FirestoreDocumentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firestoreDocument.FirestoreDocumentTimeouts,
 }
 ```
 
@@ -963,7 +963,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 &firestoredocument.FirestoreDocumentTimeouts {
 	Create: *string,
@@ -1025,7 +1025,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firestoredocument"
+import "github.com/cdktf/cdktf-provider-google-go/google/firestoredocument"
 
 firestoredocument.NewFirestoreDocumentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirestoreDocumentTimeoutsOutputReference
 ```
