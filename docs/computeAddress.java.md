@@ -51,7 +51,7 @@ ComputeAddress.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.address">address</a></code> | <code>java.lang.String</code> | The static external IP address represented by this resource. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.addressType">addressType</a></code> | <code>java.lang.String</code> | The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.addressType">addressType</a></code> | <code>java.lang.String</code> | The type of address to reserve. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#id ComputeAddress#id}. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.Initializer.parameter.network">network</a></code> | <code>java.lang.String</code> | The URL of the network in which to reserve the address. |
@@ -161,7 +161,9 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"].
+The type of address to reserve.
+
+Note: if you set this argument's value as 'INTERNAL' you need to leave the 'network_tier' argument unset in that resource block. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address_type ComputeAddress#address_type}
 
@@ -209,7 +211,8 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 The networking tier used for configuring this address.
 
 If this field is not
-specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
+specified, it is assumed to be PREMIUM.
+This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it's always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: ["PREMIUM", "STANDARD"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#network_tier ComputeAddress#network_tier}
 
@@ -1219,7 +1222,7 @@ ComputeAddressConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.address">address</a></code> | <code>java.lang.String</code> | The static external IP address represented by this resource. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.addressType">addressType</a></code> | <code>java.lang.String</code> | The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.addressType">addressType</a></code> | <code>java.lang.String</code> | The type of address to reserve. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#id ComputeAddress#id}. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.network">network</a></code> | <code>java.lang.String</code> | The URL of the network in which to reserve the address. |
@@ -1351,7 +1354,9 @@ public java.lang.String getAddressType();
 
 - *Type:* java.lang.String
 
-The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"].
+The type of address to reserve.
+
+Note: if you set this argument's value as 'INTERNAL' you need to leave the 'network_tier' argument unset in that resource block. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address_type ComputeAddress#address_type}
 
@@ -1415,7 +1420,8 @@ public java.lang.String getNetworkTier();
 The networking tier used for configuring this address.
 
 If this field is not
-specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
+specified, it is assumed to be PREMIUM.
+This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it's always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: ["PREMIUM", "STANDARD"]
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#network_tier ComputeAddress#network_tier}
 

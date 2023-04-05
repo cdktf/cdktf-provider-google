@@ -21,7 +21,7 @@ export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArgu
   */
   readonly location: string;
   /**
-  * Name must be unique within a namespace, within a Cloud Run region.
+  * Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
@@ -1763,7 +1763,7 @@ export class DataGoogleCloudRunService extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloud_run_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

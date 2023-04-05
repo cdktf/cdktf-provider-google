@@ -269,6 +269,12 @@ export interface SqlDatabaseInstanceClone {
   */
   readonly allocatedIpRange?: string;
   /**
+  * (SQL Server only, use with point_in_time) clone only the specified databases from the source instance. Clone all databases if empty.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_names SqlDatabaseInstance#database_names}
+  */
+  readonly databaseNames?: string[];
+  /**
   * The timestamp of the point in time that should be restored.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#point_in_time SqlDatabaseInstance#point_in_time}
@@ -289,6 +295,7 @@ export function sqlDatabaseInstanceCloneToTerraform(struct?: SqlDatabaseInstance
   }
   return {
     allocated_ip_range: cdktf.stringToTerraform(struct!.allocatedIpRange),
+    database_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.databaseNames),
     point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
     source_instance_name: cdktf.stringToTerraform(struct!.sourceInstanceName),
   }
@@ -312,6 +319,10 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.allocatedIpRange = this._allocatedIpRange;
     }
+    if (this._databaseNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.databaseNames = this._databaseNames;
+    }
     if (this._pointInTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.pointInTime = this._pointInTime;
@@ -327,12 +338,14 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
     if (value === undefined) {
       this.isEmptyObject = false;
       this._allocatedIpRange = undefined;
+      this._databaseNames = undefined;
       this._pointInTime = undefined;
       this._sourceInstanceName = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allocatedIpRange = value.allocatedIpRange;
+      this._databaseNames = value.databaseNames;
       this._pointInTime = value.pointInTime;
       this._sourceInstanceName = value.sourceInstanceName;
     }
@@ -352,6 +365,22 @@ export class SqlDatabaseInstanceCloneOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get allocatedIpRangeInput() {
     return this._allocatedIpRange;
+  }
+
+  // database_names - computed: false, optional: true, required: false
+  private _databaseNames?: string[]; 
+  public get databaseNames() {
+    return this.getListAttribute('database_names');
+  }
+  public set databaseNames(value: string[]) {
+    this._databaseNames = value;
+  }
+  public resetDatabaseNames() {
+    this._databaseNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNamesInput() {
+    return this._databaseNames;
   }
 
   // point_in_time - computed: false, optional: true, required: false
@@ -3491,7 +3520,7 @@ export class SqlDatabaseInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_database_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/client_conf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.NewDataGoogleClientConfig(scope Construct, id *string, config DataGoogleClientConfigConfig) DataGoogleClientConfig
 ```
@@ -66,7 +66,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.resetId">ResetId</a></code> | *No description.* |
 
 ---
 
@@ -254,12 +253,6 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 
 ---
 
-##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.resetId"></a>
-
-```go
-func ResetId()
-```
-
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
@@ -273,7 +266,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +298,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +312,7 @@ datagoogleclientconfig.DataGoogleClientConfig_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 datagoogleclientconfig.DataGoogleClientConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -347,11 +340,10 @@ datagoogleclientconfig.DataGoogleClientConfig_IsTerraformDataSource(x interface{
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.accessToken">AccessToken</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.project">Project</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.region">Region</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.zone">Zone</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
@@ -487,6 +479,16 @@ func AccessToken() *string
 
 ---
 
+##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id"></a>
+
+```go
+func Id() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `Project`<sup>Required</sup> <a name="Project" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.project"></a>
 
 ```go
@@ -511,26 +513,6 @@ func Region() *string
 
 ```go
 func Zone() *string
-```
-
-- *Type:* *string
-
----
-
-##### `IdInput`<sup>Optional</sup> <a name="IdInput" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.idInput"></a>
-
-```go
-func IdInput() *string
-```
-
-- *Type:* *string
-
----
-
-##### `Id`<sup>Required</sup> <a name="Id" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.property.id"></a>
-
-```go
-func Id() *string
 ```
 
 - *Type:* *string
@@ -562,7 +544,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleclientconfig"
 
 &datagoogleclientconfig.DataGoogleClientConfigConfig {
 	Connection: interface{},
@@ -572,7 +554,6 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconf
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Id: *string,
 }
 ```
 
@@ -587,7 +568,6 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleclientconf
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/client_config#id DataGoogleClientConfig#id}. |
 
 ---
 
@@ -658,21 +638,6 @@ Provisioners *[]interface{}
 ```
 
 - *Type:* *[]interface{}
-
----
-
-##### `Id`<sup>Optional</sup> <a name="Id" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfigConfig.property.id"></a>
-
-```go
-Id *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/client_config#id DataGoogleClientConfig#id}.
-
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 
 ---
 

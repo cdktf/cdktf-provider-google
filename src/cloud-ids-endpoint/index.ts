@@ -217,7 +217,7 @@ export class CloudIdsEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_ids_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

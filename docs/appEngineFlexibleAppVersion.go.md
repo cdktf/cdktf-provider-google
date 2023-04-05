@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersion(scope Construct, id *string, config AppEngineFlexibleAppVersionConfig) AppEngineFlexibleAppVersion
 ```
@@ -624,7 +624,7 @@ func ResetVpcAccessConnector()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.AppEngineFlexibleAppVersion_IsConstruct(x interface{}) *bool
 ```
@@ -656,7 +656,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.AppEngineFlexibleAppVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ appengineflexibleappversion.AppEngineFlexibleAppVersion_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.AppEngineFlexibleAppVersion_IsTerraformResource(x interface{}) *bool
 ```
@@ -1562,7 +1562,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionApiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionApiConfig {
 	Script: *string,
@@ -1660,12 +1660,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionAutomaticScaling {
-	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization,
+	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization,
 	CoolDownPeriod: *string,
-	DiskUtilization: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization,
+	DiskUtilization: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization,
 	MaxConcurrentRequests: *f64,
 	MaxIdleInstances: *f64,
 	MaxPendingLatency: *string,
@@ -1673,8 +1673,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleapp
 	MinIdleInstances: *f64,
 	MinPendingLatency: *string,
 	MinTotalInstances: *f64,
-	NetworkUtilization: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization,
-	RequestUtilization: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization,
+	NetworkUtilization: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization,
+	RequestUtilization: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization,
 }
 ```
 
@@ -1877,7 +1877,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization {
 	TargetUtilization: *f64,
@@ -1927,7 +1927,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization {
 	TargetReadBytesPerSecond: *f64,
@@ -2009,7 +2009,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilization {
 	TargetReceivedBytesPerSecond: *f64,
@@ -2091,7 +2091,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionAutomaticScalingRequestUtilization {
 	TargetConcurrentRequests: *f64,
@@ -2141,7 +2141,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionConfig {
 	Connection: interface{},
@@ -2151,37 +2151,37 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleapp
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	LivenessCheck: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionLivenessCheck,
-	ReadinessCheck: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionReadinessCheck,
+	LivenessCheck: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionLivenessCheck,
+	ReadinessCheck: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionReadinessCheck,
 	Runtime: *string,
 	Service: *string,
-	ApiConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionApiConfig,
-	AutomaticScaling: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScaling,
+	ApiConfig: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionApiConfig,
+	AutomaticScaling: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScaling,
 	BetaSettings: *map[string]*string,
 	DefaultExpiration: *string,
 	DeleteServiceOnDestroy: interface{},
-	Deployment: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeployment,
-	EndpointsApiService: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEndpointsApiService,
-	Entrypoint: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEntrypoint,
+	Deployment: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeployment,
+	EndpointsApiService: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEndpointsApiService,
+	Entrypoint: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEntrypoint,
 	EnvVariables: *map[string]*string,
 	Handlers: interface{},
 	Id: *string,
 	InboundServices: *[]*string,
 	InstanceClass: *string,
-	ManualScaling: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionManualScaling,
-	Network: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionNetwork,
+	ManualScaling: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionManualScaling,
+	Network: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionNetwork,
 	NobuildFilesRegex: *string,
 	NoopOnDestroy: interface{},
 	Project: *string,
-	Resources: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResources,
+	Resources: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResources,
 	RuntimeApiVersion: *string,
 	RuntimeChannel: *string,
 	RuntimeMainExecutablePath: *string,
 	ServiceAccount: *string,
 	ServingStatus: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionTimeouts,
 	VersionId: *string,
-	VpcAccessConnector: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionVpcAccessConnector,
+	VpcAccessConnector: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionVpcAccessConnector,
 }
 ```
 
@@ -2760,13 +2760,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionDeployment {
-	CloudBuildOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentCloudBuildOptions,
-	Container: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentContainer,
+	CloudBuildOptions: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentCloudBuildOptions,
+	Container: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentContainer,
 	Files: interface{},
-	Zip: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentZip,
+	Zip: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentZip,
 }
 ```
 
@@ -2842,7 +2842,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentCloudBuildOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionDeploymentCloudBuildOptions {
 	AppYamlPath: *string,
@@ -2894,7 +2894,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionDeploymentContainer {
 	Image: *string,
@@ -2931,7 +2931,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentFiles.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionDeploymentFiles {
 	Name: *string,
@@ -2995,7 +2995,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentZip.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionDeploymentZip {
 	SourceUrl: *string,
@@ -3045,7 +3045,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEndpointsApiService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionEndpointsApiService {
 	Name: *string,
@@ -3136,7 +3136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEntrypoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionEntrypoint {
 	Shell: *string,
@@ -3170,15 +3170,15 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionHandlers {
 	AuthFailAction: *string,
 	Login: *string,
 	RedirectHttpResponseCode: *string,
-	Script: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersScript,
+	Script: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersScript,
 	SecurityLevel: *string,
-	StaticFiles: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersStaticFiles,
+	StaticFiles: github.com/cdktf/cdktf-provider-google-go/google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersStaticFiles,
 	UrlRegex: *string,
 }
 ```
@@ -3303,7 +3303,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersScript.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionHandlersScript {
 	ScriptPath: *string,
@@ -3337,7 +3337,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersStaticFiles.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionHandlersStaticFiles {
 	ApplicationReadable: interface{},
@@ -3478,7 +3478,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionLivenessCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionLivenessCheck {
 	Path: *string,
@@ -3608,7 +3608,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionManualScaling.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionManualScaling {
 	Instances: *f64,
@@ -3645,7 +3645,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionNetwork {
 	Name: *string,
@@ -3748,7 +3748,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionReadinessCheck.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionReadinessCheck {
 	Path: *string,
@@ -3880,7 +3880,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionResources {
 	Cpu: *f64,
@@ -3962,7 +3962,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResourcesVolumes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionResourcesVolumes {
 	Name: *string,
@@ -4028,7 +4028,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionTimeouts {
 	Create: *string,
@@ -4088,7 +4088,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionVpcAccessConnector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 &appengineflexibleappversion.AppEngineFlexibleAppVersionVpcAccessConnector {
 	Name: *string,
@@ -4124,7 +4124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionApiConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionApiConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionApiConfigOutputReference
 ```
@@ -4511,7 +4511,7 @@ func InternalValue() AppEngineFlexibleAppVersionApiConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionAutomaticScalingCpuUtilizationOutputReference
 ```
@@ -4811,7 +4811,7 @@ func InternalValue() AppEngineFlexibleAppVersionAutomaticScalingCpuUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionAutomaticScalingDiskUtilizationOutputReference
 ```
@@ -5176,7 +5176,7 @@ func InternalValue() AppEngineFlexibleAppVersionAutomaticScalingDiskUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizationOutputReference
 ```
@@ -5541,7 +5541,7 @@ func InternalValue() AppEngineFlexibleAppVersionAutomaticScalingNetworkUtilizati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionAutomaticScalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionAutomaticScalingOutputReference
 ```
@@ -6183,7 +6183,7 @@ func InternalValue() AppEngineFlexibleAppVersionAutomaticScaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizationOutputReference
 ```
@@ -6490,7 +6490,7 @@ func InternalValue() AppEngineFlexibleAppVersionAutomaticScalingRequestUtilizati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionDeploymentCloudBuildOptionsOutputReference
 ```
@@ -6790,7 +6790,7 @@ func InternalValue() AppEngineFlexibleAppVersionDeploymentCloudBuildOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionDeploymentContainerOutputReference
 ```
@@ -7061,7 +7061,7 @@ func InternalValue() AppEngineFlexibleAppVersionDeploymentContainer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentFilesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentFilesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineFlexibleAppVersionDeploymentFilesList
 ```
@@ -7204,7 +7204,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentFilesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentFilesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineFlexibleAppVersionDeploymentFilesOutputReference
 ```
@@ -7544,7 +7544,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionDeploymentOutputReference
 ```
@@ -7961,7 +7961,7 @@ func InternalValue() AppEngineFlexibleAppVersionDeployment
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionDeploymentZipOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionDeploymentZipOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionDeploymentZipOutputReference
 ```
@@ -8261,7 +8261,7 @@ func InternalValue() AppEngineFlexibleAppVersionDeploymentZip
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionEndpointsApiServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionEndpointsApiServiceOutputReference
 ```
@@ -8619,7 +8619,7 @@ func InternalValue() AppEngineFlexibleAppVersionEndpointsApiService
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionEntrypointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionEntrypointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionEntrypointOutputReference
 ```
@@ -8890,7 +8890,7 @@ func InternalValue() AppEngineFlexibleAppVersionEntrypoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionHandlersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineFlexibleAppVersionHandlersList
 ```
@@ -9033,7 +9033,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionHandlersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineFlexibleAppVersionHandlersOutputReference
 ```
@@ -9529,7 +9529,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersScriptOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionHandlersScriptOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionHandlersScriptOutputReference
 ```
@@ -9800,7 +9800,7 @@ func InternalValue() AppEngineFlexibleAppVersionHandlersScript
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionHandlersStaticFilesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionHandlersStaticFilesOutputReference
 ```
@@ -10252,7 +10252,7 @@ func InternalValue() AppEngineFlexibleAppVersionHandlersStaticFiles
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionLivenessCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionLivenessCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionLivenessCheckOutputReference
 ```
@@ -10697,7 +10697,7 @@ func InternalValue() AppEngineFlexibleAppVersionLivenessCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionManualScalingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionManualScalingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionManualScalingOutputReference
 ```
@@ -10968,7 +10968,7 @@ func InternalValue() AppEngineFlexibleAppVersionManualScaling
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionNetworkOutputReference
 ```
@@ -11355,7 +11355,7 @@ func InternalValue() AppEngineFlexibleAppVersionNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionReadinessCheckOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionReadinessCheckOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionReadinessCheckOutputReference
 ```
@@ -11800,7 +11800,7 @@ func InternalValue() AppEngineFlexibleAppVersionReadinessCheck
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionResourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionResourcesOutputReference
 ```
@@ -12178,7 +12178,7 @@ func InternalValue() AppEngineFlexibleAppVersionResources
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResourcesVolumesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionResourcesVolumesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineFlexibleAppVersionResourcesVolumesList
 ```
@@ -12321,7 +12321,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionResourcesVolumesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionResourcesVolumesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineFlexibleAppVersionResourcesVolumesOutputReference
 ```
@@ -12654,7 +12654,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionTimeoutsOutputReference
 ```
@@ -12990,7 +12990,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFlexibleAppVersion.AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineflexibleappversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineflexibleappversion"
 
 appengineflexibleappversion.NewAppEngineFlexibleAppVersionVpcAccessConnectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFlexibleAppVersionVpcAccessConnectorOutputReference
 ```

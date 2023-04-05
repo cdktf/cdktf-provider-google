@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamMember.FolderIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 folderiammember.NewFolderIamMember(scope Construct, id *string, config FolderIamMemberConfig) FolderIamMember
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 folderiammember.FolderIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 folderiammember.FolderIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ folderiammember.FolderIamMember_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderIamMember.FolderIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 folderiammember.FolderIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamMember.FolderIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 &folderiammember.FolderIamMemberCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamMember.FolderIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 &folderiammember.FolderIamMemberConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
 	Folder: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.folderIamMember.FolderIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.folderIamMember.FolderIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamMember.FolderIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiammember"
 
 folderiammember.NewFolderIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderIamMemberConditionOutputReference
 ```

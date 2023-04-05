@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_add
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeaddress"
 
 datagooglecomputeaddress.NewDataGoogleComputeAddress(scope Construct, id *string, config DataGoogleComputeAddressConfig) DataGoogleComputeAddress
 ```
@@ -287,7 +287,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeaddress"
 
 datagooglecomputeaddress.DataGoogleComputeAddress_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeaddress"
 
 datagooglecomputeaddress.DataGoogleComputeAddress_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagooglecomputeaddress.DataGoogleComputeAddress_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeaddress"
 
 datagooglecomputeaddress.DataGoogleComputeAddress_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -361,8 +361,15 @@ datagooglecomputeaddress.DataGoogleComputeAddress_IsTerraformDataSource(x interf
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.address">Address</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.addressType">AddressType</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.network">Network</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.networkTier">NetworkTier</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.prefixLength">PrefixLength</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.purpose">Purpose</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.selfLink">SelfLink</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.status">Status</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.subnetwork">Subnetwork</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.users">Users</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.projectInput">ProjectInput</a></code> | <code>*string</code> | *No description.* |
@@ -506,6 +513,56 @@ func Address() *string
 
 ---
 
+##### `AddressType`<sup>Required</sup> <a name="AddressType" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.addressType"></a>
+
+```go
+func AddressType() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Network`<sup>Required</sup> <a name="Network" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.network"></a>
+
+```go
+func Network() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NetworkTier`<sup>Required</sup> <a name="NetworkTier" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.networkTier"></a>
+
+```go
+func NetworkTier() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrefixLength`<sup>Required</sup> <a name="PrefixLength" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.prefixLength"></a>
+
+```go
+func PrefixLength() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `Purpose`<sup>Required</sup> <a name="Purpose" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.purpose"></a>
+
+```go
+func Purpose() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SelfLink`<sup>Required</sup> <a name="SelfLink" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.selfLink"></a>
 
 ```go
@@ -520,6 +577,26 @@ func SelfLink() *string
 
 ```go
 func Status() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Subnetwork`<sup>Required</sup> <a name="Subnetwork" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.subnetwork"></a>
+
+```go
+func Subnetwork() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Users`<sup>Required</sup> <a name="Users" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.users"></a>
+
+```go
+func Users() *string
 ```
 
 - *Type:* *string
@@ -631,7 +708,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputeaddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeaddress"
 
 &datagooglecomputeaddress.DataGoogleComputeAddressConfig {
 	Connection: interface{},

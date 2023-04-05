@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_source_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 sccsourceiambinding.NewSccSourceIamBinding(scope Construct, id *string, config SccSourceIamBindingConfig) SccSourceIamBinding
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 sccsourceiambinding.SccSourceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 sccsourceiambinding.SccSourceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ sccsourceiambinding.SccSourceIamBinding_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 sccsourceiambinding.SccSourceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 &sccsourceiambinding.SccSourceIamBindingCondition {
 	Expression: *string,
@@ -741,7 +741,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 &sccsourceiambinding.SccSourceIamBindingConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
 	Organization: *string,
 	Role: *string,
 	Source: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.sccSourceIamBinding.SccSourceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.sccSourceIamBinding.SccSourceIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -934,7 +934,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiambinding"
 
 sccsourceiambinding.NewSccSourceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SccSourceIamBindingConditionOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/document_ai
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 documentaiprocessor.NewDocumentAiProcessor(scope Construct, id *string, config DocumentAiProcessorConfig) DocumentAiProcessor
 ```
@@ -307,7 +307,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 documentaiprocessor.DocumentAiProcessor_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 documentaiprocessor.DocumentAiProcessor_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ documentaiprocessor.DocumentAiProcessor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 documentaiprocessor.DocumentAiProcessor_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 &documentaiprocessor.DocumentAiProcessorConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
 	Id: *string,
 	KmsKeyName: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.documentAiProcessor.DocumentAiProcessorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.documentAiProcessor.DocumentAiProcessorTimeouts,
 }
 ```
 
@@ -930,7 +930,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 &documentaiprocessor.DocumentAiProcessorTimeouts {
 	Create: *string,
@@ -978,7 +978,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.documentAiProcessor.DocumentAiProcessorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/documentaiprocessor"
+import "github.com/cdktf/cdktf-provider-google-go/google/documentaiprocessor"
 
 documentaiprocessor.NewDocumentAiProcessorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DocumentAiProcessorTimeoutsOutputReference
 ```

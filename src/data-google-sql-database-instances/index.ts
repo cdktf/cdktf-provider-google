@@ -96,6 +96,11 @@ export class DataGoogleSqlDatabaseInstancesInstancesCloneOutputReference extends
     return this.getStringAttribute('allocated_ip_range');
   }
 
+  // database_names - computed: true, optional: false, required: false
+  public get databaseNames() {
+    return this.getListAttribute('database_names');
+  }
+
   // point_in_time - computed: true, optional: false, required: false
   public get pointInTime() {
     return this.getStringAttribute('point_in_time');
@@ -1798,7 +1803,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instances',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

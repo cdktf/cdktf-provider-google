@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 computesubnetworkiammember.NewComputeSubnetworkIamMember(scope Construct, id *string, config ComputeSubnetworkIamMemberConfig) ComputeSubnetworkIamMember
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 computesubnetworkiammember.ComputeSubnetworkIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 computesubnetworkiammember.ComputeSubnetworkIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ computesubnetworkiammember.ComputeSubnetworkIamMember_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 computesubnetworkiammember.ComputeSubnetworkIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 &computesubnetworkiammember.ComputeSubnetworkIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 &computesubnetworkiammember.ComputeSubnetworkIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiam
 	Member: *string,
 	Role: *string,
 	Subnetwork: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSubnetworkIamMember.ComputeSubnetworkIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesubnetworkiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesubnetworkiammember"
 
 computesubnetworkiammember.NewComputeSubnetworkIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSubnetworkIamMemberConditionOutputReference
 ```

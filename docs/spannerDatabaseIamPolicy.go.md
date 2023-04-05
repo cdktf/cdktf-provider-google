@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_dat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerDatabaseIamPolicy.SpannerDatabaseIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiampolicy"
 
 spannerdatabaseiampolicy.NewSpannerDatabaseIamPolicy(scope Construct, id *string, config SpannerDatabaseIamPolicyConfig) SpannerDatabaseIamPolicy
 ```
@@ -280,7 +280,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.spannerDatabaseIamPolicy.SpannerDatabaseIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiampolicy"
 
 spannerdatabaseiampolicy.SpannerDatabaseIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.spannerDatabaseIamPolicy.SpannerDatabaseIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiampolicy"
 
 spannerdatabaseiampolicy.SpannerDatabaseIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ spannerdatabaseiampolicy.SpannerDatabaseIamPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.spannerDatabaseIamPolicy.SpannerDatabaseIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiampolicy"
 
 spannerdatabaseiampolicy.SpannerDatabaseIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -646,7 +646,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerDatabaseIamPolicy.SpannerDatabaseIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiampolicy"
 
 &spannerdatabaseiampolicy.SpannerDatabaseIamPolicyConfig {
 	Connection: interface{},

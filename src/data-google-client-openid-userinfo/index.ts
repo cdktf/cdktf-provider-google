@@ -7,13 +7,6 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataGoogleClientOpenidUserinfoConfig extends cdktf.TerraformMetaArguments {
-  /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/client_openid_userinfo#id DataGoogleClientOpenidUserinfo#id}
-  *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
 }
 
 /**
@@ -42,7 +35,7 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_client_openid_userinfo',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -53,7 +46,6 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
       connection: config.connection,
       forEach: config.forEach
     });
-    this._id = config.id;
   }
 
   // ==========
@@ -65,20 +57,9 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
     return this.getStringAttribute('email');
   }
 
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-  public set id(value: string) {
-    this._id = value;
-  }
-  public resetId() {
-    this._id = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
   }
 
   // =========
@@ -87,7 +68,6 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id: cdktf.stringToTerraform(this._id),
     };
   }
 }

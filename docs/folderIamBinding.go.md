@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/folder_iam_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 folderiambinding.NewFolderIamBinding(scope Construct, id *string, config FolderIamBindingConfig) FolderIamBinding
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ folderiambinding.FolderIamBinding_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.folderIamBinding.FolderIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 folderiambinding.FolderIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 &folderiambinding.FolderIamBindingCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 &folderiambinding.FolderIamBindingConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
 	Folder: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.folderIamBinding.FolderIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.folderIamBinding.FolderIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.folderIamBinding.FolderIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/folderiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/folderiambinding"
 
 folderiambinding.NewFolderIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FolderIamBindingConditionOutputReference
 ```
