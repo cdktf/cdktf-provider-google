@@ -181,7 +181,7 @@ export class GkeBackupBackupPlanIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_backup_backup_plan_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

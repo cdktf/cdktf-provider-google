@@ -29,6 +29,7 @@ export * as apigeeEnvironmentIamPolicy from './apigee-environment-iam-policy';
 export * as apigeeFlowhook from './apigee-flowhook';
 export * as apigeeInstance from './apigee-instance';
 export * as apigeeInstanceAttachment from './apigee-instance-attachment';
+export * as apigeeKeystoresAliasesKeyCertFile from './apigee-keystores-aliases-key-cert-file';
 export * as apigeeNatAddress from './apigee-nat-address';
 export * as apigeeOrganization from './apigee-organization';
 export * as apigeeSharedflow from './apigee-sharedflow';

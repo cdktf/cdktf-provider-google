@@ -5911,6 +5911,7 @@ ContainerClusterIpAllocationPolicy.builder()
 //  .clusterSecondaryRangeName(java.lang.String)
 //  .servicesIpv4CidrBlock(java.lang.String)
 //  .servicesSecondaryRangeName(java.lang.String)
+//  .stackType(java.lang.String)
     .build();
 ```
 
@@ -5922,6 +5923,7 @@ ContainerClusterIpAllocationPolicy.builder()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.clusterSecondaryRangeName">clusterSecondaryRangeName</a></code> | <code>java.lang.String</code> | The name of the existing secondary range in the cluster's subnetwork to use for pod IP addresses. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.servicesIpv4CidrBlock">servicesIpv4CidrBlock</a></code> | <code>java.lang.String</code> | The IP address range of the services IPs in this cluster. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.servicesSecondaryRangeName">servicesSecondaryRangeName</a></code> | <code>java.lang.String</code> | The name of the existing secondary range in the cluster's subnetwork to use for service ClusterIPs. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.stackType">stackType</a></code> | <code>java.lang.String</code> | The IP Stack type of the cluster. |
 
 ---
 
@@ -5986,6 +5988,22 @@ The name of the existing secondary range in the cluster's subnetwork to use for 
 Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#services_secondary_range_name ContainerCluster#services_secondary_range_name}
+
+---
+
+##### `stackType`<sup>Optional</sup> <a name="stackType" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.stackType"></a>
+
+```java
+public java.lang.String getStackType();
+```
+
+- *Type:* java.lang.String
+
+The IP Stack type of the cluster.
+
+Choose between IPV4 and IPV4_IPV6. Default type is IPV4 Only if not set
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#stack_type ContainerCluster#stack_type}
 
 ---
 
@@ -6642,6 +6660,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodeConfig;
 
 ContainerClusterNodeConfig.builder()
+//  .advancedMachineFeatures(ContainerClusterNodeConfigAdvancedMachineFeatures)
 //  .bootDiskKmsKey(java.lang.String)
 //  .diskSizeGb(java.lang.Number)
 //  .diskType(java.lang.String)
@@ -6680,6 +6699,7 @@ ContainerClusterNodeConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.advancedMachineFeatures">advancedMachineFeatures</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | advanced_machine_features block. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.bootDiskKmsKey">bootDiskKmsKey</a></code> | <code>java.lang.String</code> | The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.diskSizeGb">diskSizeGb</a></code> | <code>java.lang.Number</code> | Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.diskType">diskType</a></code> | <code>java.lang.String</code> | Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd. |
@@ -6707,6 +6727,20 @@ ContainerClusterNodeConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.tags">tags</a></code> | <code>java.util.List<java.lang.String></code> | The list of instance tags applied to all nodes. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.taint">taint</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>></code> | List of Kubernetes taints to be applied to each node. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.workloadMetadataConfig">workloadMetadataConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfig">ContainerClusterNodeConfigWorkloadMetadataConfig</a></code> | workload_metadata_config block. |
+
+---
+
+##### `advancedMachineFeatures`<sup>Optional</sup> <a name="advancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.advancedMachineFeatures"></a>
+
+```java
+public ContainerClusterNodeConfigAdvancedMachineFeatures getAdvancedMachineFeatures();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
 
 ---
 
@@ -7095,6 +7129,42 @@ public ContainerClusterNodeConfigWorkloadMetadataConfig getWorkloadMetadataConfi
 workload_metadata_config block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#workload_metadata_config ContainerCluster#workload_metadata_config}
+
+---
+
+### ContainerClusterNodeConfigAdvancedMachineFeatures <a name="ContainerClusterNodeConfigAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodeConfigAdvancedMachineFeatures;
+
+ContainerClusterNodeConfigAdvancedMachineFeatures.builder()
+    .threadsPerCore(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | The number of threads per physical core. |
+
+---
+
+##### `threadsPerCore`<sup>Required</sup> <a name="threadsPerCore" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.property.threadsPerCore"></a>
+
+```java
+public java.lang.Number getThreadsPerCore();
+```
+
+- *Type:* java.lang.Number
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
 
 ---
 
@@ -8218,6 +8288,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodePoolNodeConfig;
 
 ContainerClusterNodePoolNodeConfig.builder()
+//  .advancedMachineFeatures(ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures)
 //  .bootDiskKmsKey(java.lang.String)
 //  .diskSizeGb(java.lang.Number)
 //  .diskType(java.lang.String)
@@ -8256,6 +8327,7 @@ ContainerClusterNodePoolNodeConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.advancedMachineFeatures">advancedMachineFeatures</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | advanced_machine_features block. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.bootDiskKmsKey">bootDiskKmsKey</a></code> | <code>java.lang.String</code> | The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.diskSizeGb">diskSizeGb</a></code> | <code>java.lang.Number</code> | Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.diskType">diskType</a></code> | <code>java.lang.String</code> | Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd. |
@@ -8283,6 +8355,20 @@ ContainerClusterNodePoolNodeConfig.builder()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.tags">tags</a></code> | <code>java.util.List<java.lang.String></code> | The list of instance tags applied to all nodes. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.taint">taint</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>></code> | List of Kubernetes taints to be applied to each node. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.workloadMetadataConfig">workloadMetadataConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig</a></code> | workload_metadata_config block. |
+
+---
+
+##### `advancedMachineFeatures`<sup>Optional</sup> <a name="advancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.advancedMachineFeatures"></a>
+
+```java
+public ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures getAdvancedMachineFeatures();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
 
 ---
 
@@ -8671,6 +8757,42 @@ public ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig getWorkloadMetad
 workload_metadata_config block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#workload_metadata_config ContainerCluster#workload_metadata_config}
+
+---
+
+### ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures <a name="ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures;
+
+ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.builder()
+    .threadsPerCore(java.lang.Number)
+    .build();
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | The number of threads per physical core. |
+
+---
+
+##### `threadsPerCore`<sup>Required</sup> <a name="threadsPerCore" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.property.threadsPerCore"></a>
+
+```java
+public java.lang.Number getThreadsPerCore();
+```
+
+- *Type:* java.lang.Number
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
 
 ---
 
@@ -19027,6 +19149,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetClusterSecondaryRangeName">resetClusterSecondaryRangeName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetServicesIpv4CidrBlock">resetServicesIpv4CidrBlock</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetServicesSecondaryRangeName">resetServicesSecondaryRangeName</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetStackType">resetStackType</a></code> | *No description.* |
 
 ---
 
@@ -19204,6 +19327,12 @@ public void resetServicesIpv4CidrBlock()
 public void resetServicesSecondaryRangeName()
 ```
 
+##### `resetStackType` <a name="resetStackType" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetStackType"></a>
+
+```java
+public void resetStackType()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -19215,10 +19344,12 @@ public void resetServicesSecondaryRangeName()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterSecondaryRangeNameInput">clusterSecondaryRangeNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlockInput">servicesIpv4CidrBlockInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesSecondaryRangeNameInput">servicesSecondaryRangeNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackTypeInput">stackTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterIpv4CidrBlock">clusterIpv4CidrBlock</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterSecondaryRangeName">clusterSecondaryRangeName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlock">servicesIpv4CidrBlock</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesSecondaryRangeName">servicesSecondaryRangeName</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackType">stackType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy">ContainerClusterIpAllocationPolicy</a></code> | *No description.* |
 
 ---
@@ -19287,6 +19418,16 @@ public java.lang.String getServicesSecondaryRangeNameInput();
 
 ---
 
+##### `stackTypeInput`<sup>Optional</sup> <a name="stackTypeInput" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackTypeInput"></a>
+
+```java
+public java.lang.String getStackTypeInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `clusterIpv4CidrBlock`<sup>Required</sup> <a name="clusterIpv4CidrBlock" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterIpv4CidrBlock"></a>
 
 ```java
@@ -19321,6 +19462,16 @@ public java.lang.String getServicesIpv4CidrBlock();
 
 ```java
 public java.lang.String getServicesSecondaryRangeName();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `stackType`<sup>Required</sup> <a name="stackType" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackType"></a>
+
+```java
+public java.lang.String getStackType();
 ```
 
 - *Type:* java.lang.String
@@ -23894,6 +24045,277 @@ public ContainerClusterNetworkPolicy getInternalValue();
 ---
 
 
+### ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference <a name="ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference;
+
+new ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput">threadsPerCoreInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `threadsPerCoreInput`<sup>Optional</sup> <a name="threadsPerCoreInput" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput"></a>
+
+```java
+public java.lang.Number getThreadsPerCoreInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `threadsPerCore`<sup>Required</sup> <a name="threadsPerCore" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore"></a>
+
+```java
+public java.lang.Number getThreadsPerCore();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue"></a>
+
+```java
+public ContainerClusterNodeConfigAdvancedMachineFeatures getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+---
+
+
 ### ContainerClusterNodeConfigGcfsConfigOutputReference <a name="ContainerClusterNodeConfigGcfsConfigOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference.Initializer"></a>
@@ -26393,6 +26815,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures">putAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGcfsConfig">putGcfsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGuestAccelerator">putGuestAccelerator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGvnic">putGvnic</a></code> | *No description.* |
@@ -26403,6 +26826,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putShieldedInstanceConfig">putShieldedInstanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putTaint">putTaint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putWorkloadMetadataConfig">putWorkloadMetadataConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetAdvancedMachineFeatures">resetAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetBootDiskKmsKey">resetBootDiskKmsKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetDiskSizeGb">resetDiskSizeGb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetDiskType">resetDiskType</a></code> | *No description.* |
@@ -26583,6 +27007,18 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `putAdvancedMachineFeatures` <a name="putAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures"></a>
+
+```java
+public void putAdvancedMachineFeatures(ContainerClusterNodeConfigAdvancedMachineFeatures value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+---
+
 ##### `putGcfsConfig` <a name="putGcfsConfig" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGcfsConfig"></a>
 
 ```java
@@ -26702,6 +27138,12 @@ public void putWorkloadMetadataConfig(ContainerClusterNodeConfigWorkloadMetadata
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfig">ContainerClusterNodeConfigWorkloadMetadataConfig</a>
 
 ---
+
+##### `resetAdvancedMachineFeatures` <a name="resetAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetAdvancedMachineFeatures"></a>
+
+```java
+public void resetAdvancedMachineFeatures()
+```
 
 ##### `resetBootDiskKmsKey` <a name="resetBootDiskKmsKey" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetBootDiskKmsKey"></a>
 
@@ -26872,6 +27314,7 @@ public void resetWorkloadMetadataConfig()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeatures">advancedMachineFeatures</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.gcfsConfig">gcfsConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference">ContainerClusterNodeConfigGcfsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.guestAccelerator">guestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorList">ContainerClusterNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.gvnic">gvnic</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGvnicOutputReference">ContainerClusterNodeConfigGvnicOutputReference</a></code> | *No description.* |
@@ -26882,6 +27325,7 @@ public void resetWorkloadMetadataConfig()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.shieldedInstanceConfig">shieldedInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigShieldedInstanceConfigOutputReference">ContainerClusterNodeConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.taint">taint</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintList">ContainerClusterNodeConfigTaintList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.workloadMetadataConfig">workloadMetadataConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeaturesInput">advancedMachineFeaturesInput</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.bootDiskKmsKeyInput">bootDiskKmsKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.diskSizeGbInput">diskSizeGbInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.diskTypeInput">diskTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -26951,6 +27395,16 @@ public java.lang.String getFqn();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `advancedMachineFeatures`<sup>Required</sup> <a name="advancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeatures"></a>
+
+```java
+public ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference getAdvancedMachineFeatures();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference</a>
 
 ---
 
@@ -27051,6 +27505,16 @@ public ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference getWorklo
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference</a>
+
+---
+
+##### `advancedMachineFeaturesInput`<sup>Optional</sup> <a name="advancedMachineFeaturesInput" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeaturesInput"></a>
+
+```java
+public ContainerClusterNodeConfigAdvancedMachineFeatures getAdvancedMachineFeaturesInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
 
 ---
 
@@ -30687,6 +31151,277 @@ public ContainerClusterNodePoolNetworkConfig getInternalValue();
 ---
 
 
+### ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference <a name="ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
+
+```java
+import com.hashicorp.cdktf.providers.google.container_cluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference;
+
+new ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* com.hashicorp.cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn"></a>
+
+```java
+public java.lang.String computeFqn()
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute"></a>
+
+```java
+public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute"></a>
+
+```java
+public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute"></a>
+
+```java
+public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute"></a>
+
+```java
+public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute"></a>
+
+```java
+public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute"></a>
+
+```java
+public IResolvable interpolationForAttribute(java.lang.String property)
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* java.lang.String
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve"></a>
+
+```java
+public java.lang.Object resolve(IResolveContext _context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* com.hashicorp.cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.toString"></a>
+
+```java
+public java.lang.String toString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput">threadsPerCoreInput</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore">threadsPerCore</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack"></a>
+
+```java
+public java.util.List<java.lang.String> getCreationStack();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn"></a>
+
+```java
+public java.lang.String getFqn();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `threadsPerCoreInput`<sup>Optional</sup> <a name="threadsPerCoreInput" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput"></a>
+
+```java
+public java.lang.Number getThreadsPerCoreInput();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `threadsPerCore`<sup>Required</sup> <a name="threadsPerCore" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore"></a>
+
+```java
+public java.lang.Number getThreadsPerCore();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue"></a>
+
+```java
+public ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures getInternalValue();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+---
+
+
 ### ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference <a name="ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference.Initializer"></a>
@@ -33186,6 +33921,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures">putAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGcfsConfig">putGcfsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGuestAccelerator">putGuestAccelerator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGvnic">putGvnic</a></code> | *No description.* |
@@ -33196,6 +33932,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putShieldedInstanceConfig">putShieldedInstanceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putTaint">putTaint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putWorkloadMetadataConfig">putWorkloadMetadataConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetAdvancedMachineFeatures">resetAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetBootDiskKmsKey">resetBootDiskKmsKey</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetDiskSizeGb">resetDiskSizeGb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetDiskType">resetDiskType</a></code> | *No description.* |
@@ -33376,6 +34113,18 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `putAdvancedMachineFeatures` <a name="putAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures"></a>
+
+```java
+public void putAdvancedMachineFeatures(ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures value)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+---
+
 ##### `putGcfsConfig` <a name="putGcfsConfig" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGcfsConfig"></a>
 
 ```java
@@ -33495,6 +34244,12 @@ public void putWorkloadMetadataConfig(ContainerClusterNodePoolNodeConfigWorkload
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig</a>
 
 ---
+
+##### `resetAdvancedMachineFeatures` <a name="resetAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetAdvancedMachineFeatures"></a>
+
+```java
+public void resetAdvancedMachineFeatures()
+```
 
 ##### `resetBootDiskKmsKey` <a name="resetBootDiskKmsKey" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetBootDiskKmsKey"></a>
 
@@ -33665,6 +34420,7 @@ public void resetWorkloadMetadataConfig()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeatures">advancedMachineFeatures</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.gcfsConfig">gcfsConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference">ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.guestAccelerator">guestAccelerator</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorList">ContainerClusterNodePoolNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.gvnic">gvnic</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGvnicOutputReference">ContainerClusterNodePoolNodeConfigGvnicOutputReference</a></code> | *No description.* |
@@ -33675,6 +34431,7 @@ public void resetWorkloadMetadataConfig()
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.shieldedInstanceConfig">shieldedInstanceConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference">ContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.taint">taint</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintList">ContainerClusterNodePoolNodeConfigTaintList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.workloadMetadataConfig">workloadMetadataConfig</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeaturesInput">advancedMachineFeaturesInput</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.bootDiskKmsKeyInput">bootDiskKmsKeyInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.diskSizeGbInput">diskSizeGbInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.diskTypeInput">diskTypeInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -33744,6 +34501,16 @@ public java.lang.String getFqn();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `advancedMachineFeatures`<sup>Required</sup> <a name="advancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeatures"></a>
+
+```java
+public ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference getAdvancedMachineFeatures();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference</a>
 
 ---
 
@@ -33844,6 +34611,16 @@ public ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference g
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference</a>
+
+---
+
+##### `advancedMachineFeaturesInput`<sup>Optional</sup> <a name="advancedMachineFeaturesInput" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeaturesInput"></a>
+
+```java
+public ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures getAdvancedMachineFeaturesInput();
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
 
 ---
 

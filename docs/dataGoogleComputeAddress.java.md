@@ -457,8 +457,15 @@ DataGoogleComputeAddress.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.address">address</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.addressType">addressType</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.network">network</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.networkTier">networkTier</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.prefixLength">prefixLength</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.purpose">purpose</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.selfLink">selfLink</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.status">status</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.subnetwork">subnetwork</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.users">users</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -602,6 +609,56 @@ public java.lang.String getAddress();
 
 ---
 
+##### `addressType`<sup>Required</sup> <a name="addressType" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.addressType"></a>
+
+```java
+public java.lang.String getAddressType();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `network`<sup>Required</sup> <a name="network" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.network"></a>
+
+```java
+public java.lang.String getNetwork();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `networkTier`<sup>Required</sup> <a name="networkTier" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.networkTier"></a>
+
+```java
+public java.lang.String getNetworkTier();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `prefixLength`<sup>Required</sup> <a name="prefixLength" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.prefixLength"></a>
+
+```java
+public java.lang.Number getPrefixLength();
+```
+
+- *Type:* java.lang.Number
+
+---
+
+##### `purpose`<sup>Required</sup> <a name="purpose" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.purpose"></a>
+
+```java
+public java.lang.String getPurpose();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `selfLink`<sup>Required</sup> <a name="selfLink" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.selfLink"></a>
 
 ```java
@@ -616,6 +673,26 @@ public java.lang.String getSelfLink();
 
 ```java
 public java.lang.String getStatus();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `subnetwork`<sup>Required</sup> <a name="subnetwork" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.subnetwork"></a>
+
+```java
+public java.lang.String getSubnetwork();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `users`<sup>Required</sup> <a name="users" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.users"></a>
+
+```java
+public java.lang.String getUsers();
 ```
 
 - *Type:* java.lang.String

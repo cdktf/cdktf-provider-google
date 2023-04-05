@@ -31,6 +31,7 @@ The following submodules are available:
 - [apigeeFlowhook](./apigeeFlowhook.csharp.md)
 - [apigeeInstance](./apigeeInstance.csharp.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.csharp.md)
+- [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.csharp.md)
 - [apigeeNatAddress](./apigeeNatAddress.csharp.md)
 - [apigeeOrganization](./apigeeOrganization.csharp.md)
 - [apigeeSharedflow](./apigeeSharedflow.csharp.md)

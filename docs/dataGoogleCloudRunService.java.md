@@ -41,7 +41,7 @@ DataGoogleCloudRunService.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | The location of the cloud run instance. eg us-central1. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name must be unique within a namespace, within a Cloud Run region. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name must be unique within a Google Cloud project and region. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#id DataGoogleCloudRunService#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunService.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#project DataGoogleCloudRunService#project}. |
 
@@ -121,7 +121,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Name must be unique within a namespace, within a Cloud Run region.
+Name must be unique within a Google Cloud project and region.
 
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
@@ -782,7 +782,7 @@ DataGoogleCloudRunServiceConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.location">location</a></code> | <code>java.lang.String</code> | The location of the cloud run instance. eg us-central1. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name must be unique within a namespace, within a Cloud Run region. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name must be unique within a Google Cloud project and region. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#id DataGoogleCloudRunService#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunService.DataGoogleCloudRunServiceConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/cloud_run_service#project DataGoogleCloudRunService#project}. |
 
@@ -880,7 +880,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Name must be unique within a namespace, within a Cloud Run region.
+Name must be unique within a Google Cloud project and region.
 
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.

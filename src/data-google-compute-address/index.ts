@@ -54,7 +54,7 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_address',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -78,6 +78,11 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
   // address - computed: true, optional: false, required: false
   public get address() {
     return this.getStringAttribute('address');
+  }
+
+  // address_type - computed: true, optional: false, required: false
+  public get addressType() {
+    return this.getStringAttribute('address_type');
   }
 
   // id - computed: true, optional: true, required: false
@@ -109,6 +114,21 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
     return this._name;
   }
 
+  // network - computed: true, optional: false, required: false
+  public get network() {
+    return this.getStringAttribute('network');
+  }
+
+  // network_tier - computed: true, optional: false, required: false
+  public get networkTier() {
+    return this.getStringAttribute('network_tier');
+  }
+
+  // prefix_length - computed: true, optional: false, required: false
+  public get prefixLength() {
+    return this.getNumberAttribute('prefix_length');
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -123,6 +143,11 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get projectInput() {
     return this._project;
+  }
+
+  // purpose - computed: true, optional: false, required: false
+  public get purpose() {
+    return this.getStringAttribute('purpose');
   }
 
   // region - computed: true, optional: true, required: false
@@ -149,6 +174,16 @@ export class DataGoogleComputeAddress extends cdktf.TerraformDataSource {
   // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
+  }
+
+  // subnetwork - computed: true, optional: false, required: false
+  public get subnetwork() {
+    return this.getStringAttribute('subnetwork');
+  }
+
+  // users - computed: true, optional: false, required: false
+  public get users() {
+    return this.getStringAttribute('users');
   }
 
   // =========

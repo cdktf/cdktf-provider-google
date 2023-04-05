@@ -33,6 +33,7 @@ ComputeNetwork.Builder.create(Construct scope, java.lang.String id)
 //  .id(java.lang.String)
 //  .internalIpv6Range(java.lang.String)
 //  .mtu(java.lang.Number)
+//  .networkFirewallPolicyEnforcementOrder(java.lang.String)
 //  .project(java.lang.String)
 //  .routingMode(java.lang.String)
 //  .timeouts(ComputeNetworkTimeouts)
@@ -58,6 +59,7 @@ ComputeNetwork.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#id ComputeNetwork#id}. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.internalIpv6Range">internalIpv6Range</a></code> | <code>java.lang.String</code> | When enabling ula internal ipv6, caller optionally can specify the /48 range  they want from the google defined ULA prefix fd20::/20. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.mtu">mtu</a></code> | <code>java.lang.Number</code> | Maximum Transmission Unit in bytes. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.networkFirewallPolicyEnforcementOrder">networkFirewallPolicyEnforcementOrder</a></code> | <code>java.lang.String</code> | Set the order that Firewall Rules and Firewall Policies are evaluated. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#project ComputeNetwork#project}. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.routingMode">routingMode</a></code> | <code>java.lang.String</code> | The network-wide routing mode to use. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts">ComputeNetworkTimeouts</a></code> | timeouts block. |
@@ -230,6 +232,18 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `networkFirewallPolicyEnforcementOrder`<sup>Optional</sup> <a name="networkFirewallPolicyEnforcementOrder" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.networkFirewallPolicyEnforcementOrder"></a>
+
+- *Type:* java.lang.String
+
+Set the order that Firewall Rules and Firewall Policies are evaluated.
+
+Needs to be either 'AFTER_CLASSIC_FIREWALL' or 'BEFORE_CLASSIC_FIREWALL' Default 'AFTER_CLASSIC_FIREWALL' Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#network_firewall_policy_enforcement_order ComputeNetwork#network_firewall_policy_enforcement_order}
+
+---
+
 ##### `project`<sup>Optional</sup> <a name="project" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer.parameter.project"></a>
 
 - *Type:* java.lang.String
@@ -292,6 +306,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetInternalIpv6Range">resetInternalIpv6Range</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetMtu">resetMtu</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetNetworkFirewallPolicyEnforcementOrder">resetNetworkFirewallPolicyEnforcementOrder</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetProject">resetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetRoutingMode">resetRoutingMode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.resetTimeouts">resetTimeouts</a></code> | *No description.* |
@@ -536,6 +551,12 @@ public void resetInternalIpv6Range()
 public void resetMtu()
 ```
 
+##### `resetNetworkFirewallPolicyEnforcementOrder` <a name="resetNetworkFirewallPolicyEnforcementOrder" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.resetNetworkFirewallPolicyEnforcementOrder"></a>
+
+```java
+public void resetNetworkFirewallPolicyEnforcementOrder()
+```
+
 ##### `resetProject` <a name="resetProject" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.resetProject"></a>
 
 ```java
@@ -653,6 +674,7 @@ ComputeNetwork.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.internalIpv6RangeInput">internalIpv6RangeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.mtuInput">mtuInput</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.networkFirewallPolicyEnforcementOrderInput">networkFirewallPolicyEnforcementOrderInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.routingModeInput">routingModeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts">ComputeNetworkTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
@@ -664,6 +686,7 @@ ComputeNetwork.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.internalIpv6Range">internalIpv6Range</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.mtu">mtu</a></code> | <code>java.lang.Number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.networkFirewallPolicyEnforcementOrder">networkFirewallPolicyEnforcementOrder</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.project">project</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetwork.property.routingMode">routingMode</a></code> | <code>java.lang.String</code> | *No description.* |
 
@@ -921,6 +944,16 @@ public java.lang.String getNameInput();
 
 ---
 
+##### `networkFirewallPolicyEnforcementOrderInput`<sup>Optional</sup> <a name="networkFirewallPolicyEnforcementOrderInput" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.property.networkFirewallPolicyEnforcementOrderInput"></a>
+
+```java
+public java.lang.String getNetworkFirewallPolicyEnforcementOrderInput();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `projectInput`<sup>Optional</sup> <a name="projectInput" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.property.projectInput"></a>
 
 ```java
@@ -1031,6 +1064,16 @@ public java.lang.String getName();
 
 ---
 
+##### `networkFirewallPolicyEnforcementOrder`<sup>Required</sup> <a name="networkFirewallPolicyEnforcementOrder" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.property.networkFirewallPolicyEnforcementOrder"></a>
+
+```java
+public java.lang.String getNetworkFirewallPolicyEnforcementOrder();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `project`<sup>Required</sup> <a name="project" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.property.project"></a>
 
 ```java
@@ -1100,6 +1143,7 @@ ComputeNetworkConfig.builder()
 //  .id(java.lang.String)
 //  .internalIpv6Range(java.lang.String)
 //  .mtu(java.lang.Number)
+//  .networkFirewallPolicyEnforcementOrder(java.lang.String)
 //  .project(java.lang.String)
 //  .routingMode(java.lang.String)
 //  .timeouts(ComputeNetworkTimeouts)
@@ -1125,6 +1169,7 @@ ComputeNetworkConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#id ComputeNetwork#id}. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.internalIpv6Range">internalIpv6Range</a></code> | <code>java.lang.String</code> | When enabling ula internal ipv6, caller optionally can specify the /48 range  they want from the google defined ULA prefix fd20::/20. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.mtu">mtu</a></code> | <code>java.lang.Number</code> | Maximum Transmission Unit in bytes. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.networkFirewallPolicyEnforcementOrder">networkFirewallPolicyEnforcementOrder</a></code> | <code>java.lang.String</code> | Set the order that Firewall Rules and Firewall Policies are evaluated. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#project ComputeNetwork#project}. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.routingMode">routingMode</a></code> | <code>java.lang.String</code> | The network-wide routing mode to use. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts">ComputeNetworkTimeouts</a></code> | timeouts block. |
@@ -1336,6 +1381,22 @@ with an ICMP 'Fragmentation-Needed' message if the packets are routed to the Int
 with varying MTUs.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#mtu ComputeNetwork#mtu}
+
+---
+
+##### `networkFirewallPolicyEnforcementOrder`<sup>Optional</sup> <a name="networkFirewallPolicyEnforcementOrder" id="@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.networkFirewallPolicyEnforcementOrder"></a>
+
+```java
+public java.lang.String getNetworkFirewallPolicyEnforcementOrder();
+```
+
+- *Type:* java.lang.String
+
+Set the order that Firewall Rules and Firewall Policies are evaluated.
+
+Needs to be either 'AFTER_CLASSIC_FIREWALL' or 'BEFORE_CLASSIC_FIREWALL' Default 'AFTER_CLASSIC_FIREWALL' Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"]
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#network_firewall_policy_enforcement_order ComputeNetwork#network_firewall_policy_enforcement_order}
 
 ---
 

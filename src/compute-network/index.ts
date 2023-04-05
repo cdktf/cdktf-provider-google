@@ -79,6 +79,12 @@ character, which cannot be a dash.
   */
   readonly name: string;
   /**
+  * Set the order that Firewall Rules and Firewall Policies are evaluated. Needs to be either 'AFTER_CLASSIC_FIREWALL' or 'BEFORE_CLASSIC_FIREWALL' Default 'AFTER_CLASSIC_FIREWALL' Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#network_firewall_policy_enforcement_order ComputeNetwork#network_firewall_policy_enforcement_order}
+  */
+  readonly networkFirewallPolicyEnforcementOrder?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network#project ComputeNetwork#project}
   */
   readonly project?: string;
@@ -255,7 +261,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_network',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -274,6 +280,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
     this._internalIpv6Range = config.internalIpv6Range;
     this._mtu = config.mtu;
     this._name = config.name;
+    this._networkFirewallPolicyEnforcementOrder = config.networkFirewallPolicyEnforcementOrder;
     this._project = config.project;
     this._routingMode = config.routingMode;
     this._timeouts.internalValue = config.timeouts;
@@ -413,6 +420,22 @@ export class ComputeNetwork extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // network_firewall_policy_enforcement_order - computed: false, optional: true, required: false
+  private _networkFirewallPolicyEnforcementOrder?: string; 
+  public get networkFirewallPolicyEnforcementOrder() {
+    return this.getStringAttribute('network_firewall_policy_enforcement_order');
+  }
+  public set networkFirewallPolicyEnforcementOrder(value: string) {
+    this._networkFirewallPolicyEnforcementOrder = value;
+  }
+  public resetNetworkFirewallPolicyEnforcementOrder() {
+    this._networkFirewallPolicyEnforcementOrder = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkFirewallPolicyEnforcementOrderInput() {
+    return this._networkFirewallPolicyEnforcementOrder;
+  }
+
   // project - computed: true, optional: true, required: false
   private _project?: string; 
   public get project() {
@@ -480,6 +503,7 @@ export class ComputeNetwork extends cdktf.TerraformResource {
       internal_ipv6_range: cdktf.stringToTerraform(this._internalIpv6Range),
       mtu: cdktf.numberToTerraform(this._mtu),
       name: cdktf.stringToTerraform(this._name),
+      network_firewall_policy_enforcement_order: cdktf.stringToTerraform(this._networkFirewallPolicyEnforcementOrder),
       project: cdktf.stringToTerraform(this._project),
       routing_mode: cdktf.stringToTerraform(this._routingMode),
       timeouts: computeNetworkTimeoutsToTerraform(this._timeouts.internalValue),

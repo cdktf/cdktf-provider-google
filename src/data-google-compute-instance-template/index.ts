@@ -34,6 +34,10 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
   */
   readonly project?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_instance_template#self_link_unique DataGoogleComputeInstanceTemplate#self_link_unique}
+  */
+  readonly selfLinkUnique?: string;
 }
 export interface DataGoogleComputeInstanceTemplateAdvancedMachineFeatures {
 }
@@ -1414,7 +1418,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       terraformResourceType: 'google_compute_instance_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1430,6 +1434,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
     this._mostRecent = config.mostRecent;
     this._name = config.name;
     this._project = config.project;
+    this._selfLinkUnique = config.selfLinkUnique;
   }
 
   // ==========
@@ -1625,6 +1630,22 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
     return this.getStringAttribute('self_link');
   }
 
+  // self_link_unique - computed: false, optional: true, required: false
+  private _selfLinkUnique?: string; 
+  public get selfLinkUnique() {
+    return this.getStringAttribute('self_link_unique');
+  }
+  public set selfLinkUnique(value: string) {
+    this._selfLinkUnique = value;
+  }
+  public resetSelfLinkUnique() {
+    this._selfLinkUnique = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selfLinkUniqueInput() {
+    return this._selfLinkUnique;
+  }
+
   // service_account - computed: true, optional: false, required: false
   private _serviceAccount = new DataGoogleComputeInstanceTemplateServiceAccountList(this, "service_account", false);
   public get serviceAccount() {
@@ -1658,6 +1679,7 @@ export class DataGoogleComputeInstanceTemplate extends cdktf.TerraformDataSource
       most_recent: cdktf.booleanToTerraform(this._mostRecent),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
+      self_link_unique: cdktf.stringToTerraform(this._selfLinkUnique),
     };
   }
 }

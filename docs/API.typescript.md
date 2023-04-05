@@ -31,6 +31,7 @@ The following submodules are available:
 - [apigeeFlowhook](./apigeeFlowhook.typescript.md)
 - [apigeeInstance](./apigeeInstance.typescript.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.typescript.md)
+- [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.typescript.md)
 - [apigeeNatAddress](./apigeeNatAddress.typescript.md)
 - [apigeeOrganization](./apigeeOrganization.typescript.md)
 - [apigeeSharedflow](./apigeeSharedflow.typescript.md)

@@ -34,7 +34,7 @@ https://cloud.google.com/firestore/docs/locations.
   */
   readonly locationId: string;
   /**
-  * Required. The ID to use for the database, which will become the final
+  * The ID to use for the database, which will become the final
 component of the database's resource name. This value should be 4-63
 characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be
@@ -219,7 +219,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

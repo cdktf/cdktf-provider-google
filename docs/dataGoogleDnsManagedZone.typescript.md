@@ -66,7 +66,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.getStringAttribute">getStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.resetProject">resetProject</a></code> | *No description.* |
 
 ---
@@ -255,12 +254,6 @@ public interpolationForAttribute(terraformAttribute: string): IResolvable
 
 ---
 
-##### `resetId` <a name="resetId" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.resetId"></a>
-
-```typescript
-public resetId(): void
-```
-
 ##### `resetProject` <a name="resetProject" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.resetProject"></a>
 
 ```typescript
@@ -355,13 +348,12 @@ dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.dnsName">dnsName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.managedZoneId">managedZoneId</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.nameServers">nameServers</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.visibility">visibility</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.project">project</a></code> | <code>string</code> | *No description.* |
 
@@ -509,6 +501,16 @@ public readonly dnsName: string;
 
 ---
 
+##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `managedZoneId`<sup>Required</sup> <a name="managedZoneId" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.managedZoneId"></a>
 
 ```typescript
@@ -539,16 +541,6 @@ public readonly visibility: string;
 
 ---
 
-##### `idInput`<sup>Optional</sup> <a name="idInput" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.idInput"></a>
-
-```typescript
-public readonly idInput: string;
-```
-
-- *Type:* string
-
----
-
 ##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.nameInput"></a>
 
 ```typescript
@@ -563,16 +555,6 @@ public readonly nameInput: string;
 
 ```typescript
 public readonly projectInput: string;
-```
-
-- *Type:* string
-
----
-
-##### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZone.property.id"></a>
-
-```typescript
-public readonly id: string;
 ```
 
 - *Type:* string
@@ -640,9 +622,8 @@ const dataGoogleDnsManagedZoneConfig: dataGoogleDnsManagedZone.DataGoogleDnsMana
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#name DataGoogleDnsManagedZone#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#id DataGoogleDnsManagedZone#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#project DataGoogleDnsManagedZone#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.name">name</a></code> | <code>string</code> | A unique name for the resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.project">project</a></code> | <code>string</code> | The ID of the project for the Google Cloud. |
 
 ---
 
@@ -724,22 +705,9 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#name DataGoogleDnsManagedZone#name}.
+A unique name for the resource.
 
----
-
-##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-google.dataGoogleDnsManagedZone.DataGoogleDnsManagedZoneConfig.property.id"></a>
-
-```typescript
-public readonly id: string;
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#id DataGoogleDnsManagedZone#id}.
-
-Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#name DataGoogleDnsManagedZone#name}
 
 ---
 
@@ -751,7 +719,9 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#project DataGoogleDnsManagedZone#project}.
+The ID of the project for the Google Cloud.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_managed_zone#project DataGoogleDnsManagedZone#project}
 
 ---
 

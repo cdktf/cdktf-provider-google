@@ -1137,6 +1137,7 @@ using HashiCorp.Cdktf.Providers.Google;
 new SqlDatabaseInstanceClone {
     string SourceInstanceName,
     string AllocatedIpRange = null,
+    string[] DatabaseNames = null,
     string PointInTime = null
 };
 ```
@@ -1147,6 +1148,7 @@ new SqlDatabaseInstanceClone {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.property.sourceInstanceName">SourceInstanceName</a></code> | <code>string</code> | The name of the instance from which the point in time should be restored. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.property.allocatedIpRange">AllocatedIpRange</a></code> | <code>string</code> | The name of the allocated ip range for the private ip CloudSQL instance. |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.property.databaseNames">DatabaseNames</a></code> | <code>string[]</code> | (SQL Server only, use with point_in_time) clone only the specified databases from the source instance. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.property.pointInTime">PointInTime</a></code> | <code>string</code> | The timestamp of the point in time that should be restored. |
 
 ---
@@ -1178,6 +1180,22 @@ The name of the allocated ip range for the private ip CloudSQL instance.
 For example: "google-managed-services-default". If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#allocated_ip_range SqlDatabaseInstance#allocated_ip_range}
+
+---
+
+##### `DatabaseNames`<sup>Optional</sup> <a name="DatabaseNames" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone.property.databaseNames"></a>
+
+```csharp
+public string[] DatabaseNames { get; set; }
+```
+
+- *Type:* string[]
+
+(SQL Server only, use with point_in_time) clone only the specified databases from the source instance.
+
+Clone all databases if empty.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_database_instance#database_names SqlDatabaseInstance#database_names}
 
 ---
 
@@ -3295,6 +3313,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resetAllocatedIpRange">ResetAllocatedIpRange</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resetDatabaseNames">ResetDatabaseNames</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resetPointInTime">ResetPointInTime</a></code> | *No description.* |
 
 ---
@@ -3455,6 +3474,12 @@ Returns a reversible string representation.
 private void ResetAllocatedIpRange()
 ```
 
+##### `ResetDatabaseNames` <a name="ResetDatabaseNames" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resetDatabaseNames"></a>
+
+```csharp
+private void ResetDatabaseNames()
+```
+
 ##### `ResetPointInTime` <a name="ResetPointInTime" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.resetPointInTime"></a>
 
 ```csharp
@@ -3469,9 +3494,11 @@ private void ResetPointInTime()
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.allocatedIpRangeInput">AllocatedIpRangeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.databaseNamesInput">DatabaseNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.pointInTimeInput">PointInTimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.sourceInstanceNameInput">SourceInstanceNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.allocatedIpRange">AllocatedIpRange</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.databaseNames">DatabaseNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.pointInTime">PointInTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.sourceInstanceName">SourceInstanceName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceClone">SqlDatabaseInstanceClone</a></code> | *No description.* |
@@ -3512,6 +3539,16 @@ public string AllocatedIpRangeInput { get; }
 
 ---
 
+##### `DatabaseNamesInput`<sup>Optional</sup> <a name="DatabaseNamesInput" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.databaseNamesInput"></a>
+
+```csharp
+public string[] DatabaseNamesInput { get; }
+```
+
+- *Type:* string[]
+
+---
+
 ##### `PointInTimeInput`<sup>Optional</sup> <a name="PointInTimeInput" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.pointInTimeInput"></a>
 
 ```csharp
@@ -3539,6 +3576,16 @@ public string AllocatedIpRange { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `DatabaseNames`<sup>Required</sup> <a name="DatabaseNames" id="@cdktf/provider-google.sqlDatabaseInstance.SqlDatabaseInstanceCloneOutputReference.property.databaseNames"></a>
+
+```csharp
+public string[] DatabaseNames { get; }
+```
+
+- *Type:* string[]
 
 ---
 

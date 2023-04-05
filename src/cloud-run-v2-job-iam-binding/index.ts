@@ -181,7 +181,7 @@ export class CloudRunV2JobIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_job_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

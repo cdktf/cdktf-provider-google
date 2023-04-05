@@ -437,7 +437,7 @@ export class CloudbuildWorkerPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_worker_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

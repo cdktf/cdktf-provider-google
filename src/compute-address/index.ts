@@ -17,7 +17,8 @@ if any. Set by the API if undefined.
   */
   readonly address?: string;
   /**
-  * The type of address to reserve. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
+  * The type of address to reserve.
+Note: if you set this argument's value as 'INTERNAL' you need to leave the 'network_tier' argument unset in that resource block. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#address_type ComputeAddress#address_type}
   */
@@ -56,7 +57,8 @@ IPSEC_INTERCONNECT purposes.
   readonly network?: string;
   /**
   * The networking tier used for configuring this address. If this field is not
-specified, it is assumed to be PREMIUM. Possible values: ["PREMIUM", "STANDARD"]
+specified, it is assumed to be PREMIUM.
+This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it's always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: ["PREMIUM", "STANDARD"]
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_address#network_tier ComputeAddress#network_tier}
   */
@@ -248,7 +250,7 @@ export class ComputeAddress extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_address',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

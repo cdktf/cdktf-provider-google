@@ -3147,6 +3147,12 @@ export interface ContainerClusterIpAllocationPolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#services_secondary_range_name ContainerCluster#services_secondary_range_name}
   */
   readonly servicesSecondaryRangeName?: string;
+  /**
+  * The IP Stack type of the cluster. Choose between IPV4 and IPV4_IPV6. Default type is IPV4 Only if not set
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#stack_type ContainerCluster#stack_type}
+  */
+  readonly stackType?: string;
 }
 
 export function containerClusterIpAllocationPolicyToTerraform(struct?: ContainerClusterIpAllocationPolicyOutputReference | ContainerClusterIpAllocationPolicy): any {
@@ -3159,6 +3165,7 @@ export function containerClusterIpAllocationPolicyToTerraform(struct?: Container
     cluster_secondary_range_name: cdktf.stringToTerraform(struct!.clusterSecondaryRangeName),
     services_ipv4_cidr_block: cdktf.stringToTerraform(struct!.servicesIpv4CidrBlock),
     services_secondary_range_name: cdktf.stringToTerraform(struct!.servicesSecondaryRangeName),
+    stack_type: cdktf.stringToTerraform(struct!.stackType),
   }
 }
 
@@ -3192,6 +3199,10 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.servicesSecondaryRangeName = this._servicesSecondaryRangeName;
     }
+    if (this._stackType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.stackType = this._stackType;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -3202,6 +3213,7 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       this._clusterSecondaryRangeName = undefined;
       this._servicesIpv4CidrBlock = undefined;
       this._servicesSecondaryRangeName = undefined;
+      this._stackType = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -3209,6 +3221,7 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       this._clusterSecondaryRangeName = value.clusterSecondaryRangeName;
       this._servicesIpv4CidrBlock = value.servicesIpv4CidrBlock;
       this._servicesSecondaryRangeName = value.servicesSecondaryRangeName;
+      this._stackType = value.stackType;
     }
   }
 
@@ -3274,6 +3287,22 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get servicesSecondaryRangeNameInput() {
     return this._servicesSecondaryRangeName;
+  }
+
+  // stack_type - computed: false, optional: true, required: false
+  private _stackType?: string; 
+  public get stackType() {
+    return this.getStringAttribute('stack_type');
+  }
+  public set stackType(value: string) {
+    this._stackType = value;
+  }
+  public resetStackType() {
+    this._stackType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stackTypeInput() {
+    return this._stackType;
   }
 }
 export interface ContainerClusterLoggingConfig {
@@ -5008,6 +5037,70 @@ export class ContainerClusterNodeConfigTaintList extends cdktf.ComplexList {
     return new ContainerClusterNodeConfigTaintOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerClusterNodeConfigAdvancedMachineFeatures {
+  /**
+  * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
+  */
+  readonly threadsPerCore: number;
+}
+
+export function containerClusterNodeConfigAdvancedMachineFeaturesToTerraform(struct?: ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference | ContainerClusterNodeConfigAdvancedMachineFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    threads_per_core: cdktf.numberToTerraform(struct!.threadsPerCore),
+  }
+}
+
+export class ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodeConfigAdvancedMachineFeatures | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._threadsPerCore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threadsPerCore = this._threadsPerCore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodeConfigAdvancedMachineFeatures | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._threadsPerCore = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._threadsPerCore = value.threadsPerCore;
+    }
+  }
+
+  // threads_per_core - computed: false, optional: false, required: true
+  private _threadsPerCore?: number; 
+  public get threadsPerCore() {
+    return this.getNumberAttribute('threads_per_core');
+  }
+  public set threadsPerCore(value: number) {
+    this._threadsPerCore = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threadsPerCoreInput() {
+    return this._threadsPerCore;
+  }
+}
 export interface ContainerClusterNodeConfigGcfsConfig {
   /**
   * Whether or not GCFS is enabled
@@ -5813,6 +5906,12 @@ export interface ContainerClusterNodeConfig {
   */
   readonly taint?: ContainerClusterNodeConfigTaint[] | cdktf.IResolvable;
   /**
+  * advanced_machine_features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
+  */
+  readonly advancedMachineFeatures?: ContainerClusterNodeConfigAdvancedMachineFeatures;
+  /**
   * gcfs_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#gcfs_config ContainerCluster#gcfs_config}
@@ -5887,6 +5986,7 @@ export function containerClusterNodeConfigToTerraform(struct?: ContainerClusterN
     spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     taint: cdktf.listMapper(containerClusterNodeConfigTaintToTerraform, false)(struct!.taint),
+    advanced_machine_features: containerClusterNodeConfigAdvancedMachineFeaturesToTerraform(struct!.advancedMachineFeatures),
     gcfs_config: containerClusterNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerClusterNodeConfigGvnicToTerraform(struct!.gvnic),
     kubelet_config: containerClusterNodeConfigKubeletConfigToTerraform(struct!.kubeletConfig),
@@ -5988,6 +6088,10 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.taint = this._taint?.internalValue;
     }
+    if (this._advancedMachineFeatures?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.advancedMachineFeatures = this._advancedMachineFeatures?.internalValue;
+    }
     if (this._gcfsConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcfsConfig = this._gcfsConfig?.internalValue;
@@ -6045,6 +6149,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._spot = undefined;
       this._tags = undefined;
       this._taint.internalValue = undefined;
+      this._advancedMachineFeatures.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
       this._gvnic.internalValue = undefined;
       this._kubeletConfig.internalValue = undefined;
@@ -6075,6 +6180,7 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
       this._spot = value.spot;
       this._tags = value.tags;
       this._taint.internalValue = value.taint;
+      this._advancedMachineFeatures.internalValue = value.advancedMachineFeatures;
       this._gcfsConfig.internalValue = value.gcfsConfig;
       this._gvnic.internalValue = value.gvnic;
       this._kubeletConfig.internalValue = value.kubeletConfig;
@@ -6388,6 +6494,22 @@ export class ContainerClusterNodeConfigOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get taintInput() {
     return this._taint.internalValue;
+  }
+
+  // advanced_machine_features - computed: false, optional: true, required: false
+  private _advancedMachineFeatures = new ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference(this, "advanced_machine_features");
+  public get advancedMachineFeatures() {
+    return this._advancedMachineFeatures;
+  }
+  public putAdvancedMachineFeatures(value: ContainerClusterNodeConfigAdvancedMachineFeatures) {
+    this._advancedMachineFeatures.internalValue = value;
+  }
+  public resetAdvancedMachineFeatures() {
+    this._advancedMachineFeatures.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedMachineFeaturesInput() {
+    return this._advancedMachineFeatures.internalValue;
   }
 
   // gcfs_config - computed: false, optional: true, required: false
@@ -7404,6 +7526,70 @@ export class ContainerClusterNodePoolNodeConfigTaintList extends cdktf.ComplexLi
     return new ContainerClusterNodePoolNodeConfigTaintOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures {
+  /**
+  * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
+  */
+  readonly threadsPerCore: number;
+}
+
+export function containerClusterNodePoolNodeConfigAdvancedMachineFeaturesToTerraform(struct?: ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference | ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    threads_per_core: cdktf.numberToTerraform(struct!.threadsPerCore),
+  }
+}
+
+export class ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._threadsPerCore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.threadsPerCore = this._threadsPerCore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._threadsPerCore = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._threadsPerCore = value.threadsPerCore;
+    }
+  }
+
+  // threads_per_core - computed: false, optional: false, required: true
+  private _threadsPerCore?: number; 
+  public get threadsPerCore() {
+    return this.getNumberAttribute('threads_per_core');
+  }
+  public set threadsPerCore(value: number) {
+    this._threadsPerCore = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threadsPerCoreInput() {
+    return this._threadsPerCore;
+  }
+}
 export interface ContainerClusterNodePoolNodeConfigGcfsConfig {
   /**
   * Whether or not GCFS is enabled
@@ -8209,6 +8395,12 @@ export interface ContainerClusterNodePoolNodeConfig {
   */
   readonly taint?: ContainerClusterNodePoolNodeConfigTaint[] | cdktf.IResolvable;
   /**
+  * advanced_machine_features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
+  */
+  readonly advancedMachineFeatures?: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures;
+  /**
   * gcfs_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#gcfs_config ContainerCluster#gcfs_config}
@@ -8283,6 +8475,7 @@ export function containerClusterNodePoolNodeConfigToTerraform(struct?: Container
     spot: cdktf.booleanToTerraform(struct!.spot),
     tags: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.tags),
     taint: cdktf.listMapper(containerClusterNodePoolNodeConfigTaintToTerraform, false)(struct!.taint),
+    advanced_machine_features: containerClusterNodePoolNodeConfigAdvancedMachineFeaturesToTerraform(struct!.advancedMachineFeatures),
     gcfs_config: containerClusterNodePoolNodeConfigGcfsConfigToTerraform(struct!.gcfsConfig),
     gvnic: containerClusterNodePoolNodeConfigGvnicToTerraform(struct!.gvnic),
     kubelet_config: containerClusterNodePoolNodeConfigKubeletConfigToTerraform(struct!.kubeletConfig),
@@ -8384,6 +8577,10 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.taint = this._taint?.internalValue;
     }
+    if (this._advancedMachineFeatures?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.advancedMachineFeatures = this._advancedMachineFeatures?.internalValue;
+    }
     if (this._gcfsConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.gcfsConfig = this._gcfsConfig?.internalValue;
@@ -8441,6 +8638,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._spot = undefined;
       this._tags = undefined;
       this._taint.internalValue = undefined;
+      this._advancedMachineFeatures.internalValue = undefined;
       this._gcfsConfig.internalValue = undefined;
       this._gvnic.internalValue = undefined;
       this._kubeletConfig.internalValue = undefined;
@@ -8471,6 +8669,7 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
       this._spot = value.spot;
       this._tags = value.tags;
       this._taint.internalValue = value.taint;
+      this._advancedMachineFeatures.internalValue = value.advancedMachineFeatures;
       this._gcfsConfig.internalValue = value.gcfsConfig;
       this._gvnic.internalValue = value.gvnic;
       this._kubeletConfig.internalValue = value.kubeletConfig;
@@ -8784,6 +8983,22 @@ export class ContainerClusterNodePoolNodeConfigOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get taintInput() {
     return this._taint.internalValue;
+  }
+
+  // advanced_machine_features - computed: false, optional: true, required: false
+  private _advancedMachineFeatures = new ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference(this, "advanced_machine_features");
+  public get advancedMachineFeatures() {
+    return this._advancedMachineFeatures;
+  }
+  public putAdvancedMachineFeatures(value: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures) {
+    this._advancedMachineFeatures.internalValue = value;
+  }
+  public resetAdvancedMachineFeatures() {
+    this._advancedMachineFeatures.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedMachineFeaturesInput() {
+    return this._advancedMachineFeatures.internalValue;
   }
 
   // gcfs_config - computed: false, optional: true, required: false
@@ -11085,7 +11300,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

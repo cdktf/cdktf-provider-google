@@ -31,6 +31,7 @@ The following submodules are available:
 - [apigeeFlowhook](./apigeeFlowhook.go.md)
 - [apigeeInstance](./apigeeInstance.go.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.go.md)
+- [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.go.md)
 - [apigeeNatAddress](./apigeeNatAddress.go.md)
 - [apigeeOrganization](./apigeeOrganization.go.md)
 - [apigeeSharedflow](./apigeeSharedflow.go.md)

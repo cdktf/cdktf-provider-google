@@ -8,25 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleDnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#id DataGoogleDnsRecordSet#id}
-  *
-  * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
-  * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
-  */
-  readonly id?: string;
-  /**
+  * The Name of the zone.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
+  * The DNS name for the resource.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#name DataGoogleDnsRecordSet#name}
   */
   readonly name: string;
   /**
+  * The ID of the project for the Google Cloud.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#project DataGoogleDnsRecordSet#project}
   */
   readonly project?: string;
   /**
+  * The identifier of a supported record type. See the list of Supported DNS record types.
+  * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_record_set#type DataGoogleDnsRecordSet#type}
   */
   readonly type: string;
@@ -58,7 +59,7 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_record_set',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.59.0',
+        providerVersion: '4.60.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -69,7 +70,6 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
       connection: config.connection,
       forEach: config.forEach
     });
-    this._id = config.id;
     this._managedZone = config.managedZone;
     this._name = config.name;
     this._project = config.project;
@@ -80,20 +80,9 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // id - computed: true, optional: true, required: false
-  private _id?: string; 
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-  public set id(value: string) {
-    this._id = value;
-  }
-  public resetId() {
-    this._id = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idInput() {
-    return this._id;
   }
 
   // managed_zone - computed: false, optional: false, required: true
@@ -167,7 +156,6 @@ export class DataGoogleDnsRecordSet extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id: cdktf.stringToTerraform(this._id),
       managed_zone: cdktf.stringToTerraform(this._managedZone),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),

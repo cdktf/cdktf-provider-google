@@ -1475,7 +1475,8 @@ def put_ip_allocation_policy(
   cluster_ipv4_cidr_block: str = None,
   cluster_secondary_range_name: str = None,
   services_ipv4_cidr_block: str = None,
-  services_secondary_range_name: str = None
+  services_secondary_range_name: str = None,
+  stack_type: str = None
 ) -> None
 ```
 
@@ -1524,6 +1525,18 @@ The name of the existing secondary range in the cluster's subnetwork to use for 
 Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#services_secondary_range_name ContainerCluster#services_secondary_range_name}
+
+---
+
+###### `stack_type`<sup>Optional</sup> <a name="stack_type" id="@cdktf/provider-google.containerCluster.ContainerCluster.putIpAllocationPolicy.parameter.stackType"></a>
+
+- *Type:* str
+
+The IP Stack type of the cluster.
+
+Choose between IPV4 and IPV4_IPV6. Default type is IPV4 Only if not set
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#stack_type ContainerCluster#stack_type}
 
 ---
 
@@ -1712,6 +1725,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ```python
 def put_node_config(
+  advanced_machine_features: ContainerClusterNodeConfigAdvancedMachineFeatures = None,
   boot_disk_kms_key: str = None,
   disk_size_gb: typing.Union[int, float] = None,
   disk_type: str = None,
@@ -1741,6 +1755,16 @@ def put_node_config(
   workload_metadata_config: ContainerClusterNodeConfigWorkloadMetadataConfig = None
 ) -> None
 ```
+
+###### `advanced_machine_features`<sup>Optional</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerCluster.putNodeConfig.parameter.advancedMachineFeatures"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
+
+---
 
 ###### `boot_disk_kms_key`<sup>Optional</sup> <a name="boot_disk_kms_key" id="@cdktf/provider-google.containerCluster.ContainerCluster.putNodeConfig.parameter.bootDiskKmsKey"></a>
 
@@ -6724,7 +6748,8 @@ containerCluster.ContainerClusterIpAllocationPolicy(
   cluster_ipv4_cidr_block: str = None,
   cluster_secondary_range_name: str = None,
   services_ipv4_cidr_block: str = None,
-  services_secondary_range_name: str = None
+  services_secondary_range_name: str = None,
+  stack_type: str = None
 )
 ```
 
@@ -6736,6 +6761,7 @@ containerCluster.ContainerClusterIpAllocationPolicy(
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.clusterSecondaryRangeName">cluster_secondary_range_name</a></code> | <code>str</code> | The name of the existing secondary range in the cluster's subnetwork to use for pod IP addresses. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.servicesIpv4CidrBlock">services_ipv4_cidr_block</a></code> | <code>str</code> | The IP address range of the services IPs in this cluster. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.servicesSecondaryRangeName">services_secondary_range_name</a></code> | <code>str</code> | The name of the existing secondary range in the cluster's subnetwork to use for service ClusterIPs. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.stackType">stack_type</a></code> | <code>str</code> | The IP Stack type of the cluster. |
 
 ---
 
@@ -6800,6 +6826,22 @@ The name of the existing secondary range in the cluster's subnetwork to use for 
 Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#services_secondary_range_name ContainerCluster#services_secondary_range_name}
+
+---
+
+##### `stack_type`<sup>Optional</sup> <a name="stack_type" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy.property.stackType"></a>
+
+```python
+stack_type: str
+```
+
+- *Type:* str
+
+The IP Stack type of the cluster.
+
+Choose between IPV4 and IPV4_IPV6. Default type is IPV4 Only if not set
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#stack_type ContainerCluster#stack_type}
 
 ---
 
@@ -7449,6 +7491,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 from cdktf_cdktf_provider_google import container_cluster
 
 containerCluster.ContainerClusterNodeConfig(
+  advanced_machine_features: ContainerClusterNodeConfigAdvancedMachineFeatures = None,
   boot_disk_kms_key: str = None,
   disk_size_gb: typing.Union[int, float] = None,
   disk_type: str = None,
@@ -7483,6 +7526,7 @@ containerCluster.ContainerClusterNodeConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.advancedMachineFeatures">advanced_machine_features</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | advanced_machine_features block. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.bootDiskKmsKey">boot_disk_kms_key</a></code> | <code>str</code> | The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.diskType">disk_type</a></code> | <code>str</code> | Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd. |
@@ -7510,6 +7554,20 @@ containerCluster.ContainerClusterNodeConfig(
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.tags">tags</a></code> | <code>typing.List[str]</code> | The list of instance tags applied to all nodes. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.taint">taint</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>]]</code> | List of Kubernetes taints to be applied to each node. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.workloadMetadataConfig">workload_metadata_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfig">ContainerClusterNodeConfigWorkloadMetadataConfig</a></code> | workload_metadata_config block. |
+
+---
+
+##### `advanced_machine_features`<sup>Optional</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfig.property.advancedMachineFeatures"></a>
+
+```python
+advanced_machine_features: ContainerClusterNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
 
 ---
 
@@ -7898,6 +7956,42 @@ workload_metadata_config: ContainerClusterNodeConfigWorkloadMetadataConfig
 workload_metadata_config block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#workload_metadata_config ContainerCluster#workload_metadata_config}
+
+---
+
+### ContainerClusterNodeConfigAdvancedMachineFeatures <a name="ContainerClusterNodeConfigAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import container_cluster
+
+containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures(
+  threads_per_core: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.property.threadsPerCore">threads_per_core</a></code> | <code>typing.Union[int, float]</code> | The number of threads per physical core. |
+
+---
+
+##### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures.property.threadsPerCore"></a>
+
+```python
+threads_per_core: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
 
 ---
 
@@ -9011,6 +9105,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 from cdktf_cdktf_provider_google import container_cluster
 
 containerCluster.ContainerClusterNodePoolNodeConfig(
+  advanced_machine_features: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures = None,
   boot_disk_kms_key: str = None,
   disk_size_gb: typing.Union[int, float] = None,
   disk_type: str = None,
@@ -9045,6 +9140,7 @@ containerCluster.ContainerClusterNodePoolNodeConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.advancedMachineFeatures">advanced_machine_features</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | advanced_machine_features block. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.bootDiskKmsKey">boot_disk_kms_key</a></code> | <code>str</code> | The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.diskSizeGb">disk_size_gb</a></code> | <code>typing.Union[int, float]</code> | Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.diskType">disk_type</a></code> | <code>str</code> | Type of the disk attached to each node. Such as pd-standard, pd-balanced or pd-ssd. |
@@ -9072,6 +9168,20 @@ containerCluster.ContainerClusterNodePoolNodeConfig(
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.tags">tags</a></code> | <code>typing.List[str]</code> | The list of instance tags applied to all nodes. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.taint">taint</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>]]</code> | List of Kubernetes taints to be applied to each node. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.workloadMetadataConfig">workload_metadata_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig</a></code> | workload_metadata_config block. |
+
+---
+
+##### `advanced_machine_features`<sup>Optional</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfig.property.advancedMachineFeatures"></a>
+
+```python
+advanced_machine_features: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
 
 ---
 
@@ -9460,6 +9570,42 @@ workload_metadata_config: ContainerClusterNodePoolNodeConfigWorkloadMetadataConf
 workload_metadata_config block.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#workload_metadata_config ContainerCluster#workload_metadata_config}
+
+---
+
+### ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures <a name="ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import container_cluster
+
+containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures(
+  threads_per_core: typing.Union[int, float]
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.property.threadsPerCore">threads_per_core</a></code> | <code>typing.Union[int, float]</code> | The number of threads per physical core. |
+
+---
+
+##### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures.property.threadsPerCore"></a>
+
+```python
+threads_per_core: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
 
 ---
 
@@ -20782,6 +20928,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetClusterSecondaryRangeName">reset_cluster_secondary_range_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetServicesIpv4CidrBlock">reset_services_ipv4_cidr_block</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetServicesSecondaryRangeName">reset_services_secondary_range_name</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetStackType">reset_stack_type</a></code> | *No description.* |
 
 ---
 
@@ -20981,6 +21128,12 @@ def reset_services_ipv4_cidr_block() -> None
 def reset_services_secondary_range_name() -> None
 ```
 
+##### `reset_stack_type` <a name="reset_stack_type" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.resetStackType"></a>
+
+```python
+def reset_stack_type() -> None
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -20992,10 +21145,12 @@ def reset_services_secondary_range_name() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterSecondaryRangeNameInput">cluster_secondary_range_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlockInput">services_ipv4_cidr_block_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesSecondaryRangeNameInput">services_secondary_range_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackTypeInput">stack_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterIpv4CidrBlock">cluster_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterSecondaryRangeName">cluster_secondary_range_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesIpv4CidrBlock">services_ipv4_cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.servicesSecondaryRangeName">services_secondary_range_name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackType">stack_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicy">ContainerClusterIpAllocationPolicy</a></code> | *No description.* |
 
 ---
@@ -21064,6 +21219,16 @@ services_secondary_range_name_input: str
 
 ---
 
+##### `stack_type_input`<sup>Optional</sup> <a name="stack_type_input" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackTypeInput"></a>
+
+```python
+stack_type_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `cluster_ipv4_cidr_block`<sup>Required</sup> <a name="cluster_ipv4_cidr_block" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.clusterIpv4CidrBlock"></a>
 
 ```python
@@ -21098,6 +21263,16 @@ services_ipv4_cidr_block: str
 
 ```python
 services_secondary_range_name: str
+```
+
+- *Type:* str
+
+---
+
+##### `stack_type`<sup>Required</sup> <a name="stack_type" id="@cdktf/provider-google.containerCluster.ContainerClusterIpAllocationPolicyOutputReference.property.stackType"></a>
+
+```python
+stack_type: str
 ```
 
 - *Type:* str
@@ -26089,6 +26264,302 @@ internal_value: ContainerClusterNetworkPolicy
 ---
 
 
+### ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference <a name="ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import container_cluster
+
+containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput">threads_per_core_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore">threads_per_core</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `threads_per_core_input`<sup>Optional</sup> <a name="threads_per_core_input" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput"></a>
+
+```python
+threads_per_core_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore"></a>
+
+```python
+threads_per_core: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ContainerClusterNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
+
+---
+
+
 ### ContainerClusterNodeConfigGcfsConfigOutputReference <a name="ContainerClusterNodeConfigGcfsConfigOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference.Initializer"></a>
@@ -28788,6 +29259,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures">put_advanced_machine_features</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGcfsConfig">put_gcfs_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGuestAccelerator">put_guest_accelerator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGvnic">put_gvnic</a></code> | *No description.* |
@@ -28798,6 +29270,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putShieldedInstanceConfig">put_shielded_instance_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putTaint">put_taint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putWorkloadMetadataConfig">put_workload_metadata_config</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetAdvancedMachineFeatures">reset_advanced_machine_features</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetBootDiskKmsKey">reset_boot_disk_kms_key</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetDiskSizeGb">reset_disk_size_gb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetDiskType">reset_disk_type</a></code> | *No description.* |
@@ -28999,6 +29472,26 @@ def to_string() -> str
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `put_advanced_machine_features` <a name="put_advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures"></a>
+
+```python
+def put_advanced_machine_features(
+  threads_per_core: typing.Union[int, float]
+) -> None
+```
+
+###### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putAdvancedMachineFeatures.parameter.threadsPerCore"></a>
+
+- *Type:* typing.Union[int, float]
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
+
+---
 
 ##### `put_gcfs_config` <a name="put_gcfs_config" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.putGcfsConfig"></a>
 
@@ -29240,6 +29733,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `reset_advanced_machine_features` <a name="reset_advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetAdvancedMachineFeatures"></a>
+
+```python
+def reset_advanced_machine_features() -> None
+```
+
 ##### `reset_boot_disk_kms_key` <a name="reset_boot_disk_kms_key" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.resetBootDiskKmsKey"></a>
 
 ```python
@@ -29409,6 +29908,7 @@ def reset_workload_metadata_config() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeatures">advanced_machine_features</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.gcfsConfig">gcfs_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGcfsConfigOutputReference">ContainerClusterNodeConfigGcfsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.guestAccelerator">guest_accelerator</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorList">ContainerClusterNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.gvnic">gvnic</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGvnicOutputReference">ContainerClusterNodeConfigGvnicOutputReference</a></code> | *No description.* |
@@ -29419,6 +29919,7 @@ def reset_workload_metadata_config() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.shieldedInstanceConfig">shielded_instance_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigShieldedInstanceConfigOutputReference">ContainerClusterNodeConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.taint">taint</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintList">ContainerClusterNodeConfigTaintList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.workloadMetadataConfig">workload_metadata_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeaturesInput">advanced_machine_features_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.bootDiskKmsKeyInput">boot_disk_kms_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.diskSizeGbInput">disk_size_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.diskTypeInput">disk_type_input</a></code> | <code>str</code> | *No description.* |
@@ -29488,6 +29989,16 @@ fqn: str
 ```
 
 - *Type:* str
+
+---
+
+##### `advanced_machine_features`<sup>Required</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeatures"></a>
+
+```python
+advanced_machine_features: ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodeConfigAdvancedMachineFeaturesOutputReference</a>
 
 ---
 
@@ -29588,6 +30099,16 @@ workload_metadata_config: ContainerClusterNodeConfigWorkloadMetadataConfigOutput
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodeConfigWorkloadMetadataConfigOutputReference</a>
+
+---
+
+##### `advanced_machine_features_input`<sup>Optional</sup> <a name="advanced_machine_features_input" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigOutputReference.property.advancedMachineFeaturesInput"></a>
+
+```python
+advanced_machine_features_input: ContainerClusterNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigAdvancedMachineFeatures">ContainerClusterNodeConfigAdvancedMachineFeatures</a>
 
 ---
 
@@ -33475,6 +33996,302 @@ internal_value: ContainerClusterNodePoolNetworkConfig
 ---
 
 
+### ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference <a name="ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_google import container_cluster
+
+containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput">threads_per_core_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore">threads_per_core</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `threads_per_core_input`<sup>Optional</sup> <a name="threads_per_core_input" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCoreInput"></a>
+
+```python
+threads_per_core_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.threadsPerCore"></a>
+
+```python
+threads_per_core: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+---
+
+
 ### ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference <a name="ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference.Initializer"></a>
@@ -36174,6 +36991,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures">put_advanced_machine_features</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGcfsConfig">put_gcfs_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGuestAccelerator">put_guest_accelerator</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGvnic">put_gvnic</a></code> | *No description.* |
@@ -36184,6 +37002,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putShieldedInstanceConfig">put_shielded_instance_config</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putTaint">put_taint</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putWorkloadMetadataConfig">put_workload_metadata_config</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetAdvancedMachineFeatures">reset_advanced_machine_features</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetBootDiskKmsKey">reset_boot_disk_kms_key</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetDiskSizeGb">reset_disk_size_gb</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetDiskType">reset_disk_type</a></code> | *No description.* |
@@ -36385,6 +37204,26 @@ def to_string() -> str
 Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
+
+##### `put_advanced_machine_features` <a name="put_advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures"></a>
+
+```python
+def put_advanced_machine_features(
+  threads_per_core: typing.Union[int, float]
+) -> None
+```
+
+###### `threads_per_core`<sup>Required</sup> <a name="threads_per_core" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putAdvancedMachineFeatures.parameter.threadsPerCore"></a>
+
+- *Type:* typing.Union[int, float]
+
+The number of threads per physical core.
+
+To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#threads_per_core ContainerCluster#threads_per_core}
+
+---
 
 ##### `put_gcfs_config` <a name="put_gcfs_config" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.putGcfsConfig"></a>
 
@@ -36626,6 +37465,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `reset_advanced_machine_features` <a name="reset_advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetAdvancedMachineFeatures"></a>
+
+```python
+def reset_advanced_machine_features() -> None
+```
+
 ##### `reset_boot_disk_kms_key` <a name="reset_boot_disk_kms_key" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.resetBootDiskKmsKey"></a>
 
 ```python
@@ -36795,6 +37640,7 @@ def reset_workload_metadata_config() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeatures">advanced_machine_features</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.gcfsConfig">gcfs_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference">ContainerClusterNodePoolNodeConfigGcfsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.guestAccelerator">guest_accelerator</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorList">ContainerClusterNodePoolNodeConfigGuestAcceleratorList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.gvnic">gvnic</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGvnicOutputReference">ContainerClusterNodePoolNodeConfigGvnicOutputReference</a></code> | *No description.* |
@@ -36805,6 +37651,7 @@ def reset_workload_metadata_config() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.shieldedInstanceConfig">shielded_instance_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference">ContainerClusterNodePoolNodeConfigShieldedInstanceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.taint">taint</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintList">ContainerClusterNodePoolNodeConfigTaintList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.workloadMetadataConfig">workload_metadata_config</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeaturesInput">advanced_machine_features_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.bootDiskKmsKeyInput">boot_disk_kms_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.diskSizeGbInput">disk_size_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.diskTypeInput">disk_type_input</a></code> | <code>str</code> | *No description.* |
@@ -36874,6 +37721,16 @@ fqn: str
 ```
 
 - *Type:* str
+
+---
+
+##### `advanced_machine_features`<sup>Required</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeatures"></a>
+
+```python
+advanced_machine_features: ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference">ContainerClusterNodePoolNodeConfigAdvancedMachineFeaturesOutputReference</a>
 
 ---
 
@@ -36974,6 +37831,16 @@ workload_metadata_config: ContainerClusterNodePoolNodeConfigWorkloadMetadataConf
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference">ContainerClusterNodePoolNodeConfigWorkloadMetadataConfigOutputReference</a>
+
+---
+
+##### `advanced_machine_features_input`<sup>Optional</sup> <a name="advanced_machine_features_input" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigOutputReference.property.advancedMachineFeaturesInput"></a>
+
+```python
+advanced_machine_features_input: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures
+```
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
 
 ---
 
@@ -39371,6 +40238,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ```python
 def put_node_config(
+  advanced_machine_features: ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures = None,
   boot_disk_kms_key: str = None,
   disk_size_gb: typing.Union[int, float] = None,
   disk_type: str = None,
@@ -39400,6 +40268,16 @@ def put_node_config(
   workload_metadata_config: ContainerClusterNodePoolNodeConfigWorkloadMetadataConfig = None
 ) -> None
 ```
+
+###### `advanced_machine_features`<sup>Optional</sup> <a name="advanced_machine_features" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.putNodeConfig.parameter.advancedMachineFeatures"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures">ContainerClusterNodePoolNodeConfigAdvancedMachineFeatures</a>
+
+advanced_machine_features block.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#advanced_machine_features ContainerCluster#advanced_machine_features}
+
+---
 
 ###### `boot_disk_kms_key`<sup>Optional</sup> <a name="boot_disk_kms_key" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.putNodeConfig.parameter.bootDiskKmsKey"></a>
 
