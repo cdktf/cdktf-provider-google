@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_source_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiampolicy"
 
 sccsourceiampolicy.NewSccSourceIamPolicy(scope Construct, id *string, config SccSourceIamPolicyConfig) SccSourceIamPolicy
 ```
@@ -273,7 +273,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiampolicy"
 
 sccsourceiampolicy.SccSourceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +305,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiampolicy"
 
 sccsourceiampolicy.SccSourceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ sccsourceiampolicy.SccSourceIamPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiampolicy"
 
 sccsourceiampolicy.SccSourceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -617,7 +617,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sccSourceIamPolicy.SccSourceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/sccsourceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/sccsourceiampolicy"
 
 &sccsourceiampolicy.SccSourceIamPolicyConfig {
 	Connection: interface{},

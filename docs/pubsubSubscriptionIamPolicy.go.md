@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_subs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSubscriptionIamPolicy.PubsubSubscriptionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniampolicy"
 
 pubsubsubscriptioniampolicy.NewPubsubSubscriptionIamPolicy(scope Construct, id *string, config PubsubSubscriptionIamPolicyConfig) PubsubSubscriptionIamPolicy
 ```
@@ -280,7 +280,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSubscriptionIamPolicy.PubsubSubscriptionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniampolicy"
 
 pubsubsubscriptioniampolicy.PubsubSubscriptionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSubscriptionIamPolicy.PubsubSubscriptionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniampolicy"
 
 pubsubsubscriptioniampolicy.PubsubSubscriptionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ pubsubsubscriptioniampolicy.PubsubSubscriptionIamPolicy_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSubscriptionIamPolicy.PubsubSubscriptionIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniampolicy"
 
 pubsubsubscriptioniampolicy.PubsubSubscriptionIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSubscriptionIamPolicy.PubsubSubscriptionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubsubscriptioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubsubscriptioniampolicy"
 
 &pubsubsubscriptioniampolicy.PubsubSubscriptionIamPolicyConfig {
 	Connection: interface{},

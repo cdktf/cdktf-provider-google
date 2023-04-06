@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_pro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.NewComputeProjectMetadata(scope Construct, id *string, config ComputeProjectMetadataConfig) ComputeProjectMetadata
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ computeprojectmetadata.ComputeProjectMetadata_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadata.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.ComputeProjectMetadata_IsTerraformResource(x interface{}) *bool
 ```
@@ -633,7 +633,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 &computeprojectmetadata.ComputeProjectMetadataConfig {
 	Connection: interface{},
@@ -646,7 +646,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetada
 	Metadata: *map[string]*string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeProjectMetadata.ComputeProjectMetadataTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeProjectMetadata.ComputeProjectMetadataTimeouts,
 }
 ```
 
@@ -802,7 +802,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 &computeprojectmetadata.ComputeProjectMetadataTimeouts {
 	Create: *string,
@@ -850,7 +850,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectMetadata.ComputeProjectMetadataTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeprojectmetadata"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeprojectmetadata"
 
 computeprojectmetadata.NewComputeProjectMetadataTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeProjectMetadataTimeoutsOutputReference
 ```

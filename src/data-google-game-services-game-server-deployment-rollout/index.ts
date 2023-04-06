@@ -182,7 +182,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
       terraformResourceType: 'google_game_services_game_server_deployment_rollout',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.0',
+        providerVersion: '4.60.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

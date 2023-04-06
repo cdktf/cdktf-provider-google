@@ -478,7 +478,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.0',
+        providerVersion: '4.60.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

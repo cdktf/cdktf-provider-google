@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/organizatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.NewDataGoogleOrganization(scope Construct, id *string, config DataGoogleOrganizationConfig) DataGoogleOrganization
 ```
@@ -287,7 +287,7 @@ func ResetOrganization()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagoogleorganization.DataGoogleOrganization_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -631,7 +631,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 &datagoogleorganization.DataGoogleOrganizationConfig {
 	Connection: interface{},

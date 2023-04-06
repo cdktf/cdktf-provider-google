@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_pl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfig(scope Construct, id *string, config IdentityPlatformProjectDefaultConfigConfig) IdentityPlatformProjectDefaultConfig
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfig_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfig_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -664,7 +664,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigConfig {
 	Connection: interface{},
@@ -676,8 +676,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformproj
 	Provisioners: *[]interface{},
 	Id: *string,
 	Project: *string,
-	SignIn: github.com/cdktf/cdktf-provider-google-go/google/v5.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignIn,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigTimeouts,
+	SignIn: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignIn,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigTimeouts,
 }
 ```
 
@@ -829,13 +829,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigSignIn {
 	AllowDuplicateEmails: interface{},
-	Anonymous: github.com/cdktf/cdktf-provider-google-go/google/v5.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInAnonymous,
-	Email: github.com/cdktf/cdktf-provider-google-go/google/v5.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInEmail,
-	PhoneNumber: github.com/cdktf/cdktf-provider-google-go/google/v5.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInPhoneNumber,
+	Anonymous: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInAnonymous,
+	Email: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInEmail,
+	PhoneNumber: github.com/cdktf/cdktf-provider-google-go/google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInPhoneNumber,
 }
 ```
 
@@ -911,7 +911,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInAnonymous.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigSignInAnonymous {
 	Enabled: interface{},
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInEmail.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigSignInEmail {
 	Enabled: interface{},
@@ -999,7 +999,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInHashConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigSignInHashConfig {
 
@@ -1012,7 +1012,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformproj
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInPhoneNumber.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigSignInPhoneNumber {
 	Enabled: interface{},
@@ -1062,7 +1062,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 &identityplatformprojectdefaultconfig.IdentityPlatformProjectDefaultConfigTimeouts {
 	Create: *string,
@@ -1124,7 +1124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInAnonymousOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInAnonymousOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformProjectDefaultConfigSignInAnonymousOutputReference
 ```
@@ -1395,7 +1395,7 @@ func InternalValue() IdentityPlatformProjectDefaultConfigSignInAnonymous
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInEmailOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInEmailOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformProjectDefaultConfigSignInEmailOutputReference
 ```
@@ -1702,7 +1702,7 @@ func InternalValue() IdentityPlatformProjectDefaultConfigSignInEmail
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInHashConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInHashConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IdentityPlatformProjectDefaultConfigSignInHashConfigList
 ```
@@ -1834,7 +1834,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInHashConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInHashConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IdentityPlatformProjectDefaultConfigSignInHashConfigOutputReference
 ```
@@ -2156,7 +2156,7 @@ func InternalValue() IdentityPlatformProjectDefaultConfigSignInHashConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformProjectDefaultConfigSignInOutputReference
 ```
@@ -2571,7 +2571,7 @@ func InternalValue() IdentityPlatformProjectDefaultConfigSignIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigSignInPhoneNumberOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigSignInPhoneNumberOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformProjectDefaultConfigSignInPhoneNumberOutputReference
 ```
@@ -2878,7 +2878,7 @@ func InternalValue() IdentityPlatformProjectDefaultConfigSignInPhoneNumber
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformProjectDefaultConfig.IdentityPlatformProjectDefaultConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/identityplatformprojectdefaultconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/identityplatformprojectdefaultconfig"
 
 identityplatformprojectdefaultconfig.NewIdentityPlatformProjectDefaultConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IdentityPlatformProjectDefaultConfigTimeoutsOutputReference
 ```

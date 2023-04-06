@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_tag_va
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 tagstagvalueiammember.NewTagsTagValueIamMember(scope Construct, id *string, config TagsTagValueIamMemberConfig) TagsTagValueIamMember
 ```
@@ -293,7 +293,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 tagstagvalueiammember.TagsTagValueIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 tagstagvalueiammember.TagsTagValueIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ tagstagvalueiammember.TagsTagValueIamMember_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 tagstagvalueiammember.TagsTagValueIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 &tagstagvalueiammember.TagsTagValueIamMemberCondition {
 	Expression: *string,
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 &tagstagvalueiammember.TagsTagValueIamMemberConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammembe
 	Member: *string,
 	Role: *string,
 	TagValue: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.tagsTagValueIamMember.TagsTagValueIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.tagsTagValueIamMember.TagsTagValueIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -898,7 +898,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagValueIamMember.TagsTagValueIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/tagstagvalueiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/tagstagvalueiammember"
 
 tagstagvalueiammember.NewTagsTagValueIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TagsTagValueIamMemberConditionOutputReference
 ```

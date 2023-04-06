@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_pro
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.NewLoggingProjectBucketConfig(scope Construct, id *string, config LoggingProjectBucketConfigConfig) LoggingProjectBucketConfig
 ```
@@ -314,7 +314,7 @@ func ResetRetentionDays()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.LoggingProjectBucketConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -757,7 +757,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 &loggingprojectbucketconfig.LoggingProjectBucketConfigCmekSettings {
 	KmsKeyName: *string,
@@ -797,7 +797,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 &loggingprojectbucketconfig.LoggingProjectBucketConfigConfig {
 	Connection: interface{},
@@ -810,7 +810,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucket
 	BucketId: *string,
 	Location: *string,
 	Project: *string,
-	CmekSettings: github.com/cdktf/cdktf-provider-google-go/google/v5.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings,
+	CmekSettings: github.com/cdktf/cdktf-provider-google-go/google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettings,
 	Description: *string,
 	EnableAnalytics: interface{},
 	Id: *string,
@@ -1032,7 +1032,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectBucketConfig.LoggingProjectBucketConfigCmekSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingprojectbucketconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingprojectbucketconfig"
 
 loggingprojectbucketconfig.NewLoggingProjectBucketConfigCmekSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingProjectBucketConfigCmekSettingsOutputReference
 ```

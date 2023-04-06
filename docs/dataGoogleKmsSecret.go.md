@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/kms_secret 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsSecret.DataGoogleKmsSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglekmssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmssecret"
 
 datagooglekmssecret.NewDataGoogleKmsSecret(scope Construct, id *string, config DataGoogleKmsSecretConfig) DataGoogleKmsSecret
 ```
@@ -280,7 +280,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsSecret.DataGoogleKmsSecret.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglekmssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmssecret"
 
 datagooglekmssecret.DataGoogleKmsSecret_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsSecret.DataGoogleKmsSecret.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglekmssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmssecret"
 
 datagooglekmssecret.DataGoogleKmsSecret_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ datagooglekmssecret.DataGoogleKmsSecret_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsSecret.DataGoogleKmsSecret.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglekmssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmssecret"
 
 datagooglekmssecret.DataGoogleKmsSecret_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -602,7 +602,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsSecret.DataGoogleKmsSecretConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglekmssecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmssecret"
 
 &datagooglekmssecret.DataGoogleKmsSecretConfig {
 	Connection: interface{},
