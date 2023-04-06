@@ -459,7 +459,7 @@ export class CloudiotRegistry extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudiot_registry',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.0',
+        providerVersion: '4.60.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -181,7 +181,7 @@ export class DataCatalogTaxonomyIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_taxonomy_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.0',
+        providerVersion: '4.60.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
