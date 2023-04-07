@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/data_loss_p
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplate(scope Construct, id *string, config DataLossPreventionInspectTemplateConfig) DataLossPreventionInspectTemplate
 ```
@@ -327,7 +327,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.DataLossPreventionInspectTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -359,7 +359,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.DataLossPreventionInspectTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ datalosspreventioninspecttemplate.DataLossPreventionInspectTemplate_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.DataLossPreventionInspectTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -715,7 +715,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateConfig {
 	Connection: interface{},
@@ -729,8 +729,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventionin
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
-	InspectConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfig,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateTimeouts,
+	InspectConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateTimeouts,
 }
 ```
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfig {
 	ContentOptions: *[]*string,
@@ -927,7 +927,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventionin
 	ExcludeInfoTypes: interface{},
 	IncludeQuote: interface{},
 	InfoTypes: interface{},
-	Limits: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimits,
+	Limits: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimits,
 	MinLikelihood: *string,
 	RuleSet: interface{},
 }
@@ -1069,15 +1069,15 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes {
-	InfoType: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType,
-	Dictionary: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary,
+	InfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType,
+	Dictionary: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary,
 	ExclusionType: *string,
 	Likelihood: *string,
-	Regex: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex,
-	StoredType: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType,
+	Regex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex,
+	StoredType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType,
 }
 ```
 
@@ -1188,11 +1188,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary {
-	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath,
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList,
+	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList,
 }
 ```
 
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath {
 	Path: *string,
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordList {
 	Words: *[]*string,
@@ -1309,7 +1309,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType {
 	Name: *string,
@@ -1346,7 +1346,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex {
 	Pattern: *string,
@@ -1398,7 +1398,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType {
 	Name: *string,
@@ -1432,7 +1432,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigInfoTypes {
 	Name: *string,
@@ -1485,7 +1485,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimits.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigLimits {
 	MaxFindingsPerItem: *f64,
@@ -1551,10 +1551,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
-	InfoType: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType,
+	InfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType,
 	MaxFindings: *f64,
 }
 ```
@@ -1601,7 +1601,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
 	Name: *string,
@@ -1638,7 +1638,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSet {
 	InfoTypes: interface{},
@@ -1688,7 +1688,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes {
 	Name: *string,
@@ -1725,11 +1725,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRules {
-	ExclusionRule: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule,
-	HotwordRule: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule,
+	ExclusionRule: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule,
+	HotwordRule: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule,
 }
 ```
 
@@ -1775,13 +1775,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule {
 	MatchingType: *string,
-	Dictionary: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary,
-	ExcludeInfoTypes: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes,
-	Regex: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex,
+	Dictionary: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary,
+	ExcludeInfoTypes: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes,
+	Regex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex,
 }
 ```
 
@@ -1857,11 +1857,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary {
-	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath,
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList,
+	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList,
 }
 ```
 
@@ -1907,7 +1907,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath {
 	Path: *string,
@@ -1941,7 +1941,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordList {
 	Words: *[]*string,
@@ -1978,7 +1978,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes {
 	InfoTypes: interface{},
@@ -2012,7 +2012,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
 	Name: *string,
@@ -2049,7 +2049,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex {
 	Pattern: *string,
@@ -2101,12 +2101,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule {
-	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex,
-	LikelihoodAdjustment: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment,
-	Proximity: github.com/cdktf/cdktf-provider-google-go/google/v5.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity,
+	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex,
+	LikelihoodAdjustment: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment,
+	Proximity: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity,
 }
 ```
 
@@ -2167,7 +2167,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
 	Pattern: *string,
@@ -2220,7 +2220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment {
 	FixedLikelihood: *string,
@@ -2279,7 +2279,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity {
 	WindowAfter: *f64,
@@ -2329,7 +2329,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 &datalosspreventioninspecttemplate.DataLossPreventionInspectTemplateTimeouts {
 	Create: *string,
@@ -2391,7 +2391,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference
 ```
@@ -2662,7 +2662,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryOutputReference
 ```
@@ -2995,7 +2995,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListOutputReference
 ```
@@ -3266,7 +3266,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference
 ```
@@ -3537,7 +3537,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesList
 ```
@@ -3680,7 +3680,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutputReference
 ```
@@ -4166,7 +4166,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexOutputReference
 ```
@@ -4466,7 +4466,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference
 ```
@@ -4737,7 +4737,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigCustomInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigInfoTypesList
 ```
@@ -4880,7 +4880,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputReference
 ```
@@ -5198,7 +5198,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference
 ```
@@ -5469,7 +5469,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigLimitsMaxFind
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeList
 ```
@@ -5612,7 +5612,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference
 ```
@@ -5936,7 +5936,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigLimitsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
 ```
@@ -6271,7 +6271,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigLimits
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigOutputReference
 ```
@@ -6804,7 +6804,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesList
 ```
@@ -6947,7 +6947,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutputReference
 ```
@@ -7236,7 +7236,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetList
 ```
@@ -7379,7 +7379,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetOutputReference
 ```
@@ -7716,7 +7716,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference
 ```
@@ -7987,7 +7987,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference
 ```
@@ -8320,7 +8320,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference
 ```
@@ -8591,7 +8591,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList
 ```
@@ -8734,7 +8734,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference
 ```
@@ -9023,7 +9023,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference
 ```
@@ -9307,7 +9307,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleOutputReference
 ```
@@ -9704,7 +9704,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegexOutputReference
 ```
@@ -10004,7 +10004,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesE
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference
 ```
@@ -10304,7 +10304,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesH
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference
 ```
@@ -10611,7 +10611,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesH
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleOutputReference
 ```
@@ -10965,7 +10965,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesH
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximityOutputReference
 ```
@@ -11272,7 +11272,7 @@ func InternalValue() DataLossPreventionInspectTemplateInspectConfigRuleSetRulesH
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesList
 ```
@@ -11415,7 +11415,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateInspectConfigRuleSetRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateInspectConfigRuleSetRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionInspectTemplateInspectConfigRuleSetRulesOutputReference
 ```
@@ -11766,7 +11766,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionInspectTemplate.DataLossPreventionInspectTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datalosspreventioninspecttemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventioninspecttemplate"
 
 datalosspreventioninspecttemplate.NewDataLossPreventionInspectTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionInspectTemplateTimeoutsOutputReference
 ```

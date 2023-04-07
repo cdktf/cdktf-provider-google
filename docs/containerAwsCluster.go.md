@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/container_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsCluster(scope Construct, id *string, config ContainerAwsClusterConfig) ContainerAwsCluster
 ```
@@ -366,7 +366,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ containerawscluster.ContainerAwsCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -963,7 +963,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterAuthorization {
 	AdminUsers: interface{},
@@ -997,7 +997,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterAuthorizationAdminUsers {
 	Username: *string,
@@ -1031,7 +1031,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterConfig {
 	Connection: interface{},
@@ -1041,18 +1041,18 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Authorization: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterAuthorization,
+	Authorization: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterAuthorization,
 	AwsRegion: *string,
-	ControlPlane: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlane,
-	Fleet: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterFleet,
+	ControlPlane: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlane,
+	Fleet: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterFleet,
 	Location: *string,
 	Name: *string,
-	Networking: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterNetworking,
+	Networking: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterNetworking,
 	Annotations: *map[string]*string,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterTimeouts,
 }
 ```
 
@@ -1330,21 +1330,21 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlane.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlane {
-	AwsServicesAuthentication: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication,
-	ConfigEncryption: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption,
-	DatabaseEncryption: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption,
+	AwsServicesAuthentication: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication,
+	ConfigEncryption: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption,
+	DatabaseEncryption: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption,
 	IamInstanceProfile: *string,
 	SubnetIds: *[]*string,
 	Version: *string,
 	InstanceType: *string,
-	MainVolume: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume,
-	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig,
-	RootVolume: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume,
+	MainVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume,
+	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig,
+	RootVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume,
 	SecurityGroupIds: *[]*string,
-	SshConfig: github.com/cdktf/cdktf-provider-google-go/google/v5.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig,
+	SshConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig,
 	Tags: *map[string]*string,
 }
 ```
@@ -1562,7 +1562,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication {
 	RoleArn: *string,
@@ -1612,7 +1612,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneConfigEncryption {
 	KmsKeyArn: *string,
@@ -1646,7 +1646,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneDatabaseEncryption {
 	KmsKeyArn: *string,
@@ -1680,7 +1680,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneMainVolume {
 	Iops: *f64,
@@ -1766,7 +1766,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneProxyConfig {
 	SecretArn: *string,
@@ -1816,7 +1816,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneRootVolume {
 	Iops: *f64,
@@ -1902,7 +1902,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneSshConfig {
 	Ec2KeyPair: *string,
@@ -1936,7 +1936,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterFleet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterFleet {
 	Project: *string,
@@ -1970,7 +1970,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterNetworking {
 	PodAddressCidrBlocks: *[]*string,
@@ -2042,7 +2042,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterTimeouts {
 	Create: *string,
@@ -2102,7 +2102,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterWorkloadIdentityConfig {
 
@@ -2117,7 +2117,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationAdminUsersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAwsClusterAuthorizationAdminUsersList
 ```
@@ -2260,7 +2260,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationAdminUsersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAwsClusterAuthorizationAdminUsersOutputReference
 ```
@@ -2549,7 +2549,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterAuthorizationOutputReference
 ```
@@ -2833,7 +2833,7 @@ func InternalValue() ContainerAwsClusterAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference
 ```
@@ -3133,7 +3133,7 @@ func InternalValue() ContainerAwsClusterControlPlaneAwsServicesAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneConfigEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneConfigEncryptionOutputReference
 ```
@@ -3404,7 +3404,7 @@ func InternalValue() ContainerAwsClusterControlPlaneConfigEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference
 ```
@@ -3675,7 +3675,7 @@ func InternalValue() ContainerAwsClusterControlPlaneDatabaseEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneMainVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneMainVolumeOutputReference
 ```
@@ -4040,7 +4040,7 @@ func InternalValue() ContainerAwsClusterControlPlaneMainVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneOutputReference
 ```
@@ -4715,7 +4715,7 @@ func InternalValue() ContainerAwsClusterControlPlane
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneProxyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneProxyConfigOutputReference
 ```
@@ -5008,7 +5008,7 @@ func InternalValue() ContainerAwsClusterControlPlaneProxyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneRootVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneRootVolumeOutputReference
 ```
@@ -5373,7 +5373,7 @@ func InternalValue() ContainerAwsClusterControlPlaneRootVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneSshConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneSshConfigOutputReference
 ```
@@ -5644,7 +5644,7 @@ func InternalValue() ContainerAwsClusterControlPlaneSshConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterFleetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterFleetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterFleetOutputReference
 ```
@@ -5933,7 +5933,7 @@ func InternalValue() ContainerAwsClusterFleet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterNetworkingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterNetworkingOutputReference
 ```
@@ -6248,7 +6248,7 @@ func InternalValue() ContainerAwsClusterNetworking
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterTimeoutsOutputReference
 ```
@@ -6584,7 +6584,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterWorkloadIdentityConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAwsClusterWorkloadIdentityConfigList
 ```
@@ -6716,7 +6716,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterWorkloadIdentityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAwsClusterWorkloadIdentityConfigOutputReference
 ```

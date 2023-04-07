@@ -197,7 +197,7 @@ export class AccessContextManagerAccessPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_access_context_manager_access_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

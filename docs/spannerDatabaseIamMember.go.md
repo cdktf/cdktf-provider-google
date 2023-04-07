@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_dat
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 spannerdatabaseiammember.NewSpannerDatabaseIamMember(scope Construct, id *string, config SpannerDatabaseIamMemberConfig) SpannerDatabaseIamMember
 ```
@@ -300,7 +300,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 spannerdatabaseiammember.SpannerDatabaseIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 spannerdatabaseiammember.SpannerDatabaseIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ spannerdatabaseiammember.SpannerDatabaseIamMember_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 spannerdatabaseiammember.SpannerDatabaseIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -710,7 +710,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 &spannerdatabaseiammember.SpannerDatabaseIamMemberCondition {
 	Expression: *string,
@@ -770,7 +770,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 &spannerdatabaseiammember.SpannerDatabaseIamMemberConfig {
 	Connection: interface{},
@@ -784,7 +784,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiamme
 	Instance: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.spannerDatabaseIamMember.SpannerDatabaseIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.spannerDatabaseIamMember.SpannerDatabaseIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerDatabaseIamMember.SpannerDatabaseIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/spannerdatabaseiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerdatabaseiammember"
 
 spannerdatabaseiammember.NewSpannerDatabaseIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpannerDatabaseIamMemberConditionOutputReference
 ```

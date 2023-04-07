@@ -169,7 +169,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_shared_vpc_service_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

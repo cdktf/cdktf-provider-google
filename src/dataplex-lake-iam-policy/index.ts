@@ -58,7 +58,7 @@ export class DataplexLakeIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataplex_lake_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

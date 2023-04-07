@@ -479,7 +479,7 @@ export class CloudbuildBitbucketServerConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudbuild_bitbucket_server_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

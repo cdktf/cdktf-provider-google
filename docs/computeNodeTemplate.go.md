@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_nod
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.NewComputeNodeTemplate(scope Construct, id *string, config ComputeNodeTemplateConfig) ComputeNodeTemplate
 ```
@@ -382,7 +382,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.ComputeNodeTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -414,7 +414,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.ComputeNodeTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -428,7 +428,7 @@ computenodetemplate.ComputeNodeTemplate_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.ComputeNodeTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 &computenodetemplate.ComputeNodeTemplateConfig {
 	Connection: interface{},
@@ -907,11 +907,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
 	Name: *string,
 	NodeAffinityLabels: *map[string]*string,
 	NodeType: *string,
-	NodeTypeFlexibility: github.com/cdktf/cdktf-provider-google-go/google/v5.computeNodeTemplate.ComputeNodeTemplateNodeTypeFlexibility,
+	NodeTypeFlexibility: github.com/cdktf/cdktf-provider-google-go/google.computeNodeTemplate.ComputeNodeTemplateNodeTypeFlexibility,
 	Project: *string,
 	Region: *string,
-	ServerBinding: github.com/cdktf/cdktf-provider-google-go/google/v5.computeNodeTemplate.ComputeNodeTemplateServerBinding,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeNodeTemplate.ComputeNodeTemplateTimeouts,
+	ServerBinding: github.com/cdktf/cdktf-provider-google-go/google.computeNodeTemplate.ComputeNodeTemplateServerBinding,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNodeTemplate.ComputeNodeTemplateTimeouts,
 }
 ```
 
@@ -1170,7 +1170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateNodeTypeFlexibility.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 &computenodetemplate.ComputeNodeTemplateNodeTypeFlexibility {
 	Cpus: *string,
@@ -1220,7 +1220,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateServerBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 &computenodetemplate.ComputeNodeTemplateServerBinding {
 	Type: *string,
@@ -1263,7 +1263,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 &computenodetemplate.ComputeNodeTemplateTimeouts {
 	Create: *string,
@@ -1311,7 +1311,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateNodeTypeFlexibilityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.NewComputeNodeTemplateNodeTypeFlexibilityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNodeTemplateNodeTypeFlexibilityOutputReference
 ```
@@ -1629,7 +1629,7 @@ func InternalValue() ComputeNodeTemplateNodeTypeFlexibility
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateServerBindingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.NewComputeNodeTemplateServerBindingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNodeTemplateServerBindingOutputReference
 ```
@@ -1900,7 +1900,7 @@ func InternalValue() ComputeNodeTemplateServerBinding
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNodeTemplate.ComputeNodeTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computenodetemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenodetemplate"
 
 computenodetemplate.NewComputeNodeTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNodeTemplateTimeoutsOutputReference
 ```

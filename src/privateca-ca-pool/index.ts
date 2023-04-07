@@ -2872,7 +2872,7 @@ export class PrivatecaCaPool extends cdktf.TerraformResource {
       terraformResourceType: 'google_privateca_ca_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

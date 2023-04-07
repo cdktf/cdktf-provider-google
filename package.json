@@ -150,7 +150,7 @@
   "cdktf": {
     "provider": {
       "name": "registry.terraform.io/hashicorp/google",
-      "version": "4.60.1"
+      "version": "4.60.2"
     }
   },
   "resolutions": {

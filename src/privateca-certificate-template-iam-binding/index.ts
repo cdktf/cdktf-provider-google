@@ -181,7 +181,7 @@ export class PrivatecaCertificateTemplateIamBinding extends cdktf.TerraformResou
       terraformResourceType: 'google_privateca_certificate_template_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/container_e
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerEngineVersions.DataGoogleContainerEngineVersions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerengineversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerengineversions"
 
 datagooglecontainerengineversions.NewDataGoogleContainerEngineVersions(scope Construct, id *string, config DataGoogleContainerEngineVersionsConfig) DataGoogleContainerEngineVersions
 ```
@@ -294,7 +294,7 @@ func ResetVersionPrefix()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerEngineVersions.DataGoogleContainerEngineVersions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerengineversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerengineversions"
 
 datagooglecontainerengineversions.DataGoogleContainerEngineVersions_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerEngineVersions.DataGoogleContainerEngineVersions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerengineversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerengineversions"
 
 datagooglecontainerengineversions.DataGoogleContainerEngineVersions_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ datagooglecontainerengineversions.DataGoogleContainerEngineVersions_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerEngineVersions.DataGoogleContainerEngineVersions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerengineversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerengineversions"
 
 datagooglecontainerengineversions.DataGoogleContainerEngineVersions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -682,7 +682,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerEngineVersions.DataGoogleContainerEngineVersionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerengineversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerengineversions"
 
 &datagooglecontainerengineversions.DataGoogleContainerEngineVersionsConfig {
 	Connection: interface{},

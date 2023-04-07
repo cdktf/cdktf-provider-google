@@ -58,7 +58,7 @@ export class CloudfunctionsFunctionIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudfunctions_function_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -646,7 +646,7 @@ export class CertificateManagerCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_certificate_manager_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

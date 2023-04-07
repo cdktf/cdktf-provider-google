@@ -54,7 +54,7 @@ export class DataGoogleContainerEngineVersions extends cdktf.TerraformDataSource
       terraformResourceType: 'google_container_engine_versions',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_bac
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 computebackendservicesignedurlkey.NewComputeBackendServiceSignedUrlKey(scope Construct, id *string, config ComputeBackendServiceSignedUrlKeyConfig) ComputeBackendServiceSignedUrlKey
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKey_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKey_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -677,7 +677,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 &computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKeyConfig {
 	Connection: interface{},
@@ -692,7 +692,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservic
 	Name: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKeyTimeouts,
 }
 ```
 
@@ -877,7 +877,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 &computebackendservicesignedurlkey.ComputeBackendServiceSignedUrlKeyTimeouts {
 	Create: *string,
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeBackendServiceSignedUrlKey.ComputeBackendServiceSignedUrlKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computebackendservicesignedurlkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/computebackendservicesignedurlkey"
 
 computebackendservicesignedurlkey.NewComputeBackendServiceSignedUrlKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeBackendServiceSignedUrlKeyTimeoutsOutputReference
 ```
