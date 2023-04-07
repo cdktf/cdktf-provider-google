@@ -763,7 +763,7 @@ export class CloudiotDevice extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloudiot_device',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

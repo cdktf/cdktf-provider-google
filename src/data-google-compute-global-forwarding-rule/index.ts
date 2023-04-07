@@ -193,7 +193,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

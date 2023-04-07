@@ -181,7 +181,7 @@ export class DataprocJobIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_dataproc_job_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -175,7 +175,7 @@ export class OrganizationIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_organization_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

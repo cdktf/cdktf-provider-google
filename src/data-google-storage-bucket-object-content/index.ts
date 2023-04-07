@@ -129,7 +129,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
       terraformResourceType: 'google_storage_bucket_object_content',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

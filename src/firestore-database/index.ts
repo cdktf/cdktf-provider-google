@@ -219,7 +219,7 @@ export class FirestoreDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'google_firestore_database',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

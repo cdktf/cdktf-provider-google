@@ -181,7 +181,7 @@ export class BigqueryDatapolicyDataPolicyIamBinding extends cdktf.TerraformResou
       terraformResourceType: 'google_bigquery_datapolicy_data_policy_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

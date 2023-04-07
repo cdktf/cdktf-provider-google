@@ -3621,7 +3621,7 @@ export class CloudRunV2Job extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

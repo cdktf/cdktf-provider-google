@@ -3013,7 +3013,7 @@ export class ComputeInstanceFromTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_from_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

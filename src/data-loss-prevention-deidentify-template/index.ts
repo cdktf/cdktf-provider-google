@@ -12388,7 +12388,7 @@ export class DataLossPreventionDeidentifyTemplate extends cdktf.TerraformResourc
       terraformResourceType: 'google_data_loss_prevention_deidentify_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

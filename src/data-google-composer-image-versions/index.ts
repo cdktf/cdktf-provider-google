@@ -119,7 +119,7 @@ export class DataGoogleComposerImageVersions extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_composer_image_versions',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -181,7 +181,7 @@ export class BigtableTableIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigtable_table_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.1',
+        providerVersion: '4.60.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
