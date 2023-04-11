@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_da
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 bigquerydatapolicydatapolicyiammember.NewBigqueryDatapolicyDataPolicyIamMember(scope Construct, id *string, config BigqueryDatapolicyDataPolicyIamMemberConfig) BigqueryDatapolicyDataPolicyIamMember
 ```
@@ -307,7 +307,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMember_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 &bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 &bigquerydatapolicydatapolicyiammember.BigqueryDatapolicyDataPolicyIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicyda
 	DataPolicyId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDatapolicyDataPolicyIamMember.BigqueryDatapolicyDataPolicyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/bigquerydatapolicydatapolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigquerydatapolicydatapolicyiammember"
 
 bigquerydatapolicydatapolicyiammember.NewBigqueryDatapolicyDataPolicyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigqueryDatapolicyDataPolicyIamMemberConditionOutputReference
 ```

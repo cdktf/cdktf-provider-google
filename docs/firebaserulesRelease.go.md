@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/firebaserul
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 firebaserulesrelease.NewFirebaserulesRelease(scope Construct, id *string, config FirebaserulesReleaseConfig) FirebaserulesRelease
 ```
@@ -300,7 +300,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 firebaserulesrelease.FirebaserulesRelease_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 firebaserulesrelease.FirebaserulesRelease_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ firebaserulesrelease.FirebaserulesRelease_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 firebaserulesrelease.FirebaserulesRelease_IsTerraformResource(x interface{}) *bool
 ```
@@ -688,7 +688,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 &firebaserulesrelease.FirebaserulesReleaseConfig {
 	Connection: interface{},
@@ -702,7 +702,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease
 	RulesetName: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.firebaserulesRelease.FirebaserulesReleaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.firebaserulesRelease.FirebaserulesReleaseTimeouts,
 }
 ```
 
@@ -871,7 +871,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 &firebaserulesrelease.FirebaserulesReleaseTimeouts {
 	Create: *string,
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/firebaserulesrelease"
+import "github.com/cdktf/cdktf-provider-google-go/google/firebaserulesrelease"
 
 firebaserulesrelease.NewFirebaserulesReleaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirebaserulesReleaseTimeoutsOutputReference
 ```

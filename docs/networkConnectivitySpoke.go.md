@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/network_con
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpoke.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpoke(scope Construct, id *string, config NetworkConnectivitySpokeConfig) NetworkConnectivitySpoke
 ```
@@ -374,7 +374,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpoke.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NetworkConnectivitySpoke_IsConstruct(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpoke.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NetworkConnectivitySpoke_IsTerraformElement(x interface{}) *bool
 ```
@@ -420,7 +420,7 @@ networkconnectivityspoke.NetworkConnectivitySpoke_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpoke.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NetworkConnectivitySpoke_IsTerraformResource(x interface{}) *bool
 ```
@@ -905,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeConfig {
 	Connection: interface{},
@@ -921,11 +921,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivitys
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
-	LinkedInterconnectAttachments: github.com/cdktf/cdktf-provider-google-go/google/v5.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedInterconnectAttachments,
-	LinkedRouterApplianceInstances: github.com/cdktf/cdktf-provider-google-go/google/v5.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstances,
-	LinkedVpnTunnels: github.com/cdktf/cdktf-provider-google-go/google/v5.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedVpnTunnels,
+	LinkedInterconnectAttachments: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedInterconnectAttachments,
+	LinkedRouterApplianceInstances: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstances,
+	LinkedVpnTunnels: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedVpnTunnels,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.networkConnectivitySpoke.NetworkConnectivitySpokeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkConnectivitySpoke.NetworkConnectivitySpokeTimeouts,
 }
 ```
 
@@ -1184,7 +1184,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedInterconnectAttachments.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeLinkedInterconnectAttachments {
 	SiteToSiteDataTransfer: interface{},
@@ -1236,7 +1236,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstances.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeLinkedRouterApplianceInstances {
 	Instances: interface{},
@@ -1288,7 +1288,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances {
 	IpAddress: *string,
@@ -1338,7 +1338,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedVpnTunnels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeLinkedVpnTunnels {
 	SiteToSiteDataTransfer: interface{},
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 &networkconnectivityspoke.NetworkConnectivitySpokeTimeouts {
 	Create: *string,
@@ -1452,7 +1452,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReference
 ```
@@ -1745,7 +1745,7 @@ func InternalValue() NetworkConnectivitySpokeLinkedInterconnectAttachments
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesList
 ```
@@ -1888,7 +1888,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesOutputReference
 ```
@@ -2213,7 +2213,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReference
 ```
@@ -2519,7 +2519,7 @@ func InternalValue() NetworkConnectivitySpokeLinkedRouterApplianceInstances
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeLinkedVpnTunnelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference
 ```
@@ -2812,7 +2812,7 @@ func InternalValue() NetworkConnectivitySpokeLinkedVpnTunnels
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkConnectivitySpoke.NetworkConnectivitySpokeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/networkconnectivityspoke"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkconnectivityspoke"
 
 networkconnectivityspoke.NewNetworkConnectivitySpokeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkConnectivitySpokeTimeoutsOutputReference
 ```

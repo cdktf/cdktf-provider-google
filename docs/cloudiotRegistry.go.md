@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudiot_re
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistry(scope Construct, id *string, config CloudiotRegistryConfig) CloudiotRegistry
 ```
@@ -375,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsConstruct(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsTerraformElement(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ cloudiotregistry.CloudiotRegistry_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsTerraformResource(x interface{}) *bool
 ```
@@ -862,7 +862,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryConfig {
 	Connection: interface{},
@@ -882,7 +882,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
 	Project: *string,
 	Region: *string,
 	StateNotificationConfig: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.cloudiotRegistry.CloudiotRegistryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudiotRegistry.CloudiotRegistryTimeouts,
 }
 ```
 
@@ -1144,7 +1144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryCredentials {
 	PublicKeyCertificate: *map[string]*string,
@@ -1178,7 +1178,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryEventNotificationConfigs {
 	PubsubTopicName: *string,
@@ -1233,7 +1233,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryTimeouts {
 	Create: *string,
@@ -1295,7 +1295,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentialsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryCredentialsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudiotRegistryCredentialsList
 ```
@@ -1438,7 +1438,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentialsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryCredentialsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudiotRegistryCredentialsOutputReference
 ```
@@ -1727,7 +1727,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryEventNotificationConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudiotRegistryEventNotificationConfigsList
 ```
@@ -1870,7 +1870,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryEventNotificationConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudiotRegistryEventNotificationConfigsOutputReference
 ```
@@ -2188,7 +2188,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudiotRegistryTimeoutsOutputReference
 ```
