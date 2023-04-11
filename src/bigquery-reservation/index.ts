@@ -14,6 +14,12 @@ export interface BigqueryReservationConfig extends cdktf.TerraformMetaArguments 
   */
   readonly concurrency?: number;
   /**
+  * The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#edition BigqueryReservation#edition}
+  */
+  readonly edition?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#id BigqueryReservation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -60,11 +66,89 @@ unit of parallelism. Queries using this reservation might use more slots during 
   */
   readonly slotCapacity: number;
   /**
+  * autoscale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#autoscale BigqueryReservation#autoscale}
+  */
+  readonly autoscale?: BigqueryReservationAutoscale;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#timeouts BigqueryReservation#timeouts}
   */
   readonly timeouts?: BigqueryReservationTimeouts;
+}
+export interface BigqueryReservationAutoscale {
+  /**
+  * Number of slots to be scaled when needed.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_reservation#max_slots BigqueryReservation#max_slots}
+  */
+  readonly maxSlots?: number;
+}
+
+export function bigqueryReservationAutoscaleToTerraform(struct?: BigqueryReservationAutoscaleOutputReference | BigqueryReservationAutoscale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_slots: cdktf.numberToTerraform(struct!.maxSlots),
+  }
+}
+
+export class BigqueryReservationAutoscaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): BigqueryReservationAutoscale | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxSlots !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxSlots = this._maxSlots;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BigqueryReservationAutoscale | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxSlots = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxSlots = value.maxSlots;
+    }
+  }
+
+  // current_slots - computed: true, optional: false, required: false
+  public get currentSlots() {
+    return this.getNumberAttribute('current_slots');
+  }
+
+  // max_slots - computed: false, optional: true, required: false
+  private _maxSlots?: number; 
+  public get maxSlots() {
+    return this.getNumberAttribute('max_slots');
+  }
+  public set maxSlots(value: number) {
+    this._maxSlots = value;
+  }
+  public resetMaxSlots() {
+    this._maxSlots = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSlotsInput() {
+    return this._maxSlots;
+  }
 }
 export interface BigqueryReservationTimeouts {
   /**
@@ -222,7 +306,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_reservation',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -234,6 +318,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._concurrency = config.concurrency;
+    this._edition = config.edition;
     this._id = config.id;
     this._ignoreIdleSlots = config.ignoreIdleSlots;
     this._location = config.location;
@@ -241,6 +326,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
     this._name = config.name;
     this._project = config.project;
     this._slotCapacity = config.slotCapacity;
+    this._autoscale.internalValue = config.autoscale;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -262,6 +348,22 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get concurrencyInput() {
     return this._concurrency;
+  }
+
+  // edition - computed: false, optional: true, required: false
+  private _edition?: string; 
+  public get edition() {
+    return this.getStringAttribute('edition');
+  }
+  public set edition(value: string) {
+    this._edition = value;
+  }
+  public resetEdition() {
+    this._edition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editionInput() {
+    return this._edition;
   }
 
   // id - computed: true, optional: true, required: false
@@ -370,6 +472,22 @@ export class BigqueryReservation extends cdktf.TerraformResource {
     return this._slotCapacity;
   }
 
+  // autoscale - computed: false, optional: true, required: false
+  private _autoscale = new BigqueryReservationAutoscaleOutputReference(this, "autoscale");
+  public get autoscale() {
+    return this._autoscale;
+  }
+  public putAutoscale(value: BigqueryReservationAutoscale) {
+    this._autoscale.internalValue = value;
+  }
+  public resetAutoscale() {
+    this._autoscale.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleInput() {
+    return this._autoscale.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new BigqueryReservationTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -393,6 +511,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       concurrency: cdktf.numberToTerraform(this._concurrency),
+      edition: cdktf.stringToTerraform(this._edition),
       id: cdktf.stringToTerraform(this._id),
       ignore_idle_slots: cdktf.booleanToTerraform(this._ignoreIdleSlots),
       location: cdktf.stringToTerraform(this._location),
@@ -400,6 +519,7 @@ export class BigqueryReservation extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
       slot_capacity: cdktf.numberToTerraform(this._slotCapacity),
+      autoscale: bigqueryReservationAutoscaleToTerraform(this._autoscale.internalValue),
       timeouts: bigqueryReservationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

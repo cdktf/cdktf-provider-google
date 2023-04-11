@@ -223,7 +223,7 @@ export class BigqueryAnalyticsHubDataExchange extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_analytics_hub_data_exchange',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

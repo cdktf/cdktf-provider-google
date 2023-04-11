@@ -1547,8 +1547,8 @@ new MonitoringSloRequestBasedSliDistributionCutRange {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.max">Max</a></code> | <code>double</code> | max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min". |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.min">Min</a></code> | <code>double</code> | Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max". |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.max">Max</a></code> | <code>double</code> | max value for the range (inclusive). If not given, will be set to 0. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.min">Min</a></code> | <code>double</code> | Min value for the range (inclusive). If not given, will be set to 0. |
 
 ---
 
@@ -1560,7 +1560,7 @@ public double Max { get; set; }
 
 - *Type:* double
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -1574,7 +1574,7 @@ public double Min { get; set; }
 
 - *Type:* double
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 
@@ -2192,8 +2192,8 @@ new MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.max">Max</a></code> | <code>double</code> | max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min". |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.min">Min</a></code> | <code>double</code> | Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max". |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.max">Max</a></code> | <code>double</code> | max value for the range (inclusive). If not given, will be set to 0. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.min">Min</a></code> | <code>double</code> | Min value for the range (inclusive). If not given, will be set to 0. |
 
 ---
 
@@ -2205,7 +2205,7 @@ public double Max { get; set; }
 
 - *Type:* double
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -2219,7 +2219,7 @@ public double Min { get; set; }
 
 - *Type:* double
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 

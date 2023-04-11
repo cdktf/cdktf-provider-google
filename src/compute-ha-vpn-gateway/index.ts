@@ -49,6 +49,13 @@ character, which cannot be a dash.
   */
   readonly region?: string;
   /**
+  * The stack type for this VPN gateway to identify the IP protocols that are enbaled.
+If not specified, IPV4_ONLY will be used. Default value: "IPV4_ONLY" Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway#stack_type ComputeHaVpnGateway#stack_type}
+  */
+  readonly stackType?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_ha_vpn_gateway#timeouts ComputeHaVpnGateway#timeouts}
@@ -332,7 +339,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_ha_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -349,6 +356,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
     this._network = config.network;
     this._project = config.project;
     this._region = config.region;
+    this._stackType = config.stackType;
     this._timeouts.internalValue = config.timeouts;
     this._vpnInterfaces.internalValue = config.vpnInterfaces;
   }
@@ -452,6 +460,22 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
     return this.getStringAttribute('self_link');
   }
 
+  // stack_type - computed: false, optional: true, required: false
+  private _stackType?: string; 
+  public get stackType() {
+    return this.getStringAttribute('stack_type');
+  }
+  public set stackType(value: string) {
+    this._stackType = value;
+  }
+  public resetStackType() {
+    this._stackType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stackTypeInput() {
+    return this._stackType;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ComputeHaVpnGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -496,6 +520,7 @@ export class ComputeHaVpnGateway extends cdktf.TerraformResource {
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
       region: cdktf.stringToTerraform(this._region),
+      stack_type: cdktf.stringToTerraform(this._stackType),
       timeouts: computeHaVpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
       vpn_interfaces: cdktf.listMapper(computeHaVpnGatewayVpnInterfacesToTerraform, true)(this._vpnInterfaces.internalValue),
     };

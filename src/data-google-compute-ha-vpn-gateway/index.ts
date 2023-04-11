@@ -138,7 +138,7 @@ export class DataGoogleComputeHaVpnGateway extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_ha_vpn_gateway',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -233,6 +233,11 @@ export class DataGoogleComputeHaVpnGateway extends cdktf.TerraformDataSource {
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
+  }
+
+  // stack_type - computed: true, optional: false, required: false
+  public get stackType() {
+    return this.getStringAttribute('stack_type');
   }
 
   // vpn_interfaces - computed: true, optional: false, required: false

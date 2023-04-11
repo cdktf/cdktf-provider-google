@@ -207,7 +207,7 @@ export class ApigeeSharedflowDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_sharedflow_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

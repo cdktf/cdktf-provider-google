@@ -753,7 +753,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/apigeesharedflow"
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.configBundle">ConfigBundle</a></code> | <code>*string</code> | A path to the config bundle zip you want to upload. Must be defined if content is not. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.name">Name</a></code> | <code>*string</code> | The ID of the shared flow. |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.orgId">OrgId</a></code> | <code>*string</code> | The Apigee Organization associated with the Apigee instance, in the format 'organizations/{{org_name}}'. |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.orgId">OrgId</a></code> | <code>*string</code> | The Apigee Organization name associated with the Apigee instance. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.detectMd5Hash">DetectMd5Hash</a></code> | <code>*string</code> | A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow#id ApigeeSharedflow#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeSharedflow.ApigeeSharedflowTimeouts">ApigeeSharedflowTimeouts</a></code> | timeouts block. |
@@ -866,7 +866,7 @@ OrgId *string
 
 - *Type:* *string
 
-The Apigee Organization associated with the Apigee instance, in the format 'organizations/{{org_name}}'.
+The Apigee Organization name associated with the Apigee instance.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow#org_id ApigeeSharedflow#org_id}
 

@@ -27,6 +27,8 @@ LoggingMetric.Builder.create(Construct scope, java.lang.String id)
 //  .bucketName(java.lang.String)
 //  .bucketOptions(LoggingMetricBucketOptions)
 //  .description(java.lang.String)
+//  .disabled(java.lang.Boolean)
+//  .disabled(IResolvable)
 //  .id(java.lang.String)
 //  .labelExtractors(java.util.Map<java.lang.String, java.lang.String>)
 //  .metricDescriptor(LoggingMetricMetricDescriptor)
@@ -52,6 +54,7 @@ LoggingMetric.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.bucketName">bucketName</a></code> | <code>java.lang.String</code> | The resource name of the Log Bucket that owns the Log Metric. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.bucketOptions">bucketOptions</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions">LoggingMetricBucketOptions</a></code> | bucket_options block. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters. |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set to True, then this metric is disabled and it does not generate any points. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#id LoggingMetric#id}. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.labelExtractors">labelExtractors</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign as the label value. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.metricDescriptor">metricDescriptor</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptor">LoggingMetricMetricDescriptor</a></code> | metric_descriptor block. |
@@ -180,6 +183,16 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 ---
 
+##### `disabled`<sup>Optional</sup> <a name="disabled" id="@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.disabled"></a>
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+If set to True, then this metric is disabled and it does not generate any points.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#disabled LoggingMetric#disabled}
+
+---
+
 ##### `id`<sup>Optional</sup> <a name="id" id="@cdktf/provider-google.loggingMetric.LoggingMetric.Initializer.parameter.id"></a>
 
 - *Type:* java.lang.String
@@ -276,6 +289,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetBucketName">resetBucketName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetBucketOptions">resetBucketOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetDescription">resetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetDisabled">resetDisabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetLabelExtractors">resetLabelExtractors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetMetricDescriptor">resetMetricDescriptor</a></code> | *No description.* |
@@ -523,6 +537,12 @@ public void resetBucketOptions()
 public void resetDescription()
 ```
 
+##### `resetDisabled` <a name="resetDisabled" id="@cdktf/provider-google.loggingMetric.LoggingMetric.resetDisabled"></a>
+
+```java
+public void resetDisabled()
+```
+
 ##### `resetId` <a name="resetId" id="@cdktf/provider-google.loggingMetric.LoggingMetric.resetId"></a>
 
 ```java
@@ -653,6 +673,7 @@ LoggingMetric.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketNameInput">bucketNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketOptionsInput">bucketOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions">LoggingMetricBucketOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.descriptionInput">descriptionInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabledInput">disabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.filterInput">filterInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.labelExtractorsInput">labelExtractorsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -663,6 +684,7 @@ LoggingMetric.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.valueExtractorInput">valueExtractorInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketName">bucketName</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.filter">filter</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.labelExtractors">labelExtractors</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -874,6 +896,16 @@ public java.lang.String getDescriptionInput();
 
 ---
 
+##### `disabledInput`<sup>Optional</sup> <a name="disabledInput" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabledInput"></a>
+
+```java
+public java.lang.Object getDisabledInput();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+---
+
 ##### `filterInput`<sup>Optional</sup> <a name="filterInput" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.filterInput"></a>
 
 ```java
@@ -971,6 +1003,16 @@ public java.lang.String getDescription();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `disabled`<sup>Required</sup> <a name="disabled" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabled"></a>
+
+```java
+public java.lang.Object getDisabled();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1309,6 +1351,8 @@ LoggingMetricConfig.builder()
 //  .bucketName(java.lang.String)
 //  .bucketOptions(LoggingMetricBucketOptions)
 //  .description(java.lang.String)
+//  .disabled(java.lang.Boolean)
+//  .disabled(IResolvable)
 //  .id(java.lang.String)
 //  .labelExtractors(java.util.Map<java.lang.String, java.lang.String>)
 //  .metricDescriptor(LoggingMetricMetricDescriptor)
@@ -1334,6 +1378,7 @@ LoggingMetricConfig.builder()
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.bucketName">bucketName</a></code> | <code>java.lang.String</code> | The resource name of the Log Bucket that owns the Log Metric. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.bucketOptions">bucketOptions</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions">LoggingMetricBucketOptions</a></code> | bucket_options block. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.description">description</a></code> | <code>java.lang.String</code> | A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters. |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If set to True, then this metric is disabled and it does not generate any points. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#id LoggingMetric#id}. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.labelExtractors">labelExtractors</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign as the label value. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.metricDescriptor">metricDescriptor</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptor">LoggingMetricMetricDescriptor</a></code> | metric_descriptor block. |
@@ -1489,6 +1534,20 @@ public java.lang.String getDescription();
 A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#description LoggingMetric#description}
+
+---
+
+##### `disabled`<sup>Optional</sup> <a name="disabled" id="@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.disabled"></a>
+
+```java
+public java.lang.Object getDisabled();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+If set to True, then this metric is disabled and it does not generate any points.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#disabled LoggingMetric#disabled}
 
 ---
 

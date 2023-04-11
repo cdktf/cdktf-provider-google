@@ -3218,7 +3218,7 @@ export class CloudRunV2JobTemplateTemplateOutputReference extends cdktf.ComplexO
     return this._executionEnvironment;
   }
 
-  // max_retries - computed: true, optional: true, required: false
+  // max_retries - computed: false, optional: true, required: false
   private _maxRetries?: number; 
   public get maxRetries() {
     return this.getNumberAttribute('max_retries');
@@ -3621,7 +3621,7 @@ export class CloudRunV2Job extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

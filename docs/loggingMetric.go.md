@@ -72,6 +72,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetBucketName">ResetBucketName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetBucketOptions">ResetBucketOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetDescription">ResetDescription</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetDisabled">ResetDisabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetLabelExtractors">ResetLabelExtractors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.resetMetricDescriptor">ResetMetricDescriptor</a></code> | *No description.* |
@@ -319,6 +320,12 @@ func ResetBucketOptions()
 func ResetDescription()
 ```
 
+##### `ResetDisabled` <a name="ResetDisabled" id="@cdktf/provider-google.loggingMetric.LoggingMetric.resetDisabled"></a>
+
+```go
+func ResetDisabled()
+```
+
 ##### `ResetId` <a name="ResetId" id="@cdktf/provider-google.loggingMetric.LoggingMetric.resetId"></a>
 
 ```go
@@ -449,6 +456,7 @@ loggingmetric.LoggingMetric_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketNameInput">BucketNameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketOptionsInput">BucketOptionsInput</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions">LoggingMetricBucketOptions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.descriptionInput">DescriptionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabledInput">DisabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.filterInput">FilterInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.idInput">IdInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.labelExtractorsInput">LabelExtractorsInput</a></code> | <code>*map[string]*string</code> | *No description.* |
@@ -459,6 +467,7 @@ loggingmetric.LoggingMetric_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.valueExtractorInput">ValueExtractorInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.bucketName">BucketName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.description">Description</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabled">Disabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.filter">Filter</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetric.property.labelExtractors">LabelExtractors</a></code> | <code>*map[string]*string</code> | *No description.* |
@@ -670,6 +679,16 @@ func DescriptionInput() *string
 
 ---
 
+##### `DisabledInput`<sup>Optional</sup> <a name="DisabledInput" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabledInput"></a>
+
+```go
+func DisabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `FilterInput`<sup>Optional</sup> <a name="FilterInput" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.filterInput"></a>
 
 ```go
@@ -767,6 +786,16 @@ func Description() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `Disabled`<sup>Required</sup> <a name="Disabled" id="@cdktf/provider-google.loggingMetric.LoggingMetric.property.disabled"></a>
+
+```go
+func Disabled() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -1102,6 +1131,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingmetric"
 	BucketName: *string,
 	BucketOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.loggingMetric.LoggingMetricBucketOptions,
 	Description: *string,
+	Disabled: interface{},
 	Id: *string,
 	LabelExtractors: *map[string]*string,
 	MetricDescriptor: github.com/cdktf/cdktf-provider-google-go/google/v5.loggingMetric.LoggingMetricMetricDescriptor,
@@ -1127,6 +1157,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/loggingmetric"
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.bucketName">BucketName</a></code> | <code>*string</code> | The resource name of the Log Bucket that owns the Log Metric. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.bucketOptions">BucketOptions</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricBucketOptions">LoggingMetricBucketOptions</a></code> | bucket_options block. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.description">Description</a></code> | <code>*string</code> | A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters. |
+| <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | If set to True, then this metric is disabled and it does not generate any points. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#id LoggingMetric#id}. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.labelExtractors">LabelExtractors</a></code> | <code>*map[string]*string</code> | A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign as the label value. |
 | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.metricDescriptor">MetricDescriptor</a></code> | <code><a href="#@cdktf/provider-google.loggingMetric.LoggingMetricMetricDescriptor">LoggingMetricMetricDescriptor</a></code> | metric_descriptor block. |
@@ -1282,6 +1313,20 @@ Description *string
 A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#description LoggingMetric#description}
+
+---
+
+##### `Disabled`<sup>Optional</sup> <a name="Disabled" id="@cdktf/provider-google.loggingMetric.LoggingMetricConfig.property.disabled"></a>
+
+```go
+Disabled interface{}
+```
+
+- *Type:* interface{}
+
+If set to True, then this metric is disabled and it does not generate any points.
+
+Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#disabled LoggingMetric#disabled}
 
 ---
 

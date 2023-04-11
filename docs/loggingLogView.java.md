@@ -45,7 +45,7 @@ LoggingLogView.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.bucket">bucket</a></code> | <code>java.lang.String</code> | The bucket of the resource. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.filter">filter</a></code> | <code>java.lang.String</code> | Filter that restricts which log entries in a bucket are visible in this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
@@ -129,7 +129,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`.
+The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
 
@@ -952,7 +952,7 @@ LoggingLogViewConfig.builder()
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.bucket">bucket</a></code> | <code>java.lang.String</code> | The bucket of the resource. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.name">name</a></code> | <code>java.lang.String</code> | The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.name">name</a></code> | <code>java.lang.String</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.description">description</a></code> | <code>java.lang.String</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.filter">filter</a></code> | <code>java.lang.String</code> | Filter that restricts which log entries in a bucket are visible in this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
@@ -1054,7 +1054,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`.
+The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
 

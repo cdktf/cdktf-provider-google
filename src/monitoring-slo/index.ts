@@ -426,16 +426,14 @@ export class MonitoringSloBasicSliOutputReference extends cdktf.ComplexObject {
 export interface MonitoringSloRequestBasedSliDistributionCutRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to "infinity", defining an open range
-">= range.min"
+will be set to 0
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to "-infinity", defining an open range
-"< range.max"
+will be set to 0
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
   */
@@ -1323,16 +1321,14 @@ export class MonitoringSloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerforma
 export interface MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
   /**
   * max value for the range (inclusive). If not given,
-will be set to "infinity", defining an open range
-">= range.min"
+will be set to 0
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
   */
   readonly max?: number;
   /**
   * Min value for the range (inclusive). If not given,
-will be set to "-infinity", defining an open range
-"< range.max"
+will be set to 0
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
   */
@@ -2489,7 +2485,7 @@ export class MonitoringSlo extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_slo',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

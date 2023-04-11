@@ -32,6 +32,8 @@ The following submodules are available:
 - [apigeeInstance](./apigeeInstance.typescript.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.typescript.md)
 - [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.typescript.md)
+- [apigeeKeystoresAliasesPkcs12](./apigeeKeystoresAliasesPkcs12.typescript.md)
+- [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.typescript.md)
 - [apigeeNatAddress](./apigeeNatAddress.typescript.md)
 - [apigeeOrganization](./apigeeOrganization.typescript.md)
 - [apigeeSharedflow](./apigeeSharedflow.typescript.md)
