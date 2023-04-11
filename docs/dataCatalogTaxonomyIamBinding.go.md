@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 datacatalogtaxonomyiambinding.NewDataCatalogTaxonomyIamBinding(scope Construct, id *string, config DataCatalogTaxonomyIamBindingConfig) DataCatalogTaxonomyIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBinding_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 &datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 &datacatalogtaxonomyiambinding.DataCatalogTaxonomyIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyi
 	Members: *[]*string,
 	Role: *string,
 	Taxonomy: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamBinding.DataCatalogTaxonomyIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiambinding"
 
 datacatalogtaxonomyiambinding.NewDataCatalogTaxonomyIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogTaxonomyIamBindingConditionOutputReference
 ```

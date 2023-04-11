@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_ha_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.NewDataGoogleComputeHaVpnGateway(scope Construct, id *string, config DataGoogleComputeHaVpnGatewayConfig) DataGoogleComputeHaVpnGateway
 ```
@@ -287,7 +287,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.DataGoogleComputeHaVpnGateway_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.DataGoogleComputeHaVpnGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagooglecomputehavpngateway.DataGoogleComputeHaVpnGateway_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGateway.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.DataGoogleComputeHaVpnGateway_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 &datagooglecomputehavpngateway.DataGoogleComputeHaVpnGatewayConfig {
 	Connection: interface{},
@@ -826,7 +826,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGatewayVpnInterfaces.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 &datagooglecomputehavpngateway.DataGoogleComputeHaVpnGatewayVpnInterfaces {
 
@@ -841,7 +841,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehav
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGatewayVpnInterfacesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.NewDataGoogleComputeHaVpnGatewayVpnInterfacesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeHaVpnGatewayVpnInterfacesList
 ```
@@ -973,7 +973,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeHaVpnGateway.DataGoogleComputeHaVpnGatewayVpnInterfacesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecomputehavpngateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputehavpngateway"
 
 datagooglecomputehavpngateway.NewDataGoogleComputeHaVpnGatewayVpnInterfacesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeHaVpnGatewayVpnInterfacesOutputReference
 ```

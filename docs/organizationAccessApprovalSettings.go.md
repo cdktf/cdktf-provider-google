@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/organizatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.NewOrganizationAccessApprovalSettings(scope Construct, id *string, config OrganizationAccessApprovalSettingsConfig) OrganizationAccessApprovalSettings
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettings.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.OrganizationAccessApprovalSettings_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettings.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.OrganizationAccessApprovalSettings_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ organizationaccessapprovalsettings.OrganizationAccessApprovalSettings_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettings.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.OrganizationAccessApprovalSettings_IsTerraformResource(x interface{}) *bool
 ```
@@ -741,7 +741,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 &organizationaccessapprovalsettings.OrganizationAccessApprovalSettingsConfig {
 	Connection: interface{},
@@ -756,7 +756,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessap
 	ActiveKeyVersion: *string,
 	Id: *string,
 	NotificationEmails: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsTimeouts,
 }
 ```
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsEnrolledServices.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 &organizationaccessapprovalsettings.OrganizationAccessApprovalSettingsEnrolledServices {
 	CloudProduct: *string,
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 &organizationaccessapprovalsettings.OrganizationAccessApprovalSettingsTimeouts {
 	Create: *string,
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsEnrolledServicesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.NewOrganizationAccessApprovalSettingsEnrolledServicesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OrganizationAccessApprovalSettingsEnrolledServicesList
 ```
@@ -1200,7 +1200,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsEnrolledServicesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.NewOrganizationAccessApprovalSettingsEnrolledServicesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OrganizationAccessApprovalSettingsEnrolledServicesOutputReference
 ```
@@ -1518,7 +1518,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.organizationAccessApprovalSettings.OrganizationAccessApprovalSettingsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/organizationaccessapprovalsettings"
+import "github.com/cdktf/cdktf-provider-google-go/google/organizationaccessapprovalsettings"
 
 organizationaccessapprovalsettings.NewOrganizationAccessApprovalSettingsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrganizationAccessApprovalSettingsTimeoutsOutputReference
 ```

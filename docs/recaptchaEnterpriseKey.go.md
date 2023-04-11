@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/recaptcha_e
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKey(scope Construct, id *string, config RecaptchaEnterpriseKeyConfig) RecaptchaEnterpriseKey
 ```
@@ -387,7 +387,7 @@ func ResetWebSettings()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.RecaptchaEnterpriseKey_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.RecaptchaEnterpriseKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ recaptchaenterprisekey.RecaptchaEnterpriseKey_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.RecaptchaEnterpriseKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -852,7 +852,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyAndroidSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyAndroidSettings {
 	AllowAllPackageNames: interface{},
@@ -902,7 +902,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyConfig {
 	Connection: interface{},
@@ -913,14 +913,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisek
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	DisplayName: *string,
-	AndroidSettings: github.com/cdktf/cdktf-provider-google-go/google/v5.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyAndroidSettings,
+	AndroidSettings: github.com/cdktf/cdktf-provider-google-go/google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyAndroidSettings,
 	Id: *string,
-	IosSettings: github.com/cdktf/cdktf-provider-google-go/google/v5.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyIosSettings,
+	IosSettings: github.com/cdktf/cdktf-provider-google-go/google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyIosSettings,
 	Labels: *map[string]*string,
 	Project: *string,
-	TestingOptions: github.com/cdktf/cdktf-provider-google-go/google/v5.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTestingOptions,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTimeouts,
-	WebSettings: github.com/cdktf/cdktf-provider-google-go/google/v5.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyWebSettings,
+	TestingOptions: github.com/cdktf/cdktf-provider-google-go/google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTestingOptions,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTimeouts,
+	WebSettings: github.com/cdktf/cdktf-provider-google-go/google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyWebSettings,
 }
 ```
 
@@ -1149,7 +1149,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyIosSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyIosSettings {
 	AllowAllBundleIds: interface{},
@@ -1199,7 +1199,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTestingOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyTestingOptions {
 	TestingChallenge: *string,
@@ -1253,7 +1253,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyTimeouts {
 	Create: *string,
@@ -1313,7 +1313,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyWebSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 &recaptchaenterprisekey.RecaptchaEnterpriseKeyWebSettings {
 	IntegrationType: *string,
@@ -1419,7 +1419,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyAndroidSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKeyAndroidSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecaptchaEnterpriseKeyAndroidSettingsOutputReference
 ```
@@ -1726,7 +1726,7 @@ func InternalValue() RecaptchaEnterpriseKeyAndroidSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyIosSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKeyIosSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecaptchaEnterpriseKeyIosSettingsOutputReference
 ```
@@ -2033,7 +2033,7 @@ func InternalValue() RecaptchaEnterpriseKeyIosSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTestingOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKeyTestingOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecaptchaEnterpriseKeyTestingOptionsOutputReference
 ```
@@ -2340,7 +2340,7 @@ func InternalValue() RecaptchaEnterpriseKeyTestingOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecaptchaEnterpriseKeyTimeoutsOutputReference
 ```
@@ -2676,7 +2676,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.recaptchaEnterpriseKey.RecaptchaEnterpriseKeyWebSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/recaptchaenterprisekey"
+import "github.com/cdktf/cdktf-provider-google-go/google/recaptchaenterprisekey"
 
 recaptchaenterprisekey.NewRecaptchaEnterpriseKeyWebSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecaptchaEnterpriseKeyWebSettingsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/dataproc_cl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.NewDataprocClusterIamBinding(scope Construct, id *string, config DataprocClusterIamBindingConfig) DataprocClusterIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.DataprocClusterIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 &dataprocclusteriambinding.DataprocClusterIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 &dataprocclusteriambinding.DataprocClusterIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambi
 	Cluster: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.dataprocClusterIamBinding.DataprocClusterIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataprocClusterIamBinding.DataprocClusterIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocClusterIamBinding.DataprocClusterIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/dataprocclusteriambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocclusteriambinding"
 
 dataprocclusteriambinding.NewDataprocClusterIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocClusterIamBindingConditionOutputReference
 ```

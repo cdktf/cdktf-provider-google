@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboard(scope Construct, id *string, config VertexAiTensorboardConfig) VertexAiTensorboard
 ```
@@ -341,7 +341,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsConstruct(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsTerraformElement(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ vertexaitensorboard.VertexAiTensorboard_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsTerraformResource(x interface{}) *bool
 ```
@@ -817,7 +817,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardConfig {
 	Connection: interface{},
@@ -829,12 +829,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
 	Provisioners: *[]interface{},
 	DisplayName: *string,
 	Description: *string,
-	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google/v5.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec,
+	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.vertexAiTensorboard.VertexAiTensorboardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vertexAiTensorboard.VertexAiTensorboardTimeouts,
 }
 ```
 
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardEncryptionSpec {
 	KmsKeyName: *string,
@@ -1082,7 +1082,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardTimeouts {
 	Create: *string,
@@ -1144,7 +1144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboardEncryptionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiTensorboardEncryptionSpecOutputReference
 ```
@@ -1415,7 +1415,7 @@ func InternalValue() VertexAiTensorboardEncryptionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiTensorboardTimeoutsOutputReference
 ```

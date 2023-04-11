@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_sha
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 computesharedvpchostproject.NewComputeSharedVpcHostProject(scope Construct, id *string, config ComputeSharedVpcHostProjectConfig) ComputeSharedVpcHostProject
 ```
@@ -293,7 +293,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsConstruct(x interface{}) *bool
 ```
@@ -325,7 +325,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 computesharedvpchostproject.ComputeSharedVpcHostProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -604,7 +604,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 &computesharedvpchostproject.ComputeSharedVpcHostProjectConfig {
 	Connection: interface{},
@@ -616,7 +616,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchost
 	Provisioners: *[]interface{},
 	Project: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts,
 }
 ```
 
@@ -755,7 +755,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 &computesharedvpchostproject.ComputeSharedVpcHostProjectTimeouts {
 	Create: *string,
@@ -803,7 +803,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSharedVpcHostProject.ComputeSharedVpcHostProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computesharedvpchostproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesharedvpchostproject"
 
 computesharedvpchostproject.NewComputeSharedVpcHostProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSharedVpcHostProjectTimeoutsOutputReference
 ```

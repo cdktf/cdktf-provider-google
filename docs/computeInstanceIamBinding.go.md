@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_ins
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 computeinstanceiambinding.NewComputeInstanceIamBinding(scope Construct, id *string, config ComputeInstanceIamBindingConfig) ComputeInstanceIamBinding
 ```
@@ -307,7 +307,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 computeinstanceiambinding.ComputeInstanceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 computeinstanceiambinding.ComputeInstanceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ computeinstanceiambinding.ComputeInstanceIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 computeinstanceiambinding.ComputeInstanceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 &computeinstanceiambinding.ComputeInstanceIamBindingCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 &computeinstanceiambinding.ComputeInstanceIamBindingConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambi
 	InstanceName: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.computeInstanceIamBinding.ComputeInstanceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.computeInstanceIamBinding.ComputeInstanceIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Zone: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstanceIamBinding.ComputeInstanceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/computeinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeinstanceiambinding"
 
 computeinstanceiambinding.NewComputeInstanceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceIamBindingConditionOutputReference
 ```

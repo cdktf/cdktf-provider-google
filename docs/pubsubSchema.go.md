@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_sche
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchema.PubsubSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 pubsubschema.NewPubsubSchema(scope Construct, id *string, config PubsubSchemaConfig) PubsubSchema
 ```
@@ -314,7 +314,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.pubsubSchema.PubsubSchema.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 pubsubschema.PubsubSchema_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.pubsubSchema.PubsubSchema.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 pubsubschema.PubsubSchema_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ pubsubschema.PubsubSchema_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.pubsubSchema.PubsubSchema.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 pubsubschema.PubsubSchema_IsTerraformResource(x interface{}) *bool
 ```
@@ -691,7 +691,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchema.PubsubSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 &pubsubschema.PubsubSchemaConfig {
 	Connection: interface{},
@@ -705,7 +705,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
 	Definition: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.pubsubSchema.PubsubSchemaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.pubsubSchema.PubsubSchemaTimeouts,
 	Type: *string,
 }
 ```
@@ -891,7 +891,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.pubsubSchema.PubsubSchemaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 &pubsubschema.PubsubSchemaTimeouts {
 	Create: *string,
@@ -939,7 +939,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.pubsubSchema.PubsubSchemaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/pubsubschema"
+import "github.com/cdktf/cdktf-provider-google-go/google/pubsubschema"
 
 pubsubschema.NewPubsubSchemaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PubsubSchemaTimeoutsOutputReference
 ```

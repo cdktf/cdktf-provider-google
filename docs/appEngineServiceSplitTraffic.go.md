@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTraffic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.NewAppEngineServiceSplitTraffic(scope Construct, id *string, config AppEngineServiceSplitTrafficConfig) AppEngineServiceSplitTraffic
 ```
@@ -320,7 +320,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTraffic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.AppEngineServiceSplitTraffic_IsConstruct(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTraffic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.AppEngineServiceSplitTraffic_IsTerraformElement(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ appengineservicesplittraffic.AppEngineServiceSplitTraffic_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTraffic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.AppEngineServiceSplitTraffic_IsTerraformResource(x interface{}) *bool
 ```
@@ -697,7 +697,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 &appengineservicesplittraffic.AppEngineServiceSplitTrafficConfig {
 	Connection: interface{},
@@ -708,11 +708,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicespli
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Service: *string,
-	Split: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficSplit,
+	Split: github.com/cdktf/cdktf-provider-google-go/google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficSplit,
 	Id: *string,
 	MigrateTraffic: interface{},
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficTimeouts,
 }
 ```
 
@@ -894,7 +894,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficSplit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 &appengineservicesplittraffic.AppEngineServiceSplitTrafficSplit {
 	Allocations: *map[string]*string,
@@ -946,7 +946,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 &appengineservicesplittraffic.AppEngineServiceSplitTrafficTimeouts {
 	Create: *string,
@@ -1008,7 +1008,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficSplitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.NewAppEngineServiceSplitTrafficSplitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineServiceSplitTrafficSplitOutputReference
 ```
@@ -1308,7 +1308,7 @@ func InternalValue() AppEngineServiceSplitTrafficSplit
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineServiceSplitTraffic.AppEngineServiceSplitTrafficTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/appengineservicesplittraffic"
+import "github.com/cdktf/cdktf-provider-google-go/google/appengineservicesplittraffic"
 
 appengineservicesplittraffic.NewAppEngineServiceSplitTrafficTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineServiceSplitTrafficTimeoutsOutputReference
 ```
