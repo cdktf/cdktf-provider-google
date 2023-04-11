@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/container_a
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerawsversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerawsversions"
 
 datagooglecontainerawsversions.NewDataGoogleContainerAwsVersions(scope Construct, id *string, config DataGoogleContainerAwsVersionsConfig) DataGoogleContainerAwsVersions
 ```
@@ -287,7 +287,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerawsversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerawsversions"
 
 datagooglecontainerawsversions.DataGoogleContainerAwsVersions_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerawsversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerawsversions"
 
 datagooglecontainerawsversions.DataGoogleContainerAwsVersions_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ datagooglecontainerawsversions.DataGoogleContainerAwsVersions_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerawsversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerawsversions"
 
 datagooglecontainerawsversions.DataGoogleContainerAwsVersions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -598,7 +598,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglecontainerawsversions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecontainerawsversions"
 
 &datagooglecontainerawsversions.DataGoogleContainerAwsVersionsConfig {
 	Connection: interface{},

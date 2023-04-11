@@ -173,7 +173,7 @@ export class KmsKeyRingIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_key_ring_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

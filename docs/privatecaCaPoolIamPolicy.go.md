@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/privateca_c
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCaPoolIamPolicy.PrivatecaCaPoolIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/privatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliampolicy"
 
 privatecacapooliampolicy.NewPrivatecaCaPoolIamPolicy(scope Construct, id *string, config PrivatecaCaPoolIamPolicyConfig) PrivatecaCaPoolIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.privatecaCaPoolIamPolicy.PrivatecaCaPoolIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/privatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliampolicy"
 
 privatecacapooliampolicy.PrivatecaCaPoolIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.privatecaCaPoolIamPolicy.PrivatecaCaPoolIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/privatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliampolicy"
 
 privatecacapooliampolicy.PrivatecaCaPoolIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ privatecacapooliampolicy.PrivatecaCaPoolIamPolicy_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.privatecaCaPoolIamPolicy.PrivatecaCaPoolIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/privatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliampolicy"
 
 privatecacapooliampolicy.PrivatecaCaPoolIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.privatecaCaPoolIamPolicy.PrivatecaCaPoolIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/privatecacapooliampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/privatecacapooliampolicy"
 
 &privatecacapooliampolicy.PrivatecaCaPoolIamPolicyConfig {
 	Connection: interface{},

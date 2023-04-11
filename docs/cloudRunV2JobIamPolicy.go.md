@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_run_v
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2JobIamPolicy.CloudRunV2JobIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiampolicy"
 
 cloudrunv2jobiampolicy.NewCloudRunV2JobIamPolicy(scope Construct, id *string, config CloudRunV2JobIamPolicyConfig) CloudRunV2JobIamPolicy
 ```
@@ -287,7 +287,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudRunV2JobIamPolicy.CloudRunV2JobIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiampolicy"
 
 cloudrunv2jobiampolicy.CloudRunV2JobIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudRunV2JobIamPolicy.CloudRunV2JobIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiampolicy"
 
 cloudrunv2jobiampolicy.CloudRunV2JobIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ cloudrunv2jobiampolicy.CloudRunV2JobIamPolicy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudRunV2JobIamPolicy.CloudRunV2JobIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiampolicy"
 
 cloudrunv2jobiampolicy.CloudRunV2JobIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2JobIamPolicy.CloudRunV2JobIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/cloudrunv2jobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudrunv2jobiampolicy"
 
 &cloudrunv2jobiampolicy.CloudRunV2JobIamPolicyConfig {
 	Connection: interface{},

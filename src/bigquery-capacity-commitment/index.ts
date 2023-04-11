@@ -17,6 +17,12 @@ or merged.
   */
   readonly capacityCommitmentId?: string;
   /**
+  * The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_capacity_commitment#edition BigqueryCapacityCommitment#edition}
+  */
+  readonly edition?: string;
+  /**
   * If true, fail the request if another project in the organization has a capacity commitment.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_capacity_commitment#enforce_single_admin_project_per_org BigqueryCapacityCommitment#enforce_single_admin_project_per_org}
@@ -37,7 +43,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
   */
   readonly location?: string;
   /**
-  * Capacity commitment plan. Valid values are FLEX, TRIAL, MONTHLY, ANNUAL
+  * Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_capacity_commitment#plan BigqueryCapacityCommitment#plan}
   */
@@ -47,7 +53,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
   */
   readonly project?: string;
   /**
-  * The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
+  * The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_capacity_commitment#renewal_plan BigqueryCapacityCommitment#renewal_plan}
   */
@@ -221,7 +227,7 @@ export class BigqueryCapacityCommitment extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_capacity_commitment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -233,6 +239,7 @@ export class BigqueryCapacityCommitment extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._capacityCommitmentId = config.capacityCommitmentId;
+    this._edition = config.edition;
     this._enforceSingleAdminProjectPerOrg = config.enforceSingleAdminProjectPerOrg;
     this._id = config.id;
     this._location = config.location;
@@ -271,6 +278,22 @@ export class BigqueryCapacityCommitment extends cdktf.TerraformResource {
   // commitment_start_time - computed: true, optional: false, required: false
   public get commitmentStartTime() {
     return this.getStringAttribute('commitment_start_time');
+  }
+
+  // edition - computed: false, optional: true, required: false
+  private _edition?: string; 
+  public get edition() {
+    return this.getStringAttribute('edition');
+  }
+  public set edition(value: string) {
+    this._edition = value;
+  }
+  public resetEdition() {
+    this._edition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editionInput() {
+    return this._edition;
   }
 
   // enforce_single_admin_project_per_org - computed: false, optional: true, required: false
@@ -412,6 +435,7 @@ export class BigqueryCapacityCommitment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       capacity_commitment_id: cdktf.stringToTerraform(this._capacityCommitmentId),
+      edition: cdktf.stringToTerraform(this._edition),
       enforce_single_admin_project_per_org: cdktf.stringToTerraform(this._enforceSingleAdminProjectPerOrg),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),

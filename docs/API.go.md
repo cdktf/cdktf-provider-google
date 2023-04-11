@@ -32,6 +32,8 @@ The following submodules are available:
 - [apigeeInstance](./apigeeInstance.go.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.go.md)
 - [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.go.md)
+- [apigeeKeystoresAliasesPkcs12](./apigeeKeystoresAliasesPkcs12.go.md)
+- [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.go.md)
 - [apigeeNatAddress](./apigeeNatAddress.go.md)
 - [apigeeOrganization](./apigeeOrganization.go.md)
 - [apigeeSharedflow](./apigeeSharedflow.go.md)

@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/data_catalo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.NewDataCatalogTaxonomyIamMember(scope Construct, id *string, config DataCatalogTaxonomyIamMemberConfig) DataCatalogTaxonomyIamMember
 ```
@@ -307,7 +307,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -339,7 +339,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -353,7 +353,7 @@ datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 &datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMemberCondition {
 	Expression: *string,
@@ -777,7 +777,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 &datacatalogtaxonomyiammember.DataCatalogTaxonomyIamMemberConfig {
 	Connection: interface{},
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyi
 	Member: *string,
 	Role: *string,
 	Taxonomy: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -984,7 +984,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogTaxonomyIamMember.DataCatalogTaxonomyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datacatalogtaxonomyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/datacatalogtaxonomyiammember"
 
 datacatalogtaxonomyiammember.NewDataCatalogTaxonomyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataCatalogTaxonomyIamMemberConditionOutputReference
 ```

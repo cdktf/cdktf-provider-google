@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDicomStoreIamPolicy.HealthcareDicomStoreIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcaredicomstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiampolicy"
 
 healthcaredicomstoreiampolicy.NewHealthcareDicomStoreIamPolicy(scope Construct, id *string, config HealthcareDicomStoreIamPolicyConfig) HealthcareDicomStoreIamPolicy
 ```
@@ -273,7 +273,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareDicomStoreIamPolicy.HealthcareDicomStoreIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcaredicomstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiampolicy"
 
 healthcaredicomstoreiampolicy.HealthcareDicomStoreIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -305,7 +305,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareDicomStoreIamPolicy.HealthcareDicomStoreIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcaredicomstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiampolicy"
 
 healthcaredicomstoreiampolicy.HealthcareDicomStoreIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -319,7 +319,7 @@ healthcaredicomstoreiampolicy.HealthcareDicomStoreIamPolicy_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareDicomStoreIamPolicy.HealthcareDicomStoreIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcaredicomstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiampolicy"
 
 healthcaredicomstoreiampolicy.HealthcareDicomStoreIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDicomStoreIamPolicy.HealthcareDicomStoreIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/healthcaredicomstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredicomstoreiampolicy"
 
 &healthcaredicomstoreiampolicy.HealthcareDicomStoreIamPolicyConfig {
 	Connection: interface{},

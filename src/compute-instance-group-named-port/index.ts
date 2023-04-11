@@ -179,7 +179,7 @@ export class ComputeInstanceGroupNamedPortA extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_instance_group_named_port',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

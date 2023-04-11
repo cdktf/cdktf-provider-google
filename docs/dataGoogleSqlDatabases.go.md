@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_databas
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabases.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.NewDataGoogleSqlDatabases(scope Construct, id *string, config DataGoogleSqlDatabasesConfig) DataGoogleSqlDatabases
 ```
@@ -280,7 +280,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabases.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.DataGoogleSqlDatabases_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabases.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.DataGoogleSqlDatabases_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ datagooglesqldatabases.DataGoogleSqlDatabases_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabases.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.DataGoogleSqlDatabases_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabasesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 &datagooglesqldatabases.DataGoogleSqlDatabasesConfig {
 	Connection: interface{},
@@ -731,7 +731,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabasesDatabases.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 &datagooglesqldatabases.DataGoogleSqlDatabasesDatabases {
 
@@ -746,7 +746,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabas
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabasesDatabasesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.NewDataGoogleSqlDatabasesDatabasesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlDatabasesDatabasesList
 ```
@@ -878,7 +878,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabases.DataGoogleSqlDatabasesDatabasesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglesqldatabases"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesqldatabases"
 
 datagooglesqldatabases.NewDataGoogleSqlDatabasesDatabasesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlDatabasesDatabasesOutputReference
 ```

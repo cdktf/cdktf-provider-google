@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/project_ser
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectService.ProjectService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 projectservice.NewProjectService(scope Construct, id *string, config ProjectServiceConfig) ProjectService
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.projectService.ProjectService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 projectservice.ProjectService_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.projectService.ProjectService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 projectservice.ProjectService_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ projectservice.ProjectService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.projectService.ProjectService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 projectservice.ProjectService_IsTerraformResource(x interface{}) *bool
 ```
@@ -691,7 +691,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectService.ProjectServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 &projectservice.ProjectServiceConfig {
 	Connection: interface{},
@@ -706,7 +706,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
 	DisableOnDestroy: interface{},
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v5.projectService.ProjectServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.projectService.ProjectServiceTimeouts,
 }
 ```
 
@@ -882,7 +882,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.projectService.ProjectServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 &projectservice.ProjectServiceTimeouts {
 	Create: *string,
@@ -958,7 +958,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectService.ProjectServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/projectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/projectservice"
 
 projectservice.NewProjectServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProjectServiceTimeoutsOutputReference
 ```

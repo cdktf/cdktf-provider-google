@@ -4117,7 +4117,7 @@ export class NetworkServicesEdgeCacheService extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

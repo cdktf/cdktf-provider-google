@@ -32,6 +32,8 @@ The following submodules are available:
 - [apigeeInstance](./apigeeInstance.python.md)
 - [apigeeInstanceAttachment](./apigeeInstanceAttachment.python.md)
 - [apigeeKeystoresAliasesKeyCertFile](./apigeeKeystoresAliasesKeyCertFile.python.md)
+- [apigeeKeystoresAliasesPkcs12](./apigeeKeystoresAliasesPkcs12.python.md)
+- [apigeeKeystoresAliasesSelfSignedCert](./apigeeKeystoresAliasesSelfSignedCert.python.md)
 - [apigeeNatAddress](./apigeeNatAddress.python.md)
 - [apigeeOrganization](./apigeeOrganization.python.md)
 - [apigeeSharedflow](./apigeeSharedflow.python.md)

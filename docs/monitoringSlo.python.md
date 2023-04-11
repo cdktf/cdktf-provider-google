@@ -1947,8 +1947,8 @@ monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.max">max</a></code> | <code>typing.Union[int, float]</code> | max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min". |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.min">min</a></code> | <code>typing.Union[int, float]</code> | Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max". |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.max">max</a></code> | <code>typing.Union[int, float]</code> | max value for the range (inclusive). If not given, will be set to 0. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloRequestBasedSliDistributionCutRange.property.min">min</a></code> | <code>typing.Union[int, float]</code> | Min value for the range (inclusive). If not given, will be set to 0. |
 
 ---
 
@@ -1960,7 +1960,7 @@ max: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -1974,7 +1974,7 @@ min: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 
@@ -2592,8 +2592,8 @@ monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDist
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.max">max</a></code> | <code>typing.Union[int, float]</code> | max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min". |
-| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.min">min</a></code> | <code>typing.Union[int, float]</code> | Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max". |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.max">max</a></code> | <code>typing.Union[int, float]</code> | max value for the range (inclusive). If not given, will be set to 0. |
+| <code><a href="#@cdktf/provider-google.monitoringSlo.MonitoringSloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange.property.min">min</a></code> | <code>typing.Union[int, float]</code> | Min value for the range (inclusive). If not given, will be set to 0. |
 
 ---
 
@@ -2605,7 +2605,7 @@ max: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -2619,7 +2619,7 @@ min: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 
@@ -4203,7 +4203,7 @@ def put_range(
 
 - *Type:* typing.Union[int, float]
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -4213,7 +4213,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* typing.Union[int, float]
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 
@@ -7554,7 +7554,7 @@ def put_range(
 
 - *Type:* typing.Union[int, float]
 
-max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min".
+max value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#max MonitoringSlo#max}
 
@@ -7564,7 +7564,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* typing.Union[int, float]
 
-Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max".
+Min value for the range (inclusive). If not given, will be set to 0.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_slo#min MonitoringSlo#min}
 

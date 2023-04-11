@@ -44,7 +44,7 @@ loggingLogView.LoggingLogView(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | The bucket of the resource. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.description">description</a></code> | <code>str</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.filter">filter</a></code> | <code>str</code> | Filter that restricts which log entries in a bucket are visible in this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`.
+The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
 
@@ -1001,7 +1001,7 @@ loggingLogView.LoggingLogViewConfig(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.bucket">bucket</a></code> | <code>str</code> | The bucket of the resource. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.name">name</a></code> | <code>str</code> | The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.name">name</a></code> | <code>str</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.description">description</a></code> | <code>str</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.filter">filter</a></code> | <code>str</code> | Filter that restricts which log entries in a bucket are visible in this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
@@ -1103,7 +1103,7 @@ name: str
 
 - *Type:* str
 
-The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`.
+The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
 Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
 

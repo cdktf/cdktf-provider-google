@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/storage_tra
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount.DataGoogleStorageTransferProjectServiceAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestoragetransferprojectserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragetransferprojectserviceaccount"
 
 datagooglestoragetransferprojectserviceaccount.NewDataGoogleStorageTransferProjectServiceAccount(scope Construct, id *string, config DataGoogleStorageTransferProjectServiceAccountConfig) DataGoogleStorageTransferProjectServiceAccount
 ```
@@ -280,7 +280,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount.DataGoogleStorageTransferProjectServiceAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestoragetransferprojectserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragetransferprojectserviceaccount"
 
 datagooglestoragetransferprojectserviceaccount.DataGoogleStorageTransferProjectServiceAccount_IsConstruct(x interface{}) *bool
 ```
@@ -312,7 +312,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount.DataGoogleStorageTransferProjectServiceAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestoragetransferprojectserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragetransferprojectserviceaccount"
 
 datagooglestoragetransferprojectserviceaccount.DataGoogleStorageTransferProjectServiceAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ datagooglestoragetransferprojectserviceaccount.DataGoogleStorageTransferProjectS
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount.DataGoogleStorageTransferProjectServiceAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestoragetransferprojectserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragetransferprojectserviceaccount"
 
 datagooglestoragetransferprojectserviceaccount.DataGoogleStorageTransferProjectServiceAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount.DataGoogleStorageTransferProjectServiceAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/datagooglestoragetransferprojectserviceaccount"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglestoragetransferprojectserviceaccount"
 
 &datagooglestoragetransferprojectserviceaccount.DataGoogleStorageTransferProjectServiceAccountConfig {
 	Connection: interface{},

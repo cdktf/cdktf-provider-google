@@ -226,7 +226,7 @@ export class IamWorkforcePool extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_workforce_pool',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

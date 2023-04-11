@@ -9,7 +9,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_eng
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 iapappengineversioniambinding.NewIapAppEngineVersionIamBinding(scope Construct, id *string, config IapAppEngineVersionIamBindingConfig) IapAppEngineVersionIamBinding
 ```
@@ -300,7 +300,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -332,7 +332,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 iapappengineversioniambinding.IapAppEngineVersionIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 &iapappengineversioniambinding.IapAppEngineVersionIamBindingCondition {
 	Expression: *string,
@@ -792,7 +792,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 &iapappengineversioniambinding.IapAppEngineVersionIamBindingConfig {
 	Connection: interface{},
@@ -807,7 +807,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioni
 	Role: *string,
 	Service: *string,
 	VersionId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v5.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -1013,7 +1013,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineVersionIamBinding.IapAppEngineVersionIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v5/iapappengineversioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineversioniambinding"
 
 iapappengineversioniambinding.NewIapAppEngineVersionIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapAppEngineVersionIamBindingConditionOutputReference
 ```

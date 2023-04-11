@@ -30,6 +30,8 @@ export * as apigeeFlowhook from './apigee-flowhook';
 export * as apigeeInstance from './apigee-instance';
 export * as apigeeInstanceAttachment from './apigee-instance-attachment';
 export * as apigeeKeystoresAliasesKeyCertFile from './apigee-keystores-aliases-key-cert-file';
+export * as apigeeKeystoresAliasesPkcs12 from './apigee-keystores-aliases-pkcs12';
+export * as apigeeKeystoresAliasesSelfSignedCert from './apigee-keystores-aliases-self-signed-cert';
 export * as apigeeNatAddress from './apigee-nat-address';
 export * as apigeeOrganization from './apigee-organization';
 export * as apigeeSharedflow from './apigee-sharedflow';

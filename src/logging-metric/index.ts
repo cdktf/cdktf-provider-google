@@ -22,6 +22,12 @@ description is 8000 characters.
   */
   readonly description?: string;
   /**
+  * If set to True, then this metric is disabled and it does not generate any points.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_metric#disabled LoggingMetric#disabled}
+  */
+  readonly disabled?: boolean | cdktf.IResolvable;
+  /**
   * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
   * 
@@ -1023,7 +1029,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
       terraformResourceType: 'google_logging_metric',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1036,6 +1042,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
     });
     this._bucketName = config.bucketName;
     this._description = config.description;
+    this._disabled = config.disabled;
     this._filter = config.filter;
     this._id = config.id;
     this._labelExtractors = config.labelExtractors;
@@ -1081,6 +1088,22 @@ export class LoggingMetric extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description;
+  }
+
+  // disabled - computed: false, optional: true, required: false
+  private _disabled?: boolean | cdktf.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktf.IResolvable) {
+    this._disabled = value;
+  }
+  public resetDisabled() {
+    this._disabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled;
   }
 
   // filter - computed: false, optional: false, required: true
@@ -1229,6 +1252,7 @@ export class LoggingMetric extends cdktf.TerraformResource {
     return {
       bucket_name: cdktf.stringToTerraform(this._bucketName),
       description: cdktf.stringToTerraform(this._description),
+      disabled: cdktf.booleanToTerraform(this._disabled),
       filter: cdktf.stringToTerraform(this._filter),
       id: cdktf.stringToTerraform(this._id),
       label_extractors: cdktf.hashMapper(cdktf.stringToTerraform)(this._labelExtractors),

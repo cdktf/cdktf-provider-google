@@ -1380,6 +1380,18 @@ export interface StorageTransferJobTransferSpecObjectConditions {
   */
   readonly includePrefixes?: string[];
   /**
+  * If specified, only objects with a "last modification time" before this timestamp and objects that don't have a "last modification time" are transferred. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#last_modified_before StorageTransferJob#last_modified_before}
+  */
+  readonly lastModifiedBefore?: string;
+  /**
+  * If specified, only objects with a "last modification time" on or after this timestamp and objects that don't have a "last modification time" are transferred. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#last_modified_since StorageTransferJob#last_modified_since}
+  */
+  readonly lastModifiedSince?: string;
+  /**
   * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_transfer_job#max_time_elapsed_since_last_modification StorageTransferJob#max_time_elapsed_since_last_modification}
@@ -1401,6 +1413,8 @@ export function storageTransferJobTransferSpecObjectConditionsToTerraform(struct
   return {
     exclude_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.excludePrefixes),
     include_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includePrefixes),
+    last_modified_before: cdktf.stringToTerraform(struct!.lastModifiedBefore),
+    last_modified_since: cdktf.stringToTerraform(struct!.lastModifiedSince),
     max_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.maxTimeElapsedSinceLastModification),
     min_time_elapsed_since_last_modification: cdktf.stringToTerraform(struct!.minTimeElapsedSinceLastModification),
   }
@@ -1428,6 +1442,14 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
       hasAnyValues = true;
       internalValueResult.includePrefixes = this._includePrefixes;
     }
+    if (this._lastModifiedBefore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lastModifiedBefore = this._lastModifiedBefore;
+    }
+    if (this._lastModifiedSince !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.lastModifiedSince = this._lastModifiedSince;
+    }
     if (this._maxTimeElapsedSinceLastModification !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTimeElapsedSinceLastModification = this._maxTimeElapsedSinceLastModification;
@@ -1444,6 +1466,8 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
       this.isEmptyObject = false;
       this._excludePrefixes = undefined;
       this._includePrefixes = undefined;
+      this._lastModifiedBefore = undefined;
+      this._lastModifiedSince = undefined;
       this._maxTimeElapsedSinceLastModification = undefined;
       this._minTimeElapsedSinceLastModification = undefined;
     }
@@ -1451,6 +1475,8 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
       this.isEmptyObject = Object.keys(value).length === 0;
       this._excludePrefixes = value.excludePrefixes;
       this._includePrefixes = value.includePrefixes;
+      this._lastModifiedBefore = value.lastModifiedBefore;
+      this._lastModifiedSince = value.lastModifiedSince;
       this._maxTimeElapsedSinceLastModification = value.maxTimeElapsedSinceLastModification;
       this._minTimeElapsedSinceLastModification = value.minTimeElapsedSinceLastModification;
     }
@@ -1486,6 +1512,38 @@ export class StorageTransferJobTransferSpecObjectConditionsOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get includePrefixesInput() {
     return this._includePrefixes;
+  }
+
+  // last_modified_before - computed: false, optional: true, required: false
+  private _lastModifiedBefore?: string; 
+  public get lastModifiedBefore() {
+    return this.getStringAttribute('last_modified_before');
+  }
+  public set lastModifiedBefore(value: string) {
+    this._lastModifiedBefore = value;
+  }
+  public resetLastModifiedBefore() {
+    this._lastModifiedBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastModifiedBeforeInput() {
+    return this._lastModifiedBefore;
+  }
+
+  // last_modified_since - computed: false, optional: true, required: false
+  private _lastModifiedSince?: string; 
+  public get lastModifiedSince() {
+    return this.getStringAttribute('last_modified_since');
+  }
+  public set lastModifiedSince(value: string) {
+    this._lastModifiedSince = value;
+  }
+  public resetLastModifiedSince() {
+    this._lastModifiedSince = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastModifiedSinceInput() {
+    return this._lastModifiedSince;
   }
 
   // max_time_elapsed_since_last_modification - computed: false, optional: true, required: false
@@ -2186,7 +2244,7 @@ export class StorageTransferJob extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_transfer_job',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.60.2',
+        providerVersion: '4.61.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
