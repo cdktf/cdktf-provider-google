@@ -596,6 +596,7 @@ The following submodules are available:
 - [loggingFolderBucketConfig](./loggingFolderBucketConfig.java.md)
 - [loggingFolderExclusion](./loggingFolderExclusion.java.md)
 - [loggingFolderSink](./loggingFolderSink.java.md)
+- [loggingLinkedDataset](./loggingLinkedDataset.java.md)
 - [loggingLogView](./loggingLogView.java.md)
 - [loggingMetric](./loggingMetric.java.md)
 - [loggingOrganizationBucketConfig](./loggingOrganizationBucketConfig.java.md)

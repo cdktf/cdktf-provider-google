@@ -75,6 +75,12 @@ export interface ClouddeployTargetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly gke?: ClouddeployTargetGke;
   /**
+  * run block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#run ClouddeployTarget#run}
+  */
+  readonly run?: ClouddeployTargetRun;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#timeouts ClouddeployTarget#timeouts}
@@ -456,6 +462,70 @@ export class ClouddeployTargetGkeOutputReference extends cdktf.ComplexObject {
     return this._internalIp;
   }
 }
+export interface ClouddeployTargetRun {
+  /**
+  * Required. The location where the Cloud Run Service should be located. Format is `projects/{project}/locations/{location}`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#location ClouddeployTarget#location}
+  */
+  readonly location: string;
+}
+
+export function clouddeployTargetRunToTerraform(struct?: ClouddeployTargetRunOutputReference | ClouddeployTargetRun): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+  }
+}
+
+export class ClouddeployTargetRunOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ClouddeployTargetRun | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._location !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.location = this._location;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ClouddeployTargetRun | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._location = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._location = value.location;
+    }
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location?: string; 
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location;
+  }
+}
 export interface ClouddeployTargetTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_target#create ClouddeployTarget#create}
@@ -612,7 +682,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_target',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -634,6 +704,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
     this._anthosCluster.internalValue = config.anthosCluster;
     this._executionConfigs.internalValue = config.executionConfigs;
     this._gke.internalValue = config.gke;
+    this._run.internalValue = config.run;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -836,6 +907,22 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
     return this._gke.internalValue;
   }
 
+  // run - computed: false, optional: true, required: false
+  private _run = new ClouddeployTargetRunOutputReference(this, "run");
+  public get run() {
+    return this._run;
+  }
+  public putRun(value: ClouddeployTargetRun) {
+    this._run.internalValue = value;
+  }
+  public resetRun() {
+    this._run.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runInput() {
+    return this._run.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ClouddeployTargetTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -869,6 +956,7 @@ export class ClouddeployTarget extends cdktf.TerraformResource {
       anthos_cluster: clouddeployTargetAnthosClusterToTerraform(this._anthosCluster.internalValue),
       execution_configs: cdktf.listMapper(clouddeployTargetExecutionConfigsToTerraform, true)(this._executionConfigs.internalValue),
       gke: clouddeployTargetGkeToTerraform(this._gke.internalValue),
+      run: clouddeployTargetRunToTerraform(this._run.internalValue),
       timeouts: clouddeployTargetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_tasks
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 cloudtasksqueueiambinding.NewCloudTasksQueueIamBinding(scope Construct, id *string, config CloudTasksQueueIamBindingConfig) CloudTasksQueueIamBinding
 ```
@@ -311,7 +311,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 cloudtasksqueueiambinding.CloudTasksQueueIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 cloudtasksqueueiambinding.CloudTasksQueueIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ cloudtasksqueueiambinding.CloudTasksQueueIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 cloudtasksqueueiambinding.CloudTasksQueueIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 &cloudtasksqueueiambinding.CloudTasksQueueIamBindingCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 &cloudtasksqueueiambinding.CloudTasksQueueIamBindingConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambi
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.cloudTasksQueueIamBinding.CloudTasksQueueIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudTasksQueueIamBinding.CloudTasksQueueIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudTasksQueueIamBinding.CloudTasksQueueIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudtasksqueueiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudtasksqueueiambinding"
 
 cloudtasksqueueiambinding.NewCloudTasksQueueIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudTasksQueueIamBindingConditionOutputReference
 ```

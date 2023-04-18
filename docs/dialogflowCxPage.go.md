@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/dialogflow_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPage(scope Construct, id *string, config DialogflowCxPageConfig) DialogflowCxPage
 ```
@@ -398,7 +398,7 @@ func ResetTransitionRoutes()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.DialogflowCxPage_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.DialogflowCxPage_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ dialogflowcxpage.DialogflowCxPage_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPage.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.DialogflowCxPage_IsTerraformResource(x interface{}) *bool
 ```
@@ -874,7 +874,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageConfig {
 	Connection: interface{},
@@ -885,13 +885,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	DisplayName: *string,
-	EntryFulfillment: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageEntryFulfillment,
+	EntryFulfillment: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageEntryFulfillment,
 	EventHandlers: interface{},
-	Form: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageForm,
+	Form: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageForm,
 	Id: *string,
 	LanguageCode: *string,
 	Parent: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageTimeouts,
 	TransitionRouteGroups: *[]*string,
 	TransitionRoutes: interface{},
 }
@@ -1154,7 +1154,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEntryFulfillment {
 	Messages: interface{},
@@ -1240,10 +1240,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEntryFulfillmentMessages {
-	Text: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesText,
+	Text: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesText,
 }
 ```
 
@@ -1274,7 +1274,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEntryFulfillmentMessagesText {
 	Text: *[]*string,
@@ -1308,13 +1308,13 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEventHandlers {
 	Event: *string,
 	TargetFlow: *string,
 	TargetPage: *string,
-	TriggerFulfillment: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment,
+	TriggerFulfillment: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment,
 }
 ```
 
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEventHandlersTriggerFulfillment {
 	Messages: interface{},
@@ -1476,10 +1476,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEventHandlersTriggerFulfillmentMessages {
-	Text: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText,
+	Text: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText,
 }
 ```
 
@@ -1510,7 +1510,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText {
 	Text: *[]*string,
@@ -1544,7 +1544,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageForm.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageForm {
 	Parameters: interface{},
@@ -1578,12 +1578,12 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageFormParameters {
 	DisplayName: *string,
 	EntityType: *string,
-	FillBehavior: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior,
+	FillBehavior: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior,
 	IsList: interface{},
 	Redact: interface{},
 	Required: interface{},
@@ -1699,10 +1699,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehavior.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageFormParametersFillBehavior {
-	InitialPromptFulfillment: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment,
+	InitialPromptFulfillment: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment,
 }
 ```
 
@@ -1733,7 +1733,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillment {
 	Messages: interface{},
@@ -1819,10 +1819,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessages {
-	Text: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText,
+	Text: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText,
 }
 ```
 
@@ -1853,7 +1853,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesText {
 	Text: *[]*string,
@@ -1887,7 +1887,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageTimeouts {
 	Create: *string,
@@ -1947,14 +1947,14 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageTransitionRoutes {
 	Condition: *string,
 	Intent: *string,
 	TargetFlow: *string,
 	TargetPage: *string,
-	TriggerFulfillment: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment,
+	TriggerFulfillment: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment,
 }
 ```
 
@@ -2049,7 +2049,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageTransitionRoutesTriggerFulfillment {
 	Messages: interface{},
@@ -2135,10 +2135,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessages {
-	Text: github.com/cdktf/cdktf-provider-google-go/google/v6.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText,
+	Text: github.com/cdktf/cdktf-provider-google-go/google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText,
 }
 ```
 
@@ -2169,7 +2169,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 &dialogflowcxpage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesText {
 	Text: *[]*string,
@@ -2205,7 +2205,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEntryFulfillmentMessagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageEntryFulfillmentMessagesList
 ```
@@ -2348,7 +2348,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEntryFulfillmentMessagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageEntryFulfillmentMessagesOutputReference
 ```
@@ -2657,7 +2657,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentMessagesTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEntryFulfillmentMessagesTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageEntryFulfillmentMessagesTextOutputReference
 ```
@@ -2946,7 +2946,7 @@ func InternalValue() DialogflowCxPageEntryFulfillmentMessagesText
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEntryFulfillmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEntryFulfillmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageEntryFulfillmentOutputReference
 ```
@@ -3324,7 +3324,7 @@ func InternalValue() DialogflowCxPageEntryFulfillment
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageEventHandlersList
 ```
@@ -3467,7 +3467,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageEventHandlersOutputReference
 ```
@@ -3874,7 +3874,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersTriggerFulfillmentMessagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageEventHandlersTriggerFulfillmentMessagesList
 ```
@@ -4017,7 +4017,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageEventHandlersTriggerFulfillmentMessagesOutputReference
 ```
@@ -4326,7 +4326,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageEventHandlersTriggerFulfillmentMessagesTextOutputReference
 ```
@@ -4615,7 +4615,7 @@ func InternalValue() DialogflowCxPageEventHandlersTriggerFulfillmentMessagesText
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageEventHandlersTriggerFulfillmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageEventHandlersTriggerFulfillmentOutputReference
 ```
@@ -4993,7 +4993,7 @@ func InternalValue() DialogflowCxPageEventHandlersTriggerFulfillment
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageFormOutputReference
 ```
@@ -5284,7 +5284,7 @@ func InternalValue() DialogflowCxPageForm
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesList
 ```
@@ -5427,7 +5427,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesOutputReference
 ```
@@ -5736,7 +5736,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentMessagesTextOutputReference
 ```
@@ -6025,7 +6025,7 @@ func InternalValue() DialogflowCxPageFormParametersFillBehaviorInitialPromptFulf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageFormParametersFillBehaviorInitialPromptFulfillmentOutputReference
 ```
@@ -6403,7 +6403,7 @@ func InternalValue() DialogflowCxPageFormParametersFillBehaviorInitialPromptFulf
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersFillBehaviorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersFillBehaviorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageFormParametersFillBehaviorOutputReference
 ```
@@ -6694,7 +6694,7 @@ func InternalValue() DialogflowCxPageFormParametersFillBehavior
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageFormParametersList
 ```
@@ -6837,7 +6837,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageFormParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageFormParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageFormParametersOutputReference
 ```
@@ -7291,7 +7291,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageTimeoutsOutputReference
 ```
@@ -7627,7 +7627,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageTransitionRoutesList
 ```
@@ -7770,7 +7770,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageTransitionRoutesOutputReference
 ```
@@ -8206,7 +8206,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesList
 ```
@@ -8349,7 +8349,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesOutputReference
 ```
@@ -8658,7 +8658,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesTextOutputReference
 ```
@@ -8947,7 +8947,7 @@ func InternalValue() DialogflowCxPageTransitionRoutesTriggerFulfillmentMessagesT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxPage.DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/dialogflowcxpage"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowcxpage"
 
 dialogflowcxpage.NewDialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowCxPageTransitionRoutesTriggerFulfillmentOutputReference
 ```

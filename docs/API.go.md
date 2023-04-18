@@ -596,6 +596,7 @@ The following submodules are available:
 - [loggingFolderBucketConfig](./loggingFolderBucketConfig.go.md)
 - [loggingFolderExclusion](./loggingFolderExclusion.go.md)
 - [loggingFolderSink](./loggingFolderSink.go.md)
+- [loggingLinkedDataset](./loggingLinkedDataset.go.md)
 - [loggingLogView](./loggingLogView.go.md)
 - [loggingMetric](./loggingMetric.go.md)
 - [loggingOrganizationBucketConfig](./loggingOrganizationBucketConfig.go.md)

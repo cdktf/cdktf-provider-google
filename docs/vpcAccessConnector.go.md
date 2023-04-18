@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/vpc_access_
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.NewVpcAccessConnector(scope Construct, id *string, config VpcAccessConnectorConfig) VpcAccessConnector
 ```
@@ -380,7 +380,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnector.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.VpcAccessConnector_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnector.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.VpcAccessConnector_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ vpcaccessconnector.VpcAccessConnector_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnector.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.VpcAccessConnector_IsTerraformResource(x interface{}) *bool
 ```
@@ -933,7 +933,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnectorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 &vpcaccessconnector.VpcAccessConnectorConfig {
 	Connection: interface{},
@@ -954,8 +954,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
 	Network: *string,
 	Project: *string,
 	Region: *string,
-	Subnet: github.com/cdktf/cdktf-provider-google-go/google/v6.vpcAccessConnector.VpcAccessConnectorSubnet,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.vpcAccessConnector.VpcAccessConnectorTimeouts,
+	Subnet: github.com/cdktf/cdktf-provider-google-go/google.vpcAccessConnector.VpcAccessConnectorSubnet,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vpcAccessConnector.VpcAccessConnectorTimeouts,
 }
 ```
 
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnectorSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 &vpcaccessconnector.VpcAccessConnectorSubnet {
 	Name: *string,
@@ -1297,7 +1297,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnectorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 &vpcaccessconnector.VpcAccessConnectorTimeouts {
 	Create: *string,
@@ -1345,7 +1345,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnectorSubnetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.NewVpcAccessConnectorSubnetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpcAccessConnectorSubnetOutputReference
 ```
@@ -1652,7 +1652,7 @@ func InternalValue() VpcAccessConnectorSubnet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vpcAccessConnector.VpcAccessConnectorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/vpcaccessconnector"
+import "github.com/cdktf/cdktf-provider-google-go/google/vpcaccessconnector"
 
 vpcaccessconnector.NewVpcAccessConnectorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpcAccessConnectorTimeoutsOutputReference
 ```

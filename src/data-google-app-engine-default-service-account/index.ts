@@ -46,7 +46,7 @@ export class DataGoogleAppEngineDefaultServiceAccount extends cdktf.TerraformDat
       terraformResourceType: 'google_app_engine_default_service_account',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

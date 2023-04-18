@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_testabl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.NewDataGoogleIamTestablePermissions(scope Construct, id *string, config DataGoogleIamTestablePermissionsConfig) DataGoogleIamTestablePermissions
 ```
@@ -291,7 +291,7 @@ func ResetStages()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.DataGoogleIamTestablePermissions_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.DataGoogleIamTestablePermissions_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagoogleiamtestablepermissions.DataGoogleIamTestablePermissions_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.DataGoogleIamTestablePermissions_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 &datagoogleiamtestablepermissions.DataGoogleIamTestablePermissionsConfig {
 	Connection: interface{},
@@ -774,7 +774,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsPermissions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 &datagoogleiamtestablepermissions.DataGoogleIamTestablePermissionsPermissions {
 
@@ -789,7 +789,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestabl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsPermissionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.NewDataGoogleIamTestablePermissionsPermissionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleIamTestablePermissionsPermissionsList
 ```
@@ -921,7 +921,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsPermissionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamtestablepermissions"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamtestablepermissions"
 
 datagoogleiamtestablepermissions.NewDataGoogleIamTestablePermissionsPermissionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleIamTestablePermissionsPermissionsOutputReference
 ```

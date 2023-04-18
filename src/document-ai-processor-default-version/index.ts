@@ -163,7 +163,7 @@ export class DocumentAiProcessorDefaultVersion extends cdktf.TerraformResource {
       terraformResourceType: 'google_document_ai_processor_default_version',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

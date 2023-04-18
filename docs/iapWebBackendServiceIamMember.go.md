@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_bac
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 iapwebbackendserviceiammember.NewIapWebBackendServiceIamMember(scope Construct, id *string, config IapWebBackendServiceIamMemberConfig) IapWebBackendServiceIamMember
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 iapwebbackendserviceiammember.IapWebBackendServiceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 iapwebbackendserviceiammember.IapWebBackendServiceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapwebbackendserviceiammember.IapWebBackendServiceIamMember_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 iapwebbackendserviceiammember.IapWebBackendServiceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 &iapwebbackendserviceiammember.IapWebBackendServiceIamMemberCondition {
 	Expression: *string,
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 &iapwebbackendserviceiammember.IapWebBackendServiceIamMemberConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendservice
 	Member: *string,
 	Role: *string,
 	WebBackendService: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebBackendServiceIamMember.IapWebBackendServiceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebbackendserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebbackendserviceiammember"
 
 iapwebbackendserviceiammember.NewIapWebBackendServiceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapWebBackendServiceIamMemberConditionOutputReference
 ```

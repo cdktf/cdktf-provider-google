@@ -596,6 +596,7 @@ The following submodules are available:
 - [loggingFolderBucketConfig](./loggingFolderBucketConfig.python.md)
 - [loggingFolderExclusion](./loggingFolderExclusion.python.md)
 - [loggingFolderSink](./loggingFolderSink.python.md)
+- [loggingLinkedDataset](./loggingLinkedDataset.python.md)
 - [loggingLogView](./loggingLogView.python.md)
 - [loggingMetric](./loggingMetric.python.md)
 - [loggingOrganizationBucketConfig](./loggingOrganizationBucketConfig.python.md)

@@ -466,6 +466,7 @@ export * as loggingBillingAccountSink from './logging-billing-account-sink';
 export * as loggingFolderBucketConfig from './logging-folder-bucket-config';
 export * as loggingFolderExclusion from './logging-folder-exclusion';
 export * as loggingFolderSink from './logging-folder-sink';
+export * as loggingLinkedDataset from './logging-linked-dataset';
 export * as loggingLogView from './logging-log-view';
 export * as loggingMetric from './logging-metric';
 export * as loggingOrganizationBucketConfig from './logging-organization-bucket-config';

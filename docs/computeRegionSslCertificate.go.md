@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_reg
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 computeregionsslcertificate.NewComputeRegionSslCertificate(scope Construct, id *string, config ComputeRegionSslCertificateConfig) ComputeRegionSslCertificate
 ```
@@ -332,7 +332,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 computeregionsslcertificate.ComputeRegionSslCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 computeregionsslcertificate.ComputeRegionSslCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ computeregionsslcertificate.ComputeRegionSslCertificate_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 computeregionsslcertificate.ComputeRegionSslCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -819,7 +819,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 &computeregionsslcertificate.ComputeRegionSslCertificateConfig {
 	Connection: interface{},
@@ -837,7 +837,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcert
 	NamePrefix: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.computeRegionSslCertificate.ComputeRegionSslCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRegionSslCertificate.ComputeRegionSslCertificateTimeouts,
 }
 ```
 
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 &computeregionsslcertificate.ComputeRegionSslCertificateTimeouts {
 	Create: *string,
@@ -1127,7 +1127,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionSslCertificate.ComputeRegionSslCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionsslcertificate"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeregionsslcertificate"
 
 computeregionsslcertificate.NewComputeRegionSslCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionSslCertificateTimeoutsOutputReference
 ```
