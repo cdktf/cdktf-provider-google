@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface TagsLocationTagBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#id TagsLocationTagBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#id TagsLocationTagBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,40 +18,40 @@ export interface TagsLocationTagBindingConfig extends cdktf.TerraformMetaArgumen
   * The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#location TagsLocationTagBinding#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#location TagsLocationTagBinding#location}
   */
   readonly location?: string;
   /**
   * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#parent TagsLocationTagBinding#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#parent TagsLocationTagBinding#parent}
   */
   readonly parent: string;
   /**
   * The TagValue of the TagBinding. Must be of the form tagValues/456.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#tag_value TagsLocationTagBinding#tag_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#tag_value TagsLocationTagBinding#tag_value}
   */
   readonly tagValue: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#timeouts TagsLocationTagBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#timeouts TagsLocationTagBinding#timeouts}
   */
   readonly timeouts?: TagsLocationTagBindingTimeouts;
 }
 export interface TagsLocationTagBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#create TagsLocationTagBinding#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#create TagsLocationTagBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding#delete TagsLocationTagBinding#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding#delete TagsLocationTagBinding#delete}
   */
   readonly delete?: string;
 }
 
-export function tagsLocationTagBindingTimeoutsToTerraform(struct?: TagsLocationTagBindingTimeoutsOutputReference | TagsLocationTagBindingTimeouts | cdktf.IResolvable): any {
+export function tagsLocationTagBindingTimeoutsToTerraform(struct?: TagsLocationTagBindingTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -71,7 +71,7 @@ export class TagsLocationTagBindingTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): TagsLocationTagBindingTimeouts | cdktf.IResolvable | undefined {
@@ -144,7 +144,7 @@ export class TagsLocationTagBindingTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding google_tags_location_tag_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding google_tags_location_tag_binding}
 */
 export class TagsLocationTagBinding extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class TagsLocationTagBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/tags_location_tag_binding google_tags_location_tag_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/tags_location_tag_binding google_tags_location_tag_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

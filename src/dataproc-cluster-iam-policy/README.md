@@ -1,3 +1,3 @@
 # `google_dataproc_cluster_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_policy`](https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_policy).
+Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataproc_cluster_iam_policy).

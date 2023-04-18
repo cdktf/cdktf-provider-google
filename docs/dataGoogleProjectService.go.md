@@ -1,6 +1,6 @@
 # `data_google_project_service`
 
-Refer to the Terraform Registory for docs: [`data_google_project_service`](https://www.terraform.io/docs/providers/google/d/project_service).
+Refer to the Terraform Registory for docs: [`data_google_project_service`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service).
 
 # `dataGoogleProjectService` Submodule <a name="`dataGoogleProjectService` Submodule" id="@cdktf/provider-google.dataGoogleProjectService"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_project_service`](https
 
 ### DataGoogleProjectService <a name="DataGoogleProjectService" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/project_service google_project_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service google_project_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleprojectservice"
 
 datagoogleprojectservice.NewDataGoogleProjectService(scope Construct, id *string, config DataGoogleProjectServiceConfig) DataGoogleProjectService
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagoogleprojectservice.DataGoogleProjectService_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleprojectservice"
 
 datagoogleprojectservice.DataGoogleProjectService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -352,7 +352,7 @@ datagoogleprojectservice.DataGoogleProjectService_IsTerraformDataSource(x interf
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -443,10 +443,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectService.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -595,11 +595,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleprojectservice"
 
 &datagoogleprojectservice.DataGoogleProjectServiceConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -616,15 +616,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleprojectser
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#service DataGoogleProjectService#service}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#id DataGoogleProjectService#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#project DataGoogleProjectService#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#service DataGoogleProjectService#service}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#id DataGoogleProjectService#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#project DataGoogleProjectService#project}. |
 
 ---
 
@@ -641,10 +641,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleProjectService.DataGoogleProjectServiceConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -706,7 +706,7 @@ Service *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#service DataGoogleProjectService#service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#service DataGoogleProjectService#service}.
 
 ---
 
@@ -718,7 +718,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#id DataGoogleProjectService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#id DataGoogleProjectService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -733,7 +733,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/project_service#project DataGoogleProjectService#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/project_service#project DataGoogleProjectService#project}.
 
 ---
 

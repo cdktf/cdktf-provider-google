@@ -1,3 +1,3 @@
 # `google_storage_notification`
 
-Refer to the Terraform Registory for docs: [`google_storage_notification`](https://www.terraform.io/docs/providers/google/r/storage_notification).
+Refer to the Terraform Registory for docs: [`google_storage_notification`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_notification).

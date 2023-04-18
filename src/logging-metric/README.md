@@ -1,3 +1,3 @@
 # `google_logging_metric`
 
-Refer to the Terraform Registory for docs: [`google_logging_metric`](https://www.terraform.io/docs/providers/google/r/logging_metric).
+Refer to the Terraform Registory for docs: [`google_logging_metric`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_metric).

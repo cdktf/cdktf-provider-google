@@ -1,3 +1,3 @@
 # `google_game_services_realm`
 
-Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://www.terraform.io/docs/providers/google/r/game_services_realm).
+Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm).

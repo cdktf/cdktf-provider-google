@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -28,7 +28,7 @@ The following example shows how to only allow credentials with a mapped 'google.
 "'admins' in google.groups"
 ```
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#attribute_condition IamWorkforcePoolProvider#attribute_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#attribute_condition IamWorkforcePoolProvider#attribute_condition}
   */
   readonly attributeCondition?: string;
   /**
@@ -84,30 +84,30 @@ on a Google token:
 An object containing a list of '"key": value' pairs.
 Example: '{ "name": "wrench", "mass": "1.3kg", "count": "3" }'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#attribute_mapping IamWorkforcePoolProvider#attribute_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#attribute_mapping IamWorkforcePoolProvider#attribute_mapping}
   */
   readonly attributeMapping?: { [key: string]: string };
   /**
   * A user-specified description of the provider. Cannot exceed 256 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#description IamWorkforcePoolProvider#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#description IamWorkforcePoolProvider#description}
   */
   readonly description?: string;
   /**
   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#disabled IamWorkforcePoolProvider#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#disabled IamWorkforcePoolProvider#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * A user-specified display name for the provider. Cannot exceed 32 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#display_name IamWorkforcePoolProvider#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#display_name IamWorkforcePoolProvider#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#id IamWorkforcePoolProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#id IamWorkforcePoolProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -116,7 +116,7 @@ However, existing tokens still grant access.
   /**
   * The location for the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#location IamWorkforcePoolProvider#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#location IamWorkforcePoolProvider#location}
   */
   readonly location: string;
   /**
@@ -124,7 +124,7 @@ However, existing tokens still grant access.
 This value must be 4-32 characters, and may contain the characters [a-z0-9-].
 The prefix 'gcp-' is reserved for use by Google, and may not be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#provider_id IamWorkforcePoolProvider#provider_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#provider_id IamWorkforcePoolProvider#provider_id}
   */
   readonly providerId: string;
   /**
@@ -133,25 +133,25 @@ The IDs must be a globally unique string of 6 to 63 lowercase letters, digits, o
 It must start with a letter, and cannot have a trailing hyphen.
 The prefix 'gcp-' is reserved for use by Google, and may not be specified.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#workforce_pool_id IamWorkforcePoolProvider#workforce_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#workforce_pool_id IamWorkforcePoolProvider#workforce_pool_id}
   */
   readonly workforcePoolId: string;
   /**
   * oidc block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#oidc IamWorkforcePoolProvider#oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#oidc IamWorkforcePoolProvider#oidc}
   */
   readonly oidc?: IamWorkforcePoolProviderOidc;
   /**
   * saml block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#saml IamWorkforcePoolProvider#saml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#saml IamWorkforcePoolProvider#saml}
   */
   readonly saml?: IamWorkforcePoolProviderSaml;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#timeouts IamWorkforcePoolProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#timeouts IamWorkforcePoolProvider#timeouts}
   */
   readonly timeouts?: IamWorkforcePoolProviderTimeouts;
 }
@@ -159,13 +159,13 @@ export interface IamWorkforcePoolProviderOidc {
   /**
   * The client ID. Must match the audience claim of the JWT issued by the identity provider.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#client_id IamWorkforcePoolProvider#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#client_id IamWorkforcePoolProvider#client_id}
   */
   readonly clientId: string;
   /**
   * The OIDC issuer URI. Must be a valid URI using the 'https' scheme.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#issuer_uri IamWorkforcePoolProvider#issuer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#issuer_uri IamWorkforcePoolProvider#issuer_uri}
   */
   readonly issuerUri: string;
 }
@@ -263,7 +263,7 @@ When updating the provider's metadata xml, at least one non-expired signing key
 must overlap with the existing metadata. This requirement is skipped if there are
 no non-expired signing keys present in the existing metadata.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#idp_metadata_xml IamWorkforcePoolProvider#idp_metadata_xml}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#idp_metadata_xml IamWorkforcePoolProvider#idp_metadata_xml}
   */
   readonly idpMetadataXml: string;
 }
@@ -325,20 +325,20 @@ export class IamWorkforcePoolProviderSamlOutputReference extends cdktf.ComplexOb
 }
 export interface IamWorkforcePoolProviderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#create IamWorkforcePoolProvider#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#create IamWorkforcePoolProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#delete IamWorkforcePoolProvider#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#delete IamWorkforcePoolProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider#update IamWorkforcePoolProvider#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider#update IamWorkforcePoolProvider#update}
   */
   readonly update?: string;
 }
 
-export function iamWorkforcePoolProviderTimeoutsToTerraform(struct?: IamWorkforcePoolProviderTimeoutsOutputReference | IamWorkforcePoolProviderTimeouts | cdktf.IResolvable): any {
+export function iamWorkforcePoolProviderTimeoutsToTerraform(struct?: IamWorkforcePoolProviderTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -359,7 +359,7 @@ export class IamWorkforcePoolProviderTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): IamWorkforcePoolProviderTimeouts | cdktf.IResolvable | undefined {
@@ -454,7 +454,7 @@ export class IamWorkforcePoolProviderTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider google_iam_workforce_pool_provider}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider google_iam_workforce_pool_provider}
 */
 export class IamWorkforcePoolProvider extends cdktf.TerraformResource {
 
@@ -468,7 +468,7 @@ export class IamWorkforcePoolProvider extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/iam_workforce_pool_provider google_iam_workforce_pool_provider} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iam_workforce_pool_provider google_iam_workforce_pool_provider} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

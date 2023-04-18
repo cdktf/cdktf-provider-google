@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_backend_bucket
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeBackendBucketConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket#id DataGoogleComputeBackendBucket#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket#id DataGoogleComputeBackendBucket#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,11 +23,11 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket#name DataGoogleComputeBackendBucket#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket#name DataGoogleComputeBackendBucket#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket#project DataGoogleComputeBackendBucket#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket#project DataGoogleComputeBackendBucket#project}
   */
   readonly project?: string;
 }
@@ -352,7 +352,7 @@ export class DataGoogleComputeBackendBucketCdnPolicyList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket google_compute_backend_bucket}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket google_compute_backend_bucket}
 */
 export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
 
@@ -366,7 +366,7 @@ export class DataGoogleComputeBackendBucket extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_backend_bucket google_compute_backend_bucket} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_backend_bucket google_compute_backend_bucket} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

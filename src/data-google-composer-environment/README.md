@@ -1,3 +1,3 @@
 # `data_google_composer_environment`
 
-Refer to the Terraform Registory for docs: [`data_google_composer_environment`](https://www.terraform.io/docs/providers/google/d/composer_environment).
+Refer to the Terraform Registory for docs: [`data_google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_environment).

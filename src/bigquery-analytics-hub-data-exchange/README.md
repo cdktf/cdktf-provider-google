@@ -1,3 +1,3 @@
 # `google_bigquery_analytics_hub_data_exchange`
 
-Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_data_exchange`](https://www.terraform.io/docs/providers/google/r/bigquery_analytics_hub_data_exchange).
+Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_data_exchange`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_analytics_hub_data_exchange).

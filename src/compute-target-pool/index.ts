@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_target_pool
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,29 +10,29 @@ export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * URL to the backup target pool. Must also set failover_ratio.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
   */
   readonly backupPool?: string;
   /**
   * Textual description field.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#description ComputeTargetPool#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
   */
   readonly description?: string;
   /**
   * Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
   */
   readonly failoverRatio?: number;
   /**
   * List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#health_checks ComputeTargetPool#health_checks}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
   */
   readonly healthChecks?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -41,56 +41,56 @@ export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of instances in the pool. They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#instances ComputeTargetPool#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
   */
   readonly instances?: string[];
   /**
   * A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#name ComputeTargetPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#project ComputeTargetPool#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
   */
   readonly project?: string;
   /**
   * Where the target pool resides. Defaults to project region.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#region ComputeTargetPool#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
   */
   readonly region?: string;
   /**
   * How to distribute load. Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
   */
   readonly sessionAffinity?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#timeouts ComputeTargetPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
   */
   readonly timeouts?: ComputeTargetPoolTimeouts;
 }
 export interface ComputeTargetPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#create ComputeTargetPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#delete ComputeTargetPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#update ComputeTargetPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}
   */
   readonly update?: string;
 }
 
-export function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeoutsOutputReference | ComputeTargetPoolTimeouts | cdktf.IResolvable): any {
+export function computeTargetPoolTimeoutsToTerraform(struct?: ComputeTargetPoolTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -111,7 +111,7 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeTargetPoolTimeouts | cdktf.IResolvable | undefined {
@@ -206,7 +206,7 @@ export class ComputeTargetPoolTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool google_compute_target_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool google_compute_target_pool}
 */
 export class ComputeTargetPool extends cdktf.TerraformResource {
 
@@ -220,7 +220,7 @@ export class ComputeTargetPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool google_compute_target_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool google_compute_target_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

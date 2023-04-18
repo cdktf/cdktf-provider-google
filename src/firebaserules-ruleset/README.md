@@ -1,3 +1,3 @@
 # `google_firebaserules_ruleset`
 
-Refer to the Terraform Registory for docs: [`google_firebaserules_ruleset`](https://www.terraform.io/docs/providers/google/r/firebaserules_ruleset).
+Refer to the Terraform Registory for docs: [`google_firebaserules_ruleset`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_ruleset).

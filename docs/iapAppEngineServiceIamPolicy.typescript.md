@@ -1,6 +1,6 @@
 # `google_iap_app_engine_service_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_iap_app_engine_service_iam_policy`](https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy).
+Refer to the Terraform Registory for docs: [`google_iap_app_engine_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy).
 
 # `iapAppEngineServiceIamPolicy` Submodule <a name="`iapAppEngineServiceIamPolicy` Submodule" id="@cdktf/provider-google.iapAppEngineServiceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_iap_app_engine_service_iam_p
 
 ### IapAppEngineServiceIamPolicy <a name="IapAppEngineServiceIamPolicy" id="@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy google_iap_app_engine_service_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy google_iap_app_engine_service_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.Initializer"></a>
 
@@ -353,7 +353,7 @@ iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.isTerraformResource(x:
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -458,10 +458,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicy.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -660,17 +660,17 @@ const iapAppEngineServiceIamPolicyConfig: iapAppEngineServiceIamPolicy.IapAppEng
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.appId">appId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#app_id IapAppEngineServiceIamPolicy#app_id}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#policy_data IapAppEngineServiceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.service">service</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#service IapAppEngineServiceIamPolicy#service}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#id IapAppEngineServiceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#project IapAppEngineServiceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.appId">appId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#app_id IapAppEngineServiceIamPolicy#app_id}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#policy_data IapAppEngineServiceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.service">service</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#service IapAppEngineServiceIamPolicy#service}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#id IapAppEngineServiceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#project IapAppEngineServiceIamPolicy#project}. |
 
 ---
 
@@ -687,10 +687,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapAppEngineServiceIamPolicy.IapAppEngineServiceIamPolicyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -752,7 +752,7 @@ public readonly appId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#app_id IapAppEngineServiceIamPolicy#app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#app_id IapAppEngineServiceIamPolicy#app_id}.
 
 ---
 
@@ -764,7 +764,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#policy_data IapAppEngineServiceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#policy_data IapAppEngineServiceIamPolicy#policy_data}.
 
 ---
 
@@ -776,7 +776,7 @@ public readonly service: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#service IapAppEngineServiceIamPolicy#service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#service IapAppEngineServiceIamPolicy#service}.
 
 ---
 
@@ -788,7 +788,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#id IapAppEngineServiceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#id IapAppEngineServiceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -803,7 +803,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_app_engine_service_iam_policy#project IapAppEngineServiceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_app_engine_service_iam_policy#project IapAppEngineServiceIamPolicy#project}.
 
 ---
 

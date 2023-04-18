@@ -1,6 +1,6 @@
 # `google_bigtable_instance_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_policy`](https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy).
+Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy).
 
 # `bigtableInstanceIamPolicy` Submodule <a name="`bigtableInstanceIamPolicy` Submodule" id="@cdktf/provider-google.bigtableInstanceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_policy
 
 ### BigtableInstanceIamPolicy <a name="BigtableInstanceIamPolicy" id="@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy google_bigtable_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy google_bigtable_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.Initializer"></a>
 
@@ -353,7 +353,7 @@ bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -456,10 +456,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicy.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -638,16 +638,16 @@ const bigtableInstanceIamPolicyConfig: bigtableInstanceIamPolicy.BigtableInstanc
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.instance">instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#instance BigtableInstanceIamPolicy#instance}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#policy_data BigtableInstanceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#id BigtableInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#project BigtableInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.instance">instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#instance BigtableInstanceIamPolicy#instance}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#policy_data BigtableInstanceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#id BigtableInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#project BigtableInstanceIamPolicy#project}. |
 
 ---
 
@@ -664,10 +664,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigtableInstanceIamPolicy.BigtableInstanceIamPolicyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -729,7 +729,7 @@ public readonly instance: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#instance BigtableInstanceIamPolicy#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#instance BigtableInstanceIamPolicy#instance}.
 
 ---
 
@@ -741,7 +741,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#policy_data BigtableInstanceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#policy_data BigtableInstanceIamPolicy#policy_data}.
 
 ---
 
@@ -753,7 +753,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#id BigtableInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#id BigtableInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -768,7 +768,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_policy#project BigtableInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_policy#project BigtableInstanceIamPolicy#project}.
 
 ---
 

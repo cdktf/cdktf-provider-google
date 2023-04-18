@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/logging_sink
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/logging_sink
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleLoggingSinkConfig extends cdktf.TerraformMetaArgument
   /**
   * Required. An identifier for the resource in format: "projects/[PROJECT_ID]/sinks/[SINK_NAME]", "organizations/[ORGANIZATION_ID]/sinks/[SINK_NAME]", "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_NAME]", "folders/[FOLDER_ID]/sinks/[SINK_NAME]"
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/logging_sink#id DataGoogleLoggingSink#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/logging_sink#id DataGoogleLoggingSink#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -162,7 +162,7 @@ export class DataGoogleLoggingSinkExclusionsList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/logging_sink google_logging_sink}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/logging_sink google_logging_sink}
 */
 export class DataGoogleLoggingSink extends cdktf.TerraformDataSource {
 
@@ -176,7 +176,7 @@ export class DataGoogleLoggingSink extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/logging_sink google_logging_sink} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/logging_sink google_logging_sink} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

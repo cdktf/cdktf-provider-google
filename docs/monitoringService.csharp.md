@@ -1,6 +1,6 @@
 # `google_monitoring_service`
 
-Refer to the Terraform Registory for docs: [`google_monitoring_service`](https://www.terraform.io/docs/providers/google/r/monitoring_service).
+Refer to the Terraform Registory for docs: [`google_monitoring_service`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service).
 
 # `monitoringService` Submodule <a name="`monitoringService` Submodule" id="@cdktf/provider-google.monitoringService"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_monitoring_service`](https:/
 
 ### MonitoringService <a name="MonitoringService" id="@cdktf/provider-google.monitoringService.MonitoringService"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_service google_monitoring_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service google_monitoring_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringService.MonitoringService.Initializer"></a>
 
@@ -407,7 +407,7 @@ MonitoringService.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringService.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -517,10 +517,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.monitoringService.MonitoringService.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -786,7 +786,7 @@ public System.Collections.Generic.IDictionary<string, string> ServiceLabels { ge
 
 Labels that specify the resource that emits the monitoring data  which is used for SLO reporting of this 'Service'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#service_labels MonitoringService#service_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#service_labels MonitoringService#service_labels}
 
 ---
 
@@ -800,7 +800,7 @@ public string ServiceType { get; set; }
 
 The type of service that this basic service defines, e.g.  APP_ENGINE service type.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#service_type MonitoringService#service_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#service_type MonitoringService#service_type}
 
 ---
 
@@ -813,7 +813,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new MonitoringServiceConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -834,7 +834,7 @@ new MonitoringServiceConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -843,8 +843,8 @@ new MonitoringServiceConfig {
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.serviceId">ServiceId</a></code> | <code>string</code> | An optional service ID to use. If not given, the server will generate a service ID. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.basicService">BasicService</a></code> | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceBasicService">MonitoringServiceBasicService</a></code> | basic_service block. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Name used for UI elements listing this Service. |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#id MonitoringService#id}. |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#project MonitoringService#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#id MonitoringService#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#project MonitoringService#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts">MonitoringServiceTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.userLabels">UserLabels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Labels which have been used to annotate the service. |
 
@@ -863,10 +863,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.monitoringService.MonitoringServiceConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -930,7 +930,7 @@ public string ServiceId { get; set; }
 
 An optional service ID to use. If not given, the server will generate a service ID.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#service_id MonitoringService#service_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#service_id MonitoringService#service_id}
 
 ---
 
@@ -944,7 +944,7 @@ public MonitoringServiceBasicService BasicService { get; set; }
 
 basic_service block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#basic_service MonitoringService#basic_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#basic_service MonitoringService#basic_service}
 
 ---
 
@@ -958,7 +958,7 @@ public string DisplayName { get; set; }
 
 Name used for UI elements listing this Service.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#display_name MonitoringService#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#display_name MonitoringService#display_name}
 
 ---
 
@@ -970,7 +970,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#id MonitoringService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#id MonitoringService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -985,7 +985,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#project MonitoringService#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#project MonitoringService#project}.
 
 ---
 
@@ -999,7 +999,7 @@ public MonitoringServiceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#timeouts MonitoringService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#timeouts MonitoringService#timeouts}
 
 ---
 
@@ -1020,7 +1020,7 @@ length of 63 characters, and must be less than 128 bytes in size. Up to 64
 label entries may be stored. For labels which do not have a semantic value,
 the empty string may be supplied for the label value.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#user_labels MonitoringService#user_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#user_labels MonitoringService#user_labels}
 
 ---
 
@@ -1055,9 +1055,9 @@ new MonitoringServiceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#create MonitoringService#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#delete MonitoringService#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#update MonitoringService#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#create MonitoringService#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#delete MonitoringService#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringService.MonitoringServiceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#update MonitoringService#update}. |
 
 ---
 
@@ -1069,7 +1069,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#create MonitoringService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#create MonitoringService#create}.
 
 ---
 
@@ -1081,7 +1081,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#delete MonitoringService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#delete MonitoringService#delete}.
 
 ---
 
@@ -1093,7 +1093,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_service#update MonitoringService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_service#update MonitoringService#update}.
 
 ---
 

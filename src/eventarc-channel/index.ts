@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/eventarc_channel
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface EventarcChannelConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*\/locations/*\/keyRings/*\/cryptoKeys/*`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#crypto_key_name EventarcChannel#crypto_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#crypto_key_name EventarcChannel#crypto_key_name}
   */
   readonly cryptoKeyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#id EventarcChannel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#id EventarcChannel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,50 +23,50 @@ export interface EventarcChannelConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location for the resource
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#location EventarcChannel#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#location EventarcChannel#location}
   */
   readonly location: string;
   /**
   * Required. The resource name of the channel. Must be unique within the location on the project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#name EventarcChannel#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#name EventarcChannel#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#project EventarcChannel#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#project EventarcChannel#project}
   */
   readonly project?: string;
   /**
   * The name of the event provider (e.g. Eventarc SaaS partner) associated with the channel. This provider will be granted permissions to publish events to the channel. Format: `projects/{project}/locations/{location}/providers/{provider_id}`.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#third_party_provider EventarcChannel#third_party_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#third_party_provider EventarcChannel#third_party_provider}
   */
   readonly thirdPartyProvider?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#timeouts EventarcChannel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#timeouts EventarcChannel#timeouts}
   */
   readonly timeouts?: EventarcChannelTimeouts;
 }
 export interface EventarcChannelTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#create EventarcChannel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#create EventarcChannel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#delete EventarcChannel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#delete EventarcChannel#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel#update EventarcChannel#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel#update EventarcChannel#update}
   */
   readonly update?: string;
 }
 
-export function eventarcChannelTimeoutsToTerraform(struct?: EventarcChannelTimeoutsOutputReference | EventarcChannelTimeouts | cdktf.IResolvable): any {
+export function eventarcChannelTimeoutsToTerraform(struct?: EventarcChannelTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,7 +87,7 @@ export class EventarcChannelTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): EventarcChannelTimeouts | cdktf.IResolvable | undefined {
@@ -182,7 +182,7 @@ export class EventarcChannelTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel google_eventarc_channel}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel google_eventarc_channel}
 */
 export class EventarcChannel extends cdktf.TerraformResource {
 
@@ -196,7 +196,7 @@ export class EventarcChannel extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/eventarc_channel google_eventarc_channel} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/eventarc_channel google_eventarc_channel} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

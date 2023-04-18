@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_network_endpoint
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#id ComputeNetworkEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#id ComputeNetworkEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -19,7 +19,7 @@ export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArgumen
 This is required for network endpoints of type GCE_VM_IP_PORT.
 The instance must be in the same zone of network endpoint group.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#instance ComputeNetworkEndpoint#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#instance ComputeNetworkEndpoint#instance}
   */
   readonly instance?: string;
   /**
@@ -27,13 +27,13 @@ The instance must be in the same zone of network endpoint group.
 to a VM in GCE (either the primary IP or as part of an aliased IP
 range).
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#ip_address ComputeNetworkEndpoint#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#ip_address ComputeNetworkEndpoint#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The network endpoint group this endpoint is part of.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#network_endpoint_group ComputeNetworkEndpoint#network_endpoint_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#network_endpoint_group ComputeNetworkEndpoint#network_endpoint_group}
   */
   readonly networkEndpointGroup: string;
   /**
@@ -41,38 +41,38 @@ range).
 **Note** 'port' is required unless the Network Endpoint Group is created
 with the type of 'GCE_VM_IP'
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#port ComputeNetworkEndpoint#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#port ComputeNetworkEndpoint#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#project ComputeNetworkEndpoint#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#project ComputeNetworkEndpoint#project}
   */
   readonly project?: string;
   /**
   * Zone where the containing network endpoint group is located.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#zone ComputeNetworkEndpoint#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#zone ComputeNetworkEndpoint#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#timeouts ComputeNetworkEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#timeouts ComputeNetworkEndpoint#timeouts}
   */
   readonly timeouts?: ComputeNetworkEndpointTimeouts;
 }
 export interface ComputeNetworkEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#create ComputeNetworkEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#create ComputeNetworkEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint#delete ComputeNetworkEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint#delete ComputeNetworkEndpoint#delete}
   */
   readonly delete?: string;
 }
 
-export function computeNetworkEndpointTimeoutsToTerraform(struct?: ComputeNetworkEndpointTimeoutsOutputReference | ComputeNetworkEndpointTimeouts | cdktf.IResolvable): any {
+export function computeNetworkEndpointTimeoutsToTerraform(struct?: ComputeNetworkEndpointTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,7 +92,7 @@ export class ComputeNetworkEndpointTimeoutsOutputReference extends cdktf.Complex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeNetworkEndpointTimeouts | cdktf.IResolvable | undefined {
@@ -165,7 +165,7 @@ export class ComputeNetworkEndpointTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint google_compute_network_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint google_compute_network_endpoint}
 */
 export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
 
@@ -179,7 +179,7 @@ export class ComputeNetworkEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_endpoint google_compute_network_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_endpoint google_compute_network_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
