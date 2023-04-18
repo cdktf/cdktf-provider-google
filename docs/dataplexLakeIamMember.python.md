@@ -1,3 +1,7 @@
+# `google_dataplex_lake_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_dataplex_lake_iam_member`](https://www.terraform.io/docs/providers/google/r/dataplex_lake_iam_member).
+
 # `dataplexLakeIamMember` Submodule <a name="`dataplexLakeIamMember` Submodule" id="@cdktf/provider-google.dataplexLakeIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

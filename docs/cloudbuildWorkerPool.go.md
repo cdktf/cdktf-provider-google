@@ -1,3 +1,7 @@
+# `google_cloudbuild_worker_pool`
+
+Refer to the Terraform Registory for docs: [`google_cloudbuild_worker_pool`](https://www.terraform.io/docs/providers/google/r/cloudbuild_worker_pool).
+
 # `cloudbuildWorkerPool` Submodule <a name="`cloudbuildWorkerPool` Submodule" id="@cdktf/provider-google.cloudbuildWorkerPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

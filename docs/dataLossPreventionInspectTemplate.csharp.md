@@ -1,3 +1,7 @@
+# `google_data_loss_prevention_inspect_template`
+
+Refer to the Terraform Registory for docs: [`google_data_loss_prevention_inspect_template`](https://www.terraform.io/docs/providers/google/r/data_loss_prevention_inspect_template).
+
 # `dataLossPreventionInspectTemplate` Submodule <a name="`dataLossPreventionInspectTemplate` Submodule" id="@cdktf/provider-google.dataLossPreventionInspectTemplate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

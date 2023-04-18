@@ -1,3 +1,7 @@
+# `google_game_services_realm`
+
+Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://www.terraform.io/docs/providers/google/r/game_services_realm).
+
 # `gameServicesRealm` Submodule <a name="`gameServicesRealm` Submodule" id="@cdktf/provider-google.gameServicesRealm"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

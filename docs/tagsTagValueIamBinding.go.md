@@ -1,3 +1,7 @@
+# `google_tags_tag_value_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_tags_tag_value_iam_binding`](https://www.terraform.io/docs/providers/google/r/tags_tag_value_iam_binding).
+
 # `tagsTagValueIamBinding` Submodule <a name="`tagsTagValueIamBinding` Submodule" id="@cdktf/provider-google.tagsTagValueIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_compute_region_autoscaler`
+
+Refer to the Terraform Registory for docs: [`google_compute_region_autoscaler`](https://www.terraform.io/docs/providers/google/r/compute_region_autoscaler).
+
 # `computeRegionAutoscaler` Submodule <a name="`computeRegionAutoscaler` Submodule" id="@cdktf/provider-google.computeRegionAutoscaler"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

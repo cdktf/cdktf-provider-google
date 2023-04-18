@@ -1,3 +1,7 @@
+# `google_compute_region_url_map`
+
+Refer to the Terraform Registory for docs: [`google_compute_region_url_map`](https://www.terraform.io/docs/providers/google/r/compute_region_url_map).
+
 # `computeRegionUrlMap` Submodule <a name="`computeRegionUrlMap` Submodule" id="@cdktf/provider-google.computeRegionUrlMap"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

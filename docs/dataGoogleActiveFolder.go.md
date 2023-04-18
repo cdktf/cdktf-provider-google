@@ -1,3 +1,7 @@
+# `data_google_active_folder`
+
+Refer to the Terraform Registory for docs: [`data_google_active_folder`](https://www.terraform.io/docs/providers/google/d/active_folder).
+
 # `dataGoogleActiveFolder` Submodule <a name="`dataGoogleActiveFolder` Submodule" id="@cdktf/provider-google.dataGoogleActiveFolder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

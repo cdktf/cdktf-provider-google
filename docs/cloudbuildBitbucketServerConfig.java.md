@@ -1,3 +1,7 @@
+# `google_cloudbuild_bitbucket_server_config`
+
+Refer to the Terraform Registory for docs: [`google_cloudbuild_bitbucket_server_config`](https://www.terraform.io/docs/providers/google/r/cloudbuild_bitbucket_server_config).
+
 # `cloudbuildBitbucketServerConfig` Submodule <a name="`cloudbuildBitbucketServerConfig` Submodule" id="@cdktf/provider-google.cloudbuildBitbucketServerConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

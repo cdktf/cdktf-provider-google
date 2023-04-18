@@ -1,3 +1,7 @@
+# `google_compute_instance_template`
+
+Refer to the Terraform Registory for docs: [`google_compute_instance_template`](https://www.terraform.io/docs/providers/google/r/compute_instance_template).
+
 # `computeInstanceTemplate` Submodule <a name="`computeInstanceTemplate` Submodule" id="@cdktf/provider-google.computeInstanceTemplate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

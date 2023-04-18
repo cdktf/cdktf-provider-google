@@ -1,3 +1,7 @@
+# `google_network_management_connectivity_test`
+
+Refer to the Terraform Registory for docs: [`google_network_management_connectivity_test`](https://www.terraform.io/docs/providers/google/r/network_management_connectivity_test).
+
 # `networkManagementConnectivityTest` Submodule <a name="`networkManagementConnectivityTest` Submodule" id="@cdktf/provider-google.networkManagementConnectivityTest"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

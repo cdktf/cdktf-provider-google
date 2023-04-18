@@ -1,3 +1,7 @@
+# `google_bigquery_connection_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_member`](https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_member).
+
 # `bigqueryConnectionIamMember` Submodule <a name="`bigqueryConnectionIamMember` Submodule" id="@cdktf/provider-google.bigqueryConnectionIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

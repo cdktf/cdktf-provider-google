@@ -1,3 +1,7 @@
+# `google_dataplex_lake_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_dataplex_lake_iam_binding`](https://www.terraform.io/docs/providers/google/r/dataplex_lake_iam_binding).
+
 # `dataplexLakeIamBinding` Submodule <a name="`dataplexLakeIamBinding` Submodule" id="@cdktf/provider-google.dataplexLakeIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

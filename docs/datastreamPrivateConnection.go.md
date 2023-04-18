@@ -1,3 +1,7 @@
+# `google_datastream_private_connection`
+
+Refer to the Terraform Registory for docs: [`google_datastream_private_connection`](https://www.terraform.io/docs/providers/google/r/datastream_private_connection).
+
 # `datastreamPrivateConnection` Submodule <a name="`datastreamPrivateConnection` Submodule" id="@cdktf/provider-google.datastreamPrivateConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

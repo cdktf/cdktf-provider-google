@@ -1,3 +1,7 @@
+# `google_logging_billing_account_bucket_config`
+
+Refer to the Terraform Registory for docs: [`google_logging_billing_account_bucket_config`](https://www.terraform.io/docs/providers/google/r/logging_billing_account_bucket_config).
+
 # `loggingBillingAccountBucketConfig` Submodule <a name="`loggingBillingAccountBucketConfig` Submodule" id="@cdktf/provider-google.loggingBillingAccountBucketConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

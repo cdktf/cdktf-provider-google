@@ -1,3 +1,7 @@
+# `google_dataproc_cluster_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_member`](https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_member).
+
 # `dataprocClusterIamMember` Submodule <a name="`dataprocClusterIamMember` Submodule" id="@cdktf/provider-google.dataprocClusterIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

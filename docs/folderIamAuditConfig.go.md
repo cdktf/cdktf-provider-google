@@ -1,3 +1,7 @@
+# `google_folder_iam_audit_config`
+
+Refer to the Terraform Registory for docs: [`google_folder_iam_audit_config`](https://www.terraform.io/docs/providers/google/r/folder_iam_audit_config).
+
 # `folderIamAuditConfig` Submodule <a name="`folderIamAuditConfig` Submodule" id="@cdktf/provider-google.folderIamAuditConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

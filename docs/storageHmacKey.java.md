@@ -1,3 +1,7 @@
+# `google_storage_hmac_key`
+
+Refer to the Terraform Registory for docs: [`google_storage_hmac_key`](https://www.terraform.io/docs/providers/google/r/storage_hmac_key).
+
 # `storageHmacKey` Submodule <a name="`storageHmacKey` Submodule" id="@cdktf/provider-google.storageHmacKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

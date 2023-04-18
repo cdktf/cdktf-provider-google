@@ -1,3 +1,7 @@
+# `google_iap_web_type_compute_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_iap_web_type_compute_iam_binding`](https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding).
+
 # `iapWebTypeComputeIamBinding` Submodule <a name="`iapWebTypeComputeIamBinding` Submodule" id="@cdktf/provider-google.iapWebTypeComputeIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

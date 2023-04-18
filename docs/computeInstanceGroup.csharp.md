@@ -1,3 +1,7 @@
+# `google_compute_instance_group`
+
+Refer to the Terraform Registory for docs: [`google_compute_instance_group`](https://www.terraform.io/docs/providers/google/r/compute_instance_group).
+
 # `computeInstanceGroup` Submodule <a name="`computeInstanceGroup` Submodule" id="@cdktf/provider-google.computeInstanceGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_sql_database`
+
+Refer to the Terraform Registory for docs: [`google_sql_database`](https://www.terraform.io/docs/providers/google/r/sql_database).
+
 # `sqlDatabase` Submodule <a name="`sqlDatabase` Submodule" id="@cdktf/provider-google.sqlDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

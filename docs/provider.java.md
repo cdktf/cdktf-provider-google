@@ -1,3 +1,7 @@
+# `provider`
+
+Refer to the Terraform Registory for docs: [`google`](https://www.terraform.io/docs/providers/google).
+
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-google.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

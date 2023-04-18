@@ -1,3 +1,7 @@
+# `google_datastream_connection_profile`
+
+Refer to the Terraform Registory for docs: [`google_datastream_connection_profile`](https://www.terraform.io/docs/providers/google/r/datastream_connection_profile).
+
 # `datastreamConnectionProfile` Submodule <a name="`datastreamConnectionProfile` Submodule" id="@cdktf/provider-google.datastreamConnectionProfile"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

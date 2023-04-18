@@ -1,3 +1,7 @@
+# `google_compute_router`
+
+Refer to the Terraform Registory for docs: [`google_compute_router`](https://www.terraform.io/docs/providers/google/r/compute_router).
+
 # `computeRouter` Submodule <a name="`computeRouter` Submodule" id="@cdktf/provider-google.computeRouter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

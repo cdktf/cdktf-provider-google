@@ -1,3 +1,7 @@
+# `google_compute_image_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_compute_image_iam_binding`](https://www.terraform.io/docs/providers/google/r/compute_image_iam_binding).
+
 # `computeImageIamBinding` Submodule <a name="`computeImageIamBinding` Submodule" id="@cdktf/provider-google.computeImageIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

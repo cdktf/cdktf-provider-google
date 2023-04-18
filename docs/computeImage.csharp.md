@@ -1,3 +1,7 @@
+# `google_compute_image`
+
+Refer to the Terraform Registory for docs: [`google_compute_image`](https://www.terraform.io/docs/providers/google/r/compute_image).
+
 # `computeImage` Submodule <a name="`computeImage` Submodule" id="@cdktf/provider-google.computeImage"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

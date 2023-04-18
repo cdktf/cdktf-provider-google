@@ -1,3 +1,7 @@
+# `google_privateca_ca_pool`
+
+Refer to the Terraform Registory for docs: [`google_privateca_ca_pool`](https://www.terraform.io/docs/providers/google/r/privateca_ca_pool).
+
 # `privatecaCaPool` Submodule <a name="`privatecaCaPool` Submodule" id="@cdktf/provider-google.privatecaCaPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

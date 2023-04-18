@@ -1,3 +1,7 @@
+# `google_compute_region_target_https_proxy`
+
+Refer to the Terraform Registory for docs: [`google_compute_region_target_https_proxy`](https://www.terraform.io/docs/providers/google/r/compute_region_target_https_proxy).
+
 # `computeRegionTargetHttpsProxy` Submodule <a name="`computeRegionTargetHttpsProxy` Submodule" id="@cdktf/provider-google.computeRegionTargetHttpsProxy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

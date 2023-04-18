@@ -1,3 +1,7 @@
+# `google_logging_project_bucket_config`
+
+Refer to the Terraform Registory for docs: [`google_logging_project_bucket_config`](https://www.terraform.io/docs/providers/google/r/logging_project_bucket_config).
+
 # `loggingProjectBucketConfig` Submodule <a name="`loggingProjectBucketConfig` Submodule" id="@cdktf/provider-google.loggingProjectBucketConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

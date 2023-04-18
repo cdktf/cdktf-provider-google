@@ -1,3 +1,7 @@
+# `google_pubsub_topic_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_pubsub_topic_iam_binding`](https://www.terraform.io/docs/providers/google/r/pubsub_topic_iam_binding).
+
 # `pubsubTopicIamBinding` Submodule <a name="`pubsubTopicIamBinding` Submodule" id="@cdktf/provider-google.pubsubTopicIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

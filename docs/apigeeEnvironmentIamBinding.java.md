@@ -1,3 +1,7 @@
+# `google_apigee_environment_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_apigee_environment_iam_binding`](https://www.terraform.io/docs/providers/google/r/apigee_environment_iam_binding).
+
 # `apigeeEnvironmentIamBinding` Submodule <a name="`apigeeEnvironmentIamBinding` Submodule" id="@cdktf/provider-google.apigeeEnvironmentIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

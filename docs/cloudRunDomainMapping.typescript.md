@@ -1,3 +1,7 @@
+# `google_cloud_run_domain_mapping`
+
+Refer to the Terraform Registory for docs: [`google_cloud_run_domain_mapping`](https://www.terraform.io/docs/providers/google/r/cloud_run_domain_mapping).
+
 # `cloudRunDomainMapping` Submodule <a name="`cloudRunDomainMapping` Submodule" id="@cdktf/provider-google.cloudRunDomainMapping"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

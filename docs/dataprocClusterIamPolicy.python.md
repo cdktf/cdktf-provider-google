@@ -1,3 +1,7 @@
+# `google_dataproc_cluster_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_dataproc_cluster_iam_policy`](https://www.terraform.io/docs/providers/google/r/dataproc_cluster_iam_policy).
+
 # `dataprocClusterIamPolicy` Submodule <a name="`dataprocClusterIamPolicy` Submodule" id="@cdktf/provider-google.dataprocClusterIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_dataproc_metastore_service`
+
+Refer to the Terraform Registory for docs: [`google_dataproc_metastore_service`](https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service).
+
 # `dataprocMetastoreService` Submodule <a name="`dataprocMetastoreService` Submodule" id="@cdktf/provider-google.dataprocMetastoreService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

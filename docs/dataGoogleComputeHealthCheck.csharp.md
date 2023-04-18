@@ -1,3 +1,7 @@
+# `data_google_compute_health_check`
+
+Refer to the Terraform Registory for docs: [`data_google_compute_health_check`](https://www.terraform.io/docs/providers/google/d/compute_health_check).
+
 # `dataGoogleComputeHealthCheck` Submodule <a name="`dataGoogleComputeHealthCheck` Submodule" id="@cdktf/provider-google.dataGoogleComputeHealthCheck"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

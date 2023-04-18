@@ -1,3 +1,7 @@
+# `google_bigquery_dataset_access`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_dataset_access`](https://www.terraform.io/docs/providers/google/r/bigquery_dataset_access).
+
 # `bigqueryDatasetAccess` Submodule <a name="`bigqueryDatasetAccess` Submodule" id="@cdktf/provider-google.bigqueryDatasetAccess"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_kms_key_ring_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_kms_key_ring_iam_policy`](https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_policy).
+
 # `kmsKeyRingIamPolicy` Submodule <a name="`kmsKeyRingIamPolicy` Submodule" id="@cdktf/provider-google.kmsKeyRingIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

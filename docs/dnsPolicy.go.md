@@ -1,3 +1,7 @@
+# `google_dns_policy`
+
+Refer to the Terraform Registory for docs: [`google_dns_policy`](https://www.terraform.io/docs/providers/google/r/dns_policy).
+
 # `dnsPolicy` Submodule <a name="`dnsPolicy` Submodule" id="@cdktf/provider-google.dnsPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

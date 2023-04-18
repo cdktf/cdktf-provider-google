@@ -1,3 +1,7 @@
+# `google_sourcerepo_repository_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_sourcerepo_repository_iam_binding`](https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_binding).
+
 # `sourcerepoRepositoryIamBinding` Submodule <a name="`sourcerepoRepositoryIamBinding` Submodule" id="@cdktf/provider-google.sourcerepoRepositoryIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

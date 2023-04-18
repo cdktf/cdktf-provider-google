@@ -1,3 +1,7 @@
+# `google_compute_instance_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_compute_instance_iam_policy`](https://www.terraform.io/docs/providers/google/r/compute_instance_iam_policy).
+
 # `computeInstanceIamPolicy` Submodule <a name="`computeInstanceIamPolicy` Submodule" id="@cdktf/provider-google.computeInstanceIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

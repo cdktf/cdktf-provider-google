@@ -1,3 +1,7 @@
+# `google_gke_backup_backup_plan_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_gke_backup_backup_plan_iam_binding`](https://www.terraform.io/docs/providers/google/r/gke_backup_backup_plan_iam_binding).
+
 # `gkeBackupBackupPlanIamBinding` Submodule <a name="`gkeBackupBackupPlanIamBinding` Submodule" id="@cdktf/provider-google.gkeBackupBackupPlanIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

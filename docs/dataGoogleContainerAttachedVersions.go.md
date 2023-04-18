@@ -1,3 +1,7 @@
+# `data_google_container_attached_versions`
+
+Refer to the Terraform Registory for docs: [`data_google_container_attached_versions`](https://www.terraform.io/docs/providers/google/d/container_attached_versions).
+
 # `dataGoogleContainerAttachedVersions` Submodule <a name="`dataGoogleContainerAttachedVersions` Submodule" id="@cdktf/provider-google.dataGoogleContainerAttachedVersions"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_compute_backend_bucket_signed_url_key`
+
+Refer to the Terraform Registory for docs: [`google_compute_backend_bucket_signed_url_key`](https://www.terraform.io/docs/providers/google/r/compute_backend_bucket_signed_url_key).
+
 # `computeBackendBucketSignedUrlKey` Submodule <a name="`computeBackendBucketSignedUrlKey` Submodule" id="@cdktf/provider-google.computeBackendBucketSignedUrlKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

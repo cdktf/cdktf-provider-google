@@ -1,3 +1,7 @@
+# `google_dialogflow_cx_intent`
+
+Refer to the Terraform Registory for docs: [`google_dialogflow_cx_intent`](https://www.terraform.io/docs/providers/google/r/dialogflow_cx_intent).
+
 # `dialogflowCxIntent` Submodule <a name="`dialogflowCxIntent` Submodule" id="@cdktf/provider-google.dialogflowCxIntent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

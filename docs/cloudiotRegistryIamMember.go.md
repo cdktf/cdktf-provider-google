@@ -1,3 +1,7 @@
+# `google_cloudiot_registry_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_cloudiot_registry_iam_member`](https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_member).
+
 # `cloudiotRegistryIamMember` Submodule <a name="`cloudiotRegistryIamMember` Submodule" id="@cdktf/provider-google.cloudiotRegistryIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

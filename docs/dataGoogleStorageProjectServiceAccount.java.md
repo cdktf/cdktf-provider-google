@@ -1,3 +1,7 @@
+# `data_google_storage_project_service_account`
+
+Refer to the Terraform Registory for docs: [`data_google_storage_project_service_account`](https://www.terraform.io/docs/providers/google/d/storage_project_service_account).
+
 # `dataGoogleStorageProjectServiceAccount` Submodule <a name="`dataGoogleStorageProjectServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleStorageProjectServiceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

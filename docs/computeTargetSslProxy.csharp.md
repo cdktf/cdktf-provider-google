@@ -1,3 +1,7 @@
+# `google_compute_target_ssl_proxy`
+
+Refer to the Terraform Registory for docs: [`google_compute_target_ssl_proxy`](https://www.terraform.io/docs/providers/google/r/compute_target_ssl_proxy).
+
 # `computeTargetSslProxy` Submodule <a name="`computeTargetSslProxy` Submodule" id="@cdktf/provider-google.computeTargetSslProxy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_storage_default_object_access_control`
+
+Refer to the Terraform Registory for docs: [`google_storage_default_object_access_control`](https://www.terraform.io/docs/providers/google/r/storage_default_object_access_control).
+
 # `storageDefaultObjectAccessControl` Submodule <a name="`storageDefaultObjectAccessControl` Submodule" id="@cdktf/provider-google.storageDefaultObjectAccessControl"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_storage_bucket_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_binding`](https://www.terraform.io/docs/providers/google/r/storage_bucket_iam_binding).
+
 # `storageBucketIamBinding` Submodule <a name="`storageBucketIamBinding` Submodule" id="@cdktf/provider-google.storageBucketIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

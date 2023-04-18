@@ -1,3 +1,7 @@
+# `data_google_billing_account`
+
+Refer to the Terraform Registory for docs: [`data_google_billing_account`](https://www.terraform.io/docs/providers/google/d/billing_account).
+
 # `dataGoogleBillingAccount` Submodule <a name="`dataGoogleBillingAccount` Submodule" id="@cdktf/provider-google.dataGoogleBillingAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

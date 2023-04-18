@@ -1,3 +1,7 @@
+# `google_project_default_service_accounts`
+
+Refer to the Terraform Registory for docs: [`google_project_default_service_accounts`](https://www.terraform.io/docs/providers/google/r/project_default_service_accounts).
+
 # `projectDefaultServiceAccounts` Submodule <a name="`projectDefaultServiceAccounts` Submodule" id="@cdktf/provider-google.projectDefaultServiceAccounts"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

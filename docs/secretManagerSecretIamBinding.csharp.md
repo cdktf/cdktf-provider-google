@@ -1,3 +1,7 @@
+# `google_secret_manager_secret_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_secret_manager_secret_iam_binding`](https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_binding).
+
 # `secretManagerSecretIamBinding` Submodule <a name="`secretManagerSecretIamBinding` Submodule" id="@cdktf/provider-google.secretManagerSecretIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

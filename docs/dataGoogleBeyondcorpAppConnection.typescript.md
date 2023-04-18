@@ -1,3 +1,7 @@
+# `data_google_beyondcorp_app_connection`
+
+Refer to the Terraform Registory for docs: [`data_google_beyondcorp_app_connection`](https://www.terraform.io/docs/providers/google/d/beyondcorp_app_connection).
+
 # `dataGoogleBeyondcorpAppConnection` Submodule <a name="`dataGoogleBeyondcorpAppConnection` Submodule" id="@cdktf/provider-google.dataGoogleBeyondcorpAppConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_active_directory_domain_trust`
+
+Refer to the Terraform Registory for docs: [`google_active_directory_domain_trust`](https://www.terraform.io/docs/providers/google/r/active_directory_domain_trust).
+
 # `activeDirectoryDomainTrust` Submodule <a name="`activeDirectoryDomainTrust` Submodule" id="@cdktf/provider-google.activeDirectoryDomainTrust"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

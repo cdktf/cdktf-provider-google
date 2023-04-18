@@ -1,3 +1,7 @@
+# `google_compute_address`
+
+Refer to the Terraform Registory for docs: [`google_compute_address`](https://www.terraform.io/docs/providers/google/r/compute_address).
+
 # `computeAddress` Submodule <a name="`computeAddress` Submodule" id="@cdktf/provider-google.computeAddress"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_identity_platform_tenant_inbound_saml_config`
+
+Refer to the Terraform Registory for docs: [`google_identity_platform_tenant_inbound_saml_config`](https://www.terraform.io/docs/providers/google/r/identity_platform_tenant_inbound_saml_config).
+
 # `identityPlatformTenantInboundSamlConfig` Submodule <a name="`identityPlatformTenantInboundSamlConfig` Submodule" id="@cdktf/provider-google.identityPlatformTenantInboundSamlConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

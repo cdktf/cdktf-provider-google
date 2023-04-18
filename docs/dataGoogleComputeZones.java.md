@@ -1,3 +1,7 @@
+# `data_google_compute_zones`
+
+Refer to the Terraform Registory for docs: [`data_google_compute_zones`](https://www.terraform.io/docs/providers/google/d/compute_zones).
+
 # `dataGoogleComputeZones` Submodule <a name="`dataGoogleComputeZones` Submodule" id="@cdktf/provider-google.dataGoogleComputeZones"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

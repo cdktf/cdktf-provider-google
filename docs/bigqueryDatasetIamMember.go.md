@@ -1,3 +1,7 @@
+# `google_bigquery_dataset_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_member`](https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member).
+
 # `bigqueryDatasetIamMember` Submodule <a name="`bigqueryDatasetIamMember` Submodule" id="@cdktf/provider-google.bigqueryDatasetIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

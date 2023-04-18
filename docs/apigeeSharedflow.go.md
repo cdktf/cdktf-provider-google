@@ -1,3 +1,7 @@
+# `google_apigee_sharedflow`
+
+Refer to the Terraform Registory for docs: [`google_apigee_sharedflow`](https://www.terraform.io/docs/providers/google/r/apigee_sharedflow).
+
 # `apigeeSharedflow` Submodule <a name="`apigeeSharedflow` Submodule" id="@cdktf/provider-google.apigeeSharedflow"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

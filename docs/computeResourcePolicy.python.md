@@ -1,3 +1,7 @@
+# `google_compute_resource_policy`
+
+Refer to the Terraform Registory for docs: [`google_compute_resource_policy`](https://www.terraform.io/docs/providers/google/r/compute_resource_policy).
+
 # `computeResourcePolicy` Submodule <a name="`computeResourcePolicy` Submodule" id="@cdktf/provider-google.computeResourcePolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

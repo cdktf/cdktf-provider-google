@@ -1,3 +1,7 @@
+# `google_eventarc_google_channel_config`
+
+Refer to the Terraform Registory for docs: [`google_eventarc_google_channel_config`](https://www.terraform.io/docs/providers/google/r/eventarc_google_channel_config).
+
 # `eventarcGoogleChannelConfig` Submodule <a name="`eventarcGoogleChannelConfig` Submodule" id="@cdktf/provider-google.eventarcGoogleChannelConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

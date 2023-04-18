@@ -1,3 +1,7 @@
+# `data_google_storage_transfer_project_service_account`
+
+Refer to the Terraform Registory for docs: [`data_google_storage_transfer_project_service_account`](https://www.terraform.io/docs/providers/google/d/storage_transfer_project_service_account).
+
 # `dataGoogleStorageTransferProjectServiceAccount` Submodule <a name="`dataGoogleStorageTransferProjectServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleStorageTransferProjectServiceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

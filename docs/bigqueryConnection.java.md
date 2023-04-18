@@ -1,3 +1,7 @@
+# `google_bigquery_connection`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_connection`](https://www.terraform.io/docs/providers/google/r/bigquery_connection).
+
 # `bigqueryConnection` Submodule <a name="`bigqueryConnection` Submodule" id="@cdktf/provider-google.bigqueryConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `data_google_container_aws_versions`
+
+Refer to the Terraform Registory for docs: [`data_google_container_aws_versions`](https://www.terraform.io/docs/providers/google/d/container_aws_versions).
+
 # `dataGoogleContainerAwsVersions` Submodule <a name="`dataGoogleContainerAwsVersions` Submodule" id="@cdktf/provider-google.dataGoogleContainerAwsVersions"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

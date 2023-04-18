@@ -1,3 +1,7 @@
+# `google_compute_snapshot_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_member`](https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_member).
+
 # `computeSnapshotIamMember` Submodule <a name="`computeSnapshotIamMember` Submodule" id="@cdktf/provider-google.computeSnapshotIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

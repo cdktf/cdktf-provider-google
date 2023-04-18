@@ -1,3 +1,7 @@
+# `data_google_compute_network_endpoint_group`
+
+Refer to the Terraform Registory for docs: [`data_google_compute_network_endpoint_group`](https://www.terraform.io/docs/providers/google/d/compute_network_endpoint_group).
+
 # `dataGoogleComputeNetworkEndpointGroup` Submodule <a name="`dataGoogleComputeNetworkEndpointGroup` Submodule" id="@cdktf/provider-google.dataGoogleComputeNetworkEndpointGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

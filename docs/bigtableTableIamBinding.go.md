@@ -1,3 +1,7 @@
+# `google_bigtable_table_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_bigtable_table_iam_binding`](https://www.terraform.io/docs/providers/google/r/bigtable_table_iam_binding).
+
 # `bigtableTableIamBinding` Submodule <a name="`bigtableTableIamBinding` Submodule" id="@cdktf/provider-google.bigtableTableIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

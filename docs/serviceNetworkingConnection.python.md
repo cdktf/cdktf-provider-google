@@ -1,3 +1,7 @@
+# `google_service_networking_connection`
+
+Refer to the Terraform Registory for docs: [`google_service_networking_connection`](https://www.terraform.io/docs/providers/google/r/service_networking_connection).
+
 # `serviceNetworkingConnection` Submodule <a name="`serviceNetworkingConnection` Submodule" id="@cdktf/provider-google.serviceNetworkingConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

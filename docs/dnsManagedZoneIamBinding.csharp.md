@@ -1,3 +1,7 @@
+# `google_dns_managed_zone_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_binding`](https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding).
+
 # `dnsManagedZoneIamBinding` Submodule <a name="`dnsManagedZoneIamBinding` Submodule" id="@cdktf/provider-google.dnsManagedZoneIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

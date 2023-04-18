@@ -1,3 +1,7 @@
+# `google_cloud_identity_group`
+
+Refer to the Terraform Registory for docs: [`google_cloud_identity_group`](https://www.terraform.io/docs/providers/google/r/cloud_identity_group).
+
 # `cloudIdentityGroup` Submodule <a name="`cloudIdentityGroup` Submodule" id="@cdktf/provider-google.cloudIdentityGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

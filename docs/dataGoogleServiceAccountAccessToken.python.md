@@ -1,3 +1,7 @@
+# `data_google_service_account_access_token`
+
+Refer to the Terraform Registory for docs: [`data_google_service_account_access_token`](https://www.terraform.io/docs/providers/google/d/service_account_access_token).
+
 # `dataGoogleServiceAccountAccessToken` Submodule <a name="`dataGoogleServiceAccountAccessToken` Submodule" id="@cdktf/provider-google.dataGoogleServiceAccountAccessToken"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

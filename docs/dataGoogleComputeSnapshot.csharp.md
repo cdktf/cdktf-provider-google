@@ -1,3 +1,7 @@
+# `data_google_compute_snapshot`
+
+Refer to the Terraform Registory for docs: [`data_google_compute_snapshot`](https://www.terraform.io/docs/providers/google/d/compute_snapshot).
+
 # `dataGoogleComputeSnapshot` Submodule <a name="`dataGoogleComputeSnapshot` Submodule" id="@cdktf/provider-google.dataGoogleComputeSnapshot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

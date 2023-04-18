@@ -1,3 +1,7 @@
+# `google_apigee_addons_config`
+
+Refer to the Terraform Registory for docs: [`google_apigee_addons_config`](https://www.terraform.io/docs/providers/google/r/apigee_addons_config).
+
 # `apigeeAddonsConfig` Submodule <a name="`apigeeAddonsConfig` Submodule" id="@cdktf/provider-google.apigeeAddonsConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

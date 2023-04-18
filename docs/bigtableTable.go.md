@@ -1,3 +1,7 @@
+# `google_bigtable_table`
+
+Refer to the Terraform Registory for docs: [`google_bigtable_table`](https://www.terraform.io/docs/providers/google/r/bigtable_table).
+
 # `bigtableTable` Submodule <a name="`bigtableTable` Submodule" id="@cdktf/provider-google.bigtableTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

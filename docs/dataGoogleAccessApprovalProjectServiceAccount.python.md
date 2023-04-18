@@ -1,3 +1,7 @@
+# `data_google_access_approval_project_service_account`
+
+Refer to the Terraform Registory for docs: [`data_google_access_approval_project_service_account`](https://www.terraform.io/docs/providers/google/d/access_approval_project_service_account).
+
 # `dataGoogleAccessApprovalProjectServiceAccount` Submodule <a name="`dataGoogleAccessApprovalProjectServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleAccessApprovalProjectServiceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

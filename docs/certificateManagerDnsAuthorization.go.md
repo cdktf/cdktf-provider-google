@@ -1,3 +1,7 @@
+# `google_certificate_manager_dns_authorization`
+
+Refer to the Terraform Registory for docs: [`google_certificate_manager_dns_authorization`](https://www.terraform.io/docs/providers/google/r/certificate_manager_dns_authorization).
+
 # `certificateManagerDnsAuthorization` Submodule <a name="`certificateManagerDnsAuthorization` Submodule" id="@cdktf/provider-google.certificateManagerDnsAuthorization"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_binary_authorization_attestor_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_binary_authorization_attestor_iam_policy`](https://www.terraform.io/docs/providers/google/r/binary_authorization_attestor_iam_policy).
+
 # `binaryAuthorizationAttestorIamPolicy` Submodule <a name="`binaryAuthorizationAttestorIamPolicy` Submodule" id="@cdktf/provider-google.binaryAuthorizationAttestorIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

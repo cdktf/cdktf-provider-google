@@ -1,3 +1,7 @@
+# `google_storage_transfer_agent_pool`
+
+Refer to the Terraform Registory for docs: [`google_storage_transfer_agent_pool`](https://www.terraform.io/docs/providers/google/r/storage_transfer_agent_pool).
+
 # `storageTransferAgentPool` Submodule <a name="`storageTransferAgentPool` Submodule" id="@cdktf/provider-google.storageTransferAgentPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

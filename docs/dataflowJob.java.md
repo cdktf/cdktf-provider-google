@@ -1,3 +1,7 @@
+# `google_dataflow_job`
+
+Refer to the Terraform Registory for docs: [`google_dataflow_job`](https://www.terraform.io/docs/providers/google/r/dataflow_job).
+
 # `dataflowJob` Submodule <a name="`dataflowJob` Submodule" id="@cdktf/provider-google.dataflowJob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

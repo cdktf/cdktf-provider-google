@@ -1,3 +1,7 @@
+# `google_folder_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_folder_iam_binding`](https://www.terraform.io/docs/providers/google/r/folder_iam_binding).
+
 # `folderIamBinding` Submodule <a name="`folderIamBinding` Submodule" id="@cdktf/provider-google.folderIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_dataproc_metastore_service_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_dataproc_metastore_service_iam_policy`](https://www.terraform.io/docs/providers/google/r/dataproc_metastore_service_iam_policy).
+
 # `dataprocMetastoreServiceIamPolicy` Submodule <a name="`dataprocMetastoreServiceIamPolicy` Submodule" id="@cdktf/provider-google.dataprocMetastoreServiceIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
