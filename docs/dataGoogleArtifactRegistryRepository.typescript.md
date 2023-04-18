@@ -1,3 +1,7 @@
+# `data_google_artifact_registry_repository`
+
+Refer to the Terraform Registory for docs: [`data_google_artifact_registry_repository`](https://www.terraform.io/docs/providers/google/d/artifact_registry_repository).
+
 # `dataGoogleArtifactRegistryRepository` Submodule <a name="`dataGoogleArtifactRegistryRepository` Submodule" id="@cdktf/provider-google.dataGoogleArtifactRegistryRepository"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

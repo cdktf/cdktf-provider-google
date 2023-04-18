@@ -1,3 +1,7 @@
+# `google_monitoring_metric_descriptor`
+
+Refer to the Terraform Registory for docs: [`google_monitoring_metric_descriptor`](https://www.terraform.io/docs/providers/google/r/monitoring_metric_descriptor).
+
 # `monitoringMetricDescriptor` Submodule <a name="`monitoringMetricDescriptor` Submodule" id="@cdktf/provider-google.monitoringMetricDescriptor"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

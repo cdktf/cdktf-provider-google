@@ -1,3 +1,7 @@
+# `google_bigquery_analytics_hub_data_exchange`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_analytics_hub_data_exchange`](https://www.terraform.io/docs/providers/google/r/bigquery_analytics_hub_data_exchange).
+
 # `bigqueryAnalyticsHubDataExchange` Submodule <a name="`bigqueryAnalyticsHubDataExchange` Submodule" id="@cdktf/provider-google.bigqueryAnalyticsHubDataExchange"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_apigee_instance_attachment`
+
+Refer to the Terraform Registory for docs: [`google_apigee_instance_attachment`](https://www.terraform.io/docs/providers/google/r/apigee_instance_attachment).
+
 # `apigeeInstanceAttachment` Submodule <a name="`apigeeInstanceAttachment` Submodule" id="@cdktf/provider-google.apigeeInstanceAttachment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

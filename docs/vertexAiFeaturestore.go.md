@@ -1,3 +1,7 @@
+# `google_vertex_ai_featurestore`
+
+Refer to the Terraform Registory for docs: [`google_vertex_ai_featurestore`](https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore).
+
 # `vertexAiFeaturestore` Submodule <a name="`vertexAiFeaturestore` Submodule" id="@cdktf/provider-google.vertexAiFeaturestore"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

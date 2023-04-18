@@ -1,3 +1,7 @@
+# `google_cloud_asset_folder_feed`
+
+Refer to the Terraform Registory for docs: [`google_cloud_asset_folder_feed`](https://www.terraform.io/docs/providers/google/r/cloud_asset_folder_feed).
+
 # `cloudAssetFolderFeed` Submodule <a name="`cloudAssetFolderFeed` Submodule" id="@cdktf/provider-google.cloudAssetFolderFeed"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

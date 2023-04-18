@@ -1,3 +1,7 @@
+# `google_organization_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_organization_iam_policy`](https://www.terraform.io/docs/providers/google/r/organization_iam_policy).
+
 # `organizationIamPolicy` Submodule <a name="`organizationIamPolicy` Submodule" id="@cdktf/provider-google.organizationIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

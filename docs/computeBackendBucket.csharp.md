@@ -1,3 +1,7 @@
+# `google_compute_backend_bucket`
+
+Refer to the Terraform Registory for docs: [`google_compute_backend_bucket`](https://www.terraform.io/docs/providers/google/r/compute_backend_bucket).
+
 # `computeBackendBucket` Submodule <a name="`computeBackendBucket` Submodule" id="@cdktf/provider-google.computeBackendBucket"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_logging_organization_sink`
+
+Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](https://www.terraform.io/docs/providers/google/r/logging_organization_sink).
+
 # `loggingOrganizationSink` Submodule <a name="`loggingOrganizationSink` Submodule" id="@cdktf/provider-google.loggingOrganizationSink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

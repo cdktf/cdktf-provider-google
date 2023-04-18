@@ -1,3 +1,7 @@
+# `google_compute_instance_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_compute_instance_iam_binding`](https://www.terraform.io/docs/providers/google/r/compute_instance_iam_binding).
+
 # `computeInstanceIamBinding` Submodule <a name="`computeInstanceIamBinding` Submodule" id="@cdktf/provider-google.computeInstanceIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

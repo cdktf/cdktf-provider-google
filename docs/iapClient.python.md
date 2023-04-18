@@ -1,3 +1,7 @@
+# `google_iap_client`
+
+Refer to the Terraform Registory for docs: [`google_iap_client`](https://www.terraform.io/docs/providers/google/r/iap_client).
+
 # `iapClient` Submodule <a name="`iapClient` Submodule" id="@cdktf/provider-google.iapClient"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

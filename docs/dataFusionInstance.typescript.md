@@ -1,3 +1,7 @@
+# `google_data_fusion_instance`
+
+Refer to the Terraform Registory for docs: [`google_data_fusion_instance`](https://www.terraform.io/docs/providers/google/r/data_fusion_instance).
+
 # `dataFusionInstance` Submodule <a name="`dataFusionInstance` Submodule" id="@cdktf/provider-google.dataFusionInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

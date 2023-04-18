@@ -1,3 +1,7 @@
+# `google_folder_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_folder_iam_member`](https://www.terraform.io/docs/providers/google/r/folder_iam_member).
+
 # `folderIamMember` Submodule <a name="`folderIamMember` Submodule" id="@cdktf/provider-google.folderIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

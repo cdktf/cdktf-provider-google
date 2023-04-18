@@ -1,3 +1,7 @@
+# `google_bigquery_data_transfer_config`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_data_transfer_config`](https://www.terraform.io/docs/providers/google/r/bigquery_data_transfer_config).
+
 # `bigqueryDataTransferConfig` Submodule <a name="`bigqueryDataTransferConfig` Submodule" id="@cdktf/provider-google.bigqueryDataTransferConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

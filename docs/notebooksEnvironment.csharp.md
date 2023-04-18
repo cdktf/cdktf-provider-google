@@ -1,3 +1,7 @@
+# `google_notebooks_environment`
+
+Refer to the Terraform Registory for docs: [`google_notebooks_environment`](https://www.terraform.io/docs/providers/google/r/notebooks_environment).
+
 # `notebooksEnvironment` Submodule <a name="`notebooksEnvironment` Submodule" id="@cdktf/provider-google.notebooksEnvironment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

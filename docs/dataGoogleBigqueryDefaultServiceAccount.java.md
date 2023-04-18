@@ -1,3 +1,7 @@
+# `data_google_bigquery_default_service_account`
+
+Refer to the Terraform Registory for docs: [`data_google_bigquery_default_service_account`](https://www.terraform.io/docs/providers/google/d/bigquery_default_service_account).
+
 # `dataGoogleBigqueryDefaultServiceAccount` Submodule <a name="`dataGoogleBigqueryDefaultServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

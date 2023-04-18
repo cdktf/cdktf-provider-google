@@ -1,3 +1,7 @@
+# `google_cloudiot_registry_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_cloudiot_registry_iam_policy`](https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy).
+
 # `cloudiotRegistryIamPolicy` Submodule <a name="`cloudiotRegistryIamPolicy` Submodule" id="@cdktf/provider-google.cloudiotRegistryIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

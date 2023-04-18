@@ -1,3 +1,7 @@
+# `google_iam_workforce_pool`
+
+Refer to the Terraform Registory for docs: [`google_iam_workforce_pool`](https://www.terraform.io/docs/providers/google/r/iam_workforce_pool).
+
 # `iamWorkforcePool` Submodule <a name="`iamWorkforcePool` Submodule" id="@cdktf/provider-google.iamWorkforcePool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

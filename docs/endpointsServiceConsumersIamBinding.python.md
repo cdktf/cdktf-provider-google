@@ -1,3 +1,7 @@
+# `google_endpoints_service_consumers_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_iam_binding`](https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_binding).
+
 # `endpointsServiceConsumersIamBinding` Submodule <a name="`endpointsServiceConsumersIamBinding` Submodule" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

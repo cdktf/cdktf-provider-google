@@ -1,3 +1,7 @@
+# `google_billing_account_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_billing_account_iam_binding`](https://www.terraform.io/docs/providers/google/r/billing_account_iam_binding).
+
 # `billingAccountIamBinding` Submodule <a name="`billingAccountIamBinding` Submodule" id="@cdktf/provider-google.billingAccountIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

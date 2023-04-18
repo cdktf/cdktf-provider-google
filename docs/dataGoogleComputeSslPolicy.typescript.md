@@ -1,3 +1,7 @@
+# `data_google_compute_ssl_policy`
+
+Refer to the Terraform Registory for docs: [`data_google_compute_ssl_policy`](https://www.terraform.io/docs/providers/google/d/compute_ssl_policy).
+
 # `dataGoogleComputeSslPolicy` Submodule <a name="`dataGoogleComputeSslPolicy` Submodule" id="@cdktf/provider-google.dataGoogleComputeSslPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

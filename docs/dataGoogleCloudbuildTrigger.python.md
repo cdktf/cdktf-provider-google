@@ -1,3 +1,7 @@
+# `data_google_cloudbuild_trigger`
+
+Refer to the Terraform Registory for docs: [`data_google_cloudbuild_trigger`](https://www.terraform.io/docs/providers/google/d/cloudbuild_trigger).
+
 # `dataGoogleCloudbuildTrigger` Submodule <a name="`dataGoogleCloudbuildTrigger` Submodule" id="@cdktf/provider-google.dataGoogleCloudbuildTrigger"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

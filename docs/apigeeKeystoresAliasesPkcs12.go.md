@@ -1,3 +1,7 @@
+# `google_apigee_keystores_aliases_pkcs12`
+
+Refer to the Terraform Registory for docs: [`google_apigee_keystores_aliases_pkcs12`](https://www.terraform.io/docs/providers/google/r/apigee_keystores_aliases_pkcs12).
+
 # `apigeeKeystoresAliasesPkcs12` Submodule <a name="`apigeeKeystoresAliasesPkcs12` Submodule" id="@cdktf/provider-google.apigeeKeystoresAliasesPkcs12"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

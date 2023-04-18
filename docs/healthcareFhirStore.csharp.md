@@ -1,3 +1,7 @@
+# `google_healthcare_fhir_store`
+
+Refer to the Terraform Registory for docs: [`google_healthcare_fhir_store`](https://www.terraform.io/docs/providers/google/r/healthcare_fhir_store).
+
 # `healthcareFhirStore` Submodule <a name="`healthcareFhirStore` Submodule" id="@cdktf/provider-google.healthcareFhirStore"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_bigquery_routine`
+
+Refer to the Terraform Registory for docs: [`google_bigquery_routine`](https://www.terraform.io/docs/providers/google/r/bigquery_routine).
+
 # `bigqueryRoutine` Submodule <a name="`bigqueryRoutine` Submodule" id="@cdktf/provider-google.bigqueryRoutine"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

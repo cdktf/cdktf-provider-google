@@ -1,3 +1,7 @@
+# `google_vertex_ai_index`
+
+Refer to the Terraform Registory for docs: [`google_vertex_ai_index`](https://www.terraform.io/docs/providers/google/r/vertex_ai_index).
+
 # `vertexAiIndex` Submodule <a name="`vertexAiIndex` Submodule" id="@cdktf/provider-google.vertexAiIndex"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

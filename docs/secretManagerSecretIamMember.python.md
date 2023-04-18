@@ -1,3 +1,7 @@
+# `google_secret_manager_secret_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_secret_manager_secret_iam_member`](https://www.terraform.io/docs/providers/google/r/secret_manager_secret_iam_member).
+
 # `secretManagerSecretIamMember` Submodule <a name="`secretManagerSecretIamMember` Submodule" id="@cdktf/provider-google.secretManagerSecretIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

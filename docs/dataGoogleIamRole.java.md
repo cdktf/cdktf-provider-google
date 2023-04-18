@@ -1,3 +1,7 @@
+# `data_google_iam_role`
+
+Refer to the Terraform Registory for docs: [`data_google_iam_role`](https://www.terraform.io/docs/providers/google/d/iam_role).
+
 # `dataGoogleIamRole` Submodule <a name="`dataGoogleIamRole` Submodule" id="@cdktf/provider-google.dataGoogleIamRole"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

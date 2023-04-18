@@ -1,3 +1,7 @@
+# `google_compute_region_disk_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_compute_region_disk_iam_member`](https://www.terraform.io/docs/providers/google/r/compute_region_disk_iam_member).
+
 # `computeRegionDiskIamMember` Submodule <a name="`computeRegionDiskIamMember` Submodule" id="@cdktf/provider-google.computeRegionDiskIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

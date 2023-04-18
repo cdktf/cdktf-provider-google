@@ -1,3 +1,7 @@
+# `google_cloud_tasks_queue_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_cloud_tasks_queue_iam_member`](https://www.terraform.io/docs/providers/google/r/cloud_tasks_queue_iam_member).
+
 # `cloudTasksQueueIamMember` Submodule <a name="`cloudTasksQueueIamMember` Submodule" id="@cdktf/provider-google.cloudTasksQueueIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

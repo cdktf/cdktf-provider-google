@@ -1,3 +1,7 @@
+# `google_redis_instance`
+
+Refer to the Terraform Registory for docs: [`google_redis_instance`](https://www.terraform.io/docs/providers/google/r/redis_instance).
+
 # `redisInstance` Submodule <a name="`redisInstance` Submodule" id="@cdktf/provider-google.redisInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

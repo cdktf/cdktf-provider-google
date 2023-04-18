@@ -1,3 +1,7 @@
+# `google_kms_key_ring_iam_binding`
+
+Refer to the Terraform Registory for docs: [`google_kms_key_ring_iam_binding`](https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding).
+
 # `kmsKeyRingIamBinding` Submodule <a name="`kmsKeyRingIamBinding` Submodule" id="@cdktf/provider-google.kmsKeyRingIamBinding"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

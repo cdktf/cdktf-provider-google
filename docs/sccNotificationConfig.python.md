@@ -1,3 +1,7 @@
+# `google_scc_notification_config`
+
+Refer to the Terraform Registory for docs: [`google_scc_notification_config`](https://www.terraform.io/docs/providers/google/r/scc_notification_config).
+
 # `sccNotificationConfig` Submodule <a name="`sccNotificationConfig` Submodule" id="@cdktf/provider-google.sccNotificationConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

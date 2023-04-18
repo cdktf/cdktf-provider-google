@@ -1,3 +1,7 @@
+# `google_healthcare_consent_store_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_healthcare_consent_store_iam_policy`](https://www.terraform.io/docs/providers/google/r/healthcare_consent_store_iam_policy).
+
 # `healthcareConsentStoreIamPolicy` Submodule <a name="`healthcareConsentStoreIamPolicy` Submodule" id="@cdktf/provider-google.healthcareConsentStoreIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

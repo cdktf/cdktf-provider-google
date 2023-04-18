@@ -1,3 +1,7 @@
+# `google_compute_instance_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_compute_instance_iam_member`](https://www.terraform.io/docs/providers/google/r/compute_instance_iam_member).
+
 # `computeInstanceIamMember` Submodule <a name="`computeInstanceIamMember` Submodule" id="@cdktf/provider-google.computeInstanceIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

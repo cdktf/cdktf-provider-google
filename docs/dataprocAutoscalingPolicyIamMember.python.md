@@ -1,3 +1,7 @@
+# `google_dataproc_autoscaling_policy_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_dataproc_autoscaling_policy_iam_member`](https://www.terraform.io/docs/providers/google/r/dataproc_autoscaling_policy_iam_member).
+
 # `dataprocAutoscalingPolicyIamMember` Submodule <a name="`dataprocAutoscalingPolicyIamMember` Submodule" id="@cdktf/provider-google.dataprocAutoscalingPolicyIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_billing_budget`
+
+Refer to the Terraform Registory for docs: [`google_billing_budget`](https://www.terraform.io/docs/providers/google/r/billing_budget).
+
 # `billingBudget` Submodule <a name="`billingBudget` Submodule" id="@cdktf/provider-google.billingBudget"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

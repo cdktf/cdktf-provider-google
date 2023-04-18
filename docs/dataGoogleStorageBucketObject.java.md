@@ -1,3 +1,7 @@
+# `data_google_storage_bucket_object`
+
+Refer to the Terraform Registory for docs: [`data_google_storage_bucket_object`](https://www.terraform.io/docs/providers/google/d/storage_bucket_object).
+
 # `dataGoogleStorageBucketObject` Submodule <a name="`dataGoogleStorageBucketObject` Submodule" id="@cdktf/provider-google.dataGoogleStorageBucketObject"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_logging_folder_bucket_config`
+
+Refer to the Terraform Registory for docs: [`google_logging_folder_bucket_config`](https://www.terraform.io/docs/providers/google/r/logging_folder_bucket_config).
+
 # `loggingFolderBucketConfig` Submodule <a name="`loggingFolderBucketConfig` Submodule" id="@cdktf/provider-google.loggingFolderBucketConfig"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

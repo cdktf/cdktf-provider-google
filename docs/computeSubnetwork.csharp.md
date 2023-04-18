@@ -1,3 +1,7 @@
+# `google_compute_subnetwork`
+
+Refer to the Terraform Registory for docs: [`google_compute_subnetwork`](https://www.terraform.io/docs/providers/google/r/compute_subnetwork).
+
 # `computeSubnetwork` Submodule <a name="`computeSubnetwork` Submodule" id="@cdktf/provider-google.computeSubnetwork"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

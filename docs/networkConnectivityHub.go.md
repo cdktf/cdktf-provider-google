@@ -1,3 +1,7 @@
+# `google_network_connectivity_hub`
+
+Refer to the Terraform Registory for docs: [`google_network_connectivity_hub`](https://www.terraform.io/docs/providers/google/r/network_connectivity_hub).
+
 # `networkConnectivityHub` Submodule <a name="`networkConnectivityHub` Submodule" id="@cdktf/provider-google.networkConnectivityHub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

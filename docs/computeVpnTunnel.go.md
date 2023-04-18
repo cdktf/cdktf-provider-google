@@ -1,3 +1,7 @@
+# `google_compute_vpn_tunnel`
+
+Refer to the Terraform Registory for docs: [`google_compute_vpn_tunnel`](https://www.terraform.io/docs/providers/google/r/compute_vpn_tunnel).
+
 # `computeVpnTunnel` Submodule <a name="`computeVpnTunnel` Submodule" id="@cdktf/provider-google.computeVpnTunnel"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

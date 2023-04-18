@@ -1,3 +1,7 @@
+# `google_network_services_edge_cache_origin`
+
+Refer to the Terraform Registory for docs: [`google_network_services_edge_cache_origin`](https://www.terraform.io/docs/providers/google/r/network_services_edge_cache_origin).
+
 # `networkServicesEdgeCacheOrigin` Submodule <a name="`networkServicesEdgeCacheOrigin` Submodule" id="@cdktf/provider-google.networkServicesEdgeCacheOrigin"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

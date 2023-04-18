@@ -1,3 +1,7 @@
+# `google_compute_disk_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_compute_disk_iam_policy`](https://www.terraform.io/docs/providers/google/r/compute_disk_iam_policy).
+
 # `computeDiskIamPolicy` Submodule <a name="`computeDiskIamPolicy` Submodule" id="@cdktf/provider-google.computeDiskIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

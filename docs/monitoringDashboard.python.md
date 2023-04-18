@@ -1,3 +1,7 @@
+# `google_monitoring_dashboard`
+
+Refer to the Terraform Registory for docs: [`google_monitoring_dashboard`](https://www.terraform.io/docs/providers/google/r/monitoring_dashboard).
+
 # `monitoringDashboard` Submodule <a name="`monitoringDashboard` Submodule" id="@cdktf/provider-google.monitoringDashboard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

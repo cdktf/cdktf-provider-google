@@ -1,3 +1,7 @@
+# `google_healthcare_hl7_v2_store_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_healthcare_hl7_v2_store_iam_member`](https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member).
+
 # `healthcareHl7V2StoreIamMember` Submodule <a name="`healthcareHl7V2StoreIamMember` Submodule" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

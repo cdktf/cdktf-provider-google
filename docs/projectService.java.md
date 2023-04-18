@@ -1,3 +1,7 @@
+# `google_project_service`
+
+Refer to the Terraform Registory for docs: [`google_project_service`](https://www.terraform.io/docs/providers/google/r/project_service).
+
 # `projectService` Submodule <a name="`projectService` Submodule" id="@cdktf/provider-google.projectService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

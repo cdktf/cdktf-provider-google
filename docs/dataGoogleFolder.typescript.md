@@ -1,3 +1,7 @@
+# `data_google_folder`
+
+Refer to the Terraform Registory for docs: [`data_google_folder`](https://www.terraform.io/docs/providers/google/d/folder).
+
 # `dataGoogleFolder` Submodule <a name="`dataGoogleFolder` Submodule" id="@cdktf/provider-google.dataGoogleFolder"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

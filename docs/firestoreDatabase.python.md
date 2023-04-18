@@ -1,3 +1,7 @@
+# `google_firestore_database`
+
+Refer to the Terraform Registory for docs: [`google_firestore_database`](https://www.terraform.io/docs/providers/google/r/firestore_database).
+
 # `firestoreDatabase` Submodule <a name="`firestoreDatabase` Submodule" id="@cdktf/provider-google.firestoreDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

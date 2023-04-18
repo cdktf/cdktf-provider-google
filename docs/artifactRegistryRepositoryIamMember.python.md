@@ -1,3 +1,7 @@
+# `google_artifact_registry_repository_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_artifact_registry_repository_iam_member`](https://www.terraform.io/docs/providers/google/r/artifact_registry_repository_iam_member).
+
 # `artifactRegistryRepositoryIamMember` Submodule <a name="`artifactRegistryRepositoryIamMember` Submodule" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

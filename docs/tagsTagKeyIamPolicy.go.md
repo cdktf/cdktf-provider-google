@@ -1,3 +1,7 @@
+# `google_tags_tag_key_iam_policy`
+
+Refer to the Terraform Registory for docs: [`google_tags_tag_key_iam_policy`](https://www.terraform.io/docs/providers/google/r/tags_tag_key_iam_policy).
+
 # `tagsTagKeyIamPolicy` Submodule <a name="`tagsTagKeyIamPolicy` Submodule" id="@cdktf/provider-google.tagsTagKeyIamPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

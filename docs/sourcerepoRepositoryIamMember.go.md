@@ -1,3 +1,7 @@
+# `google_sourcerepo_repository_iam_member`
+
+Refer to the Terraform Registory for docs: [`google_sourcerepo_repository_iam_member`](https://www.terraform.io/docs/providers/google/r/sourcerepo_repository_iam_member).
+
 # `sourcerepoRepositoryIamMember` Submodule <a name="`sourcerepoRepositoryIamMember` Submodule" id="@cdktf/provider-google.sourcerepoRepositoryIamMember"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,3 +1,7 @@
+# `google_compute_target_grpc_proxy`
+
+Refer to the Terraform Registory for docs: [`google_compute_target_grpc_proxy`](https://www.terraform.io/docs/providers/google/r/compute_target_grpc_proxy).
+
 # `computeTargetGrpcProxy` Submodule <a name="`computeTargetGrpcProxy` Submodule" id="@cdktf/provider-google.computeTargetGrpcProxy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
