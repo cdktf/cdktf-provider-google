@@ -212,6 +212,75 @@ export class ClouddeployDeliveryPipelineConditionTargetsPresentConditionList ext
     return new ClouddeployDeliveryPipelineConditionTargetsPresentConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ClouddeployDeliveryPipelineConditionTargetsTypeCondition {
+}
+
+export function clouddeployDeliveryPipelineConditionTargetsTypeConditionToTerraform(struct?: ClouddeployDeliveryPipelineConditionTargetsTypeCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class ClouddeployDeliveryPipelineConditionTargetsTypeConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ClouddeployDeliveryPipelineConditionTargetsTypeCondition | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ClouddeployDeliveryPipelineConditionTargetsTypeCondition | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // error_details - computed: true, optional: false, required: false
+  public get errorDetails() {
+    return this.getStringAttribute('error_details');
+  }
+
+  // status - computed: true, optional: false, required: false
+  public get status() {
+    return this.getBooleanAttribute('status');
+  }
+}
+
+export class ClouddeployDeliveryPipelineConditionTargetsTypeConditionList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ClouddeployDeliveryPipelineConditionTargetsTypeConditionOutputReference {
+    return new ClouddeployDeliveryPipelineConditionTargetsTypeConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ClouddeployDeliveryPipelineCondition {
 }
 
@@ -263,6 +332,12 @@ export class ClouddeployDeliveryPipelineConditionOutputReference extends cdktf.C
   public get targetsPresentCondition() {
     return this._targetsPresentCondition;
   }
+
+  // targets_type_condition - computed: true, optional: false, required: false
+  private _targetsTypeCondition = new ClouddeployDeliveryPipelineConditionTargetsTypeConditionList(this, "targets_type_condition", false);
+  public get targetsTypeCondition() {
+    return this._targetsTypeCondition;
+  }
 }
 
 export class ClouddeployDeliveryPipelineConditionList extends cdktf.ComplexList {
@@ -283,6 +358,140 @@ export class ClouddeployDeliveryPipelineConditionList extends cdktf.ComplexList 
     return new ClouddeployDeliveryPipelineConditionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard {
+  /**
+  * Whether to verify a deployment.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#verify ClouddeployDeliveryPipeline#verify}
+  */
+  readonly verify?: boolean | cdktf.IResolvable;
+}
+
+export function clouddeployDeliveryPipelineSerialPipelineStagesStrategyStandardToTerraform(struct?: ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandardOutputReference | ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    verify: cdktf.booleanToTerraform(struct!.verify),
+  }
+}
+
+export class ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandardOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._verify !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.verify = this._verify;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._verify = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._verify = value.verify;
+    }
+  }
+
+  // verify - computed: false, optional: true, required: false
+  private _verify?: boolean | cdktf.IResolvable; 
+  public get verify() {
+    return this.getBooleanAttribute('verify');
+  }
+  public set verify(value: boolean | cdktf.IResolvable) {
+    this._verify = value;
+  }
+  public resetVerify() {
+    this._verify = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get verifyInput() {
+    return this._verify;
+  }
+}
+export interface ClouddeployDeliveryPipelineSerialPipelineStagesStrategy {
+  /**
+  * standard block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#standard ClouddeployDeliveryPipeline#standard}
+  */
+  readonly standard?: ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard;
+}
+
+export function clouddeployDeliveryPipelineSerialPipelineStagesStrategyToTerraform(struct?: ClouddeployDeliveryPipelineSerialPipelineStagesStrategyOutputReference | ClouddeployDeliveryPipelineSerialPipelineStagesStrategy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    standard: clouddeployDeliveryPipelineSerialPipelineStagesStrategyStandardToTerraform(struct!.standard),
+  }
+}
+
+export class ClouddeployDeliveryPipelineSerialPipelineStagesStrategyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ClouddeployDeliveryPipelineSerialPipelineStagesStrategy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._standard?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.standard = this._standard?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ClouddeployDeliveryPipelineSerialPipelineStagesStrategy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._standard.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._standard.internalValue = value.standard;
+    }
+  }
+
+  // standard - computed: false, optional: true, required: false
+  private _standard = new ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandardOutputReference(this, "standard");
+  public get standard() {
+    return this._standard;
+  }
+  public putStandard(value: ClouddeployDeliveryPipelineSerialPipelineStagesStrategyStandard) {
+    this._standard.internalValue = value;
+  }
+  public resetStandard() {
+    this._standard.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get standardInput() {
+    return this._standard.internalValue;
+  }
+}
 export interface ClouddeployDeliveryPipelineSerialPipelineStages {
   /**
   * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
@@ -296,6 +505,12 @@ export interface ClouddeployDeliveryPipelineSerialPipelineStages {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#target_id ClouddeployDeliveryPipeline#target_id}
   */
   readonly targetId?: string;
+  /**
+  * strategy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/clouddeploy_delivery_pipeline#strategy ClouddeployDeliveryPipeline#strategy}
+  */
+  readonly strategy?: ClouddeployDeliveryPipelineSerialPipelineStagesStrategy;
 }
 
 export function clouddeployDeliveryPipelineSerialPipelineStagesToTerraform(struct?: ClouddeployDeliveryPipelineSerialPipelineStages | cdktf.IResolvable): any {
@@ -306,6 +521,7 @@ export function clouddeployDeliveryPipelineSerialPipelineStagesToTerraform(struc
   return {
     profiles: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.profiles),
     target_id: cdktf.stringToTerraform(struct!.targetId),
+    strategy: clouddeployDeliveryPipelineSerialPipelineStagesStrategyToTerraform(struct!.strategy),
   }
 }
 
@@ -337,6 +553,10 @@ export class ClouddeployDeliveryPipelineSerialPipelineStagesOutputReference exte
       hasAnyValues = true;
       internalValueResult.targetId = this._targetId;
     }
+    if (this._strategy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.strategy = this._strategy?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -346,6 +566,7 @@ export class ClouddeployDeliveryPipelineSerialPipelineStagesOutputReference exte
       this.resolvableValue = undefined;
       this._profiles = undefined;
       this._targetId = undefined;
+      this._strategy.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -356,6 +577,7 @@ export class ClouddeployDeliveryPipelineSerialPipelineStagesOutputReference exte
       this.resolvableValue = undefined;
       this._profiles = value.profiles;
       this._targetId = value.targetId;
+      this._strategy.internalValue = value.strategy;
     }
   }
 
@@ -389,6 +611,22 @@ export class ClouddeployDeliveryPipelineSerialPipelineStagesOutputReference exte
   // Temporarily expose input value. Use with caution.
   public get targetIdInput() {
     return this._targetId;
+  }
+
+  // strategy - computed: false, optional: true, required: false
+  private _strategy = new ClouddeployDeliveryPipelineSerialPipelineStagesStrategyOutputReference(this, "strategy");
+  public get strategy() {
+    return this._strategy;
+  }
+  public putStrategy(value: ClouddeployDeliveryPipelineSerialPipelineStagesStrategy) {
+    this._strategy.internalValue = value;
+  }
+  public resetStrategy() {
+    this._strategy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get strategyInput() {
+    return this._strategy.internalValue;
   }
 }
 
@@ -634,7 +872,7 @@ export class ClouddeployDeliveryPipeline extends cdktf.TerraformResource {
       terraformResourceType: 'google_clouddeploy_delivery_pipeline',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

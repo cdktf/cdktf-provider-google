@@ -596,6 +596,7 @@ The following submodules are available:
 - [loggingFolderBucketConfig](./loggingFolderBucketConfig.csharp.md)
 - [loggingFolderExclusion](./loggingFolderExclusion.csharp.md)
 - [loggingFolderSink](./loggingFolderSink.csharp.md)
+- [loggingLinkedDataset](./loggingLinkedDataset.csharp.md)
 - [loggingLogView](./loggingLogView.csharp.md)
 - [loggingMetric](./loggingMetric.csharp.md)
 - [loggingOrganizationBucketConfig](./loggingOrganizationBucketConfig.csharp.md)

@@ -401,7 +401,7 @@ export class DataGoogleFolderOrganizationPolicy extends cdktf.TerraformDataSourc
       terraformResourceType: 'google_folder_organization_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

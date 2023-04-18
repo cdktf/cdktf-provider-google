@@ -596,6 +596,7 @@ The following submodules are available:
 - [loggingFolderBucketConfig](./loggingFolderBucketConfig.typescript.md)
 - [loggingFolderExclusion](./loggingFolderExclusion.typescript.md)
 - [loggingFolderSink](./loggingFolderSink.typescript.md)
+- [loggingLinkedDataset](./loggingLinkedDataset.typescript.md)
 - [loggingLogView](./loggingLogView.typescript.md)
 - [loggingMetric](./loggingMetric.typescript.md)
 - [loggingOrganizationBucketConfig](./loggingOrganizationBucketConfig.typescript.md)

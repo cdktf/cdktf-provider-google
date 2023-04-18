@@ -227,7 +227,7 @@ export class BigqueryCapacityCommitment extends cdktf.TerraformResource {
       terraformResourceType: 'google_bigquery_capacity_commitment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

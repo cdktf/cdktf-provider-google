@@ -3122,6 +3122,68 @@ export class ContainerClusterGatewayApiConfigOutputReference extends cdktf.Compl
     return this._channel;
   }
 }
+export interface ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disabled ContainerCluster#disabled}
+  */
+  readonly disabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterIpAllocationPolicyPodCidrOverprovisionConfigToTerraform(struct?: ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference | ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+  }
+}
+
+export class ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._disabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._disabled = value.disabled;
+    }
+  }
+
+  // disabled - computed: false, optional: false, required: true
+  private _disabled?: boolean | cdktf.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktf.IResolvable) {
+    this._disabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled;
+  }
+}
 export interface ContainerClusterIpAllocationPolicy {
   /**
   * The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
@@ -3153,6 +3215,12 @@ export interface ContainerClusterIpAllocationPolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#stack_type ContainerCluster#stack_type}
   */
   readonly stackType?: string;
+  /**
+  * pod_cidr_overprovision_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#pod_cidr_overprovision_config ContainerCluster#pod_cidr_overprovision_config}
+  */
+  readonly podCidrOverprovisionConfig?: ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig;
 }
 
 export function containerClusterIpAllocationPolicyToTerraform(struct?: ContainerClusterIpAllocationPolicyOutputReference | ContainerClusterIpAllocationPolicy): any {
@@ -3166,6 +3234,7 @@ export function containerClusterIpAllocationPolicyToTerraform(struct?: Container
     services_ipv4_cidr_block: cdktf.stringToTerraform(struct!.servicesIpv4CidrBlock),
     services_secondary_range_name: cdktf.stringToTerraform(struct!.servicesSecondaryRangeName),
     stack_type: cdktf.stringToTerraform(struct!.stackType),
+    pod_cidr_overprovision_config: containerClusterIpAllocationPolicyPodCidrOverprovisionConfigToTerraform(struct!.podCidrOverprovisionConfig),
   }
 }
 
@@ -3203,6 +3272,10 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       hasAnyValues = true;
       internalValueResult.stackType = this._stackType;
     }
+    if (this._podCidrOverprovisionConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podCidrOverprovisionConfig = this._podCidrOverprovisionConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -3214,6 +3287,7 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       this._servicesIpv4CidrBlock = undefined;
       this._servicesSecondaryRangeName = undefined;
       this._stackType = undefined;
+      this._podCidrOverprovisionConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -3222,6 +3296,7 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
       this._servicesIpv4CidrBlock = value.servicesIpv4CidrBlock;
       this._servicesSecondaryRangeName = value.servicesSecondaryRangeName;
       this._stackType = value.stackType;
+      this._podCidrOverprovisionConfig.internalValue = value.podCidrOverprovisionConfig;
     }
   }
 
@@ -3303,6 +3378,22 @@ export class ContainerClusterIpAllocationPolicyOutputReference extends cdktf.Com
   // Temporarily expose input value. Use with caution.
   public get stackTypeInput() {
     return this._stackType;
+  }
+
+  // pod_cidr_overprovision_config - computed: false, optional: true, required: false
+  private _podCidrOverprovisionConfig = new ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfigOutputReference(this, "pod_cidr_overprovision_config");
+  public get podCidrOverprovisionConfig() {
+    return this._podCidrOverprovisionConfig;
+  }
+  public putPodCidrOverprovisionConfig(value: ContainerClusterIpAllocationPolicyPodCidrOverprovisionConfig) {
+    this._podCidrOverprovisionConfig.internalValue = value;
+  }
+  public resetPodCidrOverprovisionConfig() {
+    this._podCidrOverprovisionConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podCidrOverprovisionConfigInput() {
+    return this._podCidrOverprovisionConfig.internalValue;
   }
 }
 export interface ContainerClusterLoggingConfig {
@@ -7012,6 +7103,68 @@ export class ContainerClusterNodePoolManagementOutputReference extends cdktf.Com
     return this._autoUpgrade;
   }
 }
+export interface ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#disabled ContainerCluster#disabled}
+  */
+  readonly disabled: boolean | cdktf.IResolvable;
+}
+
+export function containerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigToTerraform(struct?: ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference | ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    disabled: cdktf.booleanToTerraform(struct!.disabled),
+  }
+}
+
+export class ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._disabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.disabled = this._disabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._disabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._disabled = value.disabled;
+    }
+  }
+
+  // disabled - computed: false, optional: false, required: true
+  private _disabled?: boolean | cdktf.IResolvable; 
+  public get disabled() {
+    return this.getBooleanAttribute('disabled');
+  }
+  public set disabled(value: boolean | cdktf.IResolvable) {
+    this._disabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledInput() {
+    return this._disabled;
+  }
+}
 export interface ContainerClusterNodePoolNetworkConfig {
   /**
   * Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.
@@ -7037,6 +7190,12 @@ export interface ContainerClusterNodePoolNetworkConfig {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#pod_range ContainerCluster#pod_range}
   */
   readonly podRange?: string;
+  /**
+  * pod_cidr_overprovision_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/container_cluster#pod_cidr_overprovision_config ContainerCluster#pod_cidr_overprovision_config}
+  */
+  readonly podCidrOverprovisionConfig?: ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig;
 }
 
 export function containerClusterNodePoolNetworkConfigToTerraform(struct?: ContainerClusterNodePoolNetworkConfigOutputReference | ContainerClusterNodePoolNetworkConfig): any {
@@ -7049,6 +7208,7 @@ export function containerClusterNodePoolNetworkConfigToTerraform(struct?: Contai
     enable_private_nodes: cdktf.booleanToTerraform(struct!.enablePrivateNodes),
     pod_ipv4_cidr_block: cdktf.stringToTerraform(struct!.podIpv4CidrBlock),
     pod_range: cdktf.stringToTerraform(struct!.podRange),
+    pod_cidr_overprovision_config: containerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigToTerraform(struct!.podCidrOverprovisionConfig),
   }
 }
 
@@ -7082,6 +7242,10 @@ export class ContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.podRange = this._podRange;
     }
+    if (this._podCidrOverprovisionConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.podCidrOverprovisionConfig = this._podCidrOverprovisionConfig?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -7092,6 +7256,7 @@ export class ContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.
       this._enablePrivateNodes = undefined;
       this._podIpv4CidrBlock = undefined;
       this._podRange = undefined;
+      this._podCidrOverprovisionConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -7099,6 +7264,7 @@ export class ContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.
       this._enablePrivateNodes = value.enablePrivateNodes;
       this._podIpv4CidrBlock = value.podIpv4CidrBlock;
       this._podRange = value.podRange;
+      this._podCidrOverprovisionConfig.internalValue = value.podCidrOverprovisionConfig;
     }
   }
 
@@ -7150,7 +7316,7 @@ export class ContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.
     return this._podIpv4CidrBlock;
   }
 
-  // pod_range - computed: false, optional: true, required: false
+  // pod_range - computed: true, optional: true, required: false
   private _podRange?: string; 
   public get podRange() {
     return this.getStringAttribute('pod_range');
@@ -7164,6 +7330,22 @@ export class ContainerClusterNodePoolNetworkConfigOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get podRangeInput() {
     return this._podRange;
+  }
+
+  // pod_cidr_overprovision_config - computed: false, optional: true, required: false
+  private _podCidrOverprovisionConfig = new ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfigOutputReference(this, "pod_cidr_overprovision_config");
+  public get podCidrOverprovisionConfig() {
+    return this._podCidrOverprovisionConfig;
+  }
+  public putPodCidrOverprovisionConfig(value: ContainerClusterNodePoolNetworkConfigPodCidrOverprovisionConfig) {
+    this._podCidrOverprovisionConfig.internalValue = value;
+  }
+  public resetPodCidrOverprovisionConfig() {
+    this._podCidrOverprovisionConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podCidrOverprovisionConfigInput() {
+    return this._podCidrOverprovisionConfig.internalValue;
   }
 }
 export interface ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig {
@@ -11486,7 +11668,7 @@ export class ContainerCluster extends cdktf.TerraformResource {
       terraformResourceType: 'google_container_cluster',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.61.0',
+        providerVersion: '4.62.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
