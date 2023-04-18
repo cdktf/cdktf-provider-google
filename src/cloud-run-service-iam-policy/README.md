@@ -1,3 +1,3 @@
 # `google_cloud_run_service_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_cloud_run_service_iam_policy`](https://www.terraform.io/docs/providers/google/r/cloud_run_service_iam_policy).
+Refer to the Terraform Registory for docs: [`google_cloud_run_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_run_service_iam_policy).

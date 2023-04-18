@@ -1,6 +1,6 @@
 # `google_monitoring_group`
 
-Refer to the Terraform Registory for docs: [`google_monitoring_group`](https://www.terraform.io/docs/providers/google/r/monitoring_group).
+Refer to the Terraform Registory for docs: [`google_monitoring_group`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group).
 
 # `monitoringGroup` Submodule <a name="`monitoringGroup` Submodule" id="@cdktf/provider-google.monitoringGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_monitoring_group`](https://w
 
 ### MonitoringGroup <a name="MonitoringGroup" id="@cdktf/provider-google.monitoringGroup.MonitoringGroup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/monitoring_group google_monitoring_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group google_monitoring_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer"></a>
 
@@ -19,6 +19,7 @@ MonitoringGroup.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -42,7 +43,7 @@ MonitoringGroup.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -50,10 +51,10 @@ MonitoringGroup.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.displayName">displayName</a></code> | <code>java.lang.String</code> | A user-assigned name for this group, used only for display purposes. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.filter">filter</a></code> | <code>java.lang.String</code> | The filter used to determine which monitored resources belong to this group. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#id MonitoringGroup#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#id MonitoringGroup#id}. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.isCluster">isCluster</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, the members of this group are considered to be a cluster. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.parentName">parentName</a></code> | <code>java.lang.String</code> | The name of the group's parent, if it has one. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#project MonitoringGroup#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#project MonitoringGroup#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts">MonitoringGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -84,7 +85,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.monitoringGroup.MonitoringGroup.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -124,7 +125,7 @@ Must be unique amongst siblings in the same scope
 
 A user-assigned name for this group, used only for display purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#display_name MonitoringGroup#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#display_name MonitoringGroup#display_name}
 
 ---
 
@@ -134,7 +135,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The filter used to determine which monitored resources belong to this group.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#filter MonitoringGroup#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#filter MonitoringGroup#filter}
 
 ---
 
@@ -142,7 +143,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#id MonitoringGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#id MonitoringGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -158,7 +159,7 @@ If true, the members of this group are considered to be a cluster.
 The system can perform additional analysis on
 groups that are clusters.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#is_cluster MonitoringGroup#is_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#is_cluster MonitoringGroup#is_cluster}
 
 ---
 
@@ -172,7 +173,7 @@ The format is
 "projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#parent_name MonitoringGroup#parent_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#parent_name MonitoringGroup#parent_name}
 
 ---
 
@@ -180,7 +181,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#project MonitoringGroup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#project MonitoringGroup#project}.
 
 ---
 
@@ -190,7 +191,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#timeouts MonitoringGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#timeouts MonitoringGroup#timeouts}
 
 ---
 
@@ -531,7 +532,7 @@ MonitoringGroup.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -640,10 +641,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.monitoringGroup.MonitoringGroup.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -878,6 +879,7 @@ MonitoringGroupConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -901,7 +903,7 @@ MonitoringGroupConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -909,10 +911,10 @@ MonitoringGroupConfig.builder()
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.displayName">displayName</a></code> | <code>java.lang.String</code> | A user-assigned name for this group, used only for display purposes. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.filter">filter</a></code> | <code>java.lang.String</code> | The filter used to determine which monitored resources belong to this group. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#id MonitoringGroup#id}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#id MonitoringGroup#id}. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.isCluster">isCluster</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | If true, the members of this group are considered to be a cluster. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.parentName">parentName</a></code> | <code>java.lang.String</code> | The name of the group's parent, if it has one. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#project MonitoringGroup#project}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#project MonitoringGroup#project}. |
 | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts">MonitoringGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -930,10 +932,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.monitoringGroup.MonitoringGroupConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -997,7 +999,7 @@ public java.lang.String getDisplayName();
 
 A user-assigned name for this group, used only for display purposes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#display_name MonitoringGroup#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#display_name MonitoringGroup#display_name}
 
 ---
 
@@ -1011,7 +1013,7 @@ public java.lang.String getFilter();
 
 The filter used to determine which monitored resources belong to this group.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#filter MonitoringGroup#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#filter MonitoringGroup#filter}
 
 ---
 
@@ -1023,7 +1025,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#id MonitoringGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#id MonitoringGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1043,7 +1045,7 @@ If true, the members of this group are considered to be a cluster.
 The system can perform additional analysis on
 groups that are clusters.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#is_cluster MonitoringGroup#is_cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#is_cluster MonitoringGroup#is_cluster}
 
 ---
 
@@ -1061,7 +1063,7 @@ The format is
 "projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#parent_name MonitoringGroup#parent_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#parent_name MonitoringGroup#parent_name}
 
 ---
 
@@ -1073,7 +1075,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#project MonitoringGroup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#project MonitoringGroup#project}.
 
 ---
 
@@ -1087,7 +1089,7 @@ public MonitoringGroupTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#timeouts MonitoringGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#timeouts MonitoringGroup#timeouts}
 
 ---
 
@@ -1109,9 +1111,9 @@ MonitoringGroupTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#create MonitoringGroup#create}. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#delete MonitoringGroup#delete}. |
-| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#update MonitoringGroup#update}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#create MonitoringGroup#create}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#delete MonitoringGroup#delete}. |
+| <code><a href="#@cdktf/provider-google.monitoringGroup.MonitoringGroupTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#update MonitoringGroup#update}. |
 
 ---
 
@@ -1123,7 +1125,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#create MonitoringGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#create MonitoringGroup#create}.
 
 ---
 
@@ -1135,7 +1137,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#delete MonitoringGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#delete MonitoringGroup#delete}.
 
 ---
 
@@ -1147,7 +1149,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/monitoring_group#update MonitoringGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/monitoring_group#update MonitoringGroup#update}.
 
 ---
 

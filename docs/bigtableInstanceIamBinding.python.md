@@ -1,6 +1,6 @@
 # `google_bigtable_instance_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_binding`](https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding).
+Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding).
 
 # `bigtableInstanceIamBinding` Submodule <a name="`bigtableInstanceIamBinding` Submodule" id="@cdktf/provider-google.bigtableInstanceIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_bindin
 
 ### BigtableInstanceIamBinding <a name="BigtableInstanceIamBinding" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding google_bigtable_instance_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding google_bigtable_instance_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer"></a>
 
@@ -19,7 +19,7 @@ bigtableInstanceIamBinding.BigtableInstanceIamBinding(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -39,18 +39,18 @@ bigtableInstanceIamBinding.BigtableInstanceIamBinding(
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition">BigtableInstanceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}. |
 
 ---
 
@@ -80,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#condition BigtableInstanceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#condition BigtableInstanceIamBinding#condition}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}.
 
 ---
 
@@ -417,7 +417,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}.
 
 ---
 
@@ -425,7 +425,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}.
 
 ---
 
@@ -433,7 +433,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}.
 
 ---
 
@@ -543,7 +543,7 @@ bigtableInstanceIamBinding.BigtableInstanceIamBinding.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -650,10 +650,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBinding.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -875,9 +875,9 @@ bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}. |
 
 ---
 
@@ -889,7 +889,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#expression BigtableInstanceIamBinding#expression}.
 
 ---
 
@@ -901,7 +901,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#title BigtableInstanceIamBinding#title}.
 
 ---
 
@@ -913,7 +913,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#description BigtableInstanceIamBinding#description}.
 
 ---
 
@@ -926,7 +926,7 @@ from cdktf_cdktf_provider_google import bigtable_instance_iam_binding
 
 bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -946,18 +946,18 @@ bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingCondition">BigtableInstanceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}. |
 
 ---
 
@@ -974,10 +974,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.bigtableInstanceIamBinding.BigtableInstanceIamBindingConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1039,7 +1039,7 @@ instance: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#instance BigtableInstanceIamBinding#instance}.
 
 ---
 
@@ -1051,7 +1051,7 @@ members: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#members BigtableInstanceIamBinding#members}.
 
 ---
 
@@ -1063,7 +1063,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#role BigtableInstanceIamBinding#role}.
 
 ---
 
@@ -1077,7 +1077,7 @@ condition: BigtableInstanceIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#condition BigtableInstanceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#condition BigtableInstanceIamBinding#condition}
 
 ---
 
@@ -1089,7 +1089,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#id BigtableInstanceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1104,7 +1104,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigtable_instance_iam_binding#project BigtableInstanceIamBinding#project}.
 
 ---
 

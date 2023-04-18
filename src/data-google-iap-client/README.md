@@ -1,3 +1,3 @@
 # `data_google_iap_client`
 
-Refer to the Terraform Registory for docs: [`data_google_iap_client`](https://www.terraform.io/docs/providers/google/d/iap_client).
+Refer to the Terraform Registory for docs: [`data_google_iap_client`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client).

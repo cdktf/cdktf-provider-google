@@ -1,6 +1,6 @@
 # `google_endpoints_service`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://www.terraform.io/docs/providers/google/r/endpoints_service).
+Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service).
 
 # `endpointsService` Submodule <a name="`endpointsService` Submodule" id="@cdktf/provider-google.endpointsService"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_endpoints_service`](https://
 
 ### EndpointsService <a name="EndpointsService" id="@cdktf/provider-google.endpointsService.EndpointsService"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service google_endpoints_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service google_endpoints_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsService.EndpointsService.Initializer"></a>
 
@@ -19,7 +19,7 @@ endpointsService.EndpointsService(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -40,7 +40,7 @@ endpointsService.EndpointsService(
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -48,7 +48,7 @@ endpointsService.EndpointsService(
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.serviceName">service_name</a></code> | <code>str</code> | The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.grpcConfig">grpc_config</a></code> | <code>str</code> | The full text of the Service Config YAML file (Example located here). |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#id EndpointsService#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#id EndpointsService#id}. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.openapiConfig">openapi_config</a></code> | <code>str</code> | The full text of the OpenAPI YAML configuration as described here. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.project">project</a></code> | <code>str</code> | The project ID that the service belongs to. If not provided, provider project is used. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.protocOutputBase64">protoc_output_base64</a></code> | <code>str</code> | The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded. |
@@ -82,7 +82,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsService.EndpointsService.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -122,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#service_name EndpointsService#service_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#service_name EndpointsService#service_name}
 
 ---
 
@@ -134,7 +134,7 @@ The full text of the Service Config YAML file (Example located here).
 
 If provided, must also provide protoc_output_base64. open_api config must not be provided.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#grpc_config EndpointsService#grpc_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#grpc_config EndpointsService#grpc_config}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#id EndpointsService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#id EndpointsService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -157,7 +157,7 @@ The full text of the OpenAPI YAML configuration as described here.
 
 Either this, or both of grpc_config and protoc_output_base64 must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#openapi_config EndpointsService#openapi_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#openapi_config EndpointsService#openapi_config}
 
 ---
 
@@ -167,7 +167,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The project ID that the service belongs to. If not provided, provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#project EndpointsService#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#project EndpointsService#project}
 
 ---
 
@@ -177,7 +177,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
 
 ---
 
@@ -187,7 +187,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#timeouts EndpointsService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#timeouts EndpointsService#timeouts}
 
 ---
 
@@ -444,7 +444,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#create EndpointsService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#create EndpointsService#create}.
 
 ---
 
@@ -452,7 +452,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#delete EndpointsService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#delete EndpointsService#delete}.
 
 ---
 
@@ -460,7 +460,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#update EndpointsService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#update EndpointsService#update}.
 
 ---
 
@@ -588,7 +588,7 @@ endpointsService.EndpointsService.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -700,10 +700,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsService.EndpointsService.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -988,7 +988,7 @@ from cdktf_cdktf_provider_google import endpoints_service
 
 endpointsService.EndpointsServiceConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1009,7 +1009,7 @@ endpointsService.EndpointsServiceConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1017,7 +1017,7 @@ endpointsService.EndpointsServiceConfig(
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.serviceName">service_name</a></code> | <code>str</code> | The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.grpcConfig">grpc_config</a></code> | <code>str</code> | The full text of the Service Config YAML file (Example located here). |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#id EndpointsService#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#id EndpointsService#id}. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.openapiConfig">openapi_config</a></code> | <code>str</code> | The full text of the OpenAPI YAML configuration as described here. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.project">project</a></code> | <code>str</code> | The project ID that the service belongs to. If not provided, provider project is used. |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.protocOutputBase64">protoc_output_base64</a></code> | <code>str</code> | The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded. |
@@ -1038,10 +1038,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsService.EndpointsServiceConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1105,7 +1105,7 @@ service_name: str
 
 The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#service_name EndpointsService#service_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#service_name EndpointsService#service_name}
 
 ---
 
@@ -1121,7 +1121,7 @@ The full text of the Service Config YAML file (Example located here).
 
 If provided, must also provide protoc_output_base64. open_api config must not be provided.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#grpc_config EndpointsService#grpc_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#grpc_config EndpointsService#grpc_config}
 
 ---
 
@@ -1133,7 +1133,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#id EndpointsService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#id EndpointsService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1152,7 +1152,7 @@ The full text of the OpenAPI YAML configuration as described here.
 
 Either this, or both of grpc_config and protoc_output_base64 must be specified.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#openapi_config EndpointsService#openapi_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#openapi_config EndpointsService#openapi_config}
 
 ---
 
@@ -1166,7 +1166,7 @@ project: str
 
 The project ID that the service belongs to. If not provided, provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#project EndpointsService#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#project EndpointsService#project}
 
 ---
 
@@ -1180,7 +1180,7 @@ protoc_output_base64: str
 
 The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file, base64-encoded.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#protoc_output_base64 EndpointsService#protoc_output_base64}
 
 ---
 
@@ -1194,7 +1194,7 @@ timeouts: EndpointsServiceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#timeouts EndpointsService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#timeouts EndpointsService#timeouts}
 
 ---
 
@@ -1227,9 +1227,9 @@ endpointsService.EndpointsServiceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#create EndpointsService#create}. |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#delete EndpointsService#delete}. |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#update EndpointsService#update}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#create EndpointsService#create}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#delete EndpointsService#delete}. |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#update EndpointsService#update}. |
 
 ---
 
@@ -1241,7 +1241,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#create EndpointsService#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#create EndpointsService#create}.
 
 ---
 
@@ -1253,7 +1253,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#delete EndpointsService#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#delete EndpointsService#delete}.
 
 ---
 
@@ -1265,7 +1265,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service#update EndpointsService#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service#update EndpointsService#update}.
 
 ---
 

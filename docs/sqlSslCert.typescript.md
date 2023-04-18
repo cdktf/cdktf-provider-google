@@ -1,6 +1,6 @@
 # `google_sql_ssl_cert`
 
-Refer to the Terraform Registory for docs: [`google_sql_ssl_cert`](https://www.terraform.io/docs/providers/google/r/sql_ssl_cert).
+Refer to the Terraform Registory for docs: [`google_sql_ssl_cert`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert).
 
 # `sqlSslCert` Submodule <a name="`sqlSslCert` Submodule" id="@cdktf/provider-google.sqlSslCert"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_sql_ssl_cert`](https://www.t
 
 ### SqlSslCert <a name="SqlSslCert" id="@cdktf/provider-google.sqlSslCert.SqlSslCert"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert google_sql_ssl_cert}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert google_sql_ssl_cert}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlSslCert.SqlSslCert.Initializer"></a>
 
@@ -373,7 +373,7 @@ sqlSslCert.SqlSslCert.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCert.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -484,10 +484,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sqlSslCert.SqlSslCert.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -746,7 +746,7 @@ const sqlSslCertConfig: sqlSslCert.SqlSslCertConfig = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -754,7 +754,7 @@ const sqlSslCertConfig: sqlSslCert.SqlSslCertConfig = { ... }
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.commonName">commonName</a></code> | <code>string</code> | The common name to be used in the certificate to identify the client. |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.instance">instance</a></code> | <code>string</code> | The name of the Cloud SQL instance. Changing this forces a new resource to be created. |
-| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#id SqlSslCert#id}. |
+| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#id SqlSslCert#id}. |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.project">project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertTimeouts">SqlSslCertTimeouts</a></code> | timeouts block. |
 
@@ -773,10 +773,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sqlSslCert.SqlSslCertConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -842,7 +842,7 @@ The common name to be used in the certificate to identify the client.
 
 Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#common_name SqlSslCert#common_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#common_name SqlSslCert#common_name}
 
 ---
 
@@ -856,7 +856,7 @@ public readonly instance: string;
 
 The name of the Cloud SQL instance. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#instance SqlSslCert#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#instance SqlSslCert#instance}
 
 ---
 
@@ -868,7 +868,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#id SqlSslCert#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#id SqlSslCert#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -887,7 +887,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#project SqlSslCert#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#project SqlSslCert#project}
 
 ---
 
@@ -901,7 +901,7 @@ public readonly timeouts: SqlSslCertTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#timeouts SqlSslCert#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#timeouts SqlSslCert#timeouts}
 
 ---
 
@@ -919,8 +919,8 @@ const sqlSslCertTimeouts: sqlSslCert.SqlSslCertTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#create SqlSslCert#create}. |
-| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#delete SqlSslCert#delete}. |
+| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#create SqlSslCert#create}. |
+| <code><a href="#@cdktf/provider-google.sqlSslCert.SqlSslCertTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#delete SqlSslCert#delete}. |
 
 ---
 
@@ -932,7 +932,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#create SqlSslCert#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#create SqlSslCert#create}.
 
 ---
 
@@ -944,7 +944,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#delete SqlSslCert#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#delete SqlSslCert#delete}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_service_account`
 
-Refer to the Terraform Registory for docs: [`google_service_account`](https://www.terraform.io/docs/providers/google/r/service_account).
+Refer to the Terraform Registory for docs: [`google_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account).
 
 # `serviceAccount` Submodule <a name="`serviceAccount` Submodule" id="@cdktf/provider-google.serviceAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_service_account`](https://ww
 
 ### ServiceAccount <a name="ServiceAccount" id="@cdktf/provider-google.serviceAccount.ServiceAccount"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/service_account google_service_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account google_service_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer"></a>
 
@@ -19,6 +19,7 @@ ServiceAccount.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -42,7 +43,7 @@ ServiceAccount.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -52,7 +53,7 @@ ServiceAccount.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the service account is disabled. Defaults to false. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name for the service account. Can be updated without creating a new resource. |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#id ServiceAccount#id}. |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#id ServiceAccount#id}. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The ID of the project that the service account will be created in. Defaults to the provider project configuration. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountTimeouts">ServiceAccountTimeouts</a></code> | timeouts block. |
 
@@ -84,7 +85,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceAccount.ServiceAccount.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -126,7 +127,7 @@ The account id that is used to generate the service account email address and a 
 
 It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D) to comply with RFC1035. Changing this forces a new service account to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#account_id ServiceAccount#account_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#account_id ServiceAccount#account_id}
 
 ---
 
@@ -136,7 +137,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#description ServiceAccount#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#description ServiceAccount#description}
 
 ---
 
@@ -146,7 +147,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Whether the service account is disabled. Defaults to false.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#disabled ServiceAccount#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#disabled ServiceAccount#disabled}
 
 ---
 
@@ -156,7 +157,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The display name for the service account. Can be updated without creating a new resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#display_name ServiceAccount#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#display_name ServiceAccount#display_name}
 
 ---
 
@@ -164,7 +165,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#id ServiceAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#id ServiceAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -177,7 +178,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The ID of the project that the service account will be created in. Defaults to the provider project configuration.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#project ServiceAccount#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#project ServiceAccount#project}
 
 ---
 
@@ -187,7 +188,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#timeouts ServiceAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#timeouts ServiceAccount#timeouts}
 
 ---
 
@@ -535,7 +536,7 @@ ServiceAccount.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccount.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -647,10 +648,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceAccount.ServiceAccount.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -915,6 +916,7 @@ ServiceAccountConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -938,7 +940,7 @@ ServiceAccountConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -948,7 +950,7 @@ ServiceAccountConfig.builder()
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.description">description</a></code> | <code>java.lang.String</code> | A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.disabled">disabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether the service account is disabled. Defaults to false. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name for the service account. Can be updated without creating a new resource. |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#id ServiceAccount#id}. |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#id ServiceAccount#id}. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.project">project</a></code> | <code>java.lang.String</code> | The ID of the project that the service account will be created in. Defaults to the provider project configuration. |
 | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountTimeouts">ServiceAccountTimeouts</a></code> | timeouts block. |
 
@@ -967,10 +969,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.serviceAccount.ServiceAccountConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1036,7 +1038,7 @@ The account id that is used to generate the service account email address and a 
 
 It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D) to comply with RFC1035. Changing this forces a new service account to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#account_id ServiceAccount#account_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#account_id ServiceAccount#account_id}
 
 ---
 
@@ -1050,7 +1052,7 @@ public java.lang.String getDescription();
 
 A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#description ServiceAccount#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#description ServiceAccount#description}
 
 ---
 
@@ -1064,7 +1066,7 @@ public java.lang.Object getDisabled();
 
 Whether the service account is disabled. Defaults to false.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#disabled ServiceAccount#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#disabled ServiceAccount#disabled}
 
 ---
 
@@ -1078,7 +1080,7 @@ public java.lang.String getDisplayName();
 
 The display name for the service account. Can be updated without creating a new resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#display_name ServiceAccount#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#display_name ServiceAccount#display_name}
 
 ---
 
@@ -1090,7 +1092,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#id ServiceAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#id ServiceAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1107,7 +1109,7 @@ public java.lang.String getProject();
 
 The ID of the project that the service account will be created in. Defaults to the provider project configuration.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#project ServiceAccount#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#project ServiceAccount#project}
 
 ---
 
@@ -1121,7 +1123,7 @@ public ServiceAccountTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#timeouts ServiceAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#timeouts ServiceAccount#timeouts}
 
 ---
 
@@ -1141,7 +1143,7 @@ ServiceAccountTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#create ServiceAccount#create}. |
+| <code><a href="#@cdktf/provider-google.serviceAccount.ServiceAccountTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#create ServiceAccount#create}. |
 
 ---
 
@@ -1153,7 +1155,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/service_account#create ServiceAccount#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/service_account#create ServiceAccount#create}.
 
 ---
 

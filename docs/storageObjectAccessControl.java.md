@@ -1,6 +1,6 @@
 # `google_storage_object_access_control`
 
-Refer to the Terraform Registory for docs: [`google_storage_object_access_control`](https://www.terraform.io/docs/providers/google/r/storage_object_access_control).
+Refer to the Terraform Registory for docs: [`google_storage_object_access_control`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control).
 
 # `storageObjectAccessControl` Submodule <a name="`storageObjectAccessControl` Submodule" id="@cdktf/provider-google.storageObjectAccessControl"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_storage_object_access_contro
 
 ### StorageObjectAccessControl <a name="StorageObjectAccessControl" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control google_storage_object_access_control}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control google_storage_object_access_control}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer"></a>
 
@@ -19,6 +19,7 @@ StorageObjectAccessControl.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -40,7 +41,7 @@ StorageObjectAccessControl.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -50,7 +51,7 @@ StorageObjectAccessControl.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.entity">entity</a></code> | <code>java.lang.String</code> | The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.object">object</a></code> | <code>java.lang.String</code> | The name of the object to apply the access control to. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | The access permission for the entity. Possible values: ["OWNER", "READER"]. |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#id StorageObjectAccessControl#id}. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#id StorageObjectAccessControl#id}. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a></code> | timeouts block. |
 
 ---
@@ -81,7 +82,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -121,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#bucket StorageObjectAccessControl#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#bucket StorageObjectAccessControl#bucket}
 
 ---
 
@@ -131,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#entity StorageObjectAccessControl#entity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#entity StorageObjectAccessControl#entity}
 
 ---
 
@@ -141,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The name of the object to apply the access control to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#object StorageObjectAccessControl#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#object StorageObjectAccessControl#object}
 
 ---
 
@@ -151,7 +152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The access permission for the entity. Possible values: ["OWNER", "READER"].
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#role StorageObjectAccessControl#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#role StorageObjectAccessControl#role}
 
 ---
 
@@ -159,7 +160,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#id StorageObjectAccessControl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#id StorageObjectAccessControl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -172,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#timeouts StorageObjectAccessControl#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#timeouts StorageObjectAccessControl#timeouts}
 
 ---
 
@@ -492,7 +493,7 @@ StorageObjectAccessControl.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -603,10 +604,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -861,6 +862,7 @@ StorageObjectAccessControlConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -882,7 +884,7 @@ StorageObjectAccessControlConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -892,7 +894,7 @@ StorageObjectAccessControlConfig.builder()
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.entity">entity</a></code> | <code>java.lang.String</code> | The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.object">object</a></code> | <code>java.lang.String</code> | The name of the object to apply the access control to. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.role">role</a></code> | <code>java.lang.String</code> | The access permission for the entity. Possible values: ["OWNER", "READER"]. |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#id StorageObjectAccessControl#id}. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#id StorageObjectAccessControl#id}. |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a></code> | timeouts block. |
 
 ---
@@ -910,10 +912,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -977,7 +979,7 @@ public java.lang.String getBucket();
 
 The name of the bucket.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#bucket StorageObjectAccessControl#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#bucket StorageObjectAccessControl#bucket}
 
 ---
 
@@ -991,7 +993,7 @@ public java.lang.String getEntity();
 
 The entity holding the permission, in one of the following forms: user-{{userId}} user-{{email}} (such as "user-liz@example.com") group-{{groupId}} group-{{email}} (such as "group-example@googlegroups.com") domain-{{domain}} (such as "domain-example.com") project-team-{{projectId}} allUsers allAuthenticatedUsers.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#entity StorageObjectAccessControl#entity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#entity StorageObjectAccessControl#entity}
 
 ---
 
@@ -1005,7 +1007,7 @@ public java.lang.String getObject();
 
 The name of the object to apply the access control to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#object StorageObjectAccessControl#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#object StorageObjectAccessControl#object}
 
 ---
 
@@ -1019,7 +1021,7 @@ public java.lang.String getRole();
 
 The access permission for the entity. Possible values: ["OWNER", "READER"].
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#role StorageObjectAccessControl#role}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#role StorageObjectAccessControl#role}
 
 ---
 
@@ -1031,7 +1033,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#id StorageObjectAccessControl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#id StorageObjectAccessControl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1048,7 +1050,7 @@ public StorageObjectAccessControlTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#timeouts StorageObjectAccessControl#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#timeouts StorageObjectAccessControl#timeouts}
 
 ---
 
@@ -1082,9 +1084,9 @@ StorageObjectAccessControlTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#create StorageObjectAccessControl#create}. |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#delete StorageObjectAccessControl#delete}. |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#update StorageObjectAccessControl#update}. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#create StorageObjectAccessControl#create}. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#delete StorageObjectAccessControl#delete}. |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#update StorageObjectAccessControl#update}. |
 
 ---
 
@@ -1096,7 +1098,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#create StorageObjectAccessControl#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#create StorageObjectAccessControl#create}.
 
 ---
 
@@ -1108,7 +1110,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#delete StorageObjectAccessControl#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#delete StorageObjectAccessControl#delete}.
 
 ---
 
@@ -1120,7 +1122,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_object_access_control#update StorageObjectAccessControl#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_object_access_control#update StorageObjectAccessControl#update}.
 
 ---
 

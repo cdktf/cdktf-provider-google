@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/scc_mute_config
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface SccMuteConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the mute config.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#description SccMuteConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#description SccMuteConfig#description}
   */
   readonly description?: string;
   /**
@@ -20,11 +20,11 @@ the scope in which the mute configuration is being created. E.g.,
 If a filter contains project = X but is created under the
 project = Y scope, it might not match any findings.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#filter SccMuteConfig#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#filter SccMuteConfig#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#id SccMuteConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#id SccMuteConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -33,7 +33,7 @@ project = Y scope, it might not match any findings.
   /**
   * Unique identifier provided by the client within the parent scope.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#mute_config_id SccMuteConfig#mute_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#mute_config_id SccMuteConfig#mute_config_id}
   */
   readonly muteConfigId: string;
   /**
@@ -41,32 +41,32 @@ project = Y scope, it might not match any findings.
 "organizations/[organization_id]", "folders/[folder_id]", or
 "projects/[project_id]".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#parent SccMuteConfig#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#parent SccMuteConfig#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#timeouts SccMuteConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#timeouts SccMuteConfig#timeouts}
   */
   readonly timeouts?: SccMuteConfigTimeouts;
 }
 export interface SccMuteConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#create SccMuteConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#create SccMuteConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#delete SccMuteConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#delete SccMuteConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config#update SccMuteConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config#update SccMuteConfig#update}
   */
   readonly update?: string;
 }
 
-export function sccMuteConfigTimeoutsToTerraform(struct?: SccMuteConfigTimeoutsOutputReference | SccMuteConfigTimeouts | cdktf.IResolvable): any {
+export function sccMuteConfigTimeoutsToTerraform(struct?: SccMuteConfigTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,7 +87,7 @@ export class SccMuteConfigTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): SccMuteConfigTimeouts | cdktf.IResolvable | undefined {
@@ -182,7 +182,7 @@ export class SccMuteConfigTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config google_scc_mute_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config google_scc_mute_config}
 */
 export class SccMuteConfig extends cdktf.TerraformResource {
 
@@ -196,7 +196,7 @@ export class SccMuteConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/scc_mute_config google_scc_mute_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_mute_config google_scc_mute_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

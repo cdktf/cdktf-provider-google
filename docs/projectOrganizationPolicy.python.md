@@ -1,6 +1,6 @@
 # `google_project_organization_policy`
 
-Refer to the Terraform Registory for docs: [`google_project_organization_policy`](https://www.terraform.io/docs/providers/google/r/project_organization_policy).
+Refer to the Terraform Registory for docs: [`google_project_organization_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy).
 
 # `projectOrganizationPolicy` Submodule <a name="`projectOrganizationPolicy` Submodule" id="@cdktf/provider-google.projectOrganizationPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_project_organization_policy`
 
 ### ProjectOrganizationPolicy <a name="ProjectOrganizationPolicy" id="@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy google_project_organization_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy google_project_organization_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer"></a>
 
@@ -19,7 +19,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicy(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -41,7 +41,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicy(
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -50,7 +50,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicy(
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.constraint">constraint</a></code> | <code>str</code> | The name of the Constraint the Policy is configuring, for example, serviceuser.services. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | The project ID. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.booleanPolicy">boolean_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyBooleanPolicy">ProjectOrganizationPolicyBooleanPolicy</a></code> | boolean_policy block. |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#id ProjectOrganizationPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#id ProjectOrganizationPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.listPolicy">list_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyListPolicy">ProjectOrganizationPolicyListPolicy</a></code> | list_policy block. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.restorePolicy">restore_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyRestorePolicy">ProjectOrganizationPolicyRestorePolicy</a></code> | restore_policy block. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts">ProjectOrganizationPolicyTimeouts</a></code> | timeouts block. |
@@ -84,7 +84,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the Constraint the Policy is configuring, for example, serviceuser.services.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#constraint ProjectOrganizationPolicy#constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#constraint ProjectOrganizationPolicy#constraint}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The project ID.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#project ProjectOrganizationPolicy#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#project ProjectOrganizationPolicy#project}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 boolean_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#boolean_policy ProjectOrganizationPolicy#boolean_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#boolean_policy ProjectOrganizationPolicy#boolean_policy}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#id ProjectOrganizationPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#id ProjectOrganizationPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -165,7 +165,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 list_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#list_policy ProjectOrganizationPolicy#list_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#list_policy ProjectOrganizationPolicy#list_policy}
 
 ---
 
@@ -175,7 +175,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 restore_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#restore_policy ProjectOrganizationPolicy#restore_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#restore_policy ProjectOrganizationPolicy#restore_policy}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#timeouts ProjectOrganizationPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#timeouts ProjectOrganizationPolicy#timeouts}
 
 ---
 
@@ -195,7 +195,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Version of the Policy. Default version is 0.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#version ProjectOrganizationPolicy#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#version ProjectOrganizationPolicy#version}
 
 ---
 
@@ -455,7 +455,7 @@ def put_boolean_policy(
 
 If true, then the Policy is enforced. If false, then any configuration is acceptable.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#enforced ProjectOrganizationPolicy#enforced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#enforced ProjectOrganizationPolicy#enforced}
 
 ---
 
@@ -476,7 +476,7 @@ def put_list_policy(
 
 allow block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#allow ProjectOrganizationPolicy#allow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#allow ProjectOrganizationPolicy#allow}
 
 ---
 
@@ -486,7 +486,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 deny block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#deny ProjectOrganizationPolicy#deny}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#deny ProjectOrganizationPolicy#deny}
 
 ---
 
@@ -496,7 +496,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
 
 ---
 
@@ -506,7 +506,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#suggested_value ProjectOrganizationPolicy#suggested_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#suggested_value ProjectOrganizationPolicy#suggested_value}
 
 ---
 
@@ -524,7 +524,7 @@ def put_restore_policy(
 
 May only be set to true. If set, then the default Policy is restored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#default ProjectOrganizationPolicy#default}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#default ProjectOrganizationPolicy#default}
 
 ---
 
@@ -543,7 +543,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#create ProjectOrganizationPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#create ProjectOrganizationPolicy#create}.
 
 ---
 
@@ -551,7 +551,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#delete ProjectOrganizationPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#delete ProjectOrganizationPolicy#delete}.
 
 ---
 
@@ -559,7 +559,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#read ProjectOrganizationPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#read ProjectOrganizationPolicy#read}.
 
 ---
 
@@ -567,7 +567,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#update ProjectOrganizationPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#update ProjectOrganizationPolicy#update}.
 
 ---
 
@@ -695,7 +695,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicy.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -807,10 +807,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicy.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1094,7 +1094,7 @@ enforced: typing.Union[bool, IResolvable]
 
 If true, then the Policy is enforced. If false, then any configuration is acceptable.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#enforced ProjectOrganizationPolicy#enforced}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#enforced ProjectOrganizationPolicy#enforced}
 
 ---
 
@@ -1107,7 +1107,7 @@ from cdktf_cdktf_provider_google import project_organization_policy
 
 projectOrganizationPolicy.ProjectOrganizationPolicyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1129,7 +1129,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicyConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1138,7 +1138,7 @@ projectOrganizationPolicy.ProjectOrganizationPolicyConfig(
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.constraint">constraint</a></code> | <code>str</code> | The name of the Constraint the Policy is configuring, for example, serviceuser.services. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.project">project</a></code> | <code>str</code> | The project ID. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.booleanPolicy">boolean_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyBooleanPolicy">ProjectOrganizationPolicyBooleanPolicy</a></code> | boolean_policy block. |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#id ProjectOrganizationPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#id ProjectOrganizationPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.listPolicy">list_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyListPolicy">ProjectOrganizationPolicyListPolicy</a></code> | list_policy block. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.restorePolicy">restore_policy</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyRestorePolicy">ProjectOrganizationPolicyRestorePolicy</a></code> | restore_policy block. |
 | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts">ProjectOrganizationPolicyTimeouts</a></code> | timeouts block. |
@@ -1159,10 +1159,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1226,7 +1226,7 @@ constraint: str
 
 The name of the Constraint the Policy is configuring, for example, serviceuser.services.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#constraint ProjectOrganizationPolicy#constraint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#constraint ProjectOrganizationPolicy#constraint}
 
 ---
 
@@ -1240,7 +1240,7 @@ project: str
 
 The project ID.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#project ProjectOrganizationPolicy#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#project ProjectOrganizationPolicy#project}
 
 ---
 
@@ -1254,7 +1254,7 @@ boolean_policy: ProjectOrganizationPolicyBooleanPolicy
 
 boolean_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#boolean_policy ProjectOrganizationPolicy#boolean_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#boolean_policy ProjectOrganizationPolicy#boolean_policy}
 
 ---
 
@@ -1266,7 +1266,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#id ProjectOrganizationPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#id ProjectOrganizationPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1283,7 +1283,7 @@ list_policy: ProjectOrganizationPolicyListPolicy
 
 list_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#list_policy ProjectOrganizationPolicy#list_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#list_policy ProjectOrganizationPolicy#list_policy}
 
 ---
 
@@ -1297,7 +1297,7 @@ restore_policy: ProjectOrganizationPolicyRestorePolicy
 
 restore_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#restore_policy ProjectOrganizationPolicy#restore_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#restore_policy ProjectOrganizationPolicy#restore_policy}
 
 ---
 
@@ -1311,7 +1311,7 @@ timeouts: ProjectOrganizationPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#timeouts ProjectOrganizationPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#timeouts ProjectOrganizationPolicy#timeouts}
 
 ---
 
@@ -1325,7 +1325,7 @@ version: typing.Union[int, float]
 
 Version of the Policy. Default version is 0.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#version ProjectOrganizationPolicy#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#version ProjectOrganizationPolicy#version}
 
 ---
 
@@ -1365,7 +1365,7 @@ allow: ProjectOrganizationPolicyListPolicyAllow
 
 allow block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#allow ProjectOrganizationPolicy#allow}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#allow ProjectOrganizationPolicy#allow}
 
 ---
 
@@ -1379,7 +1379,7 @@ deny: ProjectOrganizationPolicyListPolicyDeny
 
 deny block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#deny ProjectOrganizationPolicy#deny}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#deny ProjectOrganizationPolicy#deny}
 
 ---
 
@@ -1393,7 +1393,7 @@ inherit_from_parent: typing.Union[bool, IResolvable]
 
 If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
 
 ---
 
@@ -1407,7 +1407,7 @@ suggested_value: str
 
 The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#suggested_value ProjectOrganizationPolicy#suggested_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#suggested_value ProjectOrganizationPolicy#suggested_value}
 
 ---
 
@@ -1443,7 +1443,7 @@ all: typing.Union[bool, IResolvable]
 
 The policy allows or denies all values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#all ProjectOrganizationPolicy#all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
 
 ---
 
@@ -1457,7 +1457,7 @@ values: typing.List[str]
 
 The policy can define specific values that are allowed or denied.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#values ProjectOrganizationPolicy#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
 
 ---
 
@@ -1493,7 +1493,7 @@ all: typing.Union[bool, IResolvable]
 
 The policy allows or denies all values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#all ProjectOrganizationPolicy#all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
 
 ---
 
@@ -1507,7 +1507,7 @@ values: typing.List[str]
 
 The policy can define specific values that are allowed or denied.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#values ProjectOrganizationPolicy#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
 
 ---
 
@@ -1541,7 +1541,7 @@ default: typing.Union[bool, IResolvable]
 
 May only be set to true. If set, then the default Policy is restored.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#default ProjectOrganizationPolicy#default}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#default ProjectOrganizationPolicy#default}
 
 ---
 
@@ -1564,10 +1564,10 @@ projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#create ProjectOrganizationPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#delete ProjectOrganizationPolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#read ProjectOrganizationPolicy#read}. |
-| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#update ProjectOrganizationPolicy#update}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#create ProjectOrganizationPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#delete ProjectOrganizationPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#read ProjectOrganizationPolicy#read}. |
+| <code><a href="#@cdktf/provider-google.projectOrganizationPolicy.ProjectOrganizationPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#update ProjectOrganizationPolicy#update}. |
 
 ---
 
@@ -1579,7 +1579,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#create ProjectOrganizationPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#create ProjectOrganizationPolicy#create}.
 
 ---
 
@@ -1591,7 +1591,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#delete ProjectOrganizationPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#delete ProjectOrganizationPolicy#delete}.
 
 ---
 
@@ -1603,7 +1603,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#read ProjectOrganizationPolicy#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#read ProjectOrganizationPolicy#read}.
 
 ---
 
@@ -1615,7 +1615,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#update ProjectOrganizationPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#update ProjectOrganizationPolicy#update}.
 
 ---
 
@@ -2830,7 +2830,7 @@ def put_allow(
 
 The policy allows or denies all values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#all ProjectOrganizationPolicy#all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
 
 ---
 
@@ -2840,7 +2840,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The policy can define specific values that are allowed or denied.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#values ProjectOrganizationPolicy#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
 
 ---
 
@@ -2859,7 +2859,7 @@ def put_deny(
 
 The policy allows or denies all values.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#all ProjectOrganizationPolicy#all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
 
 ---
 
@@ -2869,7 +2869,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The policy can define specific values that are allowed or denied.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_organization_policy#values ProjectOrganizationPolicy#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
 
 ---
 

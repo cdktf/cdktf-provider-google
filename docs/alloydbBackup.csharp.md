@@ -1,6 +1,6 @@
 # `google_alloydb_backup`
 
-Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://www.terraform.io/docs/providers/google/r/alloydb_backup).
+Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup).
 
 # `alloydbBackup` Submodule <a name="`alloydbBackup` Submodule" id="@cdktf/provider-google.alloydbBackup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://www
 
 ### AlloydbBackup <a name="AlloydbBackup" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup google_alloydb_backup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup google_alloydb_backup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.Initializer"></a>
 
@@ -394,7 +394,7 @@ AlloydbBackup.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -511,10 +511,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -827,7 +827,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new AlloydbBackupConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -849,7 +849,7 @@ new AlloydbBackupConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -858,10 +858,10 @@ new AlloydbBackupConfig {
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.backupId">BackupId</a></code> | <code>string</code> | The ID of the alloydb backup. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.clusterName">ClusterName</a></code> | <code>string</code> | The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}). |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.description">Description</a></code> | <code>string</code> | User-provided description of the backup. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#id AlloydbBackup#id}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#id AlloydbBackup#id}. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | User-defined labels for the alloydb backup. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.location">Location</a></code> | <code>string</code> | The location where the alloydb backup should reside. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#project AlloydbBackup#project}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#project AlloydbBackup#project}. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts">AlloydbBackupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -879,10 +879,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -946,7 +946,7 @@ public string BackupId { get; set; }
 
 The ID of the alloydb backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#backup_id AlloydbBackup#backup_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#backup_id AlloydbBackup#backup_id}
 
 ---
 
@@ -960,7 +960,7 @@ public string ClusterName { get; set; }
 
 The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#cluster_name AlloydbBackup#cluster_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#cluster_name AlloydbBackup#cluster_name}
 
 ---
 
@@ -974,7 +974,7 @@ public string Description { get; set; }
 
 User-provided description of the backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#description AlloydbBackup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#description AlloydbBackup#description}
 
 ---
 
@@ -986,7 +986,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#id AlloydbBackup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#id AlloydbBackup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1003,7 +1003,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 User-defined labels for the alloydb backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#labels AlloydbBackup#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#labels AlloydbBackup#labels}
 
 ---
 
@@ -1017,7 +1017,7 @@ public string Location { get; set; }
 
 The location where the alloydb backup should reside.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#location AlloydbBackup#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#location AlloydbBackup#location}
 
 ---
 
@@ -1029,7 +1029,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#project AlloydbBackup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#project AlloydbBackup#project}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public AlloydbBackupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#timeouts AlloydbBackup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#timeouts AlloydbBackup#timeouts}
 
 ---
 
@@ -1065,9 +1065,9 @@ new AlloydbBackupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#create AlloydbBackup#create}. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#delete AlloydbBackup#delete}. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#update AlloydbBackup#update}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#create AlloydbBackup#create}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#delete AlloydbBackup#delete}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#update AlloydbBackup#update}. |
 
 ---
 
@@ -1079,7 +1079,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#create AlloydbBackup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#create AlloydbBackup#create}.
 
 ---
 
@@ -1091,7 +1091,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#delete AlloydbBackup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#delete AlloydbBackup#delete}.
 
 ---
 
@@ -1103,7 +1103,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/alloydb_backup#update AlloydbBackup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#update AlloydbBackup#update}.
 
 ---
 

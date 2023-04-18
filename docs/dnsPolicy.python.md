@@ -1,6 +1,6 @@
 # `google_dns_policy`
 
-Refer to the Terraform Registory for docs: [`google_dns_policy`](https://www.terraform.io/docs/providers/google/r/dns_policy).
+Refer to the Terraform Registory for docs: [`google_dns_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy).
 
 # `dnsPolicy` Submodule <a name="`dnsPolicy` Submodule" id="@cdktf/provider-google.dnsPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dns_policy`](https://www.ter
 
 ### DnsPolicy <a name="DnsPolicy" id="@cdktf/provider-google.dnsPolicy.DnsPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_policy google_dns_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy google_dns_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer"></a>
 
@@ -19,7 +19,7 @@ dnsPolicy.DnsPolicy(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -42,7 +42,7 @@ dnsPolicy.DnsPolicy(
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -53,9 +53,9 @@ dnsPolicy.DnsPolicy(
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.description">description</a></code> | <code>str</code> | A textual description field. Defaults to 'Managed by Terraform'. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.enableInboundForwarding">enable_inbound_forwarding</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.enableLogging">enable_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#id DnsPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#id DnsPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.networks">networks</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyNetworks">DnsPolicyNetworks</a>]]</code> | networks block. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#project DnsPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#project DnsPolicy#project}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts">DnsPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -86,7 +86,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -126,7 +126,7 @@ Must be unique amongst siblings in the same scope
 
 User assigned name for this policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#name DnsPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#name DnsPolicy#name}
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 alternative_name_server_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 A textual description field. Defaults to 'Managed by Terraform'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#description DnsPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#description DnsPolicy#description}
 
 ---
 
@@ -160,7 +160,7 @@ When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
 
 ---
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#enable_logging DnsPolicy#enable_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#enable_logging DnsPolicy#enable_logging}
 
 ---
 
@@ -178,7 +178,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#id DnsPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#id DnsPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -191,7 +191,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 networks block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#networks DnsPolicy#networks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#networks DnsPolicy#networks}
 
 ---
 
@@ -199,7 +199,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#project DnsPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#project DnsPolicy#project}.
 
 ---
 
@@ -209,7 +209,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#timeouts DnsPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#timeouts DnsPolicy#timeouts}
 
 ---
 
@@ -470,7 +470,7 @@ def put_alternative_name_server_config(
 
 target_name_servers block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#target_name_servers DnsPolicy#target_name_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#target_name_servers DnsPolicy#target_name_servers}
 
 ---
 
@@ -502,7 +502,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#create DnsPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#create DnsPolicy#create}.
 
 ---
 
@@ -510,7 +510,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#delete DnsPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#delete DnsPolicy#delete}.
 
 ---
 
@@ -518,7 +518,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#update DnsPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#update DnsPolicy#update}.
 
 ---
 
@@ -658,7 +658,7 @@ dnsPolicy.DnsPolicy.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -770,10 +770,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dnsPolicy.DnsPolicy.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1057,7 +1057,7 @@ target_name_servers: typing.Union[IResolvable, typing.List[DnsPolicyAlternativeN
 
 target_name_servers block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#target_name_servers DnsPolicy#target_name_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#target_name_servers DnsPolicy#target_name_servers}
 
 ---
 
@@ -1093,7 +1093,7 @@ ipv4_address: str
 
 IPv4 address to forward to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#ipv4_address DnsPolicy#ipv4_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#ipv4_address DnsPolicy#ipv4_address}
 
 ---
 
@@ -1111,7 +1111,7 @@ If unset or 'default' Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#forwarding_path DnsPolicy#forwarding_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#forwarding_path DnsPolicy#forwarding_path}
 
 ---
 
@@ -1124,7 +1124,7 @@ from cdktf_cdktf_provider_google import dns_policy
 
 dnsPolicy.DnsPolicyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1147,7 +1147,7 @@ dnsPolicy.DnsPolicyConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1158,9 +1158,9 @@ dnsPolicy.DnsPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.description">description</a></code> | <code>str</code> | A textual description field. Defaults to 'Managed by Terraform'. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.enableInboundForwarding">enable_inbound_forwarding</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.enableLogging">enable_logging</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#id DnsPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#id DnsPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.networks">networks</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyNetworks">DnsPolicyNetworks</a>]]</code> | networks block. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#project DnsPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#project DnsPolicy#project}. |
 | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts">DnsPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1178,10 +1178,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dnsPolicy.DnsPolicyConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1245,7 +1245,7 @@ name: str
 
 User assigned name for this policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#name DnsPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#name DnsPolicy#name}
 
 ---
 
@@ -1259,7 +1259,7 @@ alternative_name_server_config: DnsPolicyAlternativeNameServerConfig
 
 alternative_name_server_config block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#alternative_name_server_config DnsPolicy#alternative_name_server_config}
 
 ---
 
@@ -1273,7 +1273,7 @@ description: str
 
 A textual description field. Defaults to 'Managed by Terraform'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#description DnsPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#description DnsPolicy#description}
 
 ---
 
@@ -1291,7 +1291,7 @@ When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#enable_inbound_forwarding DnsPolicy#enable_inbound_forwarding}
 
 ---
 
@@ -1305,7 +1305,7 @@ enable_logging: typing.Union[bool, IResolvable]
 
 Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#enable_logging DnsPolicy#enable_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#enable_logging DnsPolicy#enable_logging}
 
 ---
 
@@ -1317,7 +1317,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#id DnsPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#id DnsPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1334,7 +1334,7 @@ networks: typing.Union[IResolvable, typing.List[DnsPolicyNetworks]]
 
 networks block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#networks DnsPolicy#networks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#networks DnsPolicy#networks}
 
 ---
 
@@ -1346,7 +1346,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#project DnsPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#project DnsPolicy#project}.
 
 ---
 
@@ -1360,7 +1360,7 @@ timeouts: DnsPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#timeouts DnsPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#timeouts DnsPolicy#timeouts}
 
 ---
 
@@ -1397,7 +1397,7 @@ The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#network_url DnsPolicy#network_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#network_url DnsPolicy#network_url}
 
 ---
 
@@ -1419,9 +1419,9 @@ dnsPolicy.DnsPolicyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#create DnsPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#delete DnsPolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#update DnsPolicy#update}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#create DnsPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#delete DnsPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.dnsPolicy.DnsPolicyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#update DnsPolicy#update}. |
 
 ---
 
@@ -1433,7 +1433,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#create DnsPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#create DnsPolicy#create}.
 
 ---
 
@@ -1445,7 +1445,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#delete DnsPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#delete DnsPolicy#delete}.
 
 ---
 
@@ -1457,7 +1457,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_policy#update DnsPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy#update DnsPolicy#update}.
 
 ---
 

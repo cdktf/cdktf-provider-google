@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * An expiration time in microseconds since epoch.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#expiration_time_usec OsLoginSshPublicKey#expiration_time_usec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#expiration_time_usec OsLoginSshPublicKey#expiration_time_usec}
   */
   readonly expirationTimeUsec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#id OsLoginSshPublicKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#id OsLoginSshPublicKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,44 +23,44 @@ export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * Public key text in SSH format, defined by RFC4253 section 6.6.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#key OsLoginSshPublicKey#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#key OsLoginSshPublicKey#key}
   */
   readonly key: string;
   /**
   * The project ID of the Google Cloud Platform project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#project OsLoginSshPublicKey#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#project OsLoginSshPublicKey#project}
   */
   readonly project?: string;
   /**
   * The user email.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#user OsLoginSshPublicKey#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#user OsLoginSshPublicKey#user}
   */
   readonly user: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#timeouts OsLoginSshPublicKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#timeouts OsLoginSshPublicKey#timeouts}
   */
   readonly timeouts?: OsLoginSshPublicKeyTimeouts;
 }
 export interface OsLoginSshPublicKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#create OsLoginSshPublicKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#create OsLoginSshPublicKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#delete OsLoginSshPublicKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#delete OsLoginSshPublicKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key#update OsLoginSshPublicKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key#update OsLoginSshPublicKey#update}
   */
   readonly update?: string;
 }
 
-export function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTimeoutsOutputReference | OsLoginSshPublicKeyTimeouts | cdktf.IResolvable): any {
+export function osLoginSshPublicKeyTimeoutsToTerraform(struct?: OsLoginSshPublicKeyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,7 +81,7 @@ export class OsLoginSshPublicKeyTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): OsLoginSshPublicKeyTimeouts | cdktf.IResolvable | undefined {
@@ -176,7 +176,7 @@ export class OsLoginSshPublicKeyTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key google_os_login_ssh_public_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key}
 */
 export class OsLoginSshPublicKey extends cdktf.TerraformResource {
 
@@ -190,7 +190,7 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/os_login_ssh_public_key google_os_login_ssh_public_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

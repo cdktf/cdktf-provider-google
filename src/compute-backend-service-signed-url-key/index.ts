@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface ComputeBackendServiceSignedUrlKeyConfig extends cdktf.Terraform
   /**
   * The backend service this signed URL key belongs.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#backend_service ComputeBackendServiceSignedUrlKey#backend_service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#backend_service ComputeBackendServiceSignedUrlKey#backend_service}
   */
   readonly backendService: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#id ComputeBackendServiceSignedUrlKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#id ComputeBackendServiceSignedUrlKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,38 +24,38 @@ export interface ComputeBackendServiceSignedUrlKeyConfig extends cdktf.Terraform
   * 128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#key_value ComputeBackendServiceSignedUrlKey#key_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#key_value ComputeBackendServiceSignedUrlKey#key_value}
   */
   readonly keyValue: string;
   /**
   * Name of the signed URL key.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#name ComputeBackendServiceSignedUrlKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#name ComputeBackendServiceSignedUrlKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#project ComputeBackendServiceSignedUrlKey#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#project ComputeBackendServiceSignedUrlKey#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#timeouts ComputeBackendServiceSignedUrlKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#timeouts ComputeBackendServiceSignedUrlKey#timeouts}
   */
   readonly timeouts?: ComputeBackendServiceSignedUrlKeyTimeouts;
 }
 export interface ComputeBackendServiceSignedUrlKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#create ComputeBackendServiceSignedUrlKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#create ComputeBackendServiceSignedUrlKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key#delete ComputeBackendServiceSignedUrlKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key#delete ComputeBackendServiceSignedUrlKey#delete}
   */
   readonly delete?: string;
 }
 
-export function computeBackendServiceSignedUrlKeyTimeoutsToTerraform(struct?: ComputeBackendServiceSignedUrlKeyTimeoutsOutputReference | ComputeBackendServiceSignedUrlKeyTimeouts | cdktf.IResolvable): any {
+export function computeBackendServiceSignedUrlKeyTimeoutsToTerraform(struct?: ComputeBackendServiceSignedUrlKeyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -75,7 +75,7 @@ export class ComputeBackendServiceSignedUrlKeyTimeoutsOutputReference extends cd
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeBackendServiceSignedUrlKeyTimeouts | cdktf.IResolvable | undefined {
@@ -148,7 +148,7 @@ export class ComputeBackendServiceSignedUrlKeyTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key google_compute_backend_service_signed_url_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key google_compute_backend_service_signed_url_key}
 */
 export class ComputeBackendServiceSignedUrlKey extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class ComputeBackendServiceSignedUrlKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_backend_service_signed_url_key google_compute_backend_service_signed_url_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_backend_service_signed_url_key google_compute_backend_service_signed_url_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

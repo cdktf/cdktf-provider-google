@@ -1,6 +1,6 @@
 # `google_game_services_game_server_cluster`
 
-Refer to the Terraform Registory for docs: [`google_game_services_game_server_cluster`](https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster).
+Refer to the Terraform Registory for docs: [`google_game_services_game_server_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster).
 
 # `gameServicesGameServerCluster` Submodule <a name="`gameServicesGameServerCluster` Submodule" id="@cdktf/provider-google.gameServicesGameServerCluster"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_game_services_game_server_cl
 
 ### GameServicesGameServerCluster <a name="GameServicesGameServerCluster" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster google_game_services_game_server_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster google_game_services_game_server_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.NewGameServicesGameServerCluster(scope Construct, id *string, config GameServicesGameServerClusterConfig) GameServicesGameServerCluster
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.GameServicesGameServerCluster_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.GameServicesGameServerCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ gameservicesgameservercluster.GameServicesGameServerCluster_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.GameServicesGameServerCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ gameservicesgameservercluster.GameServicesGameServerCluster_IsTerraformResource(
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -520,10 +520,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -792,25 +792,25 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 &gameservicesgameservercluster.GameServicesGameServerClusterConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	ClusterId: *string,
-	ConnectionInfo: github.com/cdktf/cdktf-provider-google-go/google/v6.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfo,
+	ConnectionInfo: github.com/cdktf/cdktf-provider-google-go/google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfo,
 	RealmId: *string,
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts,
 }
 ```
 
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameserv
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -829,10 +829,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameserv
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.connectionInfo">ConnectionInfo</a></code> | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfo">GameServicesGameServerClusterConnectionInfo</a></code> | connection_info block. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.realmId">RealmId</a></code> | <code>*string</code> | The realm id of the game server realm. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.description">Description</a></code> | <code>*string</code> | Human readable description of the cluster. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#id GameServicesGameServerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels associated with this game server cluster. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.location">Location</a></code> | <code>*string</code> | Location of the Cluster. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#project GameServicesGameServerCluster#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts">GameServicesGameServerClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -850,10 +850,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -917,7 +917,7 @@ ClusterId *string
 
 Required. The resource name of the game server cluster.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#cluster_id GameServicesGameServerCluster#cluster_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#cluster_id GameServicesGameServerCluster#cluster_id}
 
 ---
 
@@ -931,7 +931,7 @@ ConnectionInfo GameServicesGameServerClusterConnectionInfo
 
 connection_info block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#connection_info GameServicesGameServerCluster#connection_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#connection_info GameServicesGameServerCluster#connection_info}
 
 ---
 
@@ -945,7 +945,7 @@ RealmId *string
 
 The realm id of the game server realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#realm_id GameServicesGameServerCluster#realm_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#realm_id GameServicesGameServerCluster#realm_id}
 
 ---
 
@@ -959,7 +959,7 @@ Description *string
 
 Human readable description of the cluster.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#description GameServicesGameServerCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#description GameServicesGameServerCluster#description}
 
 ---
 
@@ -971,7 +971,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#id GameServicesGameServerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -988,7 +988,7 @@ Labels *map[string]*string
 
 The labels associated with this game server cluster. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
 
 ---
 
@@ -1002,7 +1002,7 @@ Location *string
 
 Location of the Cluster.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#location GameServicesGameServerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#location GameServicesGameServerCluster#location}
 
 ---
 
@@ -1014,7 +1014,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#project GameServicesGameServerCluster#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}.
 
 ---
 
@@ -1028,7 +1028,7 @@ Timeouts GameServicesGameServerClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#timeouts GameServicesGameServerCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#timeouts GameServicesGameServerCluster#timeouts}
 
 ---
 
@@ -1037,10 +1037,10 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 &gameservicesgameservercluster.GameServicesGameServerClusterConnectionInfo {
-	GkeClusterReference: github.com/cdktf/cdktf-provider-google-go/google/v6.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfoGkeClusterReference,
+	GkeClusterReference: github.com/cdktf/cdktf-provider-google-go/google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfoGkeClusterReference,
 	Namespace: *string,
 }
 ```
@@ -1064,7 +1064,7 @@ GkeClusterReference GameServicesGameServerClusterConnectionInfoGkeClusterReferen
 
 gke_cluster_reference block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
 
 ---
 
@@ -1081,7 +1081,7 @@ Namespace designated on the game server cluster where the game server instances 
 The namespace existence will be validated
 during creation.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#namespace GameServicesGameServerCluster#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#namespace GameServicesGameServerCluster#namespace}
 
 ---
 
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfoGkeClusterReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 &gameservicesgameservercluster.GameServicesGameServerClusterConnectionInfoGkeClusterReference {
 	Cluster: *string,
@@ -1123,7 +1123,7 @@ If project and location are not specified, the project and location of the
 GameServerCluster resource are used to generate the full name of the
 GKE cluster.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#cluster GameServicesGameServerCluster#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#cluster GameServicesGameServerCluster#cluster}
 
 ---
 
@@ -1132,7 +1132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 &gameservicesgameservercluster.GameServicesGameServerClusterTimeouts {
 	Create: *string,
@@ -1145,9 +1145,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameserv
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#create GameServicesGameServerCluster#create}. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#update GameServicesGameServerCluster#update}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}. |
 
 ---
 
@@ -1159,7 +1159,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#create GameServicesGameServerCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}.
 
 ---
 
@@ -1171,7 +1171,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}.
 
 ---
 
@@ -1183,7 +1183,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_game_server_cluster#update GameServicesGameServerCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}.
 
 ---
 
@@ -1194,7 +1194,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.NewGameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesGameServerClusterConnectionInfoGkeClusterReferenceOutputReference
 ```
@@ -1465,7 +1465,7 @@ func InternalValue() GameServicesGameServerClusterConnectionInfoGkeClusterRefere
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.NewGameServicesGameServerClusterConnectionInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesGameServerClusterConnectionInfoOutputReference
 ```
@@ -1771,7 +1771,7 @@ func InternalValue() GameServicesGameServerClusterConnectionInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/gameservicesgameservercluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/gameservicesgameservercluster"
 
 gameservicesgameservercluster.NewGameServicesGameServerClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesGameServerClusterTimeoutsOutputReference
 ```

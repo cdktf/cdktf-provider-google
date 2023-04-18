@@ -1,6 +1,6 @@
 # `google_spanner_instance_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_spanner_instance_iam_policy`](https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy).
+Refer to the Terraform Registory for docs: [`google_spanner_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy).
 
 # `spannerInstanceIamPolicy` Submodule <a name="`spannerInstanceIamPolicy` Submodule" id="@cdktf/provider-google.spannerInstanceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_spanner_instance_iam_policy`
 
 ### SpannerInstanceIamPolicy <a name="SpannerInstanceIamPolicy" id="@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy google_spanner_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy google_spanner_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.Initializer"></a>
 
@@ -353,7 +353,7 @@ SpannerInstanceIamPolicy.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -456,10 +456,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicy.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -632,7 +632,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new SpannerInstanceIamPolicyConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -650,16 +650,16 @@ new SpannerInstanceIamPolicyConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#instance SpannerInstanceIamPolicy#instance}. |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#policy_data SpannerInstanceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#id SpannerInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#project SpannerInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#instance SpannerInstanceIamPolicy#instance}. |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#policy_data SpannerInstanceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#id SpannerInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#project SpannerInstanceIamPolicy#project}. |
 
 ---
 
@@ -676,10 +676,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.spannerInstanceIamPolicy.SpannerInstanceIamPolicyConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -741,7 +741,7 @@ public string Instance { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#instance SpannerInstanceIamPolicy#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#instance SpannerInstanceIamPolicy#instance}.
 
 ---
 
@@ -753,7 +753,7 @@ public string PolicyData { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#policy_data SpannerInstanceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#policy_data SpannerInstanceIamPolicy#policy_data}.
 
 ---
 
@@ -765,7 +765,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#id SpannerInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#id SpannerInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -780,7 +780,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/spanner_instance_iam_policy#project SpannerInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/spanner_instance_iam_policy#project SpannerInstanceIamPolicy#project}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_storage_bucket_object`
 
-Refer to the Terraform Registory for docs: [`google_storage_bucket_object`](https://www.terraform.io/docs/providers/google/r/storage_bucket_object).
+Refer to the Terraform Registory for docs: [`google_storage_bucket_object`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object).
 
 # `storageBucketObject` Submodule <a name="`storageBucketObject` Submodule" id="@cdktf/provider-google.storageBucketObject"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_storage_bucket_object`](http
 
 ### StorageBucketObject <a name="StorageBucketObject" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object google_storage_bucket_object}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object google_storage_bucket_object}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer"></a>
 
@@ -19,6 +19,7 @@ StorageBucketObject.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -54,7 +55,7 @@ StorageBucketObject.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -69,9 +70,9 @@ StorageBucketObject.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.contentLanguage">contentLanguage</a></code> | <code>java.lang.String</code> | Content-Language of the object data. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.contentType">contentType</a></code> | <code>java.lang.String</code> | Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8". |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.customerEncryption">customerEncryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectCustomerEncryption">StorageBucketObjectCustomerEncryption</a></code> | customer_encryption block. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.detectMd5Hash">detectMd5Hash</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.detectMd5Hash">detectMd5Hash</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.eventBasedHold">eventBasedHold</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether an object is under event-based hold. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#id StorageBucketObject#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.kmsKeyName">kmsKeyName</a></code> | <code>java.lang.String</code> | Resource name of the Cloud KMS key that will be used to encrypt the object. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | User-provided metadata, in key/value pairs. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.source">source</a></code> | <code>java.lang.String</code> | A path to the data you want to upload. Must be defined if content is not. |
@@ -107,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -147,7 +148,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the containing bucket.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#bucket StorageBucketObject#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#bucket StorageBucketObject#bucket}
 
 ---
 
@@ -157,7 +158,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The name of the object. If you're interpolating the name of this object, see output_name instead.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#name StorageBucketObject#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#name StorageBucketObject#name}
 
 ---
 
@@ -169,7 +170,7 @@ Cache-Control directive to specify caching behavior of object data.
 
 If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#cache_control StorageBucketObject#cache_control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#cache_control StorageBucketObject#cache_control}
 
 ---
 
@@ -181,7 +182,7 @@ Data as string to be uploaded.
 
 Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content StorageBucketObject#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content StorageBucketObject#content}
 
 ---
 
@@ -191,7 +192,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Content-Disposition of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
 
 ---
 
@@ -201,7 +202,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Content-Encoding of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
 
 ---
 
@@ -211,7 +212,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Content-Language of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_language StorageBucketObject#content_language}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_language StorageBucketObject#content_language}
 
 ---
 
@@ -221,7 +222,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_type StorageBucketObject#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_type StorageBucketObject#content_type}
 
 ---
 
@@ -231,7 +232,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 customer_encryption block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
 
 ---
 
@@ -239,7 +240,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}.
 
 ---
 
@@ -251,7 +252,7 @@ Whether an object is under event-based hold.
 
 Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
 
 ---
 
@@ -259,7 +260,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#id StorageBucketObject#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -274,7 +275,7 @@ Resource name of the Cloud KMS key that will be used to encrypt the object.
 
 Overrides the object metadata's kmsKeyName value, if any.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
 
 ---
 
@@ -284,7 +285,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 User-provided metadata, in key/value pairs.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#metadata StorageBucketObject#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#metadata StorageBucketObject#metadata}
 
 ---
 
@@ -294,7 +295,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 A path to the data you want to upload. Must be defined if content is not.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#source StorageBucketObject#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#source StorageBucketObject#source}
 
 ---
 
@@ -306,7 +307,7 @@ The StorageClass of the new bucket object.
 
 Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#storage_class StorageBucketObject#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#storage_class StorageBucketObject#storage_class}
 
 ---
 
@@ -318,7 +319,7 @@ Whether an object is under temporary hold.
 
 While this flag is set to true, the object is protected against deletion and overwrites.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
 
 ---
 
@@ -328,7 +329,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#timeouts StorageBucketObject#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#timeouts StorageBucketObject#timeouts}
 
 ---
 
@@ -759,7 +760,7 @@ StorageBucketObject.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -894,10 +895,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1392,6 +1393,7 @@ StorageBucketObjectConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -1427,7 +1429,7 @@ StorageBucketObjectConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1442,9 +1444,9 @@ StorageBucketObjectConfig.builder()
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.contentLanguage">contentLanguage</a></code> | <code>java.lang.String</code> | Content-Language of the object data. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.contentType">contentType</a></code> | <code>java.lang.String</code> | Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8". |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.customerEncryption">customerEncryption</a></code> | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectCustomerEncryption">StorageBucketObjectCustomerEncryption</a></code> | customer_encryption block. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.detectMd5Hash">detectMd5Hash</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.detectMd5Hash">detectMd5Hash</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.eventBasedHold">eventBasedHold</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether an object is under event-based hold. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#id StorageBucketObject#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.kmsKeyName">kmsKeyName</a></code> | <code>java.lang.String</code> | Resource name of the Cloud KMS key that will be used to encrypt the object. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.metadata">metadata</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | User-provided metadata, in key/value pairs. |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.source">source</a></code> | <code>java.lang.String</code> | A path to the data you want to upload. Must be defined if content is not. |
@@ -1467,10 +1469,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1534,7 +1536,7 @@ public java.lang.String getBucket();
 
 The name of the containing bucket.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#bucket StorageBucketObject#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#bucket StorageBucketObject#bucket}
 
 ---
 
@@ -1548,7 +1550,7 @@ public java.lang.String getName();
 
 The name of the object. If you're interpolating the name of this object, see output_name instead.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#name StorageBucketObject#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#name StorageBucketObject#name}
 
 ---
 
@@ -1564,7 +1566,7 @@ Cache-Control directive to specify caching behavior of object data.
 
 If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#cache_control StorageBucketObject#cache_control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#cache_control StorageBucketObject#cache_control}
 
 ---
 
@@ -1580,7 +1582,7 @@ Data as string to be uploaded.
 
 Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content StorageBucketObject#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content StorageBucketObject#content}
 
 ---
 
@@ -1594,7 +1596,7 @@ public java.lang.String getContentDisposition();
 
 Content-Disposition of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_disposition StorageBucketObject#content_disposition}
 
 ---
 
@@ -1608,7 +1610,7 @@ public java.lang.String getContentEncoding();
 
 Content-Encoding of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_encoding StorageBucketObject#content_encoding}
 
 ---
 
@@ -1622,7 +1624,7 @@ public java.lang.String getContentLanguage();
 
 Content-Language of the object data.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_language StorageBucketObject#content_language}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_language StorageBucketObject#content_language}
 
 ---
 
@@ -1636,7 +1638,7 @@ public java.lang.String getContentType();
 
 Content-Type of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#content_type StorageBucketObject#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#content_type StorageBucketObject#content_type}
 
 ---
 
@@ -1650,7 +1652,7 @@ public StorageBucketObjectCustomerEncryption getCustomerEncryption();
 
 customer_encryption block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#customer_encryption StorageBucketObject#customer_encryption}
 
 ---
 
@@ -1662,7 +1664,7 @@ public java.lang.String getDetectMd5Hash();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#detect_md5hash StorageBucketObject#detect_md5hash}.
 
 ---
 
@@ -1678,7 +1680,7 @@ Whether an object is under event-based hold.
 
 Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#event_based_hold StorageBucketObject#event_based_hold}
 
 ---
 
@@ -1690,7 +1692,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#id StorageBucketObject#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#id StorageBucketObject#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1709,7 +1711,7 @@ Resource name of the Cloud KMS key that will be used to encrypt the object.
 
 Overrides the object metadata's kmsKeyName value, if any.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#kms_key_name StorageBucketObject#kms_key_name}
 
 ---
 
@@ -1723,7 +1725,7 @@ public java.util.Map<java.lang.String, java.lang.String> getMetadata();
 
 User-provided metadata, in key/value pairs.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#metadata StorageBucketObject#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#metadata StorageBucketObject#metadata}
 
 ---
 
@@ -1737,7 +1739,7 @@ public java.lang.String getSource();
 
 A path to the data you want to upload. Must be defined if content is not.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#source StorageBucketObject#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#source StorageBucketObject#source}
 
 ---
 
@@ -1753,7 +1755,7 @@ The StorageClass of the new bucket object.
 
 Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#storage_class StorageBucketObject#storage_class}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#storage_class StorageBucketObject#storage_class}
 
 ---
 
@@ -1769,7 +1771,7 @@ Whether an object is under temporary hold.
 
 While this flag is set to true, the object is protected against deletion and overwrites.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#temporary_hold StorageBucketObject#temporary_hold}
 
 ---
 
@@ -1783,7 +1785,7 @@ public StorageBucketObjectTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#timeouts StorageBucketObject#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#timeouts StorageBucketObject#timeouts}
 
 ---
 
@@ -1819,7 +1821,7 @@ public java.lang.String getEncryptionKey();
 
 Base64 encoded customer supplied encryption key.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#encryption_key StorageBucketObject#encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#encryption_key StorageBucketObject#encryption_key}
 
 ---
 
@@ -1833,7 +1835,7 @@ public java.lang.String getEncryptionAlgorithm();
 
 The encryption algorithm. Default: AES256.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#encryption_algorithm StorageBucketObject#encryption_algorithm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#encryption_algorithm StorageBucketObject#encryption_algorithm}
 
 ---
 
@@ -1855,9 +1857,9 @@ StorageBucketObjectTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#create StorageBucketObject#create}. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#delete StorageBucketObject#delete}. |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#update StorageBucketObject#update}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#create StorageBucketObject#create}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#delete StorageBucketObject#delete}. |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#update StorageBucketObject#update}. |
 
 ---
 
@@ -1869,7 +1871,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#create StorageBucketObject#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#create StorageBucketObject#create}.
 
 ---
 
@@ -1881,7 +1883,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#delete StorageBucketObject#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#delete StorageBucketObject#delete}.
 
 ---
 
@@ -1893,7 +1895,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_object#update StorageBucketObject#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_object#update StorageBucketObject#update}.
 
 ---
 

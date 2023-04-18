@@ -1,6 +1,6 @@
 # `google_filestore_backup`
 
-Refer to the Terraform Registory for docs: [`google_filestore_backup`](https://www.terraform.io/docs/providers/google/r/filestore_backup).
+Refer to the Terraform Registory for docs: [`google_filestore_backup`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup).
 
 # `filestoreBackup` Submodule <a name="`filestoreBackup` Submodule" id="@cdktf/provider-google.filestoreBackup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_filestore_backup`](https://w
 
 ### FilestoreBackup <a name="FilestoreBackup" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/filestore_backup google_filestore_backup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup google_filestore_backup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 filestorebackup.NewFilestoreBackup(scope Construct, id *string, config FilestoreBackupConfig) FilestoreBackup
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 filestorebackup.FilestoreBackup_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 filestorebackup.FilestoreBackup_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ filestorebackup.FilestoreBackup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 filestorebackup.FilestoreBackup_IsTerraformResource(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ filestorebackup.FilestoreBackup_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -506,10 +506,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.filestoreBackup.FilestoreBackup.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -838,11 +838,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 &filestorebackup.FilestoreBackupConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -856,7 +856,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.filestoreBackup.FilestoreBackupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.filestoreBackup.FilestoreBackupTimeouts,
 }
 ```
 
@@ -865,7 +865,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -876,9 +876,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.sourceFileShare">SourceFileShare</a></code> | <code>*string</code> | Name of the file share in the source Cloud Filestore instance that the backup is created from. |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.sourceInstance">SourceInstance</a></code> | <code>*string</code> | The resource name of the source Cloud Filestore instance, in the format projects/{projectId}/locations/{locationId}/instances/{instanceId}, used to create this backup. |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.description">Description</a></code> | <code>*string</code> | A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected. |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#id FilestoreBackup#id}. |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#id FilestoreBackup#id}. |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Resource labels to represent user-provided metadata. |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#project FilestoreBackup#project}. |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#project FilestoreBackup#project}. |
 | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts">FilestoreBackupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -896,10 +896,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.filestoreBackup.FilestoreBackupConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -963,7 +963,7 @@ Location *string
 
 The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#location FilestoreBackup#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#location FilestoreBackup#location}
 
 ---
 
@@ -984,7 +984,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#name FilestoreBackup#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#name FilestoreBackup#name}
 
 ---
 
@@ -998,7 +998,7 @@ SourceFileShare *string
 
 Name of the file share in the source Cloud Filestore instance that the backup is created from.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#source_file_share FilestoreBackup#source_file_share}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#source_file_share FilestoreBackup#source_file_share}
 
 ---
 
@@ -1012,7 +1012,7 @@ SourceInstance *string
 
 The resource name of the source Cloud Filestore instance, in the format projects/{projectId}/locations/{locationId}/instances/{instanceId}, used to create this backup.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#source_instance FilestoreBackup#source_instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#source_instance FilestoreBackup#source_instance}
 
 ---
 
@@ -1026,7 +1026,7 @@ Description *string
 
 A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#description FilestoreBackup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#description FilestoreBackup#description}
 
 ---
 
@@ -1038,7 +1038,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#id FilestoreBackup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#id FilestoreBackup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1055,7 +1055,7 @@ Labels *map[string]*string
 
 Resource labels to represent user-provided metadata.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#labels FilestoreBackup#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#labels FilestoreBackup#labels}
 
 ---
 
@@ -1067,7 +1067,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#project FilestoreBackup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#project FilestoreBackup#project}.
 
 ---
 
@@ -1081,7 +1081,7 @@ Timeouts FilestoreBackupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#timeouts FilestoreBackup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#timeouts FilestoreBackup#timeouts}
 
 ---
 
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 &filestorebackup.FilestoreBackupTimeouts {
 	Create: *string,
@@ -1103,9 +1103,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#create FilestoreBackup#create}. |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#delete FilestoreBackup#delete}. |
-| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#update FilestoreBackup#update}. |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#create FilestoreBackup#create}. |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#delete FilestoreBackup#delete}. |
+| <code><a href="#@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#update FilestoreBackup#update}. |
 
 ---
 
@@ -1117,7 +1117,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#create FilestoreBackup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#create FilestoreBackup#create}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#delete FilestoreBackup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#delete FilestoreBackup#delete}.
 
 ---
 
@@ -1141,7 +1141,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/filestore_backup#update FilestoreBackup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/filestore_backup#update FilestoreBackup#update}.
 
 ---
 
@@ -1152,7 +1152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.filestoreBackup.FilestoreBackupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/filestorebackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/filestorebackup"
 
 filestorebackup.NewFilestoreBackupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FilestoreBackupTimeoutsOutputReference
 ```

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#display_name VertexAiDataset#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#display_name VertexAiDataset#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#id VertexAiDataset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#id VertexAiDataset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,35 +23,35 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * A set of key/value label pairs to assign to this Workflow.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#labels VertexAiDataset#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#labels VertexAiDataset#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#metadata_schema_uri VertexAiDataset#metadata_schema_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#metadata_schema_uri VertexAiDataset#metadata_schema_uri}
   */
   readonly metadataSchemaUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#project VertexAiDataset#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#project VertexAiDataset#project}
   */
   readonly project?: string;
   /**
   * The region of the dataset. eg us-central1
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#region VertexAiDataset#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#region VertexAiDataset#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#encryption_spec VertexAiDataset#encryption_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#encryption_spec VertexAiDataset#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiDatasetEncryptionSpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#timeouts VertexAiDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#timeouts VertexAiDataset#timeouts}
   */
   readonly timeouts?: VertexAiDatasetTimeouts;
 }
@@ -60,7 +60,7 @@ export interface VertexAiDatasetEncryptionSpec {
   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#kms_key_name VertexAiDataset#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#kms_key_name VertexAiDataset#kms_key_name}
   */
   readonly kmsKeyName?: string;
 }
@@ -125,20 +125,20 @@ export class VertexAiDatasetEncryptionSpecOutputReference extends cdktf.ComplexO
 }
 export interface VertexAiDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#create VertexAiDataset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#create VertexAiDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#delete VertexAiDataset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#delete VertexAiDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset#update VertexAiDataset#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset#update VertexAiDataset#update}
   */
   readonly update?: string;
 }
 
-export function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeoutsOutputReference | VertexAiDatasetTimeouts | cdktf.IResolvable): any {
+export function vertexAiDatasetTimeoutsToTerraform(struct?: VertexAiDatasetTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -159,7 +159,7 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): VertexAiDatasetTimeouts | cdktf.IResolvable | undefined {
@@ -254,7 +254,7 @@ export class VertexAiDatasetTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset google_vertex_ai_dataset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset google_vertex_ai_dataset}
 */
 export class VertexAiDataset extends cdktf.TerraformResource {
 
@@ -268,7 +268,7 @@ export class VertexAiDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_dataset google_vertex_ai_dataset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_dataset google_vertex_ai_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

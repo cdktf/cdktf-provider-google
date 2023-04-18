@@ -1,6 +1,6 @@
 # `google_sql_user`
 
-Refer to the Terraform Registory for docs: [`google_sql_user`](https://www.terraform.io/docs/providers/google/r/sql_user).
+Refer to the Terraform Registory for docs: [`google_sql_user`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user).
 
 # `sqlUser` Submodule <a name="`sqlUser` Submodule" id="@cdktf/provider-google.sqlUser"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_sql_user`](https://www.terra
 
 ### SqlUser <a name="SqlUser" id="@cdktf/provider-google.sqlUser.SqlUser"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_user google_sql_user}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user google_sql_user}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUser.Initializer"></a>
 
@@ -19,6 +19,7 @@ SqlUser.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -44,7 +45,7 @@ SqlUser.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -54,7 +55,7 @@ SqlUser.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name of the user. Changing this forces a new resource to be created. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.deletionPolicy">deletionPolicy</a></code> | <code>java.lang.String</code> | The deletion policy for the user. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.host">host</a></code> | <code>java.lang.String</code> | The host the user can connect from. |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#id SqlUser#id}. |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#id SqlUser#id}. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.password">password</a></code> | <code>java.lang.String</code> | The password for the user. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.passwordPolicy">passwordPolicy</a></code> | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserPasswordPolicy">SqlUserPasswordPolicy</a></code> | password_policy block. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The ID of the project in which the resource belongs. |
@@ -89,7 +90,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sqlUser.SqlUser.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -129,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the Cloud SQL instance. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#instance SqlUser#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#instance SqlUser#instance}
 
 ---
 
@@ -139,7 +140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The name of the user. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#name SqlUser#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#name SqlUser#name}
 
 ---
 
@@ -153,7 +154,7 @@ Setting ABANDON allows the resource
 to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
 have been granted SQL roles. Possible values are: "ABANDON".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#deletion_policy SqlUser#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#deletion_policy SqlUser#deletion_policy}
 
 ---
 
@@ -165,7 +166,7 @@ The host the user can connect from.
 
 This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#host SqlUser#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#host SqlUser#host}
 
 ---
 
@@ -173,7 +174,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#id SqlUser#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#id SqlUser#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -189,7 +190,7 @@ The password for the user.
 Can be updated. For Postgres instances this is a Required field, unless type is set to
 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password SqlUser#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#password SqlUser#password}
 
 ---
 
@@ -199,7 +200,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 password_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password_policy SqlUser#password_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#password_policy SqlUser#password_policy}
 
 ---
 
@@ -211,7 +212,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#project SqlUser#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#project SqlUser#project}
 
 ---
 
@@ -221,7 +222,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#timeouts SqlUser#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#timeouts SqlUser#timeouts}
 
 ---
 
@@ -234,7 +235,7 @@ The user type.
 It determines the method to authenticate the user during login.
 The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#type SqlUser#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#type SqlUser#type}
 
 ---
 
@@ -609,7 +610,7 @@ SqlUser.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUser.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -724,10 +725,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sqlUser.SqlUser.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1022,6 +1023,7 @@ SqlUserConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -1047,7 +1049,7 @@ SqlUserConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1057,7 +1059,7 @@ SqlUserConfig.builder()
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name of the user. Changing this forces a new resource to be created. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.deletionPolicy">deletionPolicy</a></code> | <code>java.lang.String</code> | The deletion policy for the user. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.host">host</a></code> | <code>java.lang.String</code> | The host the user can connect from. |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#id SqlUser#id}. |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#id SqlUser#id}. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.password">password</a></code> | <code>java.lang.String</code> | The password for the user. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.passwordPolicy">passwordPolicy</a></code> | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserPasswordPolicy">SqlUserPasswordPolicy</a></code> | password_policy block. |
 | <code><a href="#@cdktf/provider-google.sqlUser.SqlUserConfig.property.project">project</a></code> | <code>java.lang.String</code> | The ID of the project in which the resource belongs. |
@@ -1079,10 +1081,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sqlUser.SqlUserConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1146,7 +1148,7 @@ public java.lang.String getInstance();
 
 The name of the Cloud SQL instance. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#instance SqlUser#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#instance SqlUser#instance}
 
 ---
 
@@ -1160,7 +1162,7 @@ public java.lang.String getName();
 
 The name of the user. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#name SqlUser#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#name SqlUser#name}
 
 ---
 
@@ -1178,7 +1180,7 @@ Setting ABANDON allows the resource
 to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
 have been granted SQL roles. Possible values are: "ABANDON".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#deletion_policy SqlUser#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#deletion_policy SqlUser#deletion_policy}
 
 ---
 
@@ -1194,7 +1196,7 @@ The host the user can connect from.
 
 This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#host SqlUser#host}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#host SqlUser#host}
 
 ---
 
@@ -1206,7 +1208,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#id SqlUser#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#id SqlUser#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1226,7 +1228,7 @@ The password for the user.
 Can be updated. For Postgres instances this is a Required field, unless type is set to
 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password SqlUser#password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#password SqlUser#password}
 
 ---
 
@@ -1240,7 +1242,7 @@ public SqlUserPasswordPolicy getPasswordPolicy();
 
 password_policy block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password_policy SqlUser#password_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#password_policy SqlUser#password_policy}
 
 ---
 
@@ -1256,7 +1258,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#project SqlUser#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#project SqlUser#project}
 
 ---
 
@@ -1270,7 +1272,7 @@ public SqlUserTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#timeouts SqlUser#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#timeouts SqlUser#timeouts}
 
 ---
 
@@ -1287,7 +1289,7 @@ The user type.
 It determines the method to authenticate the user during login.
 The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#type SqlUser#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#type SqlUser#type}
 
 ---
 
@@ -1329,7 +1331,7 @@ public java.lang.Number getAllowedFailedAttempts();
 
 Number of failed attempts allowed before the user get locked.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
 
 ---
 
@@ -1343,7 +1345,7 @@ public java.lang.Object getEnableFailedAttemptsCheck();
 
 If true, the check that will lock user after too many failed login attempts will be enabled.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
 
 ---
 
@@ -1359,7 +1361,7 @@ If true, the user must specify the current password before changing the password
 
 This flag is supported only for MySQL.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#enable_password_verification SqlUser#enable_password_verification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#enable_password_verification SqlUser#enable_password_verification}
 
 ---
 
@@ -1373,7 +1375,7 @@ public java.lang.String getPasswordExpirationDuration();
 
 Password expiration duration with one week grace period.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
 
 ---
 
@@ -1419,9 +1421,9 @@ SqlUserTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#create SqlUser#create}. |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#delete SqlUser#delete}. |
-| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#update SqlUser#update}. |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#create SqlUser#create}. |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#delete SqlUser#delete}. |
+| <code><a href="#@cdktf/provider-google.sqlUser.SqlUserTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#update SqlUser#update}. |
 
 ---
 
@@ -1433,7 +1435,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#create SqlUser#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#create SqlUser#create}.
 
 ---
 
@@ -1445,7 +1447,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#delete SqlUser#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#delete SqlUser#delete}.
 
 ---
 
@@ -1457,7 +1459,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_user#update SqlUser#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_user#update SqlUser#update}.
 
 ---
 

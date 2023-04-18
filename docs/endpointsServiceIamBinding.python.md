@@ -1,6 +1,6 @@
 # `google_endpoints_service_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_binding`](https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding).
+Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding).
 
 # `endpointsServiceIamBinding` Submodule <a name="`endpointsServiceIamBinding` Submodule" id="@cdktf/provider-google.endpointsServiceIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_bindin
 
 ### EndpointsServiceIamBinding <a name="EndpointsServiceIamBinding" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding google_endpoints_service_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding google_endpoints_service_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer"></a>
 
@@ -19,7 +19,7 @@ endpointsServiceIamBinding.EndpointsServiceIamBinding(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -38,17 +38,17 @@ endpointsServiceIamBinding.EndpointsServiceIamBinding(
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition">EndpointsServiceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}. |
 
 ---
 
@@ -78,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#condition EndpointsServiceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#condition EndpointsServiceIamBinding#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -406,7 +406,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}.
 
 ---
 
@@ -414,7 +414,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}.
 
 ---
 
@@ -422,7 +422,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}.
 
 ---
 
@@ -526,7 +526,7 @@ endpointsServiceIamBinding.EndpointsServiceIamBinding.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -631,10 +631,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBinding.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -836,9 +836,9 @@ endpointsServiceIamBinding.EndpointsServiceIamBindingCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}. |
 
 ---
 
@@ -850,7 +850,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#expression EndpointsServiceIamBinding#expression}.
 
 ---
 
@@ -862,7 +862,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#title EndpointsServiceIamBinding#title}.
 
 ---
 
@@ -874,7 +874,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#description EndpointsServiceIamBinding#description}.
 
 ---
 
@@ -887,7 +887,7 @@ from cdktf_cdktf_provider_google import endpoints_service_iam_binding
 
 endpointsServiceIamBinding.EndpointsServiceIamBindingConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -906,17 +906,17 @@ endpointsServiceIamBinding.EndpointsServiceIamBindingConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingCondition">EndpointsServiceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}. |
 
 ---
 
@@ -933,10 +933,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceIamBinding.EndpointsServiceIamBindingConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -998,7 +998,7 @@ members: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#members EndpointsServiceIamBinding#members}.
 
 ---
 
@@ -1010,7 +1010,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#role EndpointsServiceIamBinding#role}.
 
 ---
 
@@ -1022,7 +1022,7 @@ service_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#service_name EndpointsServiceIamBinding#service_name}.
 
 ---
 
@@ -1036,7 +1036,7 @@ condition: EndpointsServiceIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#condition EndpointsServiceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#condition EndpointsServiceIamBinding#condition}
 
 ---
 
@@ -1048,7 +1048,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_iam_binding#id EndpointsServiceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

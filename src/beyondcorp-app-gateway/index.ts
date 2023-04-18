@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface BeyondcorpAppGatewayConfig extends cdktf.TerraformMetaArguments
   /**
   * An arbitrary user-provided name for the AppGateway.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
   */
   readonly displayName?: string;
   /**
   * The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
   */
   readonly hostType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,35 +29,35 @@ export interface BeyondcorpAppGatewayConfig extends cdktf.TerraformMetaArguments
   /**
   * Resource labels to represent user provided metadata.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the AppGateway.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}
   */
   readonly project?: string;
   /**
   * The region of the AppGateway.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
   */
   readonly region?: string;
   /**
   * The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
   */
   readonly type?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
   */
   readonly timeouts?: BeyondcorpAppGatewayTimeouts;
 }
@@ -132,16 +132,16 @@ export class BeyondcorpAppGatewayAllocatedConnectionsList extends cdktf.ComplexL
 }
 export interface BeyondcorpAppGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}
   */
   readonly delete?: string;
 }
 
-export function beyondcorpAppGatewayTimeoutsToTerraform(struct?: BeyondcorpAppGatewayTimeoutsOutputReference | BeyondcorpAppGatewayTimeouts | cdktf.IResolvable): any {
+export function beyondcorpAppGatewayTimeoutsToTerraform(struct?: BeyondcorpAppGatewayTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -161,7 +161,7 @@ export class BeyondcorpAppGatewayTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): BeyondcorpAppGatewayTimeouts | cdktf.IResolvable | undefined {
@@ -234,7 +234,7 @@ export class BeyondcorpAppGatewayTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway google_beyondcorp_app_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway google_beyondcorp_app_gateway}
 */
 export class BeyondcorpAppGateway extends cdktf.TerraformResource {
 
@@ -248,7 +248,7 @@ export class BeyondcorpAppGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/beyondcorp_app_gateway google_beyondcorp_app_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/beyondcorp_app_gateway google_beyondcorp_app_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,6 +1,6 @@
 # `data_google_tags_tag_key`
 
-Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://www.terraform.io/docs/providers/google/d/tags_tag_key).
+Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key).
 
 # `dataGoogleTagsTagKey` Submodule <a name="`dataGoogleTagsTagKey` Submodule" id="@cdktf/provider-google.dataGoogleTagsTagKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://
 
 ### DataGoogleTagsTagKey <a name="DataGoogleTagsTagKey" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key google_tags_tag_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key google_tags_tag_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataGoogleTagsTagKey.DataGoogleTagsTagKey(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -35,14 +35,14 @@ dataGoogleTagsTagKey.DataGoogleTagsTagKey(
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.shortName">short_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.shortName">short_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
 
 ---
 
@@ -72,7 +72,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
 
 ---
 
@@ -441,7 +441,7 @@ dataGoogleTagsTagKey.DataGoogleTagsTagKey.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -534,10 +534,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -710,7 +710,7 @@ from cdktf_cdktf_provider_google import data_google_tags_tag_key
 
 dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -726,14 +726,14 @@ dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">short_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">short_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
 
 ---
 
@@ -750,10 +750,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -815,7 +815,7 @@ parent: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
 
 ---
 
@@ -827,7 +827,7 @@ short_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
 
 ---
 

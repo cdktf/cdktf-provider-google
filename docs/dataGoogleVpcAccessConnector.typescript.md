@@ -1,6 +1,6 @@
 # `data_google_vpc_access_connector`
 
-Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](https://www.terraform.io/docs/providers/google/d/vpc_access_connector).
+Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector).
 
 # `dataGoogleVpcAccessConnector` Submodule <a name="`dataGoogleVpcAccessConnector` Submodule" id="@cdktf/provider-google.dataGoogleVpcAccessConnector"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](
 
 ### DataGoogleVpcAccessConnector <a name="DataGoogleVpcAccessConnector" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector google_vpc_access_connector}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector google_vpc_access_connector}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.Initializer"></a>
 
@@ -359,7 +359,7 @@ dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.isTerraformDataSource(
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -460,10 +460,10 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -722,15 +722,15 @@ const dataGoogleVpcAccessConnectorConfig: dataGoogleVpcAccessConnector.DataGoogl
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.name">name</a></code> | <code>string</code> | The name of the resource (Max 25 characters). |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#id DataGoogleVpcAccessConnector#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#project DataGoogleVpcAccessConnector#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.region">region</a></code> | <code>string</code> | Region where the VPC Access connector resides. If it is not provided, the provider region is used. |
 
 ---
@@ -748,10 +748,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -815,7 +815,7 @@ public readonly name: string;
 
 The name of the resource (Max 25 characters).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
 
 ---
 
@@ -827,7 +827,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#id DataGoogleVpcAccessConnector#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -842,7 +842,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#project DataGoogleVpcAccessConnector#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}.
 
 ---
 
@@ -856,7 +856,7 @@ public readonly region: string;
 
 Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
 
 ---
 

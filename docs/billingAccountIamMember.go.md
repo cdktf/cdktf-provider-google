@@ -1,6 +1,6 @@
 # `google_billing_account_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_billing_account_iam_member`](https://www.terraform.io/docs/providers/google/r/billing_account_iam_member).
+Refer to the Terraform Registory for docs: [`google_billing_account_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member).
 
 # `billingAccountIamMember` Submodule <a name="`billingAccountIamMember` Submodule" id="@cdktf/provider-google.billingAccountIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_billing_account_iam_member`]
 
 ### BillingAccountIamMember <a name="BillingAccountIamMember" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member google_billing_account_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member google_billing_account_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 billingaccountiammember.NewBillingAccountIamMember(scope Construct, id *string, config BillingAccountIamMemberConfig) BillingAccountIamMember
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 billingaccountiammember.BillingAccountIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 billingaccountiammember.BillingAccountIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ billingaccountiammember.BillingAccountIamMember_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 billingaccountiammember.BillingAccountIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -366,7 +366,7 @@ billingaccountiammember.BillingAccountIamMember_IsTerraformResource(x interface{
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -471,10 +471,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMember.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 &billingaccountiammember.BillingAccountIamMemberCondition {
 	Expression: *string,
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammem
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#expression BillingAccountIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#title BillingAccountIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#description BillingAccountIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#expression BillingAccountIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#title BillingAccountIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#description BillingAccountIamMember#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#expression BillingAccountIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#expression BillingAccountIamMember#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#title BillingAccountIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#title BillingAccountIamMember#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#description BillingAccountIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#description BillingAccountIamMember#description}.
 
 ---
 
@@ -723,11 +723,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 &billingaccountiammember.BillingAccountIamMemberConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammem
 	BillingAccountId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.billingAccountIamMember.BillingAccountIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.billingAccountIamMember.BillingAccountIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -746,17 +746,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammem
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.billingAccountId">BillingAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#billing_account_id BillingAccountIamMember#billing_account_id}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#member BillingAccountIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#role BillingAccountIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.billingAccountId">BillingAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#billing_account_id BillingAccountIamMember#billing_account_id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#member BillingAccountIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#role BillingAccountIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberCondition">BillingAccountIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#id BillingAccountIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#id BillingAccountIamMember#id}. |
 
 ---
 
@@ -773,10 +773,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -838,7 +838,7 @@ BillingAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#billing_account_id BillingAccountIamMember#billing_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#billing_account_id BillingAccountIamMember#billing_account_id}.
 
 ---
 
@@ -850,7 +850,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#member BillingAccountIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#member BillingAccountIamMember#member}.
 
 ---
 
@@ -862,7 +862,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#role BillingAccountIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#role BillingAccountIamMember#role}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition BillingAccountIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#condition BillingAccountIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#condition BillingAccountIamMember#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/billing_account_iam_member#id BillingAccountIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/billing_account_iam_member#id BillingAccountIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingAccountIamMember.BillingAccountIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/billingaccountiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/billingaccountiammember"
 
 billingaccountiammember.NewBillingAccountIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingAccountIamMemberConditionOutputReference
 ```

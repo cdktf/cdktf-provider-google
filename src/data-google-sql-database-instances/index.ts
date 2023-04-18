@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/sql_database_instances
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * To filter out the database instances which are of the specified database version.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
   */
   readonly databaseVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,31 +23,31 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * Project ID of the project that contains the instances.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
   */
   readonly project?: string;
   /**
   * To filter out the database instances which are located in this specified region.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
   */
   readonly region?: string;
   /**
   * To filter out the database instances based on the current state of the database instance, valid values include : "SQL_INSTANCE_STATE_UNSPECIFIED", "RUNNABLE", "SUSPENDED", "PENDING_DELETE", "PENDING_CREATE", "MAINTENANCE" and "FAILED".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
   */
   readonly state?: string;
   /**
   * To filter out the database instances based on the machine type.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
   */
   readonly tier?: string;
   /**
   * To filter out the database instances which are located in this specified zone.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
   */
   readonly zone?: string;
 }
@@ -1778,7 +1778,7 @@ export class DataGoogleSqlDatabaseInstancesInstancesList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances google_sql_database_instances}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances google_sql_database_instances}
 */
 export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
 
@@ -1792,7 +1792,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/sql_database_instances google_sql_database_instances} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_database_instances google_sql_database_instances} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

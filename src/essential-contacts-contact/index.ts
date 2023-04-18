@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/essential_contacts_contact
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface EssentialContactsContactConfig extends cdktf.TerraformMetaArgum
   /**
   * The email address to send notifications to. This does not need to be a Google account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#email EssentialContactsContact#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#email EssentialContactsContact#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#id EssentialContactsContact#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#id EssentialContactsContact#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,44 +23,44 @@ export interface EssentialContactsContactConfig extends cdktf.TerraformMetaArgum
   /**
   * The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
   */
   readonly languageTag: string;
   /**
   * The categories of notifications that the contact will receive communications for.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#notification_category_subscriptions EssentialContactsContact#notification_category_subscriptions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#notification_category_subscriptions EssentialContactsContact#notification_category_subscriptions}
   */
   readonly notificationCategorySubscriptions: string[];
   /**
   * The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#parent EssentialContactsContact#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#parent EssentialContactsContact#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#timeouts EssentialContactsContact#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#timeouts EssentialContactsContact#timeouts}
   */
   readonly timeouts?: EssentialContactsContactTimeouts;
 }
 export interface EssentialContactsContactTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#create EssentialContactsContact#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#create EssentialContactsContact#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#delete EssentialContactsContact#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#delete EssentialContactsContact#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#update EssentialContactsContact#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#update EssentialContactsContact#update}
   */
   readonly update?: string;
 }
 
-export function essentialContactsContactTimeoutsToTerraform(struct?: EssentialContactsContactTimeoutsOutputReference | EssentialContactsContactTimeouts | cdktf.IResolvable): any {
+export function essentialContactsContactTimeoutsToTerraform(struct?: EssentialContactsContactTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -81,7 +81,7 @@ export class EssentialContactsContactTimeoutsOutputReference extends cdktf.Compl
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): EssentialContactsContactTimeouts | cdktf.IResolvable | undefined {
@@ -176,7 +176,7 @@ export class EssentialContactsContactTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact google_essential_contacts_contact}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact google_essential_contacts_contact}
 */
 export class EssentialContactsContact extends cdktf.TerraformResource {
 
@@ -190,7 +190,7 @@ export class EssentialContactsContact extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact google_essential_contacts_contact} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact google_essential_contacts_contact} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

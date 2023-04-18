@@ -1,6 +1,6 @@
 # `google_bigquery_connection_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_policy`](https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy).
+Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy).
 
 # `bigqueryConnectionIamPolicy` Submodule <a name="`bigqueryConnectionIamPolicy` Submodule" id="@cdktf/provider-google.bigqueryConnectionIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_bigquery_connection_iam_poli
 
 ### BigqueryConnectionIamPolicy <a name="BigqueryConnectionIamPolicy" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy google_bigquery_connection_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy google_bigquery_connection_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniampolicy"
 
 bigqueryconnectioniampolicy.NewBigqueryConnectionIamPolicy(scope Construct, id *string, config BigqueryConnectionIamPolicyConfig) BigqueryConnectionIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniampolicy"
 
 bigqueryconnectioniampolicy.BigqueryConnectionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniampolicy"
 
 bigqueryconnectioniampolicy.BigqueryConnectionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ bigqueryconnectioniampolicy.BigqueryConnectionIamPolicy_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniampolicy"
 
 bigqueryconnectioniampolicy.BigqueryConnectionIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ bigqueryconnectioniampolicy.BigqueryConnectionIamPolicy_IsTerraformResource(x in
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -465,10 +465,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicy.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -657,11 +657,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigqueryconnectioniampolicy"
 
 &bigqueryconnectioniampolicy.BigqueryConnectionIamPolicyConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -680,17 +680,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/bigqueryconnectionia
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.connectionId">ConnectionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#connection_id BigqueryConnectionIamPolicy#connection_id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#policy_data BigqueryConnectionIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#id BigqueryConnectionIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#location BigqueryConnectionIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#project BigqueryConnectionIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.connectionId">ConnectionId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#connection_id BigqueryConnectionIamPolicy#connection_id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#policy_data BigqueryConnectionIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#id BigqueryConnectionIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#location BigqueryConnectionIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#project BigqueryConnectionIamPolicy#project}. |
 
 ---
 
@@ -707,10 +707,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryConnectionIamPolicy.BigqueryConnectionIamPolicyConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -772,7 +772,7 @@ ConnectionId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#connection_id BigqueryConnectionIamPolicy#connection_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#connection_id BigqueryConnectionIamPolicy#connection_id}.
 
 ---
 
@@ -784,7 +784,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#policy_data BigqueryConnectionIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#policy_data BigqueryConnectionIamPolicy#policy_data}.
 
 ---
 
@@ -796,7 +796,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#id BigqueryConnectionIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#id BigqueryConnectionIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -811,7 +811,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#location BigqueryConnectionIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#location BigqueryConnectionIamPolicy#location}.
 
 ---
 
@@ -823,7 +823,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_connection_iam_policy#project BigqueryConnectionIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_connection_iam_policy#project BigqueryConnectionIamPolicy#project}.
 
 ---
 

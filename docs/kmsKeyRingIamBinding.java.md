@@ -1,6 +1,6 @@
 # `google_kms_key_ring_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_kms_key_ring_iam_binding`](https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding).
+Refer to the Terraform Registory for docs: [`google_kms_key_ring_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding).
 
 # `kmsKeyRingIamBinding` Submodule <a name="`kmsKeyRingIamBinding` Submodule" id="@cdktf/provider-google.kmsKeyRingIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_kms_key_ring_iam_binding`](h
 
 ### KmsKeyRingIamBinding <a name="KmsKeyRingIamBinding" id="@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding google_kms_key_ring_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding google_kms_key_ring_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer"></a>
 
@@ -19,6 +19,7 @@ KmsKeyRingIamBinding.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -39,17 +40,17 @@ KmsKeyRingIamBinding.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.keyRingId">keyRingId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.keyRingId">keyRingId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition">KmsKeyRingIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}. |
 
 ---
 
@@ -79,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -117,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}.
 
 ---
 
@@ -125,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}.
 
 ---
 
@@ -133,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}.
 
 ---
 
@@ -143,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
 
 ---
 
@@ -151,7 +152,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -474,7 +475,7 @@ KmsKeyRingIamBinding.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -579,10 +580,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBinding.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -784,9 +785,9 @@ KmsKeyRingIamBindingCondition.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.expression">expression</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.title">title</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition.property.description">description</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}. |
 
 ---
 
@@ -798,7 +799,7 @@ public java.lang.String getExpression();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}.
 
 ---
 
@@ -810,7 +811,7 @@ public java.lang.String getTitle();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}.
 
 ---
 
@@ -822,7 +823,7 @@ public java.lang.String getDescription();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}.
 
 ---
 
@@ -837,6 +838,7 @@ KmsKeyRingIamBindingConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -857,17 +859,17 @@ KmsKeyRingIamBindingConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.keyRingId">keyRingId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.keyRingId">keyRingId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.members">members</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.role">role</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingCondition">KmsKeyRingIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}. |
 
 ---
 
@@ -884,10 +886,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.kmsKeyRingIamBinding.KmsKeyRingIamBindingConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -949,7 +951,7 @@ public java.lang.String getKeyRingId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}.
 
 ---
 
@@ -961,7 +963,7 @@ public java.util.List<java.lang.String> getMembers();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}.
 
 ---
 
@@ -973,7 +975,7 @@ public java.lang.String getRole();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}.
 
 ---
 
@@ -987,7 +989,7 @@ public KmsKeyRingIamBindingCondition getCondition();
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
 
 ---
 
@@ -999,7 +1001,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

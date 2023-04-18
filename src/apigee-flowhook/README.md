@@ -1,3 +1,3 @@
 # `google_apigee_flowhook`
 
-Refer to the Terraform Registory for docs: [`google_apigee_flowhook`](https://www.terraform.io/docs/providers/google/r/apigee_flowhook).
+Refer to the Terraform Registory for docs: [`google_apigee_flowhook`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_flowhook).

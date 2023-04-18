@@ -1,6 +1,6 @@
 # `google_cloud_ids_endpoint`
 
-Refer to the Terraform Registory for docs: [`google_cloud_ids_endpoint`](https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint).
+Refer to the Terraform Registory for docs: [`google_cloud_ids_endpoint`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint).
 
 # `cloudIdsEndpoint` Submodule <a name="`cloudIdsEndpoint` Submodule" id="@cdktf/provider-google.cloudIdsEndpoint"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_cloud_ids_endpoint`](https:/
 
 ### CloudIdsEndpoint <a name="CloudIdsEndpoint" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint google_cloud_ids_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint google_cloud_ids_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 cloudidsendpoint.NewCloudIdsEndpoint(scope Construct, id *string, config CloudIdsEndpointConfig) CloudIdsEndpoint
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 cloudidsendpoint.CloudIdsEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 cloudidsendpoint.CloudIdsEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ cloudidsendpoint.CloudIdsEndpoint_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 cloudidsendpoint.CloudIdsEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ cloudidsendpoint.CloudIdsEndpoint_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -503,10 +503,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpoint.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -805,11 +805,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 &cloudidsendpoint.CloudIdsEndpointConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -823,7 +823,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
 	Id: *string,
 	Project: *string,
 	ThreatExceptions: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.cloudIdsEndpoint.CloudIdsEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudIdsEndpoint.CloudIdsEndpointTimeouts,
 }
 ```
 
@@ -832,7 +832,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -843,8 +843,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.network">Network</a></code> | <code>*string</code> | Name of the VPC network that is connected to the IDS endpoint. |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.severity">Severity</a></code> | <code>*string</code> | The minimum alert severity level that is reported by the endpoint. Possible values: ["INFORMATIONAL", "LOW", "MEDIUM", "HIGH", "CRITICAL"]. |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of the endpoint. |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#id CloudIdsEndpoint#id}. |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#project CloudIdsEndpoint#project}. |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#id CloudIdsEndpoint#id}. |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#project CloudIdsEndpoint#project}. |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.threatExceptions">ThreatExceptions</a></code> | <code>*[]*string</code> | Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs. |
 | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts">CloudIdsEndpointTimeouts</a></code> | timeouts block. |
 
@@ -863,10 +863,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -930,7 +930,7 @@ Location *string
 
 The location for the endpoint.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#location CloudIdsEndpoint#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#location CloudIdsEndpoint#location}
 
 ---
 
@@ -944,7 +944,7 @@ Name *string
 
 Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#name CloudIdsEndpoint#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#name CloudIdsEndpoint#name}
 
 ---
 
@@ -960,7 +960,7 @@ Name of the VPC network that is connected to the IDS endpoint.
 
 This can either contain the VPC network name itself (like "src-net") or the full URL to the network (like "projects/{project_id}/global/networks/src-net").
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#network CloudIdsEndpoint#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#network CloudIdsEndpoint#network}
 
 ---
 
@@ -974,7 +974,7 @@ Severity *string
 
 The minimum alert severity level that is reported by the endpoint. Possible values: ["INFORMATIONAL", "LOW", "MEDIUM", "HIGH", "CRITICAL"].
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#severity CloudIdsEndpoint#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#severity CloudIdsEndpoint#severity}
 
 ---
 
@@ -988,7 +988,7 @@ Description *string
 
 An optional description of the endpoint.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#description CloudIdsEndpoint#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#description CloudIdsEndpoint#description}
 
 ---
 
@@ -1000,7 +1000,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#id CloudIdsEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#id CloudIdsEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1015,7 +1015,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#project CloudIdsEndpoint#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#project CloudIdsEndpoint#project}.
 
 ---
 
@@ -1029,7 +1029,7 @@ ThreatExceptions *[]*string
 
 Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#threat_exceptions CloudIdsEndpoint#threat_exceptions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#threat_exceptions CloudIdsEndpoint#threat_exceptions}
 
 ---
 
@@ -1043,7 +1043,7 @@ Timeouts CloudIdsEndpointTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#timeouts CloudIdsEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#timeouts CloudIdsEndpoint#timeouts}
 
 ---
 
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 &cloudidsendpoint.CloudIdsEndpointTimeouts {
 	Create: *string,
@@ -1065,9 +1065,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#create CloudIdsEndpoint#create}. |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#delete CloudIdsEndpoint#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#update CloudIdsEndpoint#update}. |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#create CloudIdsEndpoint#create}. |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#delete CloudIdsEndpoint#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#update CloudIdsEndpoint#update}. |
 
 ---
 
@@ -1079,7 +1079,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#create CloudIdsEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#create CloudIdsEndpoint#create}.
 
 ---
 
@@ -1091,7 +1091,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#delete CloudIdsEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#delete CloudIdsEndpoint#delete}.
 
 ---
 
@@ -1103,7 +1103,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloud_ids_endpoint#update CloudIdsEndpoint#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloud_ids_endpoint#update CloudIdsEndpoint#update}.
 
 ---
 
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudIdsEndpoint.CloudIdsEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/cloudidsendpoint"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudidsendpoint"
 
 cloudidsendpoint.NewCloudIdsEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudIdsEndpointTimeoutsOutputReference
 ```

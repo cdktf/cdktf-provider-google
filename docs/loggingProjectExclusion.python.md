@@ -1,6 +1,6 @@
 # `google_logging_project_exclusion`
 
-Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](https://www.terraform.io/docs/providers/google/r/logging_project_exclusion).
+Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion).
 
 # `loggingProjectExclusion` Submodule <a name="`loggingProjectExclusion` Submodule" id="@cdktf/provider-google.loggingProjectExclusion"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](
 
 ### LoggingProjectExclusion <a name="LoggingProjectExclusion" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion google_logging_project_exclusion}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion google_logging_project_exclusion}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer"></a>
 
@@ -19,7 +19,7 @@ loggingProjectExclusion.LoggingProjectExclusion(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -39,7 +39,7 @@ loggingProjectExclusion.LoggingProjectExclusion(
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -49,8 +49,8 @@ loggingProjectExclusion.LoggingProjectExclusion(
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.description">description</a></code> | <code>str</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.disabled">disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#id LoggingProjectExclusion#id}. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#project LoggingProjectExclusion#project}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}. |
 
 ---
 
@@ -80,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#filter LoggingProjectExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#filter LoggingProjectExclusion#filter}
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#name LoggingProjectExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#name LoggingProjectExclusion#name}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#description LoggingProjectExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#description LoggingProjectExclusion#description}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
 
 ---
 
@@ -158,7 +158,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#id LoggingProjectExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#project LoggingProjectExclusion#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}.
 
 ---
 
@@ -521,7 +521,7 @@ loggingProjectExclusion.LoggingProjectExclusion.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -627,10 +627,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusion.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -833,7 +833,7 @@ from cdktf_cdktf_provider_google import logging_project_exclusion
 
 loggingProjectExclusion.LoggingProjectExclusionConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -853,7 +853,7 @@ loggingProjectExclusion.LoggingProjectExclusionConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -863,8 +863,8 @@ loggingProjectExclusion.LoggingProjectExclusionConfig(
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.name">name</a></code> | <code>str</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.description">description</a></code> | <code>str</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.disabled">disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#id LoggingProjectExclusion#id}. |
-| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#project LoggingProjectExclusion#project}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}. |
 
 ---
 
@@ -881,10 +881,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingProjectExclusion.LoggingProjectExclusionConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -948,7 +948,7 @@ filter: str
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#filter LoggingProjectExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#filter LoggingProjectExclusion#filter}
 
 ---
 
@@ -962,7 +962,7 @@ name: str
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#name LoggingProjectExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#name LoggingProjectExclusion#name}
 
 ---
 
@@ -976,7 +976,7 @@ description: str
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#description LoggingProjectExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#description LoggingProjectExclusion#description}
 
 ---
 
@@ -990,7 +990,7 @@ disabled: typing.Union[bool, IResolvable]
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
 
 ---
 
@@ -1002,7 +1002,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#id LoggingProjectExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#id LoggingProjectExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1017,7 +1017,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_project_exclusion#project LoggingProjectExclusion#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_project_exclusion#project LoggingProjectExclusion#project}.
 
 ---
 

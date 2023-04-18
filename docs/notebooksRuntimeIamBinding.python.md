@@ -1,6 +1,6 @@
 # `google_notebooks_runtime_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_binding`](https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding).
+Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding).
 
 # `notebooksRuntimeIamBinding` Submodule <a name="`notebooksRuntimeIamBinding` Submodule" id="@cdktf/provider-google.notebooksRuntimeIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_bindin
 
 ### NotebooksRuntimeIamBinding <a name="NotebooksRuntimeIamBinding" id="@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding google_notebooks_runtime_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding google_notebooks_runtime_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer"></a>
 
@@ -19,7 +19,7 @@ notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -40,19 +40,19 @@ notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding(
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.runtimeName">runtime_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.runtimeName">runtime_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition">NotebooksRuntimeIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}. |
 
 ---
 
@@ -82,7 +82,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#condition NotebooksRuntimeIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#condition NotebooksRuntimeIamBinding#condition}
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -165,7 +165,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}.
 
 ---
 
@@ -173,7 +173,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}.
 
 ---
 
@@ -428,7 +428,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}.
 
 ---
 
@@ -436,7 +436,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}.
 
 ---
 
@@ -444,7 +444,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}.
 
 ---
 
@@ -560,7 +560,7 @@ notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -669,10 +669,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBinding.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -914,9 +914,9 @@ notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}. |
 
 ---
 
@@ -928,7 +928,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#expression NotebooksRuntimeIamBinding#expression}.
 
 ---
 
@@ -940,7 +940,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#title NotebooksRuntimeIamBinding#title}.
 
 ---
 
@@ -952,7 +952,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#description NotebooksRuntimeIamBinding#description}.
 
 ---
 
@@ -965,7 +965,7 @@ from cdktf_cdktf_provider_google import notebooks_runtime_iam_binding
 
 notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -986,19 +986,19 @@ notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.runtimeName">runtime_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.members">members</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.runtimeName">runtime_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}. |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingCondition">NotebooksRuntimeIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}. |
 
 ---
 
@@ -1015,10 +1015,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.notebooksRuntimeIamBinding.NotebooksRuntimeIamBindingConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1080,7 +1080,7 @@ members: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#members NotebooksRuntimeIamBinding#members}.
 
 ---
 
@@ -1092,7 +1092,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#role NotebooksRuntimeIamBinding#role}.
 
 ---
 
@@ -1104,7 +1104,7 @@ runtime_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#runtime_name NotebooksRuntimeIamBinding#runtime_name}.
 
 ---
 
@@ -1118,7 +1118,7 @@ condition: NotebooksRuntimeIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#condition NotebooksRuntimeIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#condition NotebooksRuntimeIamBinding#condition}
 
 ---
 
@@ -1130,7 +1130,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#id NotebooksRuntimeIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1145,7 +1145,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#location NotebooksRuntimeIamBinding#location}.
 
 ---
 
@@ -1157,7 +1157,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_binding#project NotebooksRuntimeIamBinding#project}.
 
 ---
 

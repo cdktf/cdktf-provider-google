@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface IdentityPlatformProjectDefaultConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#id IdentityPlatformProjectDefaultConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#id IdentityPlatformProjectDefaultConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#project IdentityPlatformProjectDefaultConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#project IdentityPlatformProjectDefaultConfig#project}
   */
   readonly project?: string;
   /**
   * sign_in block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#sign_in IdentityPlatformProjectDefaultConfig#sign_in}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#sign_in IdentityPlatformProjectDefaultConfig#sign_in}
   */
   readonly signIn?: IdentityPlatformProjectDefaultConfigSignIn;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#timeouts IdentityPlatformProjectDefaultConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#timeouts IdentityPlatformProjectDefaultConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformProjectDefaultConfigTimeouts;
 }
@@ -119,7 +119,7 @@ export interface IdentityPlatformProjectDefaultConfigSignInAnonymous {
   /**
   * Whether anonymous user auth is enabled for the project or not.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -183,7 +183,7 @@ export interface IdentityPlatformProjectDefaultConfigSignInEmail {
   /**
   * Whether email auth is enabled for the project or not.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
@@ -191,7 +191,7 @@ export interface IdentityPlatformProjectDefaultConfigSignInEmail {
 password must be provided to sign in. If false, a user may sign in via either 
 email/password or email link.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#password_required IdentityPlatformProjectDefaultConfig#password_required}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#password_required IdentityPlatformProjectDefaultConfig#password_required}
   */
   readonly passwordRequired?: boolean | cdktf.IResolvable;
 }
@@ -281,13 +281,13 @@ export interface IdentityPlatformProjectDefaultConfigSignInPhoneNumber {
   /**
   * Whether phone number auth is enabled for the project or not.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#enabled IdentityPlatformProjectDefaultConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * A map of <test phone number, fake code> that can be used for phone auth testing.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#test_phone_numbers IdentityPlatformProjectDefaultConfig#test_phone_numbers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#test_phone_numbers IdentityPlatformProjectDefaultConfig#test_phone_numbers}
   */
   readonly testPhoneNumbers?: { [key: string]: string };
 }
@@ -377,25 +377,25 @@ export interface IdentityPlatformProjectDefaultConfigSignIn {
   /**
   * Whether to allow more than one account to have the same email.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#allow_duplicate_emails IdentityPlatformProjectDefaultConfig#allow_duplicate_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#allow_duplicate_emails IdentityPlatformProjectDefaultConfig#allow_duplicate_emails}
   */
   readonly allowDuplicateEmails?: boolean | cdktf.IResolvable;
   /**
   * anonymous block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#anonymous IdentityPlatformProjectDefaultConfig#anonymous}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#anonymous IdentityPlatformProjectDefaultConfig#anonymous}
   */
   readonly anonymous?: IdentityPlatformProjectDefaultConfigSignInAnonymous;
   /**
   * email block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#email IdentityPlatformProjectDefaultConfig#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#email IdentityPlatformProjectDefaultConfig#email}
   */
   readonly email?: IdentityPlatformProjectDefaultConfigSignInEmail;
   /**
   * phone_number block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#phone_number IdentityPlatformProjectDefaultConfig#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#phone_number IdentityPlatformProjectDefaultConfig#phone_number}
   */
   readonly phoneNumber?: IdentityPlatformProjectDefaultConfigSignInPhoneNumber;
 }
@@ -535,20 +535,20 @@ export class IdentityPlatformProjectDefaultConfigSignInOutputReference extends c
 }
 export interface IdentityPlatformProjectDefaultConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#create IdentityPlatformProjectDefaultConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#create IdentityPlatformProjectDefaultConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#delete IdentityPlatformProjectDefaultConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#delete IdentityPlatformProjectDefaultConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config#update IdentityPlatformProjectDefaultConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config#update IdentityPlatformProjectDefaultConfig#update}
   */
   readonly update?: string;
 }
 
-export function identityPlatformProjectDefaultConfigTimeoutsToTerraform(struct?: IdentityPlatformProjectDefaultConfigTimeoutsOutputReference | IdentityPlatformProjectDefaultConfigTimeouts | cdktf.IResolvable): any {
+export function identityPlatformProjectDefaultConfigTimeoutsToTerraform(struct?: IdentityPlatformProjectDefaultConfigTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -569,7 +569,7 @@ export class IdentityPlatformProjectDefaultConfigTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): IdentityPlatformProjectDefaultConfigTimeouts | cdktf.IResolvable | undefined {
@@ -664,7 +664,7 @@ export class IdentityPlatformProjectDefaultConfigTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config google_identity_platform_project_default_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config google_identity_platform_project_default_config}
 */
 export class IdentityPlatformProjectDefaultConfig extends cdktf.TerraformResource {
 
@@ -678,7 +678,7 @@ export class IdentityPlatformProjectDefaultConfig extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/identity_platform_project_default_config google_identity_platform_project_default_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_project_default_config google_identity_platform_project_default_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

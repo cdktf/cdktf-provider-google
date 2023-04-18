@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface VertexAiFeaturestoreEntitytypeConfig extends cdktf.TerraformMet
   /**
   * Optional. Description of the EntityType.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#description VertexAiFeaturestoreEntitytype#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#description VertexAiFeaturestoreEntitytype#description}
   */
   readonly description?: string;
   /**
   * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#featurestore VertexAiFeaturestoreEntitytype#featurestore}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#featurestore VertexAiFeaturestoreEntitytype#featurestore}
   */
   readonly featurestore: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#id VertexAiFeaturestoreEntitytype#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#id VertexAiFeaturestoreEntitytype#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,25 +29,25 @@ export interface VertexAiFeaturestoreEntitytypeConfig extends cdktf.TerraformMet
   /**
   * A set of key/value label pairs to assign to this EntityType.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#labels VertexAiFeaturestoreEntitytype#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#labels VertexAiFeaturestoreEntitytype#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#name VertexAiFeaturestoreEntitytype#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#name VertexAiFeaturestoreEntitytype#name}
   */
   readonly name?: string;
   /**
   * monitoring_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#monitoring_config VertexAiFeaturestoreEntitytype#monitoring_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#monitoring_config VertexAiFeaturestoreEntitytype#monitoring_config}
   */
   readonly monitoringConfig?: VertexAiFeaturestoreEntitytypeMonitoringConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#timeouts VertexAiFeaturestoreEntitytype#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#timeouts VertexAiFeaturestoreEntitytype#timeouts}
   */
   readonly timeouts?: VertexAiFeaturestoreEntitytypeTimeouts;
 }
@@ -55,7 +55,7 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresh
   /**
   * Specify a threshold value that can trigger the alert. For categorical feature, the distribution distance is calculated by L-inifinity norm. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#value VertexAiFeaturestoreEntitytype#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#value VertexAiFeaturestoreEntitytype#value}
   */
   readonly value: number;
 }
@@ -122,7 +122,7 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAna
 * MOST_RECENT_SNAPSHOT_STATS: Use the statistics generated by the most recent snapshot analysis if exists.
 * PREVIOUS_IMPORT_FEATURES_STATS: Use the statistics generated by the previous import features analysis if exists.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#anomaly_detection_baseline VertexAiFeaturestoreEntitytype#anomaly_detection_baseline}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#anomaly_detection_baseline VertexAiFeaturestoreEntitytype#anomaly_detection_baseline}
   */
   readonly anomalyDetectionBaseline?: string;
   /**
@@ -131,7 +131,7 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAna
 * ENABLED: Explicitly enables import features analysis. EntityType-level config: by default enables import features analysis for all Features under it.
 * DISABLED: Explicitly disables import features analysis. EntityType-level config: by default disables import features analysis for all Features under it.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#state VertexAiFeaturestoreEntitytype#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#state VertexAiFeaturestoreEntitytype#state}
   */
   readonly state?: string;
 }
@@ -221,7 +221,7 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThreshol
   /**
   * Specify a threshold value that can trigger the alert. For numerical feature, the distribution distance is calculated by Jensen–Shannon divergence. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#value VertexAiFeaturestoreEntitytype#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#value VertexAiFeaturestoreEntitytype#value}
   */
   readonly value: number;
 }
@@ -285,20 +285,20 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis 
   /**
   * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#disabled VertexAiFeaturestoreEntitytype#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#disabled VertexAiFeaturestoreEntitytype#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Configuration of the snapshot analysis based monitoring pipeline running interval. The value indicates number of days. The default value is 1.
 If both FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days and [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval][] are set when creating/updating EntityTypes/Features, FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#monitoring_interval_days VertexAiFeaturestoreEntitytype#monitoring_interval_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#monitoring_interval_days VertexAiFeaturestoreEntitytype#monitoring_interval_days}
   */
   readonly monitoringIntervalDays?: number;
   /**
   * Customized export features time window for snapshot analysis. Unit is one day. The default value is 21 days. Minimum value is 1 day. Maximum value is 4000 days.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#staleness_days VertexAiFeaturestoreEntitytype#staleness_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#staleness_days VertexAiFeaturestoreEntitytype#staleness_days}
   */
   readonly stalenessDays?: number;
 }
@@ -411,25 +411,25 @@ export interface VertexAiFeaturestoreEntitytypeMonitoringConfig {
   /**
   * categorical_threshold_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#categorical_threshold_config VertexAiFeaturestoreEntitytype#categorical_threshold_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#categorical_threshold_config VertexAiFeaturestoreEntitytype#categorical_threshold_config}
   */
   readonly categoricalThresholdConfig?: VertexAiFeaturestoreEntitytypeMonitoringConfigCategoricalThresholdConfig;
   /**
   * import_features_analysis block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#import_features_analysis VertexAiFeaturestoreEntitytype#import_features_analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#import_features_analysis VertexAiFeaturestoreEntitytype#import_features_analysis}
   */
   readonly importFeaturesAnalysis?: VertexAiFeaturestoreEntitytypeMonitoringConfigImportFeaturesAnalysis;
   /**
   * numerical_threshold_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#numerical_threshold_config VertexAiFeaturestoreEntitytype#numerical_threshold_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#numerical_threshold_config VertexAiFeaturestoreEntitytype#numerical_threshold_config}
   */
   readonly numericalThresholdConfig?: VertexAiFeaturestoreEntitytypeMonitoringConfigNumericalThresholdConfig;
   /**
   * snapshot_analysis block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#snapshot_analysis VertexAiFeaturestoreEntitytype#snapshot_analysis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#snapshot_analysis VertexAiFeaturestoreEntitytype#snapshot_analysis}
   */
   readonly snapshotAnalysis?: VertexAiFeaturestoreEntitytypeMonitoringConfigSnapshotAnalysis;
 }
@@ -563,20 +563,20 @@ export class VertexAiFeaturestoreEntitytypeMonitoringConfigOutputReference exten
 }
 export interface VertexAiFeaturestoreEntitytypeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#create VertexAiFeaturestoreEntitytype#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#create VertexAiFeaturestoreEntitytype#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#delete VertexAiFeaturestoreEntitytype#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#delete VertexAiFeaturestoreEntitytype#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype#update VertexAiFeaturestoreEntitytype#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype#update VertexAiFeaturestoreEntitytype#update}
   */
   readonly update?: string;
 }
 
-export function vertexAiFeaturestoreEntitytypeTimeoutsToTerraform(struct?: VertexAiFeaturestoreEntitytypeTimeoutsOutputReference | VertexAiFeaturestoreEntitytypeTimeouts | cdktf.IResolvable): any {
+export function vertexAiFeaturestoreEntitytypeTimeoutsToTerraform(struct?: VertexAiFeaturestoreEntitytypeTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -597,7 +597,7 @@ export class VertexAiFeaturestoreEntitytypeTimeoutsOutputReference extends cdktf
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): VertexAiFeaturestoreEntitytypeTimeouts | cdktf.IResolvable | undefined {
@@ -692,7 +692,7 @@ export class VertexAiFeaturestoreEntitytypeTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype google_vertex_ai_featurestore_entitytype}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype google_vertex_ai_featurestore_entitytype}
 */
 export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
 
@@ -706,7 +706,7 @@ export class VertexAiFeaturestoreEntitytype extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/vertex_ai_featurestore_entitytype google_vertex_ai_featurestore_entitytype} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/vertex_ai_featurestore_entitytype google_vertex_ai_featurestore_entitytype} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

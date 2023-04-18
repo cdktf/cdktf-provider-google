@@ -1,6 +1,6 @@
 # `google_iap_web_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_iam_binding`](https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding).
+Refer to the Terraform Registory for docs: [`google_iap_web_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding).
 
 # `iapWebIamBinding` Submodule <a name="`iapWebIamBinding` Submodule" id="@cdktf/provider-google.iapWebIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_web_iam_binding`](https:
 
 ### IapWebIamBinding <a name="IapWebIamBinding" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding google_iap_web_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding google_iap_web_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 iapwebiambinding.NewIapWebIamBinding(scope Construct, id *string, config IapWebIamBindingConfig) IapWebIamBinding
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 iapwebiambinding.IapWebIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 iapwebiambinding.IapWebIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapwebiambinding.IapWebIamBinding_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 iapwebiambinding.IapWebIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ iapwebiambinding.IapWebIamBinding_IsTerraformResource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -478,10 +478,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBinding.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 &iapwebiambinding.IapWebIamBindingCondition {
 	Expression: *string,
@@ -683,9 +683,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#expression IapWebIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#title IapWebIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#description IapWebIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#expression IapWebIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#title IapWebIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#description IapWebIamBinding#description}. |
 
 ---
 
@@ -697,7 +697,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#expression IapWebIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#expression IapWebIamBinding#expression}.
 
 ---
 
@@ -709,7 +709,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#title IapWebIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#title IapWebIamBinding#title}.
 
 ---
 
@@ -721,7 +721,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#description IapWebIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#description IapWebIamBinding#description}.
 
 ---
 
@@ -730,11 +730,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 &iapwebiambinding.IapWebIamBindingConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -742,7 +742,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
 	Provisioners: *[]interface{},
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.iapWebIamBinding.IapWebIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapWebIamBinding.IapWebIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -753,17 +753,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#members IapWebIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#role IapWebIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#members IapWebIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#role IapWebIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingCondition">IapWebIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#id IapWebIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#project IapWebIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#id IapWebIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#project IapWebIamBinding#project}. |
 
 ---
 
@@ -780,10 +780,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -845,7 +845,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#members IapWebIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#members IapWebIamBinding#members}.
 
 ---
 
@@ -857,7 +857,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#role IapWebIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#role IapWebIamBinding#role}.
 
 ---
 
@@ -871,7 +871,7 @@ Condition IapWebIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#condition IapWebIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#condition IapWebIamBinding#condition}
 
 ---
 
@@ -883,7 +883,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#id IapWebIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#id IapWebIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -898,7 +898,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_iam_binding#project IapWebIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_iam_binding#project IapWebIamBinding#project}.
 
 ---
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebIamBinding.IapWebIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebiambinding"
 
 iapwebiambinding.NewIapWebIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapWebIamBindingConditionOutputReference
 ```

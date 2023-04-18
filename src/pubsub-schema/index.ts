@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/pubsub_schema
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,11 +12,11 @@ export interface PubsubSchemaConfig extends cdktf.TerraformMetaArguments {
 This should contain a string representing the full definition of the schema
 that is a valid schema definition of the type specified in type.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#definition PubsubSchema#definition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#definition PubsubSchema#definition}
   */
   readonly definition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#id PubsubSchema#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#id PubsubSchema#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,38 +25,38 @@ that is a valid schema definition of the type specified in type.
   /**
   * The ID to use for the schema, which will become the final component of the schema's resource name.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#name PubsubSchema#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#name PubsubSchema#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#project PubsubSchema#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#project PubsubSchema#project}
   */
   readonly project?: string;
   /**
   * The type of the schema definition Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "PROTOCOL_BUFFER", "AVRO"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#type PubsubSchema#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#type PubsubSchema#type}
   */
   readonly type?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#timeouts PubsubSchema#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#timeouts PubsubSchema#timeouts}
   */
   readonly timeouts?: PubsubSchemaTimeouts;
 }
 export interface PubsubSchemaTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#create PubsubSchema#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#create PubsubSchema#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema#delete PubsubSchema#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema#delete PubsubSchema#delete}
   */
   readonly delete?: string;
 }
 
-export function pubsubSchemaTimeoutsToTerraform(struct?: PubsubSchemaTimeoutsOutputReference | PubsubSchemaTimeouts | cdktf.IResolvable): any {
+export function pubsubSchemaTimeoutsToTerraform(struct?: PubsubSchemaTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,7 +76,7 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): PubsubSchemaTimeouts | cdktf.IResolvable | undefined {
@@ -149,7 +149,7 @@ export class PubsubSchemaTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema google_pubsub_schema}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema google_pubsub_schema}
 */
 export class PubsubSchema extends cdktf.TerraformResource {
 
@@ -163,7 +163,7 @@ export class PubsubSchema extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/pubsub_schema google_pubsub_schema} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/pubsub_schema google_pubsub_schema} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

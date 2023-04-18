@@ -1,6 +1,6 @@
 # `google_iap_brand`
 
-Refer to the Terraform Registory for docs: [`google_iap_brand`](https://www.terraform.io/docs/providers/google/r/iap_brand).
+Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand).
 
 # `iapBrand` Submodule <a name="`iapBrand` Submodule" id="@cdktf/provider-google.iapBrand"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_iap_brand`](https://www.terr
 
 ### IapBrand <a name="IapBrand" id="@cdktf/provider-google.iapBrand.IapBrand"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_brand google_iap_brand}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand google_iap_brand}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapBrand.IapBrand.Initializer"></a>
 
@@ -19,7 +19,7 @@ iapBrand.IapBrand(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -38,7 +38,7 @@ iapBrand.IapBrand(
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -46,8 +46,8 @@ iapBrand.IapBrand(
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.applicationTitle">application_title</a></code> | <code>str</code> | Application name displayed on OAuth consent screen. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.supportEmail">support_email</a></code> | <code>str</code> | Support email displayed on the OAuth consent screen. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#id IapBrand#id}. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#project IapBrand#project}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#id IapBrand#id}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#project IapBrand#project}. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a></code> | timeouts block. |
 
 ---
@@ -78,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapBrand.IapBrand.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 Application name displayed on OAuth consent screen.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#application_title IapBrand#application_title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#application_title IapBrand#application_title}
 
 ---
 
@@ -134,7 +134,7 @@ be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#support_email IapBrand#support_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#support_email IapBrand#support_email}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#id IapBrand#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#id IapBrand#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -153,7 +153,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#project IapBrand#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#project IapBrand#project}.
 
 ---
 
@@ -163,7 +163,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#timeouts IapBrand#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#timeouts IapBrand#timeouts}
 
 ---
 
@@ -416,7 +416,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#create IapBrand#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#create IapBrand#create}.
 
 ---
 
@@ -424,7 +424,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#delete IapBrand#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#delete IapBrand#delete}.
 
 ---
 
@@ -534,7 +534,7 @@ iapBrand.IapBrand.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -640,10 +640,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapBrand.IapBrand.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -846,7 +846,7 @@ from cdktf_cdktf_provider_google import iap_brand
 
 iapBrand.IapBrandConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -865,7 +865,7 @@ iapBrand.IapBrandConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -873,8 +873,8 @@ iapBrand.IapBrandConfig(
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.applicationTitle">application_title</a></code> | <code>str</code> | Application name displayed on OAuth consent screen. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.supportEmail">support_email</a></code> | <code>str</code> | Support email displayed on the OAuth consent screen. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#id IapBrand#id}. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#project IapBrand#project}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#id IapBrand#id}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#project IapBrand#project}. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a></code> | timeouts block. |
 
 ---
@@ -892,10 +892,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapBrand.IapBrandConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -959,7 +959,7 @@ application_title: str
 
 Application name displayed on OAuth consent screen.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#application_title IapBrand#application_title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#application_title IapBrand#application_title}
 
 ---
 
@@ -979,7 +979,7 @@ be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#support_email IapBrand#support_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#support_email IapBrand#support_email}
 
 ---
 
@@ -991,7 +991,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#id IapBrand#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#id IapBrand#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1006,7 +1006,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#project IapBrand#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#project IapBrand#project}.
 
 ---
 
@@ -1020,7 +1020,7 @@ timeouts: IapBrandTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#timeouts IapBrand#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#timeouts IapBrand#timeouts}
 
 ---
 
@@ -1041,8 +1041,8 @@ iapBrand.IapBrandTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#create IapBrand#create}. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#delete IapBrand#delete}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#create IapBrand#create}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#delete IapBrand#delete}. |
 
 ---
 
@@ -1054,7 +1054,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#create IapBrand#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#create IapBrand#create}.
 
 ---
 
@@ -1066,7 +1066,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_brand#delete IapBrand#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_brand#delete IapBrand#delete}.
 
 ---
 

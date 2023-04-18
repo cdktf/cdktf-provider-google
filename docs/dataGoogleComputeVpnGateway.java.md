@@ -1,6 +1,6 @@
 # `data_google_compute_vpn_gateway`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway).
+Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway).
 
 # `dataGoogleComputeVpnGateway` Submodule <a name="`dataGoogleComputeVpnGateway` Submodule" id="@cdktf/provider-google.dataGoogleComputeVpnGateway"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_vpn_gateway`](h
 
 ### DataGoogleComputeVpnGateway <a name="DataGoogleComputeVpnGateway" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway google_compute_vpn_gateway}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway google_compute_vpn_gateway}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer"></a>
 
@@ -19,6 +19,7 @@ DataGoogleComputeVpnGateway.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -38,16 +39,16 @@ DataGoogleComputeVpnGateway.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
 
 ---
 
@@ -77,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -115,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
 
 ---
 
@@ -123,7 +124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -134,7 +135,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
 
 ---
 
@@ -142,7 +143,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
 
 ---
 
@@ -455,7 +456,7 @@ DataGoogleComputeVpnGateway.isTerraformDataSource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -549,10 +550,10 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGateway.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -737,6 +738,7 @@ DataGoogleComputeVpnGatewayConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -756,16 +758,16 @@ DataGoogleComputeVpnGatewayConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.region">region</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}. |
 
 ---
 
@@ -782,10 +784,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeVpnGateway.DataGoogleComputeVpnGatewayConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -847,7 +849,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#name DataGoogleComputeVpnGateway#name}.
 
 ---
 
@@ -859,7 +861,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#id DataGoogleComputeVpnGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -874,7 +876,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#project DataGoogleComputeVpnGateway#project}.
 
 ---
 
@@ -886,7 +888,7 @@ public java.lang.String getRegion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_vpn_gateway#region DataGoogleComputeVpnGateway#region}.
 
 ---
 

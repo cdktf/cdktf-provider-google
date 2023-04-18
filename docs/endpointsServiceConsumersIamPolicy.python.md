@@ -1,6 +1,6 @@
 # `google_endpoints_service_consumers_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_iam_policy`](https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy).
+Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy).
 
 # `endpointsServiceConsumersIamPolicy` Submodule <a name="`endpointsServiceConsumersIamPolicy` Submodule" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_
 
 ### EndpointsServiceConsumersIamPolicy <a name="EndpointsServiceConsumersIamPolicy" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy google_endpoints_service_consumers_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy google_endpoints_service_consumers_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer"></a>
 
@@ -19,7 +19,7 @@ endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,16 +37,16 @@ endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy(
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.consumerProject">consumer_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.consumerProject">consumer_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}. |
 
 ---
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -472,7 +472,7 @@ endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.is_terrafo
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -575,10 +575,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicy.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -751,7 +751,7 @@ from cdktf_cdktf_provider_google import endpoints_service_consumers_iam_policy
 
 endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -769,16 +769,16 @@ endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.consumerProject">consumer_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.consumerProject">consumer_project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.serviceName">service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}. |
 
 ---
 
@@ -795,10 +795,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.endpointsServiceConsumersIamPolicy.EndpointsServiceConsumersIamPolicyConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -860,7 +860,7 @@ consumer_project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#consumer_project EndpointsServiceConsumersIamPolicy#consumer_project}.
 
 ---
 
@@ -872,7 +872,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#policy_data EndpointsServiceConsumersIamPolicy#policy_data}.
 
 ---
 
@@ -884,7 +884,7 @@ service_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#service_name EndpointsServiceConsumersIamPolicy#service_name}.
 
 ---
 
@@ -896,7 +896,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/endpoints_service_consumers_iam_policy#id EndpointsServiceConsumersIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/service_account
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account#account_id DataGoogleServiceAccount#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account#account_id DataGoogleServiceAccount#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account#id DataGoogleServiceAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account#id DataGoogleServiceAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/service_account#project DataGoogleServiceAccount#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account#project DataGoogleServiceAccount#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/service_account google_service_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account google_service_account}
 */
 export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
 
@@ -39,7 +39,7 @@ export class DataGoogleServiceAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/service_account google_service_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account google_service_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

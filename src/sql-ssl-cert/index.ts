@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/sql_ssl_cert
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface SqlSslCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#common_name SqlSslCert#common_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#common_name SqlSslCert#common_name}
   */
   readonly commonName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#id SqlSslCert#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#id SqlSslCert#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,34 +23,34 @@ export interface SqlSslCertConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#instance SqlSslCert#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#instance SqlSslCert#instance}
   */
   readonly instance: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#project SqlSslCert#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#project SqlSslCert#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#timeouts SqlSslCert#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#timeouts SqlSslCert#timeouts}
   */
   readonly timeouts?: SqlSslCertTimeouts;
 }
 export interface SqlSslCertTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#create SqlSslCert#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#create SqlSslCert#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert#delete SqlSslCert#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert#delete SqlSslCert#delete}
   */
   readonly delete?: string;
 }
 
-export function sqlSslCertTimeoutsToTerraform(struct?: SqlSslCertTimeoutsOutputReference | SqlSslCertTimeouts | cdktf.IResolvable): any {
+export function sqlSslCertTimeoutsToTerraform(struct?: SqlSslCertTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -70,7 +70,7 @@ export class SqlSslCertTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): SqlSslCertTimeouts | cdktf.IResolvable | undefined {
@@ -143,7 +143,7 @@ export class SqlSslCertTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert google_sql_ssl_cert}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert google_sql_ssl_cert}
 */
 export class SqlSslCert extends cdktf.TerraformResource {
 
@@ -157,7 +157,7 @@ export class SqlSslCert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/sql_ssl_cert google_sql_ssl_cert} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/sql_ssl_cert google_sql_ssl_cert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

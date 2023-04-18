@@ -1,3 +1,3 @@
 # `google_identity_platform_tenant`
 
-Refer to the Terraform Registory for docs: [`google_identity_platform_tenant`](https://www.terraform.io/docs/providers/google/r/identity_platform_tenant).
+Refer to the Terraform Registory for docs: [`google_identity_platform_tenant`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/identity_platform_tenant).

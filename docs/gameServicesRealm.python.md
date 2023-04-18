@@ -1,6 +1,6 @@
 # `google_game_services_realm`
 
-Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://www.terraform.io/docs/providers/google/r/game_services_realm).
+Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm).
 
 # `gameServicesRealm` Submodule <a name="`gameServicesRealm` Submodule" id="@cdktf/provider-google.gameServicesRealm"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_game_services_realm`](https:
 
 ### GameServicesRealm <a name="GameServicesRealm" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/game_services_realm google_game_services_realm}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm google_game_services_realm}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer"></a>
 
@@ -19,7 +19,7 @@ gameServicesRealm.GameServicesRealm(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -41,7 +41,7 @@ gameServicesRealm.GameServicesRealm(
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -50,10 +50,10 @@ gameServicesRealm.GameServicesRealm(
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.realmId">realm_id</a></code> | <code>str</code> | GCP region of the Realm. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.timeZone">time_zone</a></code> | <code>str</code> | Required. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.description">description</a></code> | <code>str</code> | Human readable description of the realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#id GameServicesRealm#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#id GameServicesRealm#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels associated with this realm. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.location">location</a></code> | <code>str</code> | Location of the Realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#project GameServicesRealm#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#project GameServicesRealm#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts">GameServicesRealmTimeouts</a></code> | timeouts block. |
 
 ---
@@ -84,7 +84,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 GCP region of the Realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#realm_id GameServicesRealm#realm_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#realm_id GameServicesRealm#realm_id}
 
 ---
 
@@ -138,7 +138,7 @@ Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#time_zone GameServicesRealm#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#time_zone GameServicesRealm#time_zone}
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Human readable description of the realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#description GameServicesRealm#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#description GameServicesRealm#description}
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#id GameServicesRealm#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#id GameServicesRealm#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The labels associated with this realm. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#labels GameServicesRealm#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#labels GameServicesRealm#labels}
 
 ---
 
@@ -179,7 +179,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Location of the Realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#location GameServicesRealm#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#location GameServicesRealm#location}
 
 ---
 
@@ -187,7 +187,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#project GameServicesRealm#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#project GameServicesRealm#project}.
 
 ---
 
@@ -197,7 +197,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#timeouts GameServicesRealm#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#timeouts GameServicesRealm#timeouts}
 
 ---
 
@@ -454,7 +454,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#create GameServicesRealm#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#create GameServicesRealm#create}.
 
 ---
 
@@ -462,7 +462,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#delete GameServicesRealm#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#delete GameServicesRealm#delete}.
 
 ---
 
@@ -470,7 +470,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#update GameServicesRealm#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#update GameServicesRealm#update}.
 
 ---
 
@@ -598,7 +598,7 @@ gameServicesRealm.GameServicesRealm.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -710,10 +710,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -976,7 +976,7 @@ from cdktf_cdktf_provider_google import game_services_realm
 
 gameServicesRealm.GameServicesRealmConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -998,7 +998,7 @@ gameServicesRealm.GameServicesRealmConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1007,10 +1007,10 @@ gameServicesRealm.GameServicesRealmConfig(
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.realmId">realm_id</a></code> | <code>str</code> | GCP region of the Realm. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.timeZone">time_zone</a></code> | <code>str</code> | Required. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.description">description</a></code> | <code>str</code> | Human readable description of the realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#id GameServicesRealm#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#id GameServicesRealm#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The labels associated with this realm. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.location">location</a></code> | <code>str</code> | Location of the Realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#project GameServicesRealm#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#project GameServicesRealm#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts">GameServicesRealmTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1028,10 +1028,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1095,7 +1095,7 @@ realm_id: str
 
 GCP region of the Realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#realm_id GameServicesRealm#realm_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#realm_id GameServicesRealm#realm_id}
 
 ---
 
@@ -1113,7 +1113,7 @@ Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#time_zone GameServicesRealm#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#time_zone GameServicesRealm#time_zone}
 
 ---
 
@@ -1127,7 +1127,7 @@ description: str
 
 Human readable description of the realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#description GameServicesRealm#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#description GameServicesRealm#description}
 
 ---
 
@@ -1139,7 +1139,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#id GameServicesRealm#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#id GameServicesRealm#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1156,7 +1156,7 @@ labels: typing.Mapping[str]
 
 The labels associated with this realm. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#labels GameServicesRealm#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#labels GameServicesRealm#labels}
 
 ---
 
@@ -1170,7 +1170,7 @@ location: str
 
 Location of the Realm.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#location GameServicesRealm#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#location GameServicesRealm#location}
 
 ---
 
@@ -1182,7 +1182,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#project GameServicesRealm#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#project GameServicesRealm#project}.
 
 ---
 
@@ -1196,7 +1196,7 @@ timeouts: GameServicesRealmTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#timeouts GameServicesRealm#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#timeouts GameServicesRealm#timeouts}
 
 ---
 
@@ -1218,9 +1218,9 @@ gameServicesRealm.GameServicesRealmTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#create GameServicesRealm#create}. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#delete GameServicesRealm#delete}. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#update GameServicesRealm#update}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#create GameServicesRealm#create}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#delete GameServicesRealm#delete}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#update GameServicesRealm#update}. |
 
 ---
 
@@ -1232,7 +1232,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#create GameServicesRealm#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#create GameServicesRealm#create}.
 
 ---
 
@@ -1244,7 +1244,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#delete GameServicesRealm#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#delete GameServicesRealm#delete}.
 
 ---
 
@@ -1256,7 +1256,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/game_services_realm#update GameServicesRealm#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/game_services_realm#update GameServicesRealm#update}.
 
 ---
 

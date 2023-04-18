@@ -1,6 +1,6 @@
 # `data_google_dns_keys`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://www.terraform.io/docs/providers/google/d/dns_keys).
+Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys).
 
 # `dataGoogleDnsKeys` Submodule <a name="`dataGoogleDnsKeys` Submodule" id="@cdktf/provider-google.dataGoogleDnsKeys"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_dns_keys`](https://www.
 
 ### DataGoogleDnsKeys <a name="DataGoogleDnsKeys" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/dns_keys google_dns_keys}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys google_dns_keys}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeys(scope Construct, id *string, config DataGoogleDnsKeysConfig) DataGoogleDnsKeys
 ```
@@ -317,7 +317,7 @@ func ResetZoneSigningKeys()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.DataGoogleDnsKeys_IsConstruct(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.DataGoogleDnsKeys_IsTerraformElement(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ datagooglednskeys.DataGoogleDnsKeys_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.DataGoogleDnsKeys_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ datagooglednskeys.DataGoogleDnsKeys_IsTerraformDataSource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -477,10 +477,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeys.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -639,11 +639,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 &datagooglednskeys.DataGoogleDnsKeysConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -661,7 +661,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -687,10 +687,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -754,7 +754,7 @@ ManagedZone *string
 
 The Name of the zone.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
 
 ---
 
@@ -768,7 +768,7 @@ KeySigningKeys interface{}
 
 key_signing_keys block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#key_signing_keys DataGoogleDnsKeys#key_signing_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#key_signing_keys DataGoogleDnsKeys#key_signing_keys}
 
 ---
 
@@ -782,7 +782,7 @@ Project *string
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#project DataGoogleDnsKeys#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#project DataGoogleDnsKeys#project}
 
 ---
 
@@ -796,7 +796,7 @@ ZoneSigningKeys interface{}
 
 zone_signing_keys block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#zone_signing_keys DataGoogleDnsKeys#zone_signing_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#zone_signing_keys DataGoogleDnsKeys#zone_signing_keys}
 
 ---
 
@@ -805,7 +805,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 &datagooglednskeys.DataGoogleDnsKeysKeySigningKeys {
 	Digests: interface{},
@@ -830,7 +830,7 @@ Digests interface{}
 
 digests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#digests DataGoogleDnsKeys#digests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#digests DataGoogleDnsKeys#digests}
 
 ---
 
@@ -839,7 +839,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeysDigests.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 &datagooglednskeys.DataGoogleDnsKeysKeySigningKeysDigests {
 
@@ -852,7 +852,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 &datagooglednskeys.DataGoogleDnsKeysZoneSigningKeys {
 	Digests: interface{},
@@ -877,7 +877,7 @@ Digests interface{}
 
 digests block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/dns_keys#digests DataGoogleDnsKeys#digests}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/dns_keys#digests DataGoogleDnsKeys#digests}
 
 ---
 
@@ -886,7 +886,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeysDigests.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 &datagooglednskeys.DataGoogleDnsKeysZoneSigningKeysDigests {
 
@@ -901,7 +901,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeysDigestsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysKeySigningKeysDigestsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleDnsKeysKeySigningKeysDigestsList
 ```
@@ -1044,7 +1044,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeysDigestsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysKeySigningKeysDigestsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleDnsKeysKeySigningKeysDigestsOutputReference
 ```
@@ -1333,7 +1333,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysKeySigningKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleDnsKeysKeySigningKeysList
 ```
@@ -1476,7 +1476,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysKeySigningKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysKeySigningKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleDnsKeysKeySigningKeysOutputReference
 ```
@@ -1884,7 +1884,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeysDigestsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysZoneSigningKeysDigestsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleDnsKeysZoneSigningKeysDigestsList
 ```
@@ -2027,7 +2027,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeysDigestsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysZoneSigningKeysDigestsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleDnsKeysZoneSigningKeysDigestsOutputReference
 ```
@@ -2316,7 +2316,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysZoneSigningKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleDnsKeysZoneSigningKeysList
 ```
@@ -2459,7 +2459,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsKeys.DataGoogleDnsKeysZoneSigningKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglednskeys"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednskeys"
 
 datagooglednskeys.NewDataGoogleDnsKeysZoneSigningKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleDnsKeysZoneSigningKeysOutputReference
 ```

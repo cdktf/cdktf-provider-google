@@ -1,6 +1,6 @@
 # `google_storage_bucket_acl`
 
-Refer to the Terraform Registory for docs: [`google_storage_bucket_acl`](https://www.terraform.io/docs/providers/google/r/storage_bucket_acl).
+Refer to the Terraform Registory for docs: [`google_storage_bucket_acl`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl).
 
 # `storageBucketAcl` Submodule <a name="`storageBucketAcl` Submodule" id="@cdktf/provider-google.storageBucketAcl"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_storage_bucket_acl`](https:/
 
 ### StorageBucketAcl <a name="StorageBucketAcl" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl google_storage_bucket_acl}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl google_storage_bucket_acl}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer"></a>
 
@@ -367,7 +367,7 @@ StorageBucketAcl.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -471,10 +471,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -657,7 +657,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new StorageBucketAclConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -676,7 +676,7 @@ new StorageBucketAclConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -684,7 +684,7 @@ new StorageBucketAclConfig {
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.bucket">Bucket</a></code> | <code>string</code> | The name of the bucket it applies to. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.defaultAcl">DefaultAcl</a></code> | <code>string</code> | Configure this ACL to be the default ACL. |
-| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#id StorageBucketAcl#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.predefinedAcl">PredefinedAcl</a></code> | <code>string</code> | The canned GCS ACL to apply. Must be set if role_entity is not. |
 | <code><a href="#@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.roleEntity">RoleEntity</a></code> | <code>string[]</code> | List of role/entity pairs in the form ROLE:entity. |
 
@@ -703,10 +703,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -770,7 +770,7 @@ public string Bucket { get; set; }
 
 The name of the bucket it applies to.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#bucket StorageBucketAcl#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#bucket StorageBucketAcl#bucket}
 
 ---
 
@@ -784,7 +784,7 @@ public string DefaultAcl { get; set; }
 
 Configure this ACL to be the default ACL.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#default_acl StorageBucketAcl#default_acl}
 
 ---
 
@@ -796,7 +796,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#id StorageBucketAcl#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#id StorageBucketAcl#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -813,7 +813,7 @@ public string PredefinedAcl { get; set; }
 
 The canned GCS ACL to apply. Must be set if role_entity is not.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#predefined_acl StorageBucketAcl#predefined_acl}
 
 ---
 
@@ -829,7 +829,7 @@ List of role/entity pairs in the form ROLE:entity.
 
 See GCS Bucket ACL documentation  for more details. Must be set if predefined_acl is not.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket_acl#role_entity StorageBucketAcl#role_entity}
 
 ---
 

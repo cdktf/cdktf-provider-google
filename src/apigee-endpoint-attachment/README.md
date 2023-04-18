@@ -1,3 +1,3 @@
 # `google_apigee_endpoint_attachment`
 
-Refer to the Terraform Registory for docs: [`google_apigee_endpoint_attachment`](https://www.terraform.io/docs/providers/google/r/apigee_endpoint_attachment).
+Refer to the Terraform Registory for docs: [`google_apigee_endpoint_attachment`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_endpoint_attachment).

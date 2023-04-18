@@ -1,3 +1,3 @@
 # `google_organization_policy`
 
-Refer to the Terraform Registory for docs: [`google_organization_policy`](https://www.terraform.io/docs/providers/google/r/organization_policy).
+Refer to the Terraform Registory for docs: [`google_organization_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/organization_policy).

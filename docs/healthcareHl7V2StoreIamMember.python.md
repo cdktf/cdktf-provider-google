@@ -1,6 +1,6 @@
 # `google_healthcare_hl7_v2_store_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_healthcare_hl7_v2_store_iam_member`](https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member).
+Refer to the Terraform Registory for docs: [`google_healthcare_hl7_v2_store_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member).
 
 # `healthcareHl7V2StoreIamMember` Submodule <a name="`healthcareHl7V2StoreIamMember` Submodule" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_healthcare_hl7_v2_store_iam_
 
 ### HealthcareHl7V2StoreIamMember <a name="HealthcareHl7V2StoreIamMember" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member google_healthcare_hl7_v2_store_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer"></a>
 
@@ -19,7 +19,7 @@ healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -38,17 +38,17 @@ healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember(
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.hl7V2StoreId">hl7_v2_store_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.hl7V2StoreId">hl7_v2_store_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition">HealthcareHl7V2StoreIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}. |
 
 ---
 
@@ -78,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -406,7 +406,7 @@ def put_condition(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}.
 
 ---
 
@@ -414,7 +414,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}.
 
 ---
 
@@ -422,7 +422,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}.
 
 ---
 
@@ -526,7 +526,7 @@ healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.is_terraform_resourc
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -631,10 +631,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMember.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -836,9 +836,9 @@ healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.expression">expression</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.title">title</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}. |
 
 ---
 
@@ -850,7 +850,7 @@ expression: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#expression HealthcareHl7V2StoreIamMember#expression}.
 
 ---
 
@@ -862,7 +862,7 @@ title: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#title HealthcareHl7V2StoreIamMember#title}.
 
 ---
 
@@ -874,7 +874,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#description HealthcareHl7V2StoreIamMember#description}.
 
 ---
 
@@ -887,7 +887,7 @@ from cdktf_cdktf_provider_google import healthcare_hl7_v2_store_iam_member
 
 healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -906,17 +906,17 @@ healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.hl7V2StoreId">hl7_v2_store_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.hl7V2StoreId">hl7_v2_store_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.member">member</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.role">role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberCondition">HealthcareHl7V2StoreIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}. |
 
 ---
 
@@ -933,10 +933,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.healthcareHl7V2StoreIamMember.HealthcareHl7V2StoreIamMemberConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -998,7 +998,7 @@ hl7_v2_store_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#hl7_v2_store_id HealthcareHl7V2StoreIamMember#hl7_v2_store_id}.
 
 ---
 
@@ -1010,7 +1010,7 @@ member: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#member HealthcareHl7V2StoreIamMember#member}.
 
 ---
 
@@ -1022,7 +1022,7 @@ role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#role HealthcareHl7V2StoreIamMember#role}.
 
 ---
 
@@ -1036,7 +1036,7 @@ condition: HealthcareHl7V2StoreIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#condition HealthcareHl7V2StoreIamMember#condition}
 
 ---
 
@@ -1048,7 +1048,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/healthcare_hl7_v2_store_iam_member#id HealthcareHl7V2StoreIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

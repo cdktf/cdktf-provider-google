@@ -1,6 +1,6 @@
 # `google_compute_project_default_network_tier`
 
-Refer to the Terraform Registory for docs: [`google_compute_project_default_network_tier`](https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier).
+Refer to the Terraform Registory for docs: [`google_compute_project_default_network_tier`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier).
 
 # `computeProjectDefaultNetworkTier` Submodule <a name="`computeProjectDefaultNetworkTier` Submodule" id="@cdktf/provider-google.computeProjectDefaultNetworkTier"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_project_default_netw
 
 ### ComputeProjectDefaultNetworkTier <a name="ComputeProjectDefaultNetworkTier" id="@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier google_compute_project_default_network_tier}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier google_compute_project_default_network_tier}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer"></a>
 
@@ -19,7 +19,7 @@ computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,14 +37,14 @@ computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier(
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.networkTier">network_tier</a></code> | <code>str</code> | The default network tier to be configured for the project. |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}. |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.project">project</a></code> | <code>str</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierTimeouts">ComputeProjectDefaultNetworkTierTimeouts</a></code> | timeouts block. |
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -118,7 +118,7 @@ The default network tier to be configured for the project.
 
 This field can take the following values: PREMIUM or STANDARD.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#network_tier ComputeProjectDefaultNetworkTier#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#network_tier ComputeProjectDefaultNetworkTier#network_tier}
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#project ComputeProjectDefaultNetworkTier#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#project ComputeProjectDefaultNetworkTier#project}
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#timeouts ComputeProjectDefaultNetworkTier#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#timeouts ComputeProjectDefaultNetworkTier#timeouts}
 
 ---
 
@@ -403,7 +403,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}.
 
 ---
 
@@ -513,7 +513,7 @@ computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.is_terraform_r
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -615,10 +615,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTier.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -781,7 +781,7 @@ from cdktf_cdktf_provider_google import compute_project_default_network_tier
 
 computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -799,14 +799,14 @@ computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.networkTier">network_tier</a></code> | <code>str</code> | The default network tier to be configured for the project. |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}. |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.project">project</a></code> | <code>str</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierTimeouts">ComputeProjectDefaultNetworkTierTimeouts</a></code> | timeouts block. |
 
@@ -825,10 +825,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -894,7 +894,7 @@ The default network tier to be configured for the project.
 
 This field can take the following values: PREMIUM or STANDARD.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#network_tier ComputeProjectDefaultNetworkTier#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#network_tier ComputeProjectDefaultNetworkTier#network_tier}
 
 ---
 
@@ -906,7 +906,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#id ComputeProjectDefaultNetworkTier#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -925,7 +925,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#project ComputeProjectDefaultNetworkTier#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#project ComputeProjectDefaultNetworkTier#project}
 
 ---
 
@@ -939,7 +939,7 @@ timeouts: ComputeProjectDefaultNetworkTierTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#timeouts ComputeProjectDefaultNetworkTier#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#timeouts ComputeProjectDefaultNetworkTier#timeouts}
 
 ---
 
@@ -959,7 +959,7 @@ computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}. |
+| <code><a href="#@cdktf/provider-google.computeProjectDefaultNetworkTier.ComputeProjectDefaultNetworkTierTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}. |
 
 ---
 
@@ -971,7 +971,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_project_default_network_tier#create ComputeProjectDefaultNetworkTier#create}.
 
 ---
 

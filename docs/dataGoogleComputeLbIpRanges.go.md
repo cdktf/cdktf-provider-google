@@ -1,6 +1,6 @@
 # `data_google_compute_lb_ip_ranges`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges).
+Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_lb_ip_ranges).
 
 # `dataGoogleComputeLbIpRanges` Submodule <a name="`dataGoogleComputeLbIpRanges` Submodule" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_compute_lb_ip_ranges`](
 
 ### DataGoogleComputeLbIpRanges <a name="DataGoogleComputeLbIpRanges" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges google_compute_lb_ip_ranges}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_lb_ip_ranges google_compute_lb_ip_ranges}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.NewDataGoogleComputeLbIpRanges(scope Construct, id *string, config DataGoogleComputeLbIpRangesConfig) DataGoogleComputeLbIpRanges
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputelbipranges"
 
 datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ datagooglecomputelbipranges.DataGoogleComputeLbIpRanges_IsTerraformDataSource(x 
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -432,10 +432,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRanges.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -544,11 +544,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbipranges"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputelbipranges"
 
 &datagooglecomputelbipranges.DataGoogleComputeLbIpRangesConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -563,13 +563,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglecomputelbi
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}. |
 
 ---
 
@@ -586,10 +586,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleComputeLbIpRanges.DataGoogleComputeLbIpRangesConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -651,7 +651,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_lb_ip_ranges#id DataGoogleComputeLbIpRanges#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

@@ -1,6 +1,6 @@
 # `google_scc_source_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_scc_source_iam_binding`](https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding).
+Refer to the Terraform Registory for docs: [`google_scc_source_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding).
 
 # `sccSourceIamBinding` Submodule <a name="`sccSourceIamBinding` Submodule" id="@cdktf/provider-google.sccSourceIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_scc_source_iam_binding`](htt
 
 ### SccSourceIamBinding <a name="SccSourceIamBinding" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding google_scc_source_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding google_scc_source_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.Initializer"></a>
 
@@ -366,7 +366,7 @@ sccSourceIamBinding.SccSourceIamBinding.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -473,10 +473,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBinding.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -694,9 +694,9 @@ const sccSourceIamBindingCondition: sccSourceIamBinding.SccSourceIamBindingCondi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#expression SccSourceIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#title SccSourceIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#description SccSourceIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#expression SccSourceIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#title SccSourceIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#description SccSourceIamBinding#description}. |
 
 ---
 
@@ -708,7 +708,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#expression SccSourceIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#expression SccSourceIamBinding#expression}.
 
 ---
 
@@ -720,7 +720,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#title SccSourceIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#title SccSourceIamBinding#title}.
 
 ---
 
@@ -732,7 +732,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#description SccSourceIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#description SccSourceIamBinding#description}.
 
 ---
 
@@ -751,18 +751,18 @@ const sccSourceIamBindingConfig: sccSourceIamBinding.SccSourceIamBindingConfig =
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.members">members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#members SccSourceIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.organization">organization</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#organization SccSourceIamBinding#organization}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#role SccSourceIamBinding#role}. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.source">source</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#source SccSourceIamBinding#source}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.members">members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#members SccSourceIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.organization">organization</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#organization SccSourceIamBinding#organization}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#role SccSourceIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.source">source</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#source SccSourceIamBinding#source}. |
 | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingCondition">SccSourceIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#id SccSourceIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#id SccSourceIamBinding#id}. |
 
 ---
 
@@ -779,10 +779,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.sccSourceIamBinding.SccSourceIamBindingConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -844,7 +844,7 @@ public readonly members: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#members SccSourceIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#members SccSourceIamBinding#members}.
 
 ---
 
@@ -856,7 +856,7 @@ public readonly organization: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#organization SccSourceIamBinding#organization}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#organization SccSourceIamBinding#organization}.
 
 ---
 
@@ -868,7 +868,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#role SccSourceIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#role SccSourceIamBinding#role}.
 
 ---
 
@@ -880,7 +880,7 @@ public readonly source: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#source SccSourceIamBinding#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#source SccSourceIamBinding#source}.
 
 ---
 
@@ -894,7 +894,7 @@ public readonly condition: SccSourceIamBindingCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#condition SccSourceIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#condition SccSourceIamBinding#condition}
 
 ---
 
@@ -906,7 +906,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/scc_source_iam_binding#id SccSourceIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/scc_source_iam_binding#id SccSourceIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

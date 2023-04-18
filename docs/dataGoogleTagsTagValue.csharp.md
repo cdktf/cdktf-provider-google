@@ -1,6 +1,6 @@
 # `data_google_tags_tag_value`
 
-Refer to the Terraform Registory for docs: [`data_google_tags_tag_value`](https://www.terraform.io/docs/providers/google/d/tags_tag_value).
+Refer to the Terraform Registory for docs: [`data_google_tags_tag_value`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value).
 
 # `dataGoogleTagsTagValue` Submodule <a name="`dataGoogleTagsTagValue` Submodule" id="@cdktf/provider-google.dataGoogleTagsTagValue"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_tags_tag_value`](https:
 
 ### DataGoogleTagsTagValue <a name="DataGoogleTagsTagValue" id="@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/tags_tag_value google_tags_tag_value}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value google_tags_tag_value}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.Initializer"></a>
 
@@ -338,7 +338,7 @@ DataGoogleTagsTagValue.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -431,10 +431,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValue.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -607,7 +607,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleTagsTagValueConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -623,14 +623,14 @@ new DataGoogleTagsTagValueConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_value#parent DataGoogleTagsTagValue#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.shortName">ShortName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_value#short_name DataGoogleTagsTagValue#short_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value#parent DataGoogleTagsTagValue#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.shortName">ShortName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value#short_name DataGoogleTagsTagValue#short_name}. |
 
 ---
 
@@ -647,10 +647,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleTagsTagValue.DataGoogleTagsTagValueConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -712,7 +712,7 @@ public string Parent { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_value#parent DataGoogleTagsTagValue#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value#parent DataGoogleTagsTagValue#parent}.
 
 ---
 
@@ -724,7 +724,7 @@ public string ShortName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/tags_tag_value#short_name DataGoogleTagsTagValue#short_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/tags_tag_value#short_name DataGoogleTagsTagValue#short_name}.
 
 ---
 

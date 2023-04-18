@@ -1,6 +1,6 @@
 # `google_cloudiot_registry_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_cloudiot_registry_iam_policy`](https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy).
+Refer to the Terraform Registory for docs: [`google_cloudiot_registry_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy).
 
 # `cloudiotRegistryIamPolicy` Submodule <a name="`cloudiotRegistryIamPolicy` Submodule" id="@cdktf/provider-google.cloudiotRegistryIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloudiot_registry_iam_policy
 
 ### CloudiotRegistryIamPolicy <a name="CloudiotRegistryIamPolicy" id="@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy google_cloudiot_registry_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy google_cloudiot_registry_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.Initializer"></a>
 
@@ -360,7 +360,7 @@ CloudiotRegistryIamPolicy.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -465,10 +465,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicy.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -661,7 +661,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new CloudiotRegistryIamPolicyConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -680,17 +680,17 @@ new CloudiotRegistryIamPolicyConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#name CloudiotRegistryIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#policy_data CloudiotRegistryIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#id CloudiotRegistryIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#project CloudiotRegistryIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#region CloudiotRegistryIamPolicy#region}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#name CloudiotRegistryIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#policy_data CloudiotRegistryIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#id CloudiotRegistryIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#project CloudiotRegistryIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#region CloudiotRegistryIamPolicy#region}. |
 
 ---
 
@@ -707,10 +707,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.cloudiotRegistryIamPolicy.CloudiotRegistryIamPolicyConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -772,7 +772,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#name CloudiotRegistryIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#name CloudiotRegistryIamPolicy#name}.
 
 ---
 
@@ -784,7 +784,7 @@ public string PolicyData { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#policy_data CloudiotRegistryIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#policy_data CloudiotRegistryIamPolicy#policy_data}.
 
 ---
 
@@ -796,7 +796,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#id CloudiotRegistryIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#id CloudiotRegistryIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -811,7 +811,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#project CloudiotRegistryIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#project CloudiotRegistryIamPolicy#project}.
 
 ---
 
@@ -823,7 +823,7 @@ public string Region { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudiot_registry_iam_policy#region CloudiotRegistryIamPolicy#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudiot_registry_iam_policy#region CloudiotRegistryIamPolicy#region}.
 
 ---
 

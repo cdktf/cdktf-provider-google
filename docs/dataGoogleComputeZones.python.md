@@ -1,6 +1,6 @@
 # `data_google_compute_zones`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_zones`](https://www.terraform.io/docs/providers/google/d/compute_zones).
+Refer to the Terraform Registory for docs: [`data_google_compute_zones`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones).
 
 # `dataGoogleComputeZones` Submodule <a name="`dataGoogleComputeZones` Submodule" id="@cdktf/provider-google.dataGoogleComputeZones"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_zones`](https:/
 
 ### DataGoogleComputeZones <a name="DataGoogleComputeZones" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_zones google_compute_zones}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones google_compute_zones}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataGoogleComputeZones.DataGoogleComputeZones(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,16 +37,16 @@ dataGoogleComputeZones.DataGoogleComputeZones(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#id DataGoogleComputeZones#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#project DataGoogleComputeZones#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#region DataGoogleComputeZones#region}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.status">status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#status DataGoogleComputeZones#status}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.status">status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}. |
 
 ---
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#id DataGoogleComputeZones#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -125,7 +125,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#project DataGoogleComputeZones#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}.
 
 ---
 
@@ -133,7 +133,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#region DataGoogleComputeZones#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}.
 
 ---
 
@@ -141,7 +141,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#status DataGoogleComputeZones#status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}.
 
 ---
 
@@ -492,7 +492,7 @@ dataGoogleComputeZones.DataGoogleComputeZones.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -584,10 +584,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZones.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -750,7 +750,7 @@ from cdktf_cdktf_provider_google import data_google_compute_zones
 
 dataGoogleComputeZones.DataGoogleComputeZonesConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -768,16 +768,16 @@ dataGoogleComputeZones.DataGoogleComputeZonesConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#id DataGoogleComputeZones#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#project DataGoogleComputeZones#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#region DataGoogleComputeZones#region}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.status">status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#status DataGoogleComputeZones#status}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.status">status</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}. |
 
 ---
 
@@ -794,10 +794,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComputeZones.DataGoogleComputeZonesConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -859,7 +859,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#id DataGoogleComputeZones#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -874,7 +874,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#project DataGoogleComputeZones#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}.
 
 ---
 
@@ -886,7 +886,7 @@ region: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#region DataGoogleComputeZones#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}.
 
 ---
 
@@ -898,7 +898,7 @@ status: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_zones#status DataGoogleComputeZones#status}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}.
 
 ---
 

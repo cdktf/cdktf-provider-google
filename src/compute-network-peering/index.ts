@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_network_peering
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,15 +10,15 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   /**
   * Whether to export the custom routes to the peer network. Defaults to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#export_custom_routes ComputeNetworkPeering#export_custom_routes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#export_custom_routes ComputeNetworkPeering#export_custom_routes}
   */
   readonly exportCustomRoutes?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#export_subnet_routes_with_public_ip ComputeNetworkPeering#export_subnet_routes_with_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#export_subnet_routes_with_public_ip ComputeNetworkPeering#export_subnet_routes_with_public_ip}
   */
   readonly exportSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#id ComputeNetworkPeering#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#id ComputeNetworkPeering#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -27,54 +27,54 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   /**
   * Whether to export the custom routes from the peer network. Defaults to false.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#import_custom_routes ComputeNetworkPeering#import_custom_routes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#import_custom_routes ComputeNetworkPeering#import_custom_routes}
   */
   readonly importCustomRoutes?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#import_subnet_routes_with_public_ip ComputeNetworkPeering#import_subnet_routes_with_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#import_subnet_routes_with_public_ip ComputeNetworkPeering#import_subnet_routes_with_public_ip}
   */
   readonly importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
   * Name of the peering.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#name ComputeNetworkPeering#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#name ComputeNetworkPeering#name}
   */
   readonly name: string;
   /**
   * The primary network of the peering.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#network ComputeNetworkPeering#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#network ComputeNetworkPeering#network}
   */
   readonly network: string;
   /**
   * The peer network in the peering. The peer network may belong to a different project.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#peer_network ComputeNetworkPeering#peer_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#peer_network ComputeNetworkPeering#peer_network}
   */
   readonly peerNetwork: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#timeouts ComputeNetworkPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#timeouts ComputeNetworkPeering#timeouts}
   */
   readonly timeouts?: ComputeNetworkPeeringTimeouts;
 }
 export interface ComputeNetworkPeeringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#create ComputeNetworkPeering#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#create ComputeNetworkPeering#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#delete ComputeNetworkPeering#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#delete ComputeNetworkPeering#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering#update ComputeNetworkPeering#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering#update ComputeNetworkPeering#update}
   */
   readonly update?: string;
 }
 
-export function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeeringTimeoutsOutputReference | ComputeNetworkPeeringTimeouts | cdktf.IResolvable): any {
+export function computeNetworkPeeringTimeoutsToTerraform(struct?: ComputeNetworkPeeringTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -95,7 +95,7 @@ export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeNetworkPeeringTimeouts | cdktf.IResolvable | undefined {
@@ -190,7 +190,7 @@ export class ComputeNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering google_compute_network_peering}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering google_compute_network_peering}
 */
 export class ComputeNetworkPeering extends cdktf.TerraformResource {
 
@@ -204,7 +204,7 @@ export class ComputeNetworkPeering extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_peering google_compute_network_peering} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_peering google_compute_network_peering} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

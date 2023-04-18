@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/compute_network_peering
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering#id DataGoogleComputeNetworkPeering#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering#id DataGoogleComputeNetworkPeering#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,30 +17,30 @@ export interface DataGoogleComputeNetworkPeeringConfig extends cdktf.TerraformMe
   /**
   * Name of the peering.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering#name DataGoogleComputeNetworkPeering#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering#name DataGoogleComputeNetworkPeering#name}
   */
   readonly name: string;
   /**
   * The primary network of the peering.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering#network DataGoogleComputeNetworkPeering#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering#network DataGoogleComputeNetworkPeering#network}
   */
   readonly network: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering#timeouts DataGoogleComputeNetworkPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering#timeouts DataGoogleComputeNetworkPeering#timeouts}
   */
   readonly timeouts?: DataGoogleComputeNetworkPeeringTimeouts;
 }
 export interface DataGoogleComputeNetworkPeeringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering#read DataGoogleComputeNetworkPeering#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering#read DataGoogleComputeNetworkPeering#read}
   */
   readonly read?: string;
 }
 
-export function dataGoogleComputeNetworkPeeringTimeoutsToTerraform(struct?: DataGoogleComputeNetworkPeeringTimeoutsOutputReference | DataGoogleComputeNetworkPeeringTimeouts | cdktf.IResolvable): any {
+export function dataGoogleComputeNetworkPeeringTimeoutsToTerraform(struct?: DataGoogleComputeNetworkPeeringTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,7 +59,7 @@ export class DataGoogleComputeNetworkPeeringTimeoutsOutputReference extends cdkt
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): DataGoogleComputeNetworkPeeringTimeouts | cdktf.IResolvable | undefined {
@@ -110,7 +110,7 @@ export class DataGoogleComputeNetworkPeeringTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering google_compute_network_peering}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering google_compute_network_peering}
 */
 export class DataGoogleComputeNetworkPeering extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataGoogleComputeNetworkPeering extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/compute_network_peering google_compute_network_peering} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_network_peering google_compute_network_peering} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

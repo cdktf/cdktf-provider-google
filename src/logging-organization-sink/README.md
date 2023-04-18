@@ -1,3 +1,3 @@
 # `google_logging_organization_sink`
 
-Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](https://www.terraform.io/docs/providers/google/r/logging_organization_sink).
+Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_sink).

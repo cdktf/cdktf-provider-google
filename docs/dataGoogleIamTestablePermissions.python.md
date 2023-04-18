@@ -1,6 +1,6 @@
 # `data_google_iam_testable_permissions`
 
-Refer to the Terraform Registory for docs: [`data_google_iam_testable_permissions`](https://www.terraform.io/docs/providers/google/d/iam_testable_permissions).
+Refer to the Terraform Registory for docs: [`data_google_iam_testable_permissions`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions).
 
 # `dataGoogleIamTestablePermissions` Submodule <a name="`dataGoogleIamTestablePermissions` Submodule" id="@cdktf/provider-google.dataGoogleIamTestablePermissions"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_iam_testable_permission
 
 ### DataGoogleIamTestablePermissions <a name="DataGoogleIamTestablePermissions" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions google_iam_testable_permissions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions google_iam_testable_permissions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,16 +37,16 @@ dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions(
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.fullResourceName">full_resource_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.customSupportLevel">custom_support_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.stages">stages</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.fullResourceName">full_resource_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.customSupportLevel">custom_support_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.stages">stages</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}. |
 
 ---
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}.
 
 ---
 
@@ -485,7 +485,7 @@ dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.is_terraform_d
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -577,10 +577,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissions.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -743,7 +743,7 @@ from cdktf_cdktf_provider_google import data_google_iam_testable_permissions
 
 dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -761,16 +761,16 @@ dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.fullResourceName">full_resource_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.customSupportLevel">custom_support_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.stages">stages</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.fullResourceName">full_resource_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.customSupportLevel">custom_support_level</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.stages">stages</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}. |
 
 ---
 
@@ -787,10 +787,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleIamTestablePermissions.DataGoogleIamTestablePermissionsConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -852,7 +852,7 @@ full_resource_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#full_resource_name DataGoogleIamTestablePermissions#full_resource_name}.
 
 ---
 
@@ -864,7 +864,7 @@ custom_support_level: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#custom_support_level DataGoogleIamTestablePermissions#custom_support_level}.
 
 ---
 
@@ -876,7 +876,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#id DataGoogleIamTestablePermissions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -891,7 +891,7 @@ stages: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_testable_permissions#stages DataGoogleIamTestablePermissions#stages}.
 
 ---
 

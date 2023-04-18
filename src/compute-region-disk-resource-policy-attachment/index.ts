@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface ComputeRegionDiskResourcePolicyAttachmentConfig extends cdktf.T
   /**
   * The name of the regional disk in which the resource policies are attached to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#disk ComputeRegionDiskResourcePolicyAttachment#disk}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#disk ComputeRegionDiskResourcePolicyAttachment#disk}
   */
   readonly disk: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#id ComputeRegionDiskResourcePolicyAttachment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#id ComputeRegionDiskResourcePolicyAttachment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,38 +24,38 @@ export interface ComputeRegionDiskResourcePolicyAttachmentConfig extends cdktf.T
   * The resource policy to be attached to the disk for scheduling snapshot
 creation. Do not specify the self link.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#name ComputeRegionDiskResourcePolicyAttachment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#name ComputeRegionDiskResourcePolicyAttachment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#project ComputeRegionDiskResourcePolicyAttachment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#project ComputeRegionDiskResourcePolicyAttachment#project}
   */
   readonly project?: string;
   /**
   * A reference to the region where the disk resides.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#region ComputeRegionDiskResourcePolicyAttachment#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#region ComputeRegionDiskResourcePolicyAttachment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#timeouts ComputeRegionDiskResourcePolicyAttachment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#timeouts ComputeRegionDiskResourcePolicyAttachment#timeouts}
   */
   readonly timeouts?: ComputeRegionDiskResourcePolicyAttachmentTimeouts;
 }
 export interface ComputeRegionDiskResourcePolicyAttachmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#create ComputeRegionDiskResourcePolicyAttachment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#create ComputeRegionDiskResourcePolicyAttachment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment#delete ComputeRegionDiskResourcePolicyAttachment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment#delete ComputeRegionDiskResourcePolicyAttachment#delete}
   */
   readonly delete?: string;
 }
 
-export function computeRegionDiskResourcePolicyAttachmentTimeoutsToTerraform(struct?: ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference | ComputeRegionDiskResourcePolicyAttachmentTimeouts | cdktf.IResolvable): any {
+export function computeRegionDiskResourcePolicyAttachmentTimeoutsToTerraform(struct?: ComputeRegionDiskResourcePolicyAttachmentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -75,7 +75,7 @@ export class ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference ex
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeRegionDiskResourcePolicyAttachmentTimeouts | cdktf.IResolvable | undefined {
@@ -148,7 +148,7 @@ export class ComputeRegionDiskResourcePolicyAttachmentTimeoutsOutputReference ex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment google_compute_region_disk_resource_policy_attachment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment google_compute_region_disk_resource_policy_attachment}
 */
 export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class ComputeRegionDiskResourcePolicyAttachment extends cdktf.TerraformRe
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_region_disk_resource_policy_attachment google_compute_region_disk_resource_policy_attachment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_region_disk_resource_policy_attachment google_compute_region_disk_resource_policy_attachment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

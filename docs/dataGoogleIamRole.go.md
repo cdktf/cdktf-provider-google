@@ -1,6 +1,6 @@
 # `data_google_iam_role`
 
-Refer to the Terraform Registory for docs: [`data_google_iam_role`](https://www.terraform.io/docs/providers/google/d/iam_role).
+Refer to the Terraform Registory for docs: [`data_google_iam_role`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role).
 
 # `dataGoogleIamRole` Submodule <a name="`dataGoogleIamRole` Submodule" id="@cdktf/provider-google.dataGoogleIamRole"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_iam_role`](https://www.
 
 ### DataGoogleIamRole <a name="DataGoogleIamRole" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/iam_role google_iam_role}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role google_iam_role}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.NewDataGoogleIamRole(scope Construct, id *string, config DataGoogleIamRoleConfig) DataGoogleIamRole
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagoogleiamrole.DataGoogleIamRole_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 datagoogleiamrole.DataGoogleIamRole_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -345,7 +345,7 @@ datagoogleiamrole.DataGoogleIamRole_IsTerraformDataSource(x interface{}) *bool
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>*map[string]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -435,10 +435,10 @@ func TerraformGeneratorMetadata() TerraformProviderGeneratorMetadata
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRole.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -577,11 +577,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleiamrole"
 
 &datagoogleiamrole.DataGoogleIamRoleConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -597,14 +597,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagoogleiamrole"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role#name DataGoogleIamRole#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role#id DataGoogleIamRole#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role#name DataGoogleIamRole#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role#id DataGoogleIamRole#id}. |
 
 ---
 
@@ -621,10 +621,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleIamRole.DataGoogleIamRoleConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -686,7 +686,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role#name DataGoogleIamRole#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role#name DataGoogleIamRole#name}.
 
 ---
 
@@ -698,7 +698,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iam_role#id DataGoogleIamRole#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iam_role#id DataGoogleIamRole#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

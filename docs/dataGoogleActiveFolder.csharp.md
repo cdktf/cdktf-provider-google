@@ -1,6 +1,6 @@
 # `data_google_active_folder`
 
-Refer to the Terraform Registory for docs: [`data_google_active_folder`](https://www.terraform.io/docs/providers/google/d/active_folder).
+Refer to the Terraform Registory for docs: [`data_google_active_folder`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder).
 
 # `dataGoogleActiveFolder` Submodule <a name="`dataGoogleActiveFolder` Submodule" id="@cdktf/provider-google.dataGoogleActiveFolder"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_active_folder`](https:/
 
 ### DataGoogleActiveFolder <a name="DataGoogleActiveFolder" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/active_folder google_active_folder}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder google_active_folder}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer"></a>
 
@@ -345,7 +345,7 @@ DataGoogleActiveFolder.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -435,10 +435,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -581,7 +581,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleActiveFolderConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -598,15 +598,15 @@ new DataGoogleActiveFolderConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#display_name DataGoogleActiveFolder#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#parent DataGoogleActiveFolder#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#id DataGoogleActiveFolder#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
 
 ---
 
@@ -623,10 +623,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -688,7 +688,7 @@ public string DisplayName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#display_name DataGoogleActiveFolder#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
 
 ---
 
@@ -700,7 +700,7 @@ public string Parent { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#parent DataGoogleActiveFolder#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
 
 ---
 
@@ -712,7 +712,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/active_folder#id DataGoogleActiveFolder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

@@ -1,3 +1,3 @@
 # `data_google_service_account`
 
-Refer to the Terraform Registory for docs: [`data_google_service_account`](https://www.terraform.io/docs/providers/google/d/service_account).
+Refer to the Terraform Registory for docs: [`data_google_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/service_account).

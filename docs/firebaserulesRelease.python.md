@@ -1,6 +1,6 @@
 # `google_firebaserules_release`
 
-Refer to the Terraform Registory for docs: [`google_firebaserules_release`](https://www.terraform.io/docs/providers/google/r/firebaserules_release).
+Refer to the Terraform Registory for docs: [`google_firebaserules_release`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release).
 
 # `firebaserulesRelease` Submodule <a name="`firebaserulesRelease` Submodule" id="@cdktf/provider-google.firebaserulesRelease"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_firebaserules_release`](http
 
 ### FirebaserulesRelease <a name="FirebaserulesRelease" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release google_firebaserules_release}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release google_firebaserules_release}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer"></a>
 
@@ -19,7 +19,7 @@ firebaserulesRelease.FirebaserulesRelease(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -38,7 +38,7 @@ firebaserulesRelease.FirebaserulesRelease(
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -46,7 +46,7 @@ firebaserulesRelease.FirebaserulesRelease(
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.name">name</a></code> | <code>str</code> | Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.rulesetName">ruleset_name</a></code> | <code>str</code> | Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created. |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#id FirebaserulesRelease#id}. |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.project">project</a></code> | <code>str</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a></code> | timeouts block. |
 
@@ -78,7 +78,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#name FirebaserulesRelease#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#name FirebaserulesRelease#name}
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#id FirebaserulesRelease#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#project FirebaserulesRelease#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#project FirebaserulesRelease#project}
 
 ---
 
@@ -159,7 +159,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
 
 ---
 
@@ -413,7 +413,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#create FirebaserulesRelease#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#create FirebaserulesRelease#create}.
 
 ---
 
@@ -421,7 +421,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#delete FirebaserulesRelease#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#delete FirebaserulesRelease#delete}.
 
 ---
 
@@ -429,7 +429,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#update FirebaserulesRelease#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#update FirebaserulesRelease#update}.
 
 ---
 
@@ -539,7 +539,7 @@ firebaserulesRelease.FirebaserulesRelease.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -646,10 +646,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -862,7 +862,7 @@ from cdktf_cdktf_provider_google import firebaserules_release
 
 firebaserulesRelease.FirebaserulesReleaseConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -881,7 +881,7 @@ firebaserulesRelease.FirebaserulesReleaseConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -889,7 +889,7 @@ firebaserulesRelease.FirebaserulesReleaseConfig(
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.name">name</a></code> | <code>str</code> | Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.rulesetName">ruleset_name</a></code> | <code>str</code> | Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created. |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#id FirebaserulesRelease#id}. |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.project">project</a></code> | <code>str</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a></code> | timeouts block. |
 
@@ -908,10 +908,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -975,7 +975,7 @@ name: str
 
 Format: `projects/{project_id}/releases/{release_id}`\Firestore Rules Releases will **always** have the name 'cloud.firestore'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#name FirebaserulesRelease#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#name FirebaserulesRelease#name}
 
 ---
 
@@ -989,7 +989,7 @@ ruleset_name: str
 
 Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist for the `Release` to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#ruleset_name FirebaserulesRelease#ruleset_name}
 
 ---
 
@@ -1001,7 +1001,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#id FirebaserulesRelease#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#id FirebaserulesRelease#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1018,7 +1018,7 @@ project: str
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#project FirebaserulesRelease#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#project FirebaserulesRelease#project}
 
 ---
 
@@ -1032,7 +1032,7 @@ timeouts: FirebaserulesReleaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#timeouts FirebaserulesRelease#timeouts}
 
 ---
 
@@ -1054,9 +1054,9 @@ firebaserulesRelease.FirebaserulesReleaseTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#create FirebaserulesRelease#create}. |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#delete FirebaserulesRelease#delete}. |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#update FirebaserulesRelease#update}. |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#create FirebaserulesRelease#create}. |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#delete FirebaserulesRelease#delete}. |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#update FirebaserulesRelease#update}. |
 
 ---
 
@@ -1068,7 +1068,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#create FirebaserulesRelease#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#create FirebaserulesRelease#create}.
 
 ---
 
@@ -1080,7 +1080,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#delete FirebaserulesRelease#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#delete FirebaserulesRelease#delete}.
 
 ---
 
@@ -1092,7 +1092,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firebaserules_release#update FirebaserulesRelease#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firebaserules_release#update FirebaserulesRelease#update}.
 
 ---
 

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface KmsKeyRingImportJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#id KmsKeyRingImportJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#id KmsKeyRingImportJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,33 +17,33 @@ export interface KmsKeyRingImportJobConfig extends cdktf.TerraformMetaArguments 
   /**
   * It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#import_job_id KmsKeyRingImportJob#import_job_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#import_job_id KmsKeyRingImportJob#import_job_id}
   */
   readonly importJobId: string;
   /**
   * The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#import_method KmsKeyRingImportJob#import_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#import_method KmsKeyRingImportJob#import_method}
   */
   readonly importMethod: string;
   /**
   * The KeyRing that this import job belongs to.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#key_ring KmsKeyRingImportJob#key_ring}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#key_ring KmsKeyRingImportJob#key_ring}
   */
   readonly keyRing: string;
   /**
   * The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#protection_level KmsKeyRingImportJob#protection_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#protection_level KmsKeyRingImportJob#protection_level}
   */
   readonly protectionLevel: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#timeouts KmsKeyRingImportJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#timeouts KmsKeyRingImportJob#timeouts}
   */
   readonly timeouts?: KmsKeyRingImportJobTimeouts;
 }
@@ -182,16 +182,16 @@ export class KmsKeyRingImportJobPublicKeyList extends cdktf.ComplexList {
 }
 export interface KmsKeyRingImportJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#create KmsKeyRingImportJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#create KmsKeyRingImportJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}
   */
   readonly delete?: string;
 }
 
-export function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImportJobTimeoutsOutputReference | KmsKeyRingImportJobTimeouts | cdktf.IResolvable): any {
+export function kmsKeyRingImportJobTimeoutsToTerraform(struct?: KmsKeyRingImportJobTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -211,7 +211,7 @@ export class KmsKeyRingImportJobTimeoutsOutputReference extends cdktf.ComplexObj
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): KmsKeyRingImportJobTimeouts | cdktf.IResolvable | undefined {
@@ -284,7 +284,7 @@ export class KmsKeyRingImportJobTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job google_kms_key_ring_import_job}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job google_kms_key_ring_import_job}
 */
 export class KmsKeyRingImportJob extends cdktf.TerraformResource {
 
@@ -298,7 +298,7 @@ export class KmsKeyRingImportJob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/kms_key_ring_import_job google_kms_key_ring_import_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/kms_key_ring_import_job google_kms_key_ring_import_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

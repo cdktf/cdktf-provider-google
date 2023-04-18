@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface ComputeNetworkFirewallPolicyConfig extends cdktf.TerraformMetaA
   /**
   * An optional description of this resource. Provide this property when you create the resource.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#description ComputeNetworkFirewallPolicy#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#description ComputeNetworkFirewallPolicy#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#id ComputeNetworkFirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#id ComputeNetworkFirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,38 +23,38 @@ export interface ComputeNetworkFirewallPolicyConfig extends cdktf.TerraformMetaA
   /**
   * User-provided name of the Network firewall policy. The name should be unique in the project in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#name ComputeNetworkFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#name ComputeNetworkFirewallPolicy#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#project ComputeNetworkFirewallPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#project ComputeNetworkFirewallPolicy#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#timeouts ComputeNetworkFirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#timeouts ComputeNetworkFirewallPolicy#timeouts}
   */
   readonly timeouts?: ComputeNetworkFirewallPolicyTimeouts;
 }
 export interface ComputeNetworkFirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#create ComputeNetworkFirewallPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#create ComputeNetworkFirewallPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#delete ComputeNetworkFirewallPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#delete ComputeNetworkFirewallPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy#update ComputeNetworkFirewallPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy#update ComputeNetworkFirewallPolicy#update}
   */
   readonly update?: string;
 }
 
-export function computeNetworkFirewallPolicyTimeoutsToTerraform(struct?: ComputeNetworkFirewallPolicyTimeoutsOutputReference | ComputeNetworkFirewallPolicyTimeouts | cdktf.IResolvable): any {
+export function computeNetworkFirewallPolicyTimeoutsToTerraform(struct?: ComputeNetworkFirewallPolicyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -75,7 +75,7 @@ export class ComputeNetworkFirewallPolicyTimeoutsOutputReference extends cdktf.C
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): ComputeNetworkFirewallPolicyTimeouts | cdktf.IResolvable | undefined {
@@ -170,7 +170,7 @@ export class ComputeNetworkFirewallPolicyTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy google_compute_network_firewall_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy google_compute_network_firewall_policy}
 */
 export class ComputeNetworkFirewallPolicy extends cdktf.TerraformResource {
 
@@ -184,7 +184,7 @@ export class ComputeNetworkFirewallPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/compute_network_firewall_policy google_compute_network_firewall_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_network_firewall_policy google_compute_network_firewall_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

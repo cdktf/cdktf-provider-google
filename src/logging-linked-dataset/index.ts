@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_linked_dataset
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface LoggingLinkedDatasetConfig extends cdktf.TerraformMetaArguments
   /**
   * The bucket to which the linked dataset is attached.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#bucket LoggingLinkedDataset#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#bucket LoggingLinkedDataset#bucket}
   */
   readonly bucket: string;
   /**
   * Describes this link. The maximum length of the description is 8000 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#description LoggingLinkedDataset#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#description LoggingLinkedDataset#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#id LoggingLinkedDataset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#id LoggingLinkedDataset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,31 +29,31 @@ export interface LoggingLinkedDatasetConfig extends cdktf.TerraformMetaArguments
   /**
   * The id of the linked dataset.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#link_id LoggingLinkedDataset#link_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#link_id LoggingLinkedDataset#link_id}
   */
   readonly linkId: string;
   /**
   * The location of the linked dataset.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#location LoggingLinkedDataset#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#location LoggingLinkedDataset#location}
   */
   readonly location?: string;
   /**
   * The parent of the linked dataset.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#parent LoggingLinkedDataset#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#parent LoggingLinkedDataset#parent}
   */
   readonly parent?: string;
   /**
   * bigquery_dataset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#bigquery_dataset LoggingLinkedDataset#bigquery_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#bigquery_dataset LoggingLinkedDataset#bigquery_dataset}
   */
   readonly bigqueryDataset?: LoggingLinkedDatasetBigqueryDataset[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#timeouts LoggingLinkedDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#timeouts LoggingLinkedDataset#timeouts}
   */
   readonly timeouts?: LoggingLinkedDatasetTimeouts;
 }
@@ -134,16 +134,16 @@ export class LoggingLinkedDatasetBigqueryDatasetList extends cdktf.ComplexList {
 }
 export interface LoggingLinkedDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#create LoggingLinkedDataset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#create LoggingLinkedDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset#delete LoggingLinkedDataset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset#delete LoggingLinkedDataset#delete}
   */
   readonly delete?: string;
 }
 
-export function loggingLinkedDatasetTimeoutsToTerraform(struct?: LoggingLinkedDatasetTimeoutsOutputReference | LoggingLinkedDatasetTimeouts | cdktf.IResolvable): any {
+export function loggingLinkedDatasetTimeoutsToTerraform(struct?: LoggingLinkedDatasetTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -163,7 +163,7 @@ export class LoggingLinkedDatasetTimeoutsOutputReference extends cdktf.ComplexOb
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): LoggingLinkedDatasetTimeouts | cdktf.IResolvable | undefined {
@@ -236,7 +236,7 @@ export class LoggingLinkedDatasetTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset google_logging_linked_dataset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset google_logging_linked_dataset}
 */
 export class LoggingLinkedDataset extends cdktf.TerraformResource {
 
@@ -250,7 +250,7 @@ export class LoggingLinkedDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_linked_dataset google_logging_linked_dataset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_linked_dataset google_logging_linked_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

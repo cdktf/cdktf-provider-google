@@ -1,6 +1,6 @@
 # `google_notebooks_runtime_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_policy`](https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy).
+Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy).
 
 # `notebooksRuntimeIamPolicy` Submodule <a name="`notebooksRuntimeIamPolicy` Submodule" id="@cdktf/provider-google.notebooksRuntimeIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_notebooks_runtime_iam_policy
 
 ### NotebooksRuntimeIamPolicy <a name="NotebooksRuntimeIamPolicy" id="@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy google_notebooks_runtime_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy google_notebooks_runtime_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.Initializer"></a>
 
@@ -360,7 +360,7 @@ notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -465,10 +465,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicy.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -667,17 +667,17 @@ const notebooksRuntimeIamPolicyConfig: notebooksRuntimeIamPolicy.NotebooksRuntim
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#policy_data NotebooksRuntimeIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.runtimeName">runtimeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#runtime_name NotebooksRuntimeIamPolicy#runtime_name}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#id NotebooksRuntimeIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#location NotebooksRuntimeIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#project NotebooksRuntimeIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#policy_data NotebooksRuntimeIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.runtimeName">runtimeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#runtime_name NotebooksRuntimeIamPolicy#runtime_name}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#id NotebooksRuntimeIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#location NotebooksRuntimeIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#project NotebooksRuntimeIamPolicy#project}. |
 
 ---
 
@@ -694,10 +694,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.notebooksRuntimeIamPolicy.NotebooksRuntimeIamPolicyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -759,7 +759,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#policy_data NotebooksRuntimeIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#policy_data NotebooksRuntimeIamPolicy#policy_data}.
 
 ---
 
@@ -771,7 +771,7 @@ public readonly runtimeName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#runtime_name NotebooksRuntimeIamPolicy#runtime_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#runtime_name NotebooksRuntimeIamPolicy#runtime_name}.
 
 ---
 
@@ -783,7 +783,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#id NotebooksRuntimeIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#id NotebooksRuntimeIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -798,7 +798,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#location NotebooksRuntimeIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#location NotebooksRuntimeIamPolicy#location}.
 
 ---
 
@@ -810,7 +810,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/notebooks_runtime_iam_policy#project NotebooksRuntimeIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/notebooks_runtime_iam_policy#project NotebooksRuntimeIamPolicy#project}.
 
 ---
 

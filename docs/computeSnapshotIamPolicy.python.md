@@ -1,6 +1,6 @@
 # `google_compute_snapshot_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`](https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy).
+Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy).
 
 # `computeSnapshotIamPolicy` Submodule <a name="`computeSnapshotIamPolicy` Submodule" id="@cdktf/provider-google.computeSnapshotIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_policy`
 
 ### ComputeSnapshotIamPolicy <a name="ComputeSnapshotIamPolicy" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer"></a>
 
@@ -19,7 +19,7 @@ computeSnapshotIamPolicy.ComputeSnapshotIamPolicy(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -37,16 +37,16 @@ computeSnapshotIamPolicy.ComputeSnapshotIamPolicy(
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
 
 ---
 
@@ -76,7 +76,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
 
 ---
 
@@ -479,7 +479,7 @@ computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -582,10 +582,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicy.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -758,7 +758,7 @@ from cdktf_cdktf_provider_google import compute_snapshot_iam_policy
 
 computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -776,16 +776,16 @@ computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}. |
 
 ---
 
@@ -802,10 +802,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeSnapshotIamPolicy.ComputeSnapshotIamPolicyConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -867,7 +867,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#name ComputeSnapshotIamPolicy#name}.
 
 ---
 
@@ -879,7 +879,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#policy_data ComputeSnapshotIamPolicy#policy_data}.
 
 ---
 
@@ -891,7 +891,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#id ComputeSnapshotIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -906,7 +906,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_snapshot_iam_policy#project ComputeSnapshotIamPolicy#project}.
 
 ---
 

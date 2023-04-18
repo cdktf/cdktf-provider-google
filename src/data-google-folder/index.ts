@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/d/folder
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleFolderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder#folder DataGoogleFolder#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder#folder DataGoogleFolder#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder#id DataGoogleFolder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder#id DataGoogleFolder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/folder#lookup_organization DataGoogleFolder#lookup_organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder#lookup_organization DataGoogleFolder#lookup_organization}
   */
   readonly lookupOrganization?: boolean | cdktf.IResolvable;
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/d/folder google_folder}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder google_folder}
 */
 export class DataGoogleFolder extends cdktf.TerraformDataSource {
 
@@ -39,7 +39,7 @@ export class DataGoogleFolder extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/d/folder google_folder} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/folder google_folder} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

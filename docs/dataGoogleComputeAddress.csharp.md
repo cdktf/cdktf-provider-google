@@ -1,6 +1,6 @@
 # `data_google_compute_address`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_address`](https://www.terraform.io/docs/providers/google/d/compute_address).
+Refer to the Terraform Registory for docs: [`data_google_compute_address`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address).
 
 # `dataGoogleComputeAddress` Submodule <a name="`dataGoogleComputeAddress` Submodule" id="@cdktf/provider-google.dataGoogleComputeAddress"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_address`](https
 
 ### DataGoogleComputeAddress <a name="DataGoogleComputeAddress" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/compute_address google_compute_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address google_compute_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.Initializer"></a>
 
@@ -359,7 +359,7 @@ DataGoogleComputeAddress.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -460,10 +460,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -716,7 +716,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleComputeAddressConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -734,16 +734,16 @@ new DataGoogleComputeAddressConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#name DataGoogleComputeAddress#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#id DataGoogleComputeAddress#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#project DataGoogleComputeAddress#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#region DataGoogleComputeAddress#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}. |
 
 ---
 
@@ -760,10 +760,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -825,7 +825,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#name DataGoogleComputeAddress#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}.
 
 ---
 
@@ -837,7 +837,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#id DataGoogleComputeAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -852,7 +852,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#project DataGoogleComputeAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}.
 
 ---
 
@@ -864,7 +864,7 @@ public string Region { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/compute_address#region DataGoogleComputeAddress#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}.
 
 ---
 

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface AppEngineApplicationUrlDispatchRulesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#id AppEngineApplicationUrlDispatchRules#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#id AppEngineApplicationUrlDispatchRules#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#project AppEngineApplicationUrlDispatchRules#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#project AppEngineApplicationUrlDispatchRules#project}
   */
   readonly project?: string;
   /**
   * dispatch_rules block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#dispatch_rules AppEngineApplicationUrlDispatchRules#dispatch_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#dispatch_rules AppEngineApplicationUrlDispatchRules#dispatch_rules}
   */
   readonly dispatchRules: AppEngineApplicationUrlDispatchRulesDispatchRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#timeouts AppEngineApplicationUrlDispatchRules#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#timeouts AppEngineApplicationUrlDispatchRules#timeouts}
   */
   readonly timeouts?: AppEngineApplicationUrlDispatchRulesTimeouts;
 }
@@ -36,21 +36,21 @@ export interface AppEngineApplicationUrlDispatchRulesDispatchRules {
   * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
 Defaults to matching all domains: "*".
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#domain AppEngineApplicationUrlDispatchRules#domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#domain AppEngineApplicationUrlDispatchRules#domain}
   */
   readonly domain?: string;
   /**
   * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
 The sum of the lengths of the domain and path may not exceed 100 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#path AppEngineApplicationUrlDispatchRules#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#path AppEngineApplicationUrlDispatchRules#path}
   */
   readonly path: string;
   /**
   * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.
 The sum of the lengths of the domain and path may not exceed 100 characters.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#service AppEngineApplicationUrlDispatchRules#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#service AppEngineApplicationUrlDispatchRules#service}
   */
   readonly service: string;
 }
@@ -187,20 +187,20 @@ export class AppEngineApplicationUrlDispatchRulesDispatchRulesList extends cdktf
 }
 export interface AppEngineApplicationUrlDispatchRulesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#create AppEngineApplicationUrlDispatchRules#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#create AppEngineApplicationUrlDispatchRules#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#delete AppEngineApplicationUrlDispatchRules#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#delete AppEngineApplicationUrlDispatchRules#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules#update AppEngineApplicationUrlDispatchRules#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules#update AppEngineApplicationUrlDispatchRules#update}
   */
   readonly update?: string;
 }
 
-export function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference | AppEngineApplicationUrlDispatchRulesTimeouts | cdktf.IResolvable): any {
+export function appEngineApplicationUrlDispatchRulesTimeoutsToTerraform(struct?: AppEngineApplicationUrlDispatchRulesTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -221,7 +221,7 @@ export class AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference extends
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): AppEngineApplicationUrlDispatchRulesTimeouts | cdktf.IResolvable | undefined {
@@ -316,7 +316,7 @@ export class AppEngineApplicationUrlDispatchRulesTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules google_app_engine_application_url_dispatch_rules}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules google_app_engine_application_url_dispatch_rules}
 */
 export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResource {
 
@@ -330,7 +330,7 @@ export class AppEngineApplicationUrlDispatchRules extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_application_url_dispatch_rules google_app_engine_application_url_dispatch_rules} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_application_url_dispatch_rules google_app_engine_application_url_dispatch_rules} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

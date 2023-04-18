@@ -1,6 +1,6 @@
 # `data_google_iap_client`
 
-Refer to the Terraform Registory for docs: [`data_google_iap_client`](https://www.terraform.io/docs/providers/google/d/iap_client).
+Refer to the Terraform Registory for docs: [`data_google_iap_client`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client).
 
 # `dataGoogleIapClient` Submodule <a name="`dataGoogleIapClient` Submodule" id="@cdktf/provider-google.dataGoogleIapClient"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_iap_client`](https://ww
 
 ### DataGoogleIapClient <a name="DataGoogleIapClient" id="@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/iap_client google_iap_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client google_iap_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.Initializer"></a>
 
@@ -345,7 +345,7 @@ dataGoogleIapClient.DataGoogleIapClient.isTerraformDataSource(x: any)
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -436,10 +436,10 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClient.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -598,7 +598,7 @@ const dataGoogleIapClientConfig: dataGoogleIapClient.DataGoogleIapClientConfig =
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -606,7 +606,7 @@ const dataGoogleIapClientConfig: dataGoogleIapClient.DataGoogleIapClientConfig =
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.brand">brand</a></code> | <code>string</code> | Identifier of the brand to which this client is attached to. The format is 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'. |
 | <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.clientId">clientId</a></code> | <code>string</code> | Output only. Unique identifier of the OAuth client. |
-| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#id DataGoogleIapClient#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client#id DataGoogleIapClient#id}. |
 
 ---
 
@@ -623,10 +623,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleIapClient.DataGoogleIapClientConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -690,7 +690,7 @@ public readonly brand: string;
 
 Identifier of the brand to which this client is attached to. The format is 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#brand DataGoogleIapClient#brand}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client#brand DataGoogleIapClient#brand}
 
 ---
 
@@ -704,7 +704,7 @@ public readonly clientId: string;
 
 Output only. Unique identifier of the OAuth client.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#client_id DataGoogleIapClient#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client#client_id DataGoogleIapClient#client_id}
 
 ---
 
@@ -716,7 +716,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/iap_client#id DataGoogleIapClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/iap_client#id DataGoogleIapClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

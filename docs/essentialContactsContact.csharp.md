@@ -1,6 +1,6 @@
 # `google_essential_contacts_contact`
 
-Refer to the Terraform Registory for docs: [`google_essential_contacts_contact`](https://www.terraform.io/docs/providers/google/r/essential_contacts_contact).
+Refer to the Terraform Registory for docs: [`google_essential_contacts_contact`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact).
 
 # `essentialContactsContact` Submodule <a name="`essentialContactsContact` Submodule" id="@cdktf/provider-google.essentialContactsContact"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_essential_contacts_contact`]
 
 ### EssentialContactsContact <a name="EssentialContactsContact" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContact"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact google_essential_contacts_contact}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact google_essential_contacts_contact}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.Initializer"></a>
 
@@ -366,7 +366,7 @@ EssentialContactsContact.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -473,10 +473,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -689,7 +689,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new EssentialContactsContactConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -709,7 +709,7 @@ new EssentialContactsContactConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -719,7 +719,7 @@ new EssentialContactsContactConfig {
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.languageTag">LanguageTag</a></code> | <code>string</code> | The preferred language for notifications, as a ISO 639-1 language code. |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.notificationCategorySubscriptions">NotificationCategorySubscriptions</a></code> | <code>string[]</code> | The categories of notifications that the contact will receive communications for. |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.parent">Parent</a></code> | <code>string</code> | The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}. |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#id EssentialContactsContact#id}. |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#id EssentialContactsContact#id}. |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a></code> | timeouts block. |
 
 ---
@@ -737,10 +737,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContactConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -804,7 +804,7 @@ public string Email { get; set; }
 
 The email address to send notifications to. This does not need to be a Google account.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#email EssentialContactsContact#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#email EssentialContactsContact#email}
 
 ---
 
@@ -820,7 +820,7 @@ The preferred language for notifications, as a ISO 639-1 language code.
 
 See Supported languages for a list of supported languages.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
 
 ---
 
@@ -834,7 +834,7 @@ public string[] NotificationCategorySubscriptions { get; set; }
 
 The categories of notifications that the contact will receive communications for.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#notification_category_subscriptions EssentialContactsContact#notification_category_subscriptions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#notification_category_subscriptions EssentialContactsContact#notification_category_subscriptions}
 
 ---
 
@@ -848,7 +848,7 @@ public string Parent { get; set; }
 
 The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#parent EssentialContactsContact#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#parent EssentialContactsContact#parent}
 
 ---
 
@@ -860,7 +860,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#id EssentialContactsContact#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#id EssentialContactsContact#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -877,7 +877,7 @@ public EssentialContactsContactTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#timeouts EssentialContactsContact#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#timeouts EssentialContactsContact#timeouts}
 
 ---
 
@@ -899,9 +899,9 @@ new EssentialContactsContactTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#create EssentialContactsContact#create}. |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#delete EssentialContactsContact#delete}. |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#update EssentialContactsContact#update}. |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#create EssentialContactsContact#create}. |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#delete EssentialContactsContact#delete}. |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#update EssentialContactsContact#update}. |
 
 ---
 
@@ -913,7 +913,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#create EssentialContactsContact#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#create EssentialContactsContact#create}.
 
 ---
 
@@ -925,7 +925,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#delete EssentialContactsContact#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#delete EssentialContactsContact#delete}.
 
 ---
 
@@ -937,7 +937,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/essential_contacts_contact#update EssentialContactsContact#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/essential_contacts_contact#update EssentialContactsContact#update}.
 
 ---
 

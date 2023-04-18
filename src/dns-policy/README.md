@@ -1,3 +1,3 @@
 # `google_dns_policy`
 
-Refer to the Terraform Registory for docs: [`google_dns_policy`](https://www.terraform.io/docs/providers/google/r/dns_policy).
+Refer to the Terraform Registory for docs: [`google_dns_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_policy).

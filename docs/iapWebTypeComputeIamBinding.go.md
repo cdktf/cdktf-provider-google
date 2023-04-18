@@ -1,6 +1,6 @@
 # `google_iap_web_type_compute_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_type_compute_iam_binding`](https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding).
+Refer to the Terraform Registory for docs: [`google_iap_web_type_compute_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding).
 
 # `iapWebTypeComputeIamBinding` Submodule <a name="`iapWebTypeComputeIamBinding` Submodule" id="@cdktf/provider-google.iapWebTypeComputeIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_web_type_compute_iam_bin
 
 ### IapWebTypeComputeIamBinding <a name="IapWebTypeComputeIamBinding" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding google_iap_web_type_compute_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding google_iap_web_type_compute_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 iapwebtypecomputeiambinding.NewIapWebTypeComputeIamBinding(scope Construct, id *string, config IapWebTypeComputeIamBindingConfig) IapWebTypeComputeIamBinding
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 iapwebtypecomputeiambinding.IapWebTypeComputeIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 iapwebtypecomputeiambinding.IapWebTypeComputeIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapwebtypecomputeiambinding.IapWebTypeComputeIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 iapwebtypecomputeiambinding.IapWebTypeComputeIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -373,7 +373,7 @@ iapwebtypecomputeiambinding.IapWebTypeComputeIamBinding_IsTerraformResource(x in
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.terraformResourceType">TerraformResourceType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.dependsOn">DependsOn</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -478,10 +478,10 @@ func Connection() interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBinding.property.count"></a>
 
 ```go
-func Count() *f64
+func Count() interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 &iapwebtypecomputeiambinding.IapWebTypeComputeIamBindingCondition {
 	Expression: *string,
@@ -683,9 +683,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiam
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#expression IapWebTypeComputeIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#title IapWebTypeComputeIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#description IapWebTypeComputeIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#expression IapWebTypeComputeIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#title IapWebTypeComputeIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#description IapWebTypeComputeIamBinding#description}. |
 
 ---
 
@@ -697,7 +697,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#expression IapWebTypeComputeIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#expression IapWebTypeComputeIamBinding#expression}.
 
 ---
 
@@ -709,7 +709,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#title IapWebTypeComputeIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#title IapWebTypeComputeIamBinding#title}.
 
 ---
 
@@ -721,7 +721,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#description IapWebTypeComputeIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#description IapWebTypeComputeIamBinding#description}.
 
 ---
 
@@ -730,11 +730,11 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 &iapwebtypecomputeiambinding.IapWebTypeComputeIamBindingConfig {
 	Connection: interface{},
-	Count: *f64,
+	Count: interface{},
 	DependsOn: *[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable,
 	ForEach: github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator,
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
@@ -742,7 +742,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiam
 	Provisioners: *[]interface{},
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -753,17 +753,17 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiam
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.connection">Connection</a></code> | <code>interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.count">Count</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.count">Count</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.dependsOn">DependsOn</a></code> | <code>*[]github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformDependable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.forEach">ForEach</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#members IapWebTypeComputeIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#role IapWebTypeComputeIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#members IapWebTypeComputeIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#role IapWebTypeComputeIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingCondition">IapWebTypeComputeIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#id IapWebTypeComputeIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#project IapWebTypeComputeIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#id IapWebTypeComputeIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#project IapWebTypeComputeIamBinding#project}. |
 
 ---
 
@@ -780,10 +780,10 @@ Connection interface{}
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConfig.property.count"></a>
 
 ```go
-Count *f64
+Count interface{}
 ```
 
-- *Type:* *f64
+- *Type:* interface{}
 
 ---
 
@@ -845,7 +845,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#members IapWebTypeComputeIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#members IapWebTypeComputeIamBinding#members}.
 
 ---
 
@@ -857,7 +857,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#role IapWebTypeComputeIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#role IapWebTypeComputeIamBinding#role}.
 
 ---
 
@@ -871,7 +871,7 @@ Condition IapWebTypeComputeIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#condition IapWebTypeComputeIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#condition IapWebTypeComputeIamBinding#condition}
 
 ---
 
@@ -883,7 +883,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#id IapWebTypeComputeIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#id IapWebTypeComputeIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -898,7 +898,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_web_type_compute_iam_binding#project IapWebTypeComputeIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_web_type_compute_iam_binding#project IapWebTypeComputeIamBinding#project}.
 
 ---
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeComputeIamBinding.IapWebTypeComputeIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v6/iapwebtypecomputeiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypecomputeiambinding"
 
 iapwebtypecomputeiambinding.NewIapWebTypeComputeIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapWebTypeComputeIamBindingConditionOutputReference
 ```

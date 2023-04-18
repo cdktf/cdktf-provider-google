@@ -1,6 +1,6 @@
 # `google_dns_managed_zone_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_binding`](https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding).
+Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding).
 
 # `dnsManagedZoneIamBinding` Submodule <a name="`dnsManagedZoneIamBinding` Submodule" id="@cdktf/provider-google.dnsManagedZoneIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dns_managed_zone_iam_binding
 
 ### DnsManagedZoneIamBinding <a name="DnsManagedZoneIamBinding" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding google_dns_managed_zone_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding google_dns_managed_zone_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.Initializer"></a>
 
@@ -373,7 +373,7 @@ DnsManagedZoneIamBinding.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -480,10 +480,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBinding.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -705,9 +705,9 @@ new DnsManagedZoneIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#expression DnsManagedZoneIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#title DnsManagedZoneIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#description DnsManagedZoneIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#expression DnsManagedZoneIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#title DnsManagedZoneIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#description DnsManagedZoneIamBinding#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#expression DnsManagedZoneIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#expression DnsManagedZoneIamBinding#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#title DnsManagedZoneIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#title DnsManagedZoneIamBinding#title}.
 
 ---
 
@@ -743,7 +743,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#description DnsManagedZoneIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#description DnsManagedZoneIamBinding#description}.
 
 ---
 
@@ -756,7 +756,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DnsManagedZoneIamBindingConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -776,18 +776,18 @@ new DnsManagedZoneIamBindingConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.managedZone">ManagedZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#managed_zone DnsManagedZoneIamBinding#managed_zone}. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#members DnsManagedZoneIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#role DnsManagedZoneIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.managedZone">ManagedZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#managed_zone DnsManagedZoneIamBinding#managed_zone}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#members DnsManagedZoneIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#role DnsManagedZoneIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingCondition">DnsManagedZoneIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#id DnsManagedZoneIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#project DnsManagedZoneIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#id DnsManagedZoneIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#project DnsManagedZoneIamBinding#project}. |
 
 ---
 
@@ -804,10 +804,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dnsManagedZoneIamBinding.DnsManagedZoneIamBindingConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -869,7 +869,7 @@ public string ManagedZone { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#managed_zone DnsManagedZoneIamBinding#managed_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#managed_zone DnsManagedZoneIamBinding#managed_zone}.
 
 ---
 
@@ -881,7 +881,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#members DnsManagedZoneIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#members DnsManagedZoneIamBinding#members}.
 
 ---
 
@@ -893,7 +893,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#role DnsManagedZoneIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#role DnsManagedZoneIamBinding#role}.
 
 ---
 
@@ -907,7 +907,7 @@ public DnsManagedZoneIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#condition DnsManagedZoneIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#condition DnsManagedZoneIamBinding#condition}
 
 ---
 
@@ -919,7 +919,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#id DnsManagedZoneIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#id DnsManagedZoneIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dns_managed_zone_iam_binding#project DnsManagedZoneIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dns_managed_zone_iam_binding#project DnsManagedZoneIamBinding#project}.
 
 ---
 

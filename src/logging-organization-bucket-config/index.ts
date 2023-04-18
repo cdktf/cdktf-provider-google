@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface LoggingOrganizationBucketConfigConfig extends cdktf.TerraformMe
   /**
   * The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#bucket_id LoggingOrganizationBucketConfig#bucket_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#bucket_id LoggingOrganizationBucketConfig#bucket_id}
   */
   readonly bucketId: string;
   /**
   * An optional description for this bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#description LoggingOrganizationBucketConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#description LoggingOrganizationBucketConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#id LoggingOrganizationBucketConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#id LoggingOrganizationBucketConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,25 +29,25 @@ export interface LoggingOrganizationBucketConfigConfig extends cdktf.TerraformMe
   /**
   * The location of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#location LoggingOrganizationBucketConfig#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#location LoggingOrganizationBucketConfig#location}
   */
   readonly location: string;
   /**
   * The parent resource that contains the logging bucket.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#organization LoggingOrganizationBucketConfig#organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#organization LoggingOrganizationBucketConfig#organization}
   */
   readonly organization: string;
   /**
   * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#retention_days LoggingOrganizationBucketConfig#retention_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#retention_days LoggingOrganizationBucketConfig#retention_days}
   */
   readonly retentionDays?: number;
   /**
   * cmek_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#cmek_settings LoggingOrganizationBucketConfig#cmek_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#cmek_settings LoggingOrganizationBucketConfig#cmek_settings}
   */
   readonly cmekSettings?: LoggingOrganizationBucketConfigCmekSettings;
 }
@@ -60,7 +60,7 @@ To enable CMEK for the bucket, set this field to a valid kmsKeyName for which th
 The Cloud KMS key used by the bucket can be updated by changing the kmsKeyName to a new valid key name. Encryption operations that are in progress will be completed with the key that was in use when they started. Decryption operations will be completed using the key that was used at the time of encryption unless access to that key has been revoked.
 See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/routing/managed-encryption-storage) for more information.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config#kms_key_name LoggingOrganizationBucketConfig#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config#kms_key_name LoggingOrganizationBucketConfig#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -137,7 +137,7 @@ export class LoggingOrganizationBucketConfigCmekSettingsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config google_logging_organization_bucket_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config google_logging_organization_bucket_config}
 */
 export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
 
@@ -151,7 +151,7 @@ export class LoggingOrganizationBucketConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/logging_organization_bucket_config google_logging_organization_bucket_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_organization_bucket_config google_logging_organization_bucket_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

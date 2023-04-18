@@ -1,6 +1,6 @@
 # `google_project`
 
-Refer to the Terraform Registory for docs: [`google_project`](https://www.terraform.io/docs/providers/google/r/project).
+Refer to the Terraform Registory for docs: [`google_project`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project).
 
 # `project` Submodule <a name="`project` Submodule" id="@cdktf/provider-google.project"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_project`](https://www.terraf
 
 ### Project <a name="Project" id="@cdktf/provider-google.project.Project"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/project google_project}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project google_project}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.project.Project.Initializer"></a>
 
@@ -19,7 +19,7 @@ project.Project(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -43,7 +43,7 @@ project.Project(
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -54,7 +54,7 @@ project.Project(
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.autoCreateNetwork">auto_create_network</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the 'default' network automatically. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.billingAccount">billing_account</a></code> | <code>str</code> | The alphanumeric ID of the billing account this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.folderId">folder_id</a></code> | <code>str</code> | The numeric ID of the folder this project should be created under. |
-| <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#id Project#id}. |
+| <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#id Project#id}. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to the project. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.orgId">org_id</a></code> | <code>str</code> | The numeric ID of the organization this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.Project.Initializer.parameter.skipDelete">skip_delete</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, the Terraform resource can be deleted without deleting the Project via the Google API. |
@@ -88,7 +88,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.project.Project.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -128,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 The display name of the project.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#name Project#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#name Project#name}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The project ID. Changing this forces a new project to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#project_id Project#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#project_id Project#project_id}
 
 ---
 
@@ -150,7 +150,7 @@ Create the 'default' network automatically.
 
 Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#auto_create_network Project#auto_create_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#auto_create_network Project#auto_create_network}
 
 ---
 
@@ -162,7 +162,7 @@ The alphanumeric ID of the billing account this project belongs to.
 
 The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#billing_account Project#billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#billing_account Project#billing_account}
 
 ---
 
@@ -174,7 +174,7 @@ The numeric ID of the folder this project should be created under.
 
 Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#folder_id Project#folder_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#folder_id Project#folder_id}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#id Project#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#id Project#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -195,7 +195,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 A set of key/value label pairs to assign to the project.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#labels Project#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#labels Project#labels}
 
 ---
 
@@ -207,7 +207,7 @@ The numeric ID of the organization this project belongs to.
 
 Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#org_id Project#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#org_id Project#org_id}
 
 ---
 
@@ -217,7 +217,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 If true, the Terraform resource can be deleted without deleting the Project via the Google API.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#skip_delete Project#skip_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#skip_delete Project#skip_delete}
 
 ---
 
@@ -227,7 +227,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#timeouts Project#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#timeouts Project#timeouts}
 
 ---
 
@@ -487,7 +487,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#create Project#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#create Project#create}.
 
 ---
 
@@ -495,7 +495,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#delete Project#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#delete Project#delete}.
 
 ---
 
@@ -503,7 +503,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#read Project#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#read Project#read}.
 
 ---
 
@@ -511,7 +511,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#update Project#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#update Project#update}.
 
 ---
 
@@ -651,7 +651,7 @@ project.Project.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.project.Project.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.Project.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.Project.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -766,10 +766,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.project.Project.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1062,7 +1062,7 @@ from cdktf_cdktf_provider_google import project
 
 project.ProjectConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1086,7 +1086,7 @@ project.ProjectConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1097,7 +1097,7 @@ project.ProjectConfig(
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.autoCreateNetwork">auto_create_network</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Create the 'default' network automatically. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.billingAccount">billing_account</a></code> | <code>str</code> | The alphanumeric ID of the billing account this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.folderId">folder_id</a></code> | <code>str</code> | The numeric ID of the folder this project should be created under. |
-| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#id Project#id}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#id Project#id}. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | A set of key/value label pairs to assign to the project. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.orgId">org_id</a></code> | <code>str</code> | The numeric ID of the organization this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.skipDelete">skip_delete</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If true, the Terraform resource can be deleted without deleting the Project via the Google API. |
@@ -1118,10 +1118,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.project.ProjectConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1185,7 +1185,7 @@ name: str
 
 The display name of the project.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#name Project#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#name Project#name}
 
 ---
 
@@ -1199,7 +1199,7 @@ project_id: str
 
 The project ID. Changing this forces a new project to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#project_id Project#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#project_id Project#project_id}
 
 ---
 
@@ -1215,7 +1215,7 @@ Create the 'default' network automatically.
 
 Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#auto_create_network Project#auto_create_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#auto_create_network Project#auto_create_network}
 
 ---
 
@@ -1231,7 +1231,7 @@ The alphanumeric ID of the billing account this project belongs to.
 
 The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#billing_account Project#billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#billing_account Project#billing_account}
 
 ---
 
@@ -1247,7 +1247,7 @@ The numeric ID of the folder this project should be created under.
 
 Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#folder_id Project#folder_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#folder_id Project#folder_id}
 
 ---
 
@@ -1259,7 +1259,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#id Project#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#id Project#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1276,7 +1276,7 @@ labels: typing.Mapping[str]
 
 A set of key/value label pairs to assign to the project.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#labels Project#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#labels Project#labels}
 
 ---
 
@@ -1292,7 +1292,7 @@ The numeric ID of the organization this project belongs to.
 
 Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#org_id Project#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#org_id Project#org_id}
 
 ---
 
@@ -1306,7 +1306,7 @@ skip_delete: typing.Union[bool, IResolvable]
 
 If true, the Terraform resource can be deleted without deleting the Project via the Google API.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#skip_delete Project#skip_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#skip_delete Project#skip_delete}
 
 ---
 
@@ -1320,7 +1320,7 @@ timeouts: ProjectTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#timeouts Project#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#timeouts Project#timeouts}
 
 ---
 
@@ -1343,10 +1343,10 @@ project.ProjectTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#create Project#create}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#delete Project#delete}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#read Project#read}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#update Project#update}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#create Project#create}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#delete Project#delete}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#read Project#read}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#update Project#update}. |
 
 ---
 
@@ -1358,7 +1358,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#create Project#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#create Project#create}.
 
 ---
 
@@ -1370,7 +1370,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#delete Project#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#delete Project#delete}.
 
 ---
 
@@ -1382,7 +1382,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#read Project#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#read Project#read}.
 
 ---
 
@@ -1394,7 +1394,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project#update Project#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project#update Project#update}.
 
 ---
 

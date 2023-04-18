@@ -1,6 +1,6 @@
 # `google_compute_target_pool`
 
-Refer to the Terraform Registory for docs: [`google_compute_target_pool`](https://www.terraform.io/docs/providers/google/r/compute_target_pool).
+Refer to the Terraform Registory for docs: [`google_compute_target_pool`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool).
 
 # `computeTargetPool` Submodule <a name="`computeTargetPool` Submodule" id="@cdktf/provider-google.computeTargetPool"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_target_pool`](https:
 
 ### ComputeTargetPool <a name="ComputeTargetPool" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool google_compute_target_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool google_compute_target_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer"></a>
 
@@ -19,7 +19,7 @@ computeTargetPool.ComputeTargetPool(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -44,7 +44,7 @@ computeTargetPool.ComputeTargetPool(
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -55,7 +55,7 @@ computeTargetPool.ComputeTargetPool(
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.description">description</a></code> | <code>str</code> | Textual description field. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.failoverRatio">failover_ratio</a></code> | <code>typing.Union[int, float]</code> | Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set). |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.healthChecks">health_checks</a></code> | <code>typing.List[str]</code> | List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.instances">instances</a></code> | <code>typing.List[str]</code> | List of instances in the pool. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.project">project</a></code> | <code>str</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.region">region</a></code> | <code>str</code> | Where the target pool resides. Defaults to project region. |
@@ -90,7 +90,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -130,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#name ComputeTargetPool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 URL to the backup target pool. Must also set failover_ratio.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Textual description field.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#description ComputeTargetPool#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
 
 ---
 
@@ -170,7 +170,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#health_checks ComputeTargetPool#health_checks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
 
 ---
 
@@ -178,7 +178,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -193,7 +193,7 @@ List of instances in the pool.
 
 They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#instances ComputeTargetPool#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
 
 ---
 
@@ -205,7 +205,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#project ComputeTargetPool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
 
 ---
 
@@ -215,7 +215,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Where the target pool resides. Defaults to project region.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#region ComputeTargetPool#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
 
 ---
 
@@ -227,7 +227,7 @@ How to distribute load.
 
 Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
 
 ---
 
@@ -237,7 +237,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#timeouts ComputeTargetPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
 
 ---
 
@@ -498,7 +498,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#create ComputeTargetPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}.
 
 ---
 
@@ -506,7 +506,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#delete ComputeTargetPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}.
 
 ---
 
@@ -514,7 +514,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#update ComputeTargetPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}.
 
 ---
 
@@ -666,7 +666,7 @@ computeTargetPool.ComputeTargetPool.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -783,10 +783,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPool.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1099,7 +1099,7 @@ from cdktf_cdktf_provider_google import compute_target_pool
 
 computeTargetPool.ComputeTargetPoolConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -1124,7 +1124,7 @@ computeTargetPool.ComputeTargetPoolConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1135,7 +1135,7 @@ computeTargetPool.ComputeTargetPoolConfig(
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.description">description</a></code> | <code>str</code> | Textual description field. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.failoverRatio">failover_ratio</a></code> | <code>typing.Union[int, float]</code> | Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set). |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.healthChecks">health_checks</a></code> | <code>typing.List[str]</code> | List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.instances">instances</a></code> | <code>typing.List[str]</code> | List of instances in the pool. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.project">project</a></code> | <code>str</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.region">region</a></code> | <code>str</code> | Where the target pool resides. Defaults to project region. |
@@ -1157,10 +1157,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.computeTargetPool.ComputeTargetPoolConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1224,7 +1224,7 @@ name: str
 
 A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#name ComputeTargetPool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
 
 ---
 
@@ -1238,7 +1238,7 @@ backup_pool: str
 
 URL to the backup target pool. Must also set failover_ratio.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
 
 ---
 
@@ -1252,7 +1252,7 @@ description: str
 
 Textual description field.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#description ComputeTargetPool#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
 
 ---
 
@@ -1266,7 +1266,7 @@ failover_ratio: typing.Union[int, float]
 
 Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
 
 ---
 
@@ -1280,7 +1280,7 @@ health_checks: typing.List[str]
 
 List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#health_checks ComputeTargetPool#health_checks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
 
 ---
 
@@ -1292,7 +1292,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#id ComputeTargetPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#id ComputeTargetPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1311,7 +1311,7 @@ List of instances in the pool.
 
 They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#instances ComputeTargetPool#instances}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
 
 ---
 
@@ -1327,7 +1327,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#project ComputeTargetPool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
 
 ---
 
@@ -1341,7 +1341,7 @@ region: str
 
 Where the target pool resides. Defaults to project region.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#region ComputeTargetPool#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
 
 ---
 
@@ -1357,7 +1357,7 @@ How to distribute load.
 
 Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
 
 ---
 
@@ -1371,7 +1371,7 @@ timeouts: ComputeTargetPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#timeouts ComputeTargetPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
 
 ---
 
@@ -1393,9 +1393,9 @@ computeTargetPool.ComputeTargetPoolTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#create ComputeTargetPool#create}. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#delete ComputeTargetPool#delete}. |
-| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#update ComputeTargetPool#update}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}. |
+| <code><a href="#@cdktf/provider-google.computeTargetPool.ComputeTargetPoolTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}. |
 
 ---
 
@@ -1407,7 +1407,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#create ComputeTargetPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#create ComputeTargetPool#create}.
 
 ---
 
@@ -1419,7 +1419,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#delete ComputeTargetPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#delete ComputeTargetPool#delete}.
 
 ---
 
@@ -1431,7 +1431,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/compute_target_pool#update ComputeTargetPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/compute_target_pool#update ComputeTargetPool#update}.
 
 ---
 

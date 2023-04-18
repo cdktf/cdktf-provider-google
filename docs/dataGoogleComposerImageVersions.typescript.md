@@ -1,6 +1,6 @@
 # `data_google_composer_image_versions`
 
-Refer to the Terraform Registory for docs: [`data_google_composer_image_versions`](https://www.terraform.io/docs/providers/google/d/composer_image_versions).
+Refer to the Terraform Registory for docs: [`data_google_composer_image_versions`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions).
 
 # `dataGoogleComposerImageVersions` Submodule <a name="`dataGoogleComposerImageVersions` Submodule" id="@cdktf/provider-google.dataGoogleComposerImageVersions"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_composer_image_versions
 
 ### DataGoogleComposerImageVersions <a name="DataGoogleComposerImageVersions" id="@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions google_composer_image_versions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions google_composer_image_versions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.Initializer"></a>
 
@@ -359,7 +359,7 @@ dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.isTerraformDataS
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -449,10 +449,10 @@ public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersions.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -601,15 +601,15 @@ const dataGoogleComposerImageVersionsConfig: dataGoogleComposerImageVersions.Dat
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#id DataGoogleComposerImageVersions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#project DataGoogleComposerImageVersions#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#region DataGoogleComposerImageVersions#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#id DataGoogleComposerImageVersions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#project DataGoogleComposerImageVersions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#region DataGoogleComposerImageVersions#region}. |
 
 ---
 
@@ -626,10 +626,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleComposerImageVersions.DataGoogleComposerImageVersionsConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -691,7 +691,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#id DataGoogleComposerImageVersions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#id DataGoogleComposerImageVersions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -706,7 +706,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#project DataGoogleComposerImageVersions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#project DataGoogleComposerImageVersions#project}.
 
 ---
 
@@ -718,7 +718,7 @@ public readonly region: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/composer_image_versions#region DataGoogleComposerImageVersions#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/composer_image_versions#region DataGoogleComposerImageVersions#region}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `data_google_sql_backup_run`
 
-Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://www.terraform.io/docs/providers/google/d/sql_backup_run).
+Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run).
 
 # `dataGoogleSqlBackupRun` Submodule <a name="`dataGoogleSqlBackupRun` Submodule" id="@cdktf/provider-google.dataGoogleSqlBackupRun"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https:
 
 ### DataGoogleSqlBackupRun <a name="DataGoogleSqlBackupRun" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run google_sql_backup_run}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run google_sql_backup_run}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.Initializer"></a>
 
@@ -366,7 +366,7 @@ DataGoogleSqlBackupRun.IsTerraformDataSource(object X);
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -462,10 +462,10 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -668,7 +668,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataGoogleSqlBackupRunConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -687,7 +687,7 @@ new DataGoogleSqlBackupRunConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -695,7 +695,7 @@ new DataGoogleSqlBackupRunConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.instance">Instance</a></code> | <code>string</code> | Name of the database instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.backupId">BackupId</a></code> | <code>double</code> | The identifier for this backup run. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.mostRecent">MostRecent</a></code> | <code>object</code> | Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.project">Project</a></code> | <code>string</code> | Project ID of the project that contains the instance. |
 
@@ -714,10 +714,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -781,7 +781,7 @@ public string Instance { get; set; }
 
 Name of the database instance.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
 
 ---
 
@@ -797,7 +797,7 @@ The identifier for this backup run.
 
 Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
 
 ---
 
@@ -809,7 +809,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#id DataGoogleSqlBackupRun#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -826,7 +826,7 @@ public object MostRecent { get; set; }
 
 Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
 
 ---
 
@@ -840,7 +840,7 @@ public string Project { get; set; }
 
 Project ID of the project that contains the instance.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/sql_backup_run#project DataGoogleSqlBackupRun#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
 
 ---
 

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface AppEngineFirewallRuleConfig extends cdktf.TerraformMetaArgument
   /**
   * The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#action AppEngineFirewallRule#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#action AppEngineFirewallRule#action}
   */
   readonly action: string;
   /**
   * An optional string description of this rule.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#description AppEngineFirewallRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#description AppEngineFirewallRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#id AppEngineFirewallRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#id AppEngineFirewallRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,42 +34,42 @@ A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#project AppEngineFirewallRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#project AppEngineFirewallRule#project}
   */
   readonly project?: string;
   /**
   * IP address or range, defined using CIDR notation, of requests that this rule applies to.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#source_range AppEngineFirewallRule#source_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#source_range AppEngineFirewallRule#source_range}
   */
   readonly sourceRange: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#timeouts AppEngineFirewallRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#timeouts AppEngineFirewallRule#timeouts}
   */
   readonly timeouts?: AppEngineFirewallRuleTimeouts;
 }
 export interface AppEngineFirewallRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#create AppEngineFirewallRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#create AppEngineFirewallRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule#update AppEngineFirewallRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule#update AppEngineFirewallRule#update}
   */
   readonly update?: string;
 }
 
-export function appEngineFirewallRuleTimeoutsToTerraform(struct?: AppEngineFirewallRuleTimeoutsOutputReference | AppEngineFirewallRuleTimeouts | cdktf.IResolvable): any {
+export function appEngineFirewallRuleTimeoutsToTerraform(struct?: AppEngineFirewallRuleTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,7 +90,7 @@ export class AppEngineFirewallRuleTimeoutsOutputReference extends cdktf.ComplexO
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): AppEngineFirewallRuleTimeouts | cdktf.IResolvable | undefined {
@@ -185,7 +185,7 @@ export class AppEngineFirewallRuleTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule google_app_engine_firewall_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule google_app_engine_firewall_rule}
 */
 export class AppEngineFirewallRule extends cdktf.TerraformResource {
 
@@ -199,7 +199,7 @@ export class AppEngineFirewallRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/app_engine_firewall_rule google_app_engine_firewall_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/app_engine_firewall_rule google_app_engine_firewall_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

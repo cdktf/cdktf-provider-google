@@ -1,6 +1,6 @@
 # `data_google_container_attached_install_manifest`
 
-Refer to the Terraform Registory for docs: [`data_google_container_attached_install_manifest`](https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest).
+Refer to the Terraform Registory for docs: [`data_google_container_attached_install_manifest`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest).
 
 # `dataGoogleContainerAttachedInstallManifest` Submodule <a name="`dataGoogleContainerAttachedInstallManifest` Submodule" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_container_attached_inst
 
 ### DataGoogleContainerAttachedInstallManifest <a name="DataGoogleContainerAttachedInstallManifest" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest google_container_attached_install_manifest}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest google_container_attached_install_manifest}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer"></a>
 
@@ -19,6 +19,7 @@ DataGoogleContainerAttachedInstallManifest.Builder.create(Construct scope, java.
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -39,17 +40,17 @@ DataGoogleContainerAttachedInstallManifest.Builder.create(Construct scope, java.
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.clusterId">clusterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.platformVersion">platformVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.clusterId">clusterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.platformVersion">platformVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}. |
 
 ---
 
@@ -79,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -117,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}.
 
 ---
 
@@ -125,7 +126,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}.
 
 ---
 
@@ -133,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}.
 
 ---
 
@@ -141,7 +142,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}.
 
 ---
 
@@ -149,7 +150,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -451,7 +452,7 @@ DataGoogleContainerAttachedInstallManifest.isTerraformDataSource(java.lang.Objec
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -545,10 +546,10 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifest.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -733,6 +734,7 @@ DataGoogleContainerAttachedInstallManifestConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -753,17 +755,17 @@ DataGoogleContainerAttachedInstallManifestConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.clusterId">clusterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.platformVersion">platformVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.clusterId">clusterId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.platformVersion">platformVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}. |
 
 ---
 
@@ -780,10 +782,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerAttachedInstallManifest.DataGoogleContainerAttachedInstallManifestConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -845,7 +847,7 @@ public java.lang.String getClusterId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#cluster_id DataGoogleContainerAttachedInstallManifest#cluster_id}.
 
 ---
 
@@ -857,7 +859,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#location DataGoogleContainerAttachedInstallManifest#location}.
 
 ---
 
@@ -869,7 +871,7 @@ public java.lang.String getPlatformVersion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#platform_version DataGoogleContainerAttachedInstallManifest#platform_version}.
 
 ---
 
@@ -881,7 +883,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#project DataGoogleContainerAttachedInstallManifest#project}.
 
 ---
 
@@ -893,7 +895,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_attached_install_manifest#id DataGoogleContainerAttachedInstallManifest#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

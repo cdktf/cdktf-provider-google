@@ -1,6 +1,6 @@
 # `google_iap_tunnel_instance_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_iap_tunnel_instance_iam_policy`](https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy).
+Refer to the Terraform Registory for docs: [`google_iap_tunnel_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy).
 
 # `iapTunnelInstanceIamPolicy` Submodule <a name="`iapTunnelInstanceIamPolicy` Submodule" id="@cdktf/provider-google.iapTunnelInstanceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_iap_tunnel_instance_iam_poli
 
 ### IapTunnelInstanceIamPolicy <a name="IapTunnelInstanceIamPolicy" id="@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy google_iap_tunnel_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy google_iap_tunnel_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.Initializer"></a>
 
@@ -360,7 +360,7 @@ iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.isTerraformResource(x: any
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -465,10 +465,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicy.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -667,17 +667,17 @@ const iapTunnelInstanceIamPolicyConfig: iapTunnelInstanceIamPolicy.IapTunnelInst
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.instance">instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#instance IapTunnelInstanceIamPolicy#instance}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#policy_data IapTunnelInstanceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#id IapTunnelInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#project IapTunnelInstanceIamPolicy#project}. |
-| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.zone">zone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#zone IapTunnelInstanceIamPolicy#zone}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.instance">instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#instance IapTunnelInstanceIamPolicy#instance}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.policyData">policyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#policy_data IapTunnelInstanceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#id IapTunnelInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#project IapTunnelInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.zone">zone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#zone IapTunnelInstanceIamPolicy#zone}. |
 
 ---
 
@@ -694,10 +694,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.iapTunnelInstanceIamPolicy.IapTunnelInstanceIamPolicyConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -759,7 +759,7 @@ public readonly instance: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#instance IapTunnelInstanceIamPolicy#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#instance IapTunnelInstanceIamPolicy#instance}.
 
 ---
 
@@ -771,7 +771,7 @@ public readonly policyData: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#policy_data IapTunnelInstanceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#policy_data IapTunnelInstanceIamPolicy#policy_data}.
 
 ---
 
@@ -783,7 +783,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#id IapTunnelInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#id IapTunnelInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -798,7 +798,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#project IapTunnelInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#project IapTunnelInstanceIamPolicy#project}.
 
 ---
 
@@ -810,7 +810,7 @@ public readonly zone: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/iap_tunnel_instance_iam_policy#zone IapTunnelInstanceIamPolicy#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/iap_tunnel_instance_iam_policy#zone IapTunnelInstanceIamPolicy#zone}.
 
 ---
 

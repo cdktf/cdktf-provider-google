@@ -1,6 +1,6 @@
 # `google_dataplex_zone_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_dataplex_zone_iam_binding`](https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding).
+Refer to the Terraform Registory for docs: [`google_dataplex_zone_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding).
 
 # `dataplexZoneIamBinding` Submodule <a name="`dataplexZoneIamBinding` Submodule" id="@cdktf/provider-google.dataplexZoneIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dataplex_zone_iam_binding`](
 
 ### DataplexZoneIamBinding <a name="DataplexZoneIamBinding" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding google_dataplex_zone_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding google_dataplex_zone_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.Initializer"></a>
 
@@ -380,7 +380,7 @@ DataplexZoneIamBinding.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -491,10 +491,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBinding.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -756,9 +756,9 @@ new DataplexZoneIamBindingCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}. |
 
 ---
 
@@ -770,7 +770,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#expression DataplexZoneIamBinding#expression}.
 
 ---
 
@@ -782,7 +782,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#title DataplexZoneIamBinding#title}.
 
 ---
 
@@ -794,7 +794,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#description DataplexZoneIamBinding#description}.
 
 ---
 
@@ -807,7 +807,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new DataplexZoneIamBindingConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -829,20 +829,20 @@ new DataplexZoneIamBindingConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.dataplexZone">DataplexZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lake">Lake</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.dataplexZone">DataplexZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.lake">Lake</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.members">Members</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingCondition">DataplexZoneIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
-| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}. |
+| <code><a href="#@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}. |
 
 ---
 
@@ -859,10 +859,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.dataplexZoneIamBinding.DataplexZoneIamBindingConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -924,7 +924,7 @@ public string DataplexZone { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#dataplex_zone DataplexZoneIamBinding#dataplex_zone}.
 
 ---
 
@@ -936,7 +936,7 @@ public string Lake { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#lake DataplexZoneIamBinding#lake}.
 
 ---
 
@@ -948,7 +948,7 @@ public string[] Members { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#members DataplexZoneIamBinding#members}.
 
 ---
 
@@ -960,7 +960,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#role DataplexZoneIamBinding#role}.
 
 ---
 
@@ -974,7 +974,7 @@ public DataplexZoneIamBindingCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
 
 ---
 
@@ -986,7 +986,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#id DataplexZoneIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1001,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#location DataplexZoneIamBinding#location}.
 
 ---
 
@@ -1013,7 +1013,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/dataplex_zone_iam_binding#project DataplexZoneIamBinding#project}.
 
 ---
 

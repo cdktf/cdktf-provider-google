@@ -1,6 +1,6 @@
 # `google_project_usage_export_bucket`
 
-Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`](https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket).
+Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket).
 
 # `projectUsageExportBucket` Submodule <a name="`projectUsageExportBucket` Submodule" id="@cdktf/provider-google.projectUsageExportBucket"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_project_usage_export_bucket`
 
 ### ProjectUsageExportBucket <a name="ProjectUsageExportBucket" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket google_project_usage_export_bucket}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket google_project_usage_export_bucket}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer"></a>
 
@@ -19,6 +19,7 @@ ProjectUsageExportBucket.Builder.create(Construct scope, java.lang.String id)
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -39,14 +40,14 @@ ProjectUsageExportBucket.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.bucketName">bucketName</a></code> | <code>java.lang.String</code> | The bucket to store reports in. |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.prefix">prefix</a></code> | <code>java.lang.String</code> | A prefix for the reports, for instance, the project name. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The project to set the export bucket on. If it is not provided, the provider project is used. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a></code> | timeouts block. |
@@ -79,7 +80,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -119,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 The bucket to store reports in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
 
 ---
 
@@ -127,7 +128,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -140,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 A prefix for the reports, for instance, the project name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
 
 ---
 
@@ -150,7 +151,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The project to set the export bucket on. If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#project ProjectUsageExportBucket#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#project ProjectUsageExportBucket#project}
 
 ---
 
@@ -160,7 +161,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
 
 ---
 
@@ -494,7 +495,7 @@ ProjectUsageExportBucket.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -598,10 +599,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -786,6 +787,7 @@ ProjectUsageExportBucketConfig.builder()
 //  .connection(SSHProvisionerConnection)
 //  .connection(WinrmProvisionerConnection)
 //  .count(java.lang.Number)
+//  .count(TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
@@ -806,14 +808,14 @@ ProjectUsageExportBucketConfig.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.count">count</a></code> | <code>java.lang.Number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.bucketName">bucketName</a></code> | <code>java.lang.String</code> | The bucket to store reports in. |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.prefix">prefix</a></code> | <code>java.lang.String</code> | A prefix for the reports, for instance, the project name. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.project">project</a></code> | <code>java.lang.String</code> | The project to set the export bucket on. If it is not provided, the provider project is used. |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a></code> | timeouts block. |
@@ -833,10 +835,10 @@ public java.lang.Object getConnection();
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketConfig.property.count"></a>
 
 ```java
-public java.lang.Number getCount();
+public java.lang.Object getCount();
 ```
 
-- *Type:* java.lang.Number
+- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -900,7 +902,7 @@ public java.lang.String getBucketName();
 
 The bucket to store reports in.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
 
 ---
 
@@ -912,7 +914,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#id ProjectUsageExportBucket#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -929,7 +931,7 @@ public java.lang.String getPrefix();
 
 A prefix for the reports, for instance, the project name.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
 
 ---
 
@@ -943,7 +945,7 @@ public java.lang.String getProject();
 
 The project to set the export bucket on. If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#project ProjectUsageExportBucket#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#project ProjectUsageExportBucket#project}
 
 ---
 
@@ -957,7 +959,7 @@ public ProjectUsageExportBucketTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
 
 ---
 
@@ -978,8 +980,8 @@ ProjectUsageExportBucketTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#create ProjectUsageExportBucket#create}. |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}. |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}. |
 
 ---
 
@@ -991,7 +993,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#create ProjectUsageExportBucket#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#create ProjectUsageExportBucket#create}.
 
 ---
 
@@ -1003,7 +1005,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/project_usage_export_bucket#delete ProjectUsageExportBucket#delete}.
 
 ---
 

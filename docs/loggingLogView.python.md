@@ -1,6 +1,6 @@
 # `google_logging_log_view`
 
-Refer to the Terraform Registory for docs: [`google_logging_log_view`](https://www.terraform.io/docs/providers/google/r/logging_log_view).
+Refer to the Terraform Registory for docs: [`google_logging_log_view`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view).
 
 # `loggingLogView` Submodule <a name="`loggingLogView` Submodule" id="@cdktf/provider-google.loggingLogView"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_logging_log_view`](https://w
 
 ### LoggingLogView <a name="LoggingLogView" id="@cdktf/provider-google.loggingLogView.LoggingLogView"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/logging_log_view google_logging_log_view}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view google_logging_log_view}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer"></a>
 
@@ -19,7 +19,7 @@ loggingLogView.LoggingLogView(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -41,7 +41,7 @@ loggingLogView.LoggingLogView(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -51,7 +51,7 @@ loggingLogView.LoggingLogView(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.description">description</a></code> | <code>str</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.filter">filter</a></code> | <code>str</code> | Filter that restricts which log entries in a bucket are visible in this view. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#id LoggingLogView#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.location">location</a></code> | <code>str</code> | The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.parent">parent</a></code> | <code>str</code> | The parent of the resource. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a></code> | timeouts block. |
@@ -84,7 +84,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingLogView.LoggingLogView.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The bucket of the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#bucket LoggingLogView#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#bucket LoggingLogView#bucket}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#name LoggingLogView#name}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 Describes this view.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#description LoggingLogView#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#description LoggingLogView#description}
 
 ---
 
@@ -156,7 +156,7 @@ Filter that restricts which log entries in a bucket are visible in this view.
 
 Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#filter LoggingLogView#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#filter LoggingLogView#filter}
 
 ---
 
@@ -164,7 +164,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#id LoggingLogView#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -177,7 +177,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#location LoggingLogView#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#location LoggingLogView#location}
 
 ---
 
@@ -187,7 +187,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 The parent of the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#parent LoggingLogView#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#parent LoggingLogView#parent}
 
 ---
 
@@ -197,7 +197,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#timeouts LoggingLogView#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#timeouts LoggingLogView#timeouts}
 
 ---
 
@@ -454,7 +454,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#create LoggingLogView#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#create LoggingLogView#create}.
 
 ---
 
@@ -462,7 +462,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#delete LoggingLogView#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#delete LoggingLogView#delete}.
 
 ---
 
@@ -470,7 +470,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#update LoggingLogView#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#update LoggingLogView#update}.
 
 ---
 
@@ -598,7 +598,7 @@ loggingLogView.LoggingLogView.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -710,10 +710,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingLogView.LoggingLogView.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -976,7 +976,7 @@ from cdktf_cdktf_provider_google import logging_log_view
 
 loggingLogView.LoggingLogViewConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -998,7 +998,7 @@ loggingLogView.LoggingLogViewConfig(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -1008,7 +1008,7 @@ loggingLogView.LoggingLogViewConfig(
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.name">name</a></code> | <code>str</code> | The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.description">description</a></code> | <code>str</code> | Describes this view. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.filter">filter</a></code> | <code>str</code> | Filter that restricts which log entries in a bucket are visible in this view. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#id LoggingLogView#id}. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.location">location</a></code> | <code>str</code> | The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.parent">parent</a></code> | <code>str</code> | The parent of the resource. |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a></code> | timeouts block. |
@@ -1028,10 +1028,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.loggingLogView.LoggingLogViewConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -1095,7 +1095,7 @@ bucket: str
 
 The bucket of the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#bucket LoggingLogView#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#bucket LoggingLogView#bucket}
 
 ---
 
@@ -1109,7 +1109,7 @@ name: str
 
 The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#name LoggingLogView#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#name LoggingLogView#name}
 
 ---
 
@@ -1123,7 +1123,7 @@ description: str
 
 Describes this view.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#description LoggingLogView#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#description LoggingLogView#description}
 
 ---
 
@@ -1139,7 +1139,7 @@ Filter that restricts which log entries in a bucket are visible in this view.
 
 Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#filter LoggingLogView#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#filter LoggingLogView#filter}
 
 ---
 
@@ -1151,7 +1151,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#id LoggingLogView#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#id LoggingLogView#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1168,7 +1168,7 @@ location: str
 
 The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#location LoggingLogView#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#location LoggingLogView#location}
 
 ---
 
@@ -1182,7 +1182,7 @@ parent: str
 
 The parent of the resource.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#parent LoggingLogView#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#parent LoggingLogView#parent}
 
 ---
 
@@ -1196,7 +1196,7 @@ timeouts: LoggingLogViewTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#timeouts LoggingLogView#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#timeouts LoggingLogView#timeouts}
 
 ---
 
@@ -1218,9 +1218,9 @@ loggingLogView.LoggingLogViewTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#create LoggingLogView#create}. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#delete LoggingLogView#delete}. |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#update LoggingLogView#update}. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#create LoggingLogView#create}. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#delete LoggingLogView#delete}. |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#update LoggingLogView#update}. |
 
 ---
 
@@ -1232,7 +1232,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#create LoggingLogView#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#create LoggingLogView#create}.
 
 ---
 
@@ -1244,7 +1244,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#delete LoggingLogView#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#delete LoggingLogView#delete}.
 
 ---
 
@@ -1256,7 +1256,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/logging_log_view#update LoggingLogView#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/logging_log_view#update LoggingLogView#update}.
 
 ---
 

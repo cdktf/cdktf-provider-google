@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface CloudfunctionsFunctionIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#cloud_function CloudfunctionsFunctionIamMember#cloud_function}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#cloud_function CloudfunctionsFunctionIamMember#cloud_function}
   */
   readonly cloudFunction: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#id CloudfunctionsFunctionIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#id CloudfunctionsFunctionIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#member CloudfunctionsFunctionIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#member CloudfunctionsFunctionIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#project CloudfunctionsFunctionIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#project CloudfunctionsFunctionIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#region CloudfunctionsFunctionIamMember#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#region CloudfunctionsFunctionIamMember#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#role CloudfunctionsFunctionIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#role CloudfunctionsFunctionIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#condition CloudfunctionsFunctionIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#condition CloudfunctionsFunctionIamMember#condition}
   */
   readonly condition?: CloudfunctionsFunctionIamMemberCondition;
 }
 export interface CloudfunctionsFunctionIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#description CloudfunctionsFunctionIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#description CloudfunctionsFunctionIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#expression CloudfunctionsFunctionIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#expression CloudfunctionsFunctionIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member#title CloudfunctionsFunctionIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member#title CloudfunctionsFunctionIamMember#title}
   */
   readonly title: string;
 }
@@ -156,7 +156,7 @@ export class CloudfunctionsFunctionIamMemberConditionOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member google_cloudfunctions_function_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member google_cloudfunctions_function_iam_member}
 */
 export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
 
@@ -170,7 +170,7 @@ export class CloudfunctionsFunctionIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/cloudfunctions_function_iam_member google_cloudfunctions_function_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/cloudfunctions_function_iam_member google_cloudfunctions_function_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

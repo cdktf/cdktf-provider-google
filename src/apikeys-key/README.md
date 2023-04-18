@@ -1,3 +1,3 @@
 # `google_apikeys_key`
 
-Refer to the Terraform Registory for docs: [`google_apikeys_key`](https://www.terraform.io/docs/providers/google/r/apikeys_key).
+Refer to the Terraform Registory for docs: [`google_apikeys_key`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apikeys_key).

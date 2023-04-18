@@ -1,6 +1,6 @@
 # `data_google_container_registry_repository`
 
-Refer to the Terraform Registory for docs: [`data_google_container_registry_repository`](https://www.terraform.io/docs/providers/google/d/container_registry_repository).
+Refer to the Terraform Registory for docs: [`data_google_container_registry_repository`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository).
 
 # `dataGoogleContainerRegistryRepository` Submodule <a name="`dataGoogleContainerRegistryRepository` Submodule" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_container_registry_repo
 
 ### DataGoogleContainerRegistryRepository <a name="DataGoogleContainerRegistryRepository" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository google_container_registry_repository}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository google_container_registry_repository}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer"></a>
 
@@ -19,7 +19,7 @@ dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository(
   scope: Construct,
   id: str,
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -36,15 +36,15 @@ dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository(
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
 
 ---
 
@@ -74,7 +74,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -123,7 +123,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
 
 ---
 
@@ -131,7 +131,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
 
 ---
 
@@ -475,7 +475,7 @@ dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.is_t
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -565,10 +565,10 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepository.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -711,7 +711,7 @@ from cdktf_cdktf_provider_google import data_google_container_registry_repositor
 
 dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig(
   connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[int, float] = None,
+  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
@@ -728,15 +728,15 @@ dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfi
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.region">region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}. |
 
 ---
 
@@ -753,10 +753,10 @@ connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.dataGoogleContainerRegistryRepository.DataGoogleContainerRegistryRepositoryConfig.property.count"></a>
 
 ```python
-count: typing.Union[int, float]
+count: typing.Union[typing.Union[int, float], TerraformCount]
 ```
 
-- *Type:* typing.Union[int, float]
+- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
 
 ---
 
@@ -818,7 +818,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -833,7 +833,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}.
 
 ---
 
@@ -845,7 +845,7 @@ region: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/d/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}.
 
 ---
 

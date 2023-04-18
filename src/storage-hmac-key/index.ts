@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/storage_hmac_key
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface StorageHmacKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#id StorageHmacKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#id StorageHmacKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#project StorageHmacKey#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#project StorageHmacKey#project}
   */
   readonly project?: string;
   /**
   * The email address of the key's associated service account.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#service_account_email StorageHmacKey#service_account_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#service_account_email StorageHmacKey#service_account_email}
   */
   readonly serviceAccountEmail: string;
   /**
   * The state of the key. Can be set to one of ACTIVE, INACTIVE. Default value: "ACTIVE" Possible values: ["ACTIVE", "INACTIVE"]
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#state StorageHmacKey#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#state StorageHmacKey#state}
   */
   readonly state?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#timeouts StorageHmacKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#timeouts StorageHmacKey#timeouts}
   */
   readonly timeouts?: StorageHmacKeyTimeouts;
 }
 export interface StorageHmacKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#create StorageHmacKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#create StorageHmacKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#delete StorageHmacKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#delete StorageHmacKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key#update StorageHmacKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key#update StorageHmacKey#update}
   */
   readonly update?: string;
 }
 
-export function storageHmacKeyTimeoutsToTerraform(struct?: StorageHmacKeyTimeoutsOutputReference | StorageHmacKeyTimeouts | cdktf.IResolvable): any {
+export function storageHmacKeyTimeoutsToTerraform(struct?: StorageHmacKeyTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -73,7 +73,7 @@ export class StorageHmacKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): StorageHmacKeyTimeouts | cdktf.IResolvable | undefined {
@@ -168,7 +168,7 @@ export class StorageHmacKeyTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key google_storage_hmac_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key google_storage_hmac_key}
 */
 export class StorageHmacKey extends cdktf.TerraformResource {
 
@@ -182,7 +182,7 @@ export class StorageHmacKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/storage_hmac_key google_storage_hmac_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_hmac_key google_storage_hmac_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

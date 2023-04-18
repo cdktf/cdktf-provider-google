@@ -1,6 +1,6 @@
 # `google_apigee_sharedflow_deployment`
 
-Refer to the Terraform Registory for docs: [`google_apigee_sharedflow_deployment`](https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment).
+Refer to the Terraform Registory for docs: [`google_apigee_sharedflow_deployment`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment).
 
 # `apigeeSharedflowDeployment` Submodule <a name="`apigeeSharedflowDeployment` Submodule" id="@cdktf/provider-google.apigeeSharedflowDeployment"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_apigee_sharedflow_deployment
 
 ### ApigeeSharedflowDeployment <a name="ApigeeSharedflowDeployment" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment google_apigee_sharedflow_deployment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment google_apigee_sharedflow_deployment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.Initializer"></a>
 
@@ -373,7 +373,7 @@ apigeeSharedflowDeployment.ApigeeSharedflowDeployment.isTerraformResource(x: any
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -481,10 +481,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeployment.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -713,7 +713,7 @@ const apigeeSharedflowDeploymentConfig: apigeeSharedflowDeployment.ApigeeSharedf
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.count">count</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -723,7 +723,7 @@ const apigeeSharedflowDeploymentConfig: apigeeSharedflowDeployment.ApigeeSharedf
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.orgId">orgId</a></code> | <code>string</code> | The Apigee Organization associated with the Apigee instance. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.revision">revision</a></code> | <code>string</code> | Revision of the Sharedflow to be deployed. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.sharedflowId">sharedflowId</a></code> | <code>string</code> | Id of the Sharedflow to be deployed. |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#id ApigeeSharedflowDeployment#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#id ApigeeSharedflowDeployment#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.serviceAccount">serviceAccount</a></code> | <code>string</code> | The service account represents the identity of the deployed proxy, and determines what permissions it has. |
 | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts">ApigeeSharedflowDeploymentTimeouts</a></code> | timeouts block. |
 
@@ -742,10 +742,10 @@ public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnectio
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentConfig.property.count"></a>
 
 ```typescript
-public readonly count: number;
+public readonly count: number | TerraformCount;
 ```
 
-- *Type:* number
+- *Type:* number | cdktf.TerraformCount
 
 ---
 
@@ -809,7 +809,7 @@ public readonly environment: string;
 
 The resource ID of the environment.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#environment ApigeeSharedflowDeployment#environment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#environment ApigeeSharedflowDeployment#environment}
 
 ---
 
@@ -823,7 +823,7 @@ public readonly orgId: string;
 
 The Apigee Organization associated with the Apigee instance.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#org_id ApigeeSharedflowDeployment#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#org_id ApigeeSharedflowDeployment#org_id}
 
 ---
 
@@ -837,7 +837,7 @@ public readonly revision: string;
 
 Revision of the Sharedflow to be deployed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#revision ApigeeSharedflowDeployment#revision}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#revision ApigeeSharedflowDeployment#revision}
 
 ---
 
@@ -851,7 +851,7 @@ public readonly sharedflowId: string;
 
 Id of the Sharedflow to be deployed.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#sharedflow_id ApigeeSharedflowDeployment#sharedflow_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#sharedflow_id ApigeeSharedflowDeployment#sharedflow_id}
 
 ---
 
@@ -863,7 +863,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#id ApigeeSharedflowDeployment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#id ApigeeSharedflowDeployment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -882,7 +882,7 @@ The service account represents the identity of the deployed proxy, and determine
 
 The format must be {ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#service_account ApigeeSharedflowDeployment#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#service_account ApigeeSharedflowDeployment#service_account}
 
 ---
 
@@ -896,7 +896,7 @@ public readonly timeouts: ApigeeSharedflowDeploymentTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#timeouts ApigeeSharedflowDeployment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#timeouts ApigeeSharedflowDeployment#timeouts}
 
 ---
 
@@ -914,9 +914,9 @@ const apigeeSharedflowDeploymentTimeouts: apigeeSharedflowDeployment.ApigeeShare
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#create ApigeeSharedflowDeployment#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#delete ApigeeSharedflowDeployment#delete}. |
-| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#update ApigeeSharedflowDeployment#update}. |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#create ApigeeSharedflowDeployment#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#delete ApigeeSharedflowDeployment#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeSharedflowDeployment.ApigeeSharedflowDeploymentTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#update ApigeeSharedflowDeployment#update}. |
 
 ---
 
@@ -928,7 +928,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#create ApigeeSharedflowDeployment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#create ApigeeSharedflowDeployment#create}.
 
 ---
 
@@ -940,7 +940,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#delete ApigeeSharedflowDeployment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#delete ApigeeSharedflowDeployment#delete}.
 
 ---
 
@@ -952,7 +952,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/apigee_sharedflow_deployment#update ApigeeSharedflowDeployment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_sharedflow_deployment#update ApigeeSharedflowDeployment#update}.
 
 ---
 

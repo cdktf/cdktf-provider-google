@@ -1,6 +1,6 @@
 # `google_bigquery_dataset_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_member`](https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member).
+Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member).
 
 # `bigqueryDatasetIamMember` Submodule <a name="`bigqueryDatasetIamMember` Submodule" id="@cdktf/provider-google.bigqueryDatasetIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_member`
 
 ### BigqueryDatasetIamMember <a name="BigqueryDatasetIamMember" id="@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember"></a>
 
-Represents a {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member google_bigquery_dataset_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member google_bigquery_dataset_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.Initializer"></a>
 
@@ -373,7 +373,7 @@ BigqueryDatasetIamMember.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
@@ -480,10 +480,10 @@ public object Connection { get; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMember.property.count"></a>
 
 ```csharp
-public double Count { get; }
+public object Count { get; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -705,9 +705,9 @@ new BigqueryDatasetIamMemberCondition {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#expression BigqueryDatasetIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#title BigqueryDatasetIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#description BigqueryDatasetIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.expression">Expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#expression BigqueryDatasetIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.title">Title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#title BigqueryDatasetIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#description BigqueryDatasetIamMember#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ public string Expression { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#expression BigqueryDatasetIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#expression BigqueryDatasetIamMember#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ public string Title { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#title BigqueryDatasetIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#title BigqueryDatasetIamMember#title}.
 
 ---
 
@@ -743,7 +743,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#description BigqueryDatasetIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#description BigqueryDatasetIamMember#description}.
 
 ---
 
@@ -756,7 +756,7 @@ using HashiCorp.Cdktf.Providers.Google;
 
 new BigqueryDatasetIamMemberConfig {
     object Connection = null,
-    double Count = null,
+    object Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
@@ -776,18 +776,18 @@ new BigqueryDatasetIamMemberConfig {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.count">Count</a></code> | <code>double</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#dataset_id BigqueryDatasetIamMember#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.member">Member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#member BigqueryDatasetIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#role BigqueryDatasetIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.datasetId">DatasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#dataset_id BigqueryDatasetIamMember#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.member">Member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#member BigqueryDatasetIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.role">Role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#role BigqueryDatasetIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberCondition">BigqueryDatasetIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#id BigqueryDatasetIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#project BigqueryDatasetIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#id BigqueryDatasetIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#project BigqueryDatasetIamMember#project}. |
 
 ---
 
@@ -804,10 +804,10 @@ public object Connection { get; set; }
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-google.bigqueryDatasetIamMember.BigqueryDatasetIamMemberConfig.property.count"></a>
 
 ```csharp
-public double Count { get; set; }
+public object Count { get; set; }
 ```
 
-- *Type:* double
+- *Type:* object
 
 ---
 
@@ -869,7 +869,7 @@ public string DatasetId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#dataset_id BigqueryDatasetIamMember#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#dataset_id BigqueryDatasetIamMember#dataset_id}.
 
 ---
 
@@ -881,7 +881,7 @@ public string Member { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#member BigqueryDatasetIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#member BigqueryDatasetIamMember#member}.
 
 ---
 
@@ -893,7 +893,7 @@ public string Role { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#role BigqueryDatasetIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#role BigqueryDatasetIamMember#role}.
 
 ---
 
@@ -907,7 +907,7 @@ public BigqueryDatasetIamMemberCondition Condition { get; set; }
 
 condition block.
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#condition BigqueryDatasetIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#condition BigqueryDatasetIamMember#condition}
 
 ---
 
@@ -919,7 +919,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#id BigqueryDatasetIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#id BigqueryDatasetIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/bigquery_dataset_iam_member#project BigqueryDatasetIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/bigquery_dataset_iam_member#project BigqueryDatasetIamMember#project}.
 
 ---
 

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/google/r/firestore_document
+// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,61 +10,61 @@ export interface FirestoreDocumentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#collection FirestoreDocument#collection}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#collection FirestoreDocument#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#database FirestoreDocument#database}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#database FirestoreDocument#database}
   */
   readonly database?: string;
   /**
   * The client-assigned document ID to use for this document during creation.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#document_id FirestoreDocument#document_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#document_id FirestoreDocument#document_id}
   */
   readonly documentId: string;
   /**
   * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#fields FirestoreDocument#fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#fields FirestoreDocument#fields}
   */
   readonly fields: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#id FirestoreDocument#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#id FirestoreDocument#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#project FirestoreDocument#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#project FirestoreDocument#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#timeouts FirestoreDocument#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#timeouts FirestoreDocument#timeouts}
   */
   readonly timeouts?: FirestoreDocumentTimeouts;
 }
 export interface FirestoreDocumentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#create FirestoreDocument#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#create FirestoreDocument#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#delete FirestoreDocument#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#delete FirestoreDocument#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/google/r/firestore_document#update FirestoreDocument#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document#update FirestoreDocument#update}
   */
   readonly update?: string;
 }
 
-export function firestoreDocumentTimeoutsToTerraform(struct?: FirestoreDocumentTimeoutsOutputReference | FirestoreDocumentTimeouts | cdktf.IResolvable): any {
+export function firestoreDocumentTimeoutsToTerraform(struct?: FirestoreDocumentTimeouts | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,7 +85,7 @@ export class FirestoreDocumentTimeoutsOutputReference extends cdktf.ComplexObjec
   * @param terraformAttribute The attribute on the parent resource this class is referencing
   */
   public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
+    super(terraformResource, terraformAttribute, false);
   }
 
   public get internalValue(): FirestoreDocumentTimeouts | cdktf.IResolvable | undefined {
@@ -180,7 +180,7 @@ export class FirestoreDocumentTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/google/r/firestore_document google_firestore_document}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document google_firestore_document}
 */
 export class FirestoreDocument extends cdktf.TerraformResource {
 
@@ -194,7 +194,7 @@ export class FirestoreDocument extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/google/r/firestore_document google_firestore_document} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/firestore_document google_firestore_document} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
