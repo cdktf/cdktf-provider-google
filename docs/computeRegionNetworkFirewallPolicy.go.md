@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_reg
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 computeregionnetworkfirewallpolicy.NewComputeRegionNetworkFirewallPolicy(scope Construct, id *string, config ComputeRegionNetworkFirewallPolicyConfig) ComputeRegionNetworkFirewallPolicy
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicy_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -761,7 +761,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 &computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicyConfig {
 	Connection: interface{},
@@ -776,7 +776,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfir
 	Id: *string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicyTimeouts,
 }
 ```
 
@@ -962,7 +962,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 &computeregionnetworkfirewallpolicy.ComputeRegionNetworkFirewallPolicyTimeouts {
 	Create: *string,
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRegionNetworkFirewallPolicy.ComputeRegionNetworkFirewallPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeregionnetworkfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeregionnetworkfirewallpolicy"
 
 computeregionnetworkfirewallpolicy.NewComputeRegionNetworkFirewallPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeRegionNetworkFirewallPolicyTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/compute_glo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 computeglobaladdress.NewComputeGlobalAddress(scope Construct, id *string, config ComputeGlobalAddressConfig) ComputeGlobalAddress
 ```
@@ -353,7 +353,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 computeglobaladdress.ComputeGlobalAddress_IsConstruct(x interface{}) *bool
 ```
@@ -385,7 +385,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 computeglobaladdress.ComputeGlobalAddress_IsTerraformElement(x interface{}) *bool
 ```
@@ -399,7 +399,7 @@ computeglobaladdress.ComputeGlobalAddress_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddress.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 computeglobaladdress.ComputeGlobalAddress_IsTerraformResource(x interface{}) *bool
 ```
@@ -862,7 +862,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 &computeglobaladdress.ComputeGlobalAddressConfig {
 	Connection: interface{},
@@ -882,7 +882,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
 	PrefixLength: *f64,
 	Project: *string,
 	Purpose: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeGlobalAddress.ComputeGlobalAddressTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.computeGlobalAddress.ComputeGlobalAddressTimeouts,
 }
 ```
 
@@ -1166,7 +1166,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 &computeglobaladdress.ComputeGlobalAddressTimeouts {
 	Create: *string,
@@ -1214,7 +1214,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalAddress.ComputeGlobalAddressTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/computeglobaladdress"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/computeglobaladdress"
 
 computeglobaladdress.NewComputeGlobalAddressTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeGlobalAddressTimeoutsOutputReference
 ```

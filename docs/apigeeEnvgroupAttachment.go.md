@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/apigee_envg
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 apigeeenvgroupattachment.NewApigeeEnvgroupAttachment(scope Construct, id *string, config ApigeeEnvgroupAttachmentConfig) ApigeeEnvgroupAttachment
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 apigeeenvgroupattachment.ApigeeEnvgroupAttachment_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 apigeeenvgroupattachment.ApigeeEnvgroupAttachment_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ apigeeenvgroupattachment.ApigeeEnvgroupAttachment_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 apigeeenvgroupattachment.ApigeeEnvgroupAttachment_IsTerraformResource(x interface{}) *bool
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 &apigeeenvgroupattachment.ApigeeEnvgroupAttachmentConfig {
 	Connection: interface{},
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachmen
 	EnvgroupId: *string,
 	Environment: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachmentTimeouts,
 }
 ```
 
@@ -808,7 +808,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 &apigeeenvgroupattachment.ApigeeEnvgroupAttachmentTimeouts {
 	Create: *string,
@@ -856,7 +856,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvgroupAttachment.ApigeeEnvgroupAttachmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroupattachment"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/apigeeenvgroupattachment"
 
 apigeeenvgroupattachment.NewApigeeEnvgroupAttachmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEnvgroupAttachmentTimeoutsOutputReference
 ```

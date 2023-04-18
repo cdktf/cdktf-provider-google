@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/sql_user go
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUser(scope Construct, id *string, config SqlUserConfig) SqlUser
 ```
@@ -352,7 +352,7 @@ func ResetType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sqlUser.SqlUser.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.SqlUser_IsConstruct(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sqlUser.SqlUser.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.SqlUser_IsTerraformElement(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ sqluser.SqlUser_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sqlUser.SqlUser.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.SqlUser_IsTerraformResource(x interface{}) *bool
 ```
@@ -828,7 +828,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlUser.SqlUserConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 &sqluser.SqlUserConfig {
 	Connection: interface{},
@@ -844,9 +844,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
 	Host: *string,
 	Id: *string,
 	Password: *string,
-	PasswordPolicy: github.com/cdktf/cdktf-provider-google-go/google.sqlUser.SqlUserPasswordPolicy,
+	PasswordPolicy: github.com/cdktf/cdktf-provider-google-go/google/v6.sqlUser.SqlUserPasswordPolicy,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sqlUser.SqlUserTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.sqlUser.SqlUserTimeouts,
 	Type: *string,
 }
 ```
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlUser.SqlUserPasswordPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 &sqluser.SqlUserPasswordPolicy {
 	AllowedFailedAttempts: *f64,
@@ -1189,7 +1189,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlUser.SqlUserPasswordPolicyStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 &sqluser.SqlUserPasswordPolicyStatus {
 
@@ -1202,7 +1202,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlUser.SqlUserSqlServerUserDetails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 &sqluser.SqlUserSqlServerUserDetails {
 
@@ -1215,7 +1215,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlUser.SqlUserTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 &sqluser.SqlUserTimeouts {
 	Create: *string,
@@ -1277,7 +1277,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserPasswordPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserPasswordPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlUserPasswordPolicyOutputReference
 ```
@@ -1653,7 +1653,7 @@ func InternalValue() SqlUserPasswordPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserPasswordPolicyStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserPasswordPolicyStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlUserPasswordPolicyStatusList
 ```
@@ -1785,7 +1785,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserPasswordPolicyStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserPasswordPolicyStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlUserPasswordPolicyStatusOutputReference
 ```
@@ -2074,7 +2074,7 @@ func InternalValue() SqlUserPasswordPolicyStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserSqlServerUserDetailsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserSqlServerUserDetailsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlUserSqlServerUserDetailsList
 ```
@@ -2206,7 +2206,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserSqlServerUserDetailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserSqlServerUserDetailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlUserSqlServerUserDetailsOutputReference
 ```
@@ -2495,7 +2495,7 @@ func InternalValue() SqlUserSqlServerUserDetails
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlUser.SqlUserTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/sqluser"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/sqluser"
 
 sqluser.NewSqlUserTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlUserTimeoutsOutputReference
 ```

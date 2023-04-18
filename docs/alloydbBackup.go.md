@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/alloydb_bac
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 alloydbbackup.NewAlloydbBackup(scope Construct, id *string, config AlloydbBackupConfig) AlloydbBackup
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ alloydbbackup.AlloydbBackup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsTerraformResource(x interface{}) *bool
 ```
@@ -823,7 +823,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 &alloydbbackup.AlloydbBackupConfig {
 	Connection: interface{},
@@ -840,7 +840,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.alloydbBackup.AlloydbBackupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v6.alloydbBackup.AlloydbBackupTimeouts,
 }
 ```
 
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 &alloydbbackup.AlloydbBackupTimeouts {
 	Create: *string,
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/alloydbbackup"
 
 alloydbbackup.NewAlloydbBackupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbBackupTimeoutsOutputReference
 ```

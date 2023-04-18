@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/d/pubsub_subs
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscription(scope Construct, id *string, config DataGooglePubsubSubscriptionConfig) DataGooglePubsubSubscription
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.DataGooglePubsubSubscription_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.DataGooglePubsubSubscription_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglepubsubsubscription.DataGooglePubsubSubscription_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscription.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.DataGooglePubsubSubscription_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -716,7 +716,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionBigqueryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionBigqueryConfig {
 
@@ -729,7 +729,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionConfig {
 	Connection: interface{},
@@ -878,7 +878,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionDeadLetterPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionDeadLetterPolicy {
 
@@ -891,7 +891,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionExpirationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionExpirationPolicy {
 
@@ -904,7 +904,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionPushConfig {
 
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfigOidcToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionPushConfigOidcToken {
 
@@ -930,7 +930,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionRetryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 &datagooglepubsubsubscription.DataGooglePubsubSubscriptionRetryPolicy {
 
@@ -945,7 +945,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscri
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionBigqueryConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionBigqueryConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionBigqueryConfigList
 ```
@@ -1077,7 +1077,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionBigqueryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionBigqueryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionBigqueryConfigOutputReference
 ```
@@ -1388,7 +1388,7 @@ func InternalValue() DataGooglePubsubSubscriptionBigqueryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionDeadLetterPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionDeadLetterPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionDeadLetterPolicyList
 ```
@@ -1520,7 +1520,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionDeadLetterPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionDeadLetterPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionDeadLetterPolicyOutputReference
 ```
@@ -1809,7 +1809,7 @@ func InternalValue() DataGooglePubsubSubscriptionDeadLetterPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionExpirationPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionExpirationPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionExpirationPolicyList
 ```
@@ -1941,7 +1941,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionExpirationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionExpirationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionExpirationPolicyOutputReference
 ```
@@ -2219,7 +2219,7 @@ func InternalValue() DataGooglePubsubSubscriptionExpirationPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionPushConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionPushConfigList
 ```
@@ -2351,7 +2351,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfigOidcTokenList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionPushConfigOidcTokenList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionPushConfigOidcTokenList
 ```
@@ -2483,7 +2483,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfigOidcTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionPushConfigOidcTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionPushConfigOidcTokenOutputReference
 ```
@@ -2772,7 +2772,7 @@ func InternalValue() DataGooglePubsubSubscriptionPushConfigOidcToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionPushConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionPushConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionPushConfigOutputReference
 ```
@@ -3072,7 +3072,7 @@ func InternalValue() DataGooglePubsubSubscriptionPushConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionRetryPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionRetryPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGooglePubsubSubscriptionRetryPolicyList
 ```
@@ -3204,7 +3204,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGooglePubsubSubscription.DataGooglePubsubSubscriptionRetryPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglepubsubsubscription"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/datagooglepubsubsubscription"
 
 datagooglepubsubsubscription.NewDataGooglePubsubSubscriptionRetryPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGooglePubsubSubscriptionRetryPolicyOutputReference
 ```

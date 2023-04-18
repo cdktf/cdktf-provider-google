@@ -13,7 +13,7 @@ Represents a {@link https://www.terraform.io/docs/providers/google/r/endpoints_s
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 endpointsserviceconsumersiambinding.NewEndpointsServiceConsumersIamBinding(scope Construct, id *string, config EndpointsServiceConsumersIamBindingConfig) EndpointsServiceConsumersIamBinding
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBinding_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 &endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBindingCondition {
 	Expression: *string,
@@ -745,7 +745,7 @@ Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/googl
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 &endpointsserviceconsumersiambinding.EndpointsServiceConsumersIamBindingConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsume
 	Members: *[]*string,
 	Role: *string,
 	ServiceName: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v6.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -938,7 +938,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceConsumersIamBinding.EndpointsServiceConsumersIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/endpointsserviceconsumersiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v6/endpointsserviceconsumersiambinding"
 
 endpointsserviceconsumersiambinding.NewEndpointsServiceConsumersIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EndpointsServiceConsumersIamBindingConditionOutputReference
 ```
