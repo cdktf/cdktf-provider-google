@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket
+// https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#default_event_based_hold StorageBucket#default_event_based_hold}
   */
   readonly defaultEventBasedHold?: boolean | cdktf.IResolvable;
   /**
   * When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#force_destroy StorageBucket#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#id StorageBucket#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#id StorageBucket#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,109 +29,109 @@ export interface StorageBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * A set of key/value label pairs to assign to the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#labels StorageBucket#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#labels StorageBucket#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The Google Cloud Storage location
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#location StorageBucket#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#location StorageBucket#location}
   */
   readonly location: string;
   /**
   * The name of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#name StorageBucket#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#name StorageBucket#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#project StorageBucket#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#project StorageBucket#project}
   */
   readonly project?: string;
   /**
   * Prevents public access to a bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#public_access_prevention StorageBucket#public_access_prevention}
   */
   readonly publicAccessPrevention?: string;
   /**
   * Enables Requester Pays on a storage bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#requester_pays StorageBucket#requester_pays}
   */
   readonly requesterPays?: boolean | cdktf.IResolvable;
   /**
   * The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
   */
   readonly storageClass?: string;
   /**
   * Enables uniform bucket-level access on a bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#uniform_bucket_level_access StorageBucket#uniform_bucket_level_access}
   */
   readonly uniformBucketLevelAccess?: boolean | cdktf.IResolvable;
   /**
   * autoclass block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#autoclass StorageBucket#autoclass}
   */
   readonly autoclass?: StorageBucketAutoclass;
   /**
   * cors block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#cors StorageBucket#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#cors StorageBucket#cors}
   */
   readonly cors?: StorageBucketCors[] | cdktf.IResolvable;
   /**
   * custom_placement_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#custom_placement_config StorageBucket#custom_placement_config}
   */
   readonly customPlacementConfig?: StorageBucketCustomPlacementConfig;
   /**
   * encryption block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#encryption StorageBucket#encryption}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#encryption StorageBucket#encryption}
   */
   readonly encryption?: StorageBucketEncryption;
   /**
   * lifecycle_rule block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#lifecycle_rule StorageBucket#lifecycle_rule}
   */
   readonly lifecycleRule?: StorageBucketLifecycleRule[] | cdktf.IResolvable;
   /**
   * logging block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#logging StorageBucket#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#logging StorageBucket#logging}
   */
   readonly logging?: StorageBucketLogging;
   /**
   * retention_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#retention_policy StorageBucket#retention_policy}
   */
   readonly retentionPolicy?: StorageBucketRetentionPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#timeouts StorageBucket#timeouts}
   */
   readonly timeouts?: StorageBucketTimeouts;
   /**
   * versioning block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#versioning StorageBucket#versioning}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#versioning StorageBucket#versioning}
   */
   readonly versioning?: StorageBucketVersioning;
   /**
   * website block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#website StorageBucket#website}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#website StorageBucket#website}
   */
   readonly website?: StorageBucketWebsite;
 }
@@ -139,7 +139,7 @@ export interface StorageBucketAutoclass {
   /**
   * While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -203,25 +203,25 @@ export interface StorageBucketCors {
   /**
   * The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#max_age_seconds StorageBucket#max_age_seconds}
   */
   readonly maxAgeSeconds?: number;
   /**
   * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#method StorageBucket#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#method StorageBucket#method}
   */
   readonly method?: string[];
   /**
   * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#origin StorageBucket#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#origin StorageBucket#origin}
   */
   readonly origin?: string[];
   /**
   * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#response_header StorageBucket#response_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#response_header StorageBucket#response_header}
   */
   readonly responseHeader?: string[];
 }
@@ -389,7 +389,7 @@ export interface StorageBucketCustomPlacementConfig {
   /**
   * The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#data_locations StorageBucket#data_locations}
   */
   readonly dataLocations: string[];
 }
@@ -453,7 +453,7 @@ export interface StorageBucketEncryption {
   /**
   * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified. You must pay attention to whether the crypto key is available in the location that this bucket is created in. See the docs for more details.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#default_kms_key_name StorageBucket#default_kms_key_name}
   */
   readonly defaultKmsKeyName: string;
 }
@@ -517,13 +517,13 @@ export interface StorageBucketLifecycleRuleAction {
   /**
   * The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#storage_class StorageBucket#storage_class}
   */
   readonly storageClass?: string;
   /**
   * The type of the action of this Lifecycle Rule. Supported values include: Delete, SetStorageClass and AbortIncompleteMultipartUpload.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#type StorageBucket#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#type StorageBucket#type}
   */
   readonly type: string;
 }
@@ -610,68 +610,68 @@ export interface StorageBucketLifecycleRuleCondition {
   /**
   * Minimum age of an object in days to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#age StorageBucket#age}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#age StorageBucket#age}
   */
   readonly age?: number;
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#created_before StorageBucket#created_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#created_before StorageBucket#created_before}
   */
   readonly createdBefore?: string;
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#custom_time_before StorageBucket#custom_time_before}
   */
   readonly customTimeBefore?: string;
   /**
   * Number of days elapsed since the user-specified timestamp set on an object.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#days_since_custom_time StorageBucket#days_since_custom_time}
   */
   readonly daysSinceCustomTime?: number;
   /**
   * Number of days elapsed since the noncurrent timestamp of an object. This
 										condition is relevant only for versioned objects.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#days_since_noncurrent_time StorageBucket#days_since_noncurrent_time}
   */
   readonly daysSinceNoncurrentTime?: number;
   /**
   * One or more matching name prefixes to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#matches_prefix StorageBucket#matches_prefix}
   */
   readonly matchesPrefix?: string[];
   /**
   * Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#matches_storage_class StorageBucket#matches_storage_class}
   */
   readonly matchesStorageClass?: string[];
   /**
   * One or more matching name suffixes to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#matches_suffix StorageBucket#matches_suffix}
   */
   readonly matchesSuffix?: string[];
   /**
   * Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#noncurrent_time_before StorageBucket#noncurrent_time_before}
   */
   readonly noncurrentTimeBefore?: string;
   /**
   * Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#num_newer_versions StorageBucket#num_newer_versions}
   */
   readonly numNewerVersions?: number;
   /**
   * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#with_state StorageBucket#with_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#with_state StorageBucket#with_state}
   */
   readonly withState?: string;
 }
@@ -968,13 +968,13 @@ export interface StorageBucketLifecycleRule {
   /**
   * action block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#action StorageBucket#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#action StorageBucket#action}
   */
   readonly action: StorageBucketLifecycleRuleAction;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#condition StorageBucket#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#condition StorageBucket#condition}
   */
   readonly condition: StorageBucketLifecycleRuleCondition;
 }
@@ -1090,13 +1090,13 @@ export interface StorageBucketLogging {
   /**
   * The bucket that will receive log objects.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#log_bucket StorageBucket#log_bucket}
   */
   readonly logBucket: string;
   /**
   * The object prefix for log objects. If it's not provided, by default Google Cloud Storage sets this to this bucket's name.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#log_object_prefix StorageBucket#log_object_prefix}
   */
   readonly logObjectPrefix?: string;
 }
@@ -1183,13 +1183,13 @@ export interface StorageBucketRetentionPolicy {
   /**
   * If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#is_locked StorageBucket#is_locked}
   */
   readonly isLocked?: boolean | cdktf.IResolvable;
   /**
   * The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 3,155,760,000 seconds.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#retention_period StorageBucket#retention_period}
   */
   readonly retentionPeriod: number;
 }
@@ -1274,15 +1274,15 @@ export class StorageBucketRetentionPolicyOutputReference extends cdktf.ComplexOb
 }
 export interface StorageBucketTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#create StorageBucket#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#create StorageBucket#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#read StorageBucket#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#read StorageBucket#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#update StorageBucket#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#update StorageBucket#update}
   */
   readonly update?: string;
 }
@@ -1405,7 +1405,7 @@ export interface StorageBucketVersioning {
   /**
   * While set to true, versioning is fully enabled for this bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#enabled StorageBucket#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#enabled StorageBucket#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -1469,13 +1469,13 @@ export interface StorageBucketWebsite {
   /**
   * Behaves as the bucket's directory index where missing objects are treated as potential directories.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#main_page_suffix StorageBucket#main_page_suffix}
   */
   readonly mainPageSuffix?: string;
   /**
   * The custom object to return when a requested resource is not found.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket#not_found_page StorageBucket#not_found_page}
   */
   readonly notFoundPage?: string;
 }
@@ -1563,7 +1563,7 @@ export class StorageBucketWebsiteOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket google_storage_bucket}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket google_storage_bucket}
 */
 export class StorageBucket extends cdktf.TerraformResource {
 
@@ -1577,7 +1577,7 @@ export class StorageBucket extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/storage_bucket google_storage_bucket} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket google_storage_bucket} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1588,7 +1588,7 @@ export class StorageBucket extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.62.0',
+        providerVersion: '4.62.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
