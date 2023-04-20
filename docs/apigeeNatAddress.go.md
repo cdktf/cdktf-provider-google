@@ -1,6 +1,6 @@
 # `google_apigee_nat_address`
 
-Refer to the Terraform Registory for docs: [`google_apigee_nat_address`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address).
+Refer to the Terraform Registory for docs: [`google_apigee_nat_address`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address).
 
 # `apigeeNatAddress` Submodule <a name="`apigeeNatAddress` Submodule" id="@cdktf/provider-google.apigeeNatAddress"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_apigee_nat_address`](https:/
 
 ### ApigeeNatAddress <a name="ApigeeNatAddress" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address google_apigee_nat_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address google_apigee_nat_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 apigeenataddress.NewApigeeNatAddress(scope Construct, id *string, config ApigeeNatAddressConfig) ApigeeNatAddress
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddress.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 apigeenataddress.ApigeeNatAddress_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddress.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 apigeenataddress.ApigeeNatAddress_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ apigeenataddress.ApigeeNatAddress_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddress.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 apigeenataddress.ApigeeNatAddress_IsTerraformResource(x interface{}) *bool
 ```
@@ -652,7 +652,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 &apigeenataddress.ApigeeNatAddressConfig {
 	Connection: interface{},
@@ -665,7 +665,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
 	InstanceId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.apigeeNatAddress.ApigeeNatAddressTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeNatAddress.ApigeeNatAddressTimeouts,
 }
 ```
 
@@ -682,7 +682,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
 | <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.instanceId">InstanceId</a></code> | <code>*string</code> | The Apigee instance associated with the Apigee environment, in the format 'organizations/{{org_name}}/instances/{{instance_name}}'. |
 | <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.name">Name</a></code> | <code>*string</code> | Resource ID of the NAT address. |
-| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts">ApigeeNatAddressTimeouts</a></code> | timeouts block. |
 
 ---
@@ -767,7 +767,7 @@ InstanceId *string
 
 The Apigee instance associated with the Apigee environment, in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#instance_id ApigeeNatAddress#instance_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#instance_id ApigeeNatAddress#instance_id}
 
 ---
 
@@ -781,7 +781,7 @@ Name *string
 
 Resource ID of the NAT address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#name ApigeeNatAddress#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#name ApigeeNatAddress#name}
 
 ---
 
@@ -793,7 +793,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#id ApigeeNatAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -810,7 +810,7 @@ Timeouts ApigeeNatAddressTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#timeouts ApigeeNatAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#timeouts ApigeeNatAddress#timeouts}
 
 ---
 
@@ -819,7 +819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 &apigeenataddress.ApigeeNatAddressTimeouts {
 	Create: *string,
@@ -831,8 +831,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}. |
 
 ---
 
@@ -844,7 +844,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#create ApigeeNatAddress#create}.
 
 ---
 
@@ -856,7 +856,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/apigee_nat_address#delete ApigeeNatAddress#delete}.
 
 ---
 
@@ -867,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeNatAddress.ApigeeNatAddressTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeenataddress"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeenataddress"
 
 apigeenataddress.NewApigeeNatAddressTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeNatAddressTimeoutsOutputReference
 ```

@@ -1,6 +1,6 @@
 # `google_alloydb_backup`
 
-Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup).
+Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup).
 
 # `alloydbBackup` Submodule <a name="`alloydbBackup` Submodule" id="@cdktf/provider-google.alloydbBackup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_alloydb_backup`](https://reg
 
 ### AlloydbBackup <a name="AlloydbBackup" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup google_alloydb_backup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup google_alloydb_backup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 alloydbbackup.NewAlloydbBackup(scope Construct, id *string, config AlloydbBackupConfig) AlloydbBackup
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ alloydbbackup.AlloydbBackup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.alloydbBackup.AlloydbBackup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 alloydbbackup.AlloydbBackup_IsTerraformResource(x interface{}) *bool
 ```
@@ -823,7 +823,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 &alloydbbackup.AlloydbBackupConfig {
 	Connection: interface{},
@@ -840,7 +840,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
 	Labels: *map[string]*string,
 	Location: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.alloydbBackup.AlloydbBackupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.alloydbBackup.AlloydbBackupTimeouts,
 }
 ```
 
@@ -858,10 +858,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.backupId">BackupId</a></code> | <code>*string</code> | The ID of the alloydb backup. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.clusterName">ClusterName</a></code> | <code>*string</code> | The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}). |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.description">Description</a></code> | <code>*string</code> | User-provided description of the backup. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#id AlloydbBackup#id}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#id AlloydbBackup#id}. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined labels for the alloydb backup. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.location">Location</a></code> | <code>*string</code> | The location where the alloydb backup should reside. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#project AlloydbBackup#project}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#project AlloydbBackup#project}. |
 | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts">AlloydbBackupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -946,7 +946,7 @@ BackupId *string
 
 The ID of the alloydb backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#backup_id AlloydbBackup#backup_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#backup_id AlloydbBackup#backup_id}
 
 ---
 
@@ -960,7 +960,7 @@ ClusterName *string
 
 The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#cluster_name AlloydbBackup#cluster_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#cluster_name AlloydbBackup#cluster_name}
 
 ---
 
@@ -974,7 +974,7 @@ Description *string
 
 User-provided description of the backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#description AlloydbBackup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#description AlloydbBackup#description}
 
 ---
 
@@ -986,7 +986,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#id AlloydbBackup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#id AlloydbBackup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1003,7 +1003,7 @@ Labels *map[string]*string
 
 User-defined labels for the alloydb backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#labels AlloydbBackup#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#labels AlloydbBackup#labels}
 
 ---
 
@@ -1017,7 +1017,7 @@ Location *string
 
 The location where the alloydb backup should reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#location AlloydbBackup#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#location AlloydbBackup#location}
 
 ---
 
@@ -1029,7 +1029,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#project AlloydbBackup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#project AlloydbBackup#project}.
 
 ---
 
@@ -1043,7 +1043,7 @@ Timeouts AlloydbBackupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#timeouts AlloydbBackup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#timeouts AlloydbBackup#timeouts}
 
 ---
 
@@ -1052,7 +1052,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 &alloydbbackup.AlloydbBackupTimeouts {
 	Create: *string,
@@ -1065,9 +1065,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#create AlloydbBackup#create}. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#delete AlloydbBackup#delete}. |
-| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#update AlloydbBackup#update}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#create AlloydbBackup#create}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#delete AlloydbBackup#delete}. |
+| <code><a href="#@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#update AlloydbBackup#update}. |
 
 ---
 
@@ -1079,7 +1079,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#create AlloydbBackup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#create AlloydbBackup#create}.
 
 ---
 
@@ -1091,7 +1091,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#delete AlloydbBackup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#delete AlloydbBackup#delete}.
 
 ---
 
@@ -1103,7 +1103,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.0/docs/resources/alloydb_backup#update AlloydbBackup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/alloydb_backup#update AlloydbBackup#update}.
 
 ---
 
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.alloydbBackup.AlloydbBackupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/alloydbbackup"
+import "github.com/cdktf/cdktf-provider-google-go/google/alloydbbackup"
 
 alloydbbackup.NewAlloydbBackupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AlloydbBackupTimeoutsOutputReference
 ```
