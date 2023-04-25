@@ -1,6 +1,6 @@
 # `google_cloudiot_device`
 
-Refer to the Terraform Registory for docs: [`google_cloudiot_device`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device).
+Refer to the Terraform Registory for docs: [`google_cloudiot_device`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device).
 
 # `cloudiotDevice` Submodule <a name="`cloudiotDevice` Submodule" id="@cdktf/provider-google.cloudiotDevice"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloudiot_device`](https://re
 
 ### CloudiotDevice <a name="CloudiotDevice" id="@cdktf/provider-google.cloudiotDevice.CloudiotDevice"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device google_cloudiot_device}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device google_cloudiot_device}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotDevice.CloudiotDevice.Initializer"></a>
 
@@ -932,7 +932,7 @@ const cloudiotDeviceConfig: cloudiotDevice.CloudiotDeviceConfig = { ... }
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.blocked">blocked</a></code> | <code>boolean \| cdktf.IResolvable</code> | If a device is blocked, connections or requests from this device will fail. |
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.credentials">credentials</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceCredentials">CloudiotDeviceCredentials</a>[]</code> | credentials block. |
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.gatewayConfig">gatewayConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceGatewayConfig">CloudiotDeviceGatewayConfig</a></code> | gateway_config block. |
-| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#id CloudiotDevice#id}. |
+| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#id CloudiotDevice#id}. |
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.logLevel">logLevel</a></code> | <code>string</code> | The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]. |
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.metadata">metadata</a></code> | <code>{[ key: string ]: string}</code> | The metadata key-value pairs assigned to the device. |
 | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts">CloudiotDeviceTimeouts</a></code> | timeouts block. |
@@ -1019,7 +1019,7 @@ public readonly name: string;
 
 A unique name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#name CloudiotDevice#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#name CloudiotDevice#name}
 
 ---
 
@@ -1033,7 +1033,7 @@ public readonly registry: string;
 
 The name of the device registry where this device should be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#registry CloudiotDevice#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#registry CloudiotDevice#registry}
 
 ---
 
@@ -1047,7 +1047,7 @@ public readonly blocked: boolean | IResolvable;
 
 If a device is blocked, connections or requests from this device will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#blocked CloudiotDevice#blocked}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#blocked CloudiotDevice#blocked}
 
 ---
 
@@ -1061,7 +1061,7 @@ public readonly credentials: IResolvable | CloudiotDeviceCredentials[];
 
 credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#credentials CloudiotDevice#credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#credentials CloudiotDevice#credentials}
 
 ---
 
@@ -1075,7 +1075,7 @@ public readonly gatewayConfig: CloudiotDeviceGatewayConfig;
 
 gateway_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#gateway_config CloudiotDevice#gateway_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#gateway_config CloudiotDevice#gateway_config}
 
 ---
 
@@ -1087,7 +1087,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#id CloudiotDevice#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#id CloudiotDevice#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1104,7 +1104,7 @@ public readonly logLevel: string;
 
 The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#log_level CloudiotDevice#log_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#log_level CloudiotDevice#log_level}
 
 ---
 
@@ -1118,7 +1118,7 @@ public readonly metadata: {[ key: string ]: string};
 
 The metadata key-value pairs assigned to the device.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#metadata CloudiotDevice#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#metadata CloudiotDevice#metadata}
 
 ---
 
@@ -1132,7 +1132,7 @@ public readonly timeouts: CloudiotDeviceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#timeouts CloudiotDevice#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#timeouts CloudiotDevice#timeouts}
 
 ---
 
@@ -1176,7 +1176,7 @@ public readonly publicKey: CloudiotDeviceCredentialsPublicKey;
 
 public_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#public_key CloudiotDevice#public_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#public_key CloudiotDevice#public_key}
 
 ---
 
@@ -1190,7 +1190,7 @@ public readonly expirationTime: string;
 
 The time at which this credential becomes invalid.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#expiration_time CloudiotDevice#expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#expiration_time CloudiotDevice#expiration_time}
 
 ---
 
@@ -1223,7 +1223,7 @@ public readonly format: string;
 
 The format of the key. Possible values: ["RSA_PEM", "RSA_X509_PEM", "ES256_PEM", "ES256_X509_PEM"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#format CloudiotDevice#format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#format CloudiotDevice#format}
 
 ---
 
@@ -1237,7 +1237,7 @@ public readonly key: string;
 
 The key data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#key CloudiotDevice#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#key CloudiotDevice#key}
 
 ---
 
@@ -1270,7 +1270,7 @@ public readonly gatewayAuthMethod: string;
 
 Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#gateway_auth_method CloudiotDevice#gateway_auth_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#gateway_auth_method CloudiotDevice#gateway_auth_method}
 
 ---
 
@@ -1284,7 +1284,7 @@ public readonly gatewayType: string;
 
 Indicates whether the device is a gateway. Default value: "NON_GATEWAY" Possible values: ["GATEWAY", "NON_GATEWAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#gateway_type CloudiotDevice#gateway_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#gateway_type CloudiotDevice#gateway_type}
 
 ---
 
@@ -1324,9 +1324,9 @@ const cloudiotDeviceTimeouts: cloudiotDevice.CloudiotDeviceTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#create CloudiotDevice#create}. |
-| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#delete CloudiotDevice#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#update CloudiotDevice#update}. |
+| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#create CloudiotDevice#create}. |
+| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#delete CloudiotDevice#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudiotDevice.CloudiotDeviceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#update CloudiotDevice#update}. |
 
 ---
 
@@ -1338,7 +1338,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#create CloudiotDevice#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#create CloudiotDevice#create}.
 
 ---
 
@@ -1350,7 +1350,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#delete CloudiotDevice#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#delete CloudiotDevice#delete}.
 
 ---
 
@@ -1362,7 +1362,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_device#update CloudiotDevice#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_device#update CloudiotDevice#update}.
 
 ---
 

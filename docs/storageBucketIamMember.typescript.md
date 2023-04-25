@@ -1,6 +1,6 @@
 # `google_storage_bucket_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member).
+Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member).
 
 # `storageBucketIamMember` Submodule <a name="`storageBucketIamMember` Submodule" id="@cdktf/provider-google.storageBucketIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_storage_bucket_iam_member`](
 
 ### StorageBucketIamMember <a name="StorageBucketIamMember" id="@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member google_storage_bucket_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member google_storage_bucket_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMember.Initializer"></a>
 
@@ -672,9 +672,9 @@ const storageBucketIamMemberCondition: storageBucketIamMember.StorageBucketIamMe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#expression StorageBucketIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#title StorageBucketIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#description StorageBucketIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#expression StorageBucketIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#title StorageBucketIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#description StorageBucketIamMember#description}. |
 
 ---
 
@@ -686,7 +686,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#expression StorageBucketIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#expression StorageBucketIamMember#expression}.
 
 ---
 
@@ -698,7 +698,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#title StorageBucketIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#title StorageBucketIamMember#title}.
 
 ---
 
@@ -710,7 +710,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#description StorageBucketIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#description StorageBucketIamMember#description}.
 
 ---
 
@@ -735,11 +735,11 @@ const storageBucketIamMemberConfig: storageBucketIamMember.StorageBucketIamMembe
 | <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#bucket StorageBucketIamMember#bucket}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#member StorageBucketIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#role StorageBucketIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.bucket">bucket</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#bucket StorageBucketIamMember#bucket}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#member StorageBucketIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#role StorageBucketIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberCondition">StorageBucketIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#id StorageBucketIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.storageBucketIamMember.StorageBucketIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#id StorageBucketIamMember#id}. |
 
 ---
 
@@ -821,7 +821,7 @@ public readonly bucket: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#bucket StorageBucketIamMember#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#bucket StorageBucketIamMember#bucket}.
 
 ---
 
@@ -833,7 +833,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#member StorageBucketIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#member StorageBucketIamMember#member}.
 
 ---
 
@@ -845,7 +845,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#role StorageBucketIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#role StorageBucketIamMember#role}.
 
 ---
 
@@ -859,7 +859,7 @@ public readonly condition: StorageBucketIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#condition StorageBucketIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#condition StorageBucketIamMember#condition}
 
 ---
 
@@ -871,7 +871,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/storage_bucket_iam_member#id StorageBucketIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/storage_bucket_iam_member#id StorageBucketIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
