@@ -1,6 +1,6 @@
 # `google_iam_access_boundary_policy`
 
-Refer to the Terraform Registory for docs: [`google_iam_access_boundary_policy`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy).
+Refer to the Terraform Registory for docs: [`google_iam_access_boundary_policy`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy).
 
 # `iamAccessBoundaryPolicy` Submodule <a name="`iamAccessBoundaryPolicy` Submodule" id="@cdktf/provider-google.iamAccessBoundaryPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iam_access_boundary_policy`]
 
 ### IamAccessBoundaryPolicy <a name="IamAccessBoundaryPolicy" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy google_iam_access_boundary_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicy(scope Construct, id *string, config IamAccessBoundaryPolicyConfig) IamAccessBoundaryPolicy
 ```
@@ -317,7 +317,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.IamAccessBoundaryPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.IamAccessBoundaryPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ iamaccessboundarypolicy.IamAccessBoundaryPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.IamAccessBoundaryPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -705,7 +705,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 &iamaccessboundarypolicy.IamAccessBoundaryPolicyConfig {
 	Connection: interface{},
@@ -720,7 +720,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypol
 	Rules: interface{},
 	DisplayName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts,
 }
 ```
 
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypol
 | <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.parent">Parent</a></code> | <code>*string</code> | The attachment point is identified by its URL-encoded full resource name. |
 | <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.rules">Rules</a></code> | <code>interface{}</code> | rules block. |
 | <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | The display name of the rule. |
-| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts">IamAccessBoundaryPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -824,7 +824,7 @@ Name *string
 
 The name of the policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#name IamAccessBoundaryPolicy#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#name IamAccessBoundaryPolicy#name}
 
 ---
 
@@ -838,7 +838,7 @@ Parent *string
 
 The attachment point is identified by its URL-encoded full resource name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#parent IamAccessBoundaryPolicy#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#parent IamAccessBoundaryPolicy#parent}
 
 ---
 
@@ -852,7 +852,7 @@ Rules interface{}
 
 rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#rules IamAccessBoundaryPolicy#rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#rules IamAccessBoundaryPolicy#rules}
 
 ---
 
@@ -866,7 +866,7 @@ DisplayName *string
 
 The display name of the rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#display_name IamAccessBoundaryPolicy#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#display_name IamAccessBoundaryPolicy#display_name}
 
 ---
 
@@ -878,7 +878,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#id IamAccessBoundaryPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -895,7 +895,7 @@ Timeouts IamAccessBoundaryPolicyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#timeouts IamAccessBoundaryPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#timeouts IamAccessBoundaryPolicy#timeouts}
 
 ---
 
@@ -904,10 +904,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 &iamaccessboundarypolicy.IamAccessBoundaryPolicyRules {
-	AccessBoundaryRule: github.com/cdktf/cdktf-provider-google-go/google/v7.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRule,
+	AccessBoundaryRule: github.com/cdktf/cdktf-provider-google-go/google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRule,
 	Description: *string,
 }
 ```
@@ -931,7 +931,7 @@ AccessBoundaryRule IamAccessBoundaryPolicyRulesAccessBoundaryRule
 
 access_boundary_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#access_boundary_rule IamAccessBoundaryPolicy#access_boundary_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#access_boundary_rule IamAccessBoundaryPolicy#access_boundary_rule}
 
 ---
 
@@ -945,7 +945,7 @@ Description *string
 
 The description of the rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
 
 ---
 
@@ -954,10 +954,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 &iamaccessboundarypolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRule {
-	AvailabilityCondition: github.com/cdktf/cdktf-provider-google-go/google/v7.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition,
+	AvailabilityCondition: github.com/cdktf/cdktf-provider-google-go/google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition,
 	AvailablePermissions: *[]*string,
 	AvailableResource: *string,
 }
@@ -983,7 +983,7 @@ AvailabilityCondition IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailability
 
 availability_condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#availability_condition IamAccessBoundaryPolicy#availability_condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#availability_condition IamAccessBoundaryPolicy#availability_condition}
 
 ---
 
@@ -997,7 +997,7 @@ AvailablePermissions *[]*string
 
 A list of permissions that may be allowed for use on the specified resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#available_permissions IamAccessBoundaryPolicy#available_permissions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#available_permissions IamAccessBoundaryPolicy#available_permissions}
 
 ---
 
@@ -1011,7 +1011,7 @@ AvailableResource *string
 
 The full resource name of a Google Cloud resource entity.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#available_resource IamAccessBoundaryPolicy#available_resource}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#available_resource IamAccessBoundaryPolicy#available_resource}
 
 ---
 
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 &iamaccessboundarypolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityCondition {
 	Expression: *string,
@@ -1051,7 +1051,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#expression IamAccessBoundaryPolicy#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#expression IamAccessBoundaryPolicy#expression}
 
 ---
 
@@ -1068,7 +1068,7 @@ Description of the expression.
 This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#description IamAccessBoundaryPolicy#description}
 
 ---
 
@@ -1082,7 +1082,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#location IamAccessBoundaryPolicy#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#location IamAccessBoundaryPolicy#location}
 
 ---
 
@@ -1096,7 +1096,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#title IamAccessBoundaryPolicy#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#title IamAccessBoundaryPolicy#title}
 
 ---
 
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 &iamaccessboundarypolicy.IamAccessBoundaryPolicyTimeouts {
 	Create: *string,
@@ -1118,9 +1118,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypol
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}. |
-| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}. |
+| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}. |
 
 ---
 
@@ -1132,7 +1132,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#create IamAccessBoundaryPolicy#create}.
 
 ---
 
@@ -1144,7 +1144,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#delete IamAccessBoundaryPolicy#delete}.
 
 ---
 
@@ -1156,7 +1156,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/iam_access_boundary_policy#update IamAccessBoundaryPolicy#update}.
 
 ---
 
@@ -1167,7 +1167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityConditionOutputReference
 ```
@@ -1525,7 +1525,7 @@ func InternalValue() IamAccessBoundaryPolicyRulesAccessBoundaryRuleAvailabilityC
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesAccessBoundaryRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicyRulesAccessBoundaryRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamAccessBoundaryPolicyRulesAccessBoundaryRuleOutputReference
 ```
@@ -1874,7 +1874,7 @@ func InternalValue() IamAccessBoundaryPolicyRulesAccessBoundaryRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicyRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) IamAccessBoundaryPolicyRulesList
 ```
@@ -2017,7 +2017,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicyRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) IamAccessBoundaryPolicyRulesOutputReference
 ```
@@ -2355,7 +2355,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iamAccessBoundaryPolicy.IamAccessBoundaryPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iamaccessboundarypolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iamaccessboundarypolicy"
 
 iamaccessboundarypolicy.NewIamAccessBoundaryPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IamAccessBoundaryPolicyTimeoutsOutputReference
 ```

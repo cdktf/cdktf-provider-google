@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/data-sources/client_config
+// https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/client_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,7 +10,7 @@ export interface DataGoogleClientConfigConfig extends cdktf.TerraformMetaArgumen
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/data-sources/client_config google_client_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/client_config google_client_config}
 */
 export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
 
@@ -24,7 +24,7 @@ export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/data-sources/client_config google_client_config} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/client_config google_client_config} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -35,7 +35,7 @@ export class DataGoogleClientConfig extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_client_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.62.1',
+        providerVersion: '4.63.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

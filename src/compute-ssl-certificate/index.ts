@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate
+// https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,17 +12,17 @@ export interface ComputeSslCertificateConfig extends cdktf.TerraformMetaArgument
 The certificate chain must be no greater than 5 certs long.
 The chain must include at least one intermediate cert.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#certificate ComputeSslCertificate#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#certificate ComputeSslCertificate#certificate}
   */
   readonly certificate: string;
   /**
   * An optional description of this resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#description ComputeSslCertificate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#description ComputeSslCertificate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#id ComputeSslCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#id ComputeSslCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -40,39 +40,39 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#name ComputeSslCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#name ComputeSslCertificate#name}
   */
   readonly name?: string;
   /**
   * Creates a unique name beginning with the specified prefix. Conflicts with name.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#name_prefix ComputeSslCertificate#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#name_prefix ComputeSslCertificate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * The write-only private key in PEM format.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#private_key ComputeSslCertificate#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#private_key ComputeSslCertificate#private_key}
   */
   readonly privateKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#project ComputeSslCertificate#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#project ComputeSslCertificate#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#timeouts ComputeSslCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#timeouts ComputeSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeSslCertificateTimeouts;
 }
 export interface ComputeSslCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#create ComputeSslCertificate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#create ComputeSslCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate#delete ComputeSslCertificate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate#delete ComputeSslCertificate#delete}
   */
   readonly delete?: string;
 }
@@ -170,7 +170,7 @@ export class ComputeSslCertificateTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate google_compute_ssl_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate google_compute_ssl_certificate}
 */
 export class ComputeSslCertificate extends cdktf.TerraformResource {
 
@@ -184,7 +184,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/compute_ssl_certificate google_compute_ssl_certificate} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_ssl_certificate google_compute_ssl_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -195,7 +195,7 @@ export class ComputeSslCertificate extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_ssl_certificate',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.62.1',
+        providerVersion: '4.63.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_cloudiot_registry`
 
-Refer to the Terraform Registory for docs: [`google_cloudiot_registry`](https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry).
+Refer to the Terraform Registory for docs: [`google_cloudiot_registry`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry).
 
 # `cloudiotRegistry` Submodule <a name="`cloudiotRegistry` Submodule" id="@cdktf/provider-google.cloudiotRegistry"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_cloudiot_registry`](https://
 
 ### CloudiotRegistry <a name="CloudiotRegistry" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry google_cloudiot_registry}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry google_cloudiot_registry}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistry(scope Construct, id *string, config CloudiotRegistryConfig) CloudiotRegistry
 ```
@@ -379,7 +379,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsConstruct(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsTerraformElement(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ cloudiotregistry.CloudiotRegistry_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistry.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.CloudiotRegistry_IsTerraformResource(x interface{}) *bool
 ```
@@ -866,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryConfig {
 	Connection: interface{},
@@ -886,7 +886,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
 	Project: *string,
 	Region: *string,
 	StateNotificationConfig: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.cloudiotRegistry.CloudiotRegistryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudiotRegistry.CloudiotRegistryTimeouts,
 }
 ```
 
@@ -905,10 +905,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.credentials">Credentials</a></code> | <code>interface{}</code> | credentials block. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.eventNotificationConfigs">EventNotificationConfigs</a></code> | <code>interface{}</code> | event_notification_configs block. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.httpConfig">HttpConfig</a></code> | <code>*map[string]*string</code> | Activate or deactivate HTTP. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#id CloudiotRegistry#id}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#id CloudiotRegistry#id}. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.logLevel">LogLevel</a></code> | <code>*string</code> | The default logging verbosity for activity from devices in this registry. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.mqttConfig">MqttConfig</a></code> | <code>*map[string]*string</code> | Activate or deactivate MQTT. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#project CloudiotRegistry#project}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#project CloudiotRegistry#project}. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.region">Region</a></code> | <code>*string</code> | The region in which the created registry should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.stateNotificationConfig">StateNotificationConfig</a></code> | <code>*map[string]*string</code> | A PubSub topic to publish device state updates. |
 | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts">CloudiotRegistryTimeouts</a></code> | timeouts block. |
@@ -995,7 +995,7 @@ Name *string
 
 A unique name for the resource, required by device registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#name CloudiotRegistry#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#name CloudiotRegistry#name}
 
 ---
 
@@ -1009,7 +1009,7 @@ Credentials interface{}
 
 credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#credentials CloudiotRegistry#credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#credentials CloudiotRegistry#credentials}
 
 ---
 
@@ -1023,7 +1023,7 @@ EventNotificationConfigs interface{}
 
 event_notification_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#event_notification_configs CloudiotRegistry#event_notification_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#event_notification_configs CloudiotRegistry#event_notification_configs}
 
 ---
 
@@ -1037,7 +1037,7 @@ HttpConfig *map[string]*string
 
 Activate or deactivate HTTP.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#http_config CloudiotRegistry#http_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#http_config CloudiotRegistry#http_config}
 
 ---
 
@@ -1049,7 +1049,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#id CloudiotRegistry#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#id CloudiotRegistry#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1071,7 +1071,7 @@ example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#log_level CloudiotRegistry#log_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#log_level CloudiotRegistry#log_level}
 
 ---
 
@@ -1085,7 +1085,7 @@ MqttConfig *map[string]*string
 
 Activate or deactivate MQTT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#mqtt_config CloudiotRegistry#mqtt_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#mqtt_config CloudiotRegistry#mqtt_config}
 
 ---
 
@@ -1097,7 +1097,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#project CloudiotRegistry#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#project CloudiotRegistry#project}.
 
 ---
 
@@ -1111,7 +1111,7 @@ Region *string
 
 The region in which the created registry should reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#region CloudiotRegistry#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#region CloudiotRegistry#region}
 
 ---
 
@@ -1125,7 +1125,7 @@ StateNotificationConfig *map[string]*string
 
 A PubSub topic to publish device state updates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#state_notification_config CloudiotRegistry#state_notification_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#state_notification_config CloudiotRegistry#state_notification_config}
 
 ---
 
@@ -1139,7 +1139,7 @@ Timeouts CloudiotRegistryTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#timeouts CloudiotRegistry#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#timeouts CloudiotRegistry#timeouts}
 
 ---
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryCredentials {
 	PublicKeyCertificate: *map[string]*string,
@@ -1173,7 +1173,7 @@ PublicKeyCertificate *map[string]*string
 
 A public key certificate format and data.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#public_key_certificate CloudiotRegistry#public_key_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#public_key_certificate CloudiotRegistry#public_key_certificate}
 
 ---
 
@@ -1182,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryEventNotificationConfigs {
 	PubsubTopicName: *string,
@@ -1209,7 +1209,7 @@ PubsubTopicName *string
 
 PubSub topic name to publish device events.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#pubsub_topic_name CloudiotRegistry#pubsub_topic_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#pubsub_topic_name CloudiotRegistry#pubsub_topic_name}
 
 ---
 
@@ -1228,7 +1228,7 @@ leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last 'event_notification_configs'
 item.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#subfolder_matches CloudiotRegistry#subfolder_matches}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#subfolder_matches CloudiotRegistry#subfolder_matches}
 
 ---
 
@@ -1237,7 +1237,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 &cloudiotregistry.CloudiotRegistryTimeouts {
 	Create: *string,
@@ -1250,9 +1250,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#create CloudiotRegistry#create}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#delete CloudiotRegistry#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#update CloudiotRegistry#update}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#create CloudiotRegistry#create}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#delete CloudiotRegistry#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#update CloudiotRegistry#update}. |
 
 ---
 
@@ -1264,7 +1264,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#create CloudiotRegistry#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#create CloudiotRegistry#create}.
 
 ---
 
@@ -1276,7 +1276,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#delete CloudiotRegistry#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#delete CloudiotRegistry#delete}.
 
 ---
 
@@ -1288,7 +1288,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.62.1/docs/resources/cloudiot_registry#update CloudiotRegistry#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/cloudiot_registry#update CloudiotRegistry#update}.
 
 ---
 
@@ -1299,7 +1299,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentialsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryCredentialsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudiotRegistryCredentialsList
 ```
@@ -1442,7 +1442,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryCredentialsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryCredentialsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudiotRegistryCredentialsOutputReference
 ```
@@ -1731,7 +1731,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryEventNotificationConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CloudiotRegistryEventNotificationConfigsList
 ```
@@ -1874,7 +1874,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryEventNotificationConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryEventNotificationConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CloudiotRegistryEventNotificationConfigsOutputReference
 ```
@@ -2192,7 +2192,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistry.CloudiotRegistryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudiotregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistry"
 
 cloudiotregistry.NewCloudiotRegistryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudiotRegistryTimeoutsOutputReference
 ```
