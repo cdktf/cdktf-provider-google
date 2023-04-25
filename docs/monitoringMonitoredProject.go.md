@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 monitoringmonitoredproject.NewMonitoringMonitoredProject(scope Construct, id *string, config MonitoringMonitoredProjectConfig) MonitoringMonitoredProject
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 monitoringmonitoredproject.MonitoringMonitoredProject_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 monitoringmonitoredproject.MonitoringMonitoredProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ monitoringmonitoredproject.MonitoringMonitoredProject_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 monitoringmonitoredproject.MonitoringMonitoredProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 &monitoringmonitoredproject.MonitoringMonitoredProjectConfig {
 	Connection: interface{},
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproj
 	MetricsScope: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.monitoringMonitoredProject.MonitoringMonitoredProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.monitoringMonitoredProject.MonitoringMonitoredProjectTimeouts,
 }
 ```
 
@@ -810,7 +810,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 &monitoringmonitoredproject.MonitoringMonitoredProjectTimeouts {
 	Create: *string,
@@ -858,7 +858,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.monitoringMonitoredProject.MonitoringMonitoredProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/monitoringmonitoredproject"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/monitoringmonitoredproject"
 
 monitoringmonitoredproject.NewMonitoringMonitoredProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitoringMonitoredProjectTimeoutsOutputReference
 ```
