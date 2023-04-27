@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata
+// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#id ComputeProjectMetadata#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,29 +17,29 @@ export interface ComputeProjectMetadataConfig extends cdktf.TerraformMetaArgumen
   /**
   * A series of key value pairs.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#metadata ComputeProjectMetadata#metadata}
   */
   readonly metadata: { [key: string]: string };
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#project ComputeProjectMetadata#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#project ComputeProjectMetadata#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#timeouts ComputeProjectMetadata#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#timeouts ComputeProjectMetadata#timeouts}
   */
   readonly timeouts?: ComputeProjectMetadataTimeouts;
 }
 export interface ComputeProjectMetadataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#create ComputeProjectMetadata#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata#delete ComputeProjectMetadata#delete}
   */
   readonly delete?: string;
 }
@@ -137,7 +137,7 @@ export class ComputeProjectMetadataTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata google_compute_project_metadata}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata google_compute_project_metadata}
 */
 export class ComputeProjectMetadata extends cdktf.TerraformResource {
 
@@ -151,7 +151,7 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/compute_project_metadata google_compute_project_metadata} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_project_metadata google_compute_project_metadata} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -162,7 +162,7 @@ export class ComputeProjectMetadata extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_project_metadata',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.0',
+        providerVersion: '4.63.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow
+// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#description WorkflowsWorkflow#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#description WorkflowsWorkflow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#id WorkflowsWorkflow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#id WorkflowsWorkflow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,27 +23,27 @@ export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * A set of key/value label pairs to assign to this Workflow.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#labels WorkflowsWorkflow#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#labels WorkflowsWorkflow#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the Workflow.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#name WorkflowsWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#name WorkflowsWorkflow#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#name_prefix WorkflowsWorkflow#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#name_prefix WorkflowsWorkflow#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#project WorkflowsWorkflow#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#project WorkflowsWorkflow#project}
   */
   readonly project?: string;
   /**
   * The region of the workflow.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#region WorkflowsWorkflow#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#region WorkflowsWorkflow#region}
   */
   readonly region?: string;
   /**
@@ -52,33 +52,33 @@ account represents the identity of the workflow and determines what permissions 
 
 Format: projects/{project}/serviceAccounts/{account}.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#service_account WorkflowsWorkflow#service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#service_account WorkflowsWorkflow#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Workflow code to be executed. The size limit is 32KB.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#source_contents WorkflowsWorkflow#source_contents}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#source_contents WorkflowsWorkflow#source_contents}
   */
   readonly sourceContents?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#timeouts WorkflowsWorkflow#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#timeouts WorkflowsWorkflow#timeouts}
   */
   readonly timeouts?: WorkflowsWorkflowTimeouts;
 }
 export interface WorkflowsWorkflowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#create WorkflowsWorkflow#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#create WorkflowsWorkflow#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#delete WorkflowsWorkflow#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#delete WorkflowsWorkflow#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow#update WorkflowsWorkflow#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow#update WorkflowsWorkflow#update}
   */
   readonly update?: string;
 }
@@ -199,7 +199,7 @@ export class WorkflowsWorkflowTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow google_workflows_workflow}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow google_workflows_workflow}
 */
 export class WorkflowsWorkflow extends cdktf.TerraformResource {
 
@@ -213,7 +213,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/workflows_workflow google_workflows_workflow} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/workflows_workflow google_workflows_workflow} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -224,7 +224,7 @@ export class WorkflowsWorkflow extends cdktf.TerraformResource {
       terraformResourceType: 'google_workflows_workflow',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.0',
+        providerVersion: '4.63.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
