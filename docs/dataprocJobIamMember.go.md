@@ -1,6 +1,6 @@
 # `google_dataproc_job_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member).
+Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member).
 
 # `dataprocJobIamMember` Submodule <a name="`dataprocJobIamMember` Submodule" id="@cdktf/provider-google.dataprocJobIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_dataproc_job_iam_member`](ht
 
 ### DataprocJobIamMember <a name="DataprocJobIamMember" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member google_dataproc_job_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member google_dataproc_job_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.NewDataprocJobIamMember(scope Construct, id *string, config DataprocJobIamMemberConfig) DataprocJobIamMember
 ```
@@ -311,7 +311,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ dataprocjobiammember.DataprocJobIamMember_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.DataprocJobIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 &dataprocjobiammember.DataprocJobIamMemberCondition {
 	Expression: *string,
@@ -734,9 +734,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#expression DataprocJobIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#title DataprocJobIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#description DataprocJobIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#expression DataprocJobIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#title DataprocJobIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#description DataprocJobIamMember#description}. |
 
 ---
 
@@ -748,7 +748,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#expression DataprocJobIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#expression DataprocJobIamMember#expression}.
 
 ---
 
@@ -760,7 +760,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#title DataprocJobIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#title DataprocJobIamMember#title}.
 
 ---
 
@@ -772,7 +772,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#description DataprocJobIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#description DataprocJobIamMember#description}.
 
 ---
 
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 &dataprocjobiammember.DataprocJobIamMemberConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember
 	JobId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.dataprocJobIamMember.DataprocJobIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataprocJobIamMember.DataprocJobIamMemberCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -812,13 +812,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember
 | <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.jobId">JobId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#job_id DataprocJobIamMember#job_id}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#member DataprocJobIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#role DataprocJobIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.jobId">JobId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#job_id DataprocJobIamMember#job_id}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#member DataprocJobIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#role DataprocJobIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberCondition">DataprocJobIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#id DataprocJobIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#project DataprocJobIamMember#project}. |
-| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#region DataprocJobIamMember#region}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#id DataprocJobIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#project DataprocJobIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConfig.property.region">Region</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#region DataprocJobIamMember#region}. |
 
 ---
 
@@ -900,7 +900,7 @@ JobId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#job_id DataprocJobIamMember#job_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#job_id DataprocJobIamMember#job_id}.
 
 ---
 
@@ -912,7 +912,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#member DataprocJobIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#member DataprocJobIamMember#member}.
 
 ---
 
@@ -924,7 +924,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#role DataprocJobIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#role DataprocJobIamMember#role}.
 
 ---
 
@@ -938,7 +938,7 @@ Condition DataprocJobIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#condition DataprocJobIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#condition DataprocJobIamMember#condition}
 
 ---
 
@@ -950,7 +950,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#id DataprocJobIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#id DataprocJobIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +965,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#project DataprocJobIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#project DataprocJobIamMember#project}.
 
 ---
 
@@ -977,7 +977,7 @@ Region *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/dataproc_job_iam_member#region DataprocJobIamMember#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/dataproc_job_iam_member#region DataprocJobIamMember#region}.
 
 ---
 
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocJobIamMember.DataprocJobIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataprocjobiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/dataprocjobiammember"
 
 dataprocjobiammember.NewDataprocJobIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataprocJobIamMemberConditionOutputReference
 ```

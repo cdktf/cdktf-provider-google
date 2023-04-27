@@ -1,6 +1,6 @@
 # `google_logging_organization_exclusion`
 
-Refer to the Terraform Registory for docs: [`google_logging_organization_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion).
+Refer to the Terraform Registory for docs: [`google_logging_organization_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion).
 
 # `loggingOrganizationExclusion` Submodule <a name="`loggingOrganizationExclusion` Submodule" id="@cdktf/provider-google.loggingOrganizationExclusion"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_logging_organization_exclusi
 
 ### LoggingOrganizationExclusion <a name="LoggingOrganizationExclusion" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion google_logging_organization_exclusion}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion google_logging_organization_exclusion}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizationexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationexclusion"
 
 loggingorganizationexclusion.NewLoggingOrganizationExclusion(scope Construct, id *string, config LoggingOrganizationExclusionConfig) LoggingOrganizationExclusion
 ```
@@ -291,7 +291,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizationexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationexclusion"
 
 loggingorganizationexclusion.LoggingOrganizationExclusion_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizationexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationexclusion"
 
 loggingorganizationexclusion.LoggingOrganizationExclusion_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ loggingorganizationexclusion.LoggingOrganizationExclusion_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizationexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationexclusion"
 
 loggingorganizationexclusion.LoggingOrganizationExclusion_IsTerraformResource(x interface{}) *bool
 ```
@@ -668,7 +668,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizationexclusion"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationexclusion"
 
 &loggingorganizationexclusion.LoggingOrganizationExclusionConfig {
 	Connection: interface{},
@@ -700,10 +700,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/loggingorganizatione
 | <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.filter">Filter</a></code> | <code>*string</code> | The filter to apply when excluding logs. Only log entries that match the filter are excluded. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.name">Name</a></code> | <code>*string</code> | The name of the logging exclusion. |
-| <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.orgId">OrgId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}. |
+| <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.orgId">OrgId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.description">Description</a></code> | <code>*string</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingOrganizationExclusion.LoggingOrganizationExclusionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}. |
 
 ---
 
@@ -787,7 +787,7 @@ Filter *string
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#filter LoggingOrganizationExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#filter LoggingOrganizationExclusion#filter}
 
 ---
 
@@ -801,7 +801,7 @@ Name *string
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#name LoggingOrganizationExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#name LoggingOrganizationExclusion#name}
 
 ---
 
@@ -813,7 +813,7 @@ OrgId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#org_id LoggingOrganizationExclusion#org_id}.
 
 ---
 
@@ -827,7 +827,7 @@ Description *string
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#description LoggingOrganizationExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#description LoggingOrganizationExclusion#description}
 
 ---
 
@@ -841,7 +841,7 @@ Disabled interface{}
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#disabled LoggingOrganizationExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#disabled LoggingOrganizationExclusion#disabled}
 
 ---
 
@@ -853,7 +853,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/logging_organization_exclusion#id LoggingOrganizationExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

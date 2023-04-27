@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user
+// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -12,17 +12,17 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
 				to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
 				have been granted SQL roles. Possible values are: "ABANDON".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#deletion_policy SqlUser#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#deletion_policy SqlUser#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#host SqlUser#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#host SqlUser#host}
   */
   readonly host?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#id SqlUser#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#id SqlUser#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -31,45 +31,45 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#instance SqlUser#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#instance SqlUser#instance}
   */
   readonly instance: string;
   /**
   * The name of the user. Changing this forces a new resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#name SqlUser#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#name SqlUser#name}
   */
   readonly name: string;
   /**
   * The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#password SqlUser#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#password SqlUser#password}
   */
   readonly password?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#project SqlUser#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#project SqlUser#project}
   */
   readonly project?: string;
   /**
   * The user type. It determines the method to authenticate the user during login.
                 The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#type SqlUser#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#type SqlUser#type}
   */
   readonly type?: string;
   /**
   * password_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#password_policy SqlUser#password_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#password_policy SqlUser#password_policy}
   */
   readonly passwordPolicy?: SqlUserPasswordPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#timeouts SqlUser#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#timeouts SqlUser#timeouts}
   */
   readonly timeouts?: SqlUserTimeouts;
 }
@@ -215,25 +215,25 @@ export interface SqlUserPasswordPolicy {
   /**
   * Number of failed attempts allowed before the user get locked.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
   */
   readonly allowedFailedAttempts?: number;
   /**
   * If true, the check that will lock user after too many failed login attempts will be enabled.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
   */
   readonly enableFailedAttemptsCheck?: boolean | cdktf.IResolvable;
   /**
   * If true, the user must specify the current password before changing the password. This flag is supported only for MySQL.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#enable_password_verification SqlUser#enable_password_verification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#enable_password_verification SqlUser#enable_password_verification}
   */
   readonly enablePasswordVerification?: boolean | cdktf.IResolvable;
   /**
   * Password expiration duration with one week grace period.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
   */
   readonly passwordExpirationDuration?: string;
 }
@@ -373,15 +373,15 @@ export class SqlUserPasswordPolicyOutputReference extends cdktf.ComplexObject {
 }
 export interface SqlUserTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#create SqlUser#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#create SqlUser#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#delete SqlUser#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#delete SqlUser#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user#update SqlUser#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user#update SqlUser#update}
   */
   readonly update?: string;
 }
@@ -502,7 +502,7 @@ export class SqlUserTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user google_sql_user}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user google_sql_user}
 */
 export class SqlUser extends cdktf.TerraformResource {
 
@@ -516,7 +516,7 @@ export class SqlUser extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/resources/sql_user google_sql_user} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/sql_user google_sql_user} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -527,7 +527,7 @@ export class SqlUser extends cdktf.TerraformResource {
       terraformResourceType: 'google_sql_user',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.0',
+        providerVersion: '4.63.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `data_google_compute_global_forwarding_rule`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_global_forwarding_rule`](https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule).
+Refer to the Terraform Registory for docs: [`data_google_compute_global_forwarding_rule`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule).
 
 # `dataGoogleComputeGlobalForwardingRule` Submodule <a name="`dataGoogleComputeGlobalForwardingRule` Submodule" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_compute_global_forwardi
 
 ### DataGoogleComputeGlobalForwardingRule <a name="DataGoogleComputeGlobalForwardingRule" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.NewDataGoogleComputeGlobalForwardingRule(scope Construct, id *string, config DataGoogleComputeGlobalForwardingRuleConfig) DataGoogleComputeGlobalForwardingRule
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRule_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRule_IsTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -727,7 +727,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 &datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRuleConfig {
 	Connection: interface{},
@@ -755,7 +755,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglo
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.name">Name</a></code> | <code>*string</code> | Name of the resource; |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleConfig.property.project">Project</a></code> | <code>*string</code> | The project this resource belongs in. |
 
 ---
@@ -842,7 +842,7 @@ Name of the resource;
 
 provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
 
 ---
 
@@ -854,7 +854,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -871,7 +871,7 @@ Project *string
 
 The project this resource belongs in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
 
 ---
 
@@ -880,7 +880,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 &datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRuleMetadataFilters {
 
@@ -893,7 +893,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 &datagooglecomputeglobalforwardingrule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
 
@@ -908,7 +908,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.NewDataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsList
 ```
@@ -1040,7 +1040,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.NewDataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterLabelsOutputReference
 ```
@@ -1329,7 +1329,7 @@ func InternalValue() DataGoogleComputeGlobalForwardingRuleMetadataFiltersFilterL
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.NewDataGoogleComputeGlobalForwardingRuleMetadataFiltersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeGlobalForwardingRuleMetadataFiltersList
 ```
@@ -1461,7 +1461,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeGlobalForwardingRule.DataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputeglobalforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputeglobalforwardingrule"
 
 datagooglecomputeglobalforwardingrule.NewDataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeGlobalForwardingRuleMetadataFiltersOutputReference
 ```
