@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDisk(scope Construct, id *string, config DataGoogleComputeDiskConfig) DataGoogleComputeDisk
 ```
@@ -291,7 +291,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.DataGoogleComputeDisk_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.DataGoogleComputeDisk_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglecomputedisk.DataGoogleComputeDisk_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDisk.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.DataGoogleComputeDisk_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -833,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 &datagooglecomputedisk.DataGoogleComputeDiskConfig {
 	Connection: interface{},
@@ -1006,7 +1006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 &datagooglecomputedisk.DataGoogleComputeDiskDiskEncryptionKey {
 
@@ -1019,7 +1019,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedis
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceImageEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 &datagooglecomputedisk.DataGoogleComputeDiskSourceImageEncryptionKey {
 
@@ -1032,7 +1032,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedis
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 &datagooglecomputedisk.DataGoogleComputeDiskSourceSnapshotEncryptionKey {
 
@@ -1047,7 +1047,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedis
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskDiskEncryptionKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskDiskEncryptionKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeDiskDiskEncryptionKeyList
 ```
@@ -1179,7 +1179,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeDiskDiskEncryptionKeyOutputReference
 ```
@@ -1501,7 +1501,7 @@ func InternalValue() DataGoogleComputeDiskDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceImageEncryptionKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskSourceImageEncryptionKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeDiskSourceImageEncryptionKeyList
 ```
@@ -1633,7 +1633,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceImageEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskSourceImageEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeDiskSourceImageEncryptionKeyOutputReference
 ```
@@ -1944,7 +1944,7 @@ func InternalValue() DataGoogleComputeDiskSourceImageEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceSnapshotEncryptionKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskSourceSnapshotEncryptionKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleComputeDiskSourceSnapshotEncryptionKeyList
 ```
@@ -2076,7 +2076,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeDisk.DataGoogleComputeDiskSourceSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglecomputedisk"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputedisk"
 
 datagooglecomputedisk.NewDataGoogleComputeDiskSourceSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleComputeDiskSourceSnapshotEncryptionKeyOutputReference
 ```
