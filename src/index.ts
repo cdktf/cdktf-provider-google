@@ -7,6 +7,7 @@ export * as accessContextManagerAccessPolicyIamBinding from './access-context-ma
 export * as accessContextManagerAccessPolicyIamMember from './access-context-manager-access-policy-iam-member';
 export * as accessContextManagerAccessPolicyIamPolicy from './access-context-manager-access-policy-iam-policy';
 export * as accessContextManagerAuthorizedOrgsDesc from './access-context-manager-authorized-orgs-desc';
+export * as accessContextManagerEgressPolicy from './access-context-manager-egress-policy';
 export * as accessContextManagerGcpUserAccessBinding from './access-context-manager-gcp-user-access-binding';
 export * as accessContextManagerIngressPolicy from './access-context-manager-ingress-policy';
 export * as accessContextManagerServicePerimeter from './access-context-manager-service-perimeter';
@@ -299,6 +300,7 @@ export * as dataLossPreventionDeidentifyTemplate from './data-loss-prevention-de
 export * as dataLossPreventionInspectTemplate from './data-loss-prevention-inspect-template';
 export * as dataLossPreventionJobTrigger from './data-loss-prevention-job-trigger';
 export * as dataLossPreventionStoredInfoType from './data-loss-prevention-stored-info-type';
+export * as databaseMigrationServiceConnectionProfile from './database-migration-service-connection-profile';
 export * as dataflowJob from './dataflow-job';
 export * as dataplexAsset from './dataplex-asset';
 export * as dataplexAssetIamBinding from './dataplex-asset-iam-binding';
@@ -628,6 +630,8 @@ export * as dataGoogleAccessApprovalFolderServiceAccount from './data-google-acc
 export * as dataGoogleAccessApprovalOrganizationServiceAccount from './data-google-access-approval-organization-service-account';
 export * as dataGoogleAccessApprovalProjectServiceAccount from './data-google-access-approval-project-service-account';
 export * as dataGoogleActiveFolder from './data-google-active-folder';
+export * as dataGoogleAlloydbLocations from './data-google-alloydb-locations';
+export * as dataGoogleAlloydbSupportedDatabaseFlags from './data-google-alloydb-supported-database-flags';
 export * as dataGoogleAppEngineDefaultServiceAccount from './data-google-app-engine-default-service-account';
 export * as dataGoogleArtifactRegistryRepository from './data-google-artifact-registry-repository';
 export * as dataGoogleBeyondcorpAppConnection from './data-google-beyondcorp-app-connection';
@@ -742,6 +746,7 @@ export * as dataGoogleSqlDatabase from './data-google-sql-database';
 export * as dataGoogleSqlDatabaseInstance from './data-google-sql-database-instance';
 export * as dataGoogleSqlDatabaseInstances from './data-google-sql-database-instances';
 export * as dataGoogleSqlDatabases from './data-google-sql-databases';
+export * as dataGoogleSqlTiers from './data-google-sql-tiers';
 export * as dataGoogleStorageBucket from './data-google-storage-bucket';
 export * as dataGoogleStorageBucketObject from './data-google-storage-bucket-object';
 export * as dataGoogleStorageBucketObjectContent from './data-google-storage-bucket-object-content';

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,40 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule#id DataGoogleComputeForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule#id DataGoogleComputeForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+  * Name of the resource; provided by the client when the resource is created.
+The name must be 1-63 characters long, and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+
+Specifically, the name must be 1-63 characters long and match the regular
+expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first
+character must be a lowercase letter, and all following characters must
+be a dash, lowercase letter, or digit, except the last character, which
+cannot be a dash.
+
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, the forwarding rule name must be a 1-20 characters string with
+lowercase letters and numbers and must start with a letter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule#name DataGoogleComputeForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule#name DataGoogleComputeForwardingRule#name}
   */
   readonly name: string;
   /**
-  * The project this resource belongs in.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule#project DataGoogleComputeForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule#project DataGoogleComputeForwardingRule#project}
   */
   readonly project?: string;
   /**
-  * The location of this resource.
+  * A reference to the region where the regional forwarding rule resides.
+
+This field is not applicable to global forwarding rules.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule#region DataGoogleComputeForwardingRule#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule#region DataGoogleComputeForwardingRule#region}
   */
   readonly region?: string;
 }
@@ -104,7 +116,7 @@ export class DataGoogleComputeForwardingRuleServiceDirectoryRegistrationsList ex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule}
 */
 export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
 
@@ -118,7 +130,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_forwarding_rule google_compute_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -129,7 +141,7 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -163,6 +175,11 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // backend_service - computed: true, optional: false, required: false
   public get backendService() {
     return this.getStringAttribute('backend_service');
+  }
+
+  // base_forwarding_rule - computed: true, optional: false, required: false
+  public get baseForwardingRule() {
+    return this.getStringAttribute('base_forwarding_rule');
   }
 
   // creation_timestamp - computed: true, optional: false, required: false
@@ -316,6 +333,11 @@ export class DataGoogleComputeForwardingRule extends cdktf.TerraformDataSource {
   // service_name - computed: true, optional: false, required: false
   public get serviceName() {
     return this.getStringAttribute('service_name');
+  }
+
+  // source_ip_ranges - computed: true, optional: false, required: false
+  public get sourceIpRanges() {
+    return this.getListAttribute('source_ip_ranges');
   }
 
   // subnetwork - computed: true, optional: false, required: false

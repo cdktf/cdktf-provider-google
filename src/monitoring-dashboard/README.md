@@ -1,3 +1,3 @@
 # `google_monitoring_dashboard`
 
-Refer to the Terraform Registory for docs: [`google_monitoring_dashboard`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_dashboard).
+Refer to the Terraform Registory for docs: [`google_monitoring_dashboard`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_dashboard).

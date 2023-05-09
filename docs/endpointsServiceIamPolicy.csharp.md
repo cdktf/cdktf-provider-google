@@ -1,6 +1,6 @@
 # `google_endpoints_service_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy).
+Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy).
 
 # `endpointsServiceIamPolicy` Submodule <a name="`endpointsServiceIamPolicy` Submodule" id="@cdktf/provider-google.endpointsServiceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_endpoints_service_iam_policy
 
 ### EndpointsServiceIamPolicy <a name="EndpointsServiceIamPolicy" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy google_endpoints_service_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy google_endpoints_service_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicy.Initializer"></a>
 
@@ -626,9 +626,9 @@ new EndpointsServiceIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#policy_data EndpointsServiceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.serviceName">ServiceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#service_name EndpointsServiceIamPolicy#service_name}. |
-| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#id EndpointsServiceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#policy_data EndpointsServiceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.serviceName">ServiceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#service_name EndpointsServiceIamPolicy#service_name}. |
+| <code><a href="#@cdktf/provider-google.endpointsServiceIamPolicy.EndpointsServiceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#id EndpointsServiceIamPolicy#id}. |
 
 ---
 
@@ -710,7 +710,7 @@ public string PolicyData { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#policy_data EndpointsServiceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#policy_data EndpointsServiceIamPolicy#policy_data}.
 
 ---
 
@@ -722,7 +722,7 @@ public string ServiceName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#service_name EndpointsServiceIamPolicy#service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#service_name EndpointsServiceIamPolicy#service_name}.
 
 ---
 
@@ -734,7 +734,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/endpoints_service_iam_policy#id EndpointsServiceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/endpoints_service_iam_policy#id EndpointsServiceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
