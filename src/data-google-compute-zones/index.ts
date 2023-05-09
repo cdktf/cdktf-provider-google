@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,28 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeZonesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones#id DataGoogleComputeZones#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones#project DataGoogleComputeZones#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones#region DataGoogleComputeZones#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones#status DataGoogleComputeZones#status}
   */
   readonly status?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones google_compute_zones}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones google_compute_zones}
 */
 export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
 
@@ -43,7 +43,7 @@ export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_zones google_compute_zones} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_zones google_compute_zones} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -54,7 +54,7 @@ export class DataGoogleComputeZones extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_zones',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

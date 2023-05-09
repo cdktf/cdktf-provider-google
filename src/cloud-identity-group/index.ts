@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,17 +11,17 @@ export interface CloudIdentityGroupConfig extends cdktf.TerraformMetaArguments {
   * An extended description to help users determine the purpose of a Group.
 Must not be longer than 4,096 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#description CloudIdentityGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#description CloudIdentityGroup#description}
   */
   readonly description?: string;
   /**
   * The display name of the Group.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#display_name CloudIdentityGroup#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#display_name CloudIdentityGroup#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#id CloudIdentityGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#id CloudIdentityGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +34,7 @@ See the
 [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig)
 for possible values. Default value: "EMPTY" Possible values: ["INITIAL_GROUP_CONFIG_UNSPECIFIED", "WITH_INITIAL_OWNER", "EMPTY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#initial_group_config CloudIdentityGroup#initial_group_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#initial_group_config CloudIdentityGroup#initial_group_config}
   */
   readonly initialGroupConfig?: string;
   /**
@@ -48,7 +48,7 @@ Dynamic groups have a label with a key of cloudidentity.googleapis.com/groups.dy
 
 Identity-mapped groups for Cloud Search have a label with a key of system/groups/external and an empty value.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#labels CloudIdentityGroup#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#labels CloudIdentityGroup#labels}
   */
   readonly labels: { [key: string]: string };
   /**
@@ -58,19 +58,19 @@ Cloud Identity resource hierarchy.
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
 groups or customers/{customer_id} for Google Groups.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#parent CloudIdentityGroup#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#parent CloudIdentityGroup#parent}
   */
   readonly parent: string;
   /**
   * group_key block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#group_key CloudIdentityGroup#group_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#group_key CloudIdentityGroup#group_key}
   */
   readonly groupKey: CloudIdentityGroupGroupKey;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#timeouts CloudIdentityGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#timeouts CloudIdentityGroup#timeouts}
   */
   readonly timeouts?: CloudIdentityGroupTimeouts;
 }
@@ -86,7 +86,7 @@ to the Identity Source's requirements.
 
 Must be unique within a namespace.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#id CloudIdentityGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#id CloudIdentityGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -102,7 +102,7 @@ If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of 'identitysources/{identity_source_id}'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#namespace CloudIdentityGroup#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#namespace CloudIdentityGroup#namespace}
   */
   readonly namespace?: string;
 }
@@ -187,15 +187,15 @@ export class CloudIdentityGroupGroupKeyOutputReference extends cdktf.ComplexObje
 }
 export interface CloudIdentityGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#create CloudIdentityGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#create CloudIdentityGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#delete CloudIdentityGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#delete CloudIdentityGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group#update CloudIdentityGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group#update CloudIdentityGroup#update}
   */
   readonly update?: string;
 }
@@ -316,7 +316,7 @@ export class CloudIdentityGroupTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group google_cloud_identity_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group google_cloud_identity_group}
 */
 export class CloudIdentityGroup extends cdktf.TerraformResource {
 
@@ -330,7 +330,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/cloud_identity_group google_cloud_identity_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/cloud_identity_group google_cloud_identity_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -341,7 +341,7 @@ export class CloudIdentityGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_identity_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

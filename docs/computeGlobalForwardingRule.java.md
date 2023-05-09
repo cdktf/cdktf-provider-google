@@ -1,6 +1,6 @@
 # `google_compute_global_forwarding_rule`
 
-Refer to the Terraform Registory for docs: [`google_compute_global_forwarding_rule`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule).
+Refer to the Terraform Registory for docs: [`google_compute_global_forwarding_rule`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule).
 
 # `computeGlobalForwardingRule` Submodule <a name="`computeGlobalForwardingRule` Submodule" id="@cdktf/provider-google.computeGlobalForwardingRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_global_forwarding_ru
 
 ### ComputeGlobalForwardingRule <a name="ComputeGlobalForwardingRule" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule google_compute_global_forwarding_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer"></a>
 
@@ -41,6 +41,7 @@ ComputeGlobalForwardingRule.Builder.create(Construct scope, java.lang.String id)
 //  .network(java.lang.String)
 //  .portRange(java.lang.String)
 //  .project(java.lang.String)
+//  .sourceIpRanges(java.util.List<java.lang.String>)
 //  .timeouts(ComputeGlobalForwardingRuleTimeouts)
     .build();
 ```
@@ -59,16 +60,17 @@ ComputeGlobalForwardingRule.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Name of the resource; |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.target">target</a></code> | <code>java.lang.String</code> | The URL of the target resource to receive the matched traffic. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address that this forwarding rule serves. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address for which this forwarding rule accepts traffic. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.ipProtocol">ipProtocol</a></code> | <code>java.lang.String</code> | The IP protocol to which this rule applies. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.ipVersion">ipVersion</a></code> | <code>java.lang.String</code> | The IP Version that will be used by this forwarding rule. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels to apply to this rule. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.ipVersion">ipVersion</a></code> | <code>java.lang.String</code> | The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"]. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels to apply to this forwarding rule.  A list of key->value pairs. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.loadBalancingScheme">loadBalancingScheme</a></code> | <code>java.lang.String</code> | Specifies the forwarding rule type. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.metadataFilters">metadataFilters</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters">ComputeGlobalForwardingRuleMetadataFilters</a>></code> | metadata_filters block. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.network">network</a></code> | <code>java.lang.String</code> | This field is not used for external load balancing. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.portRange">portRange</a></code> | <code>java.lang.String</code> | When the load balancing scheme is `EXTERNAL`, `INTERNAL_SELF_MANAGED` and `INTERNAL_MANAGED`, you can specify a `port_range`. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The project this resource belongs in. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.portRange">portRange</a></code> | <code>java.lang.String</code> | This field can only be used:. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.sourceIpRanges">sourceIpRanges</a></code> | <code>java.util.List<java.lang.String></code> | If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts">ComputeGlobalForwardingRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -139,9 +141,21 @@ Must be unique amongst siblings in the same scope
 
 Name of the resource;
 
-provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+provided by the client when the resource is created.
+The name must be 1-63 characters long, and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
+Specifically, the name must be 1-63 characters long and match the regular
+expression '[a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?' which means the first
+character must be a lowercase letter, and all following characters must
+be a dash, lowercase letter, or digit, except the last character, which
+cannot be a dash.
+
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, the forwarding rule name must be a 1-20 characters string with
+lowercase letters and numbers and must start with a letter.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
 
 ---
 
@@ -151,9 +165,20 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The URL of the target resource to receive the matched traffic.
 
-For regional forwarding rules, this target must live in the same region as the forwarding rule. For global forwarding rules, this target must be a global load balancing resource. The forwarded traffic must be of a type appropriate to the target object. For `INTERNAL_SELF_MANAGED` load balancing, only `targetHttpProxy` is valid, not `targetHttpsProxy`.
+For
+regional forwarding rules, this target must be in the same region as the
+forwarding rule. For global forwarding rules, this target must be a global
+load balancing resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#target ComputeGlobalForwardingRule#target}
+The forwarded traffic must be of a type appropriate to the target object.
+For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
+'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
+'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
+
+For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#target ComputeGlobalForwardingRule#target}
 
 ---
 
@@ -163,7 +188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#description ComputeGlobalForwardingRule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#description ComputeGlobalForwardingRule#description}
 
 ---
 
@@ -171,7 +196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -182,11 +207,48 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-IP address that this forwarding rule serves.
+IP address for which this forwarding rule accepts traffic.
 
-When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in `https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name` * Partial URL or by name, as in: * `projects/project_id/regions/region/addresses/address-name` * `regions/region/addresses/address-name` * `global/addresses/address-name` * `address-name` The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+When a client
+sends traffic to this IP address, the forwarding rule directs the traffic
+to the referenced 'target'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_address ComputeGlobalForwardingRule#ip_address}
+While creating a forwarding rule, specifying an 'IPAddress' is
+required under the following circumstances:
+
+When the 'target' is set to 'targetGrpcProxy' and
+'validateForProxyless' is set to 'true', the
+'IPAddress' should be set to '0.0.0.0'.
+When the 'target' is a Private Service Connect Google APIs
+bundle, you must specify an 'IPAddress'.
+
+Otherwise, you can optionally specify an IP address that references an
+existing static (reserved) IP address resource. When omitted, Google Cloud
+assigns an ephemeral IP address.
+
+Use one of the following formats to specify an IP address while creating a
+forwarding rule:
+
+IP address number, as in '100.1.2.3'
+IPv6 address range, as in '2600:1234::/96'
+Full resource URL, as in
+'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
+Partial URL or by name, as in:
+'projects/project_id/regions/region/addresses/address-name'
+'regions/region/addresses/address-name'
+'global/addresses/address-name'
+'address-name'
+
+The forwarding rule's 'target',
+and in most cases, also the 'loadBalancingScheme', determine the
+type of IP address that you can use. For detailed information, see
+[IP address
+specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+
+When reading an 'IPAddress', the API always returns the IP
+address number.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_address ComputeGlobalForwardingRule#ip_address}
 
 ---
 
@@ -196,9 +258,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The IP protocol to which this rule applies.
 
-For protocol forwarding, valid options are `TCP`, `UDP`, `ESP`, `AH`, `SCTP` or `ICMP`. For Internal TCP/UDP Load Balancing, the load balancing scheme is `INTERNAL`, and one of `TCP` or `UDP` are valid. For Traffic Director, the load balancing scheme is `INTERNAL_SELF_MANAGED`, and only `TCP`is valid. For Internal HTTP(S) Load Balancing, the load balancing scheme is `INTERNAL_MANAGED`, and only `TCP` is valid. For HTTP(S), SSL Proxy, and TCP Proxy Load Balancing, the load balancing scheme is `EXTERNAL` and only `TCP` is valid. For Network TCP/UDP Load Balancing, the load balancing scheme is `EXTERNAL`, and one of `TCP` or `UDP` is valid.
+For protocol forwarding, valid
+options are 'TCP', 'UDP', 'ESP',
+'AH', 'SCTP', 'ICMP' and
+'L3_DEFAULT'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
+The valid IP protocols are different for different load balancing products
+as described in [Load balancing
+features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
 
 ---
 
@@ -206,11 +275,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-The IP Version that will be used by this forwarding rule.
+The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"].
 
-Valid options are `IPV4` or `IPV6`. This can only be specified for an external global forwarding rule. Possible values: UNSPECIFIED_VERSION, IPV4, IPV6
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_version ComputeGlobalForwardingRule#ip_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_version ComputeGlobalForwardingRule#ip_version}
 
 ---
 
@@ -218,9 +285,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Labels to apply to this rule.
+Labels to apply to this forwarding rule.  A list of key->value pairs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
 
 ---
 
@@ -230,23 +297,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specifies the forwarding rule type.
 
-`EXTERNAL` is used for:
-Classic Cloud VPN gateways
-Protocol forwarding to VMs from an external IP address
-The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP
-`INTERNAL` is used for:
-Protocol forwarding to VMs from an internal IP address
-Internal TCP/UDP load balancers
-`INTERNAL_MANAGED` is used for:
-Internal HTTP(S) load balancers
-`INTERNAL_SELF_MANAGED` is used for:
-Traffic Director
-`EXTERNAL_MANAGED` is used for:
-Global external HTTP(S) load balancers
+For more information about forwarding rules, refer to
+[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL_SELF_MANAGED"]
 
-For more information about forwarding rules, refer to [Forwarding rule concepts](/load-balancing/docs/forwarding-rule-concepts). Possible values: INVALID, INTERNAL, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED, EXTERNAL, EXTERNAL_MANAGED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
 
 ---
 
@@ -256,7 +310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 metadata_filters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
 
 ---
 
@@ -266,9 +320,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 This field is not used for external load balancing.
 
-For `INTERNAL` and `INTERNAL_SELF_MANAGED` load balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used.
+For Internal TCP/UDP Load Balancing, this field identifies the network that
+the load balanced IP should belong to for this Forwarding Rule.
+If the subnetwork is specified, the network of the subnetwork will be used.
+If neither subnetwork nor this field is specified, the default network will
+be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#network ComputeGlobalForwardingRule#network}
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, a network must be provided.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#network ComputeGlobalForwardingRule#network}
 
 ---
 
@@ -276,15 +337,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-When the load balancing scheme is `EXTERNAL`, `INTERNAL_SELF_MANAGED` and `INTERNAL_MANAGED`, you can specify a `port_range`.
+This field can only be used:.
 
-Use with a forwarding rule that points to a target proxy or a target pool. Do not use with a forwarding rule that points to a backend service. This field is used along with the `target` field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance. Applicable only when `IPProtocol` is `TCP`, `UDP`, or `SCTP`, only packets addressed to ports in the specified range will be forwarded to `target`. Forwarding rules with the same `[IPAddress, IPProtocol]` pair must have disjoint port ranges. Some types of forwarding target have constraints on the acceptable ports:
+If 'IPProtocol' is one of TCP, UDP, or SCTP.
+By backend service-based network load balancers, target pool-based
+network load balancers, internal proxy load balancers, external proxy load
+balancers, Traffic Director, external protocol forwarding, and Classic VPN.
+Some products have restrictions on what ports can be used. See
+[port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
+for details.
 
 TargetHttpProxy: 80, 8080
 TargetHttpsProxy: 443
-TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
-TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
+TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+1883, 5222
+TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+1883, 5222
 TargetVpnGateway: 500, 4500
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#port_range ComputeGlobalForwardingRule#port_range}
 
 ---
 
@@ -292,9 +363,19 @@ TargetVpnGateway: 500, 4500
 
 - *Type:* java.lang.String
 
-The project this resource belongs in.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}
+---
+
+##### `sourceIpRanges`<sup>Optional</sup> <a name="sourceIpRanges" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.Initializer.parameter.sourceIpRanges"></a>
+
+- *Type:* java.util.List<java.lang.String>
+
+If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here.
+
+Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#source_ip_ranges ComputeGlobalForwardingRule#source_ip_ranges}
 
 ---
 
@@ -304,7 +385,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#timeouts ComputeGlobalForwardingRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#timeouts ComputeGlobalForwardingRule#timeouts}
 
 ---
 
@@ -341,6 +422,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetNetwork">resetNetwork</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetPortRange">resetPortRange</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetProject">resetProject</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetSourceIpRanges">resetSourceIpRanges</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
 ---
@@ -619,6 +701,12 @@ public void resetPortRange()
 public void resetProject()
 ```
 
+##### `resetSourceIpRanges` <a name="resetSourceIpRanges" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetSourceIpRanges"></a>
+
+```java
+public void resetSourceIpRanges()
+```
+
 ##### `resetTimeouts` <a name="resetTimeouts" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.resetTimeouts"></a>
 
 ```java
@@ -713,6 +801,7 @@ ComputeGlobalForwardingRule.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.baseForwardingRule">baseForwardingRule</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.labelFingerprint">labelFingerprint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.metadataFilters">metadataFilters</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersList">ComputeGlobalForwardingRuleMetadataFiltersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.pscConnectionId">pscConnectionId</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -731,6 +820,7 @@ ComputeGlobalForwardingRule.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.networkInput">networkInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.portRangeInput">portRangeInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.projectInput">projectInput</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.sourceIpRangesInput">sourceIpRangesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.targetInput">targetInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts">ComputeGlobalForwardingRuleTimeouts</a> OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -744,6 +834,7 @@ ComputeGlobalForwardingRule.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.network">network</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.portRange">portRange</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.project">project</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.sourceIpRanges">sourceIpRanges</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.target">target</a></code> | <code>java.lang.String</code> | *No description.* |
 
 ---
@@ -887,6 +978,16 @@ public java.lang.Object getProvisioners();
 ```
 
 - *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+
+---
+
+##### `baseForwardingRule`<sup>Required</sup> <a name="baseForwardingRule" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.baseForwardingRule"></a>
+
+```java
+public java.lang.String getBaseForwardingRule();
+```
+
+- *Type:* java.lang.String
 
 ---
 
@@ -1070,6 +1171,16 @@ public java.lang.String getProjectInput();
 
 ---
 
+##### `sourceIpRangesInput`<sup>Optional</sup> <a name="sourceIpRangesInput" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.sourceIpRangesInput"></a>
+
+```java
+public java.util.List<java.lang.String> getSourceIpRangesInput();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
 ##### `targetInput`<sup>Optional</sup> <a name="targetInput" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.targetInput"></a>
 
 ```java
@@ -1200,6 +1311,16 @@ public java.lang.String getProject();
 
 ---
 
+##### `sourceIpRanges`<sup>Required</sup> <a name="sourceIpRanges" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.sourceIpRanges"></a>
+
+```java
+public java.util.List<java.lang.String> getSourceIpRanges();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+---
+
 ##### `target`<sup>Required</sup> <a name="target" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRule.property.target"></a>
 
 ```java
@@ -1263,6 +1384,7 @@ ComputeGlobalForwardingRuleConfig.builder()
 //  .network(java.lang.String)
 //  .portRange(java.lang.String)
 //  .project(java.lang.String)
+//  .sourceIpRanges(java.util.List<java.lang.String>)
 //  .timeouts(ComputeGlobalForwardingRuleTimeouts)
     .build();
 ```
@@ -1281,16 +1403,17 @@ ComputeGlobalForwardingRuleConfig.builder()
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.name">name</a></code> | <code>java.lang.String</code> | Name of the resource; |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.target">target</a></code> | <code>java.lang.String</code> | The URL of the target resource to receive the matched traffic. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.description">description</a></code> | <code>java.lang.String</code> | An optional description of this resource. Provide this property when you create the resource. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address that this forwarding rule serves. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | IP address for which this forwarding rule accepts traffic. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.ipProtocol">ipProtocol</a></code> | <code>java.lang.String</code> | The IP protocol to which this rule applies. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.ipVersion">ipVersion</a></code> | <code>java.lang.String</code> | The IP Version that will be used by this forwarding rule. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels to apply to this rule. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.ipVersion">ipVersion</a></code> | <code>java.lang.String</code> | The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"]. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels to apply to this forwarding rule.  A list of key->value pairs. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.loadBalancingScheme">loadBalancingScheme</a></code> | <code>java.lang.String</code> | Specifies the forwarding rule type. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.metadataFilters">metadataFilters</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters">ComputeGlobalForwardingRuleMetadataFilters</a>></code> | metadata_filters block. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.network">network</a></code> | <code>java.lang.String</code> | This field is not used for external load balancing. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.portRange">portRange</a></code> | <code>java.lang.String</code> | When the load balancing scheme is `EXTERNAL`, `INTERNAL_SELF_MANAGED` and `INTERNAL_MANAGED`, you can specify a `port_range`. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.project">project</a></code> | <code>java.lang.String</code> | The project this resource belongs in. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.portRange">portRange</a></code> | <code>java.lang.String</code> | This field can only be used:. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.sourceIpRanges">sourceIpRanges</a></code> | <code>java.util.List<java.lang.String></code> | If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts">ComputeGlobalForwardingRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1375,9 +1498,21 @@ public java.lang.String getName();
 
 Name of the resource;
 
-provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+provided by the client when the resource is created.
+The name must be 1-63 characters long, and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
+Specifically, the name must be 1-63 characters long and match the regular
+expression '[a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?' which means the first
+character must be a lowercase letter, and all following characters must
+be a dash, lowercase letter, or digit, except the last character, which
+cannot be a dash.
+
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, the forwarding rule name must be a 1-20 characters string with
+lowercase letters and numbers and must start with a letter.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
 
 ---
 
@@ -1391,9 +1526,20 @@ public java.lang.String getTarget();
 
 The URL of the target resource to receive the matched traffic.
 
-For regional forwarding rules, this target must live in the same region as the forwarding rule. For global forwarding rules, this target must be a global load balancing resource. The forwarded traffic must be of a type appropriate to the target object. For `INTERNAL_SELF_MANAGED` load balancing, only `targetHttpProxy` is valid, not `targetHttpsProxy`.
+For
+regional forwarding rules, this target must be in the same region as the
+forwarding rule. For global forwarding rules, this target must be a global
+load balancing resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#target ComputeGlobalForwardingRule#target}
+The forwarded traffic must be of a type appropriate to the target object.
+For load balancers, see the "Target" column in [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the name of a supported Google API bundle:
+'vpc-sc' - [ APIs that support VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/supported-products).
+'all-apis' - [All supported Google APIs](https://cloud.google.com/vpc/docs/private-service-connect#supported-apis).
+
+For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#target ComputeGlobalForwardingRule#target}
 
 ---
 
@@ -1407,7 +1553,7 @@ public java.lang.String getDescription();
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#description ComputeGlobalForwardingRule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#description ComputeGlobalForwardingRule#description}
 
 ---
 
@@ -1419,7 +1565,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#id ComputeGlobalForwardingRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1434,11 +1580,48 @@ public java.lang.String getIpAddress();
 
 - *Type:* java.lang.String
 
-IP address that this forwarding rule serves.
+IP address for which this forwarding rule accepts traffic.
 
-When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in `https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name` * Partial URL or by name, as in: * `projects/project_id/regions/region/addresses/address-name` * `regions/region/addresses/address-name` * `global/addresses/address-name` * `address-name` The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+When a client
+sends traffic to this IP address, the forwarding rule directs the traffic
+to the referenced 'target'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_address ComputeGlobalForwardingRule#ip_address}
+While creating a forwarding rule, specifying an 'IPAddress' is
+required under the following circumstances:
+
+When the 'target' is set to 'targetGrpcProxy' and
+'validateForProxyless' is set to 'true', the
+'IPAddress' should be set to '0.0.0.0'.
+When the 'target' is a Private Service Connect Google APIs
+bundle, you must specify an 'IPAddress'.
+
+Otherwise, you can optionally specify an IP address that references an
+existing static (reserved) IP address resource. When omitted, Google Cloud
+assigns an ephemeral IP address.
+
+Use one of the following formats to specify an IP address while creating a
+forwarding rule:
+
+IP address number, as in '100.1.2.3'
+IPv6 address range, as in '2600:1234::/96'
+Full resource URL, as in
+'https://www.googleapis.com/compute/v1/projects/project_id/regions/region/addresses/address-name'
+Partial URL or by name, as in:
+'projects/project_id/regions/region/addresses/address-name'
+'regions/region/addresses/address-name'
+'global/addresses/address-name'
+'address-name'
+
+The forwarding rule's 'target',
+and in most cases, also the 'loadBalancingScheme', determine the
+type of IP address that you can use. For detailed information, see
+[IP address
+specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
+
+When reading an 'IPAddress', the API always returns the IP
+address number.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_address ComputeGlobalForwardingRule#ip_address}
 
 ---
 
@@ -1452,9 +1635,16 @@ public java.lang.String getIpProtocol();
 
 The IP protocol to which this rule applies.
 
-For protocol forwarding, valid options are `TCP`, `UDP`, `ESP`, `AH`, `SCTP` or `ICMP`. For Internal TCP/UDP Load Balancing, the load balancing scheme is `INTERNAL`, and one of `TCP` or `UDP` are valid. For Traffic Director, the load balancing scheme is `INTERNAL_SELF_MANAGED`, and only `TCP`is valid. For Internal HTTP(S) Load Balancing, the load balancing scheme is `INTERNAL_MANAGED`, and only `TCP` is valid. For HTTP(S), SSL Proxy, and TCP Proxy Load Balancing, the load balancing scheme is `EXTERNAL` and only `TCP` is valid. For Network TCP/UDP Load Balancing, the load balancing scheme is `EXTERNAL`, and one of `TCP` or `UDP` is valid.
+For protocol forwarding, valid
+options are 'TCP', 'UDP', 'ESP',
+'AH', 'SCTP', 'ICMP' and
+'L3_DEFAULT'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
+The valid IP protocols are different for different load balancing products
+as described in [Load balancing
+features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
 
 ---
 
@@ -1466,11 +1656,9 @@ public java.lang.String getIpVersion();
 
 - *Type:* java.lang.String
 
-The IP Version that will be used by this forwarding rule.
+The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"].
 
-Valid options are `IPV4` or `IPV6`. This can only be specified for an external global forwarding rule. Possible values: UNSPECIFIED_VERSION, IPV4, IPV6
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#ip_version ComputeGlobalForwardingRule#ip_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#ip_version ComputeGlobalForwardingRule#ip_version}
 
 ---
 
@@ -1482,9 +1670,9 @@ public java.util.Map<java.lang.String, java.lang.String> getLabels();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Labels to apply to this rule.
+Labels to apply to this forwarding rule.  A list of key->value pairs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
 
 ---
 
@@ -1498,23 +1686,10 @@ public java.lang.String getLoadBalancingScheme();
 
 Specifies the forwarding rule type.
 
-`EXTERNAL` is used for:
-Classic Cloud VPN gateways
-Protocol forwarding to VMs from an external IP address
-The following load balancers: HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP
-`INTERNAL` is used for:
-Protocol forwarding to VMs from an internal IP address
-Internal TCP/UDP load balancers
-`INTERNAL_MANAGED` is used for:
-Internal HTTP(S) load balancers
-`INTERNAL_SELF_MANAGED` is used for:
-Traffic Director
-`EXTERNAL_MANAGED` is used for:
-Global external HTTP(S) load balancers
+For more information about forwarding rules, refer to
+[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL_SELF_MANAGED"]
 
-For more information about forwarding rules, refer to [Forwarding rule concepts](/load-balancing/docs/forwarding-rule-concepts). Possible values: INVALID, INTERNAL, INTERNAL_MANAGED, INTERNAL_SELF_MANAGED, EXTERNAL, EXTERNAL_MANAGED
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
 
 ---
 
@@ -1528,7 +1703,7 @@ public java.lang.Object getMetadataFilters();
 
 metadata_filters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
 
 ---
 
@@ -1542,9 +1717,16 @@ public java.lang.String getNetwork();
 
 This field is not used for external load balancing.
 
-For `INTERNAL` and `INTERNAL_SELF_MANAGED` load balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used.
+For Internal TCP/UDP Load Balancing, this field identifies the network that
+the load balanced IP should belong to for this Forwarding Rule.
+If the subnetwork is specified, the network of the subnetwork will be used.
+If neither subnetwork nor this field is specified, the default network will
+be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#network ComputeGlobalForwardingRule#network}
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, a network must be provided.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#network ComputeGlobalForwardingRule#network}
 
 ---
 
@@ -1556,15 +1738,25 @@ public java.lang.String getPortRange();
 
 - *Type:* java.lang.String
 
-When the load balancing scheme is `EXTERNAL`, `INTERNAL_SELF_MANAGED` and `INTERNAL_MANAGED`, you can specify a `port_range`.
+This field can only be used:.
 
-Use with a forwarding rule that points to a target proxy or a target pool. Do not use with a forwarding rule that points to a backend service. This field is used along with the `target` field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance. Applicable only when `IPProtocol` is `TCP`, `UDP`, or `SCTP`, only packets addressed to ports in the specified range will be forwarded to `target`. Forwarding rules with the same `[IPAddress, IPProtocol]` pair must have disjoint port ranges. Some types of forwarding target have constraints on the acceptable ports:
+If 'IPProtocol' is one of TCP, UDP, or SCTP.
+By backend service-based network load balancers, target pool-based
+network load balancers, internal proxy load balancers, external proxy load
+balancers, Traffic Director, external protocol forwarding, and Classic VPN.
+Some products have restrictions on what ports can be used. See
+[port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
+for details.
 
 TargetHttpProxy: 80, 8080
 TargetHttpsProxy: 443
-TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
-TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222
+TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+1883, 5222
+TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
+1883, 5222
 TargetVpnGateway: 500, 4500
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#port_range ComputeGlobalForwardingRule#port_range}
 
 ---
 
@@ -1576,9 +1768,23 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-The project this resource belongs in.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#project ComputeGlobalForwardingRule#project}
+---
+
+##### `sourceIpRanges`<sup>Optional</sup> <a name="sourceIpRanges" id="@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleConfig.property.sourceIpRanges"></a>
+
+```java
+public java.util.List<java.lang.String> getSourceIpRanges();
+```
+
+- *Type:* java.util.List<java.lang.String>
+
+If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here.
+
+Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#source_ip_ranges ComputeGlobalForwardingRule#source_ip_ranges}
 
 ---
 
@@ -1592,7 +1798,7 @@ public ComputeGlobalForwardingRuleTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#timeouts ComputeGlobalForwardingRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#timeouts ComputeGlobalForwardingRule#timeouts}
 
 ---
 
@@ -1615,7 +1821,7 @@ ComputeGlobalForwardingRuleMetadataFilters.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters.property.filterLabels">filterLabels</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels">ComputeGlobalForwardingRuleMetadataFiltersFilterLabels</a>></code> | filter_labels block. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters.property.filterMatchCriteria">filterMatchCriteria</a></code> | <code>java.lang.String</code> | Specifies how individual `filterLabel` matches within the list of `filterLabel`s contribute towards the overall `metadataFilter` match. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFilters.property.filterMatchCriteria">filterMatchCriteria</a></code> | <code>java.lang.String</code> | Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match. |
 
 ---
 
@@ -1629,7 +1835,7 @@ public java.lang.Object getFilterLabels();
 
 filter_labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#filter_labels ComputeGlobalForwardingRule#filter_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#filter_labels ComputeGlobalForwardingRule#filter_labels}
 
 ---
 
@@ -1641,14 +1847,14 @@ public java.lang.String getFilterMatchCriteria();
 
 - *Type:* java.lang.String
 
-Specifies how individual `filterLabel` matches within the list of `filterLabel`s contribute towards the overall `metadataFilter` match.
+Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match.
 
-Supported values are:
+MATCH_ANY - At least one of the filterLabels must have a matching
+label in the provided metadata.
+MATCH_ALL - All filterLabels must have matching labels in the
+provided metadata. Possible values: ["MATCH_ANY", "MATCH_ALL"]
 
-MATCH_ANY: At least one of the `filterLabels` must have a matching label in the provided metadata.
-MATCH_ALL: All `filterLabels` must have matching labels in the provided metadata. Possible values: NOT_SET, MATCH_ALL, MATCH_ANY
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#filter_match_criteria ComputeGlobalForwardingRule#filter_match_criteria}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#filter_match_criteria ComputeGlobalForwardingRule#filter_match_criteria}
 
 ---
 
@@ -1669,8 +1875,8 @@ ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.property.name">name</a></code> | <code>java.lang.String</code> | Name of metadata label. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.property.value">value</a></code> | <code>java.lang.String</code> | The value of the label must match the specified value. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.property.name">name</a></code> | <code>java.lang.String</code> | Name of the metadata label. The length must be between 1 and 1024 characters, inclusive. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleMetadataFiltersFilterLabels.property.value">value</a></code> | <code>java.lang.String</code> | The value that the label must match. The value has a maximum length of 1024 characters. |
 
 ---
 
@@ -1682,11 +1888,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Name of metadata label.
+Name of the metadata label. The length must be between 1 and 1024 characters, inclusive.
 
-The name can have a maximum length of 1024 characters and must be at least 1 character long.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
 
 ---
 
@@ -1698,11 +1902,9 @@ public java.lang.String getValue();
 
 - *Type:* java.lang.String
 
-The value of the label must match the specified value.
+The value that the label must match. The value has a maximum length of 1024 characters.
 
-value can have a maximum length of 1024 characters.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#value ComputeGlobalForwardingRule#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#value ComputeGlobalForwardingRule#value}
 
 ---
 
@@ -1724,9 +1926,9 @@ ComputeGlobalForwardingRuleTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#create ComputeGlobalForwardingRule#create}. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#delete ComputeGlobalForwardingRule#delete}. |
-| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#update ComputeGlobalForwardingRule#update}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#create ComputeGlobalForwardingRule#create}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#delete ComputeGlobalForwardingRule#delete}. |
+| <code><a href="#@cdktf/provider-google.computeGlobalForwardingRule.ComputeGlobalForwardingRuleTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#update ComputeGlobalForwardingRule#update}. |
 
 ---
 
@@ -1738,7 +1940,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#create ComputeGlobalForwardingRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#create ComputeGlobalForwardingRule#create}.
 
 ---
 
@@ -1750,7 +1952,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#delete ComputeGlobalForwardingRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#delete ComputeGlobalForwardingRule#delete}.
 
 ---
 
@@ -1762,7 +1964,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_global_forwarding_rule#update ComputeGlobalForwardingRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_global_forwarding_rule#update ComputeGlobalForwardingRule#update}.
 
 ---
 

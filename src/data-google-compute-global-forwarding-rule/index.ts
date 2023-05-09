@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,22 +8,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+  * Name of the resource; provided by the client when the resource is created.
+The name must be 1-63 characters long, and comply with
+[RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
+
+Specifically, the name must be 1-63 characters long and match the regular
+expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first
+character must be a lowercase letter, and all following characters must
+be a dash, lowercase letter, or digit, except the last character, which
+cannot be a dash.
+
+For Private Service Connect forwarding rules that forward traffic to Google
+APIs, the forwarding rule name must be a 1-20 characters string with
+lowercase letters and numbers and must start with a letter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
   */
   readonly name: string;
   /**
-  * The project this resource belongs in.
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
   */
   readonly project?: string;
 }
@@ -168,7 +178,7 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersList extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}
 */
 export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSource {
 
@@ -182,7 +192,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -193,7 +203,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -212,6 +222,11 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // base_forwarding_rule - computed: true, optional: false, required: false
+  public get baseForwardingRule() {
+    return this.getStringAttribute('base_forwarding_rule');
+  }
 
   // description - computed: true, optional: false, required: false
   public get description() {
@@ -323,6 +338,11 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // self_link - computed: true, optional: false, required: false
   public get selfLink() {
     return this.getStringAttribute('self_link');
+  }
+
+  // source_ip_ranges - computed: true, optional: false, required: false
+  public get sourceIpRanges() {
+    return this.getListAttribute('source_ip_ranges');
   }
 
   // target - computed: true, optional: false, required: false

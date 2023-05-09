@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface VertexAiEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description of the Endpoint.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#description VertexAiEndpoint#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#description VertexAiEndpoint#description}
   */
   readonly description?: string;
   /**
   * Required. The display name of the Endpoint. The name can be up to 128 characters long and can consist of any UTF-8 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#display_name VertexAiEndpoint#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#display_name VertexAiEndpoint#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#id VertexAiEndpoint#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#id VertexAiEndpoint#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,41 +29,47 @@ export interface VertexAiEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * The labels with user-defined metadata to organize your Endpoints. Label keys and values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. See https://goo.gl/xmQnxf for more information and examples of labels.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#labels VertexAiEndpoint#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#labels VertexAiEndpoint#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#location VertexAiEndpoint#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#location VertexAiEndpoint#location}
   */
   readonly location: string;
   /**
   * The resource name of the Endpoint. The name must be numeric with no leading zeros and can be at most 10 digits.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#name VertexAiEndpoint#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#name VertexAiEndpoint#name}
   */
   readonly name: string;
   /**
   * The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks) to which the Endpoint should be peered. Private services access must already be configured for the network. If left unspecified, the Endpoint is not peered with any network. Only one of the fields, network or enable_private_service_connect, can be set. [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): 'projects/{project}/global/networks/{network}'. Where '{project}' is a project number, as in '12345', and '{network}' is network name.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#network VertexAiEndpoint#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#network VertexAiEndpoint#network}
   */
   readonly network?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#project VertexAiEndpoint#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#project VertexAiEndpoint#project}
   */
   readonly project?: string;
   /**
+  * The region for the resource
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#region VertexAiEndpoint#region}
+  */
+  readonly region?: string;
+  /**
   * encryption_spec block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#encryption_spec VertexAiEndpoint#encryption_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#encryption_spec VertexAiEndpoint#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiEndpointEncryptionSpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#timeouts VertexAiEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#timeouts VertexAiEndpoint#timeouts}
   */
   readonly timeouts?: VertexAiEndpointTimeouts;
 }
@@ -565,7 +571,7 @@ export interface VertexAiEndpointEncryptionSpec {
   /**
   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: 'projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key'. The key needs to be in the same region as where the compute resource is created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#kms_key_name VertexAiEndpoint#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#kms_key_name VertexAiEndpoint#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -627,15 +633,15 @@ export class VertexAiEndpointEncryptionSpecOutputReference extends cdktf.Complex
 }
 export interface VertexAiEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#create VertexAiEndpoint#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#create VertexAiEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#delete VertexAiEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#delete VertexAiEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint#update VertexAiEndpoint#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint#update VertexAiEndpoint#update}
   */
   readonly update?: string;
 }
@@ -756,7 +762,7 @@ export class VertexAiEndpointTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint google_vertex_ai_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint google_vertex_ai_endpoint}
 */
 export class VertexAiEndpoint extends cdktf.TerraformResource {
 
@@ -770,7 +776,7 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/vertex_ai_endpoint google_vertex_ai_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/vertex_ai_endpoint google_vertex_ai_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -781,7 +787,7 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -800,6 +806,7 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
     this._name = config.name;
     this._network = config.network;
     this._project = config.project;
+    this._region = config.region;
     this._encryptionSpec.internalValue = config.encryptionSpec;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -948,6 +955,22 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // region - computed: false, optional: true, required: false
+  private _region?: string; 
+  public get region() {
+    return this.getStringAttribute('region');
+  }
+  public set region(value: string) {
+    this._region = value;
+  }
+  public resetRegion() {
+    this._region = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regionInput() {
+    return this._region;
+  }
+
   // update_time - computed: true, optional: false, required: false
   public get updateTime() {
     return this.getStringAttribute('update_time');
@@ -999,6 +1022,7 @@ export class VertexAiEndpoint extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       network: cdktf.stringToTerraform(this._network),
       project: cdktf.stringToTerraform(this._project),
+      region: cdktf.stringToTerraform(this._region),
       encryption_spec: vertexAiEndpointEncryptionSpecToTerraform(this._encryptionSpec.internalValue),
       timeouts: vertexAiEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };

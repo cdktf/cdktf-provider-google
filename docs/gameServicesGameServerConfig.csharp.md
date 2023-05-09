@@ -1,6 +1,6 @@
 # `google_game_services_game_server_config`
 
-Refer to the Terraform Registory for docs: [`google_game_services_game_server_config`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config).
+Refer to the Terraform Registory for docs: [`google_game_services_game_server_config`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config).
 
 # `gameServicesGameServerConfig` Submodule <a name="`gameServicesGameServerConfig` Submodule" id="@cdktf/provider-google.gameServicesGameServerConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_game_services_game_server_co
 
 ### GameServicesGameServerConfig <a name="GameServicesGameServerConfig" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config google_game_services_game_server_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config google_game_services_game_server_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig.Initializer"></a>
 
@@ -872,10 +872,10 @@ new GameServicesGameServerConfigConfig {
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.deploymentId">DeploymentId</a></code> | <code>string</code> | A unique id for the deployment. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.fleetConfigs">FleetConfigs</a></code> | <code>object</code> | fleet_configs block. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.description">Description</a></code> | <code>string</code> | The description of the game server config. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#id GameServicesGameServerConfig#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#id GameServicesGameServerConfig#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | The labels associated with this game server config. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.location">Location</a></code> | <code>string</code> | Location of the Deployment. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#project GameServicesGameServerConfig#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#project GameServicesGameServerConfig#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.scalingConfigs">ScalingConfigs</a></code> | <code>object</code> | scaling_configs block. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts">GameServicesGameServerConfigTimeouts</a></code> | timeouts block. |
 
@@ -961,7 +961,7 @@ public string ConfigId { get; set; }
 
 A unique id for the deployment config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#config_id GameServicesGameServerConfig#config_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#config_id GameServicesGameServerConfig#config_id}
 
 ---
 
@@ -975,7 +975,7 @@ public string DeploymentId { get; set; }
 
 A unique id for the deployment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#deployment_id GameServicesGameServerConfig#deployment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#deployment_id GameServicesGameServerConfig#deployment_id}
 
 ---
 
@@ -989,7 +989,7 @@ public object FleetConfigs { get; set; }
 
 fleet_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#fleet_configs GameServicesGameServerConfig#fleet_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#fleet_configs GameServicesGameServerConfig#fleet_configs}
 
 ---
 
@@ -1003,7 +1003,7 @@ public string Description { get; set; }
 
 The description of the game server config.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#description GameServicesGameServerConfig#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#description GameServicesGameServerConfig#description}
 
 ---
 
@@ -1015,7 +1015,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#id GameServicesGameServerConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#id GameServicesGameServerConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1032,7 +1032,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 The labels associated with this game server config. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
 
 ---
 
@@ -1046,7 +1046,7 @@ public string Location { get; set; }
 
 Location of the Deployment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#location GameServicesGameServerConfig#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#location GameServicesGameServerConfig#location}
 
 ---
 
@@ -1058,7 +1058,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#project GameServicesGameServerConfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#project GameServicesGameServerConfig#project}.
 
 ---
 
@@ -1072,7 +1072,7 @@ public object ScalingConfigs { get; set; }
 
 scaling_configs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#scaling_configs GameServicesGameServerConfig#scaling_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#scaling_configs GameServicesGameServerConfig#scaling_configs}
 
 ---
 
@@ -1086,7 +1086,7 @@ public GameServicesGameServerConfigTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#timeouts GameServicesGameServerConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#timeouts GameServicesGameServerConfig#timeouts}
 
 ---
 
@@ -1131,7 +1131,7 @@ fleet_spec = file("fleet_configs.json")
 The format of the spec can be found :
 'https://agones.dev/site/docs/reference/fleet/'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#fleet_spec GameServicesGameServerConfig#fleet_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#fleet_spec GameServicesGameServerConfig#fleet_spec}
 
 ---
 
@@ -1145,7 +1145,7 @@ public string Name { get; set; }
 
 The name of the FleetConfig.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
 
 ---
 
@@ -1185,7 +1185,7 @@ public string FleetAutoscalerSpec { get; set; }
 
 Fleet autoscaler spec, which is sent to Agones. Example spec can be found : https://agones.dev/site/docs/reference/fleetautoscaler/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
 
 ---
 
@@ -1199,7 +1199,7 @@ public string Name { get; set; }
 
 The name of the ScalingConfig.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
 
 ---
 
@@ -1213,7 +1213,7 @@ public object Schedules { get; set; }
 
 schedules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#schedules GameServicesGameServerConfig#schedules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#schedules GameServicesGameServerConfig#schedules}
 
 ---
 
@@ -1227,7 +1227,7 @@ public object Selectors { get; set; }
 
 selectors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#selectors GameServicesGameServerConfig#selectors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#selectors GameServicesGameServerConfig#selectors}
 
 ---
 
@@ -1269,7 +1269,7 @@ The duration for the cron job event. The duration of the event is effective afte
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
 
 ---
 
@@ -1283,7 +1283,7 @@ public string CronSpec { get; set; }
 
 The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#cron_spec GameServicesGameServerConfig#cron_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#cron_spec GameServicesGameServerConfig#cron_spec}
 
 ---
 
@@ -1299,7 +1299,7 @@ The end time of the event.
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#end_time GameServicesGameServerConfig#end_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#end_time GameServicesGameServerConfig#end_time}
 
 ---
 
@@ -1315,7 +1315,7 @@ The start time of the event.
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#start_time GameServicesGameServerConfig#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#start_time GameServicesGameServerConfig#start_time}
 
 ---
 
@@ -1349,7 +1349,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 Set of labels to group by.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
 
 ---
 
@@ -1370,8 +1370,8 @@ new GameServicesGameServerConfigTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#create GameServicesGameServerConfig#create}. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#delete GameServicesGameServerConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#create GameServicesGameServerConfig#create}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#delete GameServicesGameServerConfig#delete}. |
 
 ---
 
@@ -1383,7 +1383,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#create GameServicesGameServerConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#create GameServicesGameServerConfig#create}.
 
 ---
 
@@ -1395,7 +1395,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/game_services_game_server_config#delete GameServicesGameServerConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/game_services_game_server_config#delete GameServicesGameServerConfig#delete}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_compute_network`
 
-Refer to the Terraform Registory for docs: [`google_compute_network`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network).
+Refer to the Terraform Registory for docs: [`google_compute_network`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network).
 
 # `computeNetwork` Submodule <a name="`computeNetwork` Submodule" id="@cdktf/provider-google.computeNetwork"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_network`](https://re
 
 ### ComputeNetwork <a name="ComputeNetwork" id="@cdktf/provider-google.computeNetwork.ComputeNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network google_compute_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network google_compute_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 computenetwork.NewComputeNetwork(scope Construct, id *string, config ComputeNetworkConfig) ComputeNetwork
 ```
@@ -360,7 +360,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 computenetwork.ComputeNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 computenetwork.ComputeNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ computenetwork.ComputeNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeNetwork.ComputeNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 computenetwork.ComputeNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 &computenetwork.ComputeNetworkConfig {
 	Connection: interface{},
@@ -912,7 +912,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
 	NetworkFirewallPolicyEnforcementOrder: *string,
 	Project: *string,
 	RoutingMode: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.computeNetwork.ComputeNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeNetwork.ComputeNetworkTimeouts,
 }
 ```
 
@@ -931,12 +931,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.autoCreateSubnetworks">AutoCreateSubnetworks</a></code> | <code>interface{}</code> | When set to 'true', the network is created in "auto subnet mode" and it will create a subnet for each region automatically across the '10.128.0.0/9' address range. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.deleteDefaultRoutesOnCreate">DeleteDefaultRoutesOnCreate</a></code> | <code>interface{}</code> | If set to 'true', default routes ('0.0.0.0/0') will be deleted immediately after network creation. Defaults to 'false'. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. The resource must be recreated to modify this field. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.enableUlaInternalIpv6">EnableUlaInternalIpv6</a></code> | <code>interface{}</code> | Enable ULA internal ipv6 on this network. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#id ComputeNetwork#id}. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.internalIpv6Range">InternalIpv6Range</a></code> | <code>*string</code> | When enabling ula internal ipv6, caller optionally can specify the /48 range  they want from the google defined ULA prefix fd20::/20. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.enableUlaInternalIpv6">EnableUlaInternalIpv6</a></code> | <code>interface{}</code> | Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#id ComputeNetwork#id}. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.internalIpv6Range">InternalIpv6Range</a></code> | <code>*string</code> | When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.mtu">Mtu</a></code> | <code>*f64</code> | Maximum Transmission Unit in bytes. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.networkFirewallPolicyEnforcementOrder">NetworkFirewallPolicyEnforcementOrder</a></code> | <code>*string</code> | Set the order that Firewall Rules and Firewall Policies are evaluated. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#project ComputeNetwork#project}. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.networkFirewallPolicyEnforcementOrder">NetworkFirewallPolicyEnforcementOrder</a></code> | <code>*string</code> | Set the order that Firewall Rules and Firewall Policies are evaluated. Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"]. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#project ComputeNetwork#project}. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.routingMode">RoutingMode</a></code> | <code>*string</code> | The network-wide routing mode to use. |
 | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts">ComputeNetworkTimeouts</a></code> | timeouts block. |
 
@@ -1030,7 +1030,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#name ComputeNetwork#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#name ComputeNetwork#name}
 
 ---
 
@@ -1047,7 +1047,7 @@ When set to 'true', the network is created in "auto subnet mode" and it will cre
 When set to 'false', the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#auto_create_subnetworks ComputeNetwork#auto_create_subnetworks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#auto_create_subnetworks ComputeNetwork#auto_create_subnetworks}
 
 ---
 
@@ -1061,7 +1061,7 @@ DeleteDefaultRoutesOnCreate interface{}
 
 If set to 'true', default routes ('0.0.0.0/0') will be deleted immediately after network creation. Defaults to 'false'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#delete_default_routes_on_create ComputeNetwork#delete_default_routes_on_create}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#delete_default_routes_on_create ComputeNetwork#delete_default_routes_on_create}
 
 ---
 
@@ -1075,7 +1075,7 @@ Description *string
 
 An optional description of this resource. The resource must be recreated to modify this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#description ComputeNetwork#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#description ComputeNetwork#description}
 
 ---
 
@@ -1087,12 +1087,9 @@ EnableUlaInternalIpv6 interface{}
 
 - *Type:* interface{}
 
-Enable ULA internal ipv6 on this network.
+Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20.
 
-Enabling this feature will assign
-a /48 from google defined ULA prefix fd20::/20.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#enable_ula_internal_ipv6 ComputeNetwork#enable_ula_internal_ipv6}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#enable_ula_internal_ipv6 ComputeNetwork#enable_ula_internal_ipv6}
 
 ---
 
@@ -1104,7 +1101,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#id ComputeNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#id ComputeNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1119,14 +1116,14 @@ InternalIpv6Range *string
 
 - *Type:* *string
 
-When enabling ula internal ipv6, caller optionally can specify the /48 range  they want from the google defined ULA prefix fd20::/20.
+When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20.
 
 The input must be a
 valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will
 fail if the speficied /48 is already in used by another resource.
 If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#internal_ipv6_range ComputeNetwork#internal_ipv6_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#internal_ipv6_range ComputeNetwork#internal_ipv6_range}
 
 ---
 
@@ -1146,7 +1143,7 @@ Note that packets larger than 1500 bytes (standard Ethernet) can be subject to T
 with an ICMP 'Fragmentation-Needed' message if the packets are routed to the Internet or other VPCs
 with varying MTUs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#mtu ComputeNetwork#mtu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#mtu ComputeNetwork#mtu}
 
 ---
 
@@ -1158,11 +1155,9 @@ NetworkFirewallPolicyEnforcementOrder *string
 
 - *Type:* *string
 
-Set the order that Firewall Rules and Firewall Policies are evaluated.
+Set the order that Firewall Rules and Firewall Policies are evaluated. Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"].
 
-Needs to be either 'AFTER_CLASSIC_FIREWALL' or 'BEFORE_CLASSIC_FIREWALL' Default 'AFTER_CLASSIC_FIREWALL' Default value: "AFTER_CLASSIC_FIREWALL" Possible values: ["BEFORE_CLASSIC_FIREWALL", "AFTER_CLASSIC_FIREWALL"]
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#network_firewall_policy_enforcement_order ComputeNetwork#network_firewall_policy_enforcement_order}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#network_firewall_policy_enforcement_order ComputeNetwork#network_firewall_policy_enforcement_order}
 
 ---
 
@@ -1174,7 +1169,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#project ComputeNetwork#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#project ComputeNetwork#project}.
 
 ---
 
@@ -1194,7 +1189,7 @@ of this network in the same region as the router. If set to 'GLOBAL',
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions. Possible values: ["REGIONAL", "GLOBAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#routing_mode ComputeNetwork#routing_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#routing_mode ComputeNetwork#routing_mode}
 
 ---
 
@@ -1208,7 +1203,7 @@ Timeouts ComputeNetworkTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#timeouts ComputeNetwork#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#timeouts ComputeNetwork#timeouts}
 
 ---
 
@@ -1217,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 &computenetwork.ComputeNetworkTimeouts {
 	Create: *string,
@@ -1230,9 +1225,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#create ComputeNetwork#create}. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#delete ComputeNetwork#delete}. |
-| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#update ComputeNetwork#update}. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#create ComputeNetwork#create}. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#delete ComputeNetwork#delete}. |
+| <code><a href="#@cdktf/provider-google.computeNetwork.ComputeNetworkTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#update ComputeNetwork#update}. |
 
 ---
 
@@ -1244,7 +1239,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#create ComputeNetwork#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#create ComputeNetwork#create}.
 
 ---
 
@@ -1256,7 +1251,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#delete ComputeNetwork#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#delete ComputeNetwork#delete}.
 
 ---
 
@@ -1268,7 +1263,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/compute_network#update ComputeNetwork#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/compute_network#update ComputeNetwork#update}.
 
 ---
 
@@ -1279,7 +1274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeNetwork.ComputeNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computenetwork"
+import "github.com/cdktf/cdktf-provider-google-go/google/computenetwork"
 
 computenetwork.NewComputeNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeNetworkTimeoutsOutputReference
 ```

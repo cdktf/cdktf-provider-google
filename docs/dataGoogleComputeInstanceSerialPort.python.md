@@ -1,6 +1,6 @@
 # `data_google_compute_instance_serial_port`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_instance_serial_port`](https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port).
+Refer to the Terraform Registory for docs: [`data_google_compute_instance_serial_port`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port).
 
 # `dataGoogleComputeInstanceSerialPort` Submodule <a name="`dataGoogleComputeInstanceSerialPort` Submodule" id="@cdktf/provider-google.dataGoogleComputeInstanceSerialPort"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_instance_serial
 
 ### DataGoogleComputeInstanceSerialPort <a name="DataGoogleComputeInstanceSerialPort" id="@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port google_compute_instance_serial_port}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port google_compute_instance_serial_port}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer"></a>
 
@@ -44,11 +44,11 @@ dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPort.Initializer.parameter.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}.
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}.
 
 ---
 
@@ -800,11 +800,11 @@ dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.instance">instance</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeInstanceSerialPort.DataGoogleComputeInstanceSerialPortConfig.property.zone">zone</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}. |
 
 ---
 
@@ -886,7 +886,7 @@ instance: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#instance DataGoogleComputeInstanceSerialPort#instance}.
 
 ---
 
@@ -898,7 +898,7 @@ port: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#port DataGoogleComputeInstanceSerialPort#port}.
 
 ---
 
@@ -910,7 +910,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#id DataGoogleComputeInstanceSerialPort#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -925,7 +925,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#project DataGoogleComputeInstanceSerialPort#project}.
 
 ---
 
@@ -937,7 +937,7 @@ zone: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/compute_instance_serial_port#zone DataGoogleComputeInstanceSerialPort#zone}.
 
 ---
 

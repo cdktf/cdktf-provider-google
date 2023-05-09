@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface DataLossPreventionJobTriggerConfig extends cdktf.TerraformMetaA
   /**
   * A description of the job trigger.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
   */
   readonly description?: string;
   /**
   * User set display name of the job trigger.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#display_name DataLossPreventionJobTrigger#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#display_name DataLossPreventionJobTrigger#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,31 +30,31 @@ export interface DataLossPreventionJobTriggerConfig extends cdktf.TerraformMetaA
   * The parent of the trigger, either in the format 'projects/{{project}}'
 or 'projects/{{project}}/locations/{{location}}'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#parent DataLossPreventionJobTrigger#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#parent DataLossPreventionJobTrigger#parent}
   */
   readonly parent: string;
   /**
   * Whether the trigger is currently active. Default value: "HEALTHY" Possible values: ["PAUSED", "HEALTHY", "CANCELLED"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#status DataLossPreventionJobTrigger#status}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#status DataLossPreventionJobTrigger#status}
   */
   readonly status?: string;
   /**
   * inspect_job block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#inspect_job DataLossPreventionJobTrigger#inspect_job}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#inspect_job DataLossPreventionJobTrigger#inspect_job}
   */
   readonly inspectJob?: DataLossPreventionJobTriggerInspectJob;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#timeouts DataLossPreventionJobTrigger#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#timeouts DataLossPreventionJobTrigger#timeouts}
   */
   readonly timeouts?: DataLossPreventionJobTriggerTimeouts;
   /**
   * triggers block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#triggers DataLossPreventionJobTrigger#triggers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#triggers DataLossPreventionJobTrigger#triggers}
   */
   readonly triggers: DataLossPreventionJobTriggerTriggers[] | cdktf.IResolvable;
 }
@@ -62,19 +62,19 @@ export interface DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransfor
   /**
   * If this template is specified, it will serve as the default de-identify template.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#deidentify_template DataLossPreventionJobTrigger#deidentify_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#deidentify_template DataLossPreventionJobTrigger#deidentify_template}
   */
   readonly deidentifyTemplate?: string;
   /**
   * If this template is specified, it will serve as the de-identify template for images.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#image_redact_template DataLossPreventionJobTrigger#image_redact_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#image_redact_template DataLossPreventionJobTrigger#image_redact_template}
   */
   readonly imageRedactTemplate?: string;
   /**
   * If this template is specified, it will serve as the de-identify template for structured content such as delimited files and tables.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#structured_deidentify_template DataLossPreventionJobTrigger#structured_deidentify_template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#structured_deidentify_template DataLossPreventionJobTrigger#structured_deidentify_template}
   */
   readonly structuredDeidentifyTemplate?: string;
 }
@@ -187,13 +187,13 @@ export interface DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransfor
   /**
   * The ID of the dataset containing this table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
   */
   readonly projectId: string;
   /**
@@ -201,7 +201,7 @@ export interface DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransfor
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
   */
   readonly tableId?: string;
 }
@@ -308,7 +308,7 @@ export interface DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransfor
   /**
   * table block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
   */
   readonly table: DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable;
 }
@@ -380,29 +380,29 @@ De-identified files will overwrite files in the output path.
 
 Form of: gs://bucket/folder/ or gs://bucket
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_output DataLossPreventionJobTrigger#cloud_storage_output}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_output DataLossPreventionJobTrigger#cloud_storage_output}
   */
   readonly cloudStorageOutput: string;
   /**
   * List of user-specified file type groups to transform. If specified, only the files with these filetypes will be transformed.
 
-If empty, all supported files will be transformed. Supported types may be automatically added over time. 
+If empty, all supported files will be transformed. Supported types may be automatically added over time.
 
 If a file type is set in this field that isn't supported by the Deidentify action then the job will fail and will not be successfully created/started. Possible values: ["IMAGE", "TEXT_FILE", "CSV", "TSV"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#file_types_to_transform DataLossPreventionJobTrigger#file_types_to_transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#file_types_to_transform DataLossPreventionJobTrigger#file_types_to_transform}
   */
   readonly fileTypesToTransform?: string[];
   /**
   * transformation_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#transformation_config DataLossPreventionJobTrigger#transformation_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#transformation_config DataLossPreventionJobTrigger#transformation_config}
   */
   readonly transformationConfig?: DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfig;
   /**
   * transformation_details_storage_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#transformation_details_storage_config DataLossPreventionJobTrigger#transformation_details_storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#transformation_details_storage_config DataLossPreventionJobTrigger#transformation_details_storage_config}
   */
   readonly transformationDetailsStorageConfig?: DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfig;
 }
@@ -573,7 +573,7 @@ export interface DataLossPreventionJobTriggerInspectJobActionsPubSub {
   /**
   * Cloud Pub/Sub topic to send notifications to.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#topic DataLossPreventionJobTrigger#topic}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#topic DataLossPreventionJobTrigger#topic}
   */
   readonly topic: string;
 }
@@ -713,20 +713,20 @@ export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutput
   /**
   * Dataset ID of the table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The Google Cloud Platform project ID of the project containing the table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
   */
   readonly projectId: string;
   /**
   * Name of the table. If is not set a new one will be generated for you with the following format:
 'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
   */
   readonly tableId?: string;
 }
@@ -840,13 +840,13 @@ If unspecified, then all available columns will be used for a new table or an (e
 table with no schema, and no changes will be made to an existing table that has a schema.
 Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#output_schema DataLossPreventionJobTrigger#output_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#output_schema DataLossPreventionJobTrigger#output_schema}
   */
   readonly outputSchema?: string;
   /**
   * table block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
   */
   readonly table: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable;
 }
@@ -933,7 +933,7 @@ export interface DataLossPreventionJobTriggerInspectJobActionsSaveFindings {
   /**
   * output_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#output_config DataLossPreventionJobTrigger#output_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#output_config DataLossPreventionJobTrigger#output_config}
   */
   readonly outputConfig: DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig;
 }
@@ -997,37 +997,37 @@ export interface DataLossPreventionJobTriggerInspectJobActions {
   /**
   * deidentify block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#deidentify DataLossPreventionJobTrigger#deidentify}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#deidentify DataLossPreventionJobTrigger#deidentify}
   */
   readonly deidentify?: DataLossPreventionJobTriggerInspectJobActionsDeidentify;
   /**
   * job_notification_emails block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#job_notification_emails DataLossPreventionJobTrigger#job_notification_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#job_notification_emails DataLossPreventionJobTrigger#job_notification_emails}
   */
   readonly jobNotificationEmails?: DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmails;
   /**
   * pub_sub block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#pub_sub DataLossPreventionJobTrigger#pub_sub}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#pub_sub DataLossPreventionJobTrigger#pub_sub}
   */
   readonly pubSub?: DataLossPreventionJobTriggerInspectJobActionsPubSub;
   /**
   * publish_findings_to_cloud_data_catalog block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#publish_findings_to_cloud_data_catalog DataLossPreventionJobTrigger#publish_findings_to_cloud_data_catalog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#publish_findings_to_cloud_data_catalog DataLossPreventionJobTrigger#publish_findings_to_cloud_data_catalog}
   */
   readonly publishFindingsToCloudDataCatalog?: DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog;
   /**
   * publish_summary_to_cscc block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#publish_summary_to_cscc DataLossPreventionJobTrigger#publish_summary_to_cscc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#publish_summary_to_cscc DataLossPreventionJobTrigger#publish_summary_to_cscc}
   */
   readonly publishSummaryToCscc?: DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc;
   /**
   * save_findings block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#save_findings DataLossPreventionJobTrigger#save_findings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#save_findings DataLossPreventionJobTrigger#save_findings}
   */
   readonly saveFindings?: DataLossPreventionJobTriggerInspectJobActionsSaveFindings;
 }
@@ -1237,11 +1237,3295 @@ export class DataLossPreventionJobTriggerInspectJobActionsList extends cdktf.Com
     return new DataLossPreventionJobTriggerInspectJobActionsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath {
+  /**
+  * A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
+  */
+  readonly path: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._path = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList {
+  /**
+  * Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
+  */
+  readonly words: string[];
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    words: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.words),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._words !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.words = this._words;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._words = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._words = value.words;
+    }
+  }
+
+  // words - computed: false, optional: false, required: true
+  private _words?: string[]; 
+  public get words() {
+    return this.getListAttribute('words');
+  }
+  public set words(value: string[]) {
+    this._words = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wordsInput() {
+    return this._words;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary {
+  /**
+  * cloud_storage_path block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
+  */
+  readonly cloudStoragePath?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath;
+  /**
+  * word_list block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
+  */
+  readonly wordList?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cloud_storage_path: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathToTerraform(struct!.cloudStoragePath),
+    word_list: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListToTerraform(struct!.wordList),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudStoragePath?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
+    }
+    if (this._wordList?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.wordList = this._wordList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cloudStoragePath.internalValue = undefined;
+      this._wordList.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cloudStoragePath.internalValue = value.cloudStoragePath;
+      this._wordList.internalValue = value.wordList;
+    }
+  }
+
+  // cloud_storage_path - computed: false, optional: true, required: false
+  private _cloudStoragePath = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path");
+  public get cloudStoragePath() {
+    return this._cloudStoragePath;
+  }
+  public putCloudStoragePath(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath) {
+    this._cloudStoragePath.internalValue = value;
+  }
+  public resetCloudStoragePath() {
+    this._cloudStoragePath.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudStoragePathInput() {
+    return this._cloudStoragePath.internalValue;
+  }
+
+  // word_list - computed: false, optional: true, required: false
+  private _wordList = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListOutputReference(this, "word_list");
+  public get wordList() {
+    return this._wordList;
+  }
+  public putWordList(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordList) {
+    this._wordList.internalValue = value;
+  }
+  public resetWordList() {
+    this._wordList.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wordListInput() {
+    return this._wordList.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType {
+  /**
+  * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
+listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex {
+  /**
+  * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+  */
+  readonly groupIndexes?: number[];
+  /**
+  * Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+  */
+  readonly pattern: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.groupIndexes),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._groupIndexes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
+  // group_indexes - computed: false, optional: true, required: false
+  private _groupIndexes?: number[]; 
+  public get groupIndexes() {
+    return this.getNumberListAttribute('group_indexes');
+  }
+  public set groupIndexes(value: number[]) {
+    this._groupIndexes = value;
+  }
+  public resetGroupIndexes() {
+    this._groupIndexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIndexesInput() {
+    return this._groupIndexes;
+  }
+
+  // pattern - computed: false, optional: false, required: true
+  private _pattern?: string; 
+  public get pattern() {
+    return this.getStringAttribute('pattern');
+  }
+  public set pattern(value: string) {
+    this._pattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType {
+  /**
+  * Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342'
+or 'projects/project-id/storedInfoTypes/432452342'.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+    }
+  }
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType {
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes {
+  /**
+  * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: ["EXCLUSION_TYPE_EXCLUDE"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclusion_type DataLossPreventionJobTrigger#exclusion_type}
+  */
+  readonly exclusionType?: string;
+  /**
+  * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
+specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#likelihood DataLossPreventionJobTrigger#likelihood}
+  */
+  readonly likelihood?: string;
+  /**
+  * dictionary block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
+  */
+  readonly dictionary?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary;
+  /**
+  * info_type block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
+  */
+  readonly infoType: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType;
+  /**
+  * regex block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
+  */
+  readonly regex?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex;
+  /**
+  * stored_type block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#stored_type DataLossPreventionJobTrigger#stored_type}
+  */
+  readonly storedType?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType;
+  /**
+  * surrogate_type block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#surrogate_type DataLossPreventionJobTrigger#surrogate_type}
+  */
+  readonly surrogateType?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    exclusion_type: cdktf.stringToTerraform(struct!.exclusionType),
+    likelihood: cdktf.stringToTerraform(struct!.likelihood),
+    dictionary: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryToTerraform(struct!.dictionary),
+    info_type: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeToTerraform(struct!.infoType),
+    regex: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexToTerraform(struct!.regex),
+    stored_type: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeToTerraform(struct!.storedType),
+    surrogate_type: dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeToTerraform(struct!.surrogateType),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exclusionType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exclusionType = this._exclusionType;
+    }
+    if (this._likelihood !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.likelihood = this._likelihood;
+    }
+    if (this._dictionary?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dictionary = this._dictionary?.internalValue;
+    }
+    if (this._infoType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infoType = this._infoType?.internalValue;
+    }
+    if (this._regex?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regex = this._regex?.internalValue;
+    }
+    if (this._storedType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storedType = this._storedType?.internalValue;
+    }
+    if (this._surrogateType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.surrogateType = this._surrogateType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exclusionType = undefined;
+      this._likelihood = undefined;
+      this._dictionary.internalValue = undefined;
+      this._infoType.internalValue = undefined;
+      this._regex.internalValue = undefined;
+      this._storedType.internalValue = undefined;
+      this._surrogateType.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exclusionType = value.exclusionType;
+      this._likelihood = value.likelihood;
+      this._dictionary.internalValue = value.dictionary;
+      this._infoType.internalValue = value.infoType;
+      this._regex.internalValue = value.regex;
+      this._storedType.internalValue = value.storedType;
+      this._surrogateType.internalValue = value.surrogateType;
+    }
+  }
+
+  // exclusion_type - computed: false, optional: true, required: false
+  private _exclusionType?: string; 
+  public get exclusionType() {
+    return this.getStringAttribute('exclusion_type');
+  }
+  public set exclusionType(value: string) {
+    this._exclusionType = value;
+  }
+  public resetExclusionType() {
+    this._exclusionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionTypeInput() {
+    return this._exclusionType;
+  }
+
+  // likelihood - computed: false, optional: true, required: false
+  private _likelihood?: string; 
+  public get likelihood() {
+    return this.getStringAttribute('likelihood');
+  }
+  public set likelihood(value: string) {
+    this._likelihood = value;
+  }
+  public resetLikelihood() {
+    this._likelihood = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get likelihoodInput() {
+    return this._likelihood;
+  }
+
+  // dictionary - computed: false, optional: true, required: false
+  private _dictionary = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference(this, "dictionary");
+  public get dictionary() {
+    return this._dictionary;
+  }
+  public putDictionary(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary) {
+    this._dictionary.internalValue = value;
+  }
+  public resetDictionary() {
+    this._dictionary.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dictionaryInput() {
+    return this._dictionary.internalValue;
+  }
+
+  // info_type - computed: false, optional: false, required: true
+  private _infoType = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference(this, "info_type");
+  public get infoType() {
+    return this._infoType;
+  }
+  public putInfoType(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType) {
+    this._infoType.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infoTypeInput() {
+    return this._infoType.internalValue;
+  }
+
+  // regex - computed: false, optional: true, required: false
+  private _regex = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference(this, "regex");
+  public get regex() {
+    return this._regex;
+  }
+  public putRegex(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex) {
+    this._regex.internalValue = value;
+  }
+  public resetRegex() {
+    this._regex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexInput() {
+    return this._regex.internalValue;
+  }
+
+  // stored_type - computed: false, optional: true, required: false
+  private _storedType = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference(this, "stored_type");
+  public get storedType() {
+    return this._storedType;
+  }
+  public putStoredType(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType) {
+    this._storedType.internalValue = value;
+  }
+  public resetStoredType() {
+    this._storedType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storedTypeInput() {
+    return this._storedType.internalValue;
+  }
+
+  // surrogate_type - computed: false, optional: true, required: false
+  private _surrogateType = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference(this, "surrogate_type");
+  public get surrogateType() {
+    return this._surrogateType;
+  }
+  public putSurrogateType(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType) {
+    this._surrogateType.internalValue = value;
+  }
+  public resetSurrogateType() {
+    this._surrogateType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get surrogateTypeInput() {
+    return this._surrogateType.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes {
+  /**
+  * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
+at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
+  /**
+  * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
+at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType {
+  /**
+  * Max findings limit for the given infoType.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#max_findings DataLossPreventionJobTrigger#max_findings}
+  */
+  readonly maxFindings?: number;
+  /**
+  * info_type block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
+  */
+  readonly infoType?: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_findings: cdktf.numberToTerraform(struct!.maxFindings),
+    info_type: dataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct!.infoType),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxFindings !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxFindings = this._maxFindings;
+    }
+    if (this._infoType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infoType = this._infoType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._maxFindings = undefined;
+      this._infoType.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._maxFindings = value.maxFindings;
+      this._infoType.internalValue = value.infoType;
+    }
+  }
+
+  // max_findings - computed: false, optional: true, required: false
+  private _maxFindings?: number; 
+  public get maxFindings() {
+    return this.getNumberAttribute('max_findings');
+  }
+  public set maxFindings(value: number) {
+    this._maxFindings = value;
+  }
+  public resetMaxFindings() {
+    this._maxFindings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxFindingsInput() {
+    return this._maxFindings;
+  }
+
+  // info_type - computed: false, optional: true, required: false
+  private _infoType = new DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference(this, "info_type");
+  public get infoType() {
+    return this._infoType;
+  }
+  public putInfoType(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType) {
+    this._infoType.internalValue = value;
+  }
+  public resetInfoType() {
+    this._infoType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infoTypeInput() {
+    return this._infoType.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigLimits {
+  /**
+  * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_item DataLossPreventionJobTrigger#max_findings_per_item}
+  */
+  readonly maxFindingsPerItem?: number;
+  /**
+  * Max number of findings that will be returned per request/job. The maximum returned is 2000.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_request DataLossPreventionJobTrigger#max_findings_per_request}
+  */
+  readonly maxFindingsPerRequest?: number;
+  /**
+  * max_findings_per_info_type block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_info_type DataLossPreventionJobTrigger#max_findings_per_info_type}
+  */
+  readonly maxFindingsPerInfoType?: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigLimitsToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigLimits): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max_findings_per_item: cdktf.numberToTerraform(struct!.maxFindingsPerItem),
+    max_findings_per_request: cdktf.numberToTerraform(struct!.maxFindingsPerRequest),
+    max_findings_per_info_type: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeToTerraform, true)(struct!.maxFindingsPerInfoType),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigLimits | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._maxFindingsPerItem !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerItem = this._maxFindingsPerItem;
+    }
+    if (this._maxFindingsPerRequest !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerRequest = this._maxFindingsPerRequest;
+    }
+    if (this._maxFindingsPerInfoType?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxFindingsPerInfoType = this._maxFindingsPerInfoType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimits | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._maxFindingsPerItem = undefined;
+      this._maxFindingsPerRequest = undefined;
+      this._maxFindingsPerInfoType.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._maxFindingsPerItem = value.maxFindingsPerItem;
+      this._maxFindingsPerRequest = value.maxFindingsPerRequest;
+      this._maxFindingsPerInfoType.internalValue = value.maxFindingsPerInfoType;
+    }
+  }
+
+  // max_findings_per_item - computed: false, optional: true, required: false
+  private _maxFindingsPerItem?: number; 
+  public get maxFindingsPerItem() {
+    return this.getNumberAttribute('max_findings_per_item');
+  }
+  public set maxFindingsPerItem(value: number) {
+    this._maxFindingsPerItem = value;
+  }
+  public resetMaxFindingsPerItem() {
+    this._maxFindingsPerItem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxFindingsPerItemInput() {
+    return this._maxFindingsPerItem;
+  }
+
+  // max_findings_per_request - computed: false, optional: true, required: false
+  private _maxFindingsPerRequest?: number; 
+  public get maxFindingsPerRequest() {
+    return this.getNumberAttribute('max_findings_per_request');
+  }
+  public set maxFindingsPerRequest(value: number) {
+    this._maxFindingsPerRequest = value;
+  }
+  public resetMaxFindingsPerRequest() {
+    this._maxFindingsPerRequest = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxFindingsPerRequestInput() {
+    return this._maxFindingsPerRequest;
+  }
+
+  // max_findings_per_info_type - computed: false, optional: true, required: false
+  private _maxFindingsPerInfoType = new DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeList(this, "max_findings_per_info_type", false);
+  public get maxFindingsPerInfoType() {
+    return this._maxFindingsPerInfoType;
+  }
+  public putMaxFindingsPerInfoType(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable) {
+    this._maxFindingsPerInfoType.internalValue = value;
+  }
+  public resetMaxFindingsPerInfoType() {
+    this._maxFindingsPerInfoType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxFindingsPerInfoTypeInput() {
+    return this._maxFindingsPerInfoType.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes {
+  /**
+  * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
+at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath {
+  /**
+  * A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
+  */
+  readonly path: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._path = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._path = value.path;
+    }
+  }
+
+  // path - computed: false, optional: false, required: true
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList {
+  /**
+  * Words or phrases defining the dictionary. The dictionary must contain at least one
+phrase and every phrase must contain at least 2 characters that are letters or digits.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
+  */
+  readonly words: string[];
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    words: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.words),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._words !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.words = this._words;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._words = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._words = value.words;
+    }
+  }
+
+  // words - computed: false, optional: false, required: true
+  private _words?: string[]; 
+  public get words() {
+    return this.getListAttribute('words');
+  }
+  public set words(value: string[]) {
+    this._words = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wordsInput() {
+    return this._words;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary {
+  /**
+  * cloud_storage_path block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
+  */
+  readonly cloudStoragePath?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath;
+  /**
+  * word_list block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
+  */
+  readonly wordList?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cloud_storage_path: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathToTerraform(struct!.cloudStoragePath),
+    word_list: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListToTerraform(struct!.wordList),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._cloudStoragePath?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.cloudStoragePath = this._cloudStoragePath?.internalValue;
+    }
+    if (this._wordList?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.wordList = this._wordList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._cloudStoragePath.internalValue = undefined;
+      this._wordList.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._cloudStoragePath.internalValue = value.cloudStoragePath;
+      this._wordList.internalValue = value.wordList;
+    }
+  }
+
+  // cloud_storage_path - computed: false, optional: true, required: false
+  private _cloudStoragePath = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(this, "cloud_storage_path");
+  public get cloudStoragePath() {
+    return this._cloudStoragePath;
+  }
+  public putCloudStoragePath(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath) {
+    this._cloudStoragePath.internalValue = value;
+  }
+  public resetCloudStoragePath() {
+    this._cloudStoragePath.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudStoragePathInput() {
+    return this._cloudStoragePath.internalValue;
+  }
+
+  // word_list - computed: false, optional: true, required: false
+  private _wordList = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListOutputReference(this, "word_list");
+  public get wordList() {
+    return this._wordList;
+  }
+  public putWordList(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList) {
+    this._wordList.internalValue = value;
+  }
+  public resetWordList() {
+    this._wordList.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get wordListInput() {
+    return this._wordList.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex {
+  /**
+  * The index of the submatch to extract as findings. When not specified,
+the entire match is returned. No more than 3 may be included.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+  */
+  readonly groupIndexes?: number[];
+  /**
+  * Pattern defining the regular expression. Its syntax
+(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+  */
+  readonly pattern?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.groupIndexes),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._groupIndexes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
+  // group_indexes - computed: false, optional: true, required: false
+  private _groupIndexes?: number[]; 
+  public get groupIndexes() {
+    return this.getNumberListAttribute('group_indexes');
+  }
+  public set groupIndexes(value: number[]) {
+    this._groupIndexes = value;
+  }
+  public resetGroupIndexes() {
+    this._groupIndexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIndexesInput() {
+    return this._groupIndexes;
+  }
+
+  // pattern - computed: false, optional: true, required: false
+  private _pattern?: string; 
+  public get pattern() {
+    return this.getStringAttribute('pattern');
+  }
+  public set pattern(value: string) {
+    this._pattern = value;
+  }
+  public resetPattern() {
+    this._pattern = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity {
+  /**
+  * Number of characters after the finding to consider. Either this or window_before must be specified
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
+  */
+  readonly windowAfter?: number;
+  /**
+  * Number of characters before the finding to consider. Either this or window_after must be specified
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
+  */
+  readonly windowBefore?: number;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    window_after: cdktf.numberToTerraform(struct!.windowAfter),
+    window_before: cdktf.numberToTerraform(struct!.windowBefore),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._windowAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowAfter = this._windowAfter;
+    }
+    if (this._windowBefore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowBefore = this._windowBefore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._windowAfter = undefined;
+      this._windowBefore = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._windowAfter = value.windowAfter;
+      this._windowBefore = value.windowBefore;
+    }
+  }
+
+  // window_after - computed: false, optional: true, required: false
+  private _windowAfter?: number; 
+  public get windowAfter() {
+    return this.getNumberAttribute('window_after');
+  }
+  public set windowAfter(value: number) {
+    this._windowAfter = value;
+  }
+  public resetWindowAfter() {
+    this._windowAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowAfterInput() {
+    return this._windowAfter;
+  }
+
+  // window_before - computed: false, optional: true, required: false
+  private _windowBefore?: number; 
+  public get windowBefore() {
+    return this.getNumberAttribute('window_before');
+  }
+  public set windowBefore(value: number) {
+    this._windowBefore = value;
+  }
+  public resetWindowBefore() {
+    this._windowBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowBeforeInput() {
+    return this._windowBefore;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword {
+  /**
+  * hotword_regex block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
+  */
+  readonly hotwordRegex?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex;
+  /**
+  * proximity block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
+  */
+  readonly proximity?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hotword_regex: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexToTerraform(struct!.hotwordRegex),
+    proximity: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityToTerraform(struct!.proximity),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hotwordRegex?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hotwordRegex = this._hotwordRegex?.internalValue;
+    }
+    if (this._proximity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.proximity = this._proximity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hotwordRegex.internalValue = undefined;
+      this._proximity.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hotwordRegex.internalValue = value.hotwordRegex;
+      this._proximity.internalValue = value.proximity;
+    }
+  }
+
+  // hotword_regex - computed: false, optional: true, required: false
+  private _hotwordRegex = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference(this, "hotword_regex");
+  public get hotwordRegex() {
+    return this._hotwordRegex;
+  }
+  public putHotwordRegex(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex) {
+    this._hotwordRegex.internalValue = value;
+  }
+  public resetHotwordRegex() {
+    this._hotwordRegex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hotwordRegexInput() {
+    return this._hotwordRegex.internalValue;
+  }
+
+  // proximity - computed: false, optional: true, required: false
+  private _proximity = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference(this, "proximity");
+  public get proximity() {
+    return this._proximity;
+  }
+  public putProximity(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity) {
+    this._proximity.internalValue = value;
+  }
+  public resetProximity() {
+    this._proximity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityInput() {
+    return this._proximity.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
+  /**
+  * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
+at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  */
+  readonly name: string;
+  /**
+  * Version of the information type to use. By default, the version is set to stable.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+  */
+  readonly version?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._version = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._version = value.version;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes {
+  /**
+  * info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+  */
+  readonly infoTypes: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    info_types: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform, true)(struct!.infoTypes),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._infoTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infoTypes = this._infoTypes?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._infoTypes.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._infoTypes.internalValue = value.infoTypes;
+    }
+  }
+
+  // info_types - computed: false, optional: false, required: true
+  private _infoTypes = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList(this, "info_types", false);
+  public get infoTypes() {
+    return this._infoTypes;
+  }
+  public putInfoTypes(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable) {
+    this._infoTypes.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infoTypesInput() {
+    return this._infoTypes.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex {
+  /**
+  * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+  */
+  readonly groupIndexes?: number[];
+  /**
+  * Pattern defining the regular expression.
+Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+  */
+  readonly pattern: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.groupIndexes),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._groupIndexes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
+  // group_indexes - computed: false, optional: true, required: false
+  private _groupIndexes?: number[]; 
+  public get groupIndexes() {
+    return this.getNumberListAttribute('group_indexes');
+  }
+  public set groupIndexes(value: number[]) {
+    this._groupIndexes = value;
+  }
+  public resetGroupIndexes() {
+    this._groupIndexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIndexesInput() {
+    return this._groupIndexes;
+  }
+
+  // pattern - computed: false, optional: false, required: true
+  private _pattern?: string; 
+  public get pattern() {
+    return this.getStringAttribute('pattern');
+  }
+  public set pattern(value: string) {
+    this._pattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule {
+  /**
+  * How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType Possible values: ["MATCHING_TYPE_FULL_MATCH", "MATCHING_TYPE_PARTIAL_MATCH", "MATCHING_TYPE_INVERSE_MATCH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#matching_type DataLossPreventionJobTrigger#matching_type}
+  */
+  readonly matchingType: string;
+  /**
+  * dictionary block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
+  */
+  readonly dictionary?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary;
+  /**
+  * exclude_by_hotword block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclude_by_hotword DataLossPreventionJobTrigger#exclude_by_hotword}
+  */
+  readonly excludeByHotword?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword;
+  /**
+  * exclude_info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
+  */
+  readonly excludeInfoTypes?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes;
+  /**
+  * regex block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
+  */
+  readonly regex?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    matching_type: cdktf.stringToTerraform(struct!.matchingType),
+    dictionary: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryToTerraform(struct!.dictionary),
+    exclude_by_hotword: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordToTerraform(struct!.excludeByHotword),
+    exclude_info_types: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesToTerraform(struct!.excludeInfoTypes),
+    regex: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexToTerraform(struct!.regex),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._matchingType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchingType = this._matchingType;
+    }
+    if (this._dictionary?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dictionary = this._dictionary?.internalValue;
+    }
+    if (this._excludeByHotword?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeByHotword = this._excludeByHotword?.internalValue;
+    }
+    if (this._excludeInfoTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeInfoTypes = this._excludeInfoTypes?.internalValue;
+    }
+    if (this._regex?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.regex = this._regex?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._matchingType = undefined;
+      this._dictionary.internalValue = undefined;
+      this._excludeByHotword.internalValue = undefined;
+      this._excludeInfoTypes.internalValue = undefined;
+      this._regex.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._matchingType = value.matchingType;
+      this._dictionary.internalValue = value.dictionary;
+      this._excludeByHotword.internalValue = value.excludeByHotword;
+      this._excludeInfoTypes.internalValue = value.excludeInfoTypes;
+      this._regex.internalValue = value.regex;
+    }
+  }
+
+  // matching_type - computed: false, optional: false, required: true
+  private _matchingType?: string; 
+  public get matchingType() {
+    return this.getStringAttribute('matching_type');
+  }
+  public set matchingType(value: string) {
+    this._matchingType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchingTypeInput() {
+    return this._matchingType;
+  }
+
+  // dictionary - computed: false, optional: true, required: false
+  private _dictionary = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(this, "dictionary");
+  public get dictionary() {
+    return this._dictionary;
+  }
+  public putDictionary(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary) {
+    this._dictionary.internalValue = value;
+  }
+  public resetDictionary() {
+    this._dictionary.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dictionaryInput() {
+    return this._dictionary.internalValue;
+  }
+
+  // exclude_by_hotword - computed: false, optional: true, required: false
+  private _excludeByHotword = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference(this, "exclude_by_hotword");
+  public get excludeByHotword() {
+    return this._excludeByHotword;
+  }
+  public putExcludeByHotword(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword) {
+    this._excludeByHotword.internalValue = value;
+  }
+  public resetExcludeByHotword() {
+    this._excludeByHotword.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeByHotwordInput() {
+    return this._excludeByHotword.internalValue;
+  }
+
+  // exclude_info_types - computed: false, optional: true, required: false
+  private _excludeInfoTypes = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(this, "exclude_info_types");
+  public get excludeInfoTypes() {
+    return this._excludeInfoTypes;
+  }
+  public putExcludeInfoTypes(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes) {
+    this._excludeInfoTypes.internalValue = value;
+  }
+  public resetExcludeInfoTypes() {
+    this._excludeInfoTypes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeInfoTypesInput() {
+    return this._excludeInfoTypes.internalValue;
+  }
+
+  // regex - computed: false, optional: true, required: false
+  private _regex = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(this, "regex");
+  public get regex() {
+    return this._regex;
+  }
+  public putRegex(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex) {
+    this._regex.internalValue = value;
+  }
+  public resetRegex() {
+    this._regex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get regexInput() {
+    return this._regex.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
+  /**
+  * The index of the submatch to extract as findings. When not specified,
+the entire match is returned. No more than 3 may be included.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+  */
+  readonly groupIndexes?: number[];
+  /**
+  * Pattern defining the regular expression. Its syntax
+(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+  */
+  readonly pattern?: string;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    group_indexes: cdktf.listMapper(cdktf.numberToTerraform, false)(struct!.groupIndexes),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._groupIndexes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.groupIndexes = this._groupIndexes;
+    }
+    if (this._pattern !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pattern = this._pattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._groupIndexes = undefined;
+      this._pattern = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._groupIndexes = value.groupIndexes;
+      this._pattern = value.pattern;
+    }
+  }
+
+  // group_indexes - computed: false, optional: true, required: false
+  private _groupIndexes?: number[]; 
+  public get groupIndexes() {
+    return this.getNumberListAttribute('group_indexes');
+  }
+  public set groupIndexes(value: number[]) {
+    this._groupIndexes = value;
+  }
+  public resetGroupIndexes() {
+    this._groupIndexes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupIndexesInput() {
+    return this._groupIndexes;
+  }
+
+  // pattern - computed: false, optional: true, required: false
+  private _pattern?: string; 
+  public get pattern() {
+    return this.getStringAttribute('pattern');
+  }
+  public set pattern(value: string) {
+    this._pattern = value;
+  }
+  public resetPattern() {
+    this._pattern = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patternInput() {
+    return this._pattern;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment {
+  /**
+  * Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#fixed_likelihood DataLossPreventionJobTrigger#fixed_likelihood}
+  */
+  readonly fixedLikelihood?: string;
+  /**
+  * Increase or decrease the likelihood by the specified number of levels. For example,
+if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
+then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKELY.
+Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
+adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
+will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#relative_likelihood DataLossPreventionJobTrigger#relative_likelihood}
+  */
+  readonly relativeLikelihood?: number;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    fixed_likelihood: cdktf.stringToTerraform(struct!.fixedLikelihood),
+    relative_likelihood: cdktf.numberToTerraform(struct!.relativeLikelihood),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._fixedLikelihood !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fixedLikelihood = this._fixedLikelihood;
+    }
+    if (this._relativeLikelihood !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relativeLikelihood = this._relativeLikelihood;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._fixedLikelihood = undefined;
+      this._relativeLikelihood = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._fixedLikelihood = value.fixedLikelihood;
+      this._relativeLikelihood = value.relativeLikelihood;
+    }
+  }
+
+  // fixed_likelihood - computed: false, optional: true, required: false
+  private _fixedLikelihood?: string; 
+  public get fixedLikelihood() {
+    return this.getStringAttribute('fixed_likelihood');
+  }
+  public set fixedLikelihood(value: string) {
+    this._fixedLikelihood = value;
+  }
+  public resetFixedLikelihood() {
+    this._fixedLikelihood = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedLikelihoodInput() {
+    return this._fixedLikelihood;
+  }
+
+  // relative_likelihood - computed: false, optional: true, required: false
+  private _relativeLikelihood?: number; 
+  public get relativeLikelihood() {
+    return this.getNumberAttribute('relative_likelihood');
+  }
+  public set relativeLikelihood(value: number) {
+    this._relativeLikelihood = value;
+  }
+  public resetRelativeLikelihood() {
+    this._relativeLikelihood = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeLikelihoodInput() {
+    return this._relativeLikelihood;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity {
+  /**
+  * Number of characters after the finding to consider. Either this or window_before must be specified
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
+  */
+  readonly windowAfter?: number;
+  /**
+  * Number of characters before the finding to consider. Either this or window_after must be specified
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
+  */
+  readonly windowBefore?: number;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    window_after: cdktf.numberToTerraform(struct!.windowAfter),
+    window_before: cdktf.numberToTerraform(struct!.windowBefore),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._windowAfter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowAfter = this._windowAfter;
+    }
+    if (this._windowBefore !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.windowBefore = this._windowBefore;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._windowAfter = undefined;
+      this._windowBefore = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._windowAfter = value.windowAfter;
+      this._windowBefore = value.windowBefore;
+    }
+  }
+
+  // window_after - computed: false, optional: true, required: false
+  private _windowAfter?: number; 
+  public get windowAfter() {
+    return this.getNumberAttribute('window_after');
+  }
+  public set windowAfter(value: number) {
+    this._windowAfter = value;
+  }
+  public resetWindowAfter() {
+    this._windowAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowAfterInput() {
+    return this._windowAfter;
+  }
+
+  // window_before - computed: false, optional: true, required: false
+  private _windowBefore?: number; 
+  public get windowBefore() {
+    return this.getNumberAttribute('window_before');
+  }
+  public set windowBefore(value: number) {
+    this._windowBefore = value;
+  }
+  public resetWindowBefore() {
+    this._windowBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowBeforeInput() {
+    return this._windowBefore;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule {
+  /**
+  * hotword_regex block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
+  */
+  readonly hotwordRegex?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex;
+  /**
+  * likelihood_adjustment block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#likelihood_adjustment DataLossPreventionJobTrigger#likelihood_adjustment}
+  */
+  readonly likelihoodAdjustment?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment;
+  /**
+  * proximity block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
+  */
+  readonly proximity?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    hotword_regex: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexToTerraform(struct!.hotwordRegex),
+    likelihood_adjustment: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentToTerraform(struct!.likelihoodAdjustment),
+    proximity: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityToTerraform(struct!.proximity),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._hotwordRegex?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hotwordRegex = this._hotwordRegex?.internalValue;
+    }
+    if (this._likelihoodAdjustment?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.likelihoodAdjustment = this._likelihoodAdjustment?.internalValue;
+    }
+    if (this._proximity?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.proximity = this._proximity?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._hotwordRegex.internalValue = undefined;
+      this._likelihoodAdjustment.internalValue = undefined;
+      this._proximity.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._hotwordRegex.internalValue = value.hotwordRegex;
+      this._likelihoodAdjustment.internalValue = value.likelihoodAdjustment;
+      this._proximity.internalValue = value.proximity;
+    }
+  }
+
+  // hotword_regex - computed: false, optional: true, required: false
+  private _hotwordRegex = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(this, "hotword_regex");
+  public get hotwordRegex() {
+    return this._hotwordRegex;
+  }
+  public putHotwordRegex(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex) {
+    this._hotwordRegex.internalValue = value;
+  }
+  public resetHotwordRegex() {
+    this._hotwordRegex.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hotwordRegexInput() {
+    return this._hotwordRegex.internalValue;
+  }
+
+  // likelihood_adjustment - computed: false, optional: true, required: false
+  private _likelihoodAdjustment = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(this, "likelihood_adjustment");
+  public get likelihoodAdjustment() {
+    return this._likelihoodAdjustment;
+  }
+  public putLikelihoodAdjustment(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment) {
+    this._likelihoodAdjustment.internalValue = value;
+  }
+  public resetLikelihoodAdjustment() {
+    this._likelihoodAdjustment.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get likelihoodAdjustmentInput() {
+    return this._likelihoodAdjustment.internalValue;
+  }
+
+  // proximity - computed: false, optional: true, required: false
+  private _proximity = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(this, "proximity");
+  public get proximity() {
+    return this._proximity;
+  }
+  public putProximity(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity) {
+    this._proximity.internalValue = value;
+  }
+  public resetProximity() {
+    this._proximity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityInput() {
+    return this._proximity.internalValue;
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules {
+  /**
+  * exclusion_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclusion_rule DataLossPreventionJobTrigger#exclusion_rule}
+  */
+  readonly exclusionRule?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule;
+  /**
+  * hotword_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#hotword_rule DataLossPreventionJobTrigger#hotword_rule}
+  */
+  readonly hotwordRule?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    exclusion_rule: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleToTerraform(struct!.exclusionRule),
+    hotword_rule: dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleToTerraform(struct!.hotwordRule),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._exclusionRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.exclusionRule = this._exclusionRule?.internalValue;
+    }
+    if (this._hotwordRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.hotwordRule = this._hotwordRule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._exclusionRule.internalValue = undefined;
+      this._hotwordRule.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._exclusionRule.internalValue = value.exclusionRule;
+      this._hotwordRule.internalValue = value.hotwordRule;
+    }
+  }
+
+  // exclusion_rule - computed: false, optional: true, required: false
+  private _exclusionRule = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference(this, "exclusion_rule");
+  public get exclusionRule() {
+    return this._exclusionRule;
+  }
+  public putExclusionRule(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule) {
+    this._exclusionRule.internalValue = value;
+  }
+  public resetExclusionRule() {
+    this._exclusionRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionRuleInput() {
+    return this._exclusionRule.internalValue;
+  }
+
+  // hotword_rule - computed: false, optional: true, required: false
+  private _hotwordRule = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference(this, "hotword_rule");
+  public get hotwordRule() {
+    return this._hotwordRule;
+  }
+  public putHotwordRule(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule) {
+    this._hotwordRule.internalValue = value;
+  }
+  public resetHotwordRule() {
+    this._hotwordRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hotwordRuleInput() {
+    return this._hotwordRule.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet {
+  /**
+  * info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+  */
+  readonly infoTypes?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes[] | cdktf.IResolvable;
+  /**
+  * rules block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#rules DataLossPreventionJobTrigger#rules}
+  */
+  readonly rules: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules[] | cdktf.IResolvable;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    info_types: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesToTerraform, true)(struct!.infoTypes),
+    rules: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesToTerraform, true)(struct!.rules),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._infoTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infoTypes = this._infoTypes?.internalValue;
+    }
+    if (this._rules?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rules = this._rules?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._infoTypes.internalValue = undefined;
+      this._rules.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._infoTypes.internalValue = value.infoTypes;
+      this._rules.internalValue = value.rules;
+    }
+  }
+
+  // info_types - computed: false, optional: true, required: false
+  private _infoTypes = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesList(this, "info_types", false);
+  public get infoTypes() {
+    return this._infoTypes;
+  }
+  public putInfoTypes(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes[] | cdktf.IResolvable) {
+    this._infoTypes.internalValue = value;
+  }
+  public resetInfoTypes() {
+    this._infoTypes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infoTypesInput() {
+    return this._infoTypes.internalValue;
+  }
+
+  // rules - computed: false, optional: false, required: true
+  private _rules = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesList(this, "rules", false);
+  public get rules() {
+    return this._rules;
+  }
+  public putRules(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules[] | cdktf.IResolvable) {
+    this._rules.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rulesInput() {
+    return this._rules.internalValue;
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetList extends cdktf.ComplexList {
+  public internalValue? : DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference {
+    return new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataLossPreventionJobTriggerInspectJobInspectConfig {
+  /**
+  * When true, excludes type information of the findings.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
+  */
+  readonly excludeInfoTypes?: boolean | cdktf.IResolvable;
+  /**
+  * When true, a contextual quote from the data that triggered a finding is included in the response.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#include_quote DataLossPreventionJobTrigger#include_quote}
+  */
+  readonly includeQuote?: boolean | cdktf.IResolvable;
+  /**
+  * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info Default value: "POSSIBLE" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#min_likelihood DataLossPreventionJobTrigger#min_likelihood}
+  */
+  readonly minLikelihood?: string;
+  /**
+  * custom_info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#custom_info_types DataLossPreventionJobTrigger#custom_info_types}
+  */
+  readonly customInfoTypes?: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes[] | cdktf.IResolvable;
+  /**
+  * info_types block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+  */
+  readonly infoTypes?: DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes[] | cdktf.IResolvable;
+  /**
+  * limits block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#limits DataLossPreventionJobTrigger#limits}
+  */
+  readonly limits?: DataLossPreventionJobTriggerInspectJobInspectConfigLimits;
+  /**
+  * rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#rule_set DataLossPreventionJobTrigger#rule_set}
+  */
+  readonly ruleSet?: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet[] | cdktf.IResolvable;
+}
+
+export function dataLossPreventionJobTriggerInspectJobInspectConfigToTerraform(struct?: DataLossPreventionJobTriggerInspectJobInspectConfigOutputReference | DataLossPreventionJobTriggerInspectJobInspectConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    exclude_info_types: cdktf.booleanToTerraform(struct!.excludeInfoTypes),
+    include_quote: cdktf.booleanToTerraform(struct!.includeQuote),
+    min_likelihood: cdktf.stringToTerraform(struct!.minLikelihood),
+    custom_info_types: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesToTerraform, true)(struct!.customInfoTypes),
+    info_types: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesToTerraform, true)(struct!.infoTypes),
+    limits: dataLossPreventionJobTriggerInspectJobInspectConfigLimitsToTerraform(struct!.limits),
+    rule_set: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobInspectConfigRuleSetToTerraform, true)(struct!.ruleSet),
+  }
+}
+
+export class DataLossPreventionJobTriggerInspectJobInspectConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionJobTriggerInspectJobInspectConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._excludeInfoTypes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeInfoTypes = this._excludeInfoTypes;
+    }
+    if (this._includeQuote !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.includeQuote = this._includeQuote;
+    }
+    if (this._minLikelihood !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.minLikelihood = this._minLikelihood;
+    }
+    if (this._customInfoTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customInfoTypes = this._customInfoTypes?.internalValue;
+    }
+    if (this._infoTypes?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infoTypes = this._infoTypes?.internalValue;
+    }
+    if (this._limits?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.limits = this._limits?.internalValue;
+    }
+    if (this._ruleSet?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ruleSet = this._ruleSet?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionJobTriggerInspectJobInspectConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._excludeInfoTypes = undefined;
+      this._includeQuote = undefined;
+      this._minLikelihood = undefined;
+      this._customInfoTypes.internalValue = undefined;
+      this._infoTypes.internalValue = undefined;
+      this._limits.internalValue = undefined;
+      this._ruleSet.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._excludeInfoTypes = value.excludeInfoTypes;
+      this._includeQuote = value.includeQuote;
+      this._minLikelihood = value.minLikelihood;
+      this._customInfoTypes.internalValue = value.customInfoTypes;
+      this._infoTypes.internalValue = value.infoTypes;
+      this._limits.internalValue = value.limits;
+      this._ruleSet.internalValue = value.ruleSet;
+    }
+  }
+
+  // exclude_info_types - computed: false, optional: true, required: false
+  private _excludeInfoTypes?: boolean | cdktf.IResolvable; 
+  public get excludeInfoTypes() {
+    return this.getBooleanAttribute('exclude_info_types');
+  }
+  public set excludeInfoTypes(value: boolean | cdktf.IResolvable) {
+    this._excludeInfoTypes = value;
+  }
+  public resetExcludeInfoTypes() {
+    this._excludeInfoTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeInfoTypesInput() {
+    return this._excludeInfoTypes;
+  }
+
+  // include_quote - computed: false, optional: true, required: false
+  private _includeQuote?: boolean | cdktf.IResolvable; 
+  public get includeQuote() {
+    return this.getBooleanAttribute('include_quote');
+  }
+  public set includeQuote(value: boolean | cdktf.IResolvable) {
+    this._includeQuote = value;
+  }
+  public resetIncludeQuote() {
+    this._includeQuote = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeQuoteInput() {
+    return this._includeQuote;
+  }
+
+  // min_likelihood - computed: false, optional: true, required: false
+  private _minLikelihood?: string; 
+  public get minLikelihood() {
+    return this.getStringAttribute('min_likelihood');
+  }
+  public set minLikelihood(value: string) {
+    this._minLikelihood = value;
+  }
+  public resetMinLikelihood() {
+    this._minLikelihood = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minLikelihoodInput() {
+    return this._minLikelihood;
+  }
+
+  // custom_info_types - computed: false, optional: true, required: false
+  private _customInfoTypes = new DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesList(this, "custom_info_types", false);
+  public get customInfoTypes() {
+    return this._customInfoTypes;
+  }
+  public putCustomInfoTypes(value: DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes[] | cdktf.IResolvable) {
+    this._customInfoTypes.internalValue = value;
+  }
+  public resetCustomInfoTypes() {
+    this._customInfoTypes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customInfoTypesInput() {
+    return this._customInfoTypes.internalValue;
+  }
+
+  // info_types - computed: false, optional: true, required: false
+  private _infoTypes = new DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesList(this, "info_types", false);
+  public get infoTypes() {
+    return this._infoTypes;
+  }
+  public putInfoTypes(value: DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes[] | cdktf.IResolvable) {
+    this._infoTypes.internalValue = value;
+  }
+  public resetInfoTypes() {
+    this._infoTypes.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infoTypesInput() {
+    return this._infoTypes.internalValue;
+  }
+
+  // limits - computed: false, optional: true, required: false
+  private _limits = new DataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference(this, "limits");
+  public get limits() {
+    return this._limits;
+  }
+  public putLimits(value: DataLossPreventionJobTriggerInspectJobInspectConfigLimits) {
+    this._limits.internalValue = value;
+  }
+  public resetLimits() {
+    this._limits.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get limitsInput() {
+    return this._limits.internalValue;
+  }
+
+  // rule_set - computed: false, optional: true, required: false
+  private _ruleSet = new DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetList(this, "rule_set", false);
+  public get ruleSet() {
+    return this._ruleSet;
+  }
+  public putRuleSet(value: DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet[] | cdktf.IResolvable) {
+    this._ruleSet.internalValue = value;
+  }
+  public resetRuleSet() {
+    this._ruleSet.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleSetInput() {
+    return this._ruleSet.internalValue;
+  }
+}
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFields {
   /**
   * Name of a BigQuery field to be returned with the findings.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
   readonly name: string;
 }
@@ -1337,19 +4621,19 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOpti
   /**
   * The dataset ID of the table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The Google Cloud Platform project ID of the project containing the table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
   */
   readonly projectId: string;
   /**
   * The name of the table.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
   */
   readonly tableId: string;
 }
@@ -1451,38 +4735,38 @@ export class DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsT
 }
 export interface DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
   /**
-  * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. 
-If not set, or if set to 0, all rows will be scanned. Only one of rowsLimit and rowsLimitPercent can be 
+  * Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted.
+If not set, or if set to 0, all rows will be scanned. Only one of rowsLimit and rowsLimitPercent can be
 specified. Cannot be used in conjunction with TimespanConfig.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#rows_limit DataLossPreventionJobTrigger#rows_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#rows_limit DataLossPreventionJobTrigger#rows_limit}
   */
   readonly rowsLimit?: number;
   /**
-  * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down. 
-Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of 
+  * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded down.
+Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
 rowsLimit and rowsLimitPercent can be specified. Cannot be used in conjunction with TimespanConfig.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#rows_limit_percent DataLossPreventionJobTrigger#rows_limit_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#rows_limit_percent DataLossPreventionJobTrigger#rows_limit_percent}
   */
   readonly rowsLimitPercent?: number;
   /**
-  * How to sample rows if not all rows are scanned. Meaningful only when used in conjunction with either 
+  * How to sample rows if not all rows are scanned. Meaningful only when used in conjunction with either
 rowsLimit or rowsLimitPercent. If not specified, rows are scanned in the order BigQuery reads them. Default value: "TOP" Possible values: ["TOP", "RANDOM_START"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
   */
   readonly sampleMethod?: string;
   /**
   * identifying_fields block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
   */
   readonly identifyingFields?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFields[] | cdktf.IResolvable;
   /**
   * table_reference block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table_reference DataLossPreventionJobTrigger#table_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table_reference DataLossPreventionJobTrigger#table_reference}
   */
   readonly tableReference: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference;
 }
@@ -1638,14 +4922,14 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorage
   /**
   * The name of a Cloud Storage bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#bucket_name DataLossPreventionJobTrigger#bucket_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#bucket_name DataLossPreventionJobTrigger#bucket_name}
   */
   readonly bucketName: string;
   /**
   * A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
   */
   readonly excludeRegex?: string[];
   /**
@@ -1654,7 +4938,7 @@ that match at least one of these regular expressions will be included in the set
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#include_regex DataLossPreventionJobTrigger#include_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#include_regex DataLossPreventionJobTrigger#include_regex}
   */
   readonly includeRegex?: string[];
 }
@@ -1769,13 +5053,13 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that 'gs://mybucket/' is
 equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#url DataLossPreventionJobTrigger#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#url DataLossPreventionJobTrigger#url}
   */
   readonly url?: string;
   /**
   * regex_file_set block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
   */
   readonly regexFileSet?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet;
 }
@@ -1866,14 +5150,14 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorage
   * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
   */
   readonly bytesLimitPerFile?: number;
   /**
   * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
   */
   readonly bytesLimitPerFilePercent?: number;
   /**
@@ -1881,27 +5165,27 @@ Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#file_types DataLossPreventionJobTrigger#file_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#file_types DataLossPreventionJobTrigger#file_types}
   */
   readonly fileTypes?: string[];
   /**
   * Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
   */
   readonly filesLimitPercent?: number;
   /**
   * How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
   */
   readonly sampleMethod?: string;
   /**
   * file_set block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#file_set DataLossPreventionJobTrigger#file_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#file_set DataLossPreventionJobTrigger#file_set}
   */
   readonly fileSet: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet;
 }
@@ -2080,7 +5364,7 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
   /**
   * The name of the Datastore kind.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
   readonly name: string;
 }
@@ -2144,13 +5428,13 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
   /**
   * If not empty, the ID of the namespace to which the entities belong.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#namespace_id DataLossPreventionJobTrigger#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#namespace_id DataLossPreventionJobTrigger#namespace_id}
   */
   readonly namespaceId?: string;
   /**
   * The ID of the project to which the entities belong.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
   */
   readonly projectId: string;
 }
@@ -2237,13 +5521,13 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
   /**
   * kind block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#kind DataLossPreventionJobTrigger#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#kind DataLossPreventionJobTrigger#kind}
   */
   readonly kind: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind;
   /**
   * partition_id block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#partition_id DataLossPreventionJobTrigger#partition_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#partition_id DataLossPreventionJobTrigger#partition_id}
   */
   readonly partitionId: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId;
 }
@@ -2327,7 +5611,7 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigHybridOption
   /**
   * Name describing the field.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
   readonly name: string;
 }
@@ -2423,7 +5707,7 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigHybridOption
   /**
   * identifying_fields block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
   */
   readonly identifyingFields?: DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields[] | cdktf.IResolvable;
 }
@@ -2490,7 +5774,7 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigHybridOption
   /**
   * A short description of where the data is coming from. Will be stored once in the job. 256 max length.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
   */
   readonly description?: string;
   /**
@@ -2506,7 +5790,7 @@ Examples:
 * '"environment" : "production"'
 * '"pipeline" : "etl"'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#labels DataLossPreventionJobTrigger#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#labels DataLossPreventionJobTrigger#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -2517,13 +5801,13 @@ Label keys must be between 1 and 63 characters long and must conform to the foll
 
 No more than 10 keys can be required.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#required_finding_label_keys DataLossPreventionJobTrigger#required_finding_label_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#required_finding_label_keys DataLossPreventionJobTrigger#required_finding_label_keys}
   */
   readonly requiredFindingLabelKeys?: string[];
   /**
   * table_options block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#table_options DataLossPreventionJobTrigger#table_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#table_options DataLossPreventionJobTrigger#table_options}
   */
   readonly tableOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptions;
 }
@@ -2666,7 +5950,7 @@ field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column.
 For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the
 timestamp property does not exist or its value is empty or invalid.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
   */
   readonly name: string;
 }
@@ -2732,25 +6016,25 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConf
 scanning files that have not been modified since the last time the JobTrigger executed. This will
 be based on the time of the execution of the last run of the JobTrigger.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
   */
   readonly enableAutoPopulationOfTimespanConfig?: boolean | cdktf.IResolvable;
   /**
   * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#end_time DataLossPreventionJobTrigger#end_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#end_time DataLossPreventionJobTrigger#end_time}
   */
   readonly endTime?: string;
   /**
   * Exclude files or rows older than this value.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#start_time DataLossPreventionJobTrigger#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#start_time DataLossPreventionJobTrigger#start_time}
   */
   readonly startTime?: string;
   /**
   * timestamp_field block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
   */
   readonly timestampField: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField;
 }
@@ -2883,31 +6167,31 @@ export interface DataLossPreventionJobTriggerInspectJobStorageConfig {
   /**
   * big_query_options block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#big_query_options DataLossPreventionJobTrigger#big_query_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#big_query_options DataLossPreventionJobTrigger#big_query_options}
   */
   readonly bigQueryOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions;
   /**
   * cloud_storage_options block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
   */
   readonly cloudStorageOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions;
   /**
   * datastore_options block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#datastore_options DataLossPreventionJobTrigger#datastore_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#datastore_options DataLossPreventionJobTrigger#datastore_options}
   */
   readonly datastoreOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions;
   /**
   * hybrid_options block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#hybrid_options DataLossPreventionJobTrigger#hybrid_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#hybrid_options DataLossPreventionJobTrigger#hybrid_options}
   */
   readonly hybridOptions?: DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions;
   /**
   * timespan_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#timespan_config DataLossPreventionJobTrigger#timespan_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#timespan_config DataLossPreventionJobTrigger#timespan_config}
   */
   readonly timespanConfig?: DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig;
 }
@@ -3066,19 +6350,25 @@ export interface DataLossPreventionJobTriggerInspectJob {
   /**
   * The name of the template to run when this job is triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#inspect_template_name DataLossPreventionJobTrigger#inspect_template_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#inspect_template_name DataLossPreventionJobTrigger#inspect_template_name}
   */
   readonly inspectTemplateName: string;
   /**
   * actions block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#actions DataLossPreventionJobTrigger#actions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#actions DataLossPreventionJobTrigger#actions}
   */
   readonly actions: DataLossPreventionJobTriggerInspectJobActions[] | cdktf.IResolvable;
   /**
+  * inspect_config block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#inspect_config DataLossPreventionJobTrigger#inspect_config}
+  */
+  readonly inspectConfig?: DataLossPreventionJobTriggerInspectJobInspectConfig;
+  /**
   * storage_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#storage_config DataLossPreventionJobTrigger#storage_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#storage_config DataLossPreventionJobTrigger#storage_config}
   */
   readonly storageConfig: DataLossPreventionJobTriggerInspectJobStorageConfig;
 }
@@ -3091,6 +6381,7 @@ export function dataLossPreventionJobTriggerInspectJobToTerraform(struct?: DataL
   return {
     inspect_template_name: cdktf.stringToTerraform(struct!.inspectTemplateName),
     actions: cdktf.listMapper(dataLossPreventionJobTriggerInspectJobActionsToTerraform, true)(struct!.actions),
+    inspect_config: dataLossPreventionJobTriggerInspectJobInspectConfigToTerraform(struct!.inspectConfig),
     storage_config: dataLossPreventionJobTriggerInspectJobStorageConfigToTerraform(struct!.storageConfig),
   }
 }
@@ -3117,6 +6408,10 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.actions = this._actions?.internalValue;
     }
+    if (this._inspectConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inspectConfig = this._inspectConfig?.internalValue;
+    }
     if (this._storageConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageConfig = this._storageConfig?.internalValue;
@@ -3129,12 +6424,14 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
       this.isEmptyObject = false;
       this._inspectTemplateName = undefined;
       this._actions.internalValue = undefined;
+      this._inspectConfig.internalValue = undefined;
       this._storageConfig.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._inspectTemplateName = value.inspectTemplateName;
       this._actions.internalValue = value.actions;
+      this._inspectConfig.internalValue = value.inspectConfig;
       this._storageConfig.internalValue = value.storageConfig;
     }
   }
@@ -3165,6 +6462,22 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
     return this._actions.internalValue;
   }
 
+  // inspect_config - computed: false, optional: true, required: false
+  private _inspectConfig = new DataLossPreventionJobTriggerInspectJobInspectConfigOutputReference(this, "inspect_config");
+  public get inspectConfig() {
+    return this._inspectConfig;
+  }
+  public putInspectConfig(value: DataLossPreventionJobTriggerInspectJobInspectConfig) {
+    this._inspectConfig.internalValue = value;
+  }
+  public resetInspectConfig() {
+    this._inspectConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inspectConfigInput() {
+    return this._inspectConfig.internalValue;
+  }
+
   // storage_config - computed: false, optional: false, required: true
   private _storageConfig = new DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference(this, "storage_config");
   public get storageConfig() {
@@ -3180,15 +6493,15 @@ export class DataLossPreventionJobTriggerInspectJobOutputReference extends cdktf
 }
 export interface DataLossPreventionJobTriggerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}
   */
   readonly update?: string;
 }
@@ -3355,7 +6668,7 @@ This value must be set to a time duration greater than or equal to 1 day and can
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
   */
   readonly recurrencePeriodDuration?: string;
 }
@@ -3422,13 +6735,13 @@ export interface DataLossPreventionJobTriggerTriggers {
   /**
   * manual block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#manual DataLossPreventionJobTrigger#manual}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#manual DataLossPreventionJobTrigger#manual}
   */
   readonly manual?: DataLossPreventionJobTriggerTriggersManual;
   /**
   * schedule block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger#schedule DataLossPreventionJobTrigger#schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger#schedule DataLossPreventionJobTrigger#schedule}
   */
   readonly schedule?: DataLossPreventionJobTriggerTriggersSchedule;
 }
@@ -3548,7 +6861,7 @@ export class DataLossPreventionJobTriggerTriggersList extends cdktf.ComplexList 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger}
 */
 export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
 
@@ -3562,7 +6875,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3573,7 +6886,7 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_loss_prevention_job_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -3597,6 +6910,11 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // create_time - computed: true, optional: false, required: false
+  public get createTime() {
+    return this.getStringAttribute('create_time');
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string; 
@@ -3683,6 +7001,11 @@ export class DataLossPreventionJobTrigger extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
     return this._status;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
   }
 
   // inspect_job - computed: false, optional: true, required: false

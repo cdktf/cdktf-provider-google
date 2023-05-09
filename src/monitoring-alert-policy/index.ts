@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,7 +11,7 @@ export interface MonitoringAlertPolicyConfig extends cdktf.TerraformMetaArgument
   * How to combine the results of multiple conditions to
 determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#combiner MonitoringAlertPolicy#combiner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#combiner MonitoringAlertPolicy#combiner}
   */
   readonly combiner: string;
   /**
@@ -20,17 +20,17 @@ dashboards, notifications, and incidents. To avoid confusion, don't use
 the same display name for multiple policies in the same project. The
 name is limited to 512 Unicode characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
   readonly displayName: string;
   /**
   * Whether or not the policy is enabled. The default is true.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#enabled MonitoringAlertPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#enabled MonitoringAlertPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#id MonitoringAlertPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#id MonitoringAlertPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -45,11 +45,11 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#notification_channels MonitoringAlertPolicy#notification_channels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#notification_channels MonitoringAlertPolicy#notification_channels}
   */
   readonly notificationChannels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#project MonitoringAlertPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#project MonitoringAlertPolicy#project}
   */
   readonly project?: string;
   /**
@@ -59,31 +59,31 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#user_labels MonitoringAlertPolicy#user_labels}
   */
   readonly userLabels?: { [key: string]: string };
   /**
   * alert_strategy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#alert_strategy MonitoringAlertPolicy#alert_strategy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#alert_strategy MonitoringAlertPolicy#alert_strategy}
   */
   readonly alertStrategy?: MonitoringAlertPolicyAlertStrategy;
   /**
   * conditions block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#conditions MonitoringAlertPolicy#conditions}
   */
   readonly conditions: MonitoringAlertPolicyConditions[] | cdktf.IResolvable;
   /**
   * documentation block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#documentation MonitoringAlertPolicy#documentation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#documentation MonitoringAlertPolicy#documentation}
   */
   readonly documentation?: MonitoringAlertPolicyDocumentation;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#timeouts MonitoringAlertPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#timeouts MonitoringAlertPolicy#timeouts}
   */
   readonly timeouts?: MonitoringAlertPolicyTimeouts;
 }
@@ -160,7 +160,7 @@ export interface MonitoringAlertPolicyAlertStrategyNotificationRateLimit {
   /**
   * Not more than one notification per period.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#period MonitoringAlertPolicy#period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#period MonitoringAlertPolicy#period}
   */
   readonly period?: string;
 }
@@ -227,13 +227,13 @@ export interface MonitoringAlertPolicyAlertStrategy {
   /**
   * If an alert policy that was active has no data for this long, any open incidents will close.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#auto_close MonitoringAlertPolicy#auto_close}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#auto_close MonitoringAlertPolicy#auto_close}
   */
   readonly autoClose?: string;
   /**
   * notification_rate_limit block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#notification_rate_limit MonitoringAlertPolicy#notification_rate_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#notification_rate_limit MonitoringAlertPolicy#notification_rate_limit}
   */
   readonly notificationRateLimit?: MonitoringAlertPolicyAlertStrategyNotificationRateLimit;
 }
@@ -336,7 +336,7 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -358,7 +358,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -388,7 +388,7 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -410,7 +410,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -580,7 +580,7 @@ export interface MonitoringAlertPolicyConditionsConditionAbsentTrigger {
 that must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -588,7 +588,7 @@ condition to be triggered.
 must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -682,7 +682,7 @@ failing. Currently, only values that are a
 multiple of a minute--e.g. 60s, 120s, or 300s
 --are supported.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -699,19 +699,19 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter?: string;
   /**
   * aggregations block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
   readonly aggregations?: MonitoringAlertPolicyConditionsConditionAbsentAggregations[] | cdktf.IResolvable;
   /**
   * trigger block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionAbsentTrigger;
 }
@@ -844,7 +844,7 @@ export interface MonitoringAlertPolicyConditionsConditionMatchedLog {
   /**
   * A logs-based filter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter: string;
   /**
@@ -856,7 +856,7 @@ a separate rule for the purposes of triggering notifications.
 Label keys and corresponding values can be used in notifications
 generated by this condition.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#label_extractors MonitoringAlertPolicy#label_extractors}
   */
   readonly labelExtractors?: { [key: string]: string };
 }
@@ -945,7 +945,7 @@ export interface MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage
 that must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -953,7 +953,7 @@ condition to be triggered.
 must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -1057,7 +1057,7 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -1065,19 +1065,19 @@ alerted on quickly.
 metric-threshold conditions are evaluated when
 data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
   readonly evaluationMissingData?: string;
   /**
   * Monitoring Query Language query that outputs a boolean stream.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#query MonitoringAlertPolicy#query}
   */
   readonly query: string;
   /**
   * trigger block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguageTrigger;
 }
@@ -1220,7 +1220,7 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -1242,7 +1242,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -1272,7 +1272,7 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -1294,7 +1294,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -1475,7 +1475,7 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#alignment_period MonitoringAlertPolicy#alignment_period}
   */
   readonly alignmentPeriod?: string;
   /**
@@ -1497,7 +1497,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["REDUCE_NONE", "REDUCE_MEAN", "REDUCE_MIN", "REDUCE_MAX", "REDUCE_SUM", "REDUCE_STDDEV", "REDUCE_COUNT", "REDUCE_COUNT_TRUE", "REDUCE_COUNT_FALSE", "REDUCE_FRACTION_TRUE", "REDUCE_PERCENTILE_99", "REDUCE_PERCENTILE_95", "REDUCE_PERCENTILE_50", "REDUCE_PERCENTILE_05"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#cross_series_reducer MonitoringAlertPolicy#cross_series_reducer}
   */
   readonly crossSeriesReducer?: string;
   /**
@@ -1527,7 +1527,7 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#group_by_fields MonitoringAlertPolicy#group_by_fields}
   */
   readonly groupByFields?: string[];
   /**
@@ -1549,7 +1549,7 @@ and alignmentPeriod must be
 specified; otherwise, an error is
 returned. Possible values: ["ALIGN_NONE", "ALIGN_DELTA", "ALIGN_RATE", "ALIGN_INTERPOLATE", "ALIGN_NEXT_OLDER", "ALIGN_MIN", "ALIGN_MAX", "ALIGN_MEAN", "ALIGN_COUNT", "ALIGN_SUM", "ALIGN_STDDEV", "ALIGN_COUNT_TRUE", "ALIGN_COUNT_FALSE", "ALIGN_FRACTION_TRUE", "ALIGN_PERCENTILE_99", "ALIGN_PERCENTILE_95", "ALIGN_PERCENTILE_50", "ALIGN_PERCENTILE_05", "ALIGN_PERCENT_CHANGE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#per_series_aligner MonitoringAlertPolicy#per_series_aligner}
   */
   readonly perSeriesAligner?: string;
 }
@@ -1719,7 +1719,7 @@ export interface MonitoringAlertPolicyConditionsConditionThresholdTrigger {
 that must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#count MonitoringAlertPolicy#count}
   */
   readonly count?: number;
   /**
@@ -1727,7 +1727,7 @@ condition to be triggered.
 must fail the predicate for the
 condition to be triggered.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#percent MonitoringAlertPolicy#percent}
   */
   readonly percent?: number;
 }
@@ -1824,7 +1824,7 @@ the left-hand side and the threshold on the
 right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#comparison MonitoringAlertPolicy#comparison}
   */
   readonly comparison: string;
   /**
@@ -1844,7 +1844,7 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#denominator_filter MonitoringAlertPolicy#denominator_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#denominator_filter MonitoringAlertPolicy#denominator_filter}
   */
   readonly denominatorFilter?: string;
   /**
@@ -1864,7 +1864,7 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#duration MonitoringAlertPolicy#duration}
   */
   readonly duration: string;
   /**
@@ -1872,7 +1872,7 @@ alerted on quickly.
 metric-threshold conditions are evaluated when
 data stops arriving. Possible values: ["EVALUATION_MISSING_DATA_INACTIVE", "EVALUATION_MISSING_DATA_ACTIVE", "EVALUATION_MISSING_DATA_NO_OP"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#evaluation_missing_data MonitoringAlertPolicy#evaluation_missing_data}
   */
   readonly evaluationMissingData?: string;
   /**
@@ -1889,32 +1889,32 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#filter MonitoringAlertPolicy#filter}
   */
   readonly filter?: string;
   /**
   * A value against which to compare the time
 series.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#threshold_value MonitoringAlertPolicy#threshold_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#threshold_value MonitoringAlertPolicy#threshold_value}
   */
   readonly thresholdValue?: number;
   /**
   * aggregations block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#aggregations MonitoringAlertPolicy#aggregations}
   */
   readonly aggregations?: MonitoringAlertPolicyConditionsConditionThresholdAggregations[] | cdktf.IResolvable;
   /**
   * denominator_aggregations block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#denominator_aggregations MonitoringAlertPolicy#denominator_aggregations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#denominator_aggregations MonitoringAlertPolicy#denominator_aggregations}
   */
   readonly denominatorAggregations?: MonitoringAlertPolicyConditionsConditionThresholdDenominatorAggregations[] | cdktf.IResolvable;
   /**
   * trigger block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#trigger MonitoringAlertPolicy#trigger}
   */
   readonly trigger?: MonitoringAlertPolicyConditionsConditionThresholdTrigger;
 }
@@ -2163,31 +2163,31 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#display_name MonitoringAlertPolicy#display_name}
   */
   readonly displayName: string;
   /**
   * condition_absent block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#condition_absent MonitoringAlertPolicy#condition_absent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#condition_absent MonitoringAlertPolicy#condition_absent}
   */
   readonly conditionAbsent?: MonitoringAlertPolicyConditionsConditionAbsent;
   /**
   * condition_matched_log block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#condition_matched_log MonitoringAlertPolicy#condition_matched_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#condition_matched_log MonitoringAlertPolicy#condition_matched_log}
   */
   readonly conditionMatchedLog?: MonitoringAlertPolicyConditionsConditionMatchedLog;
   /**
   * condition_monitoring_query_language block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#condition_monitoring_query_language MonitoringAlertPolicy#condition_monitoring_query_language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#condition_monitoring_query_language MonitoringAlertPolicy#condition_monitoring_query_language}
   */
   readonly conditionMonitoringQueryLanguage?: MonitoringAlertPolicyConditionsConditionMonitoringQueryLanguage;
   /**
   * condition_threshold block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#condition_threshold MonitoringAlertPolicy#condition_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#condition_threshold MonitoringAlertPolicy#condition_threshold}
   */
   readonly conditionThreshold?: MonitoringAlertPolicyConditionsConditionThreshold;
 }
@@ -2383,14 +2383,14 @@ The content may not exceed 8,192 Unicode characters and may not
 exceed more than 10,240 bytes when encoded in UTF-8 format,
 whichever is smaller.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#content MonitoringAlertPolicy#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#content MonitoringAlertPolicy#content}
   */
   readonly content?: string;
   /**
   * The format of the content field. Presently, only the value
 "text/markdown" is supported.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#mime_type MonitoringAlertPolicy#mime_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#mime_type MonitoringAlertPolicy#mime_type}
   */
   readonly mimeType?: string;
 }
@@ -2478,15 +2478,15 @@ export class MonitoringAlertPolicyDocumentationOutputReference extends cdktf.Com
 }
 export interface MonitoringAlertPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#create MonitoringAlertPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#create MonitoringAlertPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#delete MonitoringAlertPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#delete MonitoringAlertPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy#update MonitoringAlertPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy#update MonitoringAlertPolicy#update}
   */
   readonly update?: string;
 }
@@ -2607,7 +2607,7 @@ export class MonitoringAlertPolicyTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy google_monitoring_alert_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy}
 */
 export class MonitoringAlertPolicy extends cdktf.TerraformResource {
 
@@ -2621,7 +2621,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.63.1/docs/resources/monitoring_alert_policy google_monitoring_alert_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/monitoring_alert_policy google_monitoring_alert_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2632,7 +2632,7 @@ export class MonitoringAlertPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_alert_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.63.1',
+        providerVersion: '4.64.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
