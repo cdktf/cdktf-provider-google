@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 iaptunnelinstanceiambinding.NewIapTunnelInstanceIamBinding(scope Construct, id *string, config IapTunnelInstanceIamBindingConfig) IapTunnelInstanceIamBinding
 ```
@@ -311,7 +311,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 iaptunnelinstanceiambinding.IapTunnelInstanceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 iaptunnelinstanceiambinding.IapTunnelInstanceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ iaptunnelinstanceiambinding.IapTunnelInstanceIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 iaptunnelinstanceiambinding.IapTunnelInstanceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 &iaptunnelinstanceiambinding.IapTunnelInstanceIamBindingCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 &iaptunnelinstanceiambinding.IapTunnelInstanceIamBindingConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambin
 	Instance: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Zone: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapTunnelInstanceIamBinding.IapTunnelInstanceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iaptunnelinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v7/iaptunnelinstanceiambinding"
 
 iaptunnelinstanceiambinding.NewIapTunnelInstanceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapTunnelInstanceIamBindingConditionOutputReference
 ```
