@@ -1,6 +1,6 @@
 # `google_iap_web_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy).
+Refer to the Terraform Registory for docs: [`google_iap_web_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy).
 
 # `iapWebIamPolicy` Submodule <a name="`iapWebIamPolicy` Submodule" id="@cdktf/provider-google.iapWebIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_iap_web_iam_policy`](https:/
 
 ### IapWebIamPolicy <a name="IapWebIamPolicy" id="@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy google_iap_web_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy google_iap_web_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer"></a>
 
@@ -44,9 +44,9 @@ IapWebIamPolicy.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicy.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -133,7 +133,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}.
 
 ---
 
@@ -724,9 +724,9 @@ IapWebIamPolicyConfig.builder()
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.policyData">policyData</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebIamPolicy.IapWebIamPolicyConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}. |
 
 ---
 
@@ -808,7 +808,7 @@ public java.lang.String getPolicyData();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#policy_data IapWebIamPolicy#policy_data}.
 
 ---
 
@@ -820,7 +820,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#id IapWebIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -835,7 +835,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/iap_web_iam_policy#project IapWebIamPolicy#project}.
 
 ---
 

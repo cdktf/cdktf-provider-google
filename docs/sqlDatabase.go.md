@@ -1,6 +1,6 @@
 # `google_sql_database`
 
-Refer to the Terraform Registory for docs: [`google_sql_database`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database).
+Refer to the Terraform Registory for docs: [`google_sql_database`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database).
 
 # `sqlDatabase` Submodule <a name="`sqlDatabase` Submodule" id="@cdktf/provider-google.sqlDatabase"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_sql_database`](https://regis
 
 ### SqlDatabase <a name="SqlDatabase" id="@cdktf/provider-google.sqlDatabase.SqlDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database google_sql_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database google_sql_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabase.SqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 sqldatabase.NewSqlDatabase(scope Construct, id *string, config SqlDatabaseConfig) SqlDatabase
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.sqlDatabase.SqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 sqldatabase.SqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.sqlDatabase.SqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 sqldatabase.SqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ sqldatabase.SqlDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.sqlDatabase.SqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 sqldatabase.SqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -757,7 +757,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 &sqldatabase.SqlDatabaseConfig {
 	Connection: interface{},
@@ -774,7 +774,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
 	DeletionPolicy: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.sqlDatabase.SqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.sqlDatabase.SqlDatabaseTimeouts,
 }
 ```
 
@@ -794,8 +794,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
 | <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.charset">Charset</a></code> | <code>*string</code> | The charset value. |
 | <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.collation">Collation</a></code> | <code>*string</code> | The collation value. |
 | <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>*string</code> | The deletion policy for the database. |
-| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#id SqlDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#project SqlDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#id SqlDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#project SqlDatabase#project}. |
 | <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts">SqlDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -880,7 +880,7 @@ Instance *string
 
 The name of the Cloud SQL instance. This does not include the project ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#instance SqlDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#instance SqlDatabase#instance}
 
 ---
 
@@ -894,7 +894,7 @@ Name *string
 
 The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#name SqlDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#name SqlDatabase#name}
 
 ---
 
@@ -914,7 +914,7 @@ and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static
 for more details and supported values. Postgres databases only support
 a value of 'UTF8' at creation time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#charset SqlDatabase#charset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#charset SqlDatabase#charset}
 
 ---
 
@@ -934,7 +934,7 @@ and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/col
 for more details and supported values. Postgres databases only support
 a value of 'en_US.UTF8' at creation time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#collation SqlDatabase#collation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#collation SqlDatabase#collation}
 
 ---
 
@@ -953,7 +953,7 @@ to be abandoned rather than deleted. This is useful for Postgres, where database
 deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
 values are: "ABANDON", "DELETE". Defaults to "DELETE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
 
 ---
 
@@ -965,7 +965,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#id SqlDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#id SqlDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -980,7 +980,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#project SqlDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#project SqlDatabase#project}.
 
 ---
 
@@ -994,7 +994,7 @@ Timeouts SqlDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
 
 ---
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 &sqldatabase.SqlDatabaseTimeouts {
 	Create: *string,
@@ -1016,9 +1016,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#create SqlDatabase#create}. |
-| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#delete SqlDatabase#delete}. |
-| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#update SqlDatabase#update}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#create SqlDatabase#create}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#delete SqlDatabase#delete}. |
+| <code><a href="#@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#update SqlDatabase#update}. |
 
 ---
 
@@ -1030,7 +1030,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#create SqlDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#create SqlDatabase#create}.
 
 ---
 
@@ -1042,7 +1042,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#delete SqlDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#delete SqlDatabase#delete}.
 
 ---
 
@@ -1054,7 +1054,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/sql_database#update SqlDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/sql_database#update SqlDatabase#update}.
 
 ---
 
@@ -1065,7 +1065,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sqlDatabase.SqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/sqldatabase"
+import "github.com/cdktf/cdktf-provider-google-go/google/sqldatabase"
 
 sqldatabase.NewSqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseTimeoutsOutputReference
 ```

@@ -1,6 +1,6 @@
 # `google_kms_key_ring`
 
-Refer to the Terraform Registory for docs: [`google_kms_key_ring`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring).
+Refer to the Terraform Registory for docs: [`google_kms_key_ring`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring).
 
 # `kmsKeyRing` Submodule <a name="`kmsKeyRing` Submodule" id="@cdktf/provider-google.kmsKeyRing"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_kms_key_ring`](https://regis
 
 ### KmsKeyRing <a name="KmsKeyRing" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring google_kms_key_ring}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring google_kms_key_ring}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer"></a>
 
@@ -46,8 +46,8 @@ kmsKeyRing.KmsKeyRing(
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.location">location</a></code> | <code>str</code> | The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name for the KeyRing. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#id KmsKeyRing#id}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#project KmsKeyRing#project}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#id KmsKeyRing#id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#project KmsKeyRing#project}. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#location KmsKeyRing#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#location KmsKeyRing#location}
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The resource name for the KeyRing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#name KmsKeyRing#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#name KmsKeyRing#name}
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#id KmsKeyRing#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#id KmsKeyRing#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -147,7 +147,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#project KmsKeyRing#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#project KmsKeyRing#project}.
 
 ---
 
@@ -157,7 +157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#timeouts KmsKeyRing#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#timeouts KmsKeyRing#timeouts}
 
 ---
 
@@ -410,7 +410,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#create KmsKeyRing#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#create KmsKeyRing#create}.
 
 ---
 
@@ -418,7 +418,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}.
 
 ---
 
@@ -845,8 +845,8 @@ kmsKeyRing.KmsKeyRingConfig(
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.location">location</a></code> | <code>str</code> | The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.name">name</a></code> | <code>str</code> | The resource name for the KeyRing. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#id KmsKeyRing#id}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#project KmsKeyRing#project}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#id KmsKeyRing#id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#project KmsKeyRing#project}. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -931,7 +931,7 @@ location: str
 
 The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#location KmsKeyRing#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#location KmsKeyRing#location}
 
 ---
 
@@ -945,7 +945,7 @@ name: str
 
 The resource name for the KeyRing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#name KmsKeyRing#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#name KmsKeyRing#name}
 
 ---
 
@@ -957,7 +957,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#id KmsKeyRing#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#id KmsKeyRing#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -972,7 +972,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#project KmsKeyRing#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#project KmsKeyRing#project}.
 
 ---
 
@@ -986,7 +986,7 @@ timeouts: KmsKeyRingTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#timeouts KmsKeyRing#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#timeouts KmsKeyRing#timeouts}
 
 ---
 
@@ -1007,8 +1007,8 @@ kmsKeyRing.KmsKeyRingTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#create KmsKeyRing#create}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#create KmsKeyRing#create}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}. |
 
 ---
 
@@ -1020,7 +1020,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#create KmsKeyRing#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#create KmsKeyRing#create}.
 
 ---
 
@@ -1032,7 +1032,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/kms_key_ring#delete KmsKeyRing#delete}.
 
 ---
 

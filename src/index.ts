@@ -374,6 +374,7 @@ export * as firebaserulesRelease from './firebaserules-release';
 export * as firebaserulesRuleset from './firebaserules-ruleset';
 export * as firestoreDatabase from './firestore-database';
 export * as firestoreDocument from './firestore-document';
+export * as firestoreField from './firestore-field';
 export * as firestoreIndex from './firestore-index';
 export * as folder from './folder';
 export * as folderAccessApprovalSettings from './folder-access-approval-settings';
@@ -695,6 +696,7 @@ export * as dataGoogleContainerEngineVersions from './data-google-container-engi
 export * as dataGoogleContainerRegistryImage from './data-google-container-registry-image';
 export * as dataGoogleContainerRegistryRepository from './data-google-container-registry-repository';
 export * as dataGoogleDataprocMetastoreService from './data-google-dataproc-metastore-service';
+export * as dataGoogleDatastreamStaticIps from './data-google-datastream-static-ips';
 export * as dataGoogleDnsKeys from './data-google-dns-keys';
 export * as dataGoogleDnsManagedZone from './data-google-dns-managed-zone';
 export * as dataGoogleDnsRecordSet from './data-google-dns-record-set';
