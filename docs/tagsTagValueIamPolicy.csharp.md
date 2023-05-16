@@ -1,6 +1,6 @@
 # `google_tags_tag_value_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_tags_tag_value_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy).
+Refer to the Terraform Registory for docs: [`google_tags_tag_value_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy).
 
 # `tagsTagValueIamPolicy` Submodule <a name="`tagsTagValueIamPolicy` Submodule" id="@cdktf/provider-google.tagsTagValueIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_tags_tag_value_iam_policy`](
 
 ### TagsTagValueIamPolicy <a name="TagsTagValueIamPolicy" id="@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy google_tags_tag_value_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy google_tags_tag_value_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicy.Initializer"></a>
 
@@ -626,9 +626,9 @@ new TagsTagValueIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#policy_data TagsTagValueIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.tagValue">TagValue</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#tag_value TagsTagValueIamPolicy#tag_value}. |
-| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#id TagsTagValueIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#policy_data TagsTagValueIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.tagValue">TagValue</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#tag_value TagsTagValueIamPolicy#tag_value}. |
+| <code><a href="#@cdktf/provider-google.tagsTagValueIamPolicy.TagsTagValueIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#id TagsTagValueIamPolicy#id}. |
 
 ---
 
@@ -710,7 +710,7 @@ public string PolicyData { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#policy_data TagsTagValueIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#policy_data TagsTagValueIamPolicy#policy_data}.
 
 ---
 
@@ -722,7 +722,7 @@ public string TagValue { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#tag_value TagsTagValueIamPolicy#tag_value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#tag_value TagsTagValueIamPolicy#tag_value}.
 
 ---
 
@@ -734,7 +734,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/tags_tag_value_iam_policy#id TagsTagValueIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/tags_tag_value_iam_policy#id TagsTagValueIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

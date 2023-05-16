@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger
+// https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudbuildTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger#id DataGoogleCloudbuildTrigger#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger#id DataGoogleCloudbuildTrigger#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -18,17 +18,17 @@ export interface DataGoogleCloudbuildTriggerConfig extends cdktf.TerraformMetaAr
   * The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
 If not specified, "global" is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger#location DataGoogleCloudbuildTrigger#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger#location DataGoogleCloudbuildTrigger#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger#project DataGoogleCloudbuildTrigger#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger#project DataGoogleCloudbuildTrigger#project}
   */
   readonly project?: string;
   /**
   * The unique identifier for the trigger.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger#trigger_id DataGoogleCloudbuildTrigger#trigger_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger#trigger_id DataGoogleCloudbuildTrigger#trigger_id}
   */
   readonly triggerId: string;
 }
@@ -1291,6 +1291,16 @@ export class DataGoogleCloudbuildTriggerBuildStepOutputReference extends cdktf.C
     }
   }
 
+  // allow_exit_codes - computed: true, optional: false, required: false
+  public get allowExitCodes() {
+    return this.getNumberListAttribute('allow_exit_codes');
+  }
+
+  // allow_failure - computed: true, optional: false, required: false
+  public get allowFailure() {
+    return this.getBooleanAttribute('allow_failure');
+  }
+
   // args - computed: true, optional: false, required: false
   public get args() {
     return this.getListAttribute('args');
@@ -2138,7 +2148,7 @@ export class DataGoogleCloudbuildTriggerWebhookConfigList extends cdktf.ComplexL
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger google_cloudbuild_trigger}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger google_cloudbuild_trigger}
 */
 export class DataGoogleCloudbuildTrigger extends cdktf.TerraformDataSource {
 
@@ -2152,7 +2162,7 @@ export class DataGoogleCloudbuildTrigger extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/cloudbuild_trigger google_cloudbuild_trigger} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/cloudbuild_trigger google_cloudbuild_trigger} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2163,7 +2173,7 @@ export class DataGoogleCloudbuildTrigger extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_cloudbuild_trigger',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.64.0',
+        providerVersion: '4.65.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

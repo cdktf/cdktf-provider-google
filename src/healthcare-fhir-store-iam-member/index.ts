@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareFhirStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#fhir_store_id HealthcareFhirStoreIamMember#fhir_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#fhir_store_id HealthcareFhirStoreIamMember#fhir_store_id}
   */
   readonly fhirStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#id HealthcareFhirStoreIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#id HealthcareFhirStoreIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#member HealthcareFhirStoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#member HealthcareFhirStoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#role HealthcareFhirStoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#role HealthcareFhirStoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#condition HealthcareFhirStoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#condition HealthcareFhirStoreIamMember#condition}
   */
   readonly condition?: HealthcareFhirStoreIamMemberCondition;
 }
 export interface HealthcareFhirStoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#description HealthcareFhirStoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#description HealthcareFhirStoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#expression HealthcareFhirStoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#expression HealthcareFhirStoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member#title HealthcareFhirStoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member#title HealthcareFhirStoreIamMember#title}
   */
   readonly title: string;
 }
@@ -148,7 +148,7 @@ export class HealthcareFhirStoreIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member}
 */
 export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_fhir_store_iam_member google_healthcare_fhir_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +173,7 @@ export class HealthcareFhirStoreIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_fhir_store_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.64.0',
+        providerVersion: '4.65.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/dns_managed_zone
+// https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/dns_managed_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface DataGoogleDnsManagedZoneConfig extends cdktf.TerraformMetaArgum
   /**
   * A unique name for the resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
   */
   readonly name: string;
   /**
   * The ID of the project for the Google Cloud.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/dns_managed_zone google_dns_managed_zone}
 */
 export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
 
@@ -36,7 +36,7 @@ export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/data-sources/dns_managed_zone google_dns_managed_zone} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/dns_managed_zone google_dns_managed_zone} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -47,7 +47,7 @@ export class DataGoogleDnsManagedZone extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_managed_zone',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.64.0',
+        providerVersion: '4.65.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

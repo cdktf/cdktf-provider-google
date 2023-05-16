@@ -1,6 +1,6 @@
 # `google_service_account_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_service_account_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member).
+Refer to the Terraform Registory for docs: [`google_service_account_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member).
 
 # `serviceAccountIamMember` Submodule <a name="`serviceAccountIamMember` Submodule" id="@cdktf/provider-google.serviceAccountIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_service_account_iam_member`]
 
 ### ServiceAccountIamMember <a name="ServiceAccountIamMember" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member google_service_account_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member google_service_account_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMember.Initializer"></a>
 
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/serviceaccountiammem
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#expression ServiceAccountIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#title ServiceAccountIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#description ServiceAccountIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#expression ServiceAccountIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#title ServiceAccountIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#description ServiceAccountIamMember#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#expression ServiceAccountIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#expression ServiceAccountIamMember#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#title ServiceAccountIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#title ServiceAccountIamMember#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#description ServiceAccountIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#description ServiceAccountIamMember#description}.
 
 ---
 
@@ -752,11 +752,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/serviceaccountiammem
 | <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#member ServiceAccountIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#role ServiceAccountIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.serviceAccountId">ServiceAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#service_account_id ServiceAccountIamMember#service_account_id}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#member ServiceAccountIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#role ServiceAccountIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.serviceAccountId">ServiceAccountId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#service_account_id ServiceAccountIamMember#service_account_id}. |
 | <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberCondition">ServiceAccountIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#id ServiceAccountIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.serviceAccountIamMember.ServiceAccountIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#id ServiceAccountIamMember#id}. |
 
 ---
 
@@ -838,7 +838,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#member ServiceAccountIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#member ServiceAccountIamMember#member}.
 
 ---
 
@@ -850,7 +850,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#role ServiceAccountIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#role ServiceAccountIamMember#role}.
 
 ---
 
@@ -862,7 +862,7 @@ ServiceAccountId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#service_account_id ServiceAccountIamMember#service_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#service_account_id ServiceAccountIamMember#service_account_id}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition ServiceAccountIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#condition ServiceAccountIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#condition ServiceAccountIamMember#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.64.0/docs/resources/service_account_iam_member#id ServiceAccountIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/service_account_iam_member#id ServiceAccountIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
