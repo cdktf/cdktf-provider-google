@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue
+// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#id CloudTasksQueue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,47 +17,47 @@ export interface CloudTasksQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location of the queue
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#location CloudTasksQueue#location}
   */
   readonly location: string;
   /**
   * The queue name.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#name CloudTasksQueue#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#project CloudTasksQueue#project}
   */
   readonly project?: string;
   /**
   * app_engine_routing_override block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#app_engine_routing_override CloudTasksQueue#app_engine_routing_override}
   */
   readonly appEngineRoutingOverride?: CloudTasksQueueAppEngineRoutingOverride;
   /**
   * rate_limits block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#rate_limits CloudTasksQueue#rate_limits}
   */
   readonly rateLimits?: CloudTasksQueueRateLimits;
   /**
   * retry_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#retry_config CloudTasksQueue#retry_config}
   */
   readonly retryConfig?: CloudTasksQueueRetryConfig;
   /**
   * stackdriver_logging_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#stackdriver_logging_config CloudTasksQueue#stackdriver_logging_config}
   */
   readonly stackdriverLoggingConfig?: CloudTasksQueueStackdriverLoggingConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#timeouts CloudTasksQueue#timeouts}
   */
   readonly timeouts?: CloudTasksQueueTimeouts;
 }
@@ -67,7 +67,7 @@ export interface CloudTasksQueueAppEngineRoutingOverride {
 
 By default, the task is sent to an instance which is available when the task is attempted.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#instance CloudTasksQueue#instance}
   */
   readonly instance?: string;
   /**
@@ -75,7 +75,7 @@ By default, the task is sent to an instance which is available when the task is 
 
 By default, the task is sent to the service which is the default service when the task is attempted.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#service CloudTasksQueue#service}
   */
   readonly service?: string;
   /**
@@ -83,7 +83,7 @@ By default, the task is sent to the service which is the default service when th
 
 By default, the task is sent to the version which is the default version when the task is attempted.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#version CloudTasksQueue#version}
   */
   readonly version?: string;
 }
@@ -204,7 +204,7 @@ be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_concurrent_dispatches CloudTasksQueue#max_concurrent_dispatches}
   */
   readonly maxConcurrentDispatches?: number;
   /**
@@ -212,7 +212,7 @@ concurrent requests decreases.
 
 If unspecified when the queue is created, Cloud Tasks will pick the default.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_dispatches_per_second CloudTasksQueue#max_dispatches_per_second}
   */
   readonly maxDispatchesPerSecond?: number;
 }
@@ -316,7 +316,7 @@ the default.
 
 -1 indicates unlimited attempts.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_attempts CloudTasksQueue#max_attempts}
   */
   readonly maxAttempts?: number;
   /**
@@ -324,7 +324,7 @@ the default.
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_backoff CloudTasksQueue#max_backoff}
   */
   readonly maxBackoff?: string;
   /**
@@ -334,7 +334,7 @@ A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_doublings CloudTasksQueue#max_doublings}
   */
   readonly maxDoublings?: number;
   /**
@@ -346,7 +346,7 @@ made and the task will be deleted.
 
 If zero, then the task age is unlimited.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#max_retry_duration CloudTasksQueue#max_retry_duration}
   */
   readonly maxRetryDuration?: string;
   /**
@@ -354,7 +354,7 @@ If zero, then the task age is unlimited.
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#min_backoff CloudTasksQueue#min_backoff}
   */
   readonly minBackoff?: string;
 }
@@ -515,7 +515,7 @@ export interface CloudTasksQueueStackdriverLoggingConfig {
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
 default and means that no operations are logged.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#sampling_ratio CloudTasksQueue#sampling_ratio}
   */
   readonly samplingRatio: number;
 }
@@ -577,15 +577,15 @@ export class CloudTasksQueueStackdriverLoggingConfigOutputReference extends cdkt
 }
 export interface CloudTasksQueueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#create CloudTasksQueue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#delete CloudTasksQueue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue#update CloudTasksQueue#update}
   */
   readonly update?: string;
 }
@@ -706,7 +706,7 @@ export class CloudTasksQueueTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue google_cloud_tasks_queue}
 */
 export class CloudTasksQueue extends cdktf.TerraformResource {
 
@@ -720,7 +720,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/cloud_tasks_queue google_cloud_tasks_queue} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/cloud_tasks_queue google_cloud_tasks_queue} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -731,7 +731,7 @@ export class CloudTasksQueue extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_tasks_queue',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.0',
+        providerVersion: '4.65.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

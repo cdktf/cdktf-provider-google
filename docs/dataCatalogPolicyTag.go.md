@@ -1,6 +1,6 @@
 # `google_data_catalog_policy_tag`
 
-Refer to the Terraform Registory for docs: [`google_data_catalog_policy_tag`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag).
+Refer to the Terraform Registory for docs: [`google_data_catalog_policy_tag`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag).
 
 # `dataCatalogPolicyTag` Submodule <a name="`dataCatalogPolicyTag` Submodule" id="@cdktf/provider-google.dataCatalogPolicyTag"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_data_catalog_policy_tag`](ht
 
 ### DataCatalogPolicyTag <a name="DataCatalogPolicyTag" id="@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTag"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag google_data_catalog_policy_tag}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag google_data_catalog_policy_tag}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTag.Initializer"></a>
 
@@ -743,7 +743,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datacatalogpolicytag
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User defined name of this policy tag. |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.taxonomy">Taxonomy</a></code> | <code>*string</code> | Taxonomy the policy tag is associated with. |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.description">Description</a></code> | <code>*string</code> | Description of this policy tag. |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#id DataCatalogPolicyTag#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#id DataCatalogPolicyTag#id}. |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.parentPolicyTag">ParentPolicyTag</a></code> | <code>*string</code> | Resource name of this policy tag's parent policy tag. |
 | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts">DataCatalogPolicyTagTimeouts</a></code> | timeouts block. |
 
@@ -833,7 +833,7 @@ It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#display_name DataCatalogPolicyTag#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#display_name DataCatalogPolicyTag#display_name}
 
 ---
 
@@ -847,7 +847,7 @@ Taxonomy *string
 
 Taxonomy the policy tag is associated with.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#taxonomy DataCatalogPolicyTag#taxonomy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#taxonomy DataCatalogPolicyTag#taxonomy}
 
 ---
 
@@ -866,7 +866,7 @@ newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#description DataCatalogPolicyTag#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#description DataCatalogPolicyTag#description}
 
 ---
 
@@ -878,7 +878,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#id DataCatalogPolicyTag#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#id DataCatalogPolicyTag#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -898,7 +898,7 @@ Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#parent_policy_tag DataCatalogPolicyTag#parent_policy_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#parent_policy_tag DataCatalogPolicyTag#parent_policy_tag}
 
 ---
 
@@ -912,7 +912,7 @@ Timeouts DataCatalogPolicyTagTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#timeouts DataCatalogPolicyTag#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#timeouts DataCatalogPolicyTag#timeouts}
 
 ---
 
@@ -934,9 +934,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datacatalogpolicytag
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#create DataCatalogPolicyTag#create}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#delete DataCatalogPolicyTag#delete}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#update DataCatalogPolicyTag#update}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#create DataCatalogPolicyTag#create}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#delete DataCatalogPolicyTag#delete}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogPolicyTag.DataCatalogPolicyTagTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#update DataCatalogPolicyTag#update}. |
 
 ---
 
@@ -948,7 +948,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#create DataCatalogPolicyTag#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#create DataCatalogPolicyTag#create}.
 
 ---
 
@@ -960,7 +960,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#delete DataCatalogPolicyTag#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#delete DataCatalogPolicyTag#delete}.
 
 ---
 
@@ -972,7 +972,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_catalog_policy_tag#update DataCatalogPolicyTag#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_policy_tag#update DataCatalogPolicyTag#update}.
 
 ---
 

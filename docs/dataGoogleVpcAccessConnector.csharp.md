@@ -1,6 +1,6 @@
 # `data_google_vpc_access_connector`
 
-Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector).
+Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector).
 
 # `dataGoogleVpcAccessConnector` Submodule <a name="`dataGoogleVpcAccessConnector` Submodule" id="@cdktf/provider-google.dataGoogleVpcAccessConnector"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_vpc_access_connector`](
 
 ### DataGoogleVpcAccessConnector <a name="DataGoogleVpcAccessConnector" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector google_vpc_access_connector}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector google_vpc_access_connector}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnector.Initializer"></a>
 
@@ -741,8 +741,8 @@ new DataGoogleVpcAccessConnectorConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.name">Name</a></code> | <code>string</code> | The name of the resource (Max 25 characters). |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleVpcAccessConnector.DataGoogleVpcAccessConnectorConfig.property.region">Region</a></code> | <code>string</code> | Region where the VPC Access connector resides. If it is not provided, the provider region is used. |
 
 ---
@@ -827,7 +827,7 @@ public string Name { get; set; }
 
 The name of the resource (Max 25 characters).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
 
 ---
 
@@ -839,7 +839,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -854,7 +854,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}.
 
 ---
 
@@ -868,7 +868,7 @@ public string Region { get; set; }
 
 Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
 
 ---
 

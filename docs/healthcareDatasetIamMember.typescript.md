@@ -1,6 +1,6 @@
 # `google_healthcare_dataset_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member).
+Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member).
 
 # `healthcareDatasetIamMember` Submodule <a name="`healthcareDatasetIamMember` Submodule" id="@cdktf/provider-google.healthcareDatasetIamMember"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_membe
 
 ### HealthcareDatasetIamMember <a name="HealthcareDatasetIamMember" id="@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member google_healthcare_dataset_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member google_healthcare_dataset_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMember.Initializer"></a>
 
@@ -672,9 +672,9 @@ const healthcareDatasetIamMemberCondition: healthcareDatasetIamMember.Healthcare
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#expression HealthcareDatasetIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#title HealthcareDatasetIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#description HealthcareDatasetIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.expression">expression</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#expression HealthcareDatasetIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.title">title</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#title HealthcareDatasetIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#description HealthcareDatasetIamMember#description}. |
 
 ---
 
@@ -686,7 +686,7 @@ public readonly expression: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#expression HealthcareDatasetIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#expression HealthcareDatasetIamMember#expression}.
 
 ---
 
@@ -698,7 +698,7 @@ public readonly title: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#title HealthcareDatasetIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#title HealthcareDatasetIamMember#title}.
 
 ---
 
@@ -710,7 +710,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#description HealthcareDatasetIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#description HealthcareDatasetIamMember#description}.
 
 ---
 
@@ -735,11 +735,11 @@ const healthcareDatasetIamMemberConfig: healthcareDatasetIamMember.HealthcareDat
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.datasetId">datasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#dataset_id HealthcareDatasetIamMember#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#member HealthcareDatasetIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#role HealthcareDatasetIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.datasetId">datasetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#dataset_id HealthcareDatasetIamMember#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.member">member</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#member HealthcareDatasetIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.role">role</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#role HealthcareDatasetIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.condition">condition</a></code> | <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberCondition">HealthcareDatasetIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#id HealthcareDatasetIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamMember.HealthcareDatasetIamMemberConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#id HealthcareDatasetIamMember#id}. |
 
 ---
 
@@ -821,7 +821,7 @@ public readonly datasetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#dataset_id HealthcareDatasetIamMember#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#dataset_id HealthcareDatasetIamMember#dataset_id}.
 
 ---
 
@@ -833,7 +833,7 @@ public readonly member: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#member HealthcareDatasetIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#member HealthcareDatasetIamMember#member}.
 
 ---
 
@@ -845,7 +845,7 @@ public readonly role: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#role HealthcareDatasetIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#role HealthcareDatasetIamMember#role}.
 
 ---
 
@@ -859,7 +859,7 @@ public readonly condition: HealthcareDatasetIamMemberCondition;
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#condition HealthcareDatasetIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#condition HealthcareDatasetIamMember#condition}
 
 ---
 
@@ -871,7 +871,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_member#id HealthcareDatasetIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_member#id HealthcareDatasetIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
