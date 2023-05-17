@@ -1,6 +1,6 @@
 # `data_google_client_config`
 
-Refer to the Terraform Registory for docs: [`data_google_client_config`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/client_config).
+Refer to the Terraform Registory for docs: [`data_google_client_config`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/client_config).
 
 # `dataGoogleClientConfig` Submodule <a name="`dataGoogleClientConfig` Submodule" id="@cdktf/provider-google.dataGoogleClientConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_client_config`](https:/
 
 ### DataGoogleClientConfig <a name="DataGoogleClientConfig" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/client_config google_client_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/client_config google_client_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientConfig.DataGoogleClientConfig.Initializer"></a>
 

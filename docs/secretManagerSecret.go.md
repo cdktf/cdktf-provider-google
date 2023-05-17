@@ -1,6 +1,6 @@
 # `google_secret_manager_secret`
 
-Refer to the Terraform Registory for docs: [`google_secret_manager_secret`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret).
+Refer to the Terraform Registory for docs: [`google_secret_manager_secret`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret).
 
 # `secretManagerSecret` Submodule <a name="`secretManagerSecret` Submodule" id="@cdktf/provider-google.secretManagerSecret"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_secret_manager_secret`](http
 
 ### SecretManagerSecret <a name="SecretManagerSecret" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecret"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret google_secret_manager_secret}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret google_secret_manager_secret}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecret(scope Construct, id *string, config SecretManagerSecretConfig) SecretManagerSecret
 ```
@@ -378,7 +378,7 @@ func ResetTtl()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecret.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.SecretManagerSecret_IsConstruct(x interface{}) *bool
 ```
@@ -410,7 +410,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecret.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.SecretManagerSecret_IsTerraformElement(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ secretmanagersecret.SecretManagerSecret_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecret.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.SecretManagerSecret_IsTerraformResource(x interface{}) *bool
 ```
@@ -865,7 +865,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretConfig {
 	Connection: interface{},
@@ -875,14 +875,14 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Replication: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecret.SecretManagerSecretReplication,
+	Replication: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecret.SecretManagerSecretReplication,
 	SecretId: *string,
 	ExpireTime: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Rotation: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecret.SecretManagerSecretRotation,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecret.SecretManagerSecretTimeouts,
+	Rotation: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecret.SecretManagerSecretRotation,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecret.SecretManagerSecretTimeouts,
 	Topics: interface{},
 	Ttl: *string,
 }
@@ -902,9 +902,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.replication">Replication</a></code> | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplication">SecretManagerSecretReplication</a></code> | replication block. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.secretId">SecretId</a></code> | <code>*string</code> | This must be unique within the project. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.expireTime">ExpireTime</a></code> | <code>*string</code> | Timestamp in UTC when the Secret is scheduled to expire. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#id SecretManagerSecret#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#id SecretManagerSecret#id}. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels assigned to this Secret. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#project SecretManagerSecret#project}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#project SecretManagerSecret#project}. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.rotation">Rotation</a></code> | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretRotation">SecretManagerSecretRotation</a></code> | rotation block. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts">SecretManagerSecretTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretConfig.property.topics">Topics</a></code> | <code>interface{}</code> | topics block. |
@@ -992,7 +992,7 @@ Replication SecretManagerSecretReplication
 
 replication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#replication SecretManagerSecret#replication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#replication SecretManagerSecret#replication}
 
 ---
 
@@ -1006,7 +1006,7 @@ SecretId *string
 
 This must be unique within the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#secret_id SecretManagerSecret#secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#secret_id SecretManagerSecret#secret_id}
 
 ---
 
@@ -1023,7 +1023,7 @@ Timestamp in UTC when the Secret is scheduled to expire.
 This is always provided on output, regardless of what was sent on input.
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#expire_time SecretManagerSecret#expire_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#expire_time SecretManagerSecret#expire_time}
 
 ---
 
@@ -1035,7 +1035,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#id SecretManagerSecret#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#id SecretManagerSecret#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1063,7 +1063,7 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#labels SecretManagerSecret#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#labels SecretManagerSecret#labels}
 
 ---
 
@@ -1075,7 +1075,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#project SecretManagerSecret#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#project SecretManagerSecret#project}.
 
 ---
 
@@ -1089,7 +1089,7 @@ Rotation SecretManagerSecretRotation
 
 rotation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#rotation SecretManagerSecret#rotation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#rotation SecretManagerSecret#rotation}
 
 ---
 
@@ -1103,7 +1103,7 @@ Timeouts SecretManagerSecretTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#timeouts SecretManagerSecret#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#timeouts SecretManagerSecret#timeouts}
 
 ---
 
@@ -1117,7 +1117,7 @@ Topics interface{}
 
 topics block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#topics SecretManagerSecret#topics}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#topics SecretManagerSecret#topics}
 
 ---
 
@@ -1131,7 +1131,7 @@ Ttl *string
 
 The TTL for the Secret. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#ttl SecretManagerSecret#ttl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#ttl SecretManagerSecret#ttl}
 
 ---
 
@@ -1140,11 +1140,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretReplication {
 	Automatic: interface{},
-	UserManaged: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecret.SecretManagerSecretReplicationUserManaged,
+	UserManaged: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecret.SecretManagerSecretReplicationUserManaged,
 }
 ```
 
@@ -1167,7 +1167,7 @@ Automatic interface{}
 
 The Secret will automatically be replicated without any restrictions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#automatic SecretManagerSecret#automatic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#automatic SecretManagerSecret#automatic}
 
 ---
 
@@ -1181,7 +1181,7 @@ UserManaged SecretManagerSecretReplicationUserManaged
 
 user_managed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#user_managed SecretManagerSecret#user_managed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#user_managed SecretManagerSecret#user_managed}
 
 ---
 
@@ -1190,7 +1190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManaged.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretReplicationUserManaged {
 	Replicas: interface{},
@@ -1215,7 +1215,7 @@ Replicas interface{}
 
 replicas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#replicas SecretManagerSecret#replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#replicas SecretManagerSecret#replicas}
 
 ---
 
@@ -1224,11 +1224,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicas.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretReplicationUserManagedReplicas {
 	Location: *string,
-	CustomerManagedEncryption: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption,
+	CustomerManagedEncryption: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption,
 }
 ```
 
@@ -1251,7 +1251,7 @@ Location *string
 
 The canonical IDs of the location to replicate data. For example: "us-east1".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#location SecretManagerSecret#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#location SecretManagerSecret#location}
 
 ---
 
@@ -1265,7 +1265,7 @@ CustomerManagedEncryption SecretManagerSecretReplicationUserManagedReplicasCusto
 
 customer_managed_encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#customer_managed_encryption SecretManagerSecret#customer_managed_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#customer_managed_encryption SecretManagerSecret#customer_managed_encryption}
 
 ---
 
@@ -1274,7 +1274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryption {
 	KmsKeyName: *string,
@@ -1299,7 +1299,7 @@ KmsKeyName *string
 
 Describes the Cloud KMS encryption key that will be used to protect destination secret.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#kms_key_name SecretManagerSecret#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#kms_key_name SecretManagerSecret#kms_key_name}
 
 ---
 
@@ -1308,7 +1308,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretRotation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretRotation {
 	NextRotationTime: *string,
@@ -1337,7 +1337,7 @@ Timestamp in UTC at which the Secret is scheduled to rotate.
 
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#next_rotation_time SecretManagerSecret#next_rotation_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#next_rotation_time SecretManagerSecret#next_rotation_time}
 
 ---
 
@@ -1354,7 +1354,7 @@ The Duration between rotation notifications.
 Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years).
 If rotationPeriod is set, 'next_rotation_time' must be set. 'next_rotation_time' will be advanced by this period when the service automatically sends rotation notifications.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#rotation_period SecretManagerSecret#rotation_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#rotation_period SecretManagerSecret#rotation_period}
 
 ---
 
@@ -1363,7 +1363,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretTimeouts {
 	Create: *string,
@@ -1376,9 +1376,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#create SecretManagerSecret#create}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#delete SecretManagerSecret#delete}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#update SecretManagerSecret#update}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#create SecretManagerSecret#create}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#delete SecretManagerSecret#delete}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#update SecretManagerSecret#update}. |
 
 ---
 
@@ -1390,7 +1390,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#create SecretManagerSecret#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#create SecretManagerSecret#create}.
 
 ---
 
@@ -1402,7 +1402,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#delete SecretManagerSecret#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#delete SecretManagerSecret#delete}.
 
 ---
 
@@ -1414,7 +1414,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#update SecretManagerSecret#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#update SecretManagerSecret#update}.
 
 ---
 
@@ -1423,7 +1423,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTopics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 &secretmanagersecret.SecretManagerSecretTopics {
 	Name: *string,
@@ -1450,7 +1450,7 @@ The resource name of the Pub/Sub topic that will be published to, in the followi
 
 For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/secret_manager_secret#name SecretManagerSecret#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/secret_manager_secret#name SecretManagerSecret#name}
 
 ---
 
@@ -1461,7 +1461,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretReplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretReplicationOutputReference
 ```
@@ -1781,7 +1781,7 @@ func InternalValue() SecretManagerSecretReplication
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretReplicationUserManagedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretReplicationUserManagedOutputReference
 ```
@@ -2065,7 +2065,7 @@ func InternalValue() SecretManagerSecretReplicationUserManaged
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretReplicationUserManagedReplicasCustomerManagedEncryptionOutputReference
 ```
@@ -2336,7 +2336,7 @@ func InternalValue() SecretManagerSecretReplicationUserManagedReplicasCustomerMa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretReplicationUserManagedReplicasList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SecretManagerSecretReplicationUserManagedReplicasList
 ```
@@ -2479,7 +2479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretReplicationUserManagedReplicasOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretReplicationUserManagedReplicasOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SecretManagerSecretReplicationUserManagedReplicasOutputReference
 ```
@@ -2810,7 +2810,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretRotationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretRotationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretRotationOutputReference
 ```
@@ -3117,7 +3117,7 @@ func InternalValue() SecretManagerSecretRotation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretTimeoutsOutputReference
 ```
@@ -3453,7 +3453,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTopicsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretTopicsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SecretManagerSecretTopicsList
 ```
@@ -3596,7 +3596,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTopicsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecret"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecret"
 
 secretmanagersecret.NewSecretManagerSecretTopicsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SecretManagerSecretTopicsOutputReference
 ```

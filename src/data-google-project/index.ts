@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/project
+// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/project#id DataGoogleProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/project#id DataGoogleProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,13 +17,13 @@ export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
   /**
   * The project ID. Changing this forces a new project to be created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/project#project_id DataGoogleProject#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/project#project_id DataGoogleProject#project_id}
   */
   readonly projectId?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/project google_project}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/project google_project}
 */
 export class DataGoogleProject extends cdktf.TerraformDataSource {
 
@@ -37,7 +37,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/project google_project} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/project google_project} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -48,7 +48,7 @@ export class DataGoogleProject extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.0',
+        providerVersion: '4.65.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

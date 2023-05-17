@@ -1,6 +1,6 @@
 # `data_google_compute_node_types`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_node_types`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types).
+Refer to the Terraform Registory for docs: [`data_google_compute_node_types`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types).
 
 # `dataGoogleComputeNodeTypes` Submodule <a name="`dataGoogleComputeNodeTypes` Submodule" id="@cdktf/provider-google.dataGoogleComputeNodeTypes"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_node_types`](ht
 
 ### DataGoogleComputeNodeTypes <a name="DataGoogleComputeNodeTypes" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types google_compute_node_types}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types google_compute_node_types}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer"></a>
 
@@ -44,9 +44,9 @@ DataGoogleComputeNodeTypes.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.zone">zone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypes.Initializer.parameter.zone">zone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -125,7 +125,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}.
 
 ---
 
@@ -133,7 +133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}.
 
 ---
 
@@ -709,9 +709,9 @@ DataGoogleComputeNodeTypesConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.zone">zone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNodeTypes.DataGoogleComputeNodeTypesConfig.property.zone">zone</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}. |
 
 ---
 
@@ -793,7 +793,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#id DataGoogleComputeNodeTypes#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -808,7 +808,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#project DataGoogleComputeNodeTypes#project}.
 
 ---
 
@@ -820,7 +820,7 @@ public java.lang.String getZone();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_node_types#zone DataGoogleComputeNodeTypes#zone}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_healthcare_dataset_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding).
+Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding).
 
 # `healthcareDatasetIamBinding` Submodule <a name="`healthcareDatasetIamBinding` Submodule" id="@cdktf/provider-google.healthcareDatasetIamBinding"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_healthcare_dataset_iam_bindi
 
 ### HealthcareDatasetIamBinding <a name="HealthcareDatasetIamBinding" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding google_healthcare_dataset_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding google_healthcare_dataset_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 healthcaredatasetiambinding.NewHealthcareDatasetIamBinding(scope Construct, id *string, config HealthcareDatasetIamBindingConfig) HealthcareDatasetIamBinding
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 healthcaredatasetiambinding.HealthcareDatasetIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 healthcaredatasetiambinding.HealthcareDatasetIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ healthcaredatasetiambinding.HealthcareDatasetIamBinding_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 healthcaredatasetiambinding.HealthcareDatasetIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 &healthcaredatasetiambinding.HealthcareDatasetIamBindingCondition {
 	Expression: *string,
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiam
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#expression HealthcareDatasetIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#title HealthcareDatasetIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#description HealthcareDatasetIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#expression HealthcareDatasetIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#title HealthcareDatasetIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#description HealthcareDatasetIamBinding#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#expression HealthcareDatasetIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#expression HealthcareDatasetIamBinding#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#title HealthcareDatasetIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#title HealthcareDatasetIamBinding#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#description HealthcareDatasetIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#description HealthcareDatasetIamBinding#description}.
 
 ---
 
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 &healthcaredatasetiambinding.HealthcareDatasetIamBindingConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiam
 	DatasetId: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition,
 	Id: *string,
 }
 ```
@@ -752,11 +752,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiam
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.datasetId">DatasetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#dataset_id HealthcareDatasetIamBinding#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#members HealthcareDatasetIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#role HealthcareDatasetIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.datasetId">DatasetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#dataset_id HealthcareDatasetIamBinding#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#members HealthcareDatasetIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#role HealthcareDatasetIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingCondition">HealthcareDatasetIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#id HealthcareDatasetIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#id HealthcareDatasetIamBinding#id}. |
 
 ---
 
@@ -838,7 +838,7 @@ DatasetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#dataset_id HealthcareDatasetIamBinding#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#dataset_id HealthcareDatasetIamBinding#dataset_id}.
 
 ---
 
@@ -850,7 +850,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#members HealthcareDatasetIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#members HealthcareDatasetIamBinding#members}.
 
 ---
 
@@ -862,7 +862,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#role HealthcareDatasetIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#role HealthcareDatasetIamBinding#role}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition HealthcareDatasetIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#condition HealthcareDatasetIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#condition HealthcareDatasetIamBinding#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/healthcare_dataset_iam_binding#id HealthcareDatasetIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/healthcare_dataset_iam_binding#id HealthcareDatasetIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.healthcareDatasetIamBinding.HealthcareDatasetIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/healthcaredatasetiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/healthcaredatasetiambinding"
 
 healthcaredatasetiambinding.NewHealthcareDatasetIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HealthcareDatasetIamBindingConditionOutputReference
 ```

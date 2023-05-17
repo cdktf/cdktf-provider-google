@@ -1,6 +1,6 @@
 # `google_data_loss_prevention_deidentify_template`
 
-Refer to the Terraform Registory for docs: [`google_data_loss_prevention_deidentify_template`](https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template).
+Refer to the Terraform Registory for docs: [`google_data_loss_prevention_deidentify_template`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template).
 
 # `dataLossPreventionDeidentifyTemplate` Submodule <a name="`dataLossPreventionDeidentifyTemplate` Submodule" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_data_loss_prevention_deident
 
 ### DataLossPreventionDeidentifyTemplate <a name="DataLossPreventionDeidentifyTemplate" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template google_data_loss_prevention_deidentify_template}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template google_data_loss_prevention_deidentify_template}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplate(scope Construct, id *string, config DataLossPreventionDeidentifyTemplateConfig) DataLossPreventionDeidentifyTemplate
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplate_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplate_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplate_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplate_IsTerraformResource(x interface{}) *bool
 ```
@@ -734,7 +734,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateConfig {
 	Connection: interface{},
@@ -744,12 +744,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	DeidentifyConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfig,
+	DeidentifyConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfig,
 	Parent: *string,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts,
 }
 ```
 
@@ -768,7 +768,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 | <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.parent">Parent</a></code> | <code>*string</code> | The parent of the template in any of the following formats:. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.description">Description</a></code> | <code>*string</code> | A description of the template. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User set display name of the template. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#id DataLossPreventionDeidentifyTemplate#id}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#id DataLossPreventionDeidentifyTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts">DataLossPreventionDeidentifyTemplateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -853,7 +853,7 @@ DeidentifyConfig DataLossPreventionDeidentifyTemplateDeidentifyConfig
 
 deidentify_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#deidentify_config DataLossPreventionDeidentifyTemplate#deidentify_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#deidentify_config DataLossPreventionDeidentifyTemplate#deidentify_config}
 
 ---
 
@@ -872,7 +872,7 @@ The parent of the template in any of the following formats:.
 'organizations/{{organization_id}}'
 'organizations/{{organization_id}}/locations/{{location}}'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#parent DataLossPreventionDeidentifyTemplate#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#parent DataLossPreventionDeidentifyTemplate#parent}
 
 ---
 
@@ -886,7 +886,7 @@ Description *string
 
 A description of the template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#description DataLossPreventionDeidentifyTemplate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#description DataLossPreventionDeidentifyTemplate#description}
 
 ---
 
@@ -900,7 +900,7 @@ DisplayName *string
 
 User set display name of the template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#display_name DataLossPreventionDeidentifyTemplate#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#display_name DataLossPreventionDeidentifyTemplate#display_name}
 
 ---
 
@@ -912,7 +912,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#id DataLossPreventionDeidentifyTemplate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#id DataLossPreventionDeidentifyTemplate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -929,7 +929,7 @@ Timeouts DataLossPreventionDeidentifyTemplateTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timeouts DataLossPreventionDeidentifyTemplate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timeouts DataLossPreventionDeidentifyTemplate#timeouts}
 
 ---
 
@@ -938,12 +938,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfig {
-	ImageTransformations: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations,
-	InfoTypeTransformations: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations,
-	RecordTransformations: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformations,
+	ImageTransformations: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations,
+	InfoTypeTransformations: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations,
+	RecordTransformations: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformations,
 }
 ```
 
@@ -967,7 +967,7 @@ ImageTransformations DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 
 image_transformations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#image_transformations DataLossPreventionDeidentifyTemplate#image_transformations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#image_transformations DataLossPreventionDeidentifyTemplate#image_transformations}
 
 ---
 
@@ -981,7 +981,7 @@ InfoTypeTransformations DataLossPreventionDeidentifyTemplateDeidentifyConfigInfo
 
 info_type_transformations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#info_type_transformations DataLossPreventionDeidentifyTemplate#info_type_transformations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#info_type_transformations DataLossPreventionDeidentifyTemplate#info_type_transformations}
 
 ---
 
@@ -995,7 +995,7 @@ RecordTransformations DataLossPreventionDeidentifyTemplateDeidentifyConfigRecord
 
 record_transformations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#record_transformations DataLossPreventionDeidentifyTemplate#record_transformations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#record_transformations DataLossPreventionDeidentifyTemplate#record_transformations}
 
 ---
 
@@ -1004,7 +1004,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations {
 	Transforms: interface{},
@@ -1029,7 +1029,7 @@ Transforms interface{}
 
 transforms block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transforms DataLossPreventionDeidentifyTemplate#transforms}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transforms DataLossPreventionDeidentifyTemplate#transforms}
 
 ---
 
@@ -1038,13 +1038,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransforms.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransforms {
-	AllInfoTypes: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypes,
-	AllText: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllText,
-	RedactionColor: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColor,
-	SelectedInfoTypes: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes,
+	AllInfoTypes: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypes,
+	AllText: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllText,
+	RedactionColor: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColor,
+	SelectedInfoTypes: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes,
 }
 ```
 
@@ -1069,7 +1069,7 @@ AllInfoTypes DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransforma
 
 all_info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#all_info_types DataLossPreventionDeidentifyTemplate#all_info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#all_info_types DataLossPreventionDeidentifyTemplate#all_info_types}
 
 ---
 
@@ -1083,7 +1083,7 @@ AllText DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformations
 
 all_text block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#all_text DataLossPreventionDeidentifyTemplate#all_text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#all_text DataLossPreventionDeidentifyTemplate#all_text}
 
 ---
 
@@ -1097,7 +1097,7 @@ RedactionColor DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransfor
 
 redaction_color block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#redaction_color DataLossPreventionDeidentifyTemplate#redaction_color}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#redaction_color DataLossPreventionDeidentifyTemplate#redaction_color}
 
 ---
 
@@ -1111,7 +1111,7 @@ SelectedInfoTypes DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTrans
 
 selected_info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#selected_info_types DataLossPreventionDeidentifyTemplate#selected_info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#selected_info_types DataLossPreventionDeidentifyTemplate#selected_info_types}
 
 ---
 
@@ -1120,7 +1120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypes {
 
@@ -1133,7 +1133,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllText {
 
@@ -1146,7 +1146,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColor {
 	Blue: *f64,
@@ -1175,7 +1175,7 @@ Blue *f64
 
 The amount of blue in the color as a value in the interval [0, 1].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#blue DataLossPreventionDeidentifyTemplate#blue}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#blue DataLossPreventionDeidentifyTemplate#blue}
 
 ---
 
@@ -1189,7 +1189,7 @@ Green *f64
 
 The amount of green in the color as a value in the interval [0, 1].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#green DataLossPreventionDeidentifyTemplate#green}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#green DataLossPreventionDeidentifyTemplate#green}
 
 ---
 
@@ -1203,7 +1203,7 @@ Red *f64
 
 The amount of red in the color as a value in the interval [0, 1].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#red DataLossPreventionDeidentifyTemplate#red}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#red DataLossPreventionDeidentifyTemplate#red}
 
 ---
 
@@ -1212,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypes {
 	InfoTypes: interface{},
@@ -1237,7 +1237,7 @@ InfoTypes interface{}
 
 info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#info_types DataLossPreventionDeidentifyTemplate#info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#info_types DataLossPreventionDeidentifyTemplate#info_types}
 
 ---
 
@@ -1246,7 +1246,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypes {
 	Name: *string,
@@ -1273,7 +1273,7 @@ Name *string
 
 Name of the information type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -1287,7 +1287,7 @@ Version *string
 
 Version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -1296,7 +1296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations {
 	Transformations: interface{},
@@ -1321,7 +1321,7 @@ Transformations interface{}
 
 transformations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transformations DataLossPreventionDeidentifyTemplate#transformations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transformations DataLossPreventionDeidentifyTemplate#transformations}
 
 ---
 
@@ -1330,10 +1330,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformations {
-	PrimitiveTransformation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation,
+	PrimitiveTransformation: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation,
 	InfoTypes: interface{},
 }
 ```
@@ -1357,7 +1357,7 @@ PrimitiveTransformation DataLossPreventionDeidentifyTemplateDeidentifyConfigInfo
 
 primitive_transformation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#primitive_transformation DataLossPreventionDeidentifyTemplate#primitive_transformation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#primitive_transformation DataLossPreventionDeidentifyTemplate#primitive_transformation}
 
 ---
 
@@ -1371,7 +1371,7 @@ InfoTypes interface{}
 
 info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#info_types DataLossPreventionDeidentifyTemplate#info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#info_types DataLossPreventionDeidentifyTemplate#info_types}
 
 ---
 
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes {
 	Name: *string,
@@ -1407,7 +1407,7 @@ Name *string
 
 Name of the information type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -1421,7 +1421,7 @@ Version *string
 
 Version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -1430,14 +1430,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation {
-	CharacterMaskConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig,
-	CryptoDeterministicConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig,
-	CryptoReplaceFfxFpeConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig,
-	ReplaceConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig,
-	ReplaceDictionaryConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig,
+	CharacterMaskConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig,
+	CryptoDeterministicConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig,
+	CryptoReplaceFfxFpeConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig,
+	ReplaceConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig,
+	ReplaceDictionaryConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig,
 	ReplaceWithInfoTypeConfig: interface{},
 }
 ```
@@ -1465,7 +1465,7 @@ CharacterMaskConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoType
 
 character_mask_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#character_mask_config DataLossPreventionDeidentifyTemplate#character_mask_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#character_mask_config DataLossPreventionDeidentifyTemplate#character_mask_config}
 
 ---
 
@@ -1479,7 +1479,7 @@ CryptoDeterministicConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigIn
 
 crypto_deterministic_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_deterministic_config DataLossPreventionDeidentifyTemplate#crypto_deterministic_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_deterministic_config DataLossPreventionDeidentifyTemplate#crypto_deterministic_config}
 
 ---
 
@@ -1493,7 +1493,7 @@ CryptoReplaceFfxFpeConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigIn
 
 crypto_replace_ffx_fpe_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_replace_ffx_fpe_config DataLossPreventionDeidentifyTemplate#crypto_replace_ffx_fpe_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_replace_ffx_fpe_config DataLossPreventionDeidentifyTemplate#crypto_replace_ffx_fpe_config}
 
 ---
 
@@ -1507,7 +1507,7 @@ ReplaceConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransf
 
 replace_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replace_config DataLossPreventionDeidentifyTemplate#replace_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replace_config DataLossPreventionDeidentifyTemplate#replace_config}
 
 ---
 
@@ -1521,7 +1521,7 @@ ReplaceDictionaryConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigInfo
 
 replace_dictionary_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replace_dictionary_config DataLossPreventionDeidentifyTemplate#replace_dictionary_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replace_dictionary_config DataLossPreventionDeidentifyTemplate#replace_dictionary_config}
 
 ---
 
@@ -1535,7 +1535,7 @@ ReplaceWithInfoTypeConfig interface{}
 
 Replace each matching finding with the name of the info type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replace_with_info_type_config DataLossPreventionDeidentifyTemplate#replace_with_info_type_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replace_with_info_type_config DataLossPreventionDeidentifyTemplate#replace_with_info_type_config}
 
 ---
 
@@ -1544,7 +1544,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig {
 	CharactersToIgnore: interface{},
@@ -1575,7 +1575,7 @@ CharactersToIgnore interface{}
 
 characters_to_ignore block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#characters_to_ignore DataLossPreventionDeidentifyTemplate#characters_to_ignore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#characters_to_ignore DataLossPreventionDeidentifyTemplate#characters_to_ignore}
 
 ---
 
@@ -1592,7 +1592,7 @@ Character to use to mask the sensitive values—for example, * for an alphabetic
 This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
 
 ---
 
@@ -1608,7 +1608,7 @@ Number of characters to mask.
 
 If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
 
 ---
 
@@ -1625,7 +1625,7 @@ Mask characters in reverse order.
 For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the
 input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
 
 ---
 
@@ -1634,7 +1634,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore {
 	CharactersToSkip: *string,
@@ -1661,7 +1661,7 @@ CharactersToSkip *string
 
 Characters to not transform when masking.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#characters_to_skip DataLossPreventionDeidentifyTemplate#characters_to_skip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#characters_to_skip DataLossPreventionDeidentifyTemplate#characters_to_skip}
 
 ---
 
@@ -1675,7 +1675,7 @@ CommonCharactersToIgnore *string
 
 Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: ["NUMERIC", "ALPHA_UPPER_CASE", "ALPHA_LOWER_CASE", "PUNCTUATION", "WHITESPACE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#common_characters_to_ignore DataLossPreventionDeidentifyTemplate#common_characters_to_ignore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#common_characters_to_ignore DataLossPreventionDeidentifyTemplate#common_characters_to_ignore}
 
 ---
 
@@ -1684,12 +1684,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig {
-	Context: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext,
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey,
-	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType,
+	Context: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey,
+	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType,
 }
 ```
 
@@ -1713,7 +1713,7 @@ Context DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformati
 
 context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
 
 ---
 
@@ -1727,7 +1727,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -1741,7 +1741,7 @@ SurrogateInfoType DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTr
 
 surrogate_info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
 
 ---
 
@@ -1750,7 +1750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext {
 	Name: *string,
@@ -1775,7 +1775,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -1784,12 +1784,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -1813,7 +1813,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -1827,7 +1827,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -1841,7 +1841,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -1850,7 +1850,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -1877,7 +1877,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -1893,7 +1893,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -1902,7 +1902,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient {
 	Name: *string,
@@ -1929,7 +1929,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -1938,7 +1938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -1965,7 +1965,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -1974,7 +1974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType {
 	Name: *string,
@@ -2003,7 +2003,7 @@ Name of the information type.
 
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -2017,7 +2017,7 @@ Version *string
 
 Optional version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -2026,15 +2026,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig {
 	CommonAlphabet: *string,
-	Context: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext,
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey,
+	Context: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey,
 	CustomAlphabet: *string,
 	Radix: *f64,
-	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType,
+	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType,
 }
 ```
 
@@ -2061,7 +2061,7 @@ CommonAlphabet *string
 
 Common alphabets. Possible values: ["FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED", "NUMERIC", "HEXADECIMAL", "UPPER_CASE_ALPHA_NUMERIC", "ALPHA_NUMERIC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#common_alphabet DataLossPreventionDeidentifyTemplate#common_alphabet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#common_alphabet DataLossPreventionDeidentifyTemplate#common_alphabet}
 
 ---
 
@@ -2075,7 +2075,7 @@ Context DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformati
 
 context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
 
 ---
 
@@ -2089,7 +2089,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -2107,7 +2107,7 @@ This happens before/after encryption/decryption. Each character listed must appe
 
 ''0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~'!@#$%^&*()_-+={[}]|:;"'<,>.?/''
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#custom_alphabet DataLossPreventionDeidentifyTemplate#custom_alphabet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#custom_alphabet DataLossPreventionDeidentifyTemplate#custom_alphabet}
 
 ---
 
@@ -2121,7 +2121,7 @@ Radix *f64
 
 The native way to select the alphabet. Must be in the range \[2, 95\].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#radix DataLossPreventionDeidentifyTemplate#radix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#radix DataLossPreventionDeidentifyTemplate#radix}
 
 ---
 
@@ -2135,7 +2135,7 @@ SurrogateInfoType DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTr
 
 surrogate_info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
 
 ---
 
@@ -2144,7 +2144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext {
 	Name: *string,
@@ -2169,7 +2169,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -2178,12 +2178,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -2207,7 +2207,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -2221,7 +2221,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -2235,7 +2235,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -2244,7 +2244,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -2271,7 +2271,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -2287,7 +2287,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -2296,7 +2296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient {
 	Name: *string,
@@ -2323,7 +2323,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -2332,7 +2332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -2359,7 +2359,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -2368,7 +2368,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType {
 	Name: *string,
@@ -2397,7 +2397,7 @@ Name of the information type.
 
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -2411,7 +2411,7 @@ Version *string
 
 Optional version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -2420,10 +2420,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig {
-	NewValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue,
+	NewValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue,
 }
 ```
 
@@ -2445,7 +2445,7 @@ NewValue DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 
 new_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#new_value DataLossPreventionDeidentifyTemplate#new_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#new_value DataLossPreventionDeidentifyTemplate#new_value}
 
 ---
 
@@ -2454,17 +2454,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *f64,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue,
 }
 ```
 
@@ -2493,7 +2493,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -2507,7 +2507,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -2521,7 +2521,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -2535,7 +2535,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -2549,7 +2549,7 @@ IntegerValue *f64
 
 An integer value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -2563,7 +2563,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -2577,7 +2577,7 @@ TimestampValue *string
 
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -2591,7 +2591,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransforma
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -2600,7 +2600,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue {
 	Day: *f64,
@@ -2632,7 +2632,7 @@ Day of month.
 Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -2648,7 +2648,7 @@ Month of year.
 
 Must be from 1 to 12, or 0 if specifying a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -2662,7 +2662,7 @@ Year *f64
 
 Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -2671,7 +2671,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue {
 	Hours: *f64,
@@ -2702,7 +2702,7 @@ Hours *f64
 
 Hours of day in 24 hour format. Should be from 0 to 23.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -2716,7 +2716,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -2730,7 +2730,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -2744,7 +2744,7 @@ Seconds *f64
 
 Seconds of minutes of the time. Must normally be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -2753,10 +2753,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfig {
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList,
 }
 ```
 
@@ -2778,7 +2778,7 @@ WordList DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformat
 
 word_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#word_list DataLossPreventionDeidentifyTemplate#word_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#word_list DataLossPreventionDeidentifyTemplate#word_list}
 
 ---
 
@@ -2787,7 +2787,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList {
 	Words: *[]*string,
@@ -2814,7 +2814,7 @@ Words or phrases defining the dictionary.
 
 The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#words DataLossPreventionDeidentifyTemplate#words}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#words DataLossPreventionDeidentifyTemplate#words}
 
 ---
 
@@ -2823,7 +2823,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformations {
 	FieldTransformations: interface{},
@@ -2850,7 +2850,7 @@ FieldTransformations interface{}
 
 field_transformations block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#field_transformations DataLossPreventionDeidentifyTemplate#field_transformations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#field_transformations DataLossPreventionDeidentifyTemplate#field_transformations}
 
 ---
 
@@ -2864,7 +2864,7 @@ RecordSuppressions interface{}
 
 record_suppressions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#record_suppressions DataLossPreventionDeidentifyTemplate#record_suppressions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#record_suppressions DataLossPreventionDeidentifyTemplate#record_suppressions}
 
 ---
 
@@ -2873,12 +2873,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformations {
 	Fields: interface{},
-	PrimitiveTransformation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsCondition,
+	PrimitiveTransformation: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsCondition,
 }
 ```
 
@@ -2902,7 +2902,7 @@ Fields interface{}
 
 fields block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#fields DataLossPreventionDeidentifyTemplate#fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#fields DataLossPreventionDeidentifyTemplate#fields}
 
 ---
 
@@ -2916,7 +2916,7 @@ PrimitiveTransformation DataLossPreventionDeidentifyTemplateDeidentifyConfigReco
 
 primitive_transformation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#primitive_transformation DataLossPreventionDeidentifyTemplate#primitive_transformation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#primitive_transformation DataLossPreventionDeidentifyTemplate#primitive_transformation}
 
 ---
 
@@ -2930,7 +2930,7 @@ Condition DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#condition DataLossPreventionDeidentifyTemplate#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#condition DataLossPreventionDeidentifyTemplate#condition}
 
 ---
 
@@ -2939,10 +2939,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsCondition {
-	Expressions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions,
+	Expressions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions,
 }
 ```
 
@@ -2964,7 +2964,7 @@ Expressions DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransforma
 
 expressions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#expressions DataLossPreventionDeidentifyTemplate#expressions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#expressions DataLossPreventionDeidentifyTemplate#expressions}
 
 ---
 
@@ -2973,10 +2973,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions {
-	Conditions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions,
+	Conditions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions,
 	LogicalOperator: *string,
 }
 ```
@@ -3000,7 +3000,7 @@ Conditions DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 conditions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
 
 ---
 
@@ -3016,7 +3016,7 @@ The operator to apply to the result of conditions.
 
 Default and currently only supported value is AND Default value: "AND" Possible values: ["AND"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#logical_operator DataLossPreventionDeidentifyTemplate#logical_operator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#logical_operator DataLossPreventionDeidentifyTemplate#logical_operator}
 
 ---
 
@@ -3025,7 +3025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions {
 	Conditions: interface{},
@@ -3050,7 +3050,7 @@ Conditions interface{}
 
 conditions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
 
 ---
 
@@ -3059,12 +3059,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions {
-	Field: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField,
+	Field: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField,
 	Operator: *string,
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue,
 }
 ```
 
@@ -3088,7 +3088,7 @@ Field DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsF
 
 field block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#field DataLossPreventionDeidentifyTemplate#field}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#field DataLossPreventionDeidentifyTemplate#field}
 
 ---
 
@@ -3104,7 +3104,7 @@ Operator used to compare the field or infoType to the value.
 
 Possible values: ["EQUAL_TO", "NOT_EQUAL_TO", "GREATER_THAN", "LESS_THAN", "GREATER_THAN_OR_EQUALS", "LESS_THAN_OR_EQUALS", "EXISTS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#operator DataLossPreventionDeidentifyTemplate#operator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#operator DataLossPreventionDeidentifyTemplate#operator}
 
 ---
 
@@ -3118,7 +3118,7 @@ Value DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsF
 
 value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#value DataLossPreventionDeidentifyTemplate#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#value DataLossPreventionDeidentifyTemplate#value}
 
 ---
 
@@ -3127,7 +3127,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField {
 	Name: *string,
@@ -3152,7 +3152,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -3161,17 +3161,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue,
 }
 ```
 
@@ -3200,7 +3200,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -3214,7 +3214,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -3228,7 +3228,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -3242,7 +3242,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -3256,7 +3256,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -3270,7 +3270,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -3286,7 +3286,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -3300,7 +3300,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -3309,7 +3309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue {
 	Day: *f64,
@@ -3340,7 +3340,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -3356,7 +3356,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -3370,7 +3370,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -3379,7 +3379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue {
 	Hours: *f64,
@@ -3412,7 +3412,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -3426,7 +3426,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -3440,7 +3440,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -3456,7 +3456,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -3465,7 +3465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFields {
 	Name: *string,
@@ -3490,7 +3490,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -3499,20 +3499,20 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation {
-	BucketingConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig,
-	CharacterMaskConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig,
-	CryptoDeterministicConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig,
-	CryptoHashConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig,
-	CryptoReplaceFfxFpeConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig,
-	DateShiftConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig,
-	FixedSizeBucketingConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig,
-	RedactConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig,
-	ReplaceConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig,
-	ReplaceDictionaryConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig,
-	TimePartConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig,
+	BucketingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig,
+	CharacterMaskConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig,
+	CryptoDeterministicConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig,
+	CryptoHashConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig,
+	CryptoReplaceFfxFpeConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig,
+	DateShiftConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig,
+	FixedSizeBucketingConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig,
+	RedactConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig,
+	ReplaceConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig,
+	ReplaceDictionaryConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig,
+	TimePartConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig,
 }
 ```
 
@@ -3544,7 +3544,7 @@ BucketingConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
 
 bucketing_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#bucketing_config DataLossPreventionDeidentifyTemplate#bucketing_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#bucketing_config DataLossPreventionDeidentifyTemplate#bucketing_config}
 
 ---
 
@@ -3558,7 +3558,7 @@ CharacterMaskConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTr
 
 character_mask_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#character_mask_config DataLossPreventionDeidentifyTemplate#character_mask_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#character_mask_config DataLossPreventionDeidentifyTemplate#character_mask_config}
 
 ---
 
@@ -3572,7 +3572,7 @@ CryptoDeterministicConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRe
 
 crypto_deterministic_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_deterministic_config DataLossPreventionDeidentifyTemplate#crypto_deterministic_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_deterministic_config DataLossPreventionDeidentifyTemplate#crypto_deterministic_config}
 
 ---
 
@@ -3586,7 +3586,7 @@ CryptoHashConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
 
 crypto_hash_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_hash_config DataLossPreventionDeidentifyTemplate#crypto_hash_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_hash_config DataLossPreventionDeidentifyTemplate#crypto_hash_config}
 
 ---
 
@@ -3600,7 +3600,7 @@ CryptoReplaceFfxFpeConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRe
 
 crypto_replace_ffx_fpe_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_replace_ffx_fpe_config DataLossPreventionDeidentifyTemplate#crypto_replace_ffx_fpe_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_replace_ffx_fpe_config DataLossPreventionDeidentifyTemplate#crypto_replace_ffx_fpe_config}
 
 ---
 
@@ -3614,7 +3614,7 @@ DateShiftConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransf
 
 date_shift_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_shift_config DataLossPreventionDeidentifyTemplate#date_shift_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_shift_config DataLossPreventionDeidentifyTemplate#date_shift_config}
 
 ---
 
@@ -3628,7 +3628,7 @@ FixedSizeBucketingConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRec
 
 fixed_size_bucketing_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#fixed_size_bucketing_config DataLossPreventionDeidentifyTemplate#fixed_size_bucketing_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#fixed_size_bucketing_config DataLossPreventionDeidentifyTemplate#fixed_size_bucketing_config}
 
 ---
 
@@ -3642,7 +3642,7 @@ RedactConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransform
 
 redact_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#redact_config DataLossPreventionDeidentifyTemplate#redact_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#redact_config DataLossPreventionDeidentifyTemplate#redact_config}
 
 ---
 
@@ -3656,7 +3656,7 @@ ReplaceConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransfor
 
 replace_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replace_config DataLossPreventionDeidentifyTemplate#replace_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replace_config DataLossPreventionDeidentifyTemplate#replace_config}
 
 ---
 
@@ -3670,7 +3670,7 @@ ReplaceDictionaryConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigReco
 
 replace_dictionary_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replace_dictionary_config DataLossPreventionDeidentifyTemplate#replace_dictionary_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replace_dictionary_config DataLossPreventionDeidentifyTemplate#replace_dictionary_config}
 
 ---
 
@@ -3684,7 +3684,7 @@ TimePartConfig DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransfo
 
 time_part_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_part_config DataLossPreventionDeidentifyTemplate#time_part_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_part_config DataLossPreventionDeidentifyTemplate#time_part_config}
 
 ---
 
@@ -3693,7 +3693,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig {
 	Buckets: interface{},
@@ -3718,7 +3718,7 @@ Buckets interface{}
 
 buckets block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#buckets DataLossPreventionDeidentifyTemplate#buckets}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#buckets DataLossPreventionDeidentifyTemplate#buckets}
 
 ---
 
@@ -3727,12 +3727,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets {
-	ReplacementValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue,
-	Max: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax,
-	Min: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin,
+	ReplacementValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue,
+	Max: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax,
+	Min: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin,
 }
 ```
 
@@ -3756,7 +3756,7 @@ ReplacementValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTrans
 
 replacement_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#replacement_value DataLossPreventionDeidentifyTemplate#replacement_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#replacement_value DataLossPreventionDeidentifyTemplate#replacement_value}
 
 ---
 
@@ -3770,7 +3770,7 @@ Max DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFie
 
 max block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#max DataLossPreventionDeidentifyTemplate#max}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#max DataLossPreventionDeidentifyTemplate#max}
 
 ---
 
@@ -3784,7 +3784,7 @@ Min DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFie
 
 min block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#min DataLossPreventionDeidentifyTemplate#min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#min DataLossPreventionDeidentifyTemplate#min}
 
 ---
 
@@ -3793,17 +3793,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue,
 }
 ```
 
@@ -3832,7 +3832,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -3846,7 +3846,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -3860,7 +3860,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -3874,7 +3874,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -3888,7 +3888,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -3902,7 +3902,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -3918,7 +3918,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -3932,7 +3932,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -3941,7 +3941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue {
 	Day: *f64,
@@ -3972,7 +3972,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -3988,7 +3988,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -4002,7 +4002,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -4011,7 +4011,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue {
 	Hours: *f64,
@@ -4044,7 +4044,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -4058,7 +4058,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -4072,7 +4072,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -4088,7 +4088,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -4097,17 +4097,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue,
 }
 ```
 
@@ -4136,7 +4136,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -4150,7 +4150,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -4164,7 +4164,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -4178,7 +4178,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -4192,7 +4192,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -4206,7 +4206,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -4222,7 +4222,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -4236,7 +4236,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -4245,7 +4245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue {
 	Day: *f64,
@@ -4276,7 +4276,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -4292,7 +4292,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -4306,7 +4306,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -4315,7 +4315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue {
 	Hours: *f64,
@@ -4348,7 +4348,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -4362,7 +4362,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -4376,7 +4376,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -4392,7 +4392,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -4401,17 +4401,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue,
 }
 ```
 
@@ -4440,7 +4440,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -4454,7 +4454,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -4468,7 +4468,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -4482,7 +4482,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -4496,7 +4496,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -4510,7 +4510,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -4526,7 +4526,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -4540,7 +4540,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -4549,7 +4549,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue {
 	Day: *f64,
@@ -4580,7 +4580,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -4596,7 +4596,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -4610,7 +4610,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -4619,7 +4619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue {
 	Hours: *f64,
@@ -4652,7 +4652,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -4666,7 +4666,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -4680,7 +4680,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -4696,7 +4696,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -4705,7 +4705,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig {
 	CharactersToIgnore: interface{},
@@ -4736,7 +4736,7 @@ CharactersToIgnore interface{}
 
 characters_to_ignore block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#characters_to_ignore DataLossPreventionDeidentifyTemplate#characters_to_ignore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#characters_to_ignore DataLossPreventionDeidentifyTemplate#characters_to_ignore}
 
 ---
 
@@ -4753,7 +4753,7 @@ Character to use to mask the sensitive values—for example, * for an alphabetic
 This string must have a length of 1. If not supplied, this value defaults to * for
 strings, and 0 for digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#masking_character DataLossPreventionDeidentifyTemplate#masking_character}
 
 ---
 
@@ -4778,7 +4778,7 @@ If number_to_mask is negative, this denotes inverse masking. Cloud DLP masks all
 
 The resulting de-identified string is ****-****-****-3456. Cloud DLP masks all but the last four characters. If reverseOrder is true, all but the first four characters are masked as 1234-****-****-****.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#number_to_mask DataLossPreventionDeidentifyTemplate#number_to_mask}
 
 ---
 
@@ -4795,7 +4795,7 @@ Mask characters in reverse order.
 For example, if masking_character is 0, number_to_mask is 14, and reverse_order is 'false', then the
 input string '1234-5678-9012-3456' is masked as '00000000000000-3456'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#reverse_order DataLossPreventionDeidentifyTemplate#reverse_order}
 
 ---
 
@@ -4804,7 +4804,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore {
 	CharactersToSkip: *string,
@@ -4831,7 +4831,7 @@ CharactersToSkip *string
 
 Characters to not transform when masking.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#characters_to_skip DataLossPreventionDeidentifyTemplate#characters_to_skip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#characters_to_skip DataLossPreventionDeidentifyTemplate#characters_to_skip}
 
 ---
 
@@ -4845,7 +4845,7 @@ CommonCharactersToIgnore *string
 
 Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: ["NUMERIC", "ALPHA_UPPER_CASE", "ALPHA_LOWER_CASE", "PUNCTUATION", "WHITESPACE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#common_characters_to_ignore DataLossPreventionDeidentifyTemplate#common_characters_to_ignore}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#common_characters_to_ignore DataLossPreventionDeidentifyTemplate#common_characters_to_ignore}
 
 ---
 
@@ -4854,12 +4854,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig {
-	Context: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext,
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey,
-	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType,
+	Context: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey,
+	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType,
 }
 ```
 
@@ -4883,7 +4883,7 @@ Context DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformation
 
 context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
 
 ---
 
@@ -4897,7 +4897,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -4911,7 +4911,7 @@ SurrogateInfoType DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTran
 
 surrogate_info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
 
 ---
 
@@ -4920,7 +4920,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext {
 	Name: *string,
@@ -4945,7 +4945,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -4954,12 +4954,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -4983,7 +4983,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -4997,7 +4997,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -5011,7 +5011,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -5020,7 +5020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -5047,7 +5047,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -5063,7 +5063,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -5072,7 +5072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient {
 	Name: *string,
@@ -5099,7 +5099,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5108,7 +5108,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -5135,7 +5135,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -5144,7 +5144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType {
 	Name: *string,
@@ -5173,7 +5173,7 @@ Name of the information type.
 
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5187,7 +5187,7 @@ Version *string
 
 Optional version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -5196,10 +5196,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig {
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey,
 }
 ```
 
@@ -5221,7 +5221,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -5230,12 +5230,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -5259,7 +5259,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -5273,7 +5273,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -5287,7 +5287,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -5296,7 +5296,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -5323,7 +5323,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -5339,7 +5339,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -5348,7 +5348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient {
 	Name: *string,
@@ -5375,7 +5375,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5384,7 +5384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -5411,7 +5411,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -5420,15 +5420,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig {
 	CommonAlphabet: *string,
-	Context: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext,
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey,
+	Context: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey,
 	CustomAlphabet: *string,
 	Radix: *f64,
-	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType,
+	SurrogateInfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType,
 }
 ```
 
@@ -5455,7 +5455,7 @@ CommonAlphabet *string
 
 Common alphabets. Possible values: ["FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED", "NUMERIC", "HEXADECIMAL", "UPPER_CASE_ALPHA_NUMERIC", "ALPHA_NUMERIC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#common_alphabet DataLossPreventionDeidentifyTemplate#common_alphabet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#common_alphabet DataLossPreventionDeidentifyTemplate#common_alphabet}
 
 ---
 
@@ -5469,7 +5469,7 @@ Context DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformation
 
 context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
 
 ---
 
@@ -5483,7 +5483,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -5501,7 +5501,7 @@ This happens before/after encryption/decryption. Each character listed must appe
 
 ''0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~'!@#$%^&*()_-+={[}]|:;"'<,>.?/''
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#custom_alphabet DataLossPreventionDeidentifyTemplate#custom_alphabet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#custom_alphabet DataLossPreventionDeidentifyTemplate#custom_alphabet}
 
 ---
 
@@ -5515,7 +5515,7 @@ Radix *f64
 
 The native way to select the alphabet. Must be in the range \[2, 95\].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#radix DataLossPreventionDeidentifyTemplate#radix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#radix DataLossPreventionDeidentifyTemplate#radix}
 
 ---
 
@@ -5529,7 +5529,7 @@ SurrogateInfoType DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTran
 
 surrogate_info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#surrogate_info_type DataLossPreventionDeidentifyTemplate#surrogate_info_type}
 
 ---
 
@@ -5538,7 +5538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext {
 	Name: *string,
@@ -5563,7 +5563,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5572,12 +5572,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -5601,7 +5601,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -5615,7 +5615,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -5629,7 +5629,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -5638,7 +5638,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -5665,7 +5665,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -5681,7 +5681,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -5690,7 +5690,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient {
 	Name: *string,
@@ -5717,7 +5717,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5726,7 +5726,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -5753,7 +5753,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -5762,7 +5762,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType {
 	Name: *string,
@@ -5791,7 +5791,7 @@ Name of the information type.
 
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern '[A-Za-z0-9$-_]{1,64}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5805,7 +5805,7 @@ Version *string
 
 Optional version name for this InfoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#version DataLossPreventionDeidentifyTemplate#version}
 
 ---
 
@@ -5814,13 +5814,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig {
 	LowerBoundDays: *f64,
 	UpperBoundDays: *f64,
-	Context: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext,
-	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey,
+	Context: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext,
+	CryptoKey: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey,
 }
 ```
 
@@ -5845,7 +5845,7 @@ LowerBoundDays *f64
 
 For example, -5 means shift date to at most 5 days back in the past.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#lower_bound_days DataLossPreventionDeidentifyTemplate#lower_bound_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#lower_bound_days DataLossPreventionDeidentifyTemplate#lower_bound_days}
 
 ---
 
@@ -5863,7 +5863,7 @@ Actual shift will be selected at random within this range (inclusive ends). Nega
 
 For example, 3 means shift date to at most 3 days into the future.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#upper_bound_days DataLossPreventionDeidentifyTemplate#upper_bound_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#upper_bound_days DataLossPreventionDeidentifyTemplate#upper_bound_days}
 
 ---
 
@@ -5877,7 +5877,7 @@ Context DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformation
 
 context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#context DataLossPreventionDeidentifyTemplate#context}
 
 ---
 
@@ -5891,7 +5891,7 @@ CryptoKey DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 crypto_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key DataLossPreventionDeidentifyTemplate#crypto_key}
 
 ---
 
@@ -5900,7 +5900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext {
 	Name: *string,
@@ -5925,7 +5925,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -5934,12 +5934,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey {
-	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped,
-	Transient: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient,
-	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped,
+	KmsWrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped,
+	Transient: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient,
+	Unwrapped: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped,
 }
 ```
 
@@ -5963,7 +5963,7 @@ KmsWrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 kms_wrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#kms_wrapped DataLossPreventionDeidentifyTemplate#kms_wrapped}
 
 ---
 
@@ -5977,7 +5977,7 @@ Transient DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 transient block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#transient DataLossPreventionDeidentifyTemplate#transient}
 
 ---
 
@@ -5991,7 +5991,7 @@ Unwrapped DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 unwrapped block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#unwrapped DataLossPreventionDeidentifyTemplate#unwrapped}
 
 ---
 
@@ -6000,7 +6000,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped {
 	CryptoKeyName: *string,
@@ -6027,7 +6027,7 @@ CryptoKeyName *string
 
 The resource name of the KMS CryptoKey to use for unwrapping.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#crypto_key_name DataLossPreventionDeidentifyTemplate#crypto_key_name}
 
 ---
 
@@ -6043,7 +6043,7 @@ The wrapped data crypto key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#wrapped_key DataLossPreventionDeidentifyTemplate#wrapped_key}
 
 ---
 
@@ -6052,7 +6052,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient {
 	Name: *string,
@@ -6079,7 +6079,7 @@ Name of the key.
 
 This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate 'TransientCryptoKey' protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -6088,7 +6088,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped {
 	Key: *string,
@@ -6115,7 +6115,7 @@ A 128/192/256 bit key.
 
 A base64-encoded string.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#key DataLossPreventionDeidentifyTemplate#key}
 
 ---
 
@@ -6124,12 +6124,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig {
 	BucketSize: *f64,
-	LowerBound: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound,
-	UpperBound: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound,
+	LowerBound: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound,
+	UpperBound: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound,
 }
 ```
 
@@ -6156,7 +6156,7 @@ Size of each bucket (except for minimum and maximum buckets).
 So if lower_bound = 10, upper_bound = 89, and bucketSize = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+.
 Precision up to 2 decimals works.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#bucket_size DataLossPreventionDeidentifyTemplate#bucket_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#bucket_size DataLossPreventionDeidentifyTemplate#bucket_size}
 
 ---
 
@@ -6170,7 +6170,7 @@ LowerBound DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 lower_bound block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#lower_bound DataLossPreventionDeidentifyTemplate#lower_bound}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#lower_bound DataLossPreventionDeidentifyTemplate#lower_bound}
 
 ---
 
@@ -6184,7 +6184,7 @@ UpperBound DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 upper_bound block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#upper_bound DataLossPreventionDeidentifyTemplate#upper_bound}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#upper_bound DataLossPreventionDeidentifyTemplate#upper_bound}
 
 ---
 
@@ -6193,17 +6193,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue,
 }
 ```
 
@@ -6232,7 +6232,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -6246,7 +6246,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -6260,7 +6260,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -6274,7 +6274,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -6288,7 +6288,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -6302,7 +6302,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -6318,7 +6318,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -6332,7 +6332,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -6341,7 +6341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue {
 	Day: *f64,
@@ -6372,7 +6372,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -6388,7 +6388,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -6402,7 +6402,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -6411,7 +6411,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue {
 	Hours: *f64,
@@ -6444,7 +6444,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -6458,7 +6458,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -6472,7 +6472,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -6488,7 +6488,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -6497,17 +6497,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue,
 }
 ```
 
@@ -6536,7 +6536,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -6550,7 +6550,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -6564,7 +6564,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -6578,7 +6578,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -6592,7 +6592,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -6606,7 +6606,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -6622,7 +6622,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -6636,7 +6636,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -6645,7 +6645,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue {
 	Day: *f64,
@@ -6676,7 +6676,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -6692,7 +6692,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -6706,7 +6706,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -6715,7 +6715,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue {
 	Hours: *f64,
@@ -6748,7 +6748,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -6762,7 +6762,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -6776,7 +6776,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -6792,7 +6792,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -6801,7 +6801,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfig {
 
@@ -6814,10 +6814,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig {
-	NewValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue,
+	NewValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue,
 }
 ```
 
@@ -6839,7 +6839,7 @@ NewValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformatio
 
 new_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#new_value DataLossPreventionDeidentifyTemplate#new_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#new_value DataLossPreventionDeidentifyTemplate#new_value}
 
 ---
 
@@ -6848,17 +6848,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue,
 }
 ```
 
@@ -6887,7 +6887,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -6901,7 +6901,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -6915,7 +6915,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -6929,7 +6929,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -6943,7 +6943,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -6957,7 +6957,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -6973,7 +6973,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -6987,7 +6987,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -6996,7 +6996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue {
 	Day: *f64,
@@ -7027,7 +7027,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -7043,7 +7043,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -7057,7 +7057,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -7066,7 +7066,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue {
 	Hours: *f64,
@@ -7099,7 +7099,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -7113,7 +7113,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -7127,7 +7127,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -7143,7 +7143,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -7152,10 +7152,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfig {
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList,
 }
 ```
 
@@ -7177,7 +7177,7 @@ WordList DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformatio
 
 word_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#word_list DataLossPreventionDeidentifyTemplate#word_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#word_list DataLossPreventionDeidentifyTemplate#word_list}
 
 ---
 
@@ -7186,7 +7186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordList {
 	Words: *[]*string,
@@ -7213,7 +7213,7 @@ Words or phrases defining the dictionary.
 
 The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#words DataLossPreventionDeidentifyTemplate#words}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#words DataLossPreventionDeidentifyTemplate#words}
 
 ---
 
@@ -7222,7 +7222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig {
 	PartToExtract: *string,
@@ -7247,7 +7247,7 @@ PartToExtract *string
 
 The part of the time to keep. Possible values: ["YEAR", "MONTH", "DAY_OF_MONTH", "DAY_OF_WEEK", "WEEK_OF_YEAR", "HOUR_OF_DAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#part_to_extract DataLossPreventionDeidentifyTemplate#part_to_extract}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#part_to_extract DataLossPreventionDeidentifyTemplate#part_to_extract}
 
 ---
 
@@ -7256,10 +7256,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressions {
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsCondition,
 }
 ```
 
@@ -7281,7 +7281,7 @@ Condition DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#condition DataLossPreventionDeidentifyTemplate#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#condition DataLossPreventionDeidentifyTemplate#condition}
 
 ---
 
@@ -7290,10 +7290,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsCondition {
-	Expressions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions,
+	Expressions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions,
 }
 ```
 
@@ -7315,7 +7315,7 @@ Expressions DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransforma
 
 expressions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#expressions DataLossPreventionDeidentifyTemplate#expressions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#expressions DataLossPreventionDeidentifyTemplate#expressions}
 
 ---
 
@@ -7324,10 +7324,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions {
-	Conditions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions,
+	Conditions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions,
 	LogicalOperator: *string,
 }
 ```
@@ -7351,7 +7351,7 @@ Conditions DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformat
 
 conditions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
 
 ---
 
@@ -7367,7 +7367,7 @@ The operator to apply to the result of conditions.
 
 Default and currently only supported value is AND. Default value: "AND" Possible values: ["AND"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#logical_operator DataLossPreventionDeidentifyTemplate#logical_operator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#logical_operator DataLossPreventionDeidentifyTemplate#logical_operator}
 
 ---
 
@@ -7376,7 +7376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions {
 	Conditions: interface{},
@@ -7401,7 +7401,7 @@ Conditions interface{}
 
 conditions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#conditions DataLossPreventionDeidentifyTemplate#conditions}
 
 ---
 
@@ -7410,12 +7410,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions {
-	Field: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField,
+	Field: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField,
 	Operator: *string,
-	Value: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue,
+	Value: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue,
 }
 ```
 
@@ -7439,7 +7439,7 @@ Field DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsR
 
 field block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#field DataLossPreventionDeidentifyTemplate#field}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#field DataLossPreventionDeidentifyTemplate#field}
 
 ---
 
@@ -7455,7 +7455,7 @@ Operator used to compare the field or infoType to the value.
 
 Possible values: ["EQUAL_TO", "NOT_EQUAL_TO", "GREATER_THAN", "LESS_THAN", "GREATER_THAN_OR_EQUALS", "LESS_THAN_OR_EQUALS", "EXISTS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#operator DataLossPreventionDeidentifyTemplate#operator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#operator DataLossPreventionDeidentifyTemplate#operator}
 
 ---
 
@@ -7469,7 +7469,7 @@ Value DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsR
 
 value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#value DataLossPreventionDeidentifyTemplate#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#value DataLossPreventionDeidentifyTemplate#value}
 
 ---
 
@@ -7478,7 +7478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField {
 	Name: *string,
@@ -7503,7 +7503,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#name DataLossPreventionDeidentifyTemplate#name}
 
 ---
 
@@ -7512,17 +7512,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue {
 	BooleanValue: interface{},
-	DateValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue,
+	DateValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue,
 	DayOfWeekValue: *string,
 	FloatValue: *f64,
 	IntegerValue: *string,
 	StringValue: *string,
 	TimestampValue: *string,
-	TimeValue: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue,
+	TimeValue: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue,
 }
 ```
 
@@ -7551,7 +7551,7 @@ BooleanValue interface{}
 
 A boolean value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#boolean_value DataLossPreventionDeidentifyTemplate#boolean_value}
 
 ---
 
@@ -7565,7 +7565,7 @@ DateValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 date_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#date_value DataLossPreventionDeidentifyTemplate#date_value}
 
 ---
 
@@ -7579,7 +7579,7 @@ DayOfWeekValue *string
 
 Represents a day of the week. Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day_of_week_value DataLossPreventionDeidentifyTemplate#day_of_week_value}
 
 ---
 
@@ -7593,7 +7593,7 @@ FloatValue *f64
 
 A float value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#float_value DataLossPreventionDeidentifyTemplate#float_value}
 
 ---
 
@@ -7607,7 +7607,7 @@ IntegerValue *string
 
 An integer value (int64 format).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#integer_value DataLossPreventionDeidentifyTemplate#integer_value}
 
 ---
 
@@ -7621,7 +7621,7 @@ StringValue *string
 
 A string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#string_value DataLossPreventionDeidentifyTemplate#string_value}
 
 ---
 
@@ -7637,7 +7637,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to n
 
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#timestamp_value DataLossPreventionDeidentifyTemplate#timestamp_value}
 
 ---
 
@@ -7651,7 +7651,7 @@ TimeValue DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformati
 
 time_value block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#time_value DataLossPreventionDeidentifyTemplate#time_value}
 
 ---
 
@@ -7660,7 +7660,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue {
 	Day: *f64,
@@ -7691,7 +7691,7 @@ Day of a month.
 
 Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#day DataLossPreventionDeidentifyTemplate#day}
 
 ---
 
@@ -7707,7 +7707,7 @@ Month of a year.
 
 Must be from 1 to 12, or 0 to specify a year without a month and day.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#month DataLossPreventionDeidentifyTemplate#month}
 
 ---
 
@@ -7721,7 +7721,7 @@ Year *f64
 
 Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#year DataLossPreventionDeidentifyTemplate#year}
 
 ---
 
@@ -7730,7 +7730,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue {
 	Hours: *f64,
@@ -7763,7 +7763,7 @@ Hours of day in 24 hour format.
 
 Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#hours DataLossPreventionDeidentifyTemplate#hours}
 
 ---
 
@@ -7777,7 +7777,7 @@ Minutes *f64
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#minutes DataLossPreventionDeidentifyTemplate#minutes}
 
 ---
 
@@ -7791,7 +7791,7 @@ Nanos *f64
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#nanos DataLossPreventionDeidentifyTemplate#nanos}
 
 ---
 
@@ -7807,7 +7807,7 @@ Seconds of minutes of the time.
 
 Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#seconds DataLossPreventionDeidentifyTemplate#seconds}
 
 ---
 
@@ -7816,7 +7816,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 &datalosspreventiondeidentifytemplate.DataLossPreventionDeidentifyTemplateTimeouts {
 	Create: *string,
@@ -7829,9 +7829,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionde
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#create DataLossPreventionDeidentifyTemplate#create}. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#delete DataLossPreventionDeidentifyTemplate#delete}. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#update DataLossPreventionDeidentifyTemplate#update}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#create DataLossPreventionDeidentifyTemplate#create}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#delete DataLossPreventionDeidentifyTemplate#delete}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#update DataLossPreventionDeidentifyTemplate#update}. |
 
 ---
 
@@ -7843,7 +7843,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#create DataLossPreventionDeidentifyTemplate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#create DataLossPreventionDeidentifyTemplate#create}.
 
 ---
 
@@ -7855,7 +7855,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#delete DataLossPreventionDeidentifyTemplate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#delete DataLossPreventionDeidentifyTemplate#delete}.
 
 ---
 
@@ -7867,7 +7867,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.0/docs/resources/data_loss_prevention_deidentify_template#update DataLossPreventionDeidentifyTemplate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_loss_prevention_deidentify_template#update DataLossPreventionDeidentifyTemplate#update}.
 
 ---
 
@@ -7878,7 +7878,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsOutputReference
 ```
@@ -8162,7 +8162,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllInfoTypesOutputReference
 ```
@@ -8411,7 +8411,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsAllTextOutputReference
 ```
@@ -8660,7 +8660,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsList
 ```
@@ -8803,7 +8803,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsOutputReference
 ```
@@ -9238,7 +9238,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsRedactionColorOutputReference
 ```
@@ -9574,7 +9574,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesList
 ```
@@ -9717,7 +9717,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesInfoTypesOutputReference
 ```
@@ -10035,7 +10035,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTransformationsTransformsSelectedInfoTypesOutputReference
 ```
@@ -10319,7 +10319,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigImageTr
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsOutputReference
 ```
@@ -10603,7 +10603,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesList
 ```
@@ -10746,7 +10746,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypesOutputReference
 ```
@@ -11064,7 +11064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsList
 ```
@@ -11207,7 +11207,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsOutputReference
 ```
@@ -11551,7 +11551,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList
 ```
@@ -11694,7 +11694,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference
 ```
@@ -12019,7 +12019,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference
 ```
@@ -12397,7 +12397,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference
 ```
@@ -12675,7 +12675,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -12968,7 +12968,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference
 ```
@@ -13343,7 +13343,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference
 ```
@@ -13614,7 +13614,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -13885,7 +13885,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference
 ```
@@ -14260,7 +14260,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference
 ```
@@ -14567,7 +14567,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference
 ```
@@ -14845,7 +14845,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -15138,7 +15138,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference
 ```
@@ -15513,7 +15513,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference
 ```
@@ -15784,7 +15784,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -16055,7 +16055,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference
 ```
@@ -16517,7 +16517,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference
 ```
@@ -16824,7 +16824,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationOutputReference
 ```
@@ -17312,7 +17312,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference
 ```
@@ -17648,7 +17648,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference
 ```
@@ -18155,7 +18155,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference
 ```
@@ -18520,7 +18520,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigOutputReference
 ```
@@ -18804,7 +18804,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference
 ```
@@ -19088,7 +19088,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference
 ```
@@ -19359,7 +19359,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigInfoTyp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigOutputReference
 ```
@@ -19734,7 +19734,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsFieldOutputReference
 ```
@@ -20012,7 +20012,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsList
 ```
@@ -20155,7 +20155,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsOutputReference
 ```
@@ -20521,7 +20521,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValueOutputReference
 ```
@@ -20857,7 +20857,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueOutputReference
 ```
@@ -21364,7 +21364,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValueOutputReference
 ```
@@ -21729,7 +21729,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsOutputReference
 ```
@@ -22020,7 +22020,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsOutputReference
 ```
@@ -22340,7 +22340,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsConditionOutputReference
 ```
@@ -22631,7 +22631,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsList
 ```
@@ -22774,7 +22774,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsFieldsOutputReference
 ```
@@ -23070,7 +23070,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsList
 ```
@@ -23213,7 +23213,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsOutputReference
 ```
@@ -23592,7 +23592,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsList
 ```
@@ -23735,7 +23735,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValueOutputReference
 ```
@@ -24071,7 +24071,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxOutputReference
 ```
@@ -24578,7 +24578,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValueOutputReference
 ```
@@ -24943,7 +24943,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValueOutputReference
 ```
@@ -25279,7 +25279,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinOutputReference
 ```
@@ -25786,7 +25786,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValueOutputReference
 ```
@@ -26151,7 +26151,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsOutputReference
 ```
@@ -26537,7 +26537,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValueOutputReference
 ```
@@ -26873,7 +26873,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueOutputReference
 ```
@@ -27380,7 +27380,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValueOutputReference
 ```
@@ -27745,7 +27745,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigOutputReference
 ```
@@ -28036,7 +28036,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreList
 ```
@@ -28179,7 +28179,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreOutputReference
 ```
@@ -28504,7 +28504,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigOutputReference
 ```
@@ -28882,7 +28882,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContextOutputReference
 ```
@@ -29160,7 +29160,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -29453,7 +29453,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyOutputReference
 ```
@@ -29828,7 +29828,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientOutputReference
 ```
@@ -30099,7 +30099,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -30370,7 +30370,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigOutputReference
 ```
@@ -30745,7 +30745,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeOutputReference
 ```
@@ -31052,7 +31052,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -31345,7 +31345,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyOutputReference
 ```
@@ -31720,7 +31720,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransientOutputReference
 ```
@@ -31991,7 +31991,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -32262,7 +32262,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigOutputReference
 ```
@@ -32553,7 +32553,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContextOutputReference
 ```
@@ -32831,7 +32831,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -33124,7 +33124,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyOutputReference
 ```
@@ -33499,7 +33499,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransientOutputReference
 ```
@@ -33770,7 +33770,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -34041,7 +34041,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigOutputReference
 ```
@@ -34503,7 +34503,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeOutputReference
 ```
@@ -34810,7 +34810,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContextOutputReference
 ```
@@ -35088,7 +35088,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedOutputReference
 ```
@@ -35381,7 +35381,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyOutputReference
 ```
@@ -35756,7 +35756,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransientOutputReference
 ```
@@ -36027,7 +36027,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrappedOutputReference
 ```
@@ -36298,7 +36298,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigOutputReference
 ```
@@ -36675,7 +36675,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValueOutputReference
 ```
@@ -37011,7 +37011,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundOutputReference
 ```
@@ -37518,7 +37518,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValueOutputReference
 ```
@@ -37883,7 +37883,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigOutputReference
 ```
@@ -38224,7 +38224,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValueOutputReference
 ```
@@ -38560,7 +38560,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundOutputReference
 ```
@@ -39067,7 +39067,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValueOutputReference
 ```
@@ -39432,7 +39432,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationOutputReference
 ```
@@ -40143,7 +40143,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationRedactConfigOutputReference
 ```
@@ -40392,7 +40392,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValueOutputReference
 ```
@@ -40728,7 +40728,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueOutputReference
 ```
@@ -41235,7 +41235,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValueOutputReference
 ```
@@ -41600,7 +41600,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigOutputReference
 ```
@@ -41884,7 +41884,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigOutputReference
 ```
@@ -42175,7 +42175,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceDictionaryConfigWordListOutputReference
 ```
@@ -42446,7 +42446,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfigOutputReference
 ```
@@ -42724,7 +42724,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsOutputReference
 ```
@@ -43057,7 +43057,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsFieldOutputReference
 ```
@@ -43335,7 +43335,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsList
 ```
@@ -43478,7 +43478,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsOutputReference
 ```
@@ -43844,7 +43844,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValueOutputReference
 ```
@@ -44180,7 +44180,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueOutputReference
 ```
@@ -44687,7 +44687,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValueOutputReference
 ```
@@ -45052,7 +45052,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsOutputReference
 ```
@@ -45343,7 +45343,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsOutputReference
 ```
@@ -45663,7 +45663,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsConditionOutputReference
 ```
@@ -45954,7 +45954,7 @@ func InternalValue() DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordT
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsList
 ```
@@ -46097,7 +46097,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionDeidentifyTemplateDeidentifyConfigRecordTransformationsRecordSuppressionsOutputReference
 ```
@@ -46406,7 +46406,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionDeidentifyTemplate.DataLossPreventionDeidentifyTemplateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventiondeidentifytemplate"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventiondeidentifytemplate"
 
 datalosspreventiondeidentifytemplate.NewDataLossPreventionDeidentifyTemplateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionDeidentifyTemplateTimeoutsOutputReference
 ```
