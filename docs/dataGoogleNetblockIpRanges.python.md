@@ -1,6 +1,6 @@
 # `data_google_netblock_ip_ranges`
 
-Refer to the Terraform Registory for docs: [`data_google_netblock_ip_ranges`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges).
+Refer to the Terraform Registory for docs: [`data_google_netblock_ip_ranges`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges).
 
 # `dataGoogleNetblockIpRanges` Submodule <a name="`dataGoogleNetblockIpRanges` Submodule" id="@cdktf/provider-google.dataGoogleNetblockIpRanges"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_netblock_ip_ranges`](ht
 
 ### DataGoogleNetblockIpRanges <a name="DataGoogleNetblockIpRanges" id="@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges google_netblock_ip_ranges}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges google_netblock_ip_ranges}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges(
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.rangeType">range_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRanges.Initializer.parameter.rangeType">range_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -121,7 +121,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}.
 
 ---
 
@@ -716,8 +716,8 @@ dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.rangeType">range_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleNetblockIpRanges.DataGoogleNetblockIpRangesConfig.property.rangeType">range_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}. |
 
 ---
 
@@ -799,7 +799,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#id DataGoogleNetblockIpRanges#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -814,7 +814,7 @@ range_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/netblock_ip_ranges#range_type DataGoogleNetblockIpRanges#range_type}.
 
 ---
 

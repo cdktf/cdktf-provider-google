@@ -1,6 +1,6 @@
 # `google_notebooks_instance`
 
-Refer to the Terraform Registory for docs: [`google_notebooks_instance`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance).
+Refer to the Terraform Registory for docs: [`google_notebooks_instance`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance).
 
 # `notebooksInstance` Submodule <a name="`notebooksInstance` Submodule" id="@cdktf/provider-google.notebooksInstance"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_notebooks_instance`](https:/
 
 ### NotebooksInstance <a name="NotebooksInstance" id="@cdktf/provider-google.notebooksInstance.NotebooksInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance google_notebooks_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance google_notebooks_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.notebooksInstance.NotebooksInstance.Initializer"></a>
 
@@ -1604,7 +1604,7 @@ public readonly coreCount: number;
 
 Count of cores of this accelerator.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#core_count NotebooksInstance#core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#core_count NotebooksInstance#core_count}
 
 ---
 
@@ -1618,7 +1618,7 @@ public readonly type: string;
 
 Type of this accelerator. Possible values: ["ACCELERATOR_TYPE_UNSPECIFIED", "NVIDIA_TESLA_K80", "NVIDIA_TESLA_P100", "NVIDIA_TESLA_V100", "NVIDIA_TESLA_P4", "NVIDIA_TESLA_T4", "NVIDIA_TESLA_T4_VWS", "NVIDIA_TESLA_P100_VWS", "NVIDIA_TESLA_P4_VWS", "NVIDIA_TESLA_A100", "TPU_V2", "TPU_V3"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#type NotebooksInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#type NotebooksInstance#type}
 
 ---
 
@@ -1655,7 +1655,7 @@ const notebooksInstanceConfig: notebooksInstance.NotebooksInstanceConfig = { ...
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.dataDiskSizeGb">dataDiskSizeGb</a></code> | <code>number</code> | The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.dataDiskType">dataDiskType</a></code> | <code>string</code> | Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"]. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.diskEncryption">diskEncryption</a></code> | <code>string</code> | Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["DISK_ENCRYPTION_UNSPECIFIED", "GMEK", "CMEK"]. |
-| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#id NotebooksInstance#id}. |
+| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#id NotebooksInstance#id}. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.installGpuDriver">installGpuDriver</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the end user authorizes Google Cloud to install GPU driver on this instance. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.instanceOwners">instanceOwners</a></code> | <code>string[]</code> | The list of owners of this instance after creation. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.kmsKey">kmsKey</a></code> | <code>string</code> | The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK. Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}. |
@@ -1667,7 +1667,7 @@ const notebooksInstanceConfig: notebooksInstance.NotebooksInstanceConfig = { ...
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.noPublicIp">noPublicIp</a></code> | <code>boolean \| cdktf.IResolvable</code> | No public IP will be assigned to this instance. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.noRemoveDataDisk">noRemoveDataDisk</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, the data disk will not be auto deleted when deleting the instance. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.postStartupScript">postStartupScript</a></code> | <code>string</code> | Path to a Bash script that automatically runs after a notebook instance fully boots up. |
-| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#project NotebooksInstance#project}. |
+| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#project NotebooksInstance#project}. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.reservationAffinity">reservationAffinity</a></code> | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceReservationAffinity">NotebooksInstanceReservationAffinity</a></code> | reservation_affinity block. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.serviceAccount">serviceAccount</a></code> | <code>string</code> | The service account on this instance, giving access to other Google Cloud services. |
 | <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceConfig.property.serviceAccountScopes">serviceAccountScopes</a></code> | <code>string[]</code> | Optional. |
@@ -1760,7 +1760,7 @@ public readonly location: string;
 
 A reference to the zone where the machine resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#location NotebooksInstance#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#location NotebooksInstance#location}
 
 ---
 
@@ -1774,7 +1774,7 @@ public readonly machineType: string;
 
 A reference to a machine type which defines VM kind.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#machine_type NotebooksInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#machine_type NotebooksInstance#machine_type}
 
 ---
 
@@ -1788,7 +1788,7 @@ public readonly name: string;
 
 The name specified for the Notebook instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#name NotebooksInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#name NotebooksInstance#name}
 
 ---
 
@@ -1802,7 +1802,7 @@ public readonly acceleratorConfig: NotebooksInstanceAcceleratorConfig;
 
 accelerator_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#accelerator_config NotebooksInstance#accelerator_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#accelerator_config NotebooksInstance#accelerator_config}
 
 ---
 
@@ -1819,7 +1819,7 @@ The size of the boot disk in GB attached to this instance, up to a maximum of 64
 The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#boot_disk_size_gb NotebooksInstance#boot_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#boot_disk_size_gb NotebooksInstance#boot_disk_size_gb}
 
 ---
 
@@ -1833,7 +1833,7 @@ public readonly bootDiskType: string;
 
 Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#boot_disk_type NotebooksInstance#boot_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#boot_disk_type NotebooksInstance#boot_disk_type}
 
 ---
 
@@ -1847,7 +1847,7 @@ public readonly containerImage: NotebooksInstanceContainerImage;
 
 container_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#container_image NotebooksInstance#container_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#container_image NotebooksInstance#container_image}
 
 ---
 
@@ -1861,7 +1861,7 @@ public readonly createTime: string;
 
 Instance creation time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#create_time NotebooksInstance#create_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#create_time NotebooksInstance#create_time}
 
 ---
 
@@ -1877,7 +1877,7 @@ Specify a custom Cloud Storage path where the GPU driver is stored.
 
 If not specified, we'll automatically choose from official GPU drivers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#custom_gpu_driver_path NotebooksInstance#custom_gpu_driver_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#custom_gpu_driver_path NotebooksInstance#custom_gpu_driver_path}
 
 ---
 
@@ -1894,7 +1894,7 @@ The size of the data disk in GB attached to this instance, up to a maximum of 64
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#data_disk_size_gb NotebooksInstance#data_disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#data_disk_size_gb NotebooksInstance#data_disk_size_gb}
 
 ---
 
@@ -1908,7 +1908,7 @@ public readonly dataDiskType: string;
 
 Possible disk types for notebook instances. Possible values: ["DISK_TYPE_UNSPECIFIED", "PD_STANDARD", "PD_SSD", "PD_BALANCED", "PD_EXTREME"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#data_disk_type NotebooksInstance#data_disk_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#data_disk_type NotebooksInstance#data_disk_type}
 
 ---
 
@@ -1922,7 +1922,7 @@ public readonly diskEncryption: string;
 
 Disk encryption method used on the boot and data disks, defaults to GMEK. Possible values: ["DISK_ENCRYPTION_UNSPECIFIED", "GMEK", "CMEK"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#disk_encryption NotebooksInstance#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#disk_encryption NotebooksInstance#disk_encryption}
 
 ---
 
@@ -1934,7 +1934,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#id NotebooksInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#id NotebooksInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1954,7 +1954,7 @@ Whether the end user authorizes Google Cloud to install GPU driver on this insta
 If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#install_gpu_driver NotebooksInstance#install_gpu_driver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#install_gpu_driver NotebooksInstance#install_gpu_driver}
 
 ---
 
@@ -1973,7 +1973,7 @@ Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#instance_owners NotebooksInstance#instance_owners}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#instance_owners NotebooksInstance#instance_owners}
 
 ---
 
@@ -1987,7 +1987,7 @@ public readonly kmsKey: string;
 
 The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK. Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#kms_key NotebooksInstance#kms_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#kms_key NotebooksInstance#kms_key}
 
 ---
 
@@ -2004,7 +2004,7 @@ Labels to apply to this instance.
 These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#labels NotebooksInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#labels NotebooksInstance#labels}
 
 ---
 
@@ -2020,7 +2020,7 @@ Custom metadata to apply to this instance.
 
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#metadata NotebooksInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#metadata NotebooksInstance#metadata}
 
 ---
 
@@ -2034,7 +2034,7 @@ public readonly network: string;
 
 The name of the VPC that this instance is in. Format: projects/{project_id}/global/networks/{network_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#network NotebooksInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#network NotebooksInstance#network}
 
 ---
 
@@ -2048,7 +2048,7 @@ public readonly nicType: string;
 
 The type of vNIC driver. Possible values: ["UNSPECIFIED_NIC_TYPE", "VIRTIO_NET", "GVNIC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#nic_type NotebooksInstance#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#nic_type NotebooksInstance#nic_type}
 
 ---
 
@@ -2062,7 +2062,7 @@ public readonly noProxyAccess: boolean | IResolvable;
 
 The notebook instance will not register with the proxy..
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#no_proxy_access NotebooksInstance#no_proxy_access}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#no_proxy_access NotebooksInstance#no_proxy_access}
 
 ---
 
@@ -2076,7 +2076,7 @@ public readonly noPublicIp: boolean | IResolvable;
 
 No public IP will be assigned to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#no_public_ip NotebooksInstance#no_public_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#no_public_ip NotebooksInstance#no_public_ip}
 
 ---
 
@@ -2090,7 +2090,7 @@ public readonly noRemoveDataDisk: boolean | IResolvable;
 
 If true, the data disk will not be auto deleted when deleting the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#no_remove_data_disk NotebooksInstance#no_remove_data_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#no_remove_data_disk NotebooksInstance#no_remove_data_disk}
 
 ---
 
@@ -2107,7 +2107,7 @@ Path to a Bash script that automatically runs after a notebook instance fully bo
 The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#post_startup_script NotebooksInstance#post_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#post_startup_script NotebooksInstance#post_startup_script}
 
 ---
 
@@ -2119,7 +2119,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#project NotebooksInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#project NotebooksInstance#project}.
 
 ---
 
@@ -2133,7 +2133,7 @@ public readonly reservationAffinity: NotebooksInstanceReservationAffinity;
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#reservation_affinity NotebooksInstance#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#reservation_affinity NotebooksInstance#reservation_affinity}
 
 ---
 
@@ -2152,7 +2152,7 @@ the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#service_account NotebooksInstance#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#service_account NotebooksInstance#service_account}
 
 ---
 
@@ -2171,7 +2171,7 @@ If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#service_account_scopes NotebooksInstance#service_account_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#service_account_scopes NotebooksInstance#service_account_scopes}
 
 ---
 
@@ -2185,7 +2185,7 @@ public readonly shieldedInstanceConfig: NotebooksInstanceShieldedInstanceConfig;
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#shielded_instance_config NotebooksInstance#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#shielded_instance_config NotebooksInstance#shielded_instance_config}
 
 ---
 
@@ -2199,7 +2199,7 @@ public readonly subnet: string;
 
 The name of the subnet that this instance is in. Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#subnet NotebooksInstance#subnet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#subnet NotebooksInstance#subnet}
 
 ---
 
@@ -2213,7 +2213,7 @@ public readonly tags: string[];
 
 The Compute Engine tags to add to instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#tags NotebooksInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#tags NotebooksInstance#tags}
 
 ---
 
@@ -2227,7 +2227,7 @@ public readonly timeouts: NotebooksInstanceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#timeouts NotebooksInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#timeouts NotebooksInstance#timeouts}
 
 ---
 
@@ -2241,7 +2241,7 @@ public readonly updateTime: string;
 
 Instance update time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#update_time NotebooksInstance#update_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#update_time NotebooksInstance#update_time}
 
 ---
 
@@ -2255,7 +2255,7 @@ public readonly vmImage: NotebooksInstanceVmImage;
 
 vm_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#vm_image NotebooksInstance#vm_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#vm_image NotebooksInstance#vm_image}
 
 ---
 
@@ -2288,7 +2288,7 @@ public readonly repository: string;
 
 The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#repository NotebooksInstance#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#repository NotebooksInstance#repository}
 
 ---
 
@@ -2302,7 +2302,7 @@ public readonly tag: string;
 
 The tag of the container image. If not specified, this defaults to the latest tag.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#tag NotebooksInstance#tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#tag NotebooksInstance#tag}
 
 ---
 
@@ -2336,7 +2336,7 @@ public readonly consumeReservationType: string;
 
 The type of Compute Reservation. Possible values: ["NO_RESERVATION", "ANY_RESERVATION", "SPECIFIC_RESERVATION"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#consume_reservation_type NotebooksInstance#consume_reservation_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#consume_reservation_type NotebooksInstance#consume_reservation_type}
 
 ---
 
@@ -2350,7 +2350,7 @@ public readonly key: string;
 
 Corresponds to the label key of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#key NotebooksInstance#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#key NotebooksInstance#key}
 
 ---
 
@@ -2364,7 +2364,7 @@ public readonly values: string[];
 
 Corresponds to the label values of reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#values NotebooksInstance#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#values NotebooksInstance#values}
 
 ---
 
@@ -2403,7 +2403,7 @@ boot integrity of the instance. The attestation is performed against the integri
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
 Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#enable_integrity_monitoring NotebooksInstance#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#enable_integrity_monitoring NotebooksInstance#enable_integrity_monitoring}
 
 ---
 
@@ -2422,7 +2422,7 @@ authentic software by verifying the digital signature of all boot components, an
 if signature verification fails.
 Disabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#enable_secure_boot NotebooksInstance#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#enable_secure_boot NotebooksInstance#enable_secure_boot}
 
 ---
 
@@ -2436,7 +2436,7 @@ public readonly enableVtpm: boolean | IResolvable;
 
 Defines whether the instance has the vTPM enabled. Enabled by default.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#enable_vtpm NotebooksInstance#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#enable_vtpm NotebooksInstance#enable_vtpm}
 
 ---
 
@@ -2454,9 +2454,9 @@ const notebooksInstanceTimeouts: notebooksInstance.NotebooksInstanceTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#create NotebooksInstance#create}. |
-| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#delete NotebooksInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#update NotebooksInstance#update}. |
+| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#create NotebooksInstance#create}. |
+| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#delete NotebooksInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.notebooksInstance.NotebooksInstanceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#update NotebooksInstance#update}. |
 
 ---
 
@@ -2468,7 +2468,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#create NotebooksInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#create NotebooksInstance#create}.
 
 ---
 
@@ -2480,7 +2480,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#delete NotebooksInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#delete NotebooksInstance#delete}.
 
 ---
 
@@ -2492,7 +2492,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#update NotebooksInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#update NotebooksInstance#update}.
 
 ---
 
@@ -2526,7 +2526,7 @@ public readonly project: string;
 
 The name of the Google Cloud project that this VM image belongs to. Format: projects/{project_id}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#project NotebooksInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#project NotebooksInstance#project}
 
 ---
 
@@ -2540,7 +2540,7 @@ public readonly imageFamily: string;
 
 Use this VM image family to find the image; the newest image in this family will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#image_family NotebooksInstance#image_family}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#image_family NotebooksInstance#image_family}
 
 ---
 
@@ -2554,7 +2554,7 @@ public readonly imageName: string;
 
 Use VM image name to find the image.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/notebooks_instance#image_name NotebooksInstance#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/notebooks_instance#image_name NotebooksInstance#image_name}
 
 ---
 

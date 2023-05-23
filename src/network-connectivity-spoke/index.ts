@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke
+// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,17 +10,17 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
   /**
   * An optional description of the spoke.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#description NetworkConnectivitySpoke#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#description NetworkConnectivitySpoke#description}
   */
   readonly description?: string;
   /**
   * Immutable. The URI of the hub that this spoke is attached to.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#hub NetworkConnectivitySpoke#hub}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#hub NetworkConnectivitySpoke#hub}
   */
   readonly hub: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#id NetworkConnectivitySpoke#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#id NetworkConnectivitySpoke#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -29,49 +29,49 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
   /**
   * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#labels NetworkConnectivitySpoke#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#labels NetworkConnectivitySpoke#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#location NetworkConnectivitySpoke#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#location NetworkConnectivitySpoke#location}
   */
   readonly location: string;
   /**
   * Immutable. The name of the spoke. Spoke names must be unique.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#name NetworkConnectivitySpoke#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#name NetworkConnectivitySpoke#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#project NetworkConnectivitySpoke#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#project NetworkConnectivitySpoke#project}
   */
   readonly project?: string;
   /**
   * linked_interconnect_attachments block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#linked_interconnect_attachments NetworkConnectivitySpoke#linked_interconnect_attachments}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#linked_interconnect_attachments NetworkConnectivitySpoke#linked_interconnect_attachments}
   */
   readonly linkedInterconnectAttachments?: NetworkConnectivitySpokeLinkedInterconnectAttachments;
   /**
   * linked_router_appliance_instances block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#linked_router_appliance_instances NetworkConnectivitySpoke#linked_router_appliance_instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#linked_router_appliance_instances NetworkConnectivitySpoke#linked_router_appliance_instances}
   */
   readonly linkedRouterApplianceInstances?: NetworkConnectivitySpokeLinkedRouterApplianceInstances;
   /**
   * linked_vpn_tunnels block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#linked_vpn_tunnels NetworkConnectivitySpoke#linked_vpn_tunnels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#linked_vpn_tunnels NetworkConnectivitySpoke#linked_vpn_tunnels}
   */
   readonly linkedVpnTunnels?: NetworkConnectivitySpokeLinkedVpnTunnels;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#timeouts NetworkConnectivitySpoke#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#timeouts NetworkConnectivitySpoke#timeouts}
   */
   readonly timeouts?: NetworkConnectivitySpokeTimeouts;
 }
@@ -79,13 +79,13 @@ export interface NetworkConnectivitySpokeLinkedInterconnectAttachments {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked interconnect attachment resources
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];
 }
@@ -169,13 +169,13 @@ export interface NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances
   /**
   * The IP address on the VM to use for peering.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#ip_address NetworkConnectivitySpoke#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#ip_address NetworkConnectivitySpoke#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * The URI of the virtual machine resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#virtual_machine NetworkConnectivitySpoke#virtual_machine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#virtual_machine NetworkConnectivitySpoke#virtual_machine}
   */
   readonly virtualMachine?: string;
 }
@@ -297,13 +297,13 @@ export interface NetworkConnectivitySpokeLinkedRouterApplianceInstances {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * instances block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#instances NetworkConnectivitySpoke#instances}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#instances NetworkConnectivitySpoke#instances}
   */
   readonly instances: NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances[] | cdktf.IResolvable;
 }
@@ -387,13 +387,13 @@ export interface NetworkConnectivitySpokeLinkedVpnTunnels {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked VPN tunnel resources.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];
 }
@@ -475,15 +475,15 @@ export class NetworkConnectivitySpokeLinkedVpnTunnelsOutputReference extends cdk
 }
 export interface NetworkConnectivitySpokeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#create NetworkConnectivitySpoke#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#create NetworkConnectivitySpoke#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#delete NetworkConnectivitySpoke#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#delete NetworkConnectivitySpoke#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke#update NetworkConnectivitySpoke#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke#update NetworkConnectivitySpoke#update}
   */
   readonly update?: string;
 }
@@ -604,7 +604,7 @@ export class NetworkConnectivitySpokeTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke google_network_connectivity_spoke}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke}
 */
 export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
 
@@ -618,7 +618,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/network_connectivity_spoke google_network_connectivity_spoke} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/network_connectivity_spoke google_network_connectivity_spoke} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -629,7 +629,7 @@ export class NetworkConnectivitySpoke extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_connectivity_spoke',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.2',
+        providerVersion: '4.66.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

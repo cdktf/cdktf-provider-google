@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager
+// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceGroupManagerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager#id DataGoogleComputeInstanceGroupManager#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager#id DataGoogleComputeInstanceGroupManager#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,25 +17,25 @@ export interface DataGoogleComputeInstanceGroupManagerConfig extends cdktf.Terra
   /**
   * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager#name DataGoogleComputeInstanceGroupManager#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager#name DataGoogleComputeInstanceGroupManager#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager#project DataGoogleComputeInstanceGroupManager#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager#project DataGoogleComputeInstanceGroupManager#project}
   */
   readonly project?: string;
   /**
   * The URL of the created resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager#self_link DataGoogleComputeInstanceGroupManager#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager#self_link DataGoogleComputeInstanceGroupManager#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone that instances in this group should be created in.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager#zone DataGoogleComputeInstanceGroupManager#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager#zone DataGoogleComputeInstanceGroupManager#zone}
   */
   readonly zone?: string;
 }
@@ -765,7 +765,7 @@ export class DataGoogleComputeInstanceGroupManagerVersionList extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager}
 */
 export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSource {
 
@@ -779,7 +779,7 @@ export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group_manager google_compute_instance_group_manager} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -790,7 +790,7 @@ export class DataGoogleComputeInstanceGroupManager extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_instance_group_manager',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.2',
+        providerVersion: '4.66.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_datastore_index`
 
-Refer to the Terraform Registory for docs: [`google_datastore_index`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index).
+Refer to the Terraform Registory for docs: [`google_datastore_index`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index).
 
 # `datastoreIndex` Submodule <a name="`datastoreIndex` Submodule" id="@cdktf/provider-google.datastoreIndex"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_datastore_index`](https://re
 
 ### DatastoreIndex <a name="DatastoreIndex" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index google_datastore_index}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index google_datastore_index}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.Initializer"></a>
 
@@ -751,8 +751,8 @@ new DatastoreIndexConfig {
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.kind">Kind</a></code> | <code>string</code> | The entity kind which the index applies to. |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.ancestor">Ancestor</a></code> | <code>string</code> | Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"]. |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#id DatastoreIndex#id}. |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#project DatastoreIndex#project}. |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#id DatastoreIndex#id}. |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#project DatastoreIndex#project}. |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.properties">Properties</a></code> | <code>object</code> | properties block. |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a></code> | timeouts block. |
 
@@ -838,7 +838,7 @@ public string Kind { get; set; }
 
 The entity kind which the index applies to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#kind DatastoreIndex#kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#kind DatastoreIndex#kind}
 
 ---
 
@@ -852,7 +852,7 @@ public string Ancestor { get; set; }
 
 Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#ancestor DatastoreIndex#ancestor}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#ancestor DatastoreIndex#ancestor}
 
 ---
 
@@ -864,7 +864,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#id DatastoreIndex#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#id DatastoreIndex#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -879,7 +879,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#project DatastoreIndex#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#project DatastoreIndex#project}.
 
 ---
 
@@ -893,7 +893,7 @@ public object Properties { get; set; }
 
 properties block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#properties DatastoreIndex#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#properties DatastoreIndex#properties}
 
 ---
 
@@ -907,7 +907,7 @@ public DatastoreIndexTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#timeouts DatastoreIndex#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#timeouts DatastoreIndex#timeouts}
 
 ---
 
@@ -943,7 +943,7 @@ public string Direction { get; set; }
 
 The direction the index should optimize for sorting. Possible values: ["ASCENDING", "DESCENDING"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#direction DatastoreIndex#direction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#direction DatastoreIndex#direction}
 
 ---
 
@@ -957,7 +957,7 @@ public string Name { get; set; }
 
 The property name to index.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#name DatastoreIndex#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#name DatastoreIndex#name}
 
 ---
 
@@ -978,8 +978,8 @@ new DatastoreIndexTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#create DatastoreIndex#create}. |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#delete DatastoreIndex#delete}. |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#create DatastoreIndex#create}. |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#delete DatastoreIndex#delete}. |
 
 ---
 
@@ -991,7 +991,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#create DatastoreIndex#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#create DatastoreIndex#create}.
 
 ---
 
@@ -1003,7 +1003,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/datastore_index#delete DatastoreIndex#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/datastore_index#delete DatastoreIndex#delete}.
 
 ---
 

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project
+// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,17 +11,17 @@ export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMet
   * The deletion policy for the shared VPC service. Setting ABANDON allows the resource
 				to be abandoned rather than deleted. Possible values are: "ABANDON".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#deletion_policy ComputeSharedVpcServiceProject#deletion_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#deletion_policy ComputeSharedVpcServiceProject#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * The ID of a host project to associate.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#host_project ComputeSharedVpcServiceProject#host_project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#host_project ComputeSharedVpcServiceProject#host_project}
   */
   readonly hostProject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#id ComputeSharedVpcServiceProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#id ComputeSharedVpcServiceProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,23 +30,23 @@ export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMet
   /**
   * The ID of the project that will serve as a Shared VPC service project.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#service_project ComputeSharedVpcServiceProject#service_project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#service_project ComputeSharedVpcServiceProject#service_project}
   */
   readonly serviceProject: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#timeouts ComputeSharedVpcServiceProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#timeouts ComputeSharedVpcServiceProject#timeouts}
   */
   readonly timeouts?: ComputeSharedVpcServiceProjectTimeouts;
 }
 export interface ComputeSharedVpcServiceProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#create ComputeSharedVpcServiceProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#create ComputeSharedVpcServiceProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project#delete ComputeSharedVpcServiceProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project#delete ComputeSharedVpcServiceProject#delete}
   */
   readonly delete?: string;
 }
@@ -144,7 +144,7 @@ export class ComputeSharedVpcServiceProjectTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project google_compute_shared_vpc_service_project}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project google_compute_shared_vpc_service_project}
 */
 export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/compute_shared_vpc_service_project google_compute_shared_vpc_service_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/compute_shared_vpc_service_project google_compute_shared_vpc_service_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -169,7 +169,7 @@ export class ComputeSharedVpcServiceProject extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_shared_vpc_service_project',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.2',
+        providerVersion: '4.66.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

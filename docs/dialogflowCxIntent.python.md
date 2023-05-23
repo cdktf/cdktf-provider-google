@@ -1,6 +1,6 @@
 # `google_dialogflow_cx_intent`
 
-Refer to the Terraform Registory for docs: [`google_dialogflow_cx_intent`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent).
+Refer to the Terraform Registory for docs: [`google_dialogflow_cx_intent`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent).
 
 # `dialogflowCxIntent` Submodule <a name="`dialogflowCxIntent` Submodule" id="@cdktf/provider-google.dialogflowCxIntent"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dialogflow_cx_intent`](https
 
 ### DialogflowCxIntent <a name="DialogflowCxIntent" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent google_dialogflow_cx_intent}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer"></a>
 
@@ -52,7 +52,7 @@ dialogflowCxIntent.DialogflowCxIntent(
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | The human-readable name of the intent, unique within the agent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.description">description</a></code> | <code>str</code> | Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.isFallback">is_fallback</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether this is a fallback intent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The key/value metadata to label an intent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntent.Initializer.parameter.languageCode">language_code</a></code> | <code>str</code> | The language of the following fields in intent: Intent.training_phrases.parts.text If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used. |
@@ -130,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 The human-readable name of the intent, unique within the agent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -164,7 +164,7 @@ Indicates whether this is a fallback intent.
 Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
 Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
 
 ---
 
@@ -178,7 +178,7 @@ Labels can contain lowercase letters, digits and the symbols '-' and '_'. Intern
 Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
 
 ---
 
@@ -188,7 +188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The language of the following fields in intent: Intent.training_phrases.parts.text If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
 
 ---
 
@@ -198,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
 
 ---
 
@@ -208,7 +208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The agent to create an intent for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
 
 ---
 
@@ -222,7 +222,7 @@ Higher numbers represent higher priorities.
 If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
 If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
 
 ---
 
@@ -232,7 +232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
 
 ---
 
@@ -242,7 +242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 training_phrases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
 
 ---
 
@@ -519,7 +519,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}.
 
 ---
 
@@ -527,7 +527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}.
 
 ---
 
@@ -535,7 +535,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}.
 
 ---
 
@@ -1167,7 +1167,7 @@ dialogflowCxIntent.DialogflowCxIntentConfig(
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.displayName">display_name</a></code> | <code>str</code> | The human-readable name of the intent, unique within the agent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.description">description</a></code> | <code>str</code> | Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.isFallback">is_fallback</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Indicates whether this is a fallback intent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | The key/value metadata to label an intent. |
 | <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentConfig.property.languageCode">language_code</a></code> | <code>str</code> | The language of the following fields in intent: Intent.training_phrases.parts.text If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used. |
@@ -1259,7 +1259,7 @@ display_name: str
 
 The human-readable name of the intent, unique within the agent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#display_name DialogflowCxIntent#display_name}
 
 ---
 
@@ -1273,7 +1273,7 @@ description: str
 
 Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#description DialogflowCxIntent#description}
 
 ---
 
@@ -1285,7 +1285,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1305,7 +1305,7 @@ Indicates whether this is a fallback intent.
 Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
 Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#is_fallback DialogflowCxIntent#is_fallback}
 
 ---
 
@@ -1323,7 +1323,7 @@ Labels can contain lowercase letters, digits and the symbols '-' and '_'. Intern
 Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#labels DialogflowCxIntent#labels}
 
 ---
 
@@ -1337,7 +1337,7 @@ language_code: str
 
 The language of the following fields in intent: Intent.training_phrases.parts.text If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#language_code DialogflowCxIntent#language_code}
 
 ---
 
@@ -1351,7 +1351,7 @@ parameters: typing.Union[IResolvable, typing.List[DialogflowCxIntentParameters]]
 
 parameters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parameters DialogflowCxIntent#parameters}
 
 ---
 
@@ -1365,7 +1365,7 @@ parent: str
 
 The agent to create an intent for. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parent DialogflowCxIntent#parent}
 
 ---
 
@@ -1383,7 +1383,7 @@ Higher numbers represent higher priorities.
 If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
 If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#priority DialogflowCxIntent#priority}
 
 ---
 
@@ -1397,7 +1397,7 @@ timeouts: DialogflowCxIntentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#timeouts DialogflowCxIntent#timeouts}
 
 ---
 
@@ -1411,7 +1411,7 @@ training_phrases: typing.Union[IResolvable, typing.List[DialogflowCxIntentTraini
 
 training_phrases block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#training_phrases DialogflowCxIntent#training_phrases}
 
 ---
 
@@ -1453,7 +1453,7 @@ The entity type of the parameter.
 
 Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#entity_type DialogflowCxIntent#entity_type}
 
 ---
 
@@ -1467,7 +1467,7 @@ id: str
 
 The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#id DialogflowCxIntent#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1484,7 +1484,7 @@ is_list: typing.Union[bool, IResolvable]
 
 Indicates whether the parameter represents a list of values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#is_list DialogflowCxIntent#is_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#is_list DialogflowCxIntent#is_list}
 
 ---
 
@@ -1501,7 +1501,7 @@ Indicates whether the parameter content should be redacted in log.
 If redaction is enabled, the parameter content will be replaced by parameter name during logging.
 Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#redact DialogflowCxIntent#redact}
 
 ---
 
@@ -1523,9 +1523,9 @@ dialogflowCxIntent.DialogflowCxIntentTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}. |
-| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}. |
+| <code><a href="#@cdktf/provider-google.dialogflowCxIntent.DialogflowCxIntentTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}. |
 
 ---
 
@@ -1537,7 +1537,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#create DialogflowCxIntent#create}.
 
 ---
 
@@ -1549,7 +1549,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#delete DialogflowCxIntent#delete}.
 
 ---
 
@@ -1561,7 +1561,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#update DialogflowCxIntent#update}.
 
 ---
 
@@ -1597,7 +1597,7 @@ parts: typing.Union[IResolvable, typing.List[DialogflowCxIntentTrainingPhrasesPa
 
 parts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parts DialogflowCxIntent#parts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parts DialogflowCxIntent#parts}
 
 ---
 
@@ -1611,7 +1611,7 @@ repeat_count: typing.Union[int, float]
 
 Indicates how many times this example was added to the intent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#repeat_count DialogflowCxIntent#repeat_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#repeat_count DialogflowCxIntent#repeat_count}
 
 ---
 
@@ -1647,7 +1647,7 @@ text: str
 
 The text for this part.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#text DialogflowCxIntent#text}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#text DialogflowCxIntent#text}
 
 ---
 
@@ -1663,7 +1663,7 @@ The parameter used to annotate this part of the training phrase.
 
 This field is required for annotated parts of the training phrase.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/dialogflow_cx_intent#parameter_id DialogflowCxIntent#parameter_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/dialogflow_cx_intent#parameter_id DialogflowCxIntent#parameter_id}
 
 ---
 
