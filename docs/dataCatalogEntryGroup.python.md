@@ -1,6 +1,6 @@
 # `google_data_catalog_entry_group`
 
-Refer to the Terraform Registory for docs: [`google_data_catalog_entry_group`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group).
+Refer to the Terraform Registory for docs: [`google_data_catalog_entry_group`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group).
 
 # `dataCatalogEntryGroup` Submodule <a name="`dataCatalogEntryGroup` Submodule" id="@cdktf/provider-google.dataCatalogEntryGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_data_catalog_entry_group`](h
 
 ### DataCatalogEntryGroup <a name="DataCatalogEntryGroup" id="@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group google_data_catalog_entry_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group google_data_catalog_entry_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer"></a>
 
@@ -49,8 +49,8 @@ dataCatalogEntryGroup.DataCatalogEntryGroup(
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.entryGroupId">entry_group_id</a></code> | <code>str</code> | The id of the entry group to create. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.description">description</a></code> | <code>str</code> | Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | A short name to identify the entry group, for example, "analytics data - jan 2011". |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.region">region</a></code> | <code>str</code> | EntryGroup location region. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroup.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts">DataCatalogEntryGroupTimeouts</a></code> | timeouts block. |
 
@@ -125,7 +125,7 @@ The id of the entry group to create.
 The id must begin with a letter or underscore,
 contain only English letters, numbers and underscores, and be at most 64 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
 
 ---
 
@@ -135,7 +135,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
 
 ---
 
@@ -145,7 +145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A short name to identify the entry group, for example, "analytics data - jan 2011".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
 
 ---
 
@@ -153,7 +153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -164,7 +164,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}.
 
 ---
 
@@ -174,7 +174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 EntryGroup location region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
 
 ---
 
@@ -184,7 +184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
 
 ---
 
@@ -441,7 +441,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}.
 
 ---
 
@@ -449,7 +449,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}.
 
 ---
 
@@ -457,7 +457,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}.
 
 ---
 
@@ -960,8 +960,8 @@ dataCatalogEntryGroup.DataCatalogEntryGroupConfig(
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.entryGroupId">entry_group_id</a></code> | <code>str</code> | The id of the entry group to create. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.description">description</a></code> | <code>str</code> | Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.displayName">display_name</a></code> | <code>str</code> | A short name to identify the entry group, for example, "analytics data - jan 2011". |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.region">region</a></code> | <code>str</code> | EntryGroup location region. |
 | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts">DataCatalogEntryGroupTimeouts</a></code> | timeouts block. |
 
@@ -1050,7 +1050,7 @@ The id of the entry group to create.
 The id must begin with a letter or underscore,
 contain only English letters, numbers and underscores, and be at most 64 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
 
 ---
 
@@ -1064,7 +1064,7 @@ description: str
 
 Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
 
 ---
 
@@ -1078,7 +1078,7 @@ display_name: str
 
 A short name to identify the entry group, for example, "analytics data - jan 2011".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
 
 ---
 
@@ -1090,7 +1090,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#id DataCatalogEntryGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1105,7 +1105,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#project DataCatalogEntryGroup#project}.
 
 ---
 
@@ -1119,7 +1119,7 @@ region: str
 
 EntryGroup location region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
 
 ---
 
@@ -1133,7 +1133,7 @@ timeouts: DataCatalogEntryGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
 
 ---
 
@@ -1155,9 +1155,9 @@ dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}. |
-| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}. |
+| <code><a href="#@cdktf/provider-google.dataCatalogEntryGroup.DataCatalogEntryGroupTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}. |
 
 ---
 
@@ -1169,7 +1169,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#create DataCatalogEntryGroup#create}.
 
 ---
 
@@ -1181,7 +1181,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#delete DataCatalogEntryGroup#delete}.
 
 ---
 
@@ -1193,7 +1193,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/data_catalog_entry_group#update DataCatalogEntryGroup#update}.
 
 ---
 

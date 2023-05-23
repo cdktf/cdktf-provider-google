@@ -1,6 +1,6 @@
 # `data_google_kms_crypto_key`
 
-Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key).
+Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key).
 
 # `dataGoogleKmsCryptoKey` Submodule <a name="`dataGoogleKmsCryptoKey` Submodule" id="@cdktf/provider-google.dataGoogleKmsCryptoKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key`](https:
 
 ### DataGoogleKmsCryptoKey <a name="DataGoogleKmsCryptoKey" id="@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key google_kms_crypto_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key google_kms_crypto_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKey.Initializer"></a>
 
@@ -672,7 +672,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglekmscryptok
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKeyConfig.property.keyRing">KeyRing</a></code> | <code>*string</code> | The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKeyConfig.property.name">Name</a></code> | <code>*string</code> | The resource name for the CryptoKey. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key#id DataGoogleKmsCryptoKey#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKey.DataGoogleKmsCryptoKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key#id DataGoogleKmsCryptoKey#id}. |
 
 ---
 
@@ -756,7 +756,7 @@ KeyRing *string
 
 The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key#key_ring DataGoogleKmsCryptoKey#key_ring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key#key_ring DataGoogleKmsCryptoKey#key_ring}
 
 ---
 
@@ -770,7 +770,7 @@ Name *string
 
 The resource name for the CryptoKey.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key#name DataGoogleKmsCryptoKey#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key#name DataGoogleKmsCryptoKey#name}
 
 ---
 
@@ -782,7 +782,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/kms_crypto_key#id DataGoogleKmsCryptoKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/kms_crypto_key#id DataGoogleKmsCryptoKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

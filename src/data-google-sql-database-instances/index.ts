@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances
+// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * To filter out the database instances which are of the specified database version.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
   */
   readonly databaseVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#id DataGoogleSqlDatabaseInstances#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,31 +23,31 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   /**
   * Project ID of the project that contains the instances.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
   */
   readonly project?: string;
   /**
   * To filter out the database instances which are located in this specified region.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
   */
   readonly region?: string;
   /**
   * To filter out the database instances based on the current state of the database instance, valid values include : "SQL_INSTANCE_STATE_UNSPECIFIED", "RUNNABLE", "SUSPENDED", "PENDING_DELETE", "PENDING_CREATE", "MAINTENANCE" and "FAILED".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
   */
   readonly state?: string;
   /**
   * To filter out the database instances based on the machine type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
   */
   readonly tier?: string;
   /**
   * To filter out the database instances which are located in this specified zone.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
   */
   readonly zone?: string;
 }
@@ -538,6 +538,70 @@ export class DataGoogleSqlDatabaseInstancesInstancesSettingsActiveDirectoryConfi
   */
   public get(index: number): DataGoogleSqlDatabaseInstancesInstancesSettingsActiveDirectoryConfigOutputReference {
     return new DataGoogleSqlDatabaseInstancesInstancesSettingsActiveDirectoryConfigOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeatures {
+}
+
+export function dataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesToTerraform(struct?: DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeatures | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeatures | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // threads_per_core - computed: true, optional: false, required: false
+  public get threadsPerCore() {
+    return this.getNumberAttribute('threads_per_core');
+  }
+}
+
+export class DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesOutputReference {
+    return new DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleSqlDatabaseInstancesInstancesSettingsBackupConfigurationBackupRetentionSettings {
@@ -1457,6 +1521,12 @@ export class DataGoogleSqlDatabaseInstancesInstancesSettingsOutputReference exte
     return this._activeDirectoryConfig;
   }
 
+  // advanced_machine_features - computed: true, optional: false, required: false
+  private _advancedMachineFeatures = new DataGoogleSqlDatabaseInstancesInstancesSettingsAdvancedMachineFeaturesList(this, "advanced_machine_features", false);
+  public get advancedMachineFeatures() {
+    return this._advancedMachineFeatures;
+  }
+
   // availability_type - computed: true, optional: false, required: false
   public get availabilityType() {
     return this.getStringAttribute('availability_type');
@@ -1778,7 +1848,7 @@ export class DataGoogleSqlDatabaseInstancesInstancesList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances google_sql_database_instances}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances google_sql_database_instances}
 */
 export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
 
@@ -1792,7 +1862,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/sql_database_instances google_sql_database_instances} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/sql_database_instances google_sql_database_instances} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1803,7 +1873,7 @@ export class DataGoogleSqlDatabaseInstances extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_sql_database_instances',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.2',
+        providerVersion: '4.66.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

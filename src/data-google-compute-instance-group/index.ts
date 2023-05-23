@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group
+// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,26 +8,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group#id DataGoogleComputeInstanceGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group#id DataGoogleComputeInstanceGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group#name DataGoogleComputeInstanceGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group#name DataGoogleComputeInstanceGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group#project DataGoogleComputeInstanceGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group#project DataGoogleComputeInstanceGroup#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group#self_link DataGoogleComputeInstanceGroup#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group#self_link DataGoogleComputeInstanceGroup#self_link}
   */
   readonly selfLink?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group#zone DataGoogleComputeInstanceGroup#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group#zone DataGoogleComputeInstanceGroup#zone}
   */
   readonly zone?: string;
 }
@@ -102,7 +102,7 @@ export class DataGoogleComputeInstanceGroupNamedPortList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group google_compute_instance_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group google_compute_instance_group}
 */
 export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
 
@@ -116,7 +116,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/data-sources/compute_instance_group google_compute_instance_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_instance_group google_compute_instance_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -127,7 +127,7 @@ export class DataGoogleComputeInstanceGroup extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.65.2',
+        providerVersion: '4.66.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_billing_subaccount`
 
-Refer to the Terraform Registory for docs: [`google_billing_subaccount`](https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount).
+Refer to the Terraform Registory for docs: [`google_billing_subaccount`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount).
 
 # `billingSubaccount` Submodule <a name="`billingSubaccount` Submodule" id="@cdktf/provider-google.billingSubaccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_billing_subaccount`](https:/
 
 ### BillingSubaccount <a name="BillingSubaccount" id="@cdktf/provider-google.billingSubaccount.BillingSubaccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount google_billing_subaccount}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount google_billing_subaccount}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.billingSubaccount.BillingSubaccount.Initializer"></a>
 
@@ -678,10 +678,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/billingsubaccount"
 | <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}. |
-| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.masterBillingAccount">MasterBillingAccount</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}. |
-| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}. |
-| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#id BillingSubaccount#id}. |
+| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}. |
+| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.masterBillingAccount">MasterBillingAccount</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}. |
+| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.deletionPolicy">DeletionPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}. |
+| <code><a href="#@cdktf/provider-google.billingSubaccount.BillingSubaccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#id BillingSubaccount#id}. |
 
 ---
 
@@ -763,7 +763,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#display_name BillingSubaccount#display_name}.
 
 ---
 
@@ -775,7 +775,7 @@ MasterBillingAccount *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#master_billing_account BillingSubaccount#master_billing_account}.
 
 ---
 
@@ -787,7 +787,7 @@ DeletionPolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#deletion_policy BillingSubaccount#deletion_policy}.
 
 ---
 
@@ -799,7 +799,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.65.2/docs/resources/billing_subaccount#id BillingSubaccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/billing_subaccount#id BillingSubaccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
