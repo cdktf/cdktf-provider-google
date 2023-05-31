@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset
+// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface FirebaserulesRulesetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#id FirebaserulesRuleset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#id FirebaserulesRuleset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -17,19 +17,19 @@ export interface FirebaserulesRulesetConfig extends cdktf.TerraformMetaArguments
   /**
   * The project for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#project FirebaserulesRuleset#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#project FirebaserulesRuleset#project}
   */
   readonly project?: string;
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#source FirebaserulesRuleset#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#source FirebaserulesRuleset#source}
   */
   readonly source: FirebaserulesRulesetSource;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#timeouts FirebaserulesRuleset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#timeouts FirebaserulesRuleset#timeouts}
   */
   readonly timeouts?: FirebaserulesRulesetTimeouts;
 }
@@ -101,19 +101,19 @@ export interface FirebaserulesRulesetSourceFiles {
   /**
   * Textual Content.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#content FirebaserulesRuleset#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#content FirebaserulesRuleset#content}
   */
   readonly content: string;
   /**
   * Fingerprint (e.g. github sha) associated with the `File`.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#fingerprint FirebaserulesRuleset#fingerprint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#fingerprint FirebaserulesRuleset#fingerprint}
   */
   readonly fingerprint?: string;
   /**
   * File name.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#name FirebaserulesRuleset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#name FirebaserulesRuleset#name}
   */
   readonly name: string;
 }
@@ -252,13 +252,13 @@ export interface FirebaserulesRulesetSource {
   /**
   * `Language` of the `Source` bundle. If unspecified, the language will default to `FIREBASE_RULES`. Possible values: LANGUAGE_UNSPECIFIED, FIREBASE_RULES, EVENT_FLOW_TRIGGERS
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#language FirebaserulesRuleset#language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#language FirebaserulesRuleset#language}
   */
   readonly language?: string;
   /**
   * files block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#files FirebaserulesRuleset#files}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#files FirebaserulesRuleset#files}
   */
   readonly files: FirebaserulesRulesetSourceFiles[] | cdktf.IResolvable;
 }
@@ -343,11 +343,11 @@ export class FirebaserulesRulesetSourceOutputReference extends cdktf.ComplexObje
 }
 export interface FirebaserulesRulesetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#create FirebaserulesRuleset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#create FirebaserulesRuleset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset#delete FirebaserulesRuleset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset#delete FirebaserulesRuleset#delete}
   */
   readonly delete?: string;
 }
@@ -445,7 +445,7 @@ export class FirebaserulesRulesetTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset google_firebaserules_ruleset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset google_firebaserules_ruleset}
 */
 export class FirebaserulesRuleset extends cdktf.TerraformResource {
 
@@ -459,7 +459,7 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/firebaserules_ruleset google_firebaserules_ruleset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/firebaserules_ruleset google_firebaserules_ruleset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -470,7 +470,7 @@ export class FirebaserulesRuleset extends cdktf.TerraformResource {
       terraformResourceType: 'google_firebaserules_ruleset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.66.0',
+        providerVersion: '4.67.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

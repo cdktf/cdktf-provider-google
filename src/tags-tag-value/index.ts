@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value
+// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   /**
   * User-assigned description of the TagValue. Must not exceed 256 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#description TagsTagValue#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#description TagsTagValue#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#id TagsTagValue#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#id TagsTagValue#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,7 +23,7 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   /**
   * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#parent TagsTagValue#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#parent TagsTagValue#parent}
   */
   readonly parent: string;
   /**
@@ -31,27 +31,27 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
 
 The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#short_name TagsTagValue#short_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#short_name TagsTagValue#short_name}
   */
   readonly shortName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#timeouts TagsTagValue#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#timeouts TagsTagValue#timeouts}
   */
   readonly timeouts?: TagsTagValueTimeouts;
 }
 export interface TagsTagValueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#create TagsTagValue#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#create TagsTagValue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#delete TagsTagValue#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#delete TagsTagValue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value#update TagsTagValue#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value#update TagsTagValue#update}
   */
   readonly update?: string;
 }
@@ -172,7 +172,7 @@ export class TagsTagValueTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value google_tags_tag_value}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value google_tags_tag_value}
 */
 export class TagsTagValue extends cdktf.TerraformResource {
 
@@ -186,7 +186,7 @@ export class TagsTagValue extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_value google_tags_tag_value} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_value google_tags_tag_value} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -197,7 +197,7 @@ export class TagsTagValue extends cdktf.TerraformResource {
       terraformResourceType: 'google_tags_tag_value',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.66.0',
+        providerVersion: '4.67.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

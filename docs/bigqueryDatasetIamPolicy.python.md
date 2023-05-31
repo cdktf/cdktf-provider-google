@@ -1,6 +1,6 @@
 # `google_bigquery_dataset_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy).
+Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy).
 
 # `bigqueryDatasetIamPolicy` Submodule <a name="`bigqueryDatasetIamPolicy` Submodule" id="@cdktf/provider-google.bigqueryDatasetIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_bigquery_dataset_iam_policy`
 
 ### BigqueryDatasetIamPolicy <a name="BigqueryDatasetIamPolicy" id="@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy google_bigquery_dataset_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy google_bigquery_dataset_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer"></a>
 
@@ -43,10 +43,10 @@ bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy(
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}. |
 
 ---
 
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}.
 
 ---
 
@@ -782,10 +782,10 @@ bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.datasetId">dataset_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.bigqueryDatasetIamPolicy.BigqueryDatasetIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}. |
 
 ---
 
@@ -867,7 +867,7 @@ dataset_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#dataset_id BigqueryDatasetIamPolicy#dataset_id}.
 
 ---
 
@@ -879,7 +879,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#policy_data BigqueryDatasetIamPolicy#policy_data}.
 
 ---
 
@@ -891,7 +891,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#id BigqueryDatasetIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -906,7 +906,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/bigquery_dataset_iam_policy#project BigqueryDatasetIamPolicy#project}.
 
 ---
 

@@ -1,3 +1,3 @@
 # `google_iam_access_boundary_policy`
 
-Refer to the Terraform Registory for docs: [`google_iam_access_boundary_policy`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/iam_access_boundary_policy).
+Refer to the Terraform Registory for docs: [`google_iam_access_boundary_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iam_access_boundary_policy).
