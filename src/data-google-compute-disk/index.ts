@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk
+// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,17 +23,17 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}
   */
   readonly project?: string;
   /**
   * A reference to the zone where the disk resides.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
   */
   readonly zone?: string;
 }
@@ -119,6 +119,70 @@ export class DataGoogleComputeDiskDiskEncryptionKeyList extends cdktf.ComplexLis
   */
   public get(index: number): DataGoogleComputeDiskDiskEncryptionKeyOutputReference {
     return new DataGoogleComputeDiskDiskEncryptionKeyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataGoogleComputeDiskGuestOsFeatures {
+}
+
+export function dataGoogleComputeDiskGuestOsFeaturesToTerraform(struct?: DataGoogleComputeDiskGuestOsFeatures): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeDiskGuestOsFeaturesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeDiskGuestOsFeatures | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeDiskGuestOsFeatures | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataGoogleComputeDiskGuestOsFeaturesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeDiskGuestOsFeaturesOutputReference {
+    return new DataGoogleComputeDiskGuestOsFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataGoogleComputeDiskSourceImageEncryptionKey {
@@ -281,7 +345,7 @@ export class DataGoogleComputeDiskSourceSnapshotEncryptionKeyList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk google_compute_disk}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk google_compute_disk}
 */
 export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
 
@@ -295,7 +359,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/data-sources/compute_disk google_compute_disk} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/compute_disk google_compute_disk} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -306,7 +370,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_disk',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.66.0',
+        providerVersion: '4.67.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -341,6 +405,12 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
   private _diskEncryptionKey = new DataGoogleComputeDiskDiskEncryptionKeyList(this, "disk_encryption_key", false);
   public get diskEncryptionKey() {
     return this._diskEncryptionKey;
+  }
+
+  // guest_os_features - computed: true, optional: false, required: false
+  private _guestOsFeatures = new DataGoogleComputeDiskGuestOsFeaturesList(this, "guest_os_features", true);
+  public get guestOsFeatures() {
+    return this._guestOsFeatures;
   }
 
   // id - computed: true, optional: true, required: false
@@ -383,6 +453,11 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
   // last_detach_timestamp - computed: true, optional: false, required: false
   public get lastDetachTimestamp() {
     return this.getStringAttribute('last_detach_timestamp');
+  }
+
+  // licenses - computed: true, optional: false, required: false
+  public get licenses() {
+    return this.getListAttribute('licenses');
   }
 
   // name - computed: false, optional: false, required: true

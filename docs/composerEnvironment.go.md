@@ -1,6 +1,6 @@
 # `google_composer_environment`
 
-Refer to the Terraform Registory for docs: [`google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment).
+Refer to the Terraform Registory for docs: [`google_composer_environment`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment).
 
 # `composerEnvironment` Submodule <a name="`composerEnvironment` Submodule" id="@cdktf/provider-google.composerEnvironment"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_composer_environment`](https
 
 ### ComposerEnvironment <a name="ComposerEnvironment" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment google_composer_environment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment google_composer_environment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironment(scope Construct, id *string, config ComposerEnvironmentConfig) ComposerEnvironment
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ composerenvironment.ComposerEnvironment_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.ComposerEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -737,7 +737,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfig {
 	Connection: interface{},
@@ -748,12 +748,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	Config: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigA,
+	Config: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigA,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentTimeouts,
 }
 ```
 
@@ -770,7 +770,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.name">Name</a></code> | <code>*string</code> | Name of the environment. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.config">Config</a></code> | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA">ComposerEnvironmentConfigA</a></code> | config block. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#id ComposerEnvironment#id}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#id ComposerEnvironment#id}. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | User-defined labels for this environment. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.project">Project</a></code> | <code>*string</code> | The ID of the project in which the resource belongs. |
 | <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfig.property.region">Region</a></code> | <code>*string</code> | The location or Compute Engine region for the environment. |
@@ -858,7 +858,7 @@ Name *string
 
 Name of the environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#name ComposerEnvironment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#name ComposerEnvironment#name}
 
 ---
 
@@ -872,7 +872,7 @@ Config ComposerEnvironmentConfigA
 
 config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#config ComposerEnvironment#config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#config ComposerEnvironment#config}
 
 ---
 
@@ -884,7 +884,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#id ComposerEnvironment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#id ComposerEnvironment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -903,7 +903,7 @@ User-defined labels for this environment.
 
 The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D)?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be <= 128 bytes in size.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#labels ComposerEnvironment#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#labels ComposerEnvironment#labels}
 
 ---
 
@@ -919,7 +919,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#project ComposerEnvironment#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#project ComposerEnvironment#project}
 
 ---
 
@@ -933,7 +933,7 @@ Region *string
 
 The location or Compute Engine region for the environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#region ComposerEnvironment#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#region ComposerEnvironment#region}
 
 ---
 
@@ -947,7 +947,7 @@ Timeouts ComposerEnvironmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#timeouts ComposerEnvironment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#timeouts ComposerEnvironment#timeouts}
 
 ---
 
@@ -956,22 +956,22 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigA {
-	DatabaseConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig,
-	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig,
+	DatabaseConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig,
+	EncryptionConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig,
 	EnvironmentSize: *string,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow,
-	MasterAuthorizedNetworksConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig,
-	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigNodeConfig,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow,
+	MasterAuthorizedNetworksConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig,
+	NodeConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigNodeConfig,
 	NodeCount: *f64,
-	PrivateEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig,
-	RecoveryConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig,
-	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig,
-	WebServerConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWebServerConfig,
-	WebServerNetworkAccessControl: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl,
-	WorkloadsConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig,
+	PrivateEnvironmentConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig,
+	RecoveryConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig,
+	SoftwareConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig,
+	WebServerConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWebServerConfig,
+	WebServerNetworkAccessControl: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl,
+	WorkloadsConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig,
 }
 ```
 
@@ -1005,7 +1005,7 @@ DatabaseConfig ComposerEnvironmentConfigDatabaseConfig
 
 database_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#database_config ComposerEnvironment#database_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#database_config ComposerEnvironment#database_config}
 
 ---
 
@@ -1019,7 +1019,7 @@ EncryptionConfig ComposerEnvironmentConfigEncryptionConfig
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#encryption_config ComposerEnvironment#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#encryption_config ComposerEnvironment#encryption_config}
 
 ---
 
@@ -1035,7 +1035,7 @@ The size of the Cloud Composer environment.
 
 This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#environment_size ComposerEnvironment#environment_size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#environment_size ComposerEnvironment#environment_size}
 
 ---
 
@@ -1049,7 +1049,7 @@ MaintenanceWindow ComposerEnvironmentConfigMaintenanceWindow
 
 maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#maintenance_window ComposerEnvironment#maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#maintenance_window ComposerEnvironment#maintenance_window}
 
 ---
 
@@ -1063,7 +1063,7 @@ MasterAuthorizedNetworksConfig ComposerEnvironmentConfigMasterAuthorizedNetworks
 
 master_authorized_networks_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#master_authorized_networks_config ComposerEnvironment#master_authorized_networks_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#master_authorized_networks_config ComposerEnvironment#master_authorized_networks_config}
 
 ---
 
@@ -1077,7 +1077,7 @@ NodeConfig ComposerEnvironmentConfigNodeConfig
 
 node_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#node_config ComposerEnvironment#node_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#node_config ComposerEnvironment#node_config}
 
 ---
 
@@ -1093,7 +1093,7 @@ The number of nodes in the Kubernetes Engine cluster that will be used to run th
 
 This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#node_count ComposerEnvironment#node_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#node_count ComposerEnvironment#node_count}
 
 ---
 
@@ -1107,7 +1107,7 @@ PrivateEnvironmentConfig ComposerEnvironmentConfigPrivateEnvironmentConfig
 
 private_environment_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#private_environment_config ComposerEnvironment#private_environment_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#private_environment_config ComposerEnvironment#private_environment_config}
 
 ---
 
@@ -1121,7 +1121,7 @@ RecoveryConfig ComposerEnvironmentConfigRecoveryConfig
 
 recovery_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#recovery_config ComposerEnvironment#recovery_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#recovery_config ComposerEnvironment#recovery_config}
 
 ---
 
@@ -1135,7 +1135,7 @@ SoftwareConfig ComposerEnvironmentConfigSoftwareConfig
 
 software_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#software_config ComposerEnvironment#software_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#software_config ComposerEnvironment#software_config}
 
 ---
 
@@ -1149,7 +1149,7 @@ WebServerConfig ComposerEnvironmentConfigWebServerConfig
 
 web_server_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#web_server_config ComposerEnvironment#web_server_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#web_server_config ComposerEnvironment#web_server_config}
 
 ---
 
@@ -1163,7 +1163,7 @@ WebServerNetworkAccessControl ComposerEnvironmentConfigWebServerNetworkAccessCon
 
 web_server_network_access_control block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#web_server_network_access_control ComposerEnvironment#web_server_network_access_control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#web_server_network_access_control ComposerEnvironment#web_server_network_access_control}
 
 ---
 
@@ -1177,7 +1177,7 @@ WorkloadsConfig ComposerEnvironmentConfigWorkloadsConfig
 
 workloads_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#workloads_config ComposerEnvironment#workloads_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#workloads_config ComposerEnvironment#workloads_config}
 
 ---
 
@@ -1186,7 +1186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigDatabaseConfig {
 	MachineType: *string,
@@ -1213,7 +1213,7 @@ Optional.
 
 Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
 
 ---
 
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigEncryptionConfig {
 	KmsKeyName: *string,
@@ -1247,7 +1247,7 @@ KmsKeyName *string
 
 Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#kms_key_name ComposerEnvironment#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#kms_key_name ComposerEnvironment#kms_key_name}
 
 ---
 
@@ -1256,7 +1256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMaintenanceWindow {
 	EndTime: *string,
@@ -1287,7 +1287,7 @@ Maintenance window end time.
 
 It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to 'start_time'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#end_time ComposerEnvironment#end_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#end_time ComposerEnvironment#end_time}
 
 ---
 
@@ -1303,7 +1303,7 @@ Maintenance window recurrence.
 
 Format is a subset of RFC-5545 (https://tools.ietf.org/html/rfc5545) 'RRULE'. The only allowed values for 'FREQ' field are 'FREQ=DAILY' and 'FREQ=WEEKLY;BYDAY=...'. Example values: 'FREQ=WEEKLY;BYDAY=TU,WE', 'FREQ=DAILY'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#recurrence ComposerEnvironment#recurrence}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#recurrence ComposerEnvironment#recurrence}
 
 ---
 
@@ -1317,7 +1317,7 @@ StartTime *string
 
 Start time of the first recurrence of the maintenance window.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#start_time ComposerEnvironment#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#start_time ComposerEnvironment#start_time}
 
 ---
 
@@ -1326,7 +1326,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfig {
 	Enabled: interface{},
@@ -1353,7 +1353,7 @@ Enabled interface{}
 
 Whether or not master authorized networks is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#enabled ComposerEnvironment#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#enabled ComposerEnvironment#enabled}
 
 ---
 
@@ -1367,7 +1367,7 @@ CidrBlocks interface{}
 
 cidr_blocks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cidr_blocks ComposerEnvironment#cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cidr_blocks ComposerEnvironment#cidr_blocks}
 
 ---
 
@@ -1376,7 +1376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocks {
 	CidrBlock: *string,
@@ -1403,7 +1403,7 @@ CidrBlock *string
 
 cidr_block must be specified in CIDR notation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cidr_block ComposerEnvironment#cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cidr_block ComposerEnvironment#cidr_block}
 
 ---
 
@@ -1417,7 +1417,7 @@ DisplayName *string
 
 display_name is a field for users to identify CIDR blocks.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#display_name ComposerEnvironment#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#display_name ComposerEnvironment#display_name}
 
 ---
 
@@ -1426,7 +1426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigNodeConfig {
 	DiskSizeGb: *f64,
@@ -1471,7 +1471,7 @@ The disk size in GB used for node VMs.
 
 Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#disk_size_gb ComposerEnvironment#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#disk_size_gb ComposerEnvironment#disk_size_gb}
 
 ---
 
@@ -1487,7 +1487,7 @@ Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeC
 
 See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#enable_ip_masq_agent ComposerEnvironment#enable_ip_masq_agent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#enable_ip_masq_agent ComposerEnvironment#enable_ip_masq_agent}
 
 ---
 
@@ -1501,7 +1501,7 @@ IpAllocationPolicy interface{}
 
 Configuration for controlling how IPs are allocated in the GKE cluster. Cannot be updated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#ip_allocation_policy ComposerEnvironment#ip_allocation_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#ip_allocation_policy ComposerEnvironment#ip_allocation_policy}
 
 ---
 
@@ -1517,7 +1517,7 @@ The Compute Engine machine type used for cluster instances, specified as a name 
 
 For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
 
 ---
 
@@ -1533,7 +1533,7 @@ The Compute Engine machine type used for cluster instances, specified as a name 
 
 For example: "projects/{project}/zones/{zone}/machineTypes/{machineType}". Must belong to the enclosing environment's project and region/zone. The network must belong to the environment's project. If unspecified, the "default" network ID in the environment's project is used. If a Custom Subnet Network is provided, subnetwork must also be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#network ComposerEnvironment#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#network ComposerEnvironment#network}
 
 ---
 
@@ -1549,7 +1549,7 @@ The set of Google API scopes to be made available on all node VMs.
 
 Cannot be updated. If empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#oauth_scopes ComposerEnvironment#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#oauth_scopes ComposerEnvironment#oauth_scopes}
 
 ---
 
@@ -1565,7 +1565,7 @@ The Google Cloud Platform Service Account to be used by the node VMs.
 
 If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated. If given, note that the service account must have roles/composer.worker for any GCP resources created under the Cloud Composer Environment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#service_account ComposerEnvironment#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#service_account ComposerEnvironment#service_account}
 
 ---
 
@@ -1579,7 +1579,7 @@ Subnetwork *string
 
 The Compute Engine subnetwork to be used for machine communications, , specified as a self-link, relative resource name (e.g. "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided, network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#subnetwork ComposerEnvironment#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#subnetwork ComposerEnvironment#subnetwork}
 
 ---
 
@@ -1595,7 +1595,7 @@ The list of instance tags applied to all node VMs.
 
 Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with RFC1035. Cannot be updated.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#tags ComposerEnvironment#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#tags ComposerEnvironment#tags}
 
 ---
 
@@ -1609,7 +1609,7 @@ Zone *string
 
 The Compute Engine zone in which to deploy the VMs running the Apache Airflow software, specified as the zone name or relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project and region. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#zone ComposerEnvironment#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#zone ComposerEnvironment#zone}
 
 ---
 
@@ -1618,7 +1618,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy {
 	ClusterIpv4CidrBlock: *string,
@@ -1633,11 +1633,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.clusterIpv4CidrBlock">ClusterIpv4CidrBlock</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cluster_ipv4_cidr_block ComposerEnvironment#cluster_ipv4_cidr_block}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.clusterSecondaryRangeName">ClusterSecondaryRangeName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cluster_secondary_range_name ComposerEnvironment#cluster_secondary_range_name}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesIpv4CidrBlock">ServicesIpv4CidrBlock</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#services_ipv4_cidr_block ComposerEnvironment#services_ipv4_cidr_block}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesSecondaryRangeName">ServicesSecondaryRangeName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#services_secondary_range_name ComposerEnvironment#services_secondary_range_name}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.useIpAliases">UseIpAliases</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#use_ip_aliases ComposerEnvironment#use_ip_aliases}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.clusterIpv4CidrBlock">ClusterIpv4CidrBlock</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cluster_ipv4_cidr_block ComposerEnvironment#cluster_ipv4_cidr_block}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.clusterSecondaryRangeName">ClusterSecondaryRangeName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cluster_secondary_range_name ComposerEnvironment#cluster_secondary_range_name}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesIpv4CidrBlock">ServicesIpv4CidrBlock</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#services_ipv4_cidr_block ComposerEnvironment#services_ipv4_cidr_block}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.servicesSecondaryRangeName">ServicesSecondaryRangeName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#services_secondary_range_name ComposerEnvironment#services_secondary_range_name}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicy.property.useIpAliases">UseIpAliases</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#use_ip_aliases ComposerEnvironment#use_ip_aliases}. |
 
 ---
 
@@ -1649,7 +1649,7 @@ ClusterIpv4CidrBlock *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cluster_ipv4_cidr_block ComposerEnvironment#cluster_ipv4_cidr_block}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cluster_ipv4_cidr_block ComposerEnvironment#cluster_ipv4_cidr_block}.
 
 ---
 
@@ -1661,7 +1661,7 @@ ClusterSecondaryRangeName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cluster_secondary_range_name ComposerEnvironment#cluster_secondary_range_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cluster_secondary_range_name ComposerEnvironment#cluster_secondary_range_name}.
 
 ---
 
@@ -1673,7 +1673,7 @@ ServicesIpv4CidrBlock *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#services_ipv4_cidr_block ComposerEnvironment#services_ipv4_cidr_block}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#services_ipv4_cidr_block ComposerEnvironment#services_ipv4_cidr_block}.
 
 ---
 
@@ -1685,7 +1685,7 @@ ServicesSecondaryRangeName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#services_secondary_range_name ComposerEnvironment#services_secondary_range_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#services_secondary_range_name ComposerEnvironment#services_secondary_range_name}.
 
 ---
 
@@ -1697,7 +1697,7 @@ UseIpAliases interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#use_ip_aliases ComposerEnvironment#use_ip_aliases}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#use_ip_aliases ComposerEnvironment#use_ip_aliases}.
 
 ---
 
@@ -1706,7 +1706,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigPrivateEnvironmentConfig {
 	CloudComposerConnectionSubnetwork: *string,
@@ -1745,7 +1745,7 @@ When specified, the environment will use Private Service Connect instead of VPC 
 
 This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cloud_composer_connection_subnetwork ComposerEnvironment#cloud_composer_connection_subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cloud_composer_connection_subnetwork ComposerEnvironment#cloud_composer_connection_subnetwork}
 
 ---
 
@@ -1761,7 +1761,7 @@ The CIDR block from which IP range for Cloud Composer Network in tenant project 
 
 Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cloud_composer_network_ipv4_cidr_block ComposerEnvironment#cloud_composer_network_ipv4_cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cloud_composer_network_ipv4_cidr_block ComposerEnvironment#cloud_composer_network_ipv4_cidr_block}
 
 ---
 
@@ -1777,7 +1777,7 @@ The CIDR block from which IP range in tenant project will be reserved for Cloud 
 
 Needs to be disjoint from web_server_ipv4_cidr_block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cloud_sql_ipv4_cidr_block ComposerEnvironment#cloud_sql_ipv4_cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cloud_sql_ipv4_cidr_block ComposerEnvironment#cloud_sql_ipv4_cidr_block}
 
 ---
 
@@ -1793,7 +1793,7 @@ If true, access to the public endpoint of the GKE cluster is denied.
 
 If this field is set to true, ip_allocation_policy.use_ip_aliases must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#enable_private_endpoint ComposerEnvironment#enable_private_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#enable_private_endpoint ComposerEnvironment#enable_private_endpoint}
 
 ---
 
@@ -1807,7 +1807,7 @@ EnablePrivatelyUsedPublicIps interface{}
 
 When enabled, IPs from public (non-RFC1918) ranges can be used for ip_allocation_policy.cluster_ipv4_cidr_block and ip_allocation_policy.service_ipv4_cidr_block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#enable_privately_used_public_ips ComposerEnvironment#enable_privately_used_public_ips}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#enable_privately_used_public_ips ComposerEnvironment#enable_privately_used_public_ips}
 
 ---
 
@@ -1823,7 +1823,7 @@ The IP range in CIDR notation to use for the hosted master network.
 
 This range is used for assigning internal IP addresses to the cluster master or set of masters and to the internal load balancer virtual IP. This range must not overlap with any other ranges in use within the cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#master_ipv4_cidr_block ComposerEnvironment#master_ipv4_cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#master_ipv4_cidr_block ComposerEnvironment#master_ipv4_cidr_block}
 
 ---
 
@@ -1839,7 +1839,7 @@ The CIDR block from which IP range for web server will be reserved.
 
 Needs to be disjoint from master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#web_server_ipv4_cidr_block ComposerEnvironment#web_server_ipv4_cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#web_server_ipv4_cidr_block ComposerEnvironment#web_server_ipv4_cidr_block}
 
 ---
 
@@ -1848,10 +1848,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigRecoveryConfig {
-	ScheduledSnapshotsConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig,
+	ScheduledSnapshotsConfig: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig,
 }
 ```
 
@@ -1873,7 +1873,7 @@ ScheduledSnapshotsConfig ComposerEnvironmentConfigRecoveryConfigScheduledSnapsho
 
 scheduled_snapshots_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#scheduled_snapshots_config ComposerEnvironment#scheduled_snapshots_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#scheduled_snapshots_config ComposerEnvironment#scheduled_snapshots_config}
 
 ---
 
@@ -1882,7 +1882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfig {
 	Enabled: interface{},
@@ -1913,7 +1913,7 @@ Enabled interface{}
 
 When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#enabled ComposerEnvironment#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#enabled ComposerEnvironment#enabled}
 
 ---
 
@@ -1927,7 +1927,7 @@ SnapshotCreationSchedule *string
 
 Snapshot schedule, in the unix-cron format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#snapshot_creation_schedule ComposerEnvironment#snapshot_creation_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#snapshot_creation_schedule ComposerEnvironment#snapshot_creation_schedule}
 
 ---
 
@@ -1941,7 +1941,7 @@ SnapshotLocation *string
 
 the URI of a bucket folder where to save the snapshot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#snapshot_location ComposerEnvironment#snapshot_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#snapshot_location ComposerEnvironment#snapshot_location}
 
 ---
 
@@ -1957,7 +1957,7 @@ A time zone for the schedule.
 
 This value is a time offset and does not take into account daylight saving time changes. Valid values are from UTC-12 to UTC+12. Examples: UTC, UTC-01, UTC+03.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#time_zone ComposerEnvironment#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#time_zone ComposerEnvironment#time_zone}
 
 ---
 
@@ -1966,7 +1966,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigSoftwareConfig {
 	AirflowConfigOverrides: *map[string]*string,
@@ -2003,7 +2003,7 @@ Apache Airflow configuration properties to override.
 
 Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and cannot contain "=" or ";". Section and property names cannot contain characters: "." Apache Airflow configuration property names must be written in snake_case. Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are blacklisted, and cannot be overridden.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#airflow_config_overrides ComposerEnvironment#airflow_config_overrides}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#airflow_config_overrides ComposerEnvironment#airflow_config_overrides}
 
 ---
 
@@ -2019,7 +2019,7 @@ Additional environment variables to provide to the Apache Airflow scheduler, wor
 
 Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names: AIRFLOW_HOME C_FORCE_ROOT CONTAINER_NAME DAGS_FOLDER GCP_PROJECT GCS_BUCKET GKE_CLUSTER_NAME SQL_DATABASE SQL_INSTANCE SQL_PASSWORD SQL_PROJECT SQL_REGION SQL_USER.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#env_variables ComposerEnvironment#env_variables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#env_variables ComposerEnvironment#env_variables}
 
 ---
 
@@ -2035,7 +2035,7 @@ The version of the software running in the environment.
 
 This encapsulates both the version of Cloud Composer functionality and the version of Apache Airflow. It must match the regular expression composer-([0-9]+(.[0-9]+.[0-9]+(-preview.[0-9]+)?)?|latest)-airflow-([0-9]+(.[0-9]+(.[0-9]+)?)?). The Cloud Composer portion of the image version is a full semantic version, or an alias in the form of major version number or 'latest'. The Apache Airflow portion of the image version is a full semantic version that points to one of the supported Apache Airflow versions, or an alias in the form of only major or major.minor versions specified. See documentation for more details and version list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#image_version ComposerEnvironment#image_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#image_version ComposerEnvironment#image_version}
 
 ---
 
@@ -2051,7 +2051,7 @@ Custom Python Package Index (PyPI) packages to be installed in the environment.
 
 Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without pinning it to a version specifier, use the empty string as the value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#pypi_packages ComposerEnvironment#pypi_packages}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#pypi_packages ComposerEnvironment#pypi_packages}
 
 ---
 
@@ -2067,7 +2067,7 @@ The major version of Python used to run the Apache Airflow scheduler, worker, an
 
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use Python major version 3.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#python_version ComposerEnvironment#python_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#python_version ComposerEnvironment#python_version}
 
 ---
 
@@ -2081,7 +2081,7 @@ SchedulerCount *f64
 
 The number of schedulers for Airflow. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-2.*.*.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#scheduler_count ComposerEnvironment#scheduler_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#scheduler_count ComposerEnvironment#scheduler_count}
 
 ---
 
@@ -2090,7 +2090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerConfig {
 	MachineType: *string,
@@ -2117,7 +2117,7 @@ Optional.
 
 Machine type on which Airflow web server is running. It has to be one of: composer-n1-webserver-2, composer-n1-webserver-4 or composer-n1-webserver-8. If not specified, composer-n1-webserver-2 will be used. Value custom is returned only in response, if Airflow web server parameters were manually changed to a non-standard values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#machine_type ComposerEnvironment#machine_type}
 
 ---
 
@@ -2126,7 +2126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerNetworkAccessControl {
 	AllowedIpRange: interface{},
@@ -2151,7 +2151,7 @@ AllowedIpRange interface{}
 
 allowed_ip_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#allowed_ip_range ComposerEnvironment#allowed_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#allowed_ip_range ComposerEnvironment#allowed_ip_range}
 
 ---
 
@@ -2160,7 +2160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange {
 	Value: *string,
@@ -2189,7 +2189,7 @@ IP address or range, defined using CIDR notation, of requests that this rule app
 
 Examples: 192.168.1.1 or 192.168.0.0/16 or 2001:db8::/32 or 2001:0db8:0000:0042:0000:8a2e:0370:7334. IP range prefixes should be properly truncated. For example, 1.2.3.4/24 should be truncated to 1.2.3.0/24. Similarly, for IPv6, 2001:db8::1/32 should be truncated to 2001:db8::/32.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#value ComposerEnvironment#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#value ComposerEnvironment#value}
 
 ---
 
@@ -2203,7 +2203,7 @@ Description *string
 
 A description of this ip range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#description ComposerEnvironment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#description ComposerEnvironment#description}
 
 ---
 
@@ -2212,12 +2212,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfig {
-	Scheduler: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler,
-	WebServer: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer,
-	Worker: github.com/cdktf/cdktf-provider-google-go/google/v7.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker,
+	Scheduler: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler,
+	WebServer: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer,
+	Worker: github.com/cdktf/cdktf-provider-google-go/google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker,
 }
 ```
 
@@ -2241,7 +2241,7 @@ Scheduler ComposerEnvironmentConfigWorkloadsConfigScheduler
 
 scheduler block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#scheduler ComposerEnvironment#scheduler}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#scheduler ComposerEnvironment#scheduler}
 
 ---
 
@@ -2255,7 +2255,7 @@ WebServer ComposerEnvironmentConfigWorkloadsConfigWebServer
 
 web_server block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#web_server ComposerEnvironment#web_server}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#web_server ComposerEnvironment#web_server}
 
 ---
 
@@ -2269,7 +2269,7 @@ Worker ComposerEnvironmentConfigWorkloadsConfigWorker
 
 worker block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#worker ComposerEnvironment#worker}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#worker ComposerEnvironment#worker}
 
 ---
 
@@ -2278,7 +2278,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigScheduler {
 	Count: *f64,
@@ -2309,7 +2309,7 @@ Count *f64
 
 The number of schedulers.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#count ComposerEnvironment#count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#count ComposerEnvironment#count}
 
 ---
 
@@ -2323,7 +2323,7 @@ Cpu *f64
 
 CPU request and limit for a single Airflow scheduler replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
 
 ---
 
@@ -2337,7 +2337,7 @@ MemoryGb *f64
 
 Memory (GB) request and limit for a single Airflow scheduler replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
 
 ---
 
@@ -2351,7 +2351,7 @@ StorageGb *f64
 
 Storage (GB) request and limit for a single Airflow scheduler replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
 
 ---
 
@@ -2360,7 +2360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigWebServer {
 	Cpu: *f64,
@@ -2389,7 +2389,7 @@ Cpu *f64
 
 CPU request and limit for Airflow web server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
 
 ---
 
@@ -2403,7 +2403,7 @@ MemoryGb *f64
 
 Memory (GB) request and limit for Airflow web server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
 
 ---
 
@@ -2417,7 +2417,7 @@ StorageGb *f64
 
 Storage (GB) request and limit for Airflow web server.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
 
 ---
 
@@ -2426,7 +2426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorker.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentConfigWorkloadsConfigWorker {
 	Cpu: *f64,
@@ -2459,7 +2459,7 @@ Cpu *f64
 
 CPU request and limit for a single Airflow worker replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#cpu ComposerEnvironment#cpu}
 
 ---
 
@@ -2473,7 +2473,7 @@ MaxCount *f64
 
 Maximum number of workers for autoscaling.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#max_count ComposerEnvironment#max_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#max_count ComposerEnvironment#max_count}
 
 ---
 
@@ -2487,7 +2487,7 @@ MemoryGb *f64
 
 Memory (GB) request and limit for a single Airflow worker replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#memory_gb ComposerEnvironment#memory_gb}
 
 ---
 
@@ -2501,7 +2501,7 @@ MinCount *f64
 
 Minimum number of workers for autoscaling.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#min_count ComposerEnvironment#min_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#min_count ComposerEnvironment#min_count}
 
 ---
 
@@ -2515,7 +2515,7 @@ StorageGb *f64
 
 Storage (GB) request and limit for a single Airflow worker replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#storage_gb ComposerEnvironment#storage_gb}
 
 ---
 
@@ -2524,7 +2524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 &composerenvironment.ComposerEnvironmentTimeouts {
 	Create: *string,
@@ -2537,9 +2537,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#create ComposerEnvironment#create}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#delete ComposerEnvironment#delete}. |
-| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#update ComposerEnvironment#update}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#create ComposerEnvironment#create}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#delete ComposerEnvironment#delete}. |
+| <code><a href="#@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#update ComposerEnvironment#update}. |
 
 ---
 
@@ -2551,7 +2551,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#create ComposerEnvironment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#create ComposerEnvironment#create}.
 
 ---
 
@@ -2563,7 +2563,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#delete ComposerEnvironment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#delete ComposerEnvironment#delete}.
 
 ---
 
@@ -2575,7 +2575,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/composer_environment#update ComposerEnvironment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/composer_environment#update ComposerEnvironment#update}.
 
 ---
 
@@ -2586,7 +2586,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigAOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigAOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigAOutputReference
 ```
@@ -3388,7 +3388,7 @@ func InternalValue() ComposerEnvironmentConfigA
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigDatabaseConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigDatabaseConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigDatabaseConfigOutputReference
 ```
@@ -3659,7 +3659,7 @@ func InternalValue() ComposerEnvironmentConfigDatabaseConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigEncryptionConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigEncryptionConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigEncryptionConfigOutputReference
 ```
@@ -3930,7 +3930,7 @@ func InternalValue() ComposerEnvironmentConfigEncryptionConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigMaintenanceWindowOutputReference
 ```
@@ -4245,7 +4245,7 @@ func InternalValue() ComposerEnvironmentConfigMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksList
 ```
@@ -4388,7 +4388,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlocksOutputReference
 ```
@@ -4706,7 +4706,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigMasterAuthorizedNetworksConfigOutputReference
 ```
@@ -5019,7 +5019,7 @@ func InternalValue() ComposerEnvironmentConfigMasterAuthorizedNetworksConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigIpAllocationPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigNodeConfigIpAllocationPolicyList
 ```
@@ -5162,7 +5162,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigNodeConfigIpAllocationPolicyOutputReference
 ```
@@ -5574,7 +5574,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigNodeConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigNodeConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigNodeConfigOutputReference
 ```
@@ -6126,7 +6126,7 @@ func InternalValue() ComposerEnvironmentConfigNodeConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigPrivateEnvironmentConfigOutputReference
 ```
@@ -6578,7 +6578,7 @@ func InternalValue() ComposerEnvironmentConfigPrivateEnvironmentConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigRecoveryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigRecoveryConfigOutputReference
 ```
@@ -6869,7 +6869,7 @@ func InternalValue() ComposerEnvironmentConfigRecoveryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsConfigOutputReference
 ```
@@ -7227,7 +7227,7 @@ func InternalValue() ComposerEnvironmentConfigRecoveryConfigScheduledSnapshotsCo
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigSoftwareConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigSoftwareConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigSoftwareConfigOutputReference
 ```
@@ -7650,7 +7650,7 @@ func InternalValue() ComposerEnvironmentConfigSoftwareConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWebServerConfigOutputReference
 ```
@@ -7921,7 +7921,7 @@ func InternalValue() ComposerEnvironmentConfigWebServerConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeList
 ```
@@ -8064,7 +8064,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComposerEnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeOutputReference
 ```
@@ -8382,7 +8382,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWebServerNetworkAccessControlOutputReference
 ```
@@ -8673,7 +8673,7 @@ func InternalValue() ComposerEnvironmentConfigWebServerNetworkAccessControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigOutputReference
 ```
@@ -9048,7 +9048,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigSchedulerOutputReference
 ```
@@ -9413,7 +9413,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigScheduler
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigWebServerOutputReference
 ```
@@ -9749,7 +9749,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigWebServer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentConfigWorkloadsConfigWorkerOutputReference
 ```
@@ -10143,7 +10143,7 @@ func InternalValue() ComposerEnvironmentConfigWorkloadsConfigWorker
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.composerEnvironment.ComposerEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/composerenvironment"
+import "github.com/cdktf/cdktf-provider-google-go/google/composerenvironment"
 
 composerenvironment.NewComposerEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComposerEnvironmentTimeoutsOutputReference
 ```

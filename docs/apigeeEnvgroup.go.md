@@ -1,6 +1,6 @@
 # `google_apigee_envgroup`
 
-Refer to the Terraform Registory for docs: [`google_apigee_envgroup`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup).
+Refer to the Terraform Registory for docs: [`google_apigee_envgroup`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup).
 
 # `apigeeEnvgroup` Submodule <a name="`apigeeEnvgroup` Submodule" id="@cdktf/provider-google.apigeeEnvgroup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_apigee_envgroup`](https://re
 
 ### ApigeeEnvgroup <a name="ApigeeEnvgroup" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup google_apigee_envgroup}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup google_apigee_envgroup}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 apigeeenvgroup.NewApigeeEnvgroup(scope Construct, id *string, config ApigeeEnvgroupConfig) ApigeeEnvgroup
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 apigeeenvgroup.ApigeeEnvgroup_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 apigeeenvgroup.ApigeeEnvgroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ apigeeenvgroup.ApigeeEnvgroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 apigeeenvgroup.ApigeeEnvgroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 &apigeeenvgroup.ApigeeEnvgroupConfig {
 	Connection: interface{},
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
 	OrgId: *string,
 	Hostnames: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.apigeeEnvgroup.ApigeeEnvgroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeEnvgroup.ApigeeEnvgroupTimeouts,
 }
 ```
 
@@ -691,7 +691,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
 | <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.name">Name</a></code> | <code>*string</code> | The resource ID of the environment group. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.orgId">OrgId</a></code> | <code>*string</code> | The Apigee Organization associated with the Apigee environment group, in the format 'organizations/{{org_name}}'. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.hostnames">Hostnames</a></code> | <code>*[]*string</code> | Hostnames of the environment group. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts">ApigeeEnvgroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -776,7 +776,7 @@ Name *string
 
 The resource ID of the environment group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#name ApigeeEnvgroup#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#name ApigeeEnvgroup#name}
 
 ---
 
@@ -790,7 +790,7 @@ OrgId *string
 
 The Apigee Organization associated with the Apigee environment group, in the format 'organizations/{{org_name}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
 
 ---
 
@@ -804,7 +804,7 @@ Hostnames *[]*string
 
 Hostnames of the environment group.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#hostnames ApigeeEnvgroup#hostnames}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#hostnames ApigeeEnvgroup#hostnames}
 
 ---
 
@@ -816,7 +816,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#id ApigeeEnvgroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -833,7 +833,7 @@ Timeouts ApigeeEnvgroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#timeouts ApigeeEnvgroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#timeouts ApigeeEnvgroup#timeouts}
 
 ---
 
@@ -842,7 +842,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 &apigeeenvgroup.ApigeeEnvgroupTimeouts {
 	Create: *string,
@@ -855,9 +855,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}. |
-| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}. |
+| <code><a href="#@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}. |
 
 ---
 
@@ -869,7 +869,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#create ApigeeEnvgroup#create}.
 
 ---
 
@@ -881,7 +881,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#delete ApigeeEnvgroup#delete}.
 
 ---
 
@@ -893,7 +893,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/apigee_envgroup#update ApigeeEnvgroup#update}.
 
 ---
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeEnvgroup.ApigeeEnvgroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/apigeeenvgroup"
+import "github.com/cdktf/cdktf-provider-google-go/google/apigeeenvgroup"
 
 apigeeenvgroup.NewApigeeEnvgroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeEnvgroupTimeoutsOutputReference
 ```

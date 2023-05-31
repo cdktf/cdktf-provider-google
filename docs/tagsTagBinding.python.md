@@ -1,6 +1,6 @@
 # `google_tags_tag_binding`
 
-Refer to the Terraform Registory for docs: [`google_tags_tag_binding`](https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding).
+Refer to the Terraform Registory for docs: [`google_tags_tag_binding`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding).
 
 # `tagsTagBinding` Submodule <a name="`tagsTagBinding` Submodule" id="@cdktf/provider-google.tagsTagBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_tags_tag_binding`](https://r
 
 ### TagsTagBinding <a name="TagsTagBinding" id="@cdktf/provider-google.tagsTagBinding.TagsTagBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding google_tags_tag_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding google_tags_tag_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer"></a>
 
@@ -45,7 +45,7 @@ tagsTagBinding.TagsTagBinding(
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.parent">parent</a></code> | <code>str</code> | The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123. |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.tagValue">tag_value</a></code> | <code>str</code> | The TagValue of the TagBinding. Must be of the form tagValues/456. |
-| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}. |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBinding.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts">TagsTagBindingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#parent TagsTagBinding#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#parent TagsTagBinding#parent}
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The TagValue of the TagBinding. Must be of the form tagValues/456.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#tag_value TagsTagBinding#tag_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#tag_value TagsTagBinding#tag_value}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -147,7 +147,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#timeouts TagsTagBinding#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#timeouts TagsTagBinding#timeouts}
 
 ---
 
@@ -399,7 +399,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}.
 
 ---
 
@@ -407,7 +407,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}.
 
 ---
 
@@ -816,7 +816,7 @@ tagsTagBinding.TagsTagBindingConfig(
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.parent">parent</a></code> | <code>str</code> | The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123. |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.tagValue">tag_value</a></code> | <code>str</code> | The TagValue of the TagBinding. Must be of the form tagValues/456. |
-| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}. |
+| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}. |
 | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts">TagsTagBindingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -901,7 +901,7 @@ parent: str
 
 The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#parent TagsTagBinding#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#parent TagsTagBinding#parent}
 
 ---
 
@@ -915,7 +915,7 @@ tag_value: str
 
 The TagValue of the TagBinding. Must be of the form tagValues/456.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#tag_value TagsTagBinding#tag_value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#tag_value TagsTagBinding#tag_value}
 
 ---
 
@@ -927,7 +927,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#id TagsTagBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -944,7 +944,7 @@ timeouts: TagsTagBindingTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#timeouts TagsTagBinding#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#timeouts TagsTagBinding#timeouts}
 
 ---
 
@@ -965,8 +965,8 @@ tagsTagBinding.TagsTagBindingTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}. |
-| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}. |
+| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}. |
+| <code><a href="#@cdktf/provider-google.tagsTagBinding.TagsTagBindingTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}. |
 
 ---
 
@@ -978,7 +978,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#create TagsTagBinding#create}.
 
 ---
 
@@ -990,7 +990,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/tags_tag_binding#delete TagsTagBinding#delete}.
 
 ---
 

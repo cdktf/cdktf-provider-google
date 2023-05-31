@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,11 +10,11 @@ export interface AccessContextManagerEgressPolicyConfig extends cdktf.TerraformM
   /**
   * The name of the Service Perimeter to add this resource to.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#egress_policy_name AccessContextManagerEgressPolicy#egress_policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#egress_policy_name AccessContextManagerEgressPolicy#egress_policy_name}
   */
   readonly egressPolicyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,23 +23,23 @@ export interface AccessContextManagerEgressPolicyConfig extends cdktf.TerraformM
   /**
   * A GCP resource that is inside of the service perimeter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#resource AccessContextManagerEgressPolicy#resource}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#resource AccessContextManagerEgressPolicy#resource}
   */
   readonly resource: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#timeouts AccessContextManagerEgressPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#timeouts AccessContextManagerEgressPolicy#timeouts}
   */
   readonly timeouts?: AccessContextManagerEgressPolicyTimeouts;
 }
 export interface AccessContextManagerEgressPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}
   */
   readonly delete?: string;
 }
@@ -137,7 +137,7 @@ export class AccessContextManagerEgressPolicyTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy}
 */
 export class AccessContextManagerEgressPolicy extends cdktf.TerraformResource {
 
@@ -151,7 +151,7 @@ export class AccessContextManagerEgressPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.66.0/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -162,7 +162,7 @@ export class AccessContextManagerEgressPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_access_context_manager_egress_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.66.0',
+        providerVersion: '4.67.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
