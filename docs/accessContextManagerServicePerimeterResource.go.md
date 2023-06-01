@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 accesscontextmanagerserviceperimeterresource.NewAccessContextManagerServicePerimeterResource(scope Construct, id *string, config AccessContextManagerServicePerimeterResourceConfig) AccessContextManagerServicePerimeterResource
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimeterResource_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimeterResource_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimete
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResource.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimeterResource_IsTerraformResource(x interface{}) *bool
 ```
@@ -630,7 +630,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 &accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimeterResourceConfig {
 	Connection: interface{},
@@ -643,7 +643,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanager
 	PerimeterName: *string,
 	Resource: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResourceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResourceTimeouts,
 }
 ```
 
@@ -797,7 +797,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResourceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 &accesscontextmanagerserviceperimeterresource.AccessContextManagerServicePerimeterResourceTimeouts {
 	Create: *string,
@@ -845,7 +845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerServicePerimeterResource.AccessContextManagerServicePerimeterResourceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/accesscontextmanagerserviceperimeterresource"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanagerserviceperimeterresource"
 
 accesscontextmanagerserviceperimeterresource.NewAccessContextManagerServicePerimeterResourceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerServicePerimeterResourceTimeoutsOutputReference
 ```
