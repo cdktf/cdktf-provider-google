@@ -1782,7 +1782,7 @@ DataprocWorkflowTemplateJobsHiveJob.builder()
 //  .jarFileUris(java.util.List<java.lang.String>)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
 //  .queryFileUri(java.lang.String)
-//  .queryList(DataprocWorkflowTemplateJobsHiveJobQueryList)
+//  .queryList(DataprocWorkflowTemplateJobsHiveJobQueryListStruct)
 //  .scriptVariables(java.util.Map<java.lang.String, java.lang.String>)
     .build();
 ```
@@ -1795,7 +1795,7 @@ DataprocWorkflowTemplateJobsHiveJob.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | The HCFS URI of the script that contains Hive queries. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a></code> | query_list block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a></code> | query_list block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.scriptVariables">scriptVariables</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. Mapping of query variable names to values (equivalent to the Hive command: `SET name="value";`). |
 
 ---
@@ -1865,10 +1865,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `queryList`<sup>Optional</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJob.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsHiveJobQueryList getQueryList();
+public DataprocWorkflowTemplateJobsHiveJobQueryListStruct getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a>
 
 query_list block.
 
@@ -1890,14 +1890,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ---
 
-### DataprocWorkflowTemplateJobsHiveJobQueryList <a name="DataprocWorkflowTemplateJobsHiveJobQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList"></a>
+### DataprocWorkflowTemplateJobsHiveJobQueryListStruct <a name="DataprocWorkflowTemplateJobsHiveJobQueryListStruct" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsHiveJobQueryList;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsHiveJobQueryListStruct;
 
-DataprocWorkflowTemplateJobsHiveJobQueryList.builder()
+DataprocWorkflowTemplateJobsHiveJobQueryListStruct.builder()
     .queries(java.util.List<java.lang.String>)
     .build();
 ```
@@ -1906,11 +1906,11 @@ DataprocWorkflowTemplateJobsHiveJobQueryList.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -1940,7 +1940,7 @@ DataprocWorkflowTemplateJobsPigJob.builder()
 //  .loggingConfig(DataprocWorkflowTemplateJobsPigJobLoggingConfig)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
 //  .queryFileUri(java.lang.String)
-//  .queryList(DataprocWorkflowTemplateJobsPigJobQueryList)
+//  .queryList(DataprocWorkflowTemplateJobsPigJobQueryListStruct)
 //  .scriptVariables(java.util.Map<java.lang.String, java.lang.String>)
     .build();
 ```
@@ -1954,7 +1954,7 @@ DataprocWorkflowTemplateJobsPigJob.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfig">DataprocWorkflowTemplateJobsPigJobLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | The HCFS URI of the script that contains the Pig queries. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a></code> | query_list block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a></code> | query_list block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.scriptVariables">scriptVariables</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. Mapping of query variable names to values (equivalent to the Pig command: `name=[value]`). |
 
 ---
@@ -2038,10 +2038,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `queryList`<sup>Optional</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJob.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPigJobQueryList getQueryList();
+public DataprocWorkflowTemplateJobsPigJobQueryListStruct getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a>
 
 query_list block.
 
@@ -2099,14 +2099,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ---
 
-### DataprocWorkflowTemplateJobsPigJobQueryList <a name="DataprocWorkflowTemplateJobsPigJobQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList"></a>
+### DataprocWorkflowTemplateJobsPigJobQueryListStruct <a name="DataprocWorkflowTemplateJobsPigJobQueryListStruct" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPigJobQueryList;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPigJobQueryListStruct;
 
-DataprocWorkflowTemplateJobsPigJobQueryList.builder()
+DataprocWorkflowTemplateJobsPigJobQueryListStruct.builder()
     .queries(java.util.List<java.lang.String>)
     .build();
 ```
@@ -2115,11 +2115,11 @@ DataprocWorkflowTemplateJobsPigJobQueryList.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -2150,7 +2150,7 @@ DataprocWorkflowTemplateJobsPrestoJob.builder()
 //  .outputFormat(java.lang.String)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
 //  .queryFileUri(java.lang.String)
-//  .queryList(DataprocWorkflowTemplateJobsPrestoJobQueryList)
+//  .queryList(DataprocWorkflowTemplateJobsPrestoJobQueryListStruct)
     .build();
 ```
 
@@ -2164,7 +2164,7 @@ DataprocWorkflowTemplateJobsPrestoJob.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.outputFormat">outputFormat</a></code> | <code>java.lang.String</code> | Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | The HCFS URI of the script that contains SQL queries. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a></code> | query_list block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a></code> | query_list block. |
 
 ---
 
@@ -2259,10 +2259,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `queryList`<sup>Optional</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJob.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPrestoJobQueryList getQueryList();
+public DataprocWorkflowTemplateJobsPrestoJobQueryListStruct getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a>
 
 query_list block.
 
@@ -2306,14 +2306,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ---
 
-### DataprocWorkflowTemplateJobsPrestoJobQueryList <a name="DataprocWorkflowTemplateJobsPrestoJobQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList"></a>
+### DataprocWorkflowTemplateJobsPrestoJobQueryListStruct <a name="DataprocWorkflowTemplateJobsPrestoJobQueryListStruct" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPrestoJobQueryList;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct;
 
-DataprocWorkflowTemplateJobsPrestoJobQueryList.builder()
+DataprocWorkflowTemplateJobsPrestoJobQueryListStruct.builder()
     .queries(java.util.List<java.lang.String>)
     .build();
 ```
@@ -2322,11 +2322,11 @@ DataprocWorkflowTemplateJobsPrestoJobQueryList.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -2950,7 +2950,7 @@ DataprocWorkflowTemplateJobsSparkSqlJob.builder()
 //  .loggingConfig(DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig)
 //  .properties(java.util.Map<java.lang.String, java.lang.String>)
 //  .queryFileUri(java.lang.String)
-//  .queryList(DataprocWorkflowTemplateJobsSparkSqlJobQueryList)
+//  .queryList(DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct)
 //  .scriptVariables(java.util.Map<java.lang.String, java.lang.String>)
     .build();
 ```
@@ -2963,7 +2963,7 @@ DataprocWorkflowTemplateJobsSparkSqlJob.builder()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig">DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig</a></code> | logging_config block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.queryFileUri">queryFileUri</a></code> | <code>java.lang.String</code> | The HCFS URI of the script that contains SQL queries. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a></code> | query_list block. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a></code> | query_list block. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.scriptVariables">scriptVariables</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`). |
 
 ---
@@ -3029,10 +3029,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `queryList`<sup>Optional</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJob.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsSparkSqlJobQueryList getQueryList();
+public DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a>
 
 query_list block.
 
@@ -3090,14 +3090,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ---
 
-### DataprocWorkflowTemplateJobsSparkSqlJobQueryList <a name="DataprocWorkflowTemplateJobsSparkSqlJobQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList"></a>
+### DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct <a name="DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct"></a>
 
-#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList.Initializer"></a>
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsSparkSqlJobQueryList;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct;
 
-DataprocWorkflowTemplateJobsSparkSqlJobQueryList.builder()
+DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct.builder()
     .queries(java.util.List<java.lang.String>)
     .build();
 ```
@@ -3106,11 +3106,11 @@ DataprocWorkflowTemplateJobsSparkSqlJobQueryList.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | Required. |
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -6595,12 +6595,12 @@ Returns a reversible string representation.
 ##### `putQueryList` <a name="putQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.putQueryList"></a>
 
 ```java
-public void putQueryList(DataprocWorkflowTemplateJobsHiveJobQueryList value)
+public void putQueryList(DataprocWorkflowTemplateJobsHiveJobQueryListStruct value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.putQueryList.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a>
 
 ---
 
@@ -6647,12 +6647,12 @@ public void resetScriptVariables()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference">DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.jarFileUrisInput">jarFileUrisInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.scriptVariablesInput">scriptVariablesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
@@ -6690,10 +6690,10 @@ public java.lang.String getFqn();
 ##### `queryList`<sup>Required</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference getQueryList();
+public DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference">DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference</a>
 
 ---
 
@@ -6740,10 +6740,10 @@ public java.lang.String getQueryFileUriInput();
 ##### `queryListInput`<sup>Optional</sup> <a name="queryListInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobOutputReference.property.queryListInput"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsHiveJobQueryList getQueryListInput();
+public DataprocWorkflowTemplateJobsHiveJobQueryListStruct getQueryListInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a>
 
 ---
 
@@ -6818,24 +6818,24 @@ public DataprocWorkflowTemplateJobsHiveJob getInternalValue();
 ---
 
 
-### DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference <a name="DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference"></a>
+### DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference <a name="DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference;
 
-new DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+new DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* com.hashicorp.cdktf.IInterpolatingParent
 
@@ -6843,7 +6843,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
@@ -6855,149 +6855,149 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.computeFqn"></a>
 
 ```java
 public java.lang.String computeFqn()
 ```
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getAnyMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanAttribute"></a>
 
 ```java
 public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberAttribute"></a>
 
 ```java
 public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringAttribute"></a>
 
 ```java
 public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.interpolationForAttribute"></a>
 
 ```java
 public IResolvable interpolationForAttribute(java.lang.String property)
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.resolve"></a>
 
 ```java
 public java.lang.Object resolve(IResolveContext _context)
@@ -7005,13 +7005,13 @@ public java.lang.Object resolve(IResolveContext _context)
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.resolve.parameter._context"></a>
 
 - *Type:* com.hashicorp.cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.toString"></a>
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.toString"></a>
 
 ```java
 public java.lang.String toString()
@@ -7026,15 +7026,15 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a></code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.creationStack"></a>
 
 ```java
 public java.util.List<java.lang.String> getCreationStack();
@@ -7048,7 +7048,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.fqn"></a>
 
 ```java
 public java.lang.String getFqn();
@@ -7058,7 +7058,7 @@ public java.lang.String getFqn();
 
 ---
 
-##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.queriesInput"></a>
+##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.queriesInput"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueriesInput();
@@ -7068,7 +7068,7 @@ public java.util.List<java.lang.String> getQueriesInput();
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -7078,13 +7078,13 @@ public java.util.List<java.lang.String> getQueries();
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListOutputReference.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStructOutputReference.property.internalValue"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsHiveJobQueryList getInternalValue();
+public DataprocWorkflowTemplateJobsHiveJobQueryListStruct getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryList">DataprocWorkflowTemplateJobsHiveJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsHiveJobQueryListStruct">DataprocWorkflowTemplateJobsHiveJobQueryListStruct</a>
 
 ---
 
@@ -8462,12 +8462,12 @@ public void putLoggingConfig(DataprocWorkflowTemplateJobsPigJobLoggingConfig val
 ##### `putQueryList` <a name="putQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.putQueryList"></a>
 
 ```java
-public void putQueryList(DataprocWorkflowTemplateJobsPigJobQueryList value)
+public void putQueryList(DataprocWorkflowTemplateJobsPigJobQueryListStruct value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.putQueryList.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a>
 
 ---
 
@@ -8521,13 +8521,13 @@ public void resetScriptVariables()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference">DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference">DataprocWorkflowTemplateJobsPigJobQueryListOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.jarFileUrisInput">jarFileUrisInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.loggingConfigInput">loggingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobLoggingConfig">DataprocWorkflowTemplateJobsPigJobLoggingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.scriptVariablesInput">scriptVariablesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
@@ -8575,10 +8575,10 @@ public DataprocWorkflowTemplateJobsPigJobLoggingConfigOutputReference getLogging
 ##### `queryList`<sup>Required</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPigJobQueryListOutputReference getQueryList();
+public DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference">DataprocWorkflowTemplateJobsPigJobQueryListOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference</a>
 
 ---
 
@@ -8635,10 +8635,10 @@ public java.lang.String getQueryFileUriInput();
 ##### `queryListInput`<sup>Optional</sup> <a name="queryListInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobOutputReference.property.queryListInput"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPigJobQueryList getQueryListInput();
+public DataprocWorkflowTemplateJobsPigJobQueryListStruct getQueryListInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a>
 
 ---
 
@@ -8713,24 +8713,24 @@ public DataprocWorkflowTemplateJobsPigJob getInternalValue();
 ---
 
 
-### DataprocWorkflowTemplateJobsPigJobQueryListOutputReference <a name="DataprocWorkflowTemplateJobsPigJobQueryListOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference"></a>
+### DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference <a name="DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference;
 
-new DataprocWorkflowTemplateJobsPigJobQueryListOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+new DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* com.hashicorp.cdktf.IInterpolatingParent
 
@@ -8738,7 +8738,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
@@ -8750,149 +8750,149 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.computeFqn"></a>
 
 ```java
 public java.lang.String computeFqn()
 ```
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getAnyMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanAttribute"></a>
 
 ```java
 public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberAttribute"></a>
 
 ```java
 public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringAttribute"></a>
 
 ```java
 public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.interpolationForAttribute"></a>
 
 ```java
 public IResolvable interpolationForAttribute(java.lang.String property)
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.resolve"></a>
 
 ```java
 public java.lang.Object resolve(IResolveContext _context)
@@ -8900,13 +8900,13 @@ public java.lang.Object resolve(IResolveContext _context)
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.resolve.parameter._context"></a>
 
 - *Type:* com.hashicorp.cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.toString"></a>
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.toString"></a>
 
 ```java
 public java.lang.String toString()
@@ -8921,15 +8921,15 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a></code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.creationStack"></a>
 
 ```java
 public java.util.List<java.lang.String> getCreationStack();
@@ -8943,7 +8943,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.fqn"></a>
 
 ```java
 public java.lang.String getFqn();
@@ -8953,7 +8953,7 @@ public java.lang.String getFqn();
 
 ---
 
-##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.queriesInput"></a>
+##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.queriesInput"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueriesInput();
@@ -8963,7 +8963,7 @@ public java.util.List<java.lang.String> getQueriesInput();
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -8973,13 +8973,13 @@ public java.util.List<java.lang.String> getQueries();
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListOutputReference.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStructOutputReference.property.internalValue"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPigJobQueryList getInternalValue();
+public DataprocWorkflowTemplateJobsPigJobQueryListStruct getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryList">DataprocWorkflowTemplateJobsPigJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPigJobQueryListStruct">DataprocWorkflowTemplateJobsPigJobQueryListStruct</a>
 
 ---
 
@@ -9489,12 +9489,12 @@ public void putLoggingConfig(DataprocWorkflowTemplateJobsPrestoJobLoggingConfig 
 ##### `putQueryList` <a name="putQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.putQueryList"></a>
 
 ```java
-public void putQueryList(DataprocWorkflowTemplateJobsPrestoJobQueryList value)
+public void putQueryList(DataprocWorkflowTemplateJobsPrestoJobQueryListStruct value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.putQueryList.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a>
 
 ---
 
@@ -9548,14 +9548,14 @@ public void resetQueryList()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference">DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference">DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.clientTagsInput">clientTagsInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailureInput">continueOnFailureInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.loggingConfigInput">loggingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobLoggingConfig">DataprocWorkflowTemplateJobsPrestoJobLoggingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.outputFormatInput">outputFormatInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.clientTags">clientTags</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.continueOnFailure">continueOnFailure</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.outputFormat">outputFormat</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -9602,10 +9602,10 @@ public DataprocWorkflowTemplateJobsPrestoJobLoggingConfigOutputReference getLogg
 ##### `queryList`<sup>Required</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference getQueryList();
+public DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference">DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference</a>
 
 ---
 
@@ -9672,10 +9672,10 @@ public java.lang.String getQueryFileUriInput();
 ##### `queryListInput`<sup>Optional</sup> <a name="queryListInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobOutputReference.property.queryListInput"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPrestoJobQueryList getQueryListInput();
+public DataprocWorkflowTemplateJobsPrestoJobQueryListStruct getQueryListInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a>
 
 ---
 
@@ -9740,24 +9740,24 @@ public DataprocWorkflowTemplateJobsPrestoJob getInternalValue();
 ---
 
 
-### DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference <a name="DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference"></a>
+### DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference <a name="DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference;
 
-new DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+new DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* com.hashicorp.cdktf.IInterpolatingParent
 
@@ -9765,7 +9765,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
@@ -9777,149 +9777,149 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.computeFqn"></a>
 
 ```java
 public java.lang.String computeFqn()
 ```
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getAnyMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanAttribute"></a>
 
 ```java
 public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberAttribute"></a>
 
 ```java
 public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringAttribute"></a>
 
 ```java
 public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.interpolationForAttribute"></a>
 
 ```java
 public IResolvable interpolationForAttribute(java.lang.String property)
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.resolve"></a>
 
 ```java
 public java.lang.Object resolve(IResolveContext _context)
@@ -9927,13 +9927,13 @@ public java.lang.Object resolve(IResolveContext _context)
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.resolve.parameter._context"></a>
 
 - *Type:* com.hashicorp.cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.toString"></a>
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.toString"></a>
 
 ```java
 public java.lang.String toString()
@@ -9948,15 +9948,15 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a></code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.creationStack"></a>
 
 ```java
 public java.util.List<java.lang.String> getCreationStack();
@@ -9970,7 +9970,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.fqn"></a>
 
 ```java
 public java.lang.String getFqn();
@@ -9980,7 +9980,7 @@ public java.lang.String getFqn();
 
 ---
 
-##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.queriesInput"></a>
+##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.queriesInput"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueriesInput();
@@ -9990,7 +9990,7 @@ public java.util.List<java.lang.String> getQueriesInput();
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -10000,13 +10000,13 @@ public java.util.List<java.lang.String> getQueries();
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListOutputReference.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStructOutputReference.property.internalValue"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsPrestoJobQueryList getInternalValue();
+public DataprocWorkflowTemplateJobsPrestoJobQueryListStruct getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryList">DataprocWorkflowTemplateJobsPrestoJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsPrestoJobQueryListStruct">DataprocWorkflowTemplateJobsPrestoJobQueryListStruct</a>
 
 ---
 
@@ -13066,12 +13066,12 @@ public void putLoggingConfig(DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfi
 ##### `putQueryList` <a name="putQueryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.putQueryList"></a>
 
 ```java
-public void putQueryList(DataprocWorkflowTemplateJobsSparkSqlJobQueryList value)
+public void putQueryList(DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.putQueryList.parameter.value"></a>
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a>
 
 ---
 
@@ -13119,12 +13119,12 @@ public void resetScriptVariables()
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.loggingConfig">loggingConfig</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference">DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference">DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryList">queryList</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.jarFileUrisInput">jarFileUrisInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.loggingConfigInput">loggingConfigInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig">DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.propertiesInput">propertiesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryFileUriInput">queryFileUriInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryListInput">queryListInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.scriptVariablesInput">scriptVariablesInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.jarFileUris">jarFileUris</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.properties">properties</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
@@ -13171,10 +13171,10 @@ public DataprocWorkflowTemplateJobsSparkSqlJobLoggingConfigOutputReference getLo
 ##### `queryList`<sup>Required</sup> <a name="queryList" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryList"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference getQueryList();
+public DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference getQueryList();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference">DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference</a>
 
 ---
 
@@ -13221,10 +13221,10 @@ public java.lang.String getQueryFileUriInput();
 ##### `queryListInput`<sup>Optional</sup> <a name="queryListInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobOutputReference.property.queryListInput"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsSparkSqlJobQueryList getQueryListInput();
+public DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct getQueryListInput();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a>
 
 ---
 
@@ -13289,24 +13289,24 @@ public DataprocWorkflowTemplateJobsSparkSqlJob getInternalValue();
 ---
 
 
-### DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference <a name="DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference"></a>
+### DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference <a name="DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.Initializer"></a>
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.Initializer"></a>
 
 ```java
-import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference;
+import com.hashicorp.cdktf.providers.google.dataproc_workflow_template.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference;
 
-new DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
+new DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference(IInterpolatingParent terraformResource, java.lang.String terraformAttribute);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>com.hashicorp.cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>java.lang.String</code> | The attribute on the parent resource this class is referencing. |
 
 ---
 
-##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.Initializer.parameter.terraformResource"></a>
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.Initializer.parameter.terraformResource"></a>
 
 - *Type:* com.hashicorp.cdktf.IInterpolatingParent
 
@@ -13314,7 +13314,7 @@ The parent resource.
 
 ---
 
-##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.Initializer.parameter.terraformAttribute"></a>
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.Initializer.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
@@ -13326,149 +13326,149 @@ The attribute on the parent resource this class is referencing.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
 
 ---
 
-##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.computeFqn"></a>
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.computeFqn"></a>
 
 ```java
 public java.lang.String computeFqn()
 ```
 
-##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getAnyMapAttribute"></a>
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getAnyMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Object> getAnyMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanAttribute"></a>
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanAttribute"></a>
 
 ```java
 public IResolvable getBooleanAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanMapAttribute"></a>
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Boolean> getBooleanMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getListAttribute"></a>
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.String> getListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberAttribute"></a>
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberAttribute"></a>
 
 ```java
 public java.lang.Number getNumberAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberListAttribute"></a>
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberListAttribute"></a>
 
 ```java
 public java.util.List<java.lang.Number> getNumberListAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberMapAttribute"></a>
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Number> getNumberMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringAttribute"></a>
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringAttribute"></a>
 
 ```java
 public java.lang.String getStringAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringMapAttribute"></a>
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringMapAttribute"></a>
 
 ```java
 public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(java.lang.String terraformAttribute)
 ```
 
-###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.interpolationForAttribute"></a>
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.interpolationForAttribute"></a>
 
 ```java
 public IResolvable interpolationForAttribute(java.lang.String property)
 ```
 
-###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.interpolationForAttribute.parameter.property"></a>
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.interpolationForAttribute.parameter.property"></a>
 
 - *Type:* java.lang.String
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.resolve"></a>
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.resolve"></a>
 
 ```java
 public java.lang.Object resolve(IResolveContext _context)
@@ -13476,13 +13476,13 @@ public java.lang.Object resolve(IResolveContext _context)
 
 Produce the Token's value at resolution time.
 
-###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.resolve.parameter._context"></a>
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.resolve.parameter._context"></a>
 
 - *Type:* com.hashicorp.cdktf.IResolveContext
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.toString"></a>
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.toString"></a>
 
 ```java
 public java.lang.String toString()
@@ -13497,15 +13497,15 @@ Returns a reversible string representation.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.queriesInput">queriesInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.queries">queries</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a></code> | *No description.* |
 
 ---
 
-##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.creationStack"></a>
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.creationStack"></a>
 
 ```java
 public java.util.List<java.lang.String> getCreationStack();
@@ -13519,7 +13519,7 @@ If this returns an empty array the stack will not be attached.
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.fqn"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.fqn"></a>
 
 ```java
 public java.lang.String getFqn();
@@ -13529,7 +13529,7 @@ public java.lang.String getFqn();
 
 ---
 
-##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.queriesInput"></a>
+##### `queriesInput`<sup>Optional</sup> <a name="queriesInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.queriesInput"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueriesInput();
@@ -13539,7 +13539,7 @@ public java.util.List<java.lang.String> getQueriesInput();
 
 ---
 
-##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.queries"></a>
+##### `queries`<sup>Required</sup> <a name="queries" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.queries"></a>
 
 ```java
 public java.util.List<java.lang.String> getQueries();
@@ -13549,13 +13549,13 @@ public java.util.List<java.lang.String> getQueries();
 
 ---
 
-##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListOutputReference.property.internalValue"></a>
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStructOutputReference.property.internalValue"></a>
 
 ```java
-public DataprocWorkflowTemplateJobsSparkSqlJobQueryList getInternalValue();
+public DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct getInternalValue();
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryList">DataprocWorkflowTemplateJobsSparkSqlJobQueryList</a>
+- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct">DataprocWorkflowTemplateJobsSparkSqlJobQueryListStruct</a>
 
 ---
 
