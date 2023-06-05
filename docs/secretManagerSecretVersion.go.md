@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 secretmanagersecretversion.NewSecretManagerSecretVersion(scope Construct, id *string, config SecretManagerSecretVersionConfig) SecretManagerSecretVersion
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 secretmanagersecretversion.SecretManagerSecretVersion_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 secretmanagersecretversion.SecretManagerSecretVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ secretmanagersecretversion.SecretManagerSecretVersion_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 secretmanagersecretversion.SecretManagerSecretVersion_IsTerraformResource(x interface{}) *bool
 ```
@@ -703,7 +703,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 &secretmanagersecretversion.SecretManagerSecretVersionConfig {
 	Connection: interface{},
@@ -717,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretv
 	SecretData: *string,
 	Enabled: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts,
 }
 ```
 
@@ -886,7 +886,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 &secretmanagersecretversion.SecretManagerSecretVersionTimeouts {
 	Create: *string,
@@ -934,7 +934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretVersion.SecretManagerSecretVersionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/secretmanagersecretversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretversion"
 
 secretmanagersecretversion.NewSecretManagerSecretVersionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretVersionTimeoutsOutputReference
 ```
