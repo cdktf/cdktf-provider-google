@@ -1,3 +1,3 @@
 # `google_endpoints_service_consumers_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/endpoints_service_consumers_iam_policy).
+Refer to the Terraform Registory for docs: [`google_endpoints_service_consumers_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/endpoints_service_consumers_iam_policy).

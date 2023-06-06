@@ -1,6 +1,6 @@
 # `google_dialogflow_agent`
 
-Refer to the Terraform Registory for docs: [`google_dialogflow_agent`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent).
+Refer to the Terraform Registory for docs: [`google_dialogflow_agent`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent).
 
 # `dialogflowAgent` Submodule <a name="`dialogflowAgent` Submodule" id="@cdktf/provider-google.dialogflowAgent"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_dialogflow_agent`](https://r
 
 ### DialogflowAgent <a name="DialogflowAgent" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent google_dialogflow_agent}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent google_dialogflow_agent}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgent(scope Construct, id *string, config DialogflowAgentConfig) DialogflowAgent
 ```
@@ -360,7 +360,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformResource(x interface{}) *bool
 ```
@@ -924,7 +924,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
 	Project: *string,
 	SupportedLanguageCodes: *[]*string,
 	Tier: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.dialogflowAgent.DialogflowAgentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowAgent.DialogflowAgentTimeouts,
 }
 ```
 
@@ -970,9 +970,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.classificationThreshold">ClassificationThreshold</a></code> | <code>*f64</code> | To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.description">Description</a></code> | <code>*string</code> | The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected. |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.enableLogging">EnableLogging</a></code> | <code>interface{}</code> | Determines whether this agent should log conversation queries. |
-| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#id DialogflowAgent#id}. |
+| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#id DialogflowAgent#id}. |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.matchMode">MatchMode</a></code> | <code>*string</code> | Determines how intents are detected from user queries. |
-| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#project DialogflowAgent#project}. |
+| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#project DialogflowAgent#project}. |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.supportedLanguageCodes">SupportedLanguageCodes</a></code> | <code>*[]*string</code> | The list of all languages supported by this agent (except for the defaultLanguageCode). |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.tier">Tier</a></code> | <code>*string</code> | The agent tier. |
 | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts">DialogflowAgentTimeouts</a></code> | timeouts block. |
@@ -1062,7 +1062,7 @@ The default language of the agent as a language tag.
 [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#default_language_code DialogflowAgent#default_language_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#default_language_code DialogflowAgent#default_language_code}
 
 ---
 
@@ -1076,7 +1076,7 @@ DisplayName *string
 
 The name of this agent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#display_name DialogflowAgent#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#display_name DialogflowAgent#display_name}
 
 ---
 
@@ -1090,7 +1090,7 @@ TimeZone *string
 
 The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#time_zone DialogflowAgent#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#time_zone DialogflowAgent#time_zone}
 
 ---
 
@@ -1111,7 +1111,7 @@ API_VERSION_V1: Legacy V1 API.
 API_VERSION_V2: V2 API.
 API_VERSION_V2_BETA_1: V2beta1 API. Possible values: ["API_VERSION_V1", "API_VERSION_V2", "API_VERSION_V2_BETA_1"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#api_version DialogflowAgent#api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#api_version DialogflowAgent#api_version}
 
 ---
 
@@ -1129,7 +1129,7 @@ When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#avatar_uri DialogflowAgent#avatar_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#avatar_uri DialogflowAgent#avatar_uri}
 
 ---
 
@@ -1148,7 +1148,7 @@ value, then a fallback intent will be triggered or, if there are no fallback int
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#classification_threshold DialogflowAgent#classification_threshold}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#classification_threshold DialogflowAgent#classification_threshold}
 
 ---
 
@@ -1162,7 +1162,7 @@ Description *string
 
 The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#description DialogflowAgent#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#description DialogflowAgent#description}
 
 ---
 
@@ -1176,7 +1176,7 @@ EnableLogging interface{}
 
 Determines whether this agent should log conversation queries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#enable_logging DialogflowAgent#enable_logging}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#enable_logging DialogflowAgent#enable_logging}
 
 ---
 
@@ -1188,7 +1188,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#id DialogflowAgent#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#id DialogflowAgent#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1210,7 +1210,7 @@ syntax and composite entities.
 MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities. Possible values: ["MATCH_MODE_HYBRID", "MATCH_MODE_ML_ONLY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#match_mode DialogflowAgent#match_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#match_mode DialogflowAgent#match_mode}
 
 ---
 
@@ -1222,7 +1222,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#project DialogflowAgent#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#project DialogflowAgent#project}.
 
 ---
 
@@ -1236,7 +1236,7 @@ SupportedLanguageCodes *[]*string
 
 The list of all languages supported by this agent (except for the defaultLanguageCode).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#supported_language_codes DialogflowAgent#supported_language_codes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#supported_language_codes DialogflowAgent#supported_language_codes}
 
 ---
 
@@ -1257,7 +1257,7 @@ TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: ["TIER_STANDARD", "TIER_ENTERPRISE", "TIER_ENTERPRISE_PLUS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#tier DialogflowAgent#tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#tier DialogflowAgent#tier}
 
 ---
 
@@ -1271,7 +1271,7 @@ Timeouts DialogflowAgentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#timeouts DialogflowAgent#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#timeouts DialogflowAgent#timeouts}
 
 ---
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentTimeouts {
 	Create: *string,
@@ -1293,9 +1293,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#create DialogflowAgent#create}. |
-| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}. |
-| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#update DialogflowAgent#update}. |
+| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#create DialogflowAgent#create}. |
+| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}. |
+| <code><a href="#@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#update DialogflowAgent#update}. |
 
 ---
 
@@ -1307,7 +1307,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#create DialogflowAgent#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#create DialogflowAgent#create}.
 
 ---
 
@@ -1319,7 +1319,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#delete DialogflowAgent#delete}.
 
 ---
 
@@ -1331,7 +1331,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/dialogflow_agent#update DialogflowAgent#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/dialogflow_agent#update DialogflowAgent#update}.
 
 ---
 
@@ -1342,7 +1342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowAgentTimeoutsOutputReference
 ```

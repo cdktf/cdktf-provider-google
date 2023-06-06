@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config
+// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface SccMuteConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the mute config.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#description SccMuteConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#description SccMuteConfig#description}
   */
   readonly description?: string;
   /**
@@ -25,11 +20,11 @@ the scope in which the mute configuration is being created. E.g.,
 If a filter contains project = X but is created under the
 project = Y scope, it might not match any findings.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#filter SccMuteConfig#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#filter SccMuteConfig#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#id SccMuteConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#id SccMuteConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,7 +33,7 @@ project = Y scope, it might not match any findings.
   /**
   * Unique identifier provided by the client within the parent scope.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#mute_config_id SccMuteConfig#mute_config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#mute_config_id SccMuteConfig#mute_config_id}
   */
   readonly muteConfigId: string;
   /**
@@ -46,27 +41,27 @@ project = Y scope, it might not match any findings.
 "organizations/[organization_id]", "folders/[folder_id]", or
 "projects/[project_id]".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#parent SccMuteConfig#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#parent SccMuteConfig#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#timeouts SccMuteConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#timeouts SccMuteConfig#timeouts}
   */
   readonly timeouts?: SccMuteConfigTimeouts;
 }
 export interface SccMuteConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#create SccMuteConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#create SccMuteConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#delete SccMuteConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#delete SccMuteConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config#update SccMuteConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config#update SccMuteConfig#update}
   */
   readonly update?: string;
 }
@@ -187,7 +182,7 @@ export class SccMuteConfigTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config google_scc_mute_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config google_scc_mute_config}
 */
 export class SccMuteConfig extends cdktf.TerraformResource {
 
@@ -201,7 +196,7 @@ export class SccMuteConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/scc_mute_config google_scc_mute_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/scc_mute_config google_scc_mute_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -212,7 +207,7 @@ export class SccMuteConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_scc_mute_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.67.0',
+        providerVersion: '4.68.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

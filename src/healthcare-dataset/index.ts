@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset
+// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#id HealthcareDataset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +17,17 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location for the Dataset.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
   */
   readonly location: string;
   /**
   * The resource name for the Dataset.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#project HealthcareDataset#project}
   */
   readonly project?: string;
   /**
@@ -40,27 +35,27 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
 "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
 (e.g., HL7 messages) where no explicit timezone is specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
   */
   readonly timeZone?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
   */
   readonly timeouts?: HealthcareDatasetTimeouts;
 }
 export interface HealthcareDatasetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#create HealthcareDataset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#delete HealthcareDataset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset#update HealthcareDataset#update}
   */
   readonly update?: string;
 }
@@ -181,7 +176,7 @@ export class HealthcareDatasetTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset google_healthcare_dataset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset google_healthcare_dataset}
 */
 export class HealthcareDataset extends cdktf.TerraformResource {
 
@@ -195,7 +190,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/healthcare_dataset google_healthcare_dataset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/healthcare_dataset google_healthcare_dataset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -206,7 +201,7 @@ export class HealthcareDataset extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_dataset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.67.0',
+        providerVersion: '4.68.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

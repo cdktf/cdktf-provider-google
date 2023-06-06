@@ -1,6 +1,6 @@
 # `google_privateca_certificate_template_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_privateca_certificate_template_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy).
+Refer to the Terraform Registory for docs: [`google_privateca_certificate_template_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy).
 
 # `privatecaCertificateTemplateIamPolicy` Submodule <a name="`privatecaCertificateTemplateIamPolicy` Submodule" id="@cdktf/provider-google.privatecaCertificateTemplateIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_privateca_certificate_templa
 
 ### PrivatecaCertificateTemplateIamPolicy <a name="PrivatecaCertificateTemplateIamPolicy" id="@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy google_privateca_certificate_template_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy google_privateca_certificate_template_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer"></a>
 
@@ -44,11 +44,11 @@ privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy(
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.certificateTemplate">certificate_template</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.certificateTemplate">certificate_template</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicy.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}.
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}.
 
 ---
 
@@ -822,11 +822,11 @@ privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfi
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.certificateTemplate">certificate_template</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.certificateTemplate">certificate_template</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.policyData">policy_data</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplateIamPolicy.PrivatecaCertificateTemplateIamPolicyConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}. |
 
 ---
 
@@ -908,7 +908,7 @@ certificate_template: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#certificate_template PrivatecaCertificateTemplateIamPolicy#certificate_template}.
 
 ---
 
@@ -920,7 +920,7 @@ policy_data: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#policy_data PrivatecaCertificateTemplateIamPolicy#policy_data}.
 
 ---
 
@@ -932,7 +932,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#id PrivatecaCertificateTemplateIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -947,7 +947,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#location PrivatecaCertificateTemplateIamPolicy#location}.
 
 ---
 
@@ -959,7 +959,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/privateca_certificate_template_iam_policy#project PrivatecaCertificateTemplateIamPolicy#project}.
 
 ---
 

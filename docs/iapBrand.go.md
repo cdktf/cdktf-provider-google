@@ -1,6 +1,6 @@
 # `google_iap_brand`
 
-Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand).
+Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand).
 
 # `iapBrand` Submodule <a name="`iapBrand` Submodule" id="@cdktf/provider-google.iapBrand"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_brand`](https://registry
 
 ### IapBrand <a name="IapBrand" id="@cdktf/provider-google.iapBrand.IapBrand"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand google_iap_brand}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand google_iap_brand}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapBrand.IapBrand.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.NewIapBrand(scope Construct, id *string, config IapBrandConfig) IapBrand
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapBrand.IapBrand.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapBrand.IapBrand.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapbrand.IapBrand_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapBrand.IapBrand.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.IapBrand_IsTerraformResource(x interface{}) *bool
 ```
@@ -681,7 +681,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapBrand.IapBrandConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 &iapbrand.IapBrandConfig {
 	Connection: interface{},
@@ -695,7 +695,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
 	SupportEmail: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.iapBrand.IapBrandTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.iapBrand.IapBrandTimeouts,
 }
 ```
 
@@ -712,8 +712,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.applicationTitle">ApplicationTitle</a></code> | <code>*string</code> | Application name displayed on OAuth consent screen. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.supportEmail">SupportEmail</a></code> | <code>*string</code> | Support email displayed on the OAuth consent screen. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#id IapBrand#id}. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#project IapBrand#project}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#id IapBrand#id}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#project IapBrand#project}. |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a></code> | timeouts block. |
 
 ---
@@ -798,7 +798,7 @@ ApplicationTitle *string
 
 Application name displayed on OAuth consent screen.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#application_title IapBrand#application_title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#application_title IapBrand#application_title}
 
 ---
 
@@ -818,7 +818,7 @@ be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#support_email IapBrand#support_email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#support_email IapBrand#support_email}
 
 ---
 
@@ -830,7 +830,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#id IapBrand#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#id IapBrand#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -845,7 +845,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#project IapBrand#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#project IapBrand#project}.
 
 ---
 
@@ -859,7 +859,7 @@ Timeouts IapBrandTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#timeouts IapBrand#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#timeouts IapBrand#timeouts}
 
 ---
 
@@ -868,7 +868,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapBrand.IapBrandTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 &iapbrand.IapBrandTimeouts {
 	Create: *string,
@@ -880,8 +880,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#create IapBrand#create}. |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#delete IapBrand#delete}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#create IapBrand#create}. |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#delete IapBrand#delete}. |
 
 ---
 
@@ -893,7 +893,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#create IapBrand#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#create IapBrand#create}.
 
 ---
 
@@ -905,7 +905,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/iap_brand#delete IapBrand#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/iap_brand#delete IapBrand#delete}.
 
 ---
 
@@ -916,7 +916,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/iapbrand"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapbrand"
 
 iapbrand.NewIapBrandTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapBrandTimeoutsOutputReference
 ```

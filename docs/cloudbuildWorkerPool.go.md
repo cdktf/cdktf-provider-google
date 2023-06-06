@@ -1,6 +1,6 @@
 # `google_cloudbuild_worker_pool`
 
-Refer to the Terraform Registory for docs: [`google_cloudbuild_worker_pool`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool).
+Refer to the Terraform Registory for docs: [`google_cloudbuild_worker_pool`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool).
 
 # `cloudbuildWorkerPool` Submodule <a name="`cloudbuildWorkerPool` Submodule" id="@cdktf/provider-google.cloudbuildWorkerPool"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_cloudbuild_worker_pool`](htt
 
 ### CloudbuildWorkerPool <a name="CloudbuildWorkerPool" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool google_cloudbuild_worker_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool google_cloudbuild_worker_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPool(scope Construct, id *string, config CloudbuildWorkerPoolConfig) CloudbuildWorkerPool
 ```
@@ -358,7 +358,7 @@ func ResetWorkerConfig()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsConstruct(x interface{}) *bool
 ```
@@ -390,7 +390,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.CloudbuildWorkerPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -856,7 +856,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolConfig {
 	Connection: interface{},
@@ -871,10 +871,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool
 	Annotations: *map[string]*string,
 	DisplayName: *string,
 	Id: *string,
-	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig,
+	NetworkConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts,
-	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts,
+	WorkerConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig,
 }
 ```
 
@@ -893,7 +893,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.name">Name</a></code> | <code>*string</code> | User-defined name of the `WorkerPool`. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters. |
-| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#id CloudbuildWorkerPool#id}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#id CloudbuildWorkerPool#id}. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.networkConfig">NetworkConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig">CloudbuildWorkerPoolNetworkConfig</a></code> | network_config block. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.project">Project</a></code> | <code>*string</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts">CloudbuildWorkerPoolTimeouts</a></code> | timeouts block. |
@@ -981,7 +981,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#location CloudbuildWorkerPool#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#location CloudbuildWorkerPool#location}
 
 ---
 
@@ -995,7 +995,7 @@ Name *string
 
 User-defined name of the `WorkerPool`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#name CloudbuildWorkerPool#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#name CloudbuildWorkerPool#name}
 
 ---
 
@@ -1009,7 +1009,7 @@ Annotations *map[string]*string
 
 User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#annotations CloudbuildWorkerPool#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#annotations CloudbuildWorkerPool#annotations}
 
 ---
 
@@ -1023,7 +1023,7 @@ DisplayName *string
 
 A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#display_name CloudbuildWorkerPool#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#display_name CloudbuildWorkerPool#display_name}
 
 ---
 
@@ -1035,7 +1035,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#id CloudbuildWorkerPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#id CloudbuildWorkerPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1052,7 +1052,7 @@ NetworkConfig CloudbuildWorkerPoolNetworkConfig
 
 network_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#network_config CloudbuildWorkerPool#network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#network_config CloudbuildWorkerPool#network_config}
 
 ---
 
@@ -1066,7 +1066,7 @@ Project *string
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#project CloudbuildWorkerPool#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#project CloudbuildWorkerPool#project}
 
 ---
 
@@ -1080,7 +1080,7 @@ Timeouts CloudbuildWorkerPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#timeouts CloudbuildWorkerPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#timeouts CloudbuildWorkerPool#timeouts}
 
 ---
 
@@ -1094,7 +1094,7 @@ WorkerConfig CloudbuildWorkerPoolWorkerConfig
 
 worker_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#worker_config CloudbuildWorkerPool#worker_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#worker_config CloudbuildWorkerPool#worker_config}
 
 ---
 
@@ -1103,7 +1103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolNetworkConfig {
 	PeeredNetwork: *string,
@@ -1132,7 +1132,7 @@ Required.
 
 Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#peered_network CloudbuildWorkerPool#peered_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#peered_network CloudbuildWorkerPool#peered_network}
 
 ---
 
@@ -1148,7 +1148,7 @@ Optional.
 
 Immutable. Subnet IP range within the peered network. This is specified in CIDR notation with a slash and the subnet prefix size. You can optionally specify an IP address before the subnet prefix value. e.g. `192.168.0.0/29` would specify an IP range starting at 192.168.0.0 with a prefix size of 29 bits. `/16` would specify a prefix size of 16 bits, with an automatically determined IP within the peered VPC. If unspecified, a value of `/24` will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#peered_network_ip_range CloudbuildWorkerPool#peered_network_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#peered_network_ip_range CloudbuildWorkerPool#peered_network_ip_range}
 
 ---
 
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolTimeouts {
 	Create: *string,
@@ -1170,9 +1170,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#create CloudbuildWorkerPool#create}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#delete CloudbuildWorkerPool#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#update CloudbuildWorkerPool#update}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#create CloudbuildWorkerPool#create}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#delete CloudbuildWorkerPool#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#update CloudbuildWorkerPool#update}. |
 
 ---
 
@@ -1184,7 +1184,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#create CloudbuildWorkerPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#create CloudbuildWorkerPool#create}.
 
 ---
 
@@ -1196,7 +1196,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#delete CloudbuildWorkerPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#delete CloudbuildWorkerPool#delete}.
 
 ---
 
@@ -1208,7 +1208,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#update CloudbuildWorkerPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#update CloudbuildWorkerPool#update}.
 
 ---
 
@@ -1217,7 +1217,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 &cloudbuildworkerpool.CloudbuildWorkerPoolWorkerConfig {
 	DiskSizeGb: *f64,
@@ -1248,7 +1248,7 @@ Size of the disk attached to the worker, in GB.
 
 See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#disk_size_gb CloudbuildWorkerPool#disk_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#disk_size_gb CloudbuildWorkerPool#disk_size_gb}
 
 ---
 
@@ -1264,7 +1264,7 @@ Machine type of a worker, such as `n1-standard-1`.
 
 See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#machine_type CloudbuildWorkerPool#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#machine_type CloudbuildWorkerPool#machine_type}
 
 ---
 
@@ -1278,7 +1278,7 @@ NoExternalIp interface{}
 
 If true, workers are created without any public address, which prevents network egress to public IPs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/cloudbuild_worker_pool#no_external_ip CloudbuildWorkerPool#no_external_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/cloudbuild_worker_pool#no_external_ip CloudbuildWorkerPool#no_external_ip}
 
 ---
 
@@ -1289,7 +1289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolNetworkConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolNetworkConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolNetworkConfigOutputReference
 ```
@@ -1589,7 +1589,7 @@ func InternalValue() CloudbuildWorkerPoolNetworkConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolTimeoutsOutputReference
 ```
@@ -1925,7 +1925,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildWorkerPool.CloudbuildWorkerPoolWorkerConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudbuildworkerpool"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildworkerpool"
 
 cloudbuildworkerpool.NewCloudbuildWorkerPoolWorkerConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudbuildWorkerPoolWorkerConfigOutputReference
 ```
