@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector
+// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleVpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector#id DataGoogleVpcAccessConnector#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +22,17 @@ export interface DataGoogleVpcAccessConnectorConfig extends cdktf.TerraformMetaA
   /**
   * The name of the resource (Max 25 characters).
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector#project DataGoogleVpcAccessConnector#project}
   */
   readonly project?: string;
   /**
   * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
   */
   readonly region?: string;
 }
@@ -107,7 +107,7 @@ export class DataGoogleVpcAccessConnectorSubnetList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector google_vpc_access_connector}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector google_vpc_access_connector}
 */
 export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/vpc_access_connector google_vpc_access_connector} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/vpc_access_connector google_vpc_access_connector} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -132,7 +132,7 @@ export class DataGoogleVpcAccessConnector extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_vpc_access_connector',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.67.0',
+        providerVersion: '4.68.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

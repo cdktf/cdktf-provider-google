@@ -1,6 +1,6 @@
 # `google_project`
 
-Refer to the Terraform Registory for docs: [`google_project`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project).
+Refer to the Terraform Registory for docs: [`google_project`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project).
 
 # `project` Submodule <a name="`project` Submodule" id="@cdktf/provider-google.project"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_project`](https://registry.t
 
 ### Project <a name="Project" id="@cdktf/provider-google.project.Project"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project google_project}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project google_project}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.project.Project.Initializer"></a>
 
@@ -836,7 +836,7 @@ const projectConfig: project.ProjectConfig = { ... }
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.autoCreateNetwork">autoCreateNetwork</a></code> | <code>boolean \| cdktf.IResolvable</code> | Create the 'default' network automatically. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.billingAccount">billingAccount</a></code> | <code>string</code> | The alphanumeric ID of the billing account this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.folderId">folderId</a></code> | <code>string</code> | The numeric ID of the folder this project should be created under. |
-| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#id Project#id}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#id Project#id}. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | A set of key/value label pairs to assign to the project. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.orgId">orgId</a></code> | <code>string</code> | The numeric ID of the organization this project belongs to. |
 | <code><a href="#@cdktf/provider-google.project.ProjectConfig.property.skipDelete">skipDelete</a></code> | <code>boolean \| cdktf.IResolvable</code> | If true, the Terraform resource can be deleted without deleting the Project via the Google API. |
@@ -924,7 +924,7 @@ public readonly name: string;
 
 The display name of the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#name Project#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#name Project#name}
 
 ---
 
@@ -938,7 +938,7 @@ public readonly projectId: string;
 
 The project ID. Changing this forces a new project to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#project_id Project#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#project_id Project#project_id}
 
 ---
 
@@ -954,7 +954,7 @@ Create the 'default' network automatically.
 
 Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#auto_create_network Project#auto_create_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#auto_create_network Project#auto_create_network}
 
 ---
 
@@ -970,7 +970,7 @@ The alphanumeric ID of the billing account this project belongs to.
 
 The user or service account performing this operation with Terraform must have Billing Account Administrator privileges (roles/billing.admin) in the organization. See Google Cloud Billing API Access Control for more details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#billing_account Project#billing_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#billing_account Project#billing_account}
 
 ---
 
@@ -986,7 +986,7 @@ The numeric ID of the folder this project should be created under.
 
 Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#folder_id Project#folder_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#folder_id Project#folder_id}
 
 ---
 
@@ -998,7 +998,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#id Project#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#id Project#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1015,7 +1015,7 @@ public readonly labels: {[ key: string ]: string};
 
 A set of key/value label pairs to assign to the project.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#labels Project#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#labels Project#labels}
 
 ---
 
@@ -1031,7 +1031,7 @@ The numeric ID of the organization this project belongs to.
 
 Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#org_id Project#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#org_id Project#org_id}
 
 ---
 
@@ -1045,7 +1045,7 @@ public readonly skipDelete: boolean | IResolvable;
 
 If true, the Terraform resource can be deleted without deleting the Project via the Google API.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#skip_delete Project#skip_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#skip_delete Project#skip_delete}
 
 ---
 
@@ -1059,7 +1059,7 @@ public readonly timeouts: ProjectTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#timeouts Project#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#timeouts Project#timeouts}
 
 ---
 
@@ -1077,10 +1077,10 @@ const projectTimeouts: project.ProjectTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#create Project#create}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#delete Project#delete}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#read Project#read}. |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#update Project#update}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#create Project#create}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#delete Project#delete}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#read Project#read}. |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#update Project#update}. |
 
 ---
 
@@ -1092,7 +1092,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#create Project#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#create Project#create}.
 
 ---
 
@@ -1104,7 +1104,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#delete Project#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#delete Project#delete}.
 
 ---
 
@@ -1116,7 +1116,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#read Project#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#read Project#read}.
 
 ---
 
@@ -1128,7 +1128,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/project#update Project#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/project#update Project#update}.
 
 ---
 

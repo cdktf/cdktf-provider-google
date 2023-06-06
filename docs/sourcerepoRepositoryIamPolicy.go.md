@@ -1,6 +1,6 @@
 # `google_sourcerepo_repository_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_sourcerepo_repository_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy).
+Refer to the Terraform Registory for docs: [`google_sourcerepo_repository_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy).
 
 # `sourcerepoRepositoryIamPolicy` Submodule <a name="`sourcerepoRepositoryIamPolicy` Submodule" id="@cdktf/provider-google.sourcerepoRepositoryIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_sourcerepo_repository_iam_po
 
 ### SourcerepoRepositoryIamPolicy <a name="SourcerepoRepositoryIamPolicy" id="@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicy.Initializer"></a>
 
@@ -656,10 +656,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/sourcereporepository
 | <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#policy_data SourcerepoRepositoryIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.repository">Repository</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#repository SourcerepoRepositoryIamPolicy#repository}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#id SourcerepoRepositoryIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#project SourcerepoRepositoryIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#policy_data SourcerepoRepositoryIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.repository">Repository</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#repository SourcerepoRepositoryIamPolicy#repository}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#id SourcerepoRepositoryIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.sourcerepoRepositoryIamPolicy.SourcerepoRepositoryIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#project SourcerepoRepositoryIamPolicy#project}. |
 
 ---
 
@@ -741,7 +741,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#policy_data SourcerepoRepositoryIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#policy_data SourcerepoRepositoryIamPolicy#policy_data}.
 
 ---
 
@@ -753,7 +753,7 @@ Repository *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#repository SourcerepoRepositoryIamPolicy#repository}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#repository SourcerepoRepositoryIamPolicy#repository}.
 
 ---
 
@@ -765,7 +765,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#id SourcerepoRepositoryIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#id SourcerepoRepositoryIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -780,7 +780,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/sourcerepo_repository_iam_policy#project SourcerepoRepositoryIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/sourcerepo_repository_iam_policy#project SourcerepoRepositoryIamPolicy#project}.
 
 ---
 

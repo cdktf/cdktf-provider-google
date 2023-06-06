@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service
+// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,11 +16,11 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   * The name of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the clusterName resource label in k8s_cluster resources.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#cluster_name DataGoogleMonitoringClusterIstioService#cluster_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#cluster_name DataGoogleMonitoringClusterIstioService#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#id DataGoogleMonitoringClusterIstioService#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#id DataGoogleMonitoringClusterIstioService#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -30,25 +30,25 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   * The location of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the location resource label in k8s_cluster resources.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#location DataGoogleMonitoringClusterIstioService#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#location DataGoogleMonitoringClusterIstioService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#project DataGoogleMonitoringClusterIstioService#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#project DataGoogleMonitoringClusterIstioService#project}
   */
   readonly project?: string;
   /**
   * The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#service_name DataGoogleMonitoringClusterIstioService#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#service_name DataGoogleMonitoringClusterIstioService#service_name}
   */
   readonly serviceName: string;
   /**
   * The namespace of the Istio service underlying this service. 
                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service#service_namespace DataGoogleMonitoringClusterIstioService#service_namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service#service_namespace DataGoogleMonitoringClusterIstioService#service_namespace}
   */
   readonly serviceNamespace: string;
 }
@@ -118,7 +118,7 @@ export class DataGoogleMonitoringClusterIstioServiceTelemetryList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service google_monitoring_cluster_istio_service}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service google_monitoring_cluster_istio_service}
 */
 export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformDataSource {
 
@@ -132,7 +132,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/monitoring_cluster_istio_service google_monitoring_cluster_istio_service} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/monitoring_cluster_istio_service google_monitoring_cluster_istio_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -143,7 +143,7 @@ export class DataGoogleMonitoringClusterIstioService extends cdktf.TerraformData
       terraformResourceType: 'google_monitoring_cluster_istio_service',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.67.0',
+        providerVersion: '4.68.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

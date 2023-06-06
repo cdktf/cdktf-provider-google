@@ -1,3 +1,3 @@
 # `google_monitoring_group`
 
-Refer to the Terraform Registory for docs: [`google_monitoring_group`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/resources/monitoring_group).
+Refer to the Terraform Registory for docs: [`google_monitoring_group`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/monitoring_group).

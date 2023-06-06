@@ -1,6 +1,6 @@
 # `data_google_kms_crypto_key_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy).
 
 # `dataGoogleKmsCryptoKeyIamPolicy` Submodule <a name="`dataGoogleKmsCryptoKeyIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_kms_crypto_key_iam_poli
 
 ### DataGoogleKmsCryptoKeyIamPolicy <a name="DataGoogleKmsCryptoKeyIamPolicy" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer"></a>
 
@@ -43,8 +43,8 @@ DataGoogleKmsCryptoKeyIamPolicy.Builder.create(Construct scope, java.lang.String
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.cryptoKeyId">cryptoKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.cryptoKeyId">cryptoKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicy.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -673,8 +673,8 @@ DataGoogleKmsCryptoKeyIamPolicyConfig.builder()
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.cryptoKeyId">cryptoKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.cryptoKeyId">cryptoKeyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsCryptoKeyIamPolicy.DataGoogleKmsCryptoKeyIamPolicyConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}. |
 
 ---
 
@@ -756,7 +756,7 @@ public java.lang.String getCryptoKeyId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}.
 
 ---
 
@@ -768,7 +768,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.67.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
