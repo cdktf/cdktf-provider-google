@@ -1,6 +1,6 @@
 # `data_google_billing_account`
 
-Refer to the Terraform Registory for docs: [`data_google_billing_account`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account).
+Refer to the Terraform Registory for docs: [`data_google_billing_account`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account).
 
 # `dataGoogleBillingAccount` Submodule <a name="`dataGoogleBillingAccount` Submodule" id="@cdktf/provider-google.dataGoogleBillingAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_billing_account`](https
 
 ### DataGoogleBillingAccount <a name="DataGoogleBillingAccount" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account google_billing_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account google_billing_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer"></a>
 
@@ -28,6 +28,7 @@ dataGoogleBillingAccount.DataGoogleBillingAccount(
   billing_account: str = None,
   display_name: str = None,
   id: str = None,
+  lookup_projects: typing.Union[bool, IResolvable] = None,
   open: typing.Union[bool, IResolvable] = None
 )
 ```
@@ -43,10 +44,11 @@ dataGoogleBillingAccount.DataGoogleBillingAccount(
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.billingAccount">billing_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.open">open</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.billingAccount">billing_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.lookupProjects">lookup_projects</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#lookup_projects DataGoogleBillingAccount#lookup_projects}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.open">open</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}. |
 
 ---
 
@@ -114,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}.
 
 ---
 
@@ -122,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}.
 
 ---
 
@@ -130,10 +132,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `lookup_projects`<sup>Optional</sup> <a name="lookup_projects" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.Initializer.parameter.lookupProjects"></a>
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#lookup_projects DataGoogleBillingAccount#lookup_projects}.
 
 ---
 
@@ -141,7 +151,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}.
 
 ---
 
@@ -168,6 +178,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetBillingAccount">reset_billing_account</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetDisplayName">reset_display_name</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetLookupProjects">reset_lookup_projects</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetOpen">reset_open</a></code> | *No description.* |
 
 ---
@@ -399,6 +410,12 @@ def reset_display_name() -> None
 def reset_id() -> None
 ```
 
+##### `reset_lookup_projects` <a name="reset_lookup_projects" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetLookupProjects"></a>
+
+```python
+def reset_lookup_projects() -> None
+```
+
 ##### `reset_open` <a name="reset_open" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.resetOpen"></a>
 
 ```python
@@ -502,10 +519,12 @@ dataGoogleBillingAccount.DataGoogleBillingAccount.is_terraform_data_source(
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.billingAccountInput">billing_account_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.lookupProjectsInput">lookup_projects_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.openInput">open_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.billingAccount">billing_account</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.lookupProjects">lookup_projects</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.open">open</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 
 ---
@@ -682,6 +701,16 @@ id_input: str
 
 ---
 
+##### `lookup_projects_input`<sup>Optional</sup> <a name="lookup_projects_input" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.lookupProjectsInput"></a>
+
+```python
+lookup_projects_input: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+---
+
 ##### `open_input`<sup>Optional</sup> <a name="open_input" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.openInput"></a>
 
 ```python
@@ -719,6 +748,16 @@ id: str
 ```
 
 - *Type:* str
+
+---
+
+##### `lookup_projects`<sup>Required</sup> <a name="lookup_projects" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccount.property.lookupProjects"></a>
+
+```python
+lookup_projects: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
 
 ---
 
@@ -770,6 +809,7 @@ dataGoogleBillingAccount.DataGoogleBillingAccountConfig(
   billing_account: str = None,
   display_name: str = None,
   id: str = None,
+  lookup_projects: typing.Union[bool, IResolvable] = None,
   open: typing.Union[bool, IResolvable] = None
 )
 ```
@@ -785,10 +825,11 @@ dataGoogleBillingAccount.DataGoogleBillingAccountConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.billingAccount">billing_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.open">open</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.billingAccount">billing_account</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.lookupProjects">lookup_projects</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#lookup_projects DataGoogleBillingAccount#lookup_projects}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.open">open</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}. |
 
 ---
 
@@ -870,7 +911,7 @@ billing_account: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#billing_account DataGoogleBillingAccount#billing_account}.
 
 ---
 
@@ -882,7 +923,7 @@ display_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#display_name DataGoogleBillingAccount#display_name}.
 
 ---
 
@@ -894,10 +935,22 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#id DataGoogleBillingAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `lookup_projects`<sup>Optional</sup> <a name="lookup_projects" id="@cdktf/provider-google.dataGoogleBillingAccount.DataGoogleBillingAccountConfig.property.lookupProjects"></a>
+
+```python
+lookup_projects: typing.Union[bool, IResolvable]
+```
+
+- *Type:* typing.Union[bool, cdktf.IResolvable]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#lookup_projects DataGoogleBillingAccount#lookup_projects}.
 
 ---
 
@@ -909,7 +962,7 @@ open: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/billing_account#open DataGoogleBillingAccount#open}.
 
 ---
 

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk
+// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk#id DataGoogleComputeDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,17 +23,17 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk#project DataGoogleComputeDisk#project}
   */
   readonly project?: string;
   /**
   * A reference to the zone where the disk resides.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
   */
   readonly zone?: string;
 }
@@ -350,7 +345,7 @@ export class DataGoogleComputeDiskSourceSnapshotEncryptionKeyList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk google_compute_disk}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk google_compute_disk}
 */
 export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
 
@@ -364,7 +359,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/compute_disk google_compute_disk} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/compute_disk google_compute_disk} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -375,7 +370,7 @@ export class DataGoogleComputeDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_disk',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.68.0',
+        providerVersion: '4.69.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

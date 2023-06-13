@@ -1,6 +1,6 @@
 # `google_compute_autoscaler`
 
-Refer to the Terraform Registory for docs: [`google_compute_autoscaler`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler).
+Refer to the Terraform Registory for docs: [`google_compute_autoscaler`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler).
 
 # `computeAutoscaler` Submodule <a name="`computeAutoscaler` Submodule" id="@cdktf/provider-google.computeAutoscaler"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_autoscaler`](https:/
 
 ### ComputeAutoscaler <a name="ComputeAutoscaler" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler google_compute_autoscaler}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler google_compute_autoscaler}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscaler(scope Construct, id *string, config ComputeAutoscalerConfig) ComputeAutoscaler
 ```
@@ -331,7 +331,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ computeautoscaler.ComputeAutoscaler_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscaler.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.ComputeAutoscaler_IsTerraformResource(x interface{}) *bool
 ```
@@ -774,17 +774,17 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicy {
 	MaxReplicas: *f64,
 	MinReplicas: *f64,
 	CooldownPeriod: *f64,
-	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization,
-	LoadBalancingUtilization: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization,
+	CpuUtilization: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization,
+	LoadBalancingUtilization: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization,
 	Metric: interface{},
 	Mode: *string,
-	ScaleInControl: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl,
+	ScaleInControl: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl,
 	ScalingSchedules: interface{},
 }
 ```
@@ -819,7 +819,7 @@ This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#max_replicas ComputeAutoscaler#max_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#max_replicas ComputeAutoscaler#max_replicas}
 
 ---
 
@@ -837,7 +837,7 @@ This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#min_replicas ComputeAutoscaler#min_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#min_replicas ComputeAutoscaler#min_replicas}
 
 ---
 
@@ -861,7 +861,7 @@ numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#cooldown_period ComputeAutoscaler#cooldown_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#cooldown_period ComputeAutoscaler#cooldown_period}
 
 ---
 
@@ -875,7 +875,7 @@ CpuUtilization ComputeAutoscalerAutoscalingPolicyCpuUtilization
 
 cpu_utilization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#cpu_utilization ComputeAutoscaler#cpu_utilization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#cpu_utilization ComputeAutoscaler#cpu_utilization}
 
 ---
 
@@ -889,7 +889,7 @@ LoadBalancingUtilization ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizat
 
 load_balancing_utilization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#load_balancing_utilization ComputeAutoscaler#load_balancing_utilization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#load_balancing_utilization ComputeAutoscaler#load_balancing_utilization}
 
 ---
 
@@ -903,7 +903,7 @@ Metric interface{}
 
 metric block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#metric ComputeAutoscaler#metric}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#metric ComputeAutoscaler#metric}
 
 ---
 
@@ -917,7 +917,7 @@ Mode *string
 
 Defines operating mode for this policy. Default value: "ON" Possible values: ["OFF", "ONLY_UP", "ON"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#mode ComputeAutoscaler#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#mode ComputeAutoscaler#mode}
 
 ---
 
@@ -931,7 +931,7 @@ ScaleInControl ComputeAutoscalerAutoscalingPolicyScaleInControl
 
 scale_in_control block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#scale_in_control ComputeAutoscaler#scale_in_control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#scale_in_control ComputeAutoscaler#scale_in_control}
 
 ---
 
@@ -945,7 +945,7 @@ ScalingSchedules interface{}
 
 scaling_schedules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#scaling_schedules ComputeAutoscaler#scaling_schedules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#scaling_schedules ComputeAutoscaler#scaling_schedules}
 
 ---
 
@@ -954,7 +954,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilization {
 	Target: *f64,
@@ -994,7 +994,7 @@ scales up until it reaches the maximum number of instances you
 specified or until the average utilization reaches the target
 utilization.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
 
 ---
 
@@ -1011,7 +1011,7 @@ Indicates whether predictive autoscaling based on CPU metric is enabled. Valid v
 * NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
 * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#predictive_method ComputeAutoscaler#predictive_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#predictive_method ComputeAutoscaler#predictive_method}
 
 ---
 
@@ -1020,7 +1020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization {
 	Target: *f64,
@@ -1048,7 +1048,7 @@ Fraction of backend capacity utilization (set in HTTP(s) load balancing configur
 Must
 be a positive float value. If not defined, the default is 0.8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
 
 ---
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetric.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyMetric {
 	Name: *string,
@@ -1088,7 +1088,7 @@ The identifier (type) of the Stackdriver Monitoring metric. The metric cannot ha
 
 The metric must have a value type of INT64 or DOUBLE.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
 
 ---
 
@@ -1111,7 +1111,7 @@ www.googleapis.com/compute/instance/network/received_bytes_count.
 The autoscaler will work to keep this value constant for each
 of the instances.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
 
 ---
 
@@ -1125,7 +1125,7 @@ Type *string
 
 Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#type ComputeAutoscaler#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#type ComputeAutoscaler#type}
 
 ---
 
@@ -1134,10 +1134,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControl {
-	MaxScaledInReplicas: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas,
+	MaxScaledInReplicas: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas,
 	TimeWindowSec: *f64,
 }
 ```
@@ -1161,7 +1161,7 @@ MaxScaledInReplicas ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInR
 
 max_scaled_in_replicas block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#max_scaled_in_replicas ComputeAutoscaler#max_scaled_in_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#max_scaled_in_replicas ComputeAutoscaler#max_scaled_in_replicas}
 
 ---
 
@@ -1175,7 +1175,7 @@ TimeWindowSec *f64
 
 How long back autoscaling should look when computing recommendations to include directives regarding slower scale down, as described above.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#time_window_sec ComputeAutoscaler#time_window_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#time_window_sec ComputeAutoscaler#time_window_sec}
 
 ---
 
@@ -1184,7 +1184,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
 	Fixed: *f64,
@@ -1211,7 +1211,7 @@ Fixed *f64
 
 Specifies a fixed number of VM instances. This must be a positive integer.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#fixed ComputeAutoscaler#fixed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#fixed ComputeAutoscaler#fixed}
 
 ---
 
@@ -1225,7 +1225,7 @@ Percent *f64
 
 Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#percent ComputeAutoscaler#percent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#percent ComputeAutoscaler#percent}
 
 ---
 
@@ -1234,7 +1234,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules {
 	DurationSec: *f64,
@@ -1253,7 +1253,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.durationSec">DurationSec</a></code> | <code>*f64</code> | The duration of time intervals (in seconds) for which this scaling schedule will be running. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.minRequiredReplicas">MinRequiredReplicas</a></code> | <code>*f64</code> | Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule. |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.schedule">Schedule</a></code> | <code>*string</code> | The start timestamps of time intervals when this scaling schedule should provide a scaling signal. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.description">Description</a></code> | <code>*string</code> | A description of a scaling schedule. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedules.property.disabled">Disabled</a></code> | <code>interface{}</code> | A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. |
@@ -1273,7 +1273,7 @@ The duration of time intervals (in seconds) for which this scaling schedule will
 
 The minimum allowed value is 300.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#duration_sec ComputeAutoscaler#duration_sec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#duration_sec ComputeAutoscaler#duration_sec}
 
 ---
 
@@ -1287,7 +1287,7 @@ MinRequiredReplicas *f64
 
 Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#min_required_replicas ComputeAutoscaler#min_required_replicas}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#min_required_replicas ComputeAutoscaler#min_required_replicas}
 
 ---
 
@@ -1299,7 +1299,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}.
 
 ---
 
@@ -1315,7 +1315,7 @@ The start timestamps of time intervals when this scaling schedule should provide
 
 This field uses the extended cron format (with an optional year field).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#schedule ComputeAutoscaler#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#schedule ComputeAutoscaler#schedule}
 
 ---
 
@@ -1329,7 +1329,7 @@ Description *string
 
 A description of a scaling schedule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#description ComputeAutoscaler#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#description ComputeAutoscaler#description}
 
 ---
 
@@ -1345,7 +1345,7 @@ A boolean value that specifies if a scaling schedule can influence autoscaler re
 
 If set to true, then a scaling schedule has no effect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#disabled ComputeAutoscaler#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#disabled ComputeAutoscaler#disabled}
 
 ---
 
@@ -1361,7 +1361,7 @@ The time zone to be used when interpreting the schedule.
 
 The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#time_zone ComputeAutoscaler#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#time_zone ComputeAutoscaler#time_zone}
 
 ---
 
@@ -1370,7 +1370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerConfig {
 	Connection: interface{},
@@ -1380,13 +1380,13 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	AutoscalingPolicy: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy,
+	AutoscalingPolicy: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicy,
 	Name: *string,
 	Target: *string,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.computeAutoscaler.ComputeAutoscalerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeAutoscaler.ComputeAutoscalerTimeouts,
 	Zone: *string,
 }
 ```
@@ -1406,8 +1406,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.name">Name</a></code> | <code>*string</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.target">Target</a></code> | <code>*string</code> | URL of the managed instance group that this autoscaler will scale. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#id ComputeAutoscaler#id}. |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#project ComputeAutoscaler#project}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#id ComputeAutoscaler#id}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#project ComputeAutoscaler#project}. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts">ComputeAutoscalerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerConfig.property.zone">Zone</a></code> | <code>*string</code> | URL of the zone where the instance group resides. |
 
@@ -1493,7 +1493,7 @@ AutoscalingPolicy ComputeAutoscalerAutoscalingPolicy
 
 autoscaling_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#autoscaling_policy ComputeAutoscaler#autoscaling_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#autoscaling_policy ComputeAutoscaler#autoscaling_policy}
 
 ---
 
@@ -1513,7 +1513,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#name ComputeAutoscaler#name}
 
 ---
 
@@ -1527,7 +1527,7 @@ Target *string
 
 URL of the managed instance group that this autoscaler will scale.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#target ComputeAutoscaler#target}
 
 ---
 
@@ -1541,7 +1541,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#description ComputeAutoscaler#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#description ComputeAutoscaler#description}
 
 ---
 
@@ -1553,7 +1553,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#id ComputeAutoscaler#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#id ComputeAutoscaler#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1568,7 +1568,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#project ComputeAutoscaler#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#project ComputeAutoscaler#project}.
 
 ---
 
@@ -1582,7 +1582,7 @@ Timeouts ComputeAutoscalerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#timeouts ComputeAutoscaler#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#timeouts ComputeAutoscaler#timeouts}
 
 ---
 
@@ -1596,7 +1596,7 @@ Zone *string
 
 URL of the zone where the instance group resides.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#zone ComputeAutoscaler#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#zone ComputeAutoscaler#zone}
 
 ---
 
@@ -1605,7 +1605,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 &computeautoscaler.ComputeAutoscalerTimeouts {
 	Create: *string,
@@ -1618,9 +1618,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#create ComputeAutoscaler#create}. |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#delete ComputeAutoscaler#delete}. |
-| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#update ComputeAutoscaler#update}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#create ComputeAutoscaler#create}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#delete ComputeAutoscaler#delete}. |
+| <code><a href="#@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#update ComputeAutoscaler#update}. |
 
 ---
 
@@ -1632,7 +1632,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#create ComputeAutoscaler#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#create ComputeAutoscaler#create}.
 
 ---
 
@@ -1644,7 +1644,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#delete ComputeAutoscaler#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#delete ComputeAutoscaler#delete}.
 
 ---
 
@@ -1656,7 +1656,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/compute_autoscaler#update ComputeAutoscaler#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_autoscaler#update ComputeAutoscaler#update}.
 
 ---
 
@@ -1667,7 +1667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyCpuUtilizationOutputReference
 ```
@@ -1967,7 +1967,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyCpuUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutputReference
 ```
@@ -2238,7 +2238,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyLoadBalancingUtilization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyMetricList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeAutoscalerAutoscalingPolicyMetricList
 ```
@@ -2381,7 +2381,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyMetricOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyMetricOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeAutoscalerAutoscalingPolicyMetricOutputReference
 ```
@@ -2728,7 +2728,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyOutputReference
 ```
@@ -3289,7 +3289,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutputReference
 ```
@@ -3596,7 +3596,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyScaleInControlMaxScaledIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerAutoscalingPolicyScaleInControlOutputReference
 ```
@@ -3916,7 +3916,7 @@ func InternalValue() ComputeAutoscalerAutoscalingPolicyScaleInControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScalingSchedulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ComputeAutoscalerAutoscalingPolicyScalingSchedulesList
 ```
@@ -4059,7 +4059,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ComputeAutoscalerAutoscalingPolicyScalingSchedulesOutputReference
 ```
@@ -4501,7 +4501,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAutoscaler.ComputeAutoscalerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/computeautoscaler"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeautoscaler"
 
 computeautoscaler.NewComputeAutoscalerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeAutoscalerTimeoutsOutputReference
 ```

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/game_services_game_server_deployment_rollout
+// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/game_services_game_server_deployment_rollout
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends
   /**
   * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
   */
   readonly deploymentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -162,7 +157,7 @@ export class DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOv
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}
 */
 export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.TerraformDataSource {
 
@@ -176,7 +171,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -187,7 +182,7 @@ export class DataGoogleGameServicesGameServerDeploymentRollout extends cdktf.Ter
       terraformResourceType: 'google_game_services_game_server_deployment_rollout',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.68.0',
+        providerVersion: '4.69.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

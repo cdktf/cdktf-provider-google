@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset
+// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   /**
   * A human-readable description of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#description NetworkServicesEdgeCacheKeyset#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#description NetworkServicesEdgeCacheKeyset#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,7 +23,7 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   /**
   * Set of label tags associated with the EdgeCache resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -36,29 +31,29 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#name NetworkServicesEdgeCacheKeyset#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#name NetworkServicesEdgeCacheKeyset#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#project NetworkServicesEdgeCacheKeyset#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#project NetworkServicesEdgeCacheKeyset#project}
   */
   readonly project?: string;
   /**
   * public_key block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
   */
   readonly publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheKeysetTimeouts;
   /**
   * validation_shared_keys block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#validation_shared_keys NetworkServicesEdgeCacheKeyset#validation_shared_keys}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#validation_shared_keys NetworkServicesEdgeCacheKeyset#validation_shared_keys}
   */
   readonly validationSharedKeys?: NetworkServicesEdgeCacheKeysetValidationSharedKeys[] | cdktf.IResolvable;
 }
@@ -68,7 +63,7 @@ export interface NetworkServicesEdgeCacheKeysetPublicKey {
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
 which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -77,14 +72,14 @@ which means the first character must be a letter, and all following characters m
   /**
   * Set to true to have the CDN automatically manage this public key value.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#managed NetworkServicesEdgeCacheKeyset#managed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#managed NetworkServicesEdgeCacheKeyset#managed}
   */
   readonly managed?: boolean | cdktf.IResolvable;
   /**
   * The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
 Representations or encodings of the public key other than this will be rejected with an error.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
   */
   readonly value?: string;
 }
@@ -224,15 +219,15 @@ export class NetworkServicesEdgeCacheKeysetPublicKeyList extends cdktf.ComplexLi
 }
 export interface NetworkServicesEdgeCacheKeysetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#create NetworkServicesEdgeCacheKeyset#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#create NetworkServicesEdgeCacheKeyset#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#delete NetworkServicesEdgeCacheKeyset#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#delete NetworkServicesEdgeCacheKeyset#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#update NetworkServicesEdgeCacheKeyset#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#update NetworkServicesEdgeCacheKeyset#update}
   */
   readonly update?: string;
 }
@@ -361,7 +356,7 @@ The secrets must be at least 16 bytes large.  The recommended secret size depend
 * If you are using HMAC-SHA256, we suggest 32-byte secrets.
 See RFC 2104, Section 3 for more details on these recommendations.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}
   */
   readonly secretVersion: string;
 }
@@ -455,7 +450,7 @@ export class NetworkServicesEdgeCacheKeysetValidationSharedKeysList extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset google_network_services_edge_cache_keyset}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset google_network_services_edge_cache_keyset}
 */
 export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
 
@@ -469,7 +464,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/network_services_edge_cache_keyset google_network_services_edge_cache_keyset} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/network_services_edge_cache_keyset google_network_services_edge_cache_keyset} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -480,7 +475,7 @@ export class NetworkServicesEdgeCacheKeyset extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_edge_cache_keyset',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.68.0',
+        providerVersion: '4.69.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

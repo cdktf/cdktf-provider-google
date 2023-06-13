@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/dns_keys
+// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/dns_keys
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,13 +10,13 @@ export interface DataGoogleDnsKeysConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Name of the zone.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/dns_keys#managed_zone DataGoogleDnsKeys#managed_zone}
   */
   readonly managedZone: string;
   /**
   * The ID of the project for the Google Cloud.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/dns_keys#project DataGoogleDnsKeys#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/dns_keys#project DataGoogleDnsKeys#project}
   */
   readonly project?: string;
 }
@@ -380,7 +375,7 @@ export class DataGoogleDnsKeysZoneSigningKeysList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/dns_keys google_dns_keys}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/dns_keys google_dns_keys}
 */
 export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
 
@@ -394,7 +389,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/dns_keys google_dns_keys} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/dns_keys google_dns_keys} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -405,7 +400,7 @@ export class DataGoogleDnsKeys extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_dns_keys',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.68.0',
+        providerVersion: '4.69.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

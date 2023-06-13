@@ -1,6 +1,6 @@
 # `google_kms_crypto_key_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_kms_crypto_key_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member).
+Refer to the Terraform Registory for docs: [`google_kms_crypto_key_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member).
 
 # `kmsCryptoKeyIamMember` Submodule <a name="`kmsCryptoKeyIamMember` Submodule" id="@cdktf/provider-google.kmsCryptoKeyIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_kms_crypto_key_iam_member`](
 
 ### KmsCryptoKeyIamMember <a name="KmsCryptoKeyIamMember" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member google_kms_crypto_key_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member google_kms_crypto_key_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 kmscryptokeyiammember.NewKmsCryptoKeyIamMember(scope Construct, id *string, config KmsCryptoKeyIamMemberConfig) KmsCryptoKeyIamMember
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 kmscryptokeyiammember.KmsCryptoKeyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 kmscryptokeyiammember.KmsCryptoKeyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ kmscryptokeyiammember.KmsCryptoKeyIamMember_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 kmscryptokeyiammember.KmsCryptoKeyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 &kmscryptokeyiammember.KmsCryptoKeyIamMemberCondition {
 	Expression: *string,
@@ -676,9 +676,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammembe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#expression KmsCryptoKeyIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#title KmsCryptoKeyIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#description KmsCryptoKeyIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#expression KmsCryptoKeyIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#title KmsCryptoKeyIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#description KmsCryptoKeyIamMember#description}. |
 
 ---
 
@@ -690,7 +690,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#expression KmsCryptoKeyIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#expression KmsCryptoKeyIamMember#expression}.
 
 ---
 
@@ -702,7 +702,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#title KmsCryptoKeyIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#title KmsCryptoKeyIamMember#title}.
 
 ---
 
@@ -714,7 +714,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#description KmsCryptoKeyIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#description KmsCryptoKeyIamMember#description}.
 
 ---
 
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 &kmscryptokeyiammember.KmsCryptoKeyIamMemberConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammembe
 	CryptoKeyId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -752,11 +752,11 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammembe
 | <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.cryptoKeyId">CryptoKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}. |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#member KmsCryptoKeyIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#role KmsCryptoKeyIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.cryptoKeyId">CryptoKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#member KmsCryptoKeyIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#role KmsCryptoKeyIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberCondition">KmsCryptoKeyIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#id KmsCryptoKeyIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#id KmsCryptoKeyIamMember#id}. |
 
 ---
 
@@ -838,7 +838,7 @@ CryptoKeyId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#crypto_key_id KmsCryptoKeyIamMember#crypto_key_id}.
 
 ---
 
@@ -850,7 +850,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#member KmsCryptoKeyIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#member KmsCryptoKeyIamMember#member}.
 
 ---
 
@@ -862,7 +862,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#role KmsCryptoKeyIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#role KmsCryptoKeyIamMember#role}.
 
 ---
 
@@ -876,7 +876,7 @@ Condition KmsCryptoKeyIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#condition KmsCryptoKeyIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#condition KmsCryptoKeyIamMember#condition}
 
 ---
 
@@ -888,7 +888,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/kms_crypto_key_iam_member#id KmsCryptoKeyIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/kms_crypto_key_iam_member#id KmsCryptoKeyIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsCryptoKeyIamMember.KmsCryptoKeyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/kmscryptokeyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/kmscryptokeyiammember"
 
 kmscryptokeyiammember.NewKmsCryptoKeyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KmsCryptoKeyIamMemberConditionOutputReference
 ```

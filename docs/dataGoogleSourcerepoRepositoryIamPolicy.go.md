@@ -1,6 +1,6 @@
 # `data_google_sourcerepo_repository_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy).
 
 # `dataGoogleSourcerepoRepositoryIamPolicy` Submodule <a name="`dataGoogleSourcerepoRepositoryIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_sourcerepo_repository_i
 
 ### DataGoogleSourcerepoRepositoryIamPolicy <a name="DataGoogleSourcerepoRepositoryIamPolicy" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy google_sourcerepo_repository_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.NewDataGoogleSourcerepoRepositoryIamPolicy(scope Construct, id *string, config DataGoogleSourcerepoRepositoryIamPolicyConfig) DataGoogleSourcerepoRepositoryIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
 
 &datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig {
 	Connection: interface{},
@@ -622,9 +622,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagooglesourcerepo
 | <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.repository">Repository</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#repository DataGoogleSourcerepoRepositoryIamPolicy#repository}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#id DataGoogleSourcerepoRepositoryIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#project DataGoogleSourcerepoRepositoryIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.repository">Repository</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#repository DataGoogleSourcerepoRepositoryIamPolicy#repository}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#id DataGoogleSourcerepoRepositoryIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#project DataGoogleSourcerepoRepositoryIamPolicy#project}. |
 
 ---
 
@@ -706,7 +706,7 @@ Repository *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#repository DataGoogleSourcerepoRepositoryIamPolicy#repository}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#repository DataGoogleSourcerepoRepositoryIamPolicy#repository}.
 
 ---
 
@@ -718,7 +718,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#id DataGoogleSourcerepoRepositoryIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#id DataGoogleSourcerepoRepositoryIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -733,7 +733,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/data-sources/sourcerepo_repository_iam_policy#project DataGoogleSourcerepoRepositoryIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/sourcerepo_repository_iam_policy#project DataGoogleSourcerepoRepositoryIamPolicy#project}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_bigtable_instance_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member).
+Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member).
 
 # `bigtableInstanceIamMember` Submodule <a name="`bigtableInstanceIamMember` Submodule" id="@cdktf/provider-google.bigtableInstanceIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_bigtable_instance_iam_member
 
 ### BigtableInstanceIamMember <a name="BigtableInstanceIamMember" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member google_bigtable_instance_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 bigtableinstanceiammember.NewBigtableInstanceIamMember(scope Construct, id *string, config BigtableInstanceIamMemberConfig) BigtableInstanceIamMember
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 bigtableinstanceiammember.BigtableInstanceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 bigtableinstanceiammember.BigtableInstanceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ bigtableinstanceiammember.BigtableInstanceIamMember_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 bigtableinstanceiammember.BigtableInstanceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 &bigtableinstanceiammember.BigtableInstanceIamMemberCondition {
 	Expression: *string,
@@ -705,9 +705,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiamm
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#expression BigtableInstanceIamMember#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#title BigtableInstanceIamMember#title}.
 
 ---
 
@@ -743,7 +743,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#description BigtableInstanceIamMember#description}.
 
 ---
 
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 &bigtableinstanceiammember.BigtableInstanceIamMemberConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiamm
 	Instance: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -782,12 +782,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiamm
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.instance">Instance</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.instance">Instance</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberCondition">BigtableInstanceIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ Instance *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#instance BigtableInstanceIamMember#instance}.
 
 ---
 
@@ -881,7 +881,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#member BigtableInstanceIamMember#member}.
 
 ---
 
@@ -893,7 +893,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#role BigtableInstanceIamMember#role}.
 
 ---
 
@@ -907,7 +907,7 @@ Condition BigtableInstanceIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#id BigtableInstanceIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/bigtable_instance_iam_member#project BigtableInstanceIamMember#project}.
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableInstanceIamMember.BigtableInstanceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/bigtableinstanceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtableinstanceiammember"
 
 bigtableinstanceiammember.NewBigtableInstanceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BigtableInstanceIamMemberConditionOutputReference
 ```

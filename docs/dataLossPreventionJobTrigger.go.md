@@ -1,6 +1,6 @@
 # `google_data_loss_prevention_job_trigger`
 
-Refer to the Terraform Registory for docs: [`google_data_loss_prevention_job_trigger`](https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger).
+Refer to the Terraform Registory for docs: [`google_data_loss_prevention_job_trigger`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger).
 
 # `dataLossPreventionJobTrigger` Submodule <a name="`dataLossPreventionJobTrigger` Submodule" id="@cdktf/provider-google.dataLossPreventionJobTrigger"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_data_loss_prevention_job_tri
 
 ### DataLossPreventionJobTrigger <a name="DataLossPreventionJobTrigger" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTrigger"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger google_data_loss_prevention_job_trigger}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTrigger(scope Construct, id *string, config DataLossPreventionJobTriggerConfig) DataLossPreventionJobTrigger
 ```
@@ -351,7 +351,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTrigger.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.DataLossPreventionJobTrigger_IsConstruct(x interface{}) *bool
 ```
@@ -383,7 +383,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTrigger.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.DataLossPreventionJobTrigger_IsTerraformElement(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ datalosspreventionjobtrigger.DataLossPreventionJobTrigger_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTrigger.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.DataLossPreventionJobTrigger_IsTerraformResource(x interface{}) *bool
 ```
@@ -816,7 +816,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerConfig {
 	Connection: interface{},
@@ -831,9 +831,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
-	InspectJob: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob,
+	InspectJob: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob,
 	Status: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts,
 }
 ```
 
@@ -852,7 +852,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.triggers">Triggers</a></code> | <code>interface{}</code> | triggers block. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.description">Description</a></code> | <code>*string</code> | A description of the job trigger. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User set display name of the job trigger. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.inspectJob">InspectJob</a></code> | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob">DataLossPreventionJobTriggerInspectJob</a></code> | inspect_job block. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.status">Status</a></code> | <code>*string</code> | Whether the trigger is currently active. Default value: "HEALTHY" Possible values: ["PAUSED", "HEALTHY", "CANCELLED"]. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts">DataLossPreventionJobTriggerTimeouts</a></code> | timeouts block. |
@@ -939,7 +939,7 @@ Parent *string
 
 The parent of the trigger, either in the format 'projects/{{project}}' or 'projects/{{project}}/locations/{{location}}'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#parent DataLossPreventionJobTrigger#parent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#parent DataLossPreventionJobTrigger#parent}
 
 ---
 
@@ -953,7 +953,7 @@ Triggers interface{}
 
 triggers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#triggers DataLossPreventionJobTrigger#triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#triggers DataLossPreventionJobTrigger#triggers}
 
 ---
 
@@ -967,7 +967,7 @@ Description *string
 
 A description of the job trigger.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
 
 ---
 
@@ -981,7 +981,7 @@ DisplayName *string
 
 User set display name of the job trigger.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#display_name DataLossPreventionJobTrigger#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#display_name DataLossPreventionJobTrigger#display_name}
 
 ---
 
@@ -993,7 +993,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#id DataLossPreventionJobTrigger#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1010,7 +1010,7 @@ InspectJob DataLossPreventionJobTriggerInspectJob
 
 inspect_job block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#inspect_job DataLossPreventionJobTrigger#inspect_job}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#inspect_job DataLossPreventionJobTrigger#inspect_job}
 
 ---
 
@@ -1024,7 +1024,7 @@ Status *string
 
 Whether the trigger is currently active. Default value: "HEALTHY" Possible values: ["PAUSED", "HEALTHY", "CANCELLED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#status DataLossPreventionJobTrigger#status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#status DataLossPreventionJobTrigger#status}
 
 ---
 
@@ -1038,7 +1038,7 @@ Timeouts DataLossPreventionJobTriggerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#timeouts DataLossPreventionJobTrigger#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#timeouts DataLossPreventionJobTrigger#timeouts}
 
 ---
 
@@ -1047,13 +1047,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJob {
-	Actions: interface{},
 	InspectTemplateName: *string,
-	StorageConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfig,
-	InspectConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfig,
+	StorageConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfig,
+	Actions: interface{},
+	InspectConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfig,
 }
 ```
 
@@ -1061,24 +1061,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.actions">Actions</a></code> | <code>interface{}</code> | actions block. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.inspectTemplateName">InspectTemplateName</a></code> | <code>*string</code> | The name of the template to run when this job is triggered. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.storageConfig">StorageConfig</a></code> | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfig">DataLossPreventionJobTriggerInspectJobStorageConfig</a></code> | storage_config block. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.actions">Actions</a></code> | <code>interface{}</code> | actions block. |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.inspectConfig">InspectConfig</a></code> | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfig">DataLossPreventionJobTriggerInspectJobInspectConfig</a></code> | inspect_config block. |
-
----
-
-##### `Actions`<sup>Required</sup> <a name="Actions" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.actions"></a>
-
-```go
-Actions interface{}
-```
-
-- *Type:* interface{}
-
-actions block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#actions DataLossPreventionJobTrigger#actions}
 
 ---
 
@@ -1092,7 +1078,7 @@ InspectTemplateName *string
 
 The name of the template to run when this job is triggered.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#inspect_template_name DataLossPreventionJobTrigger#inspect_template_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#inspect_template_name DataLossPreventionJobTrigger#inspect_template_name}
 
 ---
 
@@ -1106,7 +1092,21 @@ StorageConfig DataLossPreventionJobTriggerInspectJobStorageConfig
 
 storage_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#storage_config DataLossPreventionJobTrigger#storage_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#storage_config DataLossPreventionJobTrigger#storage_config}
+
+---
+
+##### `Actions`<sup>Optional</sup> <a name="Actions" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJob.property.actions"></a>
+
+```go
+Actions interface{}
+```
+
+- *Type:* interface{}
+
+actions block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#actions DataLossPreventionJobTrigger#actions}
 
 ---
 
@@ -1120,7 +1120,7 @@ InspectConfig DataLossPreventionJobTriggerInspectJobInspectConfig
 
 inspect_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#inspect_config DataLossPreventionJobTrigger#inspect_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#inspect_config DataLossPreventionJobTrigger#inspect_config}
 
 ---
 
@@ -1129,16 +1129,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActions {
-	Deidentify: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentify,
-	JobNotificationEmails: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmails,
-	PublishFindingsToCloudDataCatalog: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog,
-	PublishSummaryToCscc: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc,
-	PublishToStackdriver: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriver,
-	PubSub: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPubSub,
-	SaveFindings: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindings,
+	Deidentify: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentify,
+	JobNotificationEmails: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmails,
+	PublishFindingsToCloudDataCatalog: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog,
+	PublishSummaryToCscc: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc,
+	PublishToStackdriver: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriver,
+	PubSub: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPubSub,
+	SaveFindings: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindings,
 }
 ```
 
@@ -1166,7 +1166,7 @@ Deidentify DataLossPreventionJobTriggerInspectJobActionsDeidentify
 
 deidentify block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#deidentify DataLossPreventionJobTrigger#deidentify}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#deidentify DataLossPreventionJobTrigger#deidentify}
 
 ---
 
@@ -1180,7 +1180,7 @@ JobNotificationEmails DataLossPreventionJobTriggerInspectJobActionsJobNotificati
 
 job_notification_emails block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#job_notification_emails DataLossPreventionJobTrigger#job_notification_emails}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#job_notification_emails DataLossPreventionJobTrigger#job_notification_emails}
 
 ---
 
@@ -1194,7 +1194,7 @@ PublishFindingsToCloudDataCatalog DataLossPreventionJobTriggerInspectJobActionsP
 
 publish_findings_to_cloud_data_catalog block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#publish_findings_to_cloud_data_catalog DataLossPreventionJobTrigger#publish_findings_to_cloud_data_catalog}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#publish_findings_to_cloud_data_catalog DataLossPreventionJobTrigger#publish_findings_to_cloud_data_catalog}
 
 ---
 
@@ -1208,7 +1208,7 @@ PublishSummaryToCscc DataLossPreventionJobTriggerInspectJobActionsPublishSummary
 
 publish_summary_to_cscc block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#publish_summary_to_cscc DataLossPreventionJobTrigger#publish_summary_to_cscc}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#publish_summary_to_cscc DataLossPreventionJobTrigger#publish_summary_to_cscc}
 
 ---
 
@@ -1222,7 +1222,7 @@ PublishToStackdriver DataLossPreventionJobTriggerInspectJobActionsPublishToStack
 
 publish_to_stackdriver block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#publish_to_stackdriver DataLossPreventionJobTrigger#publish_to_stackdriver}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#publish_to_stackdriver DataLossPreventionJobTrigger#publish_to_stackdriver}
 
 ---
 
@@ -1236,7 +1236,7 @@ PubSub DataLossPreventionJobTriggerInspectJobActionsPubSub
 
 pub_sub block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#pub_sub DataLossPreventionJobTrigger#pub_sub}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#pub_sub DataLossPreventionJobTrigger#pub_sub}
 
 ---
 
@@ -1250,7 +1250,7 @@ SaveFindings DataLossPreventionJobTriggerInspectJobActionsSaveFindings
 
 save_findings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#save_findings DataLossPreventionJobTrigger#save_findings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#save_findings DataLossPreventionJobTrigger#save_findings}
 
 ---
 
@@ -1259,13 +1259,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentify.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentify {
 	CloudStorageOutput: *string,
 	FileTypesToTransform: *[]*string,
-	TransformationConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfig,
-	TransformationDetailsStorageConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfig,
+	TransformationConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfig,
+	TransformationDetailsStorageConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfig,
 }
 ```
 
@@ -1298,7 +1298,7 @@ De-identified files will overwrite files in the output path.
 
 Form of: gs://bucket/folder/ or gs://bucket
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_output DataLossPreventionJobTrigger#cloud_storage_output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_output DataLossPreventionJobTrigger#cloud_storage_output}
 
 ---
 
@@ -1316,7 +1316,7 @@ If empty, all supported files will be transformed. Supported types may be automa
 
 If a file type is set in this field that isn't supported by the Deidentify action then the job will fail and will not be successfully created/started. Possible values: ["IMAGE", "TEXT_FILE", "CSV", "TSV"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#file_types_to_transform DataLossPreventionJobTrigger#file_types_to_transform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#file_types_to_transform DataLossPreventionJobTrigger#file_types_to_transform}
 
 ---
 
@@ -1330,7 +1330,7 @@ TransformationConfig DataLossPreventionJobTriggerInspectJobActionsDeidentifyTran
 
 transformation_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#transformation_config DataLossPreventionJobTrigger#transformation_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#transformation_config DataLossPreventionJobTrigger#transformation_config}
 
 ---
 
@@ -1344,7 +1344,7 @@ TransformationDetailsStorageConfig DataLossPreventionJobTriggerInspectJobActions
 
 transformation_details_storage_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#transformation_details_storage_config DataLossPreventionJobTrigger#transformation_details_storage_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#transformation_details_storage_config DataLossPreventionJobTrigger#transformation_details_storage_config}
 
 ---
 
@@ -1353,7 +1353,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfig {
 	DeidentifyTemplate: *string,
@@ -1382,7 +1382,7 @@ DeidentifyTemplate *string
 
 If this template is specified, it will serve as the default de-identify template.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#deidentify_template DataLossPreventionJobTrigger#deidentify_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#deidentify_template DataLossPreventionJobTrigger#deidentify_template}
 
 ---
 
@@ -1396,7 +1396,7 @@ ImageRedactTemplate *string
 
 If this template is specified, it will serve as the de-identify template for images.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#image_redact_template DataLossPreventionJobTrigger#image_redact_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#image_redact_template DataLossPreventionJobTrigger#image_redact_template}
 
 ---
 
@@ -1410,7 +1410,7 @@ StructuredDeidentifyTemplate *string
 
 If this template is specified, it will serve as the de-identify template for structured content such as delimited files and tables.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#structured_deidentify_template DataLossPreventionJobTrigger#structured_deidentify_template}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#structured_deidentify_template DataLossPreventionJobTrigger#structured_deidentify_template}
 
 ---
 
@@ -1419,10 +1419,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfig {
-	Table: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable,
+	Table: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable,
 }
 ```
 
@@ -1444,7 +1444,7 @@ Table DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetai
 
 table block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
 
 ---
 
@@ -1453,7 +1453,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTable {
 	DatasetId: *string,
@@ -1482,7 +1482,7 @@ DatasetId *string
 
 The ID of the dataset containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
 
 ---
 
@@ -1496,7 +1496,7 @@ ProjectId *string
 
 The ID of the project containing this table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
 
 ---
 
@@ -1514,7 +1514,7 @@ The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
 
 ---
 
@@ -1523,7 +1523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmails.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmails {
 
@@ -1536,7 +1536,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalog {
 
@@ -1549,7 +1549,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCscc {
 
@@ -1562,7 +1562,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriver {
 
@@ -1575,7 +1575,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPubSub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsPubSub {
 	Topic: *string,
@@ -1600,7 +1600,7 @@ Topic *string
 
 Cloud Pub/Sub topic to send notifications to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#topic DataLossPreventionJobTrigger#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#topic DataLossPreventionJobTrigger#topic}
 
 ---
 
@@ -1609,10 +1609,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindings {
-	OutputConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig,
+	OutputConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig,
 }
 ```
 
@@ -1634,7 +1634,7 @@ OutputConfig DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConf
 
 output_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#output_config DataLossPreventionJobTrigger#output_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#output_config DataLossPreventionJobTrigger#output_config}
 
 ---
 
@@ -1643,10 +1643,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfig {
-	Table: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable,
+	Table: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable,
 	OutputSchema: *string,
 }
 ```
@@ -1670,7 +1670,7 @@ Table DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable
 
 table block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table DataLossPreventionJobTrigger#table}
 
 ---
 
@@ -1693,7 +1693,7 @@ If unspecified, then all available columns will be used for a new table or an (e
 table with no schema, and no changes will be made to an existing table that has a schema.
 Only for use with external storage. Possible values: ["BASIC_COLUMNS", "GCS_COLUMNS", "DATASTORE_COLUMNS", "BIG_QUERY_COLUMNS", "ALL_COLUMNS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#output_schema DataLossPreventionJobTrigger#output_schema}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#output_schema DataLossPreventionJobTrigger#output_schema}
 
 ---
 
@@ -1702,7 +1702,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTable {
 	DatasetId: *string,
@@ -1731,7 +1731,7 @@ DatasetId *string
 
 Dataset ID of the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
 
 ---
 
@@ -1745,7 +1745,7 @@ ProjectId *string
 
 The Google Cloud Platform project ID of the project containing the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
 
 ---
 
@@ -1762,7 +1762,7 @@ Name of the table.
 If is not set a new one will be generated for you with the following format:
 'dlp_googleapis_yyyy_mm_dd_[dlp_job_id]'. Pacific timezone will be used for generating the date details.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
 
 ---
 
@@ -1771,14 +1771,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfig {
 	CustomInfoTypes: interface{},
 	ExcludeInfoTypes: interface{},
 	IncludeQuote: interface{},
 	InfoTypes: interface{},
-	Limits: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimits,
+	Limits: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimits,
 	MinLikelihood: *string,
 	RuleSet: interface{},
 }
@@ -1808,7 +1808,7 @@ CustomInfoTypes interface{}
 
 custom_info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#custom_info_types DataLossPreventionJobTrigger#custom_info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#custom_info_types DataLossPreventionJobTrigger#custom_info_types}
 
 ---
 
@@ -1822,7 +1822,7 @@ ExcludeInfoTypes interface{}
 
 When true, excludes type information of the findings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
 
 ---
 
@@ -1836,7 +1836,7 @@ IncludeQuote interface{}
 
 When true, a contextual quote from the data that triggered a finding is included in the response.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#include_quote DataLossPreventionJobTrigger#include_quote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#include_quote DataLossPreventionJobTrigger#include_quote}
 
 ---
 
@@ -1850,7 +1850,7 @@ InfoTypes interface{}
 
 info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
 
 ---
 
@@ -1864,7 +1864,7 @@ Limits DataLossPreventionJobTriggerInspectJobInspectConfigLimits
 
 limits block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#limits DataLossPreventionJobTrigger#limits}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#limits DataLossPreventionJobTrigger#limits}
 
 ---
 
@@ -1880,7 +1880,7 @@ Only returns findings equal or above this threshold.
 
 See https://cloud.google.com/dlp/docs/likelihood for more info Default value: "POSSIBLE" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#min_likelihood DataLossPreventionJobTrigger#min_likelihood}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#min_likelihood DataLossPreventionJobTrigger#min_likelihood}
 
 ---
 
@@ -1894,7 +1894,7 @@ RuleSet interface{}
 
 rule_set block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#rule_set DataLossPreventionJobTrigger#rule_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#rule_set DataLossPreventionJobTrigger#rule_set}
 
 ---
 
@@ -1903,16 +1903,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes {
-	InfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType,
-	Dictionary: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary,
+	InfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType,
+	Dictionary: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary,
 	ExclusionType: *string,
 	Likelihood: *string,
-	Regex: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex,
-	StoredType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType,
-	SurrogateType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType,
+	Regex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex,
+	StoredType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType,
+	SurrogateType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType,
 }
 ```
 
@@ -1940,7 +1940,7 @@ InfoType DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoT
 
 info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
 
 ---
 
@@ -1954,7 +1954,7 @@ Dictionary DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDic
 
 dictionary block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
 
 ---
 
@@ -1970,7 +1970,7 @@ If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be re
 
 It still can be used for rules matching. Possible values: ["EXCLUSION_TYPE_EXCLUDE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclusion_type DataLossPreventionJobTrigger#exclusion_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclusion_type DataLossPreventionJobTrigger#exclusion_type}
 
 ---
 
@@ -1987,7 +1987,7 @@ Likelihood to return for this CustomInfoType.
 This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#likelihood DataLossPreventionJobTrigger#likelihood}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#likelihood DataLossPreventionJobTrigger#likelihood}
 
 ---
 
@@ -2001,7 +2001,7 @@ Regex DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex
 
 regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
 
 ---
 
@@ -2015,7 +2015,7 @@ StoredType DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSto
 
 stored_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#stored_type DataLossPreventionJobTrigger#stored_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#stored_type DataLossPreventionJobTrigger#stored_type}
 
 ---
 
@@ -2029,7 +2029,7 @@ SurrogateType DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypes
 
 surrogate_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#surrogate_type DataLossPreventionJobTrigger#surrogate_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#surrogate_type DataLossPreventionJobTrigger#surrogate_type}
 
 ---
 
@@ -2038,11 +2038,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionary {
-	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath,
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStruct,
+	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStruct,
 }
 ```
 
@@ -2065,7 +2065,7 @@ CloudStoragePath DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTy
 
 cloud_storage_path block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
 
 ---
 
@@ -2079,7 +2079,7 @@ WordList DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDicti
 
 word_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
 
 ---
 
@@ -2088,7 +2088,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath {
 	Path: *string,
@@ -2113,7 +2113,7 @@ Path *string
 
 A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
 
 ---
 
@@ -2122,7 +2122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStruct {
 	Words: *[]*string,
@@ -2150,7 +2150,7 @@ Words or phrases defining the dictionary.
 The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
 
 ---
 
@@ -2159,7 +2159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoType {
 	Name: *string,
@@ -2189,7 +2189,7 @@ Name of the information type.
 Either a name of your choosing when creating a CustomInfoType, or one of the names
 listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -2203,7 +2203,7 @@ Version *string
 
 Version of the information type to use. By default, the version is set to stable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
 
 ---
 
@@ -2212,7 +2212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegex {
 	Pattern: *string,
@@ -2239,7 +2239,7 @@ Pattern *string
 
 Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
 
 ---
 
@@ -2255,7 +2255,7 @@ The index of the submatch to extract as findings.
 
 When not specified, the entire match is returned. No more than 3 may be included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
 
 ---
 
@@ -2264,7 +2264,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredType {
 	Name: *string,
@@ -2289,7 +2289,7 @@ Name *string
 
 Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342' or 'projects/project-id/storedInfoTypes/432452342'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -2298,7 +2298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateType {
 
@@ -2311,7 +2311,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypes {
 	Name: *string,
@@ -2341,7 +2341,7 @@ Name of the information type.
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -2355,7 +2355,7 @@ Version *string
 
 Version of the information type to use. By default, the version is set to stable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
 
 ---
 
@@ -2364,7 +2364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimits.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimits {
 	MaxFindingsPerInfoType: interface{},
@@ -2393,7 +2393,7 @@ MaxFindingsPerInfoType interface{}
 
 max_findings_per_info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_info_type DataLossPreventionJobTrigger#max_findings_per_info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#max_findings_per_info_type DataLossPreventionJobTrigger#max_findings_per_info_type}
 
 ---
 
@@ -2407,7 +2407,7 @@ MaxFindingsPerItem *f64
 
 Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_item DataLossPreventionJobTrigger#max_findings_per_item}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#max_findings_per_item DataLossPreventionJobTrigger#max_findings_per_item}
 
 ---
 
@@ -2421,7 +2421,7 @@ MaxFindingsPerRequest *f64
 
 Max number of findings that will be returned per request/job. The maximum returned is 2000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#max_findings_per_request DataLossPreventionJobTrigger#max_findings_per_request}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#max_findings_per_request DataLossPreventionJobTrigger#max_findings_per_request}
 
 ---
 
@@ -2430,10 +2430,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoType {
-	InfoType: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType,
+	InfoType: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType,
 	MaxFindings: *f64,
 }
 ```
@@ -2457,7 +2457,7 @@ InfoType DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPer
 
 info_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#info_type DataLossPreventionJobTrigger#info_type}
 
 ---
 
@@ -2471,7 +2471,7 @@ MaxFindings *f64
 
 Max findings limit for the given infoType.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#max_findings DataLossPreventionJobTrigger#max_findings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#max_findings DataLossPreventionJobTrigger#max_findings}
 
 ---
 
@@ -2480,7 +2480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
 	Name: *string,
@@ -2510,7 +2510,7 @@ Name of the information type.
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -2524,7 +2524,7 @@ Version *string
 
 Version of the information type to use. By default, the version is set to stable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
 
 ---
 
@@ -2533,7 +2533,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSet {
 	Rules: interface{},
@@ -2560,7 +2560,7 @@ Rules interface{}
 
 rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#rules DataLossPreventionJobTrigger#rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#rules DataLossPreventionJobTrigger#rules}
 
 ---
 
@@ -2574,7 +2574,7 @@ InfoTypes interface{}
 
 info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
 
 ---
 
@@ -2583,7 +2583,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypes {
 	Name: *string,
@@ -2613,7 +2613,7 @@ Name of the information type.
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -2627,7 +2627,7 @@ Version *string
 
 Version of the information type to use. By default, the version is set to stable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
 
 ---
 
@@ -2636,11 +2636,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules {
-	ExclusionRule: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule,
-	HotwordRule: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule,
+	ExclusionRule: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule,
+	HotwordRule: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule,
 }
 ```
 
@@ -2663,7 +2663,7 @@ ExclusionRule DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExc
 
 exclusion_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclusion_rule DataLossPreventionJobTrigger#exclusion_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclusion_rule DataLossPreventionJobTrigger#exclusion_rule}
 
 ---
 
@@ -2677,7 +2677,7 @@ HotwordRule DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwo
 
 hotword_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#hotword_rule DataLossPreventionJobTrigger#hotword_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#hotword_rule DataLossPreventionJobTrigger#hotword_rule}
 
 ---
 
@@ -2686,14 +2686,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRule {
 	MatchingType: *string,
-	Dictionary: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary,
-	ExcludeByHotword: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword,
-	ExcludeInfoTypes: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes,
-	Regex: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex,
+	Dictionary: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary,
+	ExcludeByHotword: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword,
+	ExcludeInfoTypes: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes,
+	Regex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex,
 }
 ```
 
@@ -2719,7 +2719,7 @@ MatchingType *string
 
 How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType Possible values: ["MATCHING_TYPE_FULL_MATCH", "MATCHING_TYPE_PARTIAL_MATCH", "MATCHING_TYPE_INVERSE_MATCH"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#matching_type DataLossPreventionJobTrigger#matching_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#matching_type DataLossPreventionJobTrigger#matching_type}
 
 ---
 
@@ -2733,7 +2733,7 @@ Dictionary DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclus
 
 dictionary block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#dictionary DataLossPreventionJobTrigger#dictionary}
 
 ---
 
@@ -2747,7 +2747,7 @@ ExcludeByHotword DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules
 
 exclude_by_hotword block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclude_by_hotword DataLossPreventionJobTrigger#exclude_by_hotword}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclude_by_hotword DataLossPreventionJobTrigger#exclude_by_hotword}
 
 ---
 
@@ -2761,7 +2761,7 @@ ExcludeInfoTypes DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules
 
 exclude_info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclude_info_types DataLossPreventionJobTrigger#exclude_info_types}
 
 ---
 
@@ -2775,7 +2775,7 @@ Regex DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRu
 
 regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#regex DataLossPreventionJobTrigger#regex}
 
 ---
 
@@ -2784,11 +2784,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary {
-	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath,
-	WordList: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct,
+	CloudStoragePath: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath,
+	WordList: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct,
 }
 ```
 
@@ -2811,7 +2811,7 @@ CloudStoragePath DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRules
 
 cloud_storage_path block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_path DataLossPreventionJobTrigger#cloud_storage_path}
 
 ---
 
@@ -2825,7 +2825,7 @@ WordList DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusio
 
 word_list block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#word_list DataLossPreventionJobTrigger#word_list}
 
 ---
 
@@ -2834,7 +2834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath {
 	Path: *string,
@@ -2859,7 +2859,7 @@ Path *string
 
 A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#path DataLossPreventionJobTrigger#path}
 
 ---
 
@@ -2868,7 +2868,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct {
 	Words: *[]*string,
@@ -2896,7 +2896,7 @@ Words or phrases defining the dictionary.
 The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#words DataLossPreventionJobTrigger#words}
 
 ---
 
@@ -2905,11 +2905,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotword {
-	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex,
-	Proximity: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity,
+	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex,
+	Proximity: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity,
 }
 ```
 
@@ -2932,7 +2932,7 @@ HotwordRegex DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExcl
 
 hotword_regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
 
 ---
 
@@ -2946,7 +2946,7 @@ Proximity DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusi
 
 proximity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
 
 ---
 
@@ -2955,7 +2955,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex {
 	GroupIndexes: *[]*f64,
@@ -2985,7 +2985,7 @@ The index of the submatch to extract as findings.
 When not specified,
 the entire match is returned. No more than 3 may be included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
 
 ---
 
@@ -2999,7 +2999,7 @@ Pattern *string
 
 Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
 
 ---
 
@@ -3008,7 +3008,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity {
 	WindowAfter: *f64,
@@ -3035,7 +3035,7 @@ WindowAfter *f64
 
 Number of characters after the finding to consider. Either this or window_before must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
 
 ---
 
@@ -3049,7 +3049,7 @@ WindowBefore *f64
 
 Number of characters before the finding to consider. Either this or window_after must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
 
 ---
 
@@ -3058,7 +3058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes {
 	InfoTypes: interface{},
@@ -3083,7 +3083,7 @@ InfoTypes interface{}
 
 info_types block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#info_types DataLossPreventionJobTrigger#info_types}
 
 ---
 
@@ -3092,7 +3092,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
 	Name: *string,
@@ -3122,7 +3122,7 @@ Name of the information type.
 Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -3136,7 +3136,7 @@ Version *string
 
 Version of the information type to use. By default, the version is set to stable.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#version DataLossPreventionJobTrigger#version}
 
 ---
 
@@ -3145,7 +3145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegex {
 	Pattern: *string,
@@ -3172,7 +3172,7 @@ Pattern *string
 
 Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
 
 ---
 
@@ -3188,7 +3188,7 @@ The index of the submatch to extract as findings.
 
 When not specified, the entire match is returned. No more than 3 may be included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
 
 ---
 
@@ -3197,12 +3197,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRule {
-	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex,
-	LikelihoodAdjustment: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment,
-	Proximity: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity,
+	HotwordRegex: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex,
+	LikelihoodAdjustment: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment,
+	Proximity: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity,
 }
 ```
 
@@ -3226,7 +3226,7 @@ HotwordRegex DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotw
 
 hotword_regex block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#hotword_regex DataLossPreventionJobTrigger#hotword_regex}
 
 ---
 
@@ -3240,7 +3240,7 @@ LikelihoodAdjustment DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 
 likelihood_adjustment block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#likelihood_adjustment DataLossPreventionJobTrigger#likelihood_adjustment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#likelihood_adjustment DataLossPreventionJobTrigger#likelihood_adjustment}
 
 ---
 
@@ -3254,7 +3254,7 @@ Proximity DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotword
 
 proximity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#proximity DataLossPreventionJobTrigger#proximity}
 
 ---
 
@@ -3263,7 +3263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex {
 	GroupIndexes: *[]*f64,
@@ -3293,7 +3293,7 @@ The index of the submatch to extract as findings.
 When not specified,
 the entire match is returned. No more than 3 may be included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#group_indexes DataLossPreventionJobTrigger#group_indexes}
 
 ---
 
@@ -3307,7 +3307,7 @@ Pattern *string
 
 Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#pattern DataLossPreventionJobTrigger#pattern}
 
 ---
 
@@ -3316,7 +3316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment {
 	FixedLikelihood: *string,
@@ -3345,7 +3345,7 @@ Set the likelihood of a finding to a fixed value.
 
 Either this or relative_likelihood can be set. Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#fixed_likelihood DataLossPreventionJobTrigger#fixed_likelihood}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#fixed_likelihood DataLossPreventionJobTrigger#fixed_likelihood}
 
 ---
 
@@ -3366,7 +3366,7 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#relative_likelihood DataLossPreventionJobTrigger#relative_likelihood}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#relative_likelihood DataLossPreventionJobTrigger#relative_likelihood}
 
 ---
 
@@ -3375,7 +3375,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximity {
 	WindowAfter: *f64,
@@ -3402,7 +3402,7 @@ WindowAfter *f64
 
 Number of characters after the finding to consider. Either this or window_before must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#window_after DataLossPreventionJobTrigger#window_after}
 
 ---
 
@@ -3416,7 +3416,7 @@ WindowBefore *f64
 
 Number of characters before the finding to consider. Either this or window_after must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#window_before DataLossPreventionJobTrigger#window_before}
 
 ---
 
@@ -3425,14 +3425,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfig {
-	BigQueryOptions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions,
-	CloudStorageOptions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions,
-	DatastoreOptions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions,
-	HybridOptions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions,
-	TimespanConfig: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig,
+	BigQueryOptions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions,
+	CloudStorageOptions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions,
+	DatastoreOptions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions,
+	HybridOptions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions,
+	TimespanConfig: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig,
 }
 ```
 
@@ -3458,7 +3458,7 @@ BigQueryOptions DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptio
 
 big_query_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#big_query_options DataLossPreventionJobTrigger#big_query_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#big_query_options DataLossPreventionJobTrigger#big_query_options}
 
 ---
 
@@ -3472,7 +3472,7 @@ CloudStorageOptions DataLossPreventionJobTriggerInspectJobStorageConfigCloudStor
 
 cloud_storage_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#cloud_storage_options DataLossPreventionJobTrigger#cloud_storage_options}
 
 ---
 
@@ -3486,7 +3486,7 @@ DatastoreOptions DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOpt
 
 datastore_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#datastore_options DataLossPreventionJobTrigger#datastore_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#datastore_options DataLossPreventionJobTrigger#datastore_options}
 
 ---
 
@@ -3500,7 +3500,7 @@ HybridOptions DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions
 
 hybrid_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#hybrid_options DataLossPreventionJobTrigger#hybrid_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#hybrid_options DataLossPreventionJobTrigger#hybrid_options}
 
 ---
 
@@ -3514,7 +3514,7 @@ TimespanConfig DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig
 
 timespan_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#timespan_config DataLossPreventionJobTrigger#timespan_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#timespan_config DataLossPreventionJobTrigger#timespan_config}
 
 ---
 
@@ -3523,10 +3523,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
-	TableReference: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference,
+	TableReference: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference,
 	ExcludedFields: interface{},
 	IdentifyingFields: interface{},
 	IncludedFields: interface{},
@@ -3560,7 +3560,7 @@ TableReference DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOption
 
 table_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table_reference DataLossPreventionJobTrigger#table_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table_reference DataLossPreventionJobTrigger#table_reference}
 
 ---
 
@@ -3574,7 +3574,7 @@ ExcludedFields interface{}
 
 excluded_fields block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#excluded_fields DataLossPreventionJobTrigger#excluded_fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#excluded_fields DataLossPreventionJobTrigger#excluded_fields}
 
 ---
 
@@ -3588,7 +3588,7 @@ IdentifyingFields interface{}
 
 identifying_fields block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
 
 ---
 
@@ -3602,7 +3602,7 @@ IncludedFields interface{}
 
 included_fields block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#included_fields DataLossPreventionJobTrigger#included_fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#included_fields DataLossPreventionJobTrigger#included_fields}
 
 ---
 
@@ -3620,7 +3620,7 @@ If the table has more rows than this value, the rest of the rows are omitted.
 If not set, or if set to 0, all rows will be scanned. Only one of rowsLimit and rowsLimitPercent can be
 specified. Cannot be used in conjunction with TimespanConfig.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#rows_limit DataLossPreventionJobTrigger#rows_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#rows_limit DataLossPreventionJobTrigger#rows_limit}
 
 ---
 
@@ -3638,7 +3638,7 @@ The rest are omitted. The number of rows scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
 rowsLimit and rowsLimitPercent can be specified. Cannot be used in conjunction with TimespanConfig.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#rows_limit_percent DataLossPreventionJobTrigger#rows_limit_percent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#rows_limit_percent DataLossPreventionJobTrigger#rows_limit_percent}
 
 ---
 
@@ -3655,7 +3655,7 @@ How to sample rows if not all rows are scanned.
 Meaningful only when used in conjunction with either
 rowsLimit or rowsLimitPercent. If not specified, rows are scanned in the order BigQuery reads them. Default value: "TOP" Possible values: ["TOP", "RANDOM_START"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
 
 ---
 
@@ -3664,7 +3664,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFields {
 	Name: *string,
@@ -3689,7 +3689,7 @@ Name *string
 
 Name describing the field excluded from scanning.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -3698,7 +3698,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFields {
 	Name: *string,
@@ -3723,7 +3723,7 @@ Name *string
 
 Name of a BigQuery field to be returned with the findings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -3732,7 +3732,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFields {
 	Name: *string,
@@ -3757,7 +3757,7 @@ Name *string
 
 Name describing the field to which scanning is limited.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -3766,7 +3766,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference {
 	DatasetId: *string,
@@ -3795,7 +3795,7 @@ DatasetId *string
 
 The dataset ID of the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#dataset_id DataLossPreventionJobTrigger#dataset_id}
 
 ---
 
@@ -3809,7 +3809,7 @@ ProjectId *string
 
 The Google Cloud Platform project ID of the project containing the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
 
 ---
 
@@ -3823,7 +3823,7 @@ TableId *string
 
 The name of the table.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table_id DataLossPreventionJobTrigger#table_id}
 
 ---
 
@@ -3832,10 +3832,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptions {
-	FileSet: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet,
+	FileSet: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet,
 	BytesLimitPerFile: *f64,
 	BytesLimitPerFilePercent: *f64,
 	FilesLimitPercent: *f64,
@@ -3867,7 +3867,7 @@ FileSet DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFi
 
 file_set block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#file_set DataLossPreventionJobTrigger#file_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#file_set DataLossPreventionJobTrigger#file_set}
 
 ---
 
@@ -3884,7 +3884,7 @@ Max number of bytes to scan from a file.
 If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file DataLossPreventionJobTrigger#bytes_limit_per_file}
 
 ---
 
@@ -3901,7 +3901,7 @@ Max percentage of bytes to scan from a file.
 The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#bytes_limit_per_file_percent DataLossPreventionJobTrigger#bytes_limit_per_file_percent}
 
 ---
 
@@ -3918,7 +3918,7 @@ Limits the number of files to scan to this percentage of the input FileSet.
 Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#files_limit_percent DataLossPreventionJobTrigger#files_limit_percent}
 
 ---
 
@@ -3936,7 +3936,7 @@ If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: ["BINARY_FILE", "TEXT_FILE", "IMAGE", "WORD", "PDF", "AVRO", "CSV", "TSV"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#file_types DataLossPreventionJobTrigger#file_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#file_types DataLossPreventionJobTrigger#file_types}
 
 ---
 
@@ -3953,7 +3953,7 @@ How to sample bytes if not all bytes are scanned.
 Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top. Possible values: ["TOP", "RANDOM_START"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#sample_method DataLossPreventionJobTrigger#sample_method}
 
 ---
 
@@ -3962,10 +3962,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
-	RegexFileSet: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet,
+	RegexFileSet: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet,
 	Url: *string,
 }
 ```
@@ -3989,7 +3989,7 @@ RegexFileSet DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOpti
 
 regex_file_set block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#regex_file_set DataLossPreventionJobTrigger#regex_file_set}
 
 ---
 
@@ -4007,7 +4007,7 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that 'gs://mybucket/' is
 equivalent to 'gs://mybucket/*', and 'gs://mybucket/directory/' is equivalent to 'gs://mybucket/directory/*'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#url DataLossPreventionJobTrigger#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#url DataLossPreventionJobTrigger#url}
 
 ---
 
@@ -4016,7 +4016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
 	BucketName: *string,
@@ -4045,7 +4045,7 @@ BucketName *string
 
 The name of a Cloud Storage bucket.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#bucket_name DataLossPreventionJobTrigger#bucket_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#bucket_name DataLossPreventionJobTrigger#bucket_name}
 
 ---
 
@@ -4062,7 +4062,7 @@ A list of regular expressions matching file paths to exclude.
 All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#exclude_regex DataLossPreventionJobTrigger#exclude_regex}
 
 ---
 
@@ -4081,7 +4081,7 @@ that match at least one of these regular expressions will be included in the set
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#include_regex DataLossPreventionJobTrigger#include_regex}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#include_regex DataLossPreventionJobTrigger#include_regex}
 
 ---
 
@@ -4090,11 +4090,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
-	Kind: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind,
-	PartitionId: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId,
+	Kind: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind,
+	PartitionId: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId,
 }
 ```
 
@@ -4117,7 +4117,7 @@ Kind DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind
 
 kind block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#kind DataLossPreventionJobTrigger#kind}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#kind DataLossPreventionJobTrigger#kind}
 
 ---
 
@@ -4131,7 +4131,7 @@ PartitionId DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsP
 
 partition_id block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#partition_id DataLossPreventionJobTrigger#partition_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#partition_id DataLossPreventionJobTrigger#partition_id}
 
 ---
 
@@ -4140,7 +4140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
 	Name: *string,
@@ -4165,7 +4165,7 @@ Name *string
 
 The name of the Datastore kind.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -4174,7 +4174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
 	ProjectId: *string,
@@ -4201,7 +4201,7 @@ ProjectId *string
 
 The ID of the project to which the entities belong.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#project_id DataLossPreventionJobTrigger#project_id}
 
 ---
 
@@ -4215,7 +4215,7 @@ NamespaceId *string
 
 If not empty, the ID of the namespace to which the entities belong.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#namespace_id DataLossPreventionJobTrigger#namespace_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#namespace_id DataLossPreventionJobTrigger#namespace_id}
 
 ---
 
@@ -4224,13 +4224,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptions {
 	Description: *string,
 	Labels: *map[string]*string,
 	RequiredFindingLabelKeys: *[]*string,
-	TableOptions: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptions,
+	TableOptions: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptions,
 }
 ```
 
@@ -4257,7 +4257,7 @@ A short description of where the data is coming from.
 
 Will be stored once in the job. 256 max length.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#description DataLossPreventionJobTrigger#description}
 
 ---
 
@@ -4281,7 +4281,7 @@ Examples:
 '"environment" : "production"'
 '"pipeline" : "etl"'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#labels DataLossPreventionJobTrigger#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#labels DataLossPreventionJobTrigger#labels}
 
 ---
 
@@ -4302,7 +4302,7 @@ Label keys must be between 1 and 63 characters long and must conform to the foll
 
 No more than 10 keys can be required.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#required_finding_label_keys DataLossPreventionJobTrigger#required_finding_label_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#required_finding_label_keys DataLossPreventionJobTrigger#required_finding_label_keys}
 
 ---
 
@@ -4316,7 +4316,7 @@ TableOptions DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTab
 
 table_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#table_options DataLossPreventionJobTrigger#table_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#table_options DataLossPreventionJobTrigger#table_options}
 
 ---
 
@@ -4325,7 +4325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptions {
 	IdentifyingFields: interface{},
@@ -4350,7 +4350,7 @@ IdentifyingFields interface{}
 
 identifying_fields block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#identifying_fields DataLossPreventionJobTrigger#identifying_fields}
 
 ---
 
@@ -4359,7 +4359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields {
 	Name: *string,
@@ -4384,7 +4384,7 @@ Name *string
 
 Name describing the field.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -4393,10 +4393,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig {
-	TimestampField: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField,
+	TimestampField: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField,
 	EnableAutoPopulationOfTimespanConfig: interface{},
 	EndTime: *string,
 	StartTime: *string,
@@ -4424,7 +4424,7 @@ TimestampField DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfig
 
 timestamp_field block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#timestamp_field DataLossPreventionJobTrigger#timestamp_field}
 
 ---
 
@@ -4441,7 +4441,7 @@ When the job is started by a JobTrigger we will automatically figure out a valid
 This will
 be based on the time of the execution of the last run of the JobTrigger.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#enable_auto_population_of_timespan_config DataLossPreventionJobTrigger#enable_auto_population_of_timespan_config}
 
 ---
 
@@ -4455,7 +4455,7 @@ EndTime *string
 
 Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#end_time DataLossPreventionJobTrigger#end_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#end_time DataLossPreventionJobTrigger#end_time}
 
 ---
 
@@ -4469,7 +4469,7 @@ StartTime *string
 
 Exclude files or rows older than this value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#start_time DataLossPreventionJobTrigger#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#start_time DataLossPreventionJobTrigger#start_time}
 
 ---
 
@@ -4478,7 +4478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField {
 	Name: *string,
@@ -4510,7 +4510,7 @@ field are: INTEGER, DATE, TIMESTAMP, or DATETIME BigQuery column.
 For Datastore. Valid data types of the timestamp field are: TIMESTAMP. Datastore entity will be scanned if the
 timestamp property does not exist or its value is empty or invalid.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#name DataLossPreventionJobTrigger#name}
 
 ---
 
@@ -4519,7 +4519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerTimeouts {
 	Create: *string,
@@ -4532,9 +4532,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}. |
-| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}. |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}. |
 
 ---
 
@@ -4546,7 +4546,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#create DataLossPreventionJobTrigger#create}.
 
 ---
 
@@ -4558,7 +4558,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#delete DataLossPreventionJobTrigger#delete}.
 
 ---
 
@@ -4570,7 +4570,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#update DataLossPreventionJobTrigger#update}.
 
 ---
 
@@ -4579,11 +4579,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerTriggers {
-	Manual: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersManual,
-	Schedule: github.com/cdktf/cdktf-provider-google-go/google/v7.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersSchedule,
+	Manual: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersManual,
+	Schedule: github.com/cdktf/cdktf-provider-google-go/google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersSchedule,
 }
 ```
 
@@ -4606,7 +4606,7 @@ Manual DataLossPreventionJobTriggerTriggersManual
 
 manual block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#manual DataLossPreventionJobTrigger#manual}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#manual DataLossPreventionJobTrigger#manual}
 
 ---
 
@@ -4620,7 +4620,7 @@ Schedule DataLossPreventionJobTriggerTriggersSchedule
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#schedule DataLossPreventionJobTrigger#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#schedule DataLossPreventionJobTrigger#schedule}
 
 ---
 
@@ -4629,7 +4629,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersManual.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerTriggersManual {
 
@@ -4642,7 +4642,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjo
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 &datalosspreventionjobtrigger.DataLossPreventionJobTriggerTriggersSchedule {
 	RecurrencePeriodDuration: *string,
@@ -4673,7 +4673,7 @@ This value must be set to a time duration greater than or equal to 1 day and can
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.68.0/docs/resources/data_loss_prevention_job_trigger#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_job_trigger#recurrence_period_duration DataLossPreventionJobTrigger#recurrence_period_duration}
 
 ---
 
@@ -4684,7 +4684,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsDeidentifyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsDeidentifyOutputReference
 ```
@@ -5068,7 +5068,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsDeidentify
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationConfigOutputReference
 ```
@@ -5404,7 +5404,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsDeidentifyTran
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigOutputReference
 ```
@@ -5688,7 +5688,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsDeidentifyTran
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsDeidentifyTransformationDetailsStorageConfigTableOutputReference
 ```
@@ -6010,7 +6010,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsDeidentifyTran
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmailsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsJobNotificationEmailsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsJobNotificationEmailsOutputReference
 ```
@@ -6259,7 +6259,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsJobNotificatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobActionsList
 ```
@@ -6402,7 +6402,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobActionsOutputReference
 ```
@@ -6963,7 +6963,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsPublishFindingsToCloudDataCatalogOutputReference
 ```
@@ -7212,7 +7212,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsPublishFinding
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsPublishSummaryToCsccOutputReference
 ```
@@ -7461,7 +7461,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsPublishSummary
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsPublishToStackdriverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsPublishToStackdriverOutputReference
 ```
@@ -7710,7 +7710,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsPublishToStack
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsPubSubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsPubSubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsPubSubOutputReference
 ```
@@ -7981,7 +7981,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsPubSub
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigOutputReference
 ```
@@ -8294,7 +8294,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputConfigTableOutputReference
 ```
@@ -8616,7 +8616,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOu
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobActionsSaveFindingsOutputReference
 ```
@@ -8900,7 +8900,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobActionsSaveFindings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePathOutputReference
 ```
@@ -9171,7 +9171,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryOutputReference
 ```
@@ -9504,7 +9504,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesDictionaryWordListStructOutputReference
 ```
@@ -9775,7 +9775,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesInfoTypeOutputReference
 ```
@@ -10075,7 +10075,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesList
 ```
@@ -10218,7 +10218,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesOutputReference
 ```
@@ -10746,7 +10746,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesRegexOutputReference
 ```
@@ -11046,7 +11046,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesStoredTypeOutputReference
 ```
@@ -11328,7 +11328,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigCustomInfoTypesSurrogateTypeOutputReference
 ```
@@ -11577,7 +11577,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigCustomIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesList
 ```
@@ -11720,7 +11720,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigInfoTypesOutputReference
 ```
@@ -12038,7 +12038,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference
 ```
@@ -12338,7 +12338,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeList
 ```
@@ -12481,7 +12481,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeOutputReference
 ```
@@ -12819,7 +12819,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigLimitsOutputReference
 ```
@@ -13168,7 +13168,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigLimits
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigOutputReference
 ```
@@ -13672,7 +13672,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesList
 ```
@@ -13815,7 +13815,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetInfoTypesOutputReference
 ```
@@ -14133,7 +14133,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetList
 ```
@@ -14276,7 +14276,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetOutputReference
 ```
@@ -14620,7 +14620,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePathOutputReference
 ```
@@ -14891,7 +14891,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryOutputReference
 ```
@@ -15224,7 +15224,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStructOutputReference
 ```
@@ -15495,7 +15495,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegexOutputReference
 ```
@@ -15802,7 +15802,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordOutputReference
 ```
@@ -16135,7 +16135,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximityOutputReference
 ```
@@ -16442,7 +16442,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList
 ```
@@ -16585,7 +16585,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesOutputReference
 ```
@@ -16903,7 +16903,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesOutputReference
 ```
@@ -17187,7 +17187,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleOutputReference
 ```
@@ -17626,7 +17626,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesExclusionRuleRegexOutputReference
 ```
@@ -17926,7 +17926,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegexOutputReference
 ```
@@ -18233,7 +18233,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustmentOutputReference
 ```
@@ -18540,7 +18540,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleOutputReference
 ```
@@ -18915,7 +18915,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesHotwordRuleProximityOutputReference
 ```
@@ -19222,7 +19222,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetR
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesList
 ```
@@ -19365,7 +19365,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobInspectConfigRuleSetRulesOutputReference
 ```
@@ -19716,7 +19716,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobOutputReference
 ```
@@ -19764,6 +19764,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.putActions">PutActions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.putInspectConfig">PutInspectConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.putStorageConfig">PutStorageConfig</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.resetActions">ResetActions</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.resetInspectConfig">ResetInspectConfig</a></code> | *No description.* |
 
 ---
@@ -19954,6 +19955,12 @@ func PutStorageConfig(value DataLossPreventionJobTriggerInspectJobStorageConfig)
 
 ---
 
+##### `ResetActions` <a name="ResetActions" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.resetActions"></a>
+
+```go
+func ResetActions()
+```
+
 ##### `ResetInspectConfig` <a name="ResetInspectConfig" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobOutputReference.resetInspectConfig"></a>
 
 ```go
@@ -20099,7 +20106,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJob
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsList
 ```
@@ -20242,7 +20249,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsExcludedFieldsOutputReference
 ```
@@ -20531,7 +20538,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsList
 ```
@@ -20674,7 +20681,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIdentifyingFieldsOutputReference
 ```
@@ -20963,7 +20970,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsList
 ```
@@ -21106,7 +21113,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsIncludedFieldsOutputReference
 ```
@@ -21395,7 +21402,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutputReference
 ```
@@ -21892,7 +21899,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigBigQuery
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutputReference
 ```
@@ -22207,7 +22214,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigBigQuery
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutputReference
 ```
@@ -22527,7 +22534,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigCloudSto
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutputReference
 ```
@@ -22856,7 +22863,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigCloudSto
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutputReference
 ```
@@ -23285,7 +23292,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigCloudSto
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutputReference
 ```
@@ -23556,7 +23563,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigDatastor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutputReference
 ```
@@ -23875,7 +23882,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigDatastor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutputReference
 ```
@@ -24175,7 +24182,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigDatastor
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsOutputReference
 ```
@@ -24553,7 +24560,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigHybridOp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsList
 ```
@@ -24696,7 +24703,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFieldsOutputReference
 ```
@@ -24985,7 +24992,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigHybridOptionsTableOptionsOutputReference
 ```
@@ -25276,7 +25283,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigHybridOp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigOutputReference
 ```
@@ -25735,7 +25742,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigOutputReference
 ```
@@ -26106,7 +26113,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigTimespan
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutputReference
 ```
@@ -26377,7 +26384,7 @@ func InternalValue() DataLossPreventionJobTriggerInspectJobStorageConfigTimespan
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerTimeoutsOutputReference
 ```
@@ -26713,7 +26720,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerTriggersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataLossPreventionJobTriggerTriggersList
 ```
@@ -26856,7 +26863,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersManualOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerTriggersManualOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerTriggersManualOutputReference
 ```
@@ -27105,7 +27112,7 @@ func InternalValue() DataLossPreventionJobTriggerTriggersManual
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerTriggersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataLossPreventionJobTriggerTriggersOutputReference
 ```
@@ -27456,7 +27463,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataLossPreventionJobTrigger.DataLossPreventionJobTriggerTriggersScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datalosspreventionjobtrigger"
+import "github.com/cdktf/cdktf-provider-google-go/google/datalosspreventionjobtrigger"
 
 datalosspreventionjobtrigger.NewDataLossPreventionJobTriggerTriggersScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataLossPreventionJobTriggerTriggersScheduleOutputReference
 ```
