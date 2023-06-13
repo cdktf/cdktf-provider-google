@@ -16,6 +16,8 @@ export * as accessContextManagerEgressPolicy from './access-context-manager-egre
 export * as accessContextManagerGcpUserAccessBinding from './access-context-manager-gcp-user-access-binding';
 export * as accessContextManagerIngressPolicy from './access-context-manager-ingress-policy';
 export * as accessContextManagerServicePerimeter from './access-context-manager-service-perimeter';
+export * as accessContextManagerServicePerimeterEgressPolicy from './access-context-manager-service-perimeter-egress-policy';
+export * as accessContextManagerServicePerimeterIngressPolicy from './access-context-manager-service-perimeter-ingress-policy';
 export * as accessContextManagerServicePerimeterResource from './access-context-manager-service-perimeter-resource';
 export * as accessContextManagerServicePerimeters from './access-context-manager-service-perimeters';
 export * as activeDirectoryDomain from './active-directory-domain';
@@ -113,6 +115,7 @@ export * as binaryAuthorizationAttestorIamMember from './binary-authorization-at
 export * as binaryAuthorizationAttestorIamPolicy from './binary-authorization-attestor-iam-policy';
 export * as binaryAuthorizationPolicy from './binary-authorization-policy';
 export * as certificateManagerCertificate from './certificate-manager-certificate';
+export * as certificateManagerCertificateIssuanceConfig from './certificate-manager-certificate-issuance-config';
 export * as certificateManagerCertificateMap from './certificate-manager-certificate-map';
 export * as certificateManagerCertificateMapEntry from './certificate-manager-certificate-map-entry';
 export * as certificateManagerDnsAuthorization from './certificate-manager-dns-authorization';
@@ -314,6 +317,10 @@ export * as dataplexAsset from './dataplex-asset';
 export * as dataplexAssetIamBinding from './dataplex-asset-iam-binding';
 export * as dataplexAssetIamMember from './dataplex-asset-iam-member';
 export * as dataplexAssetIamPolicy from './dataplex-asset-iam-policy';
+export * as dataplexDatascan from './dataplex-datascan';
+export * as dataplexDatascanIamBinding from './dataplex-datascan-iam-binding';
+export * as dataplexDatascanIamMember from './dataplex-datascan-iam-member';
+export * as dataplexDatascanIamPolicy from './dataplex-datascan-iam-policy';
 export * as dataplexLake from './dataplex-lake';
 export * as dataplexLakeIamBinding from './dataplex-lake-iam-binding';
 export * as dataplexLakeIamMember from './dataplex-lake-iam-member';
@@ -736,6 +743,7 @@ export * as dataGoogleDataCatalogTagTemplateIamPolicy from './data-google-data-c
 export * as dataGoogleDataCatalogTaxonomyIamPolicy from './data-google-data-catalog-taxonomy-iam-policy';
 export * as dataGoogleDataFusionInstanceIamPolicy from './data-google-data-fusion-instance-iam-policy';
 export * as dataGoogleDataplexAssetIamPolicy from './data-google-dataplex-asset-iam-policy';
+export * as dataGoogleDataplexDatascanIamPolicy from './data-google-dataplex-datascan-iam-policy';
 export * as dataGoogleDataplexLakeIamPolicy from './data-google-dataplex-lake-iam-policy';
 export * as dataGoogleDataplexZoneIamPolicy from './data-google-dataplex-zone-iam-policy';
 export * as dataGoogleDataprocAutoscalingPolicyIamPolicy from './data-google-dataproc-autoscaling-policy-iam-policy';
