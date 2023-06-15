@@ -47,27 +47,25 @@
     "@actions/core": "^1.1.0",
     "@cdktf/provider-project": "^0.2.95",
     "@types/node": "^16",
-    "cdktf": "^0.16.3",
-    "cdktf-cli": "^0.16.3",
+    "cdktf": "^0.17.0",
+    "cdktf-cli": "^0.17.0",
     "constructs": "^10.0.0",
     "dot-prop": "^5.2.0",
-    "jsii": "^1.53.0",
+    "jsii": "^5.0.1",
     "jsii-diff": "^1.81.0",
     "jsii-docgen": ">=7.1.2",
     "jsii-pacmak": "^1.81.0",
     "node-fetch": "cjs",
     "npm-check-updates": "^16",
-    "projen": "^0.71.82",
+    "projen": "^0.71.97",
     "standard-version": "^9",
     "typescript": "^3.9.10"
   },
   "peerDependencies": {
-    "cdktf": "^0.16.3",
+    "cdktf": "^0.17.0",
     "constructs": "^10.0.0"
   },
   "resolutions": {
-    "@types/babel__traverse": "7.18.2",
-    "@types/prettier": "2.6.0",
     "@types/yargs": "17.0.13"
   },
   "keywords": [

@@ -2875,7 +2875,7 @@ containerCluster.ContainerCluster.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.resourceUsageExportConfigInput">resource_usage_export_config_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterResourceUsageExportConfig">ContainerClusterResourceUsageExportConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.serviceExternalIpsConfigInput">service_external_ips_config_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterServiceExternalIpsConfig">ContainerClusterServiceExternalIpsConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.subnetworkInput">subnetwork_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.verticalPodAutoscalingInput">vertical_pod_autoscaling_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterVerticalPodAutoscaling">ContainerClusterVerticalPodAutoscaling</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.workloadIdentityConfigInput">workload_identity_config_input</a></code> | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterWorkloadIdentityConfig">ContainerClusterWorkloadIdentityConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerCluster.property.clusterIpv4Cidr">cluster_ipv4_cidr</a></code> | <code>str</code> | *No description.* |
@@ -3954,10 +3954,10 @@ subnetwork_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.containerCluster.ContainerCluster.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ContainerClusterTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ContainerClusterTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>]
 
 ---
 
@@ -19128,7 +19128,7 @@ def reset_minimum() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.maximum">maximum</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.minimum">minimum</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.resourceType">resource_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimits">ContainerClusterClusterAutoscalingResourceLimits</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimits">ContainerClusterClusterAutoscalingResourceLimits</a>]</code> | *No description.* |
 
 ---
 
@@ -19219,10 +19219,10 @@ resource_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimitsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterClusterAutoscalingResourceLimits, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterClusterAutoscalingResourceLimits]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimits">ContainerClusterClusterAutoscalingResourceLimits</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterClusterAutoscalingResourceLimits">ContainerClusterClusterAutoscalingResourceLimits</a>]
 
 ---
 
@@ -23197,7 +23197,7 @@ def reset_exclusion_options() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.endTime">end_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.exclusionName">exclusion_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.startTime">start_time</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusion">ContainerClusterMaintenancePolicyMaintenanceExclusion</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusion">ContainerClusterMaintenancePolicyMaintenanceExclusion</a>]</code> | *No description.* |
 
 ---
 
@@ -23308,10 +23308,10 @@ start_time: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterMaintenancePolicyMaintenanceExclusion, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterMaintenancePolicyMaintenanceExclusion]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusion">ContainerClusterMaintenancePolicyMaintenanceExclusion</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterMaintenancePolicyMaintenanceExclusion">ContainerClusterMaintenancePolicyMaintenanceExclusion</a>]
 
 ---
 
@@ -24797,7 +24797,7 @@ def reset_display_name() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.cidrBlock">cidr_block</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks">ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks">ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks</a>]</code> | *No description.* |
 
 ---
 
@@ -24868,10 +24868,10 @@ display_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocksOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks">ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks">ContainerClusterMasterAuthorizedNetworksConfigCidrBlocks</a>]
 
 ---
 
@@ -28144,7 +28144,7 @@ def reset_max_shared_clients_per_gpu() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.maxSharedClientsPerGpuInput">max_shared_clients_per_gpu_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.gpuSharingStrategy">gpu_sharing_strategy</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.maxSharedClientsPerGpu">max_shared_clients_per_gpu</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -28215,10 +28215,10 @@ max_shared_clients_per_gpu: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodeConfigGuestAcceleratorGpuSharingConfig</a>]
 
 ---
 
@@ -28680,7 +28680,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.gpuPartitionSize">gpu_partition_size</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAccelerator">ContainerClusterNodeConfigGuestAccelerator</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAccelerator">ContainerClusterNodeConfigGuestAccelerator</a>]</code> | *No description.* |
 
 ---
 
@@ -28791,10 +28791,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAcceleratorOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodeConfigGuestAccelerator, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodeConfigGuestAccelerator]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAccelerator">ContainerClusterNodeConfigGuestAccelerator</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigGuestAccelerator">ContainerClusterNodeConfigGuestAccelerator</a>]
 
 ---
 
@@ -32596,7 +32596,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.effect">effect</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>]</code> | *No description.* |
 
 ---
 
@@ -32687,10 +32687,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaintOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodeConfigTaint, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodeConfigTaint]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodeConfigTaint">ContainerClusterNodeConfigTaint</a>]
 
 ---
 
@@ -36564,7 +36564,7 @@ def reset_max_shared_clients_per_gpu() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.maxSharedClientsPerGpuInput">max_shared_clients_per_gpu_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.gpuSharingStrategy">gpu_sharing_strategy</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.maxSharedClientsPerGpu">max_shared_clients_per_gpu</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig</a>]</code> | *No description.* |
 
 ---
 
@@ -36635,10 +36635,10 @@ max_shared_clients_per_gpu: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfigOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig">ContainerClusterNodePoolNodeConfigGuestAcceleratorGpuSharingConfig</a>]
 
 ---
 
@@ -37100,7 +37100,7 @@ def reset_type() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.count">count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.gpuPartitionSize">gpu_partition_size</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAccelerator">ContainerClusterNodePoolNodeConfigGuestAccelerator</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAccelerator">ContainerClusterNodePoolNodeConfigGuestAccelerator</a>]</code> | *No description.* |
 
 ---
 
@@ -37211,10 +37211,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAcceleratorOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodePoolNodeConfigGuestAccelerator, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodePoolNodeConfigGuestAccelerator]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAccelerator">ContainerClusterNodePoolNodeConfigGuestAccelerator</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigGuestAccelerator">ContainerClusterNodePoolNodeConfigGuestAccelerator</a>]
 
 ---
 
@@ -41016,7 +41016,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.effect">effect</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.key">key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>]</code> | *No description.* |
 
 ---
 
@@ -41107,10 +41107,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaintOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodePoolNodeConfigTaint, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodePoolNodeConfigTaint]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolNodeConfigTaint">ContainerClusterNodePoolNodeConfigTaint</a>]
 
 ---
 
@@ -42369,7 +42369,7 @@ def reset_version() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.nodeCount">node_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.nodeLocations">node_locations</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.version">version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePool">ContainerClusterNodePool</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePool">ContainerClusterNodePool</a>]</code> | *No description.* |
 
 ---
 
@@ -42680,10 +42680,10 @@ version: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterNodePoolOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterNodePool, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterNodePool]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePool">ContainerClusterNodePool</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterNodePool">ContainerClusterNodePool</a>]
 
 ---
 
@@ -47438,7 +47438,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -47549,10 +47549,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.containerCluster.ContainerClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ContainerClusterTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ContainerClusterTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.containerCluster.ContainerClusterTimeouts">ContainerClusterTimeouts</a>]
 
 ---
 

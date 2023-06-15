@@ -17,12 +17,12 @@
     },
     {
       "name": "cdktf-cli",
-      "version": "^0.16.3",
+      "version": "^0.17.0",
       "type": "build"
     },
     {
       "name": "cdktf",
-      "version": "^0.16.3",
+      "version": "^0.17.0",
       "type": "build"
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "name": "jsii",
-      "version": "^1.53.0",
+      "version": "^5.0.1",
       "type": "build"
     },
     {
@@ -77,23 +77,13 @@
       "type": "build"
     },
     {
-      "name": "@types/babel__traverse",
-      "version": "7.18.2",
-      "type": "override"
-    },
-    {
-      "name": "@types/prettier",
-      "version": "2.6.0",
-      "type": "override"
-    },
-    {
       "name": "@types/yargs",
       "version": "17.0.13",
       "type": "override"
     },
     {
       "name": "cdktf",
-      "version": "^0.16.3",
+      "version": "^0.17.0",
       "type": "peer"
     },
     {

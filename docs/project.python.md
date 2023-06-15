@@ -668,7 +668,7 @@ project.Project.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.project.Project.property.orgIdInput">org_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.projectIdInput">project_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.skipDeleteInput">skip_delete_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.Project.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.Project.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.autoCreateNetwork">auto_create_network</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.billingAccount">billing_account</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.folderId">folder_id</a></code> | <code>str</code> | *No description.* |
@@ -936,10 +936,10 @@ skip_delete_input: typing.Union[bool, IResolvable]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.project.Project.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ProjectTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ProjectTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>]
 
 ---
 
@@ -1671,7 +1671,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1782,10 +1782,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ProjectTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ProjectTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>]
 
 ---
 
