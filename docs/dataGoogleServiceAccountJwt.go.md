@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.NewDataGoogleServiceAccountJwt(scope Construct, id *string, config DataGoogleServiceAccountJwtConfig) DataGoogleServiceAccountJwt
 ```
@@ -291,7 +291,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwt.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleserviceaccountjwt"
 
 datagoogleserviceaccountjwt.DataGoogleServiceAccountJwt_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -635,7 +635,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleServiceAccountJwt.DataGoogleServiceAccountJwtConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/datagoogleserviceaccountjwt"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleserviceaccountjwt"
 
 &datagoogleserviceaccountjwt.DataGoogleServiceAccountJwtConfig {
 	Connection: interface{},

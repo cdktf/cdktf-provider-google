@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.NewArtifactRegistryRepositoryIamMember(scope Construct, id *string, config ArtifactRegistryRepositoryIamMemberConfig) ArtifactRegistryRepositoryIamMember
 ```
@@ -311,7 +311,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 &artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMemberCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 &artifactregistryrepositoryiammember.ArtifactRegistryRepositoryIamMemberConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepo
 	Member: *string,
 	Repository: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v7.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.artifactRegistryRepositoryIamMember.ArtifactRegistryRepositoryIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/artifactregistryrepositoryiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/artifactregistryrepositoryiammember"
 
 artifactregistryrepositoryiammember.NewArtifactRegistryRepositoryIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArtifactRegistryRepositoryIamMemberConditionOutputReference
 ```

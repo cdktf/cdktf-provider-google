@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunV2ServiceIamPolicy.CloudRunV2ServiceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudrunv2serviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudrunv2serviceiampolicy"
 
 cloudrunv2serviceiampolicy.NewCloudRunV2ServiceIamPolicy(scope Construct, id *string, config CloudRunV2ServiceIamPolicyConfig) CloudRunV2ServiceIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudRunV2ServiceIamPolicy.CloudRunV2ServiceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudrunv2serviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudrunv2serviceiampolicy"
 
 cloudrunv2serviceiampolicy.CloudRunV2ServiceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudRunV2ServiceIamPolicy.CloudRunV2ServiceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudrunv2serviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudrunv2serviceiampolicy"
 
 cloudrunv2serviceiampolicy.CloudRunV2ServiceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ cloudrunv2serviceiampolicy.CloudRunV2ServiceIamPolicy_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudRunV2ServiceIamPolicy.CloudRunV2ServiceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudrunv2serviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudrunv2serviceiampolicy"
 
 cloudrunv2serviceiampolicy.CloudRunV2ServiceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudRunV2ServiceIamPolicy.CloudRunV2ServiceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/cloudrunv2serviceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudrunv2serviceiampolicy"
 
 &cloudrunv2serviceiampolicy.CloudRunV2ServiceIamPolicyConfig {
 	Connection: interface{},

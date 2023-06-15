@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascan(scope Construct, id *string, config DataplexDatascanConfig) DataplexDatascan
 ```
@@ -391,7 +391,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.DataplexDatascan_IsConstruct(x interface{}) *bool
 ```
@@ -423,7 +423,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.DataplexDatascan_IsTerraformElement(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ dataplexdatascan.DataplexDatascan_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.DataplexDatascan_IsTerraformResource(x interface{}) *bool
 ```
@@ -999,7 +999,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanConfig {
 	Connection: interface{},
@@ -1009,18 +1009,18 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Data: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanData,
+	Data: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanData,
 	DataScanId: *string,
-	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanExecutionSpec,
+	ExecutionSpec: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanExecutionSpec,
 	Location: *string,
-	DataProfileSpec: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataProfileSpec,
-	DataQualitySpec: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpec,
+	DataProfileSpec: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataProfileSpec,
+	DataQualitySpec: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpec,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanTimeouts,
 }
 ```
 
@@ -1294,7 +1294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanData {
 	Entity: *string,
@@ -1347,7 +1347,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResult.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResult {
 
@@ -1360,7 +1360,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfile {
 
@@ -1373,7 +1373,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFields {
 
@@ -1386,7 +1386,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFieldsProfile {
 
@@ -1399,7 +1399,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfile {
 
@@ -1412,7 +1412,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfile {
 
@@ -1425,7 +1425,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFieldsProfileStringProfile {
 
@@ -1438,7 +1438,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultProfileFieldsProfileTopNValues {
 
@@ -1451,7 +1451,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultScannedData {
 
@@ -1464,7 +1464,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedDataIncrementalField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileResultScannedDataIncrementalField {
 
@@ -1477,7 +1477,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataProfileSpec {
 	RowFilter: *string,
@@ -1529,7 +1529,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResult.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResult {
 
@@ -1542,7 +1542,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultDimensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultDimensions {
 
@@ -1555,7 +1555,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRules {
 
@@ -1568,7 +1568,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRule {
 
@@ -1581,7 +1581,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleNonNullExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleNonNullExpectation {
 
@@ -1594,7 +1594,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRangeExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleRangeExpectation {
 
@@ -1607,7 +1607,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRegexExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleRegexExpectation {
 
@@ -1620,7 +1620,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleRowConditionExpectation {
 
@@ -1633,7 +1633,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleSetExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleSetExpectation {
 
@@ -1646,7 +1646,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectation {
 
@@ -1659,7 +1659,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleTableConditionExpectation {
 
@@ -1672,7 +1672,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultRulesRuleUniquenessExpectation {
 
@@ -1685,7 +1685,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultScannedData {
 
@@ -1698,7 +1698,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedDataIncrementalField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualityResultScannedDataIncrementalField {
 
@@ -1711,7 +1711,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpec {
 	RowFilter: *string,
@@ -1779,21 +1779,21 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRules {
 	Dimension: *string,
 	Column: *string,
 	IgnoreNull: interface{},
-	NonNullExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation,
-	RangeExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation,
-	RegexExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRegexExpectation,
-	RowConditionExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRowConditionExpectation,
-	SetExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectation,
-	StatisticRangeExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation,
-	TableConditionExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation,
+	NonNullExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation,
+	RangeExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation,
+	RegexExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRegexExpectation,
+	RowConditionExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRowConditionExpectation,
+	SetExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectation,
+	StatisticRangeExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation,
+	TableConditionExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation,
 	Threshold: *f64,
-	UniquenessExpectation: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation,
+	UniquenessExpectation: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation,
 }
 ```
 
@@ -1993,7 +1993,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectation {
 
@@ -2006,7 +2006,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesRangeExpectation {
 	MaxValue: *string,
@@ -2096,7 +2096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRegexExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesRegexExpectation {
 	Regex: *string,
@@ -2130,7 +2130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRowConditionExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesRowConditionExpectation {
 	SqlExpression: *string,
@@ -2164,7 +2164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesSetExpectation {
 	Values: *[]*string,
@@ -2198,7 +2198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectation {
 	Statistic: *string,
@@ -2304,7 +2304,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectation {
 	SqlExpression: *string,
@@ -2338,7 +2338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectation {
 
@@ -2351,10 +2351,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanExecutionSpec {
-	Trigger: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanExecutionSpecTrigger,
+	Trigger: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanExecutionSpecTrigger,
 	Field: *string,
 }
 ```
@@ -2403,11 +2403,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanExecutionSpecTrigger {
-	OnDemand: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanExecutionSpecTriggerOnDemand,
-	Schedule: github.com/cdktf/cdktf-provider-google-go/google/v7.dataplexDatascan.DataplexDatascanExecutionSpecTriggerSchedule,
+	OnDemand: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanExecutionSpecTriggerOnDemand,
+	Schedule: github.com/cdktf/cdktf-provider-google-go/google/v8.dataplexDatascan.DataplexDatascanExecutionSpecTriggerSchedule,
 }
 ```
 
@@ -2453,7 +2453,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTriggerOnDemand.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanExecutionSpecTriggerOnDemand {
 
@@ -2466,7 +2466,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTriggerSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanExecutionSpecTriggerSchedule {
 	Cron: *string,
@@ -2500,7 +2500,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanExecutionStatus {
 
@@ -2513,7 +2513,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 &dataplexdatascan.DataplexDatascanTimeouts {
 	Create: *string,
@@ -2575,7 +2575,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataOutputReference
 ```
@@ -2882,7 +2882,7 @@ func InternalValue() DataplexDatascanData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultList
 ```
@@ -3014,7 +3014,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultOutputReference
 ```
@@ -3314,7 +3314,7 @@ func InternalValue() DataplexDatascanDataProfileResult
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsList
 ```
@@ -3446,7 +3446,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsOutputReference
 ```
@@ -3757,7 +3757,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFields
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileList
 ```
@@ -3889,7 +3889,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileDoubleProfileOutputReference
 ```
@@ -4211,7 +4211,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFieldsProfileDouble
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileList
 ```
@@ -4343,7 +4343,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileIntegerProfileOutputReference
 ```
@@ -4665,7 +4665,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFieldsProfileIntege
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileList
 ```
@@ -4797,7 +4797,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileOutputReference
 ```
@@ -5130,7 +5130,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFieldsProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileStringProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileList
 ```
@@ -5262,7 +5262,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileStringProfileOutputReference
 ```
@@ -5562,7 +5562,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFieldsProfileString
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesList
 ```
@@ -5694,7 +5694,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileFieldsProfileTopNValuesOutputReference
 ```
@@ -5983,7 +5983,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfileFieldsProfileTopNVa
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultProfileList
 ```
@@ -6115,7 +6115,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultProfileOutputReference
 ```
@@ -6393,7 +6393,7 @@ func InternalValue() DataplexDatascanDataProfileResultProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedDataIncrementalFieldList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultScannedDataIncrementalFieldList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultScannedDataIncrementalFieldList
 ```
@@ -6525,7 +6525,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultScannedDataIncrementalFieldOutputReference
 ```
@@ -6825,7 +6825,7 @@ func InternalValue() DataplexDatascanDataProfileResultScannedDataIncrementalFiel
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultScannedDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataProfileResultScannedDataList
 ```
@@ -6957,7 +6957,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileResultScannedDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileResultScannedDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataProfileResultScannedDataOutputReference
 ```
@@ -7235,7 +7235,7 @@ func InternalValue() DataplexDatascanDataProfileResultScannedData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataProfileSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataProfileSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataProfileSpecOutputReference
 ```
@@ -7542,7 +7542,7 @@ func InternalValue() DataplexDatascanDataProfileSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultDimensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultDimensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultDimensionsList
 ```
@@ -7674,7 +7674,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultDimensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultDimensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultDimensionsOutputReference
 ```
@@ -7952,7 +7952,7 @@ func InternalValue() DataplexDatascanDataQualityResultDimensions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultList
 ```
@@ -8084,7 +8084,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultOutputReference
 ```
@@ -8406,7 +8406,7 @@ func InternalValue() DataplexDatascanDataQualityResult
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesList
 ```
@@ -8538,7 +8538,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesOutputReference
 ```
@@ -8882,7 +8882,7 @@ func InternalValue() DataplexDatascanDataQualityResultRules
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleList
 ```
@@ -9014,7 +9014,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleNonNullExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleNonNullExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleNonNullExpectationList
 ```
@@ -9146,7 +9146,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleNonNullExpectationOutputReference
 ```
@@ -9413,7 +9413,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleNonNullExpectatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleOutputReference
 ```
@@ -9812,7 +9812,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRangeExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRangeExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleRangeExpectationList
 ```
@@ -9944,7 +9944,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleRangeExpectationOutputReference
 ```
@@ -10255,7 +10255,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleRangeExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRegexExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRegexExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleRegexExpectationList
 ```
@@ -10387,7 +10387,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleRegexExpectationOutputReference
 ```
@@ -10665,7 +10665,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleRegexExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRowConditionExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationList
 ```
@@ -10797,7 +10797,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleRowConditionExpectationOutputReference
 ```
@@ -11075,7 +11075,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleRowConditionExpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleSetExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleSetExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleSetExpectationList
 ```
@@ -11207,7 +11207,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleSetExpectationOutputReference
 ```
@@ -11485,7 +11485,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleSetExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationList
 ```
@@ -11617,7 +11617,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleStatisticRangeExpectationOutputReference
 ```
@@ -11939,7 +11939,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleStatisticRangeExp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleTableConditionExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationList
 ```
@@ -12071,7 +12071,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleTableConditionExpectationOutputReference
 ```
@@ -12349,7 +12349,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleTableConditionExp
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleUniquenessExpectationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationList
 ```
@@ -12481,7 +12481,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultRulesRuleUniquenessExpectationOutputReference
 ```
@@ -12748,7 +12748,7 @@ func InternalValue() DataplexDatascanDataQualityResultRulesRuleUniquenessExpecta
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedDataIncrementalFieldList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultScannedDataIncrementalFieldList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultScannedDataIncrementalFieldList
 ```
@@ -12880,7 +12880,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultScannedDataIncrementalFieldOutputReference
 ```
@@ -13180,7 +13180,7 @@ func InternalValue() DataplexDatascanDataQualityResultScannedDataIncrementalFiel
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultScannedDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualityResultScannedDataList
 ```
@@ -13312,7 +13312,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualityResultScannedDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualityResultScannedDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualityResultScannedDataOutputReference
 ```
@@ -13590,7 +13590,7 @@ func InternalValue() DataplexDatascanDataQualityResultScannedData
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecOutputReference
 ```
@@ -13939,7 +13939,7 @@ func InternalValue() DataplexDatascanDataQualitySpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanDataQualitySpecRulesList
 ```
@@ -14082,7 +14082,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesNonNullExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesNonNullExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesNonNullExpectationOutputReference
 ```
@@ -14331,7 +14331,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesNonNullExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanDataQualitySpecRulesOutputReference
 ```
@@ -15043,7 +15043,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesRangeExpectationOutputReference
 ```
@@ -15408,7 +15408,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesRangeExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRegexExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesRegexExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesRegexExpectationOutputReference
 ```
@@ -15679,7 +15679,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesRegexExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesRowConditionExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesRowConditionExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesRowConditionExpectationOutputReference
 ```
@@ -15950,7 +15950,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesRowConditionExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesSetExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesSetExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesSetExpectationOutputReference
 ```
@@ -16221,7 +16221,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesSetExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesStatisticRangeExpectationOutputReference
 ```
@@ -16608,7 +16608,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesStatisticRangeExpectati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesTableConditionExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesTableConditionExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesTableConditionExpectationOutputReference
 ```
@@ -16879,7 +16879,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesTableConditionExpectati
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanDataQualitySpecRulesUniquenessExpectationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanDataQualitySpecRulesUniquenessExpectationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanDataQualitySpecRulesUniquenessExpectationOutputReference
 ```
@@ -17128,7 +17128,7 @@ func InternalValue() DataplexDatascanDataQualitySpecRulesUniquenessExpectation
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanExecutionSpecOutputReference
 ```
@@ -17441,7 +17441,7 @@ func InternalValue() DataplexDatascanExecutionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTriggerOnDemandOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionSpecTriggerOnDemandOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanExecutionSpecTriggerOnDemandOutputReference
 ```
@@ -17690,7 +17690,7 @@ func InternalValue() DataplexDatascanExecutionSpecTriggerOnDemand
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionSpecTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanExecutionSpecTriggerOutputReference
 ```
@@ -18023,7 +18023,7 @@ func InternalValue() DataplexDatascanExecutionSpecTrigger
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionSpecTriggerScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionSpecTriggerScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanExecutionSpecTriggerScheduleOutputReference
 ```
@@ -18294,7 +18294,7 @@ func InternalValue() DataplexDatascanExecutionSpecTriggerSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataplexDatascanExecutionStatusList
 ```
@@ -18426,7 +18426,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanExecutionStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanExecutionStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataplexDatascanExecutionStatusOutputReference
 ```
@@ -18715,7 +18715,7 @@ func InternalValue() DataplexDatascanExecutionStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexDatascan.DataplexDatascanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v7/dataplexdatascan"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/dataplexdatascan"
 
 dataplexdatascan.NewDataplexDatascanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataplexDatascanTimeoutsOutputReference
 ```
