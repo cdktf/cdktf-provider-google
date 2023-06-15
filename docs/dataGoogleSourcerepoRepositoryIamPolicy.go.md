@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.NewDataGoogleSourcerepoRepositoryIamPolicy(scope Construct, id *string, config DataGoogleSourcerepoRepositoryIamPolicyConfig) DataGoogleSourcerepoRepositoryIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesourcereporepositoryiampolicy"
 
 datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSourcerepoRepositoryIamPolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglesourcereporepositoryiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesourcereporepositoryiampolicy"
 
 &datagooglesourcereporepositoryiampolicy.DataGoogleSourcerepoRepositoryIamPolicyConfig {
 	Connection: interface{},

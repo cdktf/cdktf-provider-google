@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 cloudfunctions2functioniambinding.NewCloudfunctions2FunctionIamBinding(scope Construct, id *string, config Cloudfunctions2FunctionIamBindingConfig) Cloudfunctions2FunctionIamBinding
 ```
@@ -311,7 +311,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBinding_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 &cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBindingCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 &cloudfunctions2functioniambinding.Cloudfunctions2FunctionIamBindingConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2function
 	CloudFunction: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBindingCondition,
 	Id: *string,
 	Location: *string,
 	Project: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctions2FunctionIamBinding.Cloudfunctions2FunctionIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctions2functioniambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudfunctions2functioniambinding"
 
 cloudfunctions2functioniambinding.NewCloudfunctions2FunctionIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudfunctions2FunctionIamBindingConditionOutputReference
 ```

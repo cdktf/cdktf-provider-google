@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.6
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataFusionInstanceIamPolicy.DataFusionInstanceIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datafusioninstanceiampolicy"
 
 datafusioninstanceiampolicy.NewDataFusionInstanceIamPolicy(scope Construct, id *string, config DataFusionInstanceIamPolicyConfig) DataFusionInstanceIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataFusionInstanceIamPolicy.DataFusionInstanceIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datafusioninstanceiampolicy"
 
 datafusioninstanceiampolicy.DataFusionInstanceIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataFusionInstanceIamPolicy.DataFusionInstanceIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datafusioninstanceiampolicy"
 
 datafusioninstanceiampolicy.DataFusionInstanceIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datafusioninstanceiampolicy.DataFusionInstanceIamPolicy_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dataFusionInstanceIamPolicy.DataFusionInstanceIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datafusioninstanceiampolicy"
 
 datafusioninstanceiampolicy.DataFusionInstanceIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataFusionInstanceIamPolicy.DataFusionInstanceIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datafusioninstanceiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/datafusioninstanceiampolicy"
 
 &datafusioninstanceiampolicy.DataFusionInstanceIamPolicyConfig {
 	Connection: interface{},
