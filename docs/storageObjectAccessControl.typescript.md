@@ -383,7 +383,7 @@ storageObjectAccessControl.StorageObjectAccessControl.isTerraformResource(x: any
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.objectInput">objectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.roleInput">roleInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.bucket">bucket</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.entity">entity</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -647,10 +647,10 @@ public readonly roleInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControl.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: StorageObjectAccessControlTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | StorageObjectAccessControlTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a>
 
 ---
 
@@ -1636,7 +1636,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1727,10 +1727,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: StorageObjectAccessControlTimeouts | IResolvable;
+public readonly internalValue: IResolvable | StorageObjectAccessControlTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageObjectAccessControl.StorageObjectAccessControlTimeouts">StorageObjectAccessControlTimeouts</a>
 
 ---
 

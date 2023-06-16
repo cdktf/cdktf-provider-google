@@ -1182,13 +1182,13 @@ For AWS providers, the following rules apply:
 
 ```
 {
-   "google.subject":"assertion.arn",
-   "attribute.aws_role":
-     "assertion.arn.contains('assumed-role')"
-     " ? assertion.arn.extract('{account_arn}assumed-role/')"
-     "   + 'assumed-role/'"
-     "   + assertion.arn.extract('assumed-role/{role_name}/')"
-     " : assertion.arn",
+  "google.subject":"assertion.arn",
+  "attribute.aws_role":
+    "assertion.arn.contains('assumed-role')"
+    " ? assertion.arn.extract('{account_arn}assumed-role/')"
+    "   + 'assumed-role/'"
+    "   + assertion.arn.extract('assumed-role/{role_name}/')"
+    " : assertion.arn",
 }
 ```
 

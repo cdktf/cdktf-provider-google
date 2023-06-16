@@ -559,7 +559,7 @@ essentialContactsContact.EssentialContactsContact.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.languageTagInput">language_tag_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.notificationCategorySubscriptionsInput">notification_category_subscriptions_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.parentInput">parent_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.email">email</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.languageTag">language_tag</a></code> | <code>str</code> | *No description.* |
@@ -783,10 +783,10 @@ parent_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContact.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[EssentialContactsContactTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, EssentialContactsContactTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>]
 
 ---
 
@@ -1385,7 +1385,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1476,10 +1476,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[EssentialContactsContactTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, EssentialContactsContactTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.essentialContactsContact.EssentialContactsContactTimeouts">EssentialContactsContactTimeouts</a>]
 
 ---
 

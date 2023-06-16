@@ -395,7 +395,7 @@ storageHmacKey.StorageHmacKey.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.serviceAccountEmailInput">serviceAccountEmailInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.stateInput">stateInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.project">project</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.serviceAccountEmail">serviceAccountEmail</a></code> | <code>string</code> | *No description.* |
@@ -638,10 +638,10 @@ public readonly stateInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.storageHmacKey.StorageHmacKey.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: StorageHmacKeyTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | StorageHmacKeyTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a>
 
 ---
 
@@ -1170,7 +1170,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1261,10 +1261,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: StorageHmacKeyTimeouts | IResolvable;
+public readonly internalValue: IResolvable | StorageHmacKeyTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageHmacKey.StorageHmacKeyTimeouts">StorageHmacKeyTimeouts</a>
 
 ---
 

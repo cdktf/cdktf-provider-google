@@ -391,7 +391,7 @@ notebooksLocation.NotebooksLocation.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.project">project</a></code> | <code>string</code> | *No description.* |
@@ -593,10 +593,10 @@ public readonly projectInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.notebooksLocation.NotebooksLocation.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: NotebooksLocationTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | NotebooksLocationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a>
 
 ---
 
@@ -1098,7 +1098,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1189,10 +1189,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: NotebooksLocationTimeouts | IResolvable;
+public readonly internalValue: IResolvable | NotebooksLocationTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.notebooksLocation.NotebooksLocationTimeouts">NotebooksLocationTimeouts</a>
 
 ---
 

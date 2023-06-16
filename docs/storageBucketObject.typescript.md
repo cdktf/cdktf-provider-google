@@ -507,7 +507,7 @@ storageBucketObject.StorageBucketObject.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.sourceInput">sourceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.storageClassInput">storageClassInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.temporaryHoldInput">temporaryHoldInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.bucket">bucket</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.cacheControl">cacheControl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.content">content</a></code> | <code>string</code> | *No description.* |
@@ -912,10 +912,10 @@ public readonly temporaryHoldInput: boolean | IResolvable;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.storageBucketObject.StorageBucketObject.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: StorageBucketObjectTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | StorageBucketObjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a>
 
 ---
 
@@ -2116,7 +2116,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2207,10 +2207,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: StorageBucketObjectTimeouts | IResolvable;
+public readonly internalValue: IResolvable | StorageBucketObjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.storageBucketObject.StorageBucketObjectTimeouts">StorageBucketObjectTimeouts</a>
 
 ---
 

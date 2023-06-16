@@ -558,7 +558,7 @@ resourceManagerLien.ResourceManagerLien.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.parentInput">parent_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.reasonInput">reason_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.restrictionsInput">restrictions_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.origin">origin</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.parent">parent</a></code> | <code>str</code> | *No description.* |
@@ -792,10 +792,10 @@ restrictions_input: typing.List[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLien.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ResourceManagerLienTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ResourceManagerLienTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>]
 
 ---
 
@@ -1378,7 +1378,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1449,10 +1449,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ResourceManagerLienTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ResourceManagerLienTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.resourceManagerLien.ResourceManagerLienTimeouts">ResourceManagerLienTimeouts</a>]
 
 ---
 

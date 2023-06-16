@@ -386,7 +386,7 @@ iapBrand.IapBrand.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.supportEmailInput">supportEmailInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.applicationTitle">applicationTitle</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrand.property.project">project</a></code> | <code>string</code> | *No description.* |
@@ -609,10 +609,10 @@ public readonly supportEmailInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.iapBrand.IapBrand.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: IapBrandTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | IapBrandTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a>
 
 ---
 
@@ -1123,7 +1123,7 @@ public resetDelete(): void
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.deleteInput">deleteInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1194,10 +1194,10 @@ public readonly delete: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.iapBrand.IapBrandTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: IapBrandTimeouts | IResolvable;
+public readonly internalValue: IResolvable | IapBrandTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.iapBrand.IapBrandTimeouts">IapBrandTimeouts</a>
 
 ---
 

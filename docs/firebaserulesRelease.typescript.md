@@ -387,7 +387,7 @@ firebaserulesRelease.FirebaserulesRelease.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.rulesetNameInput">rulesetNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.project">project</a></code> | <code>string</code> | *No description.* |
@@ -620,10 +620,10 @@ public readonly rulesetNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesRelease.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: FirebaserulesReleaseTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | FirebaserulesReleaseTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a>
 
 ---
 
@@ -1152,7 +1152,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1243,10 +1243,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: FirebaserulesReleaseTimeouts | IResolvable;
+public readonly internalValue: IResolvable | FirebaserulesReleaseTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.firebaserulesRelease.FirebaserulesReleaseTimeouts">FirebaserulesReleaseTimeouts</a>
 
 ---
 

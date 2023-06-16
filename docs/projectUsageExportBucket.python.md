@@ -548,7 +548,7 @@ projectUsageExportBucket.ProjectUsageExportBucket.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.prefixInput">prefix_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.bucketName">bucket_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.prefix">prefix</a></code> | <code>str</code> | *No description.* |
@@ -751,10 +751,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucket.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ProjectUsageExportBucketTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ProjectUsageExportBucketTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>]
 
 ---
 
@@ -1302,7 +1302,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1373,10 +1373,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ProjectUsageExportBucketTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ProjectUsageExportBucketTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.projectUsageExportBucket.ProjectUsageExportBucketTimeouts">ProjectUsageExportBucketTimeouts</a>]
 
 ---
 

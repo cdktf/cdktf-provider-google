@@ -461,7 +461,7 @@ dataprocWorkflowTemplate.DataprocWorkflowTemplate.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.parametersInput">parametersInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.placementInput">placementInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacement">DataprocWorkflowTemplatePlacement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.versionInput">versionInput</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.dagTimeout">dagTimeout</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -768,10 +768,10 @@ public readonly projectInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplate.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: DataprocWorkflowTemplateTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | DataprocWorkflowTemplateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
 
 ---
 
@@ -7198,7 +7198,7 @@ public resetSparkSqlJob(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.prerequisiteStepIds">prerequisiteStepIds</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.stepId">stepId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a></code> | *No description.* |
 
 ---
 
@@ -7469,10 +7469,10 @@ public readonly stepId: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplateJobs | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplateJobs;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateJobs">DataprocWorkflowTemplateJobs</a>
 
 ---
 
@@ -13486,7 +13486,7 @@ public resetValidation(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.fields">fields</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.name">name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a></code> | *No description.* |
 
 ---
 
@@ -13597,10 +13597,10 @@ public readonly name: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParametersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplateParameters | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplateParameters;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateParameters">DataprocWorkflowTemplateParameters</a>
 
 ---
 
@@ -17593,7 +17593,7 @@ public resetExecutionTimeout(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executionTimeoutInput">executionTimeoutInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executableFile">executableFile</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.executionTimeout">executionTimeout</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a></code> | *No description.* |
 
 ---
 
@@ -17664,10 +17664,10 @@ public readonly executionTimeout: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActionsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions">DataprocWorkflowTemplatePlacementManagedClusterConfigInitializationActions</a>
 
 ---
 
@@ -18408,7 +18408,7 @@ public resetAcceleratorType(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -18479,10 +18479,10 @@ public readonly acceleratorType: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigMasterConfigAccelerators</a>
 
 ---
 
@@ -20913,7 +20913,7 @@ public resetAcceleratorType(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -20984,10 +20984,10 @@ public readonly acceleratorType: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerators</a>
 
 ---
 
@@ -23960,7 +23960,7 @@ public resetAcceleratorType(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorTypeInput">acceleratorTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorCount">acceleratorCount</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.acceleratorType">acceleratorType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a></code> | *No description.* |
 
 ---
 
@@ -24031,10 +24031,10 @@ public readonly acceleratorType: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcceleratorsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators">DataprocWorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerators</a>
 
 ---
 
@@ -26203,7 +26203,7 @@ public resetDelete(): void
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.deleteInput">deleteInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -26274,10 +26274,10 @@ public readonly delete: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: DataprocWorkflowTemplateTimeouts | IResolvable;
+public readonly internalValue: IResolvable | DataprocWorkflowTemplateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.dataprocWorkflowTemplate.DataprocWorkflowTemplateTimeouts">DataprocWorkflowTemplateTimeouts</a>
 
 ---
 

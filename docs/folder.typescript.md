@@ -380,7 +380,7 @@ folder.Folder.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.displayNameInput">displayNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.parentInput">parentInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.folder.Folder.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.folder.Folder.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.displayName">displayName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.Folder.property.parent">parent</a></code> | <code>string</code> | *No description.* |
@@ -612,10 +612,10 @@ public readonly parentInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.folder.Folder.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: FolderTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | FolderTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a>
 
 ---
 
@@ -1143,7 +1143,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1254,10 +1254,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.folder.FolderTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: FolderTimeouts | IResolvable;
+public readonly internalValue: IResolvable | FolderTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.folder.FolderTimeouts">FolderTimeouts</a>
 
 ---
 

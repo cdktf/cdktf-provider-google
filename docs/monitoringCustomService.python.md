@@ -629,7 +629,7 @@ monitoringCustomService.MonitoringCustomService.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.serviceIdInput">service_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.telemetryInput">telemetry_input</a></code> | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTelemetry">MonitoringCustomServiceTelemetry</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.userLabelsInput">user_labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -864,10 +864,10 @@ telemetry_input: MonitoringCustomServiceTelemetry
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.monitoringCustomService.MonitoringCustomService.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[MonitoringCustomServiceTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, MonitoringCustomServiceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>]
 
 ---
 
@@ -1832,7 +1832,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1923,10 +1923,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[MonitoringCustomServiceTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, MonitoringCustomServiceTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.monitoringCustomService.MonitoringCustomServiceTimeouts">MonitoringCustomServiceTimeouts</a>]
 
 ---
 

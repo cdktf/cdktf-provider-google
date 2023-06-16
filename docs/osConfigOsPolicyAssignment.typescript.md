@@ -453,7 +453,7 @@ osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.isTerraformResource(x: any
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.rolloutInput">rolloutInput</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout">OsConfigOsPolicyAssignmentRollout</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.skipAwaitRolloutInput">skipAwaitRolloutInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.location">location</a></code> | <code>string</code> | *No description.* |
@@ -818,10 +818,10 @@ public readonly skipAwaitRolloutInput: boolean | IResolvable;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: OsConfigOsPolicyAssignmentTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | OsConfigOsPolicyAssignmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>
 
 ---
 
@@ -4414,7 +4414,7 @@ public resetLabels(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.labelsInput">labelsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a></code> | *No description.* |
 
 ---
 
@@ -4465,10 +4465,10 @@ public readonly labels: {[ key: string ]: string};
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a>
 
 ---
 
@@ -4853,7 +4853,7 @@ public resetLabels(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.labelsInput">labelsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a></code> | *No description.* |
 
 ---
 
@@ -4904,10 +4904,10 @@ public readonly labels: {[ key: string ]: string};
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a>
 
 ---
 
@@ -5294,7 +5294,7 @@ public resetOsVersion(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osVersionInput">osVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osShortName">osShortName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osVersion">osVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a></code> | *No description.* |
 
 ---
 
@@ -5365,10 +5365,10 @@ public readonly osVersion: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentInstanceFilterInventories | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentInstanceFilterInventories;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a>
 
 ---
 
@@ -6185,7 +6185,7 @@ public resetDescription(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.mode">mode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a></code> | *No description.* |
 
 ---
 
@@ -6316,10 +6316,10 @@ public readonly mode: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentOsPolicies | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentOsPolicies;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>
 
 ---
 
@@ -6706,7 +6706,7 @@ public resetOsVersion(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osVersionInput">osVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osShortName">osShortName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osVersion">osVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a></code> | *No description.* |
 
 ---
 
@@ -6777,10 +6777,10 @@ public readonly osVersion: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>
 
 ---
 
@@ -7193,7 +7193,7 @@ public resetInventoryFilters(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.resources">resources</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.inventoryFiltersInput">inventoryFiltersInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.resourcesInput">resourcesInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a></code> | *No description.* |
 
 ---
 
@@ -7264,10 +7264,10 @@ public readonly resourcesInput: IResolvable | OsConfigOsPolicyAssignmentOsPolici
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentOsPoliciesResourceGroups | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentOsPoliciesResourceGroups;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>
 
 ---
 
@@ -12273,7 +12273,7 @@ public resetRepository(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.pkgInput">pkgInput</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.repositoryInput">repositoryInput</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a></code> | *No description.* |
 
 ---
 
@@ -12404,10 +12404,10 @@ public readonly id: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>
 
 ---
 
@@ -20667,7 +20667,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -20758,10 +20758,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: OsConfigOsPolicyAssignmentTimeouts | IResolvable;
+public readonly internalValue: IResolvable | OsConfigOsPolicyAssignmentTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>
 
 ---
 

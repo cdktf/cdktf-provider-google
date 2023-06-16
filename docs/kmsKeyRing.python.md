@@ -539,7 +539,7 @@ kmsKeyRing.KmsKeyRing.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -742,10 +742,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRing.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[KmsKeyRingTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, KmsKeyRingTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>]
 
 ---
 
@@ -1291,7 +1291,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1362,10 +1362,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[KmsKeyRingTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, KmsKeyRingTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.kmsKeyRing.KmsKeyRingTimeouts">KmsKeyRingTimeouts</a>]
 
 ---
 

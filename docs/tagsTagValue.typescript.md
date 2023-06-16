@@ -388,7 +388,7 @@ tagsTagValue.TagsTagValue.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.parentInput">parentInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.shortNameInput">shortNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValue.property.parent">parent</a></code> | <code>string</code> | *No description.* |
@@ -631,10 +631,10 @@ public readonly shortNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.tagsTagValue.TagsTagValue.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: TagsTagValueTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | TagsTagValueTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a>
 
 ---
 
@@ -1167,7 +1167,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1258,10 +1258,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.tagsTagValue.TagsTagValueTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: TagsTagValueTimeouts | IResolvable;
+public readonly internalValue: IResolvable | TagsTagValueTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.tagsTagValue.TagsTagValueTimeouts">TagsTagValueTimeouts</a>
 
 ---
 
