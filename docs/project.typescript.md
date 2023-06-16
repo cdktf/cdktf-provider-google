@@ -425,7 +425,7 @@ project.Project.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.project.Project.property.orgIdInput">orgIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.projectIdInput">projectIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.skipDeleteInput">skipDeleteInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.Project.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.Project.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.autoCreateNetwork">autoCreateNetwork</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.billingAccount">billingAccount</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.Project.property.folderId">folderId</a></code> | <code>string</code> | *No description.* |
@@ -693,10 +693,10 @@ public readonly skipDeleteInput: boolean | IResolvable;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.project.Project.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: ProjectTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | ProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>
 
 ---
 
@@ -1380,7 +1380,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1491,10 +1491,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.project.ProjectTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: ProjectTimeouts | IResolvable;
+public readonly internalValue: IResolvable | ProjectTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.project.ProjectTimeouts">ProjectTimeouts</a>
 
 ---
 

@@ -739,7 +739,7 @@ osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.rolloutInput">rollout_input</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout">OsConfigOsPolicyAssignmentRollout</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.skipAwaitRolloutInput">skip_await_rollout_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -1104,10 +1104,10 @@ skip_await_rollout_input: typing.Union[bool, IResolvable]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[OsConfigOsPolicyAssignmentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, OsConfigOsPolicyAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>]
 
 ---
 
@@ -4935,7 +4935,7 @@ def reset_labels() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -4986,10 +4986,10 @@ labels: typing.Mapping[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabelsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterExclusionLabels</a>]
 
 ---
 
@@ -5409,7 +5409,7 @@ def reset_labels() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.labelsInput">labels_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -5460,10 +5460,10 @@ labels: typing.Mapping[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabelsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels">OsConfigOsPolicyAssignmentInstanceFilterInclusionLabels</a>]
 
 ---
 
@@ -5885,7 +5885,7 @@ def reset_os_version() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osVersionInput">os_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osShortName">os_short_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.osVersion">os_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a>]</code> | *No description.* |
 
 ---
 
@@ -5956,10 +5956,10 @@ os_version: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventoriesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentInstanceFilterInventories, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentInstanceFilterInventories]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories">OsConfigOsPolicyAssignmentInstanceFilterInventories</a>]
 
 ---
 
@@ -6844,7 +6844,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.mode">mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>]</code> | *No description.* |
 
 ---
 
@@ -6975,10 +6975,10 @@ mode: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentOsPolicies, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentOsPolicies]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>]
 
 ---
 
@@ -7400,7 +7400,7 @@ def reset_os_version() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osVersionInput">os_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osShortName">os_short_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.osVersion">os_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>]</code> | *No description.* |
 
 ---
 
@@ -7471,10 +7471,10 @@ os_version: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFiltersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>]
 
 ---
 
@@ -7926,7 +7926,7 @@ def reset_inventory_filters() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.resources">resources</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.inventoryFiltersInput">inventory_filters_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.resourcesInput">resources_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>]</code> | *No description.* |
 
 ---
 
@@ -7997,10 +7997,10 @@ resources_input: typing.Union[IResolvable, typing.List[OsConfigOsPolicyAssignmen
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentOsPoliciesResourceGroups, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentOsPoliciesResourceGroups]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>]
 
 ---
 
@@ -13912,7 +13912,7 @@ def reset_repository() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.pkgInput">pkg_input</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.repositoryInput">repository_input</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>]</code> | *No description.* |
 
 ---
 
@@ -14043,10 +14043,10 @@ id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources</a>]
 
 ---
 
@@ -23448,7 +23448,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -23539,10 +23539,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[OsConfigOsPolicyAssignmentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, OsConfigOsPolicyAssignmentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a>]
 
 ---
 

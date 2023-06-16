@@ -227,13 +227,13 @@ For AWS providers, the following rules apply:
 
 ```
 {
-   "google.subject":"assertion.arn",
-   "attribute.aws_role":
-     "assertion.arn.contains('assumed-role')"
-     " ? assertion.arn.extract('{account_arn}assumed-role/')"
-     "   + 'assumed-role/'"
-     "   + assertion.arn.extract('assumed-role/{role_name}/')"
-     " : assertion.arn",
+  "google.subject":"assertion.arn",
+  "attribute.aws_role":
+    "assertion.arn.contains('assumed-role')"
+    " ? assertion.arn.extract('{account_arn}assumed-role/')"
+    "   + 'assumed-role/'"
+    "   + assertion.arn.extract('assumed-role/{role_name}/')"
+    " : assertion.arn",
 }
 ```
 
@@ -841,7 +841,7 @@ iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.is_terraform_res
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.oidcInput">oidc_input</a></code> | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderOidc">IamWorkloadIdentityPoolProviderOidc</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.workloadIdentityPoolIdInput">workload_identity_pool_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.workloadIdentityPoolProviderIdInput">workload_identity_pool_provider_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.attributeCondition">attribute_condition</a></code> | <code>str</code> | *No description.* |
@@ -1141,10 +1141,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProvider.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IamWorkloadIdentityPoolProviderTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, IamWorkloadIdentityPoolProviderTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>]
 
 ---
 
@@ -1555,13 +1555,13 @@ For AWS providers, the following rules apply:
 
 ```
 {
-   "google.subject":"assertion.arn",
-   "attribute.aws_role":
-     "assertion.arn.contains('assumed-role')"
-     " ? assertion.arn.extract('{account_arn}assumed-role/')"
-     "   + 'assumed-role/'"
-     "   + assertion.arn.extract('assumed-role/{role_name}/')"
-     " : assertion.arn",
+  "google.subject":"assertion.arn",
+  "attribute.aws_role":
+    "assertion.arn.contains('assumed-role')"
+    " ? assertion.arn.extract('{account_arn}assumed-role/')"
+    "   + 'assumed-role/'"
+    "   + assertion.arn.extract('assumed-role/{role_name}/')"
+    " : assertion.arn",
 }
 ```
 
@@ -2702,7 +2702,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -2793,10 +2793,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IamWorkloadIdentityPoolProviderTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, IamWorkloadIdentityPoolProviderTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iamWorkloadIdentityPoolProvider.IamWorkloadIdentityPoolProviderTimeouts">IamWorkloadIdentityPoolProviderTimeouts</a>]
 
 ---
 

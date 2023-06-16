@@ -411,7 +411,7 @@ endpointsService.EndpointsService.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.protocOutputBase64Input">protocOutputBase64Input</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.serviceNameInput">serviceNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.grpcConfig">grpcConfig</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsService.property.openapiConfig">openapiConfig</a></code> | <code>string</code> | *No description.* |
@@ -676,10 +676,10 @@ public readonly serviceNameInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.endpointsService.EndpointsService.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: EndpointsServiceTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | EndpointsServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a>
 
 ---
 
@@ -2602,7 +2602,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2693,10 +2693,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.endpointsService.EndpointsServiceTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: EndpointsServiceTimeouts | IResolvable;
+public readonly internalValue: IResolvable | EndpointsServiceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.endpointsService.EndpointsServiceTimeouts">EndpointsServiceTimeouts</a>
 
 ---
 

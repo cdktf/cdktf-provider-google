@@ -385,7 +385,7 @@ sccSource.SccSource.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.displayNameInput">displayNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.organizationInput">organizationInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.displayName">displayName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSource.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -598,10 +598,10 @@ public readonly organizationInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.sccSource.SccSource.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: SccSourceTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | SccSourceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a>
 
 ---
 
@@ -1136,7 +1136,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1227,10 +1227,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.sccSource.SccSourceTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: SccSourceTimeouts | IResolvable;
+public readonly internalValue: IResolvable | SccSourceTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.sccSource.SccSourceTimeouts">SccSourceTimeouts</a>
 
 ---
 

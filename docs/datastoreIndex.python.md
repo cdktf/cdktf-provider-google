@@ -583,7 +583,7 @@ datastoreIndex.DatastoreIndex.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.kindInput">kind_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.propertiesInput">properties_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties">DatastoreIndexProperties</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.ancestor">ancestor</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.kind">kind</a></code> | <code>str</code> | *No description.* |
@@ -816,10 +816,10 @@ properties_input: typing.Union[IResolvable, typing.List[DatastoreIndexProperties
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[DatastoreIndexTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, DatastoreIndexTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>]
 
 ---
 
@@ -1588,7 +1588,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.direction">direction</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties">DatastoreIndexProperties</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties">DatastoreIndexProperties</a>]</code> | *No description.* |
 
 ---
 
@@ -1659,10 +1659,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DatastoreIndexProperties, IResolvable]
+internal_value: typing.Union[IResolvable, DatastoreIndexProperties]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties">DatastoreIndexProperties</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties">DatastoreIndexProperties</a>]
 
 ---
 
@@ -1920,7 +1920,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1991,10 +1991,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[DatastoreIndexTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, DatastoreIndexTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts">DatastoreIndexTimeouts</a>]
 
 ---
 

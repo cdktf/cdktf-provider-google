@@ -1000,7 +1000,7 @@ computeUrlMap.ComputeUrlMap.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.pathMatcherInput">path_matcher_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.testInput">test_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.defaultService">default_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1374,10 +1374,10 @@ test_input: typing.Union[IResolvable, typing.List[ComputeUrlMapTest]]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMap.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[ComputeUrlMapTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, ComputeUrlMapTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>]
 
 ---
 
@@ -13694,7 +13694,7 @@ def reset_replace() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -13785,10 +13785,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -14226,7 +14226,7 @@ def reset_replace() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -14317,10 +14317,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -14810,7 +14810,7 @@ def reset_weight() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.weightInput">weight_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.backendService">backend_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.weight">weight</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServices">ComputeUrlMapDefaultRouteActionWeightedBackendServices</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServices">ComputeUrlMapDefaultRouteActionWeightedBackendServices</a>]</code> | *No description.* |
 
 ---
 
@@ -14901,10 +14901,10 @@ weight: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapDefaultRouteActionWeightedBackendServices, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapDefaultRouteActionWeightedBackendServices]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServices">ComputeUrlMapDefaultRouteActionWeightedBackendServices</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapDefaultRouteActionWeightedBackendServices">ComputeUrlMapDefaultRouteActionWeightedBackendServices</a>]
 
 ---
 
@@ -16182,7 +16182,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAdd">ComputeUrlMapHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAdd">ComputeUrlMapHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -16273,10 +16273,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAdd">ComputeUrlMapHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionRequestHeadersToAdd">ComputeUrlMapHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -16693,7 +16693,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAdd">ComputeUrlMapHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAdd">ComputeUrlMapHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -16784,10 +16784,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAdd">ComputeUrlMapHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHeaderActionResponseHeadersToAdd">ComputeUrlMapHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -17211,7 +17211,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.hosts">hosts</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.pathMatcher">path_matcher</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>]</code> | *No description.* |
 
 ---
 
@@ -17302,10 +17302,10 @@ path_matcher: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapHostRule, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapHostRule]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapHostRule">ComputeUrlMapHostRule</a>]
 
 ---
 
@@ -22559,7 +22559,7 @@ def reset_replace() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -22650,10 +22650,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -23091,7 +23091,7 @@ def reset_replace() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -23182,10 +23182,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -23675,7 +23675,7 @@ def reset_weight() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.weightInput">weight_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.backendService">backend_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.weight">weight</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices</a>]</code> | *No description.* |
 
 ---
 
@@ -23766,10 +23766,10 @@ weight: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServicesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherDefaultRouteActionWeightedBackendServices</a>]
 
 ---
 
@@ -25047,7 +25047,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -25138,10 +25138,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -25558,7 +25558,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -25649,10 +25649,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -26401,7 +26401,7 @@ def reset_route_rules() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.defaultService">default_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>]</code> | *No description.* |
 
 ---
 
@@ -26592,10 +26592,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcher, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcher]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcher">ComputeUrlMapPathMatcher</a>]
 
 ---
 
@@ -27228,7 +27228,7 @@ def reset_url_redirect() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.urlRedirectInput">url_redirect_input</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleUrlRedirect">ComputeUrlMapPathMatcherPathRuleUrlRedirect</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.paths">paths</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.service">service</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRule">ComputeUrlMapPathMatcherPathRule</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRule">ComputeUrlMapPathMatcherPathRule</a>]</code> | *No description.* |
 
 ---
 
@@ -27339,10 +27339,10 @@ service: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherPathRule, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherPathRule]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRule">ComputeUrlMapPathMatcherPathRule</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRule">ComputeUrlMapPathMatcherPathRule</a>]
 
 ---
 
@@ -32526,7 +32526,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -32617,10 +32617,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -33037,7 +33037,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -33128,10 +33128,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -33607,7 +33607,7 @@ def reset_header_action() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.weightInput">weight_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.backendService">backend_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.weight">weight</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices</a>]</code> | *No description.* |
 
 ---
 
@@ -33698,10 +33698,10 @@ weight: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices</a>]
 
 ---
 
@@ -34979,7 +34979,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -35070,10 +35070,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -35490,7 +35490,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -35581,10 +35581,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -36241,7 +36241,7 @@ def reset_suffix_match() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.presentMatch">present_match</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.regexMatch">regex_match</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.suffixMatch">suffix_match</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches</a>]</code> | *No description.* |
 
 ---
 
@@ -36432,10 +36432,10 @@ suffix_match: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches</a>]
 
 ---
 
@@ -37319,7 +37319,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels</a>]</code> | *No description.* |
 
 ---
 
@@ -37390,10 +37390,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabelsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels</a>]
 
 ---
 
@@ -37823,7 +37823,7 @@ def put_filter_labels(
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.filterLabelsInput">filter_labels_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels</a>]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.filterMatchCriteriaInput">filter_match_criteria_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.filterMatchCriteria">filter_match_criteria</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters</a>]</code> | *No description.* |
 
 ---
 
@@ -37894,10 +37894,10 @@ filter_match_criteria: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters">ComputeUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters</a>]
 
 ---
 
@@ -38265,7 +38265,7 @@ def reset_regex_match() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.ignoreCase">ignore_case</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.prefixMatch">prefix_match</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.regexMatch">regex_match</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRules">ComputeUrlMapPathMatcherRouteRulesMatchRules</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRules">ComputeUrlMapPathMatcherRouteRulesMatchRules</a>]</code> | *No description.* |
 
 ---
 
@@ -38436,10 +38436,10 @@ regex_match: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesMatchRules, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesMatchRules]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRules">ComputeUrlMapPathMatcherRouteRulesMatchRules</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRules">ComputeUrlMapPathMatcherRouteRulesMatchRules</a>]
 
 ---
 
@@ -38879,7 +38879,7 @@ def reset_regex_match() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.presentMatch">present_match</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.regexMatch">regex_match</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches</a>]</code> | *No description.* |
 
 ---
 
@@ -38990,10 +38990,10 @@ regex_match: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatchesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches">ComputeUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches</a>]
 
 ---
 
@@ -39549,7 +39549,7 @@ def reset_url_redirect() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.urlRedirectInput">url_redirect_input</a></code> | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesUrlRedirect">ComputeUrlMapPathMatcherRouteRulesUrlRedirect</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.service">service</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRules">ComputeUrlMapPathMatcherRouteRules</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRules">ComputeUrlMapPathMatcherRouteRules</a>]</code> | *No description.* |
 
 ---
 
@@ -39700,10 +39700,10 @@ service: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRules, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRules]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRules">ComputeUrlMapPathMatcherRouteRules</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRules">ComputeUrlMapPathMatcherRouteRules</a>]
 
 ---
 
@@ -44915,7 +44915,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -45006,10 +45006,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd</a>]
 
 ---
 
@@ -45426,7 +45426,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.replace">replace</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]</code> | *No description.* |
 
 ---
 
@@ -45517,10 +45517,10 @@ replace: typing.Union[bool, IResolvable]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAddOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd</a>]
 
 ---
 
@@ -45996,7 +45996,7 @@ def reset_header_action() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.weightInput">weight_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.backendService">backend_service</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.weight">weight</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices</a>]</code> | *No description.* |
 
 ---
 
@@ -46087,10 +46087,10 @@ weight: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices">ComputeUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices</a>]
 
 ---
 
@@ -46964,7 +46964,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.host">host</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.service">service</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>]</code> | *No description.* |
 
 ---
 
@@ -47075,10 +47075,10 @@ service: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTestOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapTest, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapTest]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTest">ComputeUrlMapTest</a>]
 
 ---
 
@@ -47345,7 +47345,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -47436,10 +47436,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[ComputeUrlMapTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, ComputeUrlMapTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.computeUrlMap.ComputeUrlMapTimeouts">ComputeUrlMapTimeouts</a>]
 
 ---
 

@@ -745,7 +745,7 @@ privatecaCertificate.PrivatecaCertificate.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.pemCsrInput">pem_csr_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.poolInput">pool_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.certificateAuthority">certificate_authority</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.certificateTemplate">certificate_template</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1114,10 +1114,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[PrivatecaCertificateTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, PrivatecaCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>]
 
 ---
 
@@ -18929,7 +18929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.critical">critical</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a>]</code> | *No description.* |
 
 ---
 
@@ -19020,10 +19020,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[PrivatecaCertificateConfigX509ConfigAdditionalExtensions, IResolvable]
+internal_value: typing.Union[IResolvable, PrivatecaCertificateConfigX509ConfigAdditionalExtensions]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a>]
 
 ---
 
@@ -21352,7 +21352,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.objectIdPathInput">object_id_path_input</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.objectIdPath">object_id_path</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a>]</code> | *No description.* |
 
 ---
 
@@ -21403,10 +21403,10 @@ object_id_path: typing.List[typing.Union[int, float]]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages, IResolvable]
+internal_value: typing.Union[IResolvable, PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a>]
 
 ---
 
@@ -23064,7 +23064,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.objectIdPathInput">object_id_path_input</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.objectIdPath">object_id_path</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a>]</code> | *No description.* |
 
 ---
 
@@ -23115,10 +23115,10 @@ object_id_path: typing.List[typing.Union[int, float]]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[PrivatecaCertificateConfigX509ConfigPolicyIds, IResolvable]
+internal_value: typing.Union[IResolvable, PrivatecaCertificateConfigX509ConfigPolicyIds]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a>]
 
 ---
 
@@ -23841,7 +23841,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -23932,10 +23932,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[PrivatecaCertificateTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, PrivatecaCertificateTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>]
 
 ---
 

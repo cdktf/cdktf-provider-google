@@ -410,7 +410,7 @@ loggingLogView.LoggingLogView.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.parentInput">parentInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.bucket">bucket</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogView.property.filter">filter</a></code> | <code>string</code> | *No description.* |
@@ -666,10 +666,10 @@ public readonly parentInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.loggingLogView.LoggingLogView.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: LoggingLogViewTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | LoggingLogViewTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a>
 
 ---
 
@@ -1275,7 +1275,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -1366,10 +1366,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.loggingLogView.LoggingLogViewTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: LoggingLogViewTimeouts | IResolvable;
+public readonly internalValue: IResolvable | LoggingLogViewTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.loggingLogView.LoggingLogViewTimeouts">LoggingLogViewTimeouts</a>
 
 ---
 

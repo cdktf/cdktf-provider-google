@@ -455,7 +455,7 @@ privatecaCertificate.PrivatecaCertificate.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.pemCsrInput">pemCsrInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.poolInput">poolInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.projectInput">projectInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput">timeoutsInput</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.certificateAuthority">certificateAuthority</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.certificateTemplate">certificateTemplate</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.id">id</a></code> | <code>string</code> | *No description.* |
@@ -824,10 +824,10 @@ public readonly projectInput: string;
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.property.timeoutsInput"></a>
 
 ```typescript
-public readonly timeoutsInput: PrivatecaCertificateTimeouts | IResolvable;
+public readonly timeoutsInput: IResolvable | PrivatecaCertificateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>
 
 ---
 
@@ -17183,7 +17183,7 @@ public putObjectId(value: PrivatecaCertificateConfigX509ConfigAdditionalExtensio
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.valueInput">valueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.critical">critical</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.value">value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a></code> | *No description.* |
 
 ---
 
@@ -17274,10 +17274,10 @@ public readonly value: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensionsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PrivatecaCertificateConfigX509ConfigAdditionalExtensions | IResolvable;
+public readonly internalValue: IResolvable | PrivatecaCertificateConfigX509ConfigAdditionalExtensions;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigAdditionalExtensions">PrivatecaCertificateConfigX509ConfigAdditionalExtensions</a>
 
 ---
 
@@ -19314,7 +19314,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.objectIdPathInput">objectIdPathInput</a></code> | <code>number[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.objectIdPath">objectIdPath</a></code> | <code>number[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a></code> | *No description.* |
 
 ---
 
@@ -19365,10 +19365,10 @@ public readonly objectIdPath: number[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsagesOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages | IResolvable;
+public readonly internalValue: IResolvable | PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages">PrivatecaCertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsages</a>
 
 ---
 
@@ -20730,7 +20730,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.objectIdPathInput">objectIdPathInput</a></code> | <code>number[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.objectIdPath">objectIdPath</a></code> | <code>number[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a></code> | *No description.* |
 
 ---
 
@@ -20781,10 +20781,10 @@ public readonly objectIdPath: number[];
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIdsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PrivatecaCertificateConfigX509ConfigPolicyIds | IResolvable;
+public readonly internalValue: IResolvable | PrivatecaCertificateConfigX509ConfigPolicyIds;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigX509ConfigPolicyIds">PrivatecaCertificateConfigX509ConfigPolicyIds</a>
 
 ---
 
@@ -21447,7 +21447,7 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a> \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -21538,10 +21538,10 @@ public readonly update: string;
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeoutsOutputReference.property.internalValue"></a>
 
 ```typescript
-public readonly internalValue: PrivatecaCertificateTimeouts | IResolvable;
+public readonly internalValue: IResolvable | PrivatecaCertificateTimeouts;
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a> | cdktf.IResolvable
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateTimeouts">PrivatecaCertificateTimeouts</a>
 
 ---
 

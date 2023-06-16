@@ -585,7 +585,7 @@ firestoreDocument.FirestoreDocument.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.fieldsInput">fields_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.projectInput">project_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.collection">collection</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.database">database</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.documentId">document_id</a></code> | <code>str</code> | *No description.* |
@@ -850,10 +850,10 @@ project_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.firestoreDocument.FirestoreDocument.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[FirestoreDocumentTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, FirestoreDocumentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>]
 
 ---
 
@@ -1474,7 +1474,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1565,10 +1565,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[FirestoreDocumentTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, FirestoreDocumentTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.firestoreDocument.FirestoreDocumentTimeouts">FirestoreDocumentTimeouts</a>]
 
 ---
 

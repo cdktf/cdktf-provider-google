@@ -523,7 +523,7 @@ iapClient.IapClient.is_terraform_resource(
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.brandInput">brand_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.displayNameInput">display_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.brand">brand</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.displayName">display_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClient.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -735,10 +735,10 @@ id_input: str
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-google.iapClient.IapClient.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IapClientTimeouts, IResolvable]
+timeouts_input: typing.Union[IResolvable, IapClientTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>]
 
 ---
 
@@ -1260,7 +1260,7 @@ def reset_delete() -> None
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[<a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>]</code> | *No description.* |
 
 ---
 
@@ -1331,10 +1331,10 @@ delete: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-google.iapClient.IapClientTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IapClientTimeouts, IResolvable]
+internal_value: typing.Union[IResolvable, IapClientTimeouts]
 ```
 
-- *Type:* typing.Union[<a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>, cdktf.IResolvable]
+- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-google.iapClient.IapClientTimeouts">IapClientTimeouts</a>]
 
 ---
 
