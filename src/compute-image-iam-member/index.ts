@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeImageIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#id ComputeImageIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#id ComputeImageIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#image ComputeImageIamMember#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#image ComputeImageIamMember#image}
   */
   readonly image: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#member ComputeImageIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#member ComputeImageIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#project ComputeImageIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#project ComputeImageIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#role ComputeImageIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#role ComputeImageIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#condition ComputeImageIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#condition ComputeImageIamMember#condition}
   */
   readonly condition?: ComputeImageIamMemberCondition;
 }
 export interface ComputeImageIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#description ComputeImageIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#description ComputeImageIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#expression ComputeImageIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#expression ComputeImageIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member#title ComputeImageIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member#title ComputeImageIamMember#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class ComputeImageIamMemberConditionOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member google_compute_image_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member google_compute_image_iam_member}
 */
 export class ComputeImageIamMember extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class ComputeImageIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_image_iam_member google_compute_image_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_image_iam_member google_compute_image_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class ComputeImageIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_image_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.69.1',
+        providerVersion: '4.70.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

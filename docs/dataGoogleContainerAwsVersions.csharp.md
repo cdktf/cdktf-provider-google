@@ -1,6 +1,6 @@
 # `data_google_container_aws_versions`
 
-Refer to the Terraform Registory for docs: [`data_google_container_aws_versions`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions).
+Refer to the Terraform Registory for docs: [`data_google_container_aws_versions`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions).
 
 # `dataGoogleContainerAwsVersions` Submodule <a name="`dataGoogleContainerAwsVersions` Submodule" id="@cdktf/provider-google.dataGoogleContainerAwsVersions"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_container_aws_versions`
 
 ### DataGoogleContainerAwsVersions <a name="DataGoogleContainerAwsVersions" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions google_container_aws_versions}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions google_container_aws_versions}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersions.Initializer"></a>
 
@@ -629,9 +629,9 @@ new DataGoogleContainerAwsVersionsConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#id DataGoogleContainerAwsVersions#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#location DataGoogleContainerAwsVersions#location}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#project DataGoogleContainerAwsVersions#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#id DataGoogleContainerAwsVersions#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#location DataGoogleContainerAwsVersions#location}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerAwsVersions.DataGoogleContainerAwsVersionsConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#project DataGoogleContainerAwsVersions#project}. |
 
 ---
 
@@ -713,7 +713,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#id DataGoogleContainerAwsVersions#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#id DataGoogleContainerAwsVersions#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -728,7 +728,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#location DataGoogleContainerAwsVersions#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#location DataGoogleContainerAwsVersions#location}.
 
 ---
 
@@ -740,7 +740,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/container_aws_versions#project DataGoogleContainerAwsVersions#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/container_aws_versions#project DataGoogleContainerAwsVersions#project}.
 
 ---
 

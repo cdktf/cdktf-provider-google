@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template
+// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface DataLossPreventionInspectTemplateConfig extends cdktf.Terraform
   /**
   * A description of the inspect template.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#description DataLossPreventionInspectTemplate#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#description DataLossPreventionInspectTemplate#description}
   */
   readonly description?: string;
   /**
   * User set display name of the inspect template.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#display_name DataLossPreventionInspectTemplate#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#display_name DataLossPreventionInspectTemplate#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#id DataLossPreventionInspectTemplate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#id DataLossPreventionInspectTemplate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,7 +34,7 @@ export interface DataLossPreventionInspectTemplateConfig extends cdktf.Terraform
 * 'organizations/{{organization_id}}'
 * 'organizations/{{organization_id}}/locations/{{location}}'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#parent DataLossPreventionInspectTemplate#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#parent DataLossPreventionInspectTemplate#parent}
   */
   readonly parent: string;
   /**
@@ -47,19 +42,19 @@ export interface DataLossPreventionInspectTemplateConfig extends cdktf.Terraform
 that is, it must match the regular expression: [a-zA-Z\d-_]+. The maximum length is
 100 characters. Can be empty to allow the system to generate one.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#template_id DataLossPreventionInspectTemplate#template_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#template_id DataLossPreventionInspectTemplate#template_id}
   */
   readonly templateId?: string;
   /**
   * inspect_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#inspect_config DataLossPreventionInspectTemplate#inspect_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#inspect_config DataLossPreventionInspectTemplate#inspect_config}
   */
   readonly inspectConfig?: DataLossPreventionInspectTemplateInspectConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#timeouts DataLossPreventionInspectTemplate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#timeouts DataLossPreventionInspectTemplate#timeouts}
   */
   readonly timeouts?: DataLossPreventionInspectTemplateTimeouts;
 }
@@ -67,7 +62,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
   /**
   * A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#path DataLossPreventionInspectTemplate#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#path DataLossPreventionInspectTemplate#path}
   */
   readonly path: string;
 }
@@ -132,7 +127,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
   * Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
   */
   readonly words: string[];
 }
@@ -196,13 +191,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDi
   /**
   * cloud_storage_path block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#cloud_storage_path DataLossPreventionInspectTemplate#cloud_storage_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#cloud_storage_path DataLossPreventionInspectTemplate#cloud_storage_path}
   */
   readonly cloudStoragePath?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryCloudStoragePath;
   /**
   * word_list block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#word_list DataLossPreventionInspectTemplate#word_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#word_list DataLossPreventionInspectTemplate#word_list}
   */
   readonly wordList?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryWordListStruct;
 }
@@ -288,20 +283,90 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictio
     return this._wordList.internalValue;
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
 listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
   /**
   * Version name for this InfoType.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
   */
   readonly version?: string;
+  /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType): any {
@@ -312,6 +377,7 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInf
   return {
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
 }
 
@@ -337,6 +403,10 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -345,11 +415,13 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
       this.isEmptyObject = false;
       this._name = undefined;
       this._version = undefined;
+      this._sensitivityScore.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._version = value.version;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
     }
   }
 
@@ -381,19 +453,35 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTy
   public get versionInput() {
     return this._version;
   }
+
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex {
   /**
   * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
   readonly pattern: string;
 }
@@ -476,12 +564,76 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexO
     return this._pattern;
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType {
   /**
   * Resource name of the requested StoredInfoType, for example 'organizations/433245324/storedInfoTypes/432452342'
 or 'projects/project-id/storedInfoTypes/432452342'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
 }
@@ -583,44 +735,50 @@ export interface DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes {
   /**
   * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: ["EXCLUSION_TYPE_EXCLUDE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#exclusion_type DataLossPreventionInspectTemplate#exclusion_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#exclusion_type DataLossPreventionInspectTemplate#exclusion_type}
   */
   readonly exclusionType?: string;
   /**
   * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule. Default value: "VERY_LIKELY" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#likelihood DataLossPreventionInspectTemplate#likelihood}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#likelihood DataLossPreventionInspectTemplate#likelihood}
   */
   readonly likelihood?: string;
   /**
   * dictionary block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#dictionary DataLossPreventionInspectTemplate#dictionary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#dictionary DataLossPreventionInspectTemplate#dictionary}
   */
   readonly dictionary?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionary;
   /**
   * info_type block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#info_type DataLossPreventionInspectTemplate#info_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#info_type DataLossPreventionInspectTemplate#info_type}
   */
   readonly infoType: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoType;
   /**
   * regex block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#regex DataLossPreventionInspectTemplate#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#regex DataLossPreventionInspectTemplate#regex}
   */
   readonly regex?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegex;
   /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore;
+  /**
   * stored_type block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#stored_type DataLossPreventionInspectTemplate#stored_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#stored_type DataLossPreventionInspectTemplate#stored_type}
   */
   readonly storedType?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredType;
   /**
   * surrogate_type block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#surrogate_type DataLossPreventionInspectTemplate#surrogate_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#surrogate_type DataLossPreventionInspectTemplate#surrogate_type}
   */
   readonly surrogateType?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSurrogateType;
 }
@@ -636,6 +794,7 @@ export function dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesToT
     dictionary: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesDictionaryToTerraform(struct!.dictionary),
     info_type: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesInfoTypeToTerraform(struct!.infoType),
     regex: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesRegexToTerraform(struct!.regex),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScoreToTerraform(struct!.sensitivityScore),
     stored_type: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeToTerraform(struct!.storedType),
     surrogate_type: dataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSurrogateTypeToTerraform(struct!.surrogateType),
   }
@@ -681,6 +840,10 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutput
       hasAnyValues = true;
       internalValueResult.regex = this._regex?.internalValue;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     if (this._storedType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.storedType = this._storedType?.internalValue;
@@ -701,6 +864,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutput
       this._dictionary.internalValue = undefined;
       this._infoType.internalValue = undefined;
       this._regex.internalValue = undefined;
+      this._sensitivityScore.internalValue = undefined;
       this._storedType.internalValue = undefined;
       this._surrogateType.internalValue = undefined;
     }
@@ -716,6 +880,7 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutput
       this._dictionary.internalValue = value.dictionary;
       this._infoType.internalValue = value.infoType;
       this._regex.internalValue = value.regex;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
       this._storedType.internalValue = value.storedType;
       this._surrogateType.internalValue = value.surrogateType;
     }
@@ -798,6 +963,22 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutput
     return this._regex.internalValue;
   }
 
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
+
   // stored_type - computed: false, optional: true, required: false
   private _storedType = new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesStoredTypeOutputReference(this, "stored_type");
   public get storedType() {
@@ -850,20 +1031,90 @@ export class DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesList e
     return new DataLossPreventionInspectTemplateInspectConfigCustomInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
   /**
   * Version of the information type to use. By default, the version is set to stable
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
   */
   readonly version?: string;
+  /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigInfoTypes | cdktf.IResolvable): any {
@@ -874,6 +1125,7 @@ export function dataLossPreventionInspectTemplateInspectConfigInfoTypesToTerrafo
   return {
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
 }
 
@@ -905,6 +1157,10 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -914,6 +1170,7 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       this.resolvableValue = undefined;
       this._name = undefined;
       this._version = undefined;
+      this._sensitivityScore.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -924,6 +1181,7 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
       this.resolvableValue = undefined;
       this._name = value.name;
       this._version = value.version;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
     }
   }
 
@@ -955,6 +1213,22 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputRefere
   public get versionInput() {
     return this._version;
   }
+
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigInfoTypesSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigInfoTypesList extends cdktf.ComplexList {
@@ -976,20 +1250,90 @@ export class DataLossPreventionInspectTemplateInspectConfigInfoTypesList extends
     return new DataLossPreventionInspectTemplateInspectConfigInfoTypesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
   /**
   * Version name for this InfoType.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
   */
   readonly version?: string;
+  /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutputReference | DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType): any {
@@ -1000,6 +1344,7 @@ export function dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsP
   return {
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
 }
 
@@ -1025,6 +1370,10 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1033,11 +1382,13 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
       this.isEmptyObject = false;
       this._name = undefined;
       this._version = undefined;
+      this._sensitivityScore.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._version = value.version;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
     }
   }
 
@@ -1069,18 +1420,34 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerI
   public get versionInput() {
     return this._version;
   }
+
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
 }
 export interface DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
   /**
   * Max findings limit for the given infoType.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#max_findings DataLossPreventionInspectTemplate#max_findings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#max_findings DataLossPreventionInspectTemplate#max_findings}
   */
   readonly maxFindings: number;
   /**
   * info_type block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#info_type DataLossPreventionInspectTemplate#info_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#info_type DataLossPreventionInspectTemplate#info_type}
   */
   readonly infoType: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType;
 }
@@ -1196,19 +1563,19 @@ export interface DataLossPreventionInspectTemplateInspectConfigLimits {
   /**
   * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#max_findings_per_item DataLossPreventionInspectTemplate#max_findings_per_item}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#max_findings_per_item DataLossPreventionInspectTemplate#max_findings_per_item}
   */
   readonly maxFindingsPerItem: number;
   /**
   * Max number of findings that will be returned per request/job. The maximum returned is 2000.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#max_findings_per_request DataLossPreventionInspectTemplate#max_findings_per_request}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#max_findings_per_request DataLossPreventionInspectTemplate#max_findings_per_request}
   */
   readonly maxFindingsPerRequest: number;
   /**
   * max_findings_per_info_type block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#max_findings_per_info_type DataLossPreventionInspectTemplate#max_findings_per_info_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#max_findings_per_info_type DataLossPreventionInspectTemplate#max_findings_per_info_type}
   */
   readonly maxFindingsPerInfoType?: DataLossPreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType[] | cdktf.IResolvable;
 }
@@ -1311,20 +1678,90 @@ export class DataLossPreventionInspectTemplateInspectConfigLimitsOutputReference
     return this._maxFindingsPerInfoType.internalValue;
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
   /**
   * Version name for this InfoType.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
   */
   readonly version?: string;
+  /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes | cdktf.IResolvable): any {
@@ -1335,6 +1772,7 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesTo
   return {
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
 }
 
@@ -1366,6 +1804,10 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutpu
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1375,6 +1817,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutpu
       this.resolvableValue = undefined;
       this._name = undefined;
       this._version = undefined;
+      this._sensitivityScore.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -1385,6 +1828,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutpu
       this.resolvableValue = undefined;
       this._name = value.name;
       this._version = value.version;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
     }
   }
 
@@ -1416,6 +1860,22 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesOutpu
   public get versionInput() {
     return this._version;
   }
+
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypesList extends cdktf.ComplexList {
@@ -1441,7 +1901,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * A url representing a file or path (no wildcards) in Cloud Storage. Example: 'gs://[BUCKET_NAME]/dictionary.txt'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#path DataLossPreventionInspectTemplate#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#path DataLossPreventionInspectTemplate#path}
   */
   readonly path: string;
 }
@@ -1506,7 +1966,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   * Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#words DataLossPreventionInspectTemplate#words}
   */
   readonly words: string[];
 }
@@ -1570,13 +2030,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * cloud_storage_path block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#cloud_storage_path DataLossPreventionInspectTemplate#cloud_storage_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#cloud_storage_path DataLossPreventionInspectTemplate#cloud_storage_path}
   */
   readonly cloudStoragePath?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath;
   /**
   * word_list block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#word_list DataLossPreventionInspectTemplate#word_list}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#word_list DataLossPreventionInspectTemplate#word_list}
   */
   readonly wordList?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionaryWordListStruct;
 }
@@ -1667,14 +2127,14 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   * The index of the submatch to extract as findings. When not specified,
 the entire match is returned. No more than 3 may be included.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
 (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
   readonly pattern: string;
 }
@@ -1761,13 +2221,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * Number of characters after the finding to consider.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#window_after DataLossPreventionInspectTemplate#window_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#window_after DataLossPreventionInspectTemplate#window_after}
   */
   readonly windowAfter?: number;
   /**
   * Number of characters before the finding to consider.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#window_before DataLossPreventionInspectTemplate#window_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#window_before DataLossPreventionInspectTemplate#window_before}
   */
   readonly windowBefore?: number;
 }
@@ -1857,13 +2317,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * hotword_regex block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#hotword_regex DataLossPreventionInspectTemplate#hotword_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#hotword_regex DataLossPreventionInspectTemplate#hotword_regex}
   */
   readonly hotwordRegex: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordHotwordRegex;
   /**
   * proximity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#proximity DataLossPreventionInspectTemplate#proximity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#proximity DataLossPreventionInspectTemplate#proximity}
   */
   readonly proximity: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeByHotwordProximity;
 }
@@ -1943,20 +2403,90 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
     return this._proximity.internalValue;
   }
 }
+export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore {
+  /**
+  * The sensitivity score applied to the resource. Possible values: ["SENSITIVITY_LOW", "SENSITIVITY_MODERATE", "SENSITIVITY_HIGH"]
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#score DataLossPreventionInspectTemplate#score}
+  */
+  readonly score: string;
+}
+
+export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScoreToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScoreOutputReference | DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    score: cdktf.stringToTerraform(struct!.score),
+  }
+}
+
+export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._score = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._score = value.score;
+    }
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: string; 
+  public get score() {
+    return this.getStringAttribute('score');
+  }
+  public set score(value: string) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+}
 export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes {
   /**
   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#name DataLossPreventionInspectTemplate#name}
   */
   readonly name: string;
   /**
   * Version name for this InfoType.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#version DataLossPreventionInspectTemplate#version}
   */
   readonly version?: string;
+  /**
+  * sensitivity_score block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#sensitivity_score DataLossPreventionInspectTemplate#sensitivity_score}
+  */
+  readonly sensitivityScore?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore;
 }
 
 export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesToTerraform(struct?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes | cdktf.IResolvable): any {
@@ -1967,6 +2497,7 @@ export function dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclus
   return {
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
+    sensitivity_score: dataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScoreToTerraform(struct!.sensitivityScore),
   }
 }
 
@@ -1998,6 +2529,10 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
+    if (this._sensitivityScore?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sensitivityScore = this._sensitivityScore?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -2007,6 +2542,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
       this.resolvableValue = undefined;
       this._name = undefined;
       this._version = undefined;
+      this._sensitivityScore.internalValue = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -2017,6 +2553,7 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
       this.resolvableValue = undefined;
       this._name = value.name;
       this._version = value.version;
+      this._sensitivityScore.internalValue = value.sensitivityScore;
     }
   }
 
@@ -2048,6 +2585,22 @@ export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusion
   public get versionInput() {
     return this._version;
   }
+
+  // sensitivity_score - computed: false, optional: true, required: false
+  private _sensitivityScore = new DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScoreOutputReference(this, "sensitivity_score");
+  public get sensitivityScore() {
+    return this._sensitivityScore;
+  }
+  public putSensitivityScore(value: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore) {
+    this._sensitivityScore.internalValue = value;
+  }
+  public resetSensitivityScore() {
+    this._sensitivityScore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sensitivityScoreInput() {
+    return this._sensitivityScore.internalValue;
+  }
 }
 
 export class DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypesList extends cdktf.ComplexList {
@@ -2073,7 +2626,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * info_types block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
   readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes[] | cdktf.IResolvable;
 }
@@ -2137,14 +2690,14 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
   readonly pattern: string;
 }
@@ -2231,31 +2784,31 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclu
   /**
   * How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType Possible values: ["MATCHING_TYPE_FULL_MATCH", "MATCHING_TYPE_PARTIAL_MATCH", "MATCHING_TYPE_INVERSE_MATCH"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#matching_type DataLossPreventionInspectTemplate#matching_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#matching_type DataLossPreventionInspectTemplate#matching_type}
   */
   readonly matchingType: string;
   /**
   * dictionary block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#dictionary DataLossPreventionInspectTemplate#dictionary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#dictionary DataLossPreventionInspectTemplate#dictionary}
   */
   readonly dictionary?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleDictionary;
   /**
   * exclude_by_hotword block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#exclude_by_hotword DataLossPreventionInspectTemplate#exclude_by_hotword}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#exclude_by_hotword DataLossPreventionInspectTemplate#exclude_by_hotword}
   */
   readonly excludeByHotword?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeByHotword;
   /**
   * exclude_info_types block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#exclude_info_types DataLossPreventionInspectTemplate#exclude_info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#exclude_info_types DataLossPreventionInspectTemplate#exclude_info_types}
   */
   readonly excludeInfoTypes?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes;
   /**
   * regex block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#regex DataLossPreventionInspectTemplate#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#regex DataLossPreventionInspectTemplate#regex}
   */
   readonly regex?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRuleRegex;
 }
@@ -2412,14 +2965,14 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   * The index of the submatch to extract as findings. When not specified,
 the entire match is returned. No more than 3 may be included.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#group_indexes DataLossPreventionInspectTemplate#group_indexes}
   */
   readonly groupIndexes?: number[];
   /**
   * Pattern defining the regular expression. Its syntax
 (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#pattern DataLossPreventionInspectTemplate#pattern}
   */
   readonly pattern: string;
 }
@@ -2506,7 +3059,7 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   /**
   * Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set. Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#fixed_likelihood DataLossPreventionInspectTemplate#fixed_likelihood}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#fixed_likelihood DataLossPreventionInspectTemplate#fixed_likelihood}
   */
   readonly fixedLikelihood?: string;
   /**
@@ -2517,7 +3070,7 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#relative_likelihood DataLossPreventionInspectTemplate#relative_likelihood}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#relative_likelihood DataLossPreventionInspectTemplate#relative_likelihood}
   */
   readonly relativeLikelihood?: number;
 }
@@ -2607,13 +3160,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   /**
   * Number of characters after the finding to consider. Either this or window_before must be specified
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#window_after DataLossPreventionInspectTemplate#window_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#window_after DataLossPreventionInspectTemplate#window_after}
   */
   readonly windowAfter?: number;
   /**
   * Number of characters before the finding to consider. Either this or window_after must be specified
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#window_before DataLossPreventionInspectTemplate#window_before}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#window_before DataLossPreventionInspectTemplate#window_before}
   */
   readonly windowBefore?: number;
 }
@@ -2703,19 +3256,19 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwo
   /**
   * hotword_regex block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#hotword_regex DataLossPreventionInspectTemplate#hotword_regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#hotword_regex DataLossPreventionInspectTemplate#hotword_regex}
   */
   readonly hotwordRegex: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleHotwordRegex;
   /**
   * likelihood_adjustment block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#likelihood_adjustment DataLossPreventionInspectTemplate#likelihood_adjustment}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#likelihood_adjustment DataLossPreventionInspectTemplate#likelihood_adjustment}
   */
   readonly likelihoodAdjustment: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment;
   /**
   * proximity block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#proximity DataLossPreventionInspectTemplate#proximity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#proximity DataLossPreventionInspectTemplate#proximity}
   */
   readonly proximity: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRuleProximity;
 }
@@ -2819,13 +3372,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSetRules {
   /**
   * exclusion_rule block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#exclusion_rule DataLossPreventionInspectTemplate#exclusion_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#exclusion_rule DataLossPreventionInspectTemplate#exclusion_rule}
   */
   readonly exclusionRule?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesExclusionRule;
   /**
   * hotword_rule block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#hotword_rule DataLossPreventionInspectTemplate#hotword_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#hotword_rule DataLossPreventionInspectTemplate#hotword_rule}
   */
   readonly hotwordRule?: DataLossPreventionInspectTemplateInspectConfigRuleSetRulesHotwordRule;
 }
@@ -2947,13 +3500,13 @@ export interface DataLossPreventionInspectTemplateInspectConfigRuleSet {
   /**
   * info_types block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
   readonly infoTypes: DataLossPreventionInspectTemplateInspectConfigRuleSetInfoTypes[] | cdktf.IResolvable;
   /**
   * rules block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#rules DataLossPreventionInspectTemplate#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#rules DataLossPreventionInspectTemplate#rules}
   */
   readonly rules: DataLossPreventionInspectTemplateInspectConfigRuleSetRules[] | cdktf.IResolvable;
 }
@@ -3069,49 +3622,49 @@ export interface DataLossPreventionInspectTemplateInspectConfig {
   /**
   * List of options defining data content to scan. If empty, text, images, and other content will be included. Possible values: ["CONTENT_TEXT", "CONTENT_IMAGE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#content_options DataLossPreventionInspectTemplate#content_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#content_options DataLossPreventionInspectTemplate#content_options}
   */
   readonly contentOptions?: string[];
   /**
   * When true, excludes type information of the findings.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#exclude_info_types DataLossPreventionInspectTemplate#exclude_info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#exclude_info_types DataLossPreventionInspectTemplate#exclude_info_types}
   */
   readonly excludeInfoTypes?: boolean | cdktf.IResolvable;
   /**
   * When true, a contextual quote from the data that triggered a finding is included in the response.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#include_quote DataLossPreventionInspectTemplate#include_quote}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#include_quote DataLossPreventionInspectTemplate#include_quote}
   */
   readonly includeQuote?: boolean | cdktf.IResolvable;
   /**
   * Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info Default value: "POSSIBLE" Possible values: ["VERY_UNLIKELY", "UNLIKELY", "POSSIBLE", "LIKELY", "VERY_LIKELY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#min_likelihood DataLossPreventionInspectTemplate#min_likelihood}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#min_likelihood DataLossPreventionInspectTemplate#min_likelihood}
   */
   readonly minLikelihood?: string;
   /**
   * custom_info_types block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#custom_info_types DataLossPreventionInspectTemplate#custom_info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#custom_info_types DataLossPreventionInspectTemplate#custom_info_types}
   */
   readonly customInfoTypes?: DataLossPreventionInspectTemplateInspectConfigCustomInfoTypes[] | cdktf.IResolvable;
   /**
   * info_types block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#info_types DataLossPreventionInspectTemplate#info_types}
   */
   readonly infoTypes?: DataLossPreventionInspectTemplateInspectConfigInfoTypes[] | cdktf.IResolvable;
   /**
   * limits block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#limits DataLossPreventionInspectTemplate#limits}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#limits DataLossPreventionInspectTemplate#limits}
   */
   readonly limits?: DataLossPreventionInspectTemplateInspectConfigLimits;
   /**
   * rule_set block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#rule_set DataLossPreventionInspectTemplate#rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#rule_set DataLossPreventionInspectTemplate#rule_set}
   */
   readonly ruleSet?: DataLossPreventionInspectTemplateInspectConfigRuleSet[] | cdktf.IResolvable;
 }
@@ -3337,15 +3890,15 @@ export class DataLossPreventionInspectTemplateInspectConfigOutputReference exten
 }
 export interface DataLossPreventionInspectTemplateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#create DataLossPreventionInspectTemplate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#create DataLossPreventionInspectTemplate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#delete DataLossPreventionInspectTemplate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#delete DataLossPreventionInspectTemplate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template#update DataLossPreventionInspectTemplate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template#update DataLossPreventionInspectTemplate#update}
   */
   readonly update?: string;
 }
@@ -3466,7 +4019,7 @@ export class DataLossPreventionInspectTemplateTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template google_data_loss_prevention_inspect_template}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template google_data_loss_prevention_inspect_template}
 */
 export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
 
@@ -3480,7 +4033,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/data_loss_prevention_inspect_template google_data_loss_prevention_inspect_template} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/data_loss_prevention_inspect_template google_data_loss_prevention_inspect_template} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3491,7 +4044,7 @@ export class DataLossPreventionInspectTemplate extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_loss_prevention_inspect_template',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.69.1',
+        providerVersion: '4.70.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

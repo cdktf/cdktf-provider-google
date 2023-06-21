@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface GkeHubMembershipIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#id GkeHubMembershipIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#id GkeHubMembershipIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#member GkeHubMembershipIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#member GkeHubMembershipIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#membership_id GkeHubMembershipIamMember#membership_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#membership_id GkeHubMembershipIamMember#membership_id}
   */
   readonly membershipId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#project GkeHubMembershipIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#project GkeHubMembershipIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#role GkeHubMembershipIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#role GkeHubMembershipIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#condition GkeHubMembershipIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#condition GkeHubMembershipIamMember#condition}
   */
   readonly condition?: GkeHubMembershipIamMemberCondition;
 }
 export interface GkeHubMembershipIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#description GkeHubMembershipIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#description GkeHubMembershipIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#expression GkeHubMembershipIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#expression GkeHubMembershipIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member#title GkeHubMembershipIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member#title GkeHubMembershipIamMember#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class GkeHubMembershipIamMemberConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member google_gke_hub_membership_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member google_gke_hub_membership_iam_member}
 */
 export class GkeHubMembershipIamMember extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class GkeHubMembershipIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/gke_hub_membership_iam_member google_gke_hub_membership_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/gke_hub_membership_iam_member google_gke_hub_membership_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class GkeHubMembershipIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_membership_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.69.1',
+        providerVersion: '4.70.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

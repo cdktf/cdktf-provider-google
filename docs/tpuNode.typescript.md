@@ -1,6 +1,6 @@
 # `google_tpu_node`
 
-Refer to the Terraform Registory for docs: [`google_tpu_node`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node).
+Refer to the Terraform Registory for docs: [`google_tpu_node`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node).
 
 # `tpuNode` Submodule <a name="`tpuNode` Submodule" id="@cdktf/provider-google.tpuNode"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_tpu_node`](https://registry.
 
 ### TpuNode <a name="TpuNode" id="@cdktf/provider-google.tpuNode.TpuNode"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node google_tpu_node}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node google_tpu_node}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.tpuNode.TpuNode.Initializer"></a>
 
@@ -940,10 +940,10 @@ const tpuNodeConfig: tpuNode.TpuNodeConfig = { ... }
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.tensorflowVersion">tensorflowVersion</a></code> | <code>string</code> | The version of Tensorflow running in the Node. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.cidrBlock">cidrBlock</a></code> | <code>string</code> | The CIDR block that the TPU node will use when selecting an IP address. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.description">description</a></code> | <code>string</code> | The user-supplied description of the TPU. Maximum of 512 characters. |
-| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#id TpuNode#id}. |
+| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#id TpuNode#id}. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.network">network</a></code> | <code>string</code> | The name of a network to peer the TPU node to. |
-| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#project TpuNode#project}. |
+| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#project TpuNode#project}. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.schedulingConfig">schedulingConfig</a></code> | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeSchedulingConfig">TpuNodeSchedulingConfig</a></code> | scheduling_config block. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts">TpuNodeTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeConfig.property.useServiceNetworking">useServiceNetworking</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether the VPC peering for the node is set up through Service Networking API. |
@@ -1031,7 +1031,7 @@ public readonly acceleratorType: string;
 
 The type of hardware accelerators associated with this node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#accelerator_type TpuNode#accelerator_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#accelerator_type TpuNode#accelerator_type}
 
 ---
 
@@ -1045,7 +1045,7 @@ public readonly name: string;
 
 The immutable name of the TPU.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#name TpuNode#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#name TpuNode#name}
 
 ---
 
@@ -1059,7 +1059,7 @@ public readonly tensorflowVersion: string;
 
 The version of Tensorflow running in the Node.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#tensorflow_version TpuNode#tensorflow_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#tensorflow_version TpuNode#tensorflow_version}
 
 ---
 
@@ -1082,7 +1082,7 @@ currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#cidr_block TpuNode#cidr_block}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#cidr_block TpuNode#cidr_block}
 
 ---
 
@@ -1096,7 +1096,7 @@ public readonly description: string;
 
 The user-supplied description of the TPU. Maximum of 512 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#description TpuNode#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#description TpuNode#description}
 
 ---
 
@@ -1108,7 +1108,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#id TpuNode#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#id TpuNode#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1125,7 +1125,7 @@ public readonly labels: {[ key: string ]: string};
 
 Resource labels to represent user provided metadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#labels TpuNode#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#labels TpuNode#labels}
 
 ---
 
@@ -1144,7 +1144,7 @@ preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#network TpuNode#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#network TpuNode#network}
 
 ---
 
@@ -1156,7 +1156,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#project TpuNode#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#project TpuNode#project}.
 
 ---
 
@@ -1170,7 +1170,7 @@ public readonly schedulingConfig: TpuNodeSchedulingConfig;
 
 scheduling_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#scheduling_config TpuNode#scheduling_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#scheduling_config TpuNode#scheduling_config}
 
 ---
 
@@ -1184,7 +1184,7 @@ public readonly timeouts: TpuNodeTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#timeouts TpuNode#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#timeouts TpuNode#timeouts}
 
 ---
 
@@ -1202,7 +1202,7 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#use_service_networking TpuNode#use_service_networking}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#use_service_networking TpuNode#use_service_networking}
 
 ---
 
@@ -1216,7 +1216,7 @@ public readonly zone: string;
 
 The GCP location for the TPU. If it is not provided, the provider zone is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#zone TpuNode#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#zone TpuNode#zone}
 
 ---
 
@@ -1259,7 +1259,7 @@ public readonly preemptible: boolean | IResolvable;
 
 Defines whether the TPU instance is preemptible.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#preemptible TpuNode#preemptible}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#preemptible TpuNode#preemptible}
 
 ---
 
@@ -1277,9 +1277,9 @@ const tpuNodeTimeouts: tpuNode.TpuNodeTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#create TpuNode#create}. |
-| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#delete TpuNode#delete}. |
-| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#update TpuNode#update}. |
+| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#create TpuNode#create}. |
+| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#delete TpuNode#delete}. |
+| <code><a href="#@cdktf/provider-google.tpuNode.TpuNodeTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#update TpuNode#update}. |
 
 ---
 
@@ -1291,7 +1291,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#create TpuNode#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#create TpuNode#create}.
 
 ---
 
@@ -1303,7 +1303,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#delete TpuNode#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#delete TpuNode#delete}.
 
 ---
 
@@ -1315,7 +1315,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/tpu_node#update TpuNode#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/tpu_node#update TpuNode#update}.
 
 ---
 

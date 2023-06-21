@@ -1,6 +1,6 @@
 # `google_logging_organization_sink`
 
-Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink).
+Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink).
 
 # `loggingOrganizationSink` Submodule <a name="`loggingOrganizationSink` Submodule" id="@cdktf/provider-google.loggingOrganizationSink"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_logging_organization_sink`](
 
 ### LoggingOrganizationSink <a name="LoggingOrganizationSink" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSink"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink google_logging_organization_sink}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink google_logging_organization_sink}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.NewLoggingOrganizationSink(scope Construct, id *string, config LoggingOrganizationSinkConfig) LoggingOrganizationSink
 ```
@@ -345,7 +345,7 @@ func ResetIncludeChildren()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSink.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.LoggingOrganizationSink_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSink.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.LoggingOrganizationSink_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ loggingorganizationsink.LoggingOrganizationSink_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSink.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.LoggingOrganizationSink_IsTerraformResource(x interface{}) *bool
 ```
@@ -821,7 +821,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkBigqueryOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 &loggingorganizationsink.LoggingOrganizationSinkBigqueryOptions {
 	UsePartitionedTables: interface{},
@@ -848,7 +848,7 @@ Whether to use BigQuery's partition tables.
 
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#use_partitioned_tables LoggingOrganizationSink#use_partitioned_tables}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#use_partitioned_tables LoggingOrganizationSink#use_partitioned_tables}
 
 ---
 
@@ -857,7 +857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 &loggingorganizationsink.LoggingOrganizationSinkConfig {
 	Connection: interface{},
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizations
 	Destination: *string,
 	Name: *string,
 	OrgId: *string,
-	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google/v8.loggingOrganizationSink.LoggingOrganizationSinkBigqueryOptions,
+	BigqueryOptions: github.com/cdktf/cdktf-provider-google-go/google.loggingOrganizationSink.LoggingOrganizationSinkBigqueryOptions,
 	Description: *string,
 	Disabled: interface{},
 	Exclusions: interface{},
@@ -899,7 +899,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizations
 | <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.disabled">Disabled</a></code> | <code>interface{}</code> | If set to True, then this sink is disabled and it does not export any log entries. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.exclusions">Exclusions</a></code> | <code>interface{}</code> | exclusions block. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.filter">Filter</a></code> | <code>*string</code> | The filter to apply when exporting logs. Only log entries that match the filter are exported. |
-| <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#id LoggingOrganizationSink#id}. |
+| <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#id LoggingOrganizationSink#id}. |
 | <code><a href="#@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkConfig.property.includeChildren">IncludeChildren</a></code> | <code>interface{}</code> | Whether or not to include children organizations in the sink export. |
 
 ---
@@ -986,7 +986,7 @@ The destination of the sink (or, in other words, where logs are written to).
 
 Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#destination LoggingOrganizationSink#destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#destination LoggingOrganizationSink#destination}
 
 ---
 
@@ -1000,7 +1000,7 @@ Name *string
 
 The name of the logging sink.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#name LoggingOrganizationSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#name LoggingOrganizationSink#name}
 
 ---
 
@@ -1014,7 +1014,7 @@ OrgId *string
 
 The numeric ID of the organization to be exported to the sink.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#org_id LoggingOrganizationSink#org_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#org_id LoggingOrganizationSink#org_id}
 
 ---
 
@@ -1028,7 +1028,7 @@ BigqueryOptions LoggingOrganizationSinkBigqueryOptions
 
 bigquery_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#bigquery_options LoggingOrganizationSink#bigquery_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#bigquery_options LoggingOrganizationSink#bigquery_options}
 
 ---
 
@@ -1042,7 +1042,7 @@ Description *string
 
 A description of this sink. The maximum length of the description is 8000 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#description LoggingOrganizationSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#description LoggingOrganizationSink#description}
 
 ---
 
@@ -1056,7 +1056,7 @@ Disabled interface{}
 
 If set to True, then this sink is disabled and it does not export any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#disabled LoggingOrganizationSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#disabled LoggingOrganizationSink#disabled}
 
 ---
 
@@ -1070,7 +1070,7 @@ Exclusions interface{}
 
 exclusions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#exclusions LoggingOrganizationSink#exclusions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#exclusions LoggingOrganizationSink#exclusions}
 
 ---
 
@@ -1084,7 +1084,7 @@ Filter *string
 
 The filter to apply when exporting logs. Only log entries that match the filter are exported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#filter LoggingOrganizationSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#filter LoggingOrganizationSink#filter}
 
 ---
 
@@ -1096,7 +1096,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#id LoggingOrganizationSink#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#id LoggingOrganizationSink#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1115,7 +1115,7 @@ Whether or not to include children organizations in the sink export.
 
 If true, logs associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#include_children LoggingOrganizationSink#include_children}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#include_children LoggingOrganizationSink#include_children}
 
 ---
 
@@ -1124,7 +1124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkExclusions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 &loggingorganizationsink.LoggingOrganizationSinkExclusions {
 	Filter: *string,
@@ -1157,7 +1157,7 @@ An advanced logs filter that matches the log entries to be excluded.
 
 By using the sample function, you can exclude less than 100% of the matching log entries
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#filter LoggingOrganizationSink#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#filter LoggingOrganizationSink#filter}
 
 ---
 
@@ -1173,7 +1173,7 @@ A client-assigned identifier, such as "load-balancer-exclusion".
 
 Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#name LoggingOrganizationSink#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#name LoggingOrganizationSink#name}
 
 ---
 
@@ -1187,7 +1187,7 @@ Description *string
 
 A description of this exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#description LoggingOrganizationSink#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#description LoggingOrganizationSink#description}
 
 ---
 
@@ -1201,7 +1201,7 @@ Disabled interface{}
 
 If set to True, then this exclusion is disabled and it does not exclude any log entries.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/logging_organization_sink#disabled LoggingOrganizationSink#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_organization_sink#disabled LoggingOrganizationSink#disabled}
 
 ---
 
@@ -1212,7 +1212,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkBigqueryOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.NewLoggingOrganizationSinkBigqueryOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LoggingOrganizationSinkBigqueryOptionsOutputReference
 ```
@@ -1483,7 +1483,7 @@ func InternalValue() LoggingOrganizationSinkBigqueryOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkExclusionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.NewLoggingOrganizationSinkExclusionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LoggingOrganizationSinkExclusionsList
 ```
@@ -1626,7 +1626,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingOrganizationSink.LoggingOrganizationSinkExclusionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/loggingorganizationsink"
+import "github.com/cdktf/cdktf-provider-google-go/google/loggingorganizationsink"
 
 loggingorganizationsink.NewLoggingOrganizationSinkExclusionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LoggingOrganizationSinkExclusionsOutputReference
 ```

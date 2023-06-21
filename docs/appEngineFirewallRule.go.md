@@ -1,6 +1,6 @@
 # `google_app_engine_firewall_rule`
 
-Refer to the Terraform Registory for docs: [`google_app_engine_firewall_rule`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule).
+Refer to the Terraform Registory for docs: [`google_app_engine_firewall_rule`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule).
 
 # `appEngineFirewallRule` Submodule <a name="`appEngineFirewallRule` Submodule" id="@cdktf/provider-google.appEngineFirewallRule"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_app_engine_firewall_rule`](h
 
 ### AppEngineFirewallRule <a name="AppEngineFirewallRule" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule google_app_engine_firewall_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule google_app_engine_firewall_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 appenginefirewallrule.NewAppEngineFirewallRule(scope Construct, id *string, config AppEngineFirewallRuleConfig) AppEngineFirewallRule
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 appenginefirewallrule.AppEngineFirewallRule_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 appenginefirewallrule.AppEngineFirewallRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ appenginefirewallrule.AppEngineFirewallRule_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 appenginefirewallrule.AppEngineFirewallRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -717,7 +717,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 &appenginefirewallrule.AppEngineFirewallRuleConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrul
 	Id: *string,
 	Priority: *f64,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.appEngineFirewallRule.AppEngineFirewallRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts,
 }
 ```
 
@@ -751,9 +751,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrul
 | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.action">Action</a></code> | <code>*string</code> | The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"]. |
 | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.sourceRange">SourceRange</a></code> | <code>*string</code> | IP address or range, defined using CIDR notation, of requests that this rule applies to. |
 | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.description">Description</a></code> | <code>*string</code> | An optional string description of this rule. |
-| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#id AppEngineFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#id AppEngineFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.priority">Priority</a></code> | <code>*f64</code> | A positive integer that defines the order of rule evaluation. Rules with the lowest priority are evaluated first. |
-| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#project AppEngineFirewallRule#project}. |
+| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#project AppEngineFirewallRule#project}. |
 | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts">AppEngineFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -838,7 +838,7 @@ Action *string
 
 The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#action AppEngineFirewallRule#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#action AppEngineFirewallRule#action}
 
 ---
 
@@ -852,7 +852,7 @@ SourceRange *string
 
 IP address or range, defined using CIDR notation, of requests that this rule applies to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#source_range AppEngineFirewallRule#source_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#source_range AppEngineFirewallRule#source_range}
 
 ---
 
@@ -866,7 +866,7 @@ Description *string
 
 An optional string description of this rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#description AppEngineFirewallRule#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#description AppEngineFirewallRule#description}
 
 ---
 
@@ -878,7 +878,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#id AppEngineFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#id AppEngineFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -899,7 +899,7 @@ A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
 
 ---
 
@@ -911,7 +911,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#project AppEngineFirewallRule#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#project AppEngineFirewallRule#project}.
 
 ---
 
@@ -925,7 +925,7 @@ Timeouts AppEngineFirewallRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#timeouts AppEngineFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#timeouts AppEngineFirewallRule#timeouts}
 
 ---
 
@@ -934,7 +934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 &appenginefirewallrule.AppEngineFirewallRuleTimeouts {
 	Create: *string,
@@ -947,9 +947,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrul
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#create AppEngineFirewallRule#create}. |
-| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}. |
-| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#update AppEngineFirewallRule#update}. |
+| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#create AppEngineFirewallRule#create}. |
+| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}. |
+| <code><a href="#@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#update AppEngineFirewallRule#update}. |
 
 ---
 
@@ -961,7 +961,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#create AppEngineFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#create AppEngineFirewallRule#create}.
 
 ---
 
@@ -973,7 +973,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#delete AppEngineFirewallRule#delete}.
 
 ---
 
@@ -985,7 +985,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_firewall_rule#update AppEngineFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_firewall_rule#update AppEngineFirewallRule#update}.
 
 ---
 
@@ -996,7 +996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineFirewallRule.AppEngineFirewallRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginefirewallrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginefirewallrule"
 
 appenginefirewallrule.NewAppEngineFirewallRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineFirewallRuleTimeoutsOutputReference
 ```

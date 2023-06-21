@@ -1,6 +1,6 @@
 # `google_app_engine_domain_mapping`
 
-Refer to the Terraform Registory for docs: [`google_app_engine_domain_mapping`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping).
+Refer to the Terraform Registory for docs: [`google_app_engine_domain_mapping`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping).
 
 # `appEngineDomainMapping` Submodule <a name="`appEngineDomainMapping` Submodule" id="@cdktf/provider-google.appEngineDomainMapping"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_app_engine_domain_mapping`](
 
 ### AppEngineDomainMapping <a name="AppEngineDomainMapping" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping google_app_engine_domain_mapping}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping google_app_engine_domain_mapping}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMapping(scope Construct, id *string, config AppEngineDomainMappingConfig) AppEngineDomainMapping
 ```
@@ -331,7 +331,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ appenginedomainmapping.AppEngineDomainMapping_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMapping.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.AppEngineDomainMapping_IsTerraformResource(x interface{}) *bool
 ```
@@ -730,7 +730,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingConfig {
 	Connection: interface{},
@@ -744,8 +744,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmappi
 	Id: *string,
 	OverrideStrategy: *string,
 	Project: *string,
-	SslSettings: github.com/cdktf/cdktf-provider-google-go/google/v8.appEngineDomainMapping.AppEngineDomainMappingSslSettings,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.appEngineDomainMapping.AppEngineDomainMappingTimeouts,
+	SslSettings: github.com/cdktf/cdktf-provider-google-go/google.appEngineDomainMapping.AppEngineDomainMappingSslSettings,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.appEngineDomainMapping.AppEngineDomainMappingTimeouts,
 }
 ```
 
@@ -761,9 +761,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmappi
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.domainName">DomainName</a></code> | <code>*string</code> | Relative name of the domain serving the application. Example: example.com. |
-| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#id AppEngineDomainMapping#id}. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#id AppEngineDomainMapping#id}. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.overrideStrategy">OverrideStrategy</a></code> | <code>*string</code> | Whether the domain creation should override any existing mappings for this domain. |
-| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#project AppEngineDomainMapping#project}. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#project AppEngineDomainMapping#project}. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.sslSettings">SslSettings</a></code> | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingSslSettings">AppEngineDomainMappingSslSettings</a></code> | ssl_settings block. |
 | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts">AppEngineDomainMappingTimeouts</a></code> | timeouts block. |
 
@@ -849,7 +849,7 @@ DomainName *string
 
 Relative name of the domain serving the application. Example: example.com.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#domain_name AppEngineDomainMapping#domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#domain_name AppEngineDomainMapping#domain_name}
 
 ---
 
@@ -861,7 +861,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#id AppEngineDomainMapping#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#id AppEngineDomainMapping#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -880,7 +880,7 @@ Whether the domain creation should override any existing mappings for this domai
 
 By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#override_strategy AppEngineDomainMapping#override_strategy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#override_strategy AppEngineDomainMapping#override_strategy}
 
 ---
 
@@ -892,7 +892,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#project AppEngineDomainMapping#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#project AppEngineDomainMapping#project}.
 
 ---
 
@@ -906,7 +906,7 @@ SslSettings AppEngineDomainMappingSslSettings
 
 ssl_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#ssl_settings AppEngineDomainMapping#ssl_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#ssl_settings AppEngineDomainMapping#ssl_settings}
 
 ---
 
@@ -920,7 +920,7 @@ Timeouts AppEngineDomainMappingTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#timeouts AppEngineDomainMapping#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#timeouts AppEngineDomainMapping#timeouts}
 
 ---
 
@@ -929,7 +929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecords.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingResourceRecords {
 
@@ -942,7 +942,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmappi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingSslSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingSslSettings {
 	SslManagementType: *string,
@@ -972,7 +972,7 @@ SSL management type for this domain.
 If 'AUTOMATIC', a managed certificate is automatically provisioned.
 If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: ["AUTOMATIC", "MANUAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#ssl_management_type AppEngineDomainMapping#ssl_management_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#ssl_management_type AppEngineDomainMapping#ssl_management_type}
 
 ---
 
@@ -993,7 +993,7 @@ or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' o
 authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource.
 Example: 12345.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#certificate_id AppEngineDomainMapping#certificate_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#certificate_id AppEngineDomainMapping#certificate_id}
 
 ---
 
@@ -1002,7 +1002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 &appenginedomainmapping.AppEngineDomainMappingTimeouts {
 	Create: *string,
@@ -1015,9 +1015,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmappi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#create AppEngineDomainMapping#create}. |
-| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#delete AppEngineDomainMapping#delete}. |
-| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#update AppEngineDomainMapping#update}. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#create AppEngineDomainMapping#create}. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#delete AppEngineDomainMapping#delete}. |
+| <code><a href="#@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#update AppEngineDomainMapping#update}. |
 
 ---
 
@@ -1029,7 +1029,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#create AppEngineDomainMapping#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#create AppEngineDomainMapping#create}.
 
 ---
 
@@ -1041,7 +1041,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#delete AppEngineDomainMapping#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#delete AppEngineDomainMapping#delete}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/app_engine_domain_mapping#update AppEngineDomainMapping#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/app_engine_domain_mapping#update AppEngineDomainMapping#update}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingResourceRecordsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppEngineDomainMappingResourceRecordsList
 ```
@@ -1196,7 +1196,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingResourceRecordsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingResourceRecordsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppEngineDomainMappingResourceRecordsOutputReference
 ```
@@ -1496,7 +1496,7 @@ func InternalValue() AppEngineDomainMappingResourceRecords
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingSslSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingSslSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineDomainMappingSslSettingsOutputReference
 ```
@@ -1807,7 +1807,7 @@ func InternalValue() AppEngineDomainMappingSslSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.appEngineDomainMapping.AppEngineDomainMappingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/appenginedomainmapping"
+import "github.com/cdktf/cdktf-provider-google-go/google/appenginedomainmapping"
 
 appenginedomainmapping.NewAppEngineDomainMappingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppEngineDomainMappingTimeoutsOutputReference
 ```
