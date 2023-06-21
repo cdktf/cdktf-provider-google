@@ -1,6 +1,6 @@
 # `google_compute_snapshot_iam_binding`
 
-Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding).
+Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_binding`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding).
 
 # `computeSnapshotIamBinding` Submodule <a name="`computeSnapshotIamBinding` Submodule" id="@cdktf/provider-google.computeSnapshotIamBinding"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_snapshot_iam_binding
 
 ### ComputeSnapshotIamBinding <a name="ComputeSnapshotIamBinding" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding google_compute_snapshot_iam_binding}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding google_compute_snapshot_iam_binding}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBinding.Initializer"></a>
 
@@ -705,9 +705,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshotiambi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#expression ComputeSnapshotIamBinding#expression}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#title ComputeSnapshotIamBinding#title}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#description ComputeSnapshotIamBinding#description}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#expression ComputeSnapshotIamBinding#expression}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#title ComputeSnapshotIamBinding#title}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#description ComputeSnapshotIamBinding#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#expression ComputeSnapshotIamBinding#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#expression ComputeSnapshotIamBinding#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#title ComputeSnapshotIamBinding#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#title ComputeSnapshotIamBinding#title}.
 
 ---
 
@@ -743,7 +743,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#description ComputeSnapshotIamBinding#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#description ComputeSnapshotIamBinding#description}.
 
 ---
 
@@ -782,12 +782,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshotiambi
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#members ComputeSnapshotIamBinding#members}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#name ComputeSnapshotIamBinding#name}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#role ComputeSnapshotIamBinding#role}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.members">Members</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#members ComputeSnapshotIamBinding#members}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#name ComputeSnapshotIamBinding#name}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#role ComputeSnapshotIamBinding#role}. |
 | <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingCondition">ComputeSnapshotIamBindingCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#id ComputeSnapshotIamBinding#id}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#project ComputeSnapshotIamBinding#project}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#id ComputeSnapshotIamBinding#id}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshotIamBinding.ComputeSnapshotIamBindingConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#project ComputeSnapshotIamBinding#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ Members *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#members ComputeSnapshotIamBinding#members}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#members ComputeSnapshotIamBinding#members}.
 
 ---
 
@@ -881,7 +881,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#name ComputeSnapshotIamBinding#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#name ComputeSnapshotIamBinding#name}.
 
 ---
 
@@ -893,7 +893,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#role ComputeSnapshotIamBinding#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#role ComputeSnapshotIamBinding#role}.
 
 ---
 
@@ -907,7 +907,7 @@ Condition ComputeSnapshotIamBindingCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#condition ComputeSnapshotIamBinding#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#condition ComputeSnapshotIamBinding#condition}
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#id ComputeSnapshotIamBinding#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#id ComputeSnapshotIamBinding#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/resources/compute_snapshot_iam_binding#project ComputeSnapshotIamBinding#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_snapshot_iam_binding#project ComputeSnapshotIamBinding#project}.
 
 ---
 

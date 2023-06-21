@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags
+// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleAlloydbSupportedDatabaseFlagsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags#id DataGoogleAlloydbSupportedDatabaseFlags#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags#id DataGoogleAlloydbSupportedDatabaseFlags#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,13 +22,13 @@ export interface DataGoogleAlloydbSupportedDatabaseFlagsConfig extends cdktf.Ter
   /**
   * The canonical id for the location. For example: "us-east1".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags#location DataGoogleAlloydbSupportedDatabaseFlags#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags#location DataGoogleAlloydbSupportedDatabaseFlags#location}
   */
   readonly location: string;
   /**
   * Project ID of the project.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags#project DataGoogleAlloydbSupportedDatabaseFlags#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags#project DataGoogleAlloydbSupportedDatabaseFlags#project}
   */
   readonly project?: string;
 }
@@ -268,7 +268,7 @@ export class DataGoogleAlloydbSupportedDatabaseFlagsSupportedDatabaseFlagsList e
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags google_alloydb_supported_database_flags}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags google_alloydb_supported_database_flags}
 */
 export class DataGoogleAlloydbSupportedDatabaseFlags extends cdktf.TerraformDataSource {
 
@@ -282,7 +282,7 @@ export class DataGoogleAlloydbSupportedDatabaseFlags extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.69.1/docs/data-sources/alloydb_supported_database_flags google_alloydb_supported_database_flags} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/alloydb_supported_database_flags google_alloydb_supported_database_flags} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -293,7 +293,7 @@ export class DataGoogleAlloydbSupportedDatabaseFlags extends cdktf.TerraformData
       terraformResourceType: 'google_alloydb_supported_database_flags',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.69.1',
+        providerVersion: '4.70.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

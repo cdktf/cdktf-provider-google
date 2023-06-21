@@ -206,6 +206,7 @@ export * as computeManagedSslCertificate from './compute-managed-ssl-certificate
 export * as computeNetwork from './compute-network';
 export * as computeNetworkEndpoint from './compute-network-endpoint';
 export * as computeNetworkEndpointGroup from './compute-network-endpoint-group';
+export * as computeNetworkEndpoints from './compute-network-endpoints';
 export * as computeNetworkFirewallPolicy from './compute-network-firewall-policy';
 export * as computeNetworkFirewallPolicyAssociation from './compute-network-firewall-policy-association';
 export * as computeNetworkFirewallPolicyRule from './compute-network-firewall-policy-rule';
@@ -639,6 +640,7 @@ export * as vertexAiFeaturestore from './vertex-ai-featurestore';
 export * as vertexAiFeaturestoreEntitytype from './vertex-ai-featurestore-entitytype';
 export * as vertexAiFeaturestoreEntitytypeFeature from './vertex-ai-featurestore-entitytype-feature';
 export * as vertexAiIndex from './vertex-ai-index';
+export * as vertexAiIndexEndpoint from './vertex-ai-index-endpoint';
 export * as vertexAiTensorboard from './vertex-ai-tensorboard';
 export * as vpcAccessConnector from './vpc-access-connector';
 export * as workflowsWorkflow from './workflows-workflow';
