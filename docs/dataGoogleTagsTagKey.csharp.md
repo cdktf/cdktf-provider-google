@@ -1,6 +1,6 @@
 # `data_google_tags_tag_key`
 
-Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key).
+Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key).
 
 # `dataGoogleTagsTagKey` Submodule <a name="`dataGoogleTagsTagKey` Submodule" id="@cdktf/provider-google.dataGoogleTagsTagKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://
 
 ### DataGoogleTagsTagKey <a name="DataGoogleTagsTagKey" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key google_tags_tag_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key google_tags_tag_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer"></a>
 
@@ -629,8 +629,8 @@ new DataGoogleTagsTagKeyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">ShortName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">Parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">ShortName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
 
 ---
 
@@ -712,7 +712,7 @@ public string Parent { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
 
 ---
 
@@ -724,7 +724,7 @@ public string ShortName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
 
 ---
 

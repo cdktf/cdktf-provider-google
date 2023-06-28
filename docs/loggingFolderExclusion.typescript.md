@@ -1,6 +1,6 @@
 # `google_logging_folder_exclusion`
 
-Refer to the Terraform Registory for docs: [`google_logging_folder_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion).
+Refer to the Terraform Registory for docs: [`google_logging_folder_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion).
 
 # `loggingFolderExclusion` Submodule <a name="`loggingFolderExclusion` Submodule" id="@cdktf/provider-google.loggingFolderExclusion"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_logging_folder_exclusion`](h
 
 ### LoggingFolderExclusion <a name="LoggingFolderExclusion" id="@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusion"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion google_logging_folder_exclusion}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusion.Initializer"></a>
 
@@ -685,11 +685,11 @@ const loggingFolderExclusionConfig: loggingFolderExclusion.LoggingFolderExclusio
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.filter">filter</a></code> | <code>string</code> | The filter to apply when excluding logs. Only log entries that match the filter are excluded. |
-| <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.folder">folder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.folder">folder</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}. |
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.name">name</a></code> | <code>string</code> | The name of the logging exclusion. |
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.description">description</a></code> | <code>string</code> | A human-readable description. |
 | <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.disabled">disabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Whether this exclusion rule should be disabled or not. This defaults to false. |
-| <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}. |
+| <code><a href="#@cdktf/provider-google.loggingFolderExclusion.LoggingFolderExclusionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}. |
 
 ---
 
@@ -773,7 +773,7 @@ public readonly filter: string;
 
 The filter to apply when excluding logs. Only log entries that match the filter are excluded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#filter LoggingFolderExclusion#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#filter LoggingFolderExclusion#filter}
 
 ---
 
@@ -785,7 +785,7 @@ public readonly folder: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#folder LoggingFolderExclusion#folder}.
 
 ---
 
@@ -799,7 +799,7 @@ public readonly name: string;
 
 The name of the logging exclusion.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#name LoggingFolderExclusion#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#name LoggingFolderExclusion#name}
 
 ---
 
@@ -813,7 +813,7 @@ public readonly description: string;
 
 A human-readable description.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#description LoggingFolderExclusion#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#description LoggingFolderExclusion#description}
 
 ---
 
@@ -827,7 +827,7 @@ public readonly disabled: boolean | IResolvable;
 
 Whether this exclusion rule should be disabled or not. This defaults to false.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#disabled LoggingFolderExclusion#disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#disabled LoggingFolderExclusion#disabled}
 
 ---
 
@@ -839,7 +839,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_folder_exclusion#id LoggingFolderExclusion#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

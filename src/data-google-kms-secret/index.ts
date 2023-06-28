@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret
+// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleKmsSecretConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret#additional_authenticated_data DataGoogleKmsSecret#additional_authenticated_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret#additional_authenticated_data DataGoogleKmsSecret#additional_authenticated_data}
   */
   readonly additionalAuthenticatedData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret#ciphertext DataGoogleKmsSecret#ciphertext}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret#ciphertext DataGoogleKmsSecret#ciphertext}
   */
   readonly ciphertext: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret#crypto_key DataGoogleKmsSecret#crypto_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret#crypto_key DataGoogleKmsSecret#crypto_key}
   */
   readonly cryptoKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret#id DataGoogleKmsSecret#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret#id DataGoogleKmsSecret#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +29,7 @@ export interface DataGoogleKmsSecretConfig extends cdktf.TerraformMetaArguments 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret google_kms_secret}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret google_kms_secret}
 */
 export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
 
@@ -48,7 +43,7 @@ export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_secret google_kms_secret} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_secret google_kms_secret} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -59,7 +54,7 @@ export class DataGoogleKmsSecret extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_kms_secret',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.70.0',
+        providerVersion: '4.71.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

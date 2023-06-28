@@ -1,6 +1,6 @@
 # `data_google_dns_record_set`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_record_set`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set).
+Refer to the Terraform Registory for docs: [`data_google_dns_record_set`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set).
 
 # `dataGoogleDnsRecordSet` Submodule <a name="`dataGoogleDnsRecordSet` Submodule" id="@cdktf/provider-google.dataGoogleDnsRecordSet"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_dns_record_set`](https:
 
 ### DataGoogleDnsRecordSet <a name="DataGoogleDnsRecordSet" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set google_dns_record_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set google_dns_record_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglednsrecordset"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsrecordset"
 
 datagooglednsrecordset.NewDataGoogleDnsRecordSet(scope Construct, id *string, config DataGoogleDnsRecordSetConfig) DataGoogleDnsRecordSet
 ```
@@ -277,7 +277,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglednsrecordset"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsrecordset"
 
 datagooglednsrecordset.DataGoogleDnsRecordSet_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglednsrecordset"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsrecordset"
 
 datagooglednsrecordset.DataGoogleDnsRecordSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglednsrecordset.DataGoogleDnsRecordSet_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSet.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglednsrecordset"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsrecordset"
 
 datagooglednsrecordset.DataGoogleDnsRecordSet_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -621,7 +621,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDnsRecordSet.DataGoogleDnsRecordSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglednsrecordset"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglednsrecordset"
 
 &datagooglednsrecordset.DataGoogleDnsRecordSetConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ ManagedZone *string
 
 The Name of the zone.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
 
 ---
 
@@ -750,7 +750,7 @@ Name *string
 
 The DNS name for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
 
 ---
 
@@ -764,7 +764,7 @@ Type *string
 
 The identifier of a supported record type. See the list of Supported DNS record types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
 
 ---
 
@@ -778,7 +778,7 @@ Project *string
 
 The ID of the project for the Google Cloud.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
 
 ---
 

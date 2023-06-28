@@ -1,6 +1,6 @@
 # `data_google_sql_database`
 
-Refer to the Terraform Registory for docs: [`data_google_sql_database`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database).
+Refer to the Terraform Registory for docs: [`data_google_sql_database`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database).
 
 # `dataGoogleSqlDatabase` Submodule <a name="`dataGoogleSqlDatabase` Submodule" id="@cdktf/provider-google.dataGoogleSqlDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_sql_database`](https://
 
 ### DataGoogleSqlDatabase <a name="DataGoogleSqlDatabase" id="@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database google_sql_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database google_sql_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer"></a>
 
@@ -45,8 +45,8 @@ dataGoogleSqlDatabase.DataGoogleSqlDatabase(
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.instance">instance</a></code> | <code>str</code> | The name of the Cloud SQL instance. This does not include the project ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.name">name</a></code> | <code>str</code> | The name of the database in the Cloud SQL instance. This does not include the project ID or instance name. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabase.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}. |
 
 ---
 
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 The name of the Cloud SQL instance. This does not include the project ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#instance DataGoogleSqlDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#instance DataGoogleSqlDatabase#instance}
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#name DataGoogleSqlDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#name DataGoogleSqlDatabase#name}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}.
 
 ---
 
@@ -799,8 +799,8 @@ dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.instance">instance</a></code> | <code>str</code> | The name of the Cloud SQL instance. This does not include the project ID. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.name">name</a></code> | <code>str</code> | The name of the database in the Cloud SQL instance. This does not include the project ID or instance name. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlDatabase.DataGoogleSqlDatabaseConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}. |
 
 ---
 
@@ -884,7 +884,7 @@ instance: str
 
 The name of the Cloud SQL instance. This does not include the project ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#instance DataGoogleSqlDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#instance DataGoogleSqlDatabase#instance}
 
 ---
 
@@ -898,7 +898,7 @@ name: str
 
 The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#name DataGoogleSqlDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#name DataGoogleSqlDatabase#name}
 
 ---
 
@@ -910,7 +910,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#id DataGoogleSqlDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -925,7 +925,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/sql_database#project DataGoogleSqlDatabase#project}.
 
 ---
 

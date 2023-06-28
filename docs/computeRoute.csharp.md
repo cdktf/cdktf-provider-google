@@ -1,6 +1,6 @@
 # `google_compute_route`
 
-Refer to the Terraform Registory for docs: [`google_compute_route`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route).
+Refer to the Terraform Registory for docs: [`google_compute_route`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route).
 
 # `computeRoute` Submodule <a name="`computeRoute` Submodule" id="@cdktf/provider-google.computeRoute"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_route`](https://regi
 
 ### ComputeRoute <a name="ComputeRoute" id="@cdktf/provider-google.computeRoute.ComputeRoute"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route google_compute_route}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route google_compute_route}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRoute.ComputeRoute.Initializer"></a>
 
@@ -1007,7 +1007,7 @@ new ComputeRouteConfig {
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.name">Name</a></code> | <code>string</code> | Name of the resource. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.network">Network</a></code> | <code>string</code> | The network that this route applies to. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.description">Description</a></code> | <code>string</code> | An optional description of this resource. Provide this property when you create the resource. |
-| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#id ComputeRoute#id}. |
+| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#id ComputeRoute#id}. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.nextHopGateway">NextHopGateway</a></code> | <code>string</code> | URL to a gateway that should handle matching packets. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.nextHopIlb">NextHopIlb</a></code> | <code>string</code> | The IP address or URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.nextHopInstance">NextHopInstance</a></code> | <code>string</code> | URL to an instance that should handle matching packets. |
@@ -1015,7 +1015,7 @@ new ComputeRouteConfig {
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.nextHopIp">NextHopIp</a></code> | <code>string</code> | Network IP address of an instance that should handle matching packets. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.nextHopVpnTunnel">NextHopVpnTunnel</a></code> | <code>string</code> | URL to a VpnTunnel that should handle matching packets. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.priority">Priority</a></code> | <code>double</code> | The priority of this route. |
-| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#project ComputeRoute#project}. |
+| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#project ComputeRoute#project}. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.tags">Tags</a></code> | <code>string[]</code> | A list of instance tags to which this route applies. |
 | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteTimeouts">ComputeRouteTimeouts</a></code> | timeouts block. |
 
@@ -1101,7 +1101,7 @@ public string DestRange { get; set; }
 
 The destination range of outgoing packets that this route applies to. Only IPv4 is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#dest_range ComputeRoute#dest_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#dest_range ComputeRoute#dest_range}
 
 ---
 
@@ -1123,7 +1123,7 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#name ComputeRoute#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#name ComputeRoute#name}
 
 ---
 
@@ -1137,7 +1137,7 @@ public string Network { get; set; }
 
 The network that this route applies to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#network ComputeRoute#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#network ComputeRoute#network}
 
 ---
 
@@ -1151,7 +1151,7 @@ public string Description { get; set; }
 
 An optional description of this resource. Provide this property when you create the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#description ComputeRoute#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#description ComputeRoute#description}
 
 ---
 
@@ -1163,7 +1163,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#id ComputeRoute#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#id ComputeRoute#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1187,7 +1187,7 @@ partial valid URL:
 'global/gateways/default-internet-gateway'
 The string 'default-internet-gateway'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
 
 ---
 
@@ -1214,7 +1214,7 @@ of a forwarding rule from the same VPC or any peered VPC.
 Note that this can only be used when the destinationRange is
 a public (non-RFC 1918) IP CIDR range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_ilb ComputeRoute#next_hop_ilb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_ilb ComputeRoute#next_hop_ilb}
 
 ---
 
@@ -1234,7 +1234,7 @@ You can specify this as a full or partial URL. For example:
 'zones/zone/instances/instance'
 Just the instance name, with the zone in 'next_hop_instance_zone'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
 
 ---
 
@@ -1248,7 +1248,7 @@ public string NextHopInstanceZone { get; set; }
 
 The zone of the instance specified in next_hop_instance. Omit if next_hop_instance is specified as a URL.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_instance_zone ComputeRoute#next_hop_instance_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_instance_zone ComputeRoute#next_hop_instance_zone}
 
 ---
 
@@ -1262,7 +1262,7 @@ public string NextHopIp { get; set; }
 
 Network IP address of an instance that should handle matching packets.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_ip ComputeRoute#next_hop_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_ip ComputeRoute#next_hop_ip}
 
 ---
 
@@ -1276,7 +1276,7 @@ public string NextHopVpnTunnel { get; set; }
 
 URL to a VpnTunnel that should handle matching packets.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#next_hop_vpn_tunnel ComputeRoute#next_hop_vpn_tunnel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#next_hop_vpn_tunnel ComputeRoute#next_hop_vpn_tunnel}
 
 ---
 
@@ -1298,7 +1298,7 @@ lowest-numbered priority value wins.
 
 Default value is 1000. Valid range is 0 through 65535.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#priority ComputeRoute#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#priority ComputeRoute#priority}
 
 ---
 
@@ -1310,7 +1310,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#project ComputeRoute#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#project ComputeRoute#project}.
 
 ---
 
@@ -1324,7 +1324,7 @@ public string[] Tags { get; set; }
 
 A list of instance tags to which this route applies.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#tags ComputeRoute#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#tags ComputeRoute#tags}
 
 ---
 
@@ -1338,7 +1338,7 @@ public ComputeRouteTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#timeouts ComputeRoute#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#timeouts ComputeRoute#timeouts}
 
 ---
 
@@ -1359,8 +1359,8 @@ new ComputeRouteTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#create ComputeRoute#create}. |
-| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#delete ComputeRoute#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#create ComputeRoute#create}. |
+| <code><a href="#@cdktf/provider-google.computeRoute.ComputeRouteTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#delete ComputeRoute#delete}. |
 
 ---
 
@@ -1372,7 +1372,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#create ComputeRoute#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#create ComputeRoute#create}.
 
 ---
 
@@ -1384,7 +1384,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/compute_route#delete ComputeRoute#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/compute_route#delete ComputeRoute#delete}.
 
 ---
 

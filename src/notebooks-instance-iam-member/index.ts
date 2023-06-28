@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface NotebooksInstanceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#id NotebooksInstanceIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#id NotebooksInstanceIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#instance_name NotebooksInstanceIamMember#instance_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#instance_name NotebooksInstanceIamMember#instance_name}
   */
   readonly instanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#location NotebooksInstanceIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#location NotebooksInstanceIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#member NotebooksInstanceIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#member NotebooksInstanceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#project NotebooksInstanceIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#project NotebooksInstanceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#role NotebooksInstanceIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#role NotebooksInstanceIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#condition NotebooksInstanceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#condition NotebooksInstanceIamMember#condition}
   */
   readonly condition?: NotebooksInstanceIamMemberCondition;
 }
 export interface NotebooksInstanceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#description NotebooksInstanceIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#description NotebooksInstanceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#expression NotebooksInstanceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#expression NotebooksInstanceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member#title NotebooksInstanceIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member#title NotebooksInstanceIamMember#title}
   */
   readonly title: string;
 }
@@ -161,7 +156,7 @@ export class NotebooksInstanceIamMemberConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member google_notebooks_instance_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member google_notebooks_instance_iam_member}
 */
 export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
 
@@ -175,7 +170,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/notebooks_instance_iam_member google_notebooks_instance_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/notebooks_instance_iam_member google_notebooks_instance_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +181,7 @@ export class NotebooksInstanceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_notebooks_instance_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.70.0',
+        providerVersion: '4.71.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
