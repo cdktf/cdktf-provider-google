@@ -408,6 +408,10 @@ export * as gkeBackupBackupPlan from './gke-backup-backup-plan';
 export * as gkeBackupBackupPlanIamBinding from './gke-backup-backup-plan-iam-binding';
 export * as gkeBackupBackupPlanIamMember from './gke-backup-backup-plan-iam-member';
 export * as gkeBackupBackupPlanIamPolicy from './gke-backup-backup-plan-iam-policy';
+export * as gkeHubFeature from './gke-hub-feature';
+export * as gkeHubFeatureIamBinding from './gke-hub-feature-iam-binding';
+export * as gkeHubFeatureIamMember from './gke-hub-feature-iam-member';
+export * as gkeHubFeatureIamPolicy from './gke-hub-feature-iam-policy';
 export * as gkeHubMembership from './gke-hub-membership';
 export * as gkeHubMembershipIamBinding from './gke-hub-membership-iam-binding';
 export * as gkeHubMembershipIamMember from './gke-hub-membership-iam-member';
@@ -766,6 +770,7 @@ export * as dataGoogleFolderOrganizationPolicy from './data-google-folder-organi
 export * as dataGoogleFolders from './data-google-folders';
 export * as dataGoogleGameServicesGameServerDeploymentRollout from './data-google-game-services-game-server-deployment-rollout';
 export * as dataGoogleGkeBackupBackupPlanIamPolicy from './data-google-gke-backup-backup-plan-iam-policy';
+export * as dataGoogleGkeHubFeatureIamPolicy from './data-google-gke-hub-feature-iam-policy';
 export * as dataGoogleGkeHubMembershipIamPolicy from './data-google-gke-hub-membership-iam-policy';
 export * as dataGoogleHealthcareConsentStoreIamPolicy from './data-google-healthcare-consent-store-iam-policy';
 export * as dataGoogleHealthcareDatasetIamPolicy from './data-google-healthcare-dataset-iam-policy';

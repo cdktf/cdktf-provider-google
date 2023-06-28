@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider
+// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -33,7 +33,7 @@ value of 'admins':
 "'admins' in google.groups"
 ```
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#attribute_condition IamWorkloadIdentityPoolProvider#attribute_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#attribute_condition IamWorkloadIdentityPoolProvider#attribute_condition}
   */
   readonly attributeCondition?: string;
   /**
@@ -98,37 +98,37 @@ For OIDC providers, the following rules apply:
     {"google.subject": "assertion.sub"}
     ```
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#attribute_mapping IamWorkloadIdentityPoolProvider#attribute_mapping}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#attribute_mapping IamWorkloadIdentityPoolProvider#attribute_mapping}
   */
   readonly attributeMapping?: { [key: string]: string };
   /**
   * A description for the provider. Cannot exceed 256 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#description IamWorkloadIdentityPoolProvider#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#description IamWorkloadIdentityPoolProvider#description}
   */
   readonly description?: string;
   /**
   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#disabled IamWorkloadIdentityPoolProvider#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#disabled IamWorkloadIdentityPoolProvider#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * A display name for the provider. Cannot exceed 32 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#display_name IamWorkloadIdentityPoolProvider#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#display_name IamWorkloadIdentityPoolProvider#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#id IamWorkloadIdentityPoolProvider#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#id IamWorkloadIdentityPoolProvider#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#project IamWorkloadIdentityPoolProvider#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#project IamWorkloadIdentityPoolProvider#project}
   */
   readonly project?: string;
   /**
@@ -136,7 +136,7 @@ However, existing tokens still grant access.
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 'gcp-' is reserved for use by Google, and may not be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_id IamWorkloadIdentityPoolProvider#workload_identity_pool_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_id IamWorkloadIdentityPoolProvider#workload_identity_pool_id}
   */
   readonly workloadIdentityPoolId: string;
   /**
@@ -144,25 +144,25 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 'gcp-' is reserved for use by Google, and may not be specified.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_provider_id IamWorkloadIdentityPoolProvider#workload_identity_pool_provider_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#workload_identity_pool_provider_id IamWorkloadIdentityPoolProvider#workload_identity_pool_provider_id}
   */
   readonly workloadIdentityPoolProviderId: string;
   /**
   * aws block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#aws IamWorkloadIdentityPoolProvider#aws}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#aws IamWorkloadIdentityPoolProvider#aws}
   */
   readonly aws?: IamWorkloadIdentityPoolProviderAws;
   /**
   * oidc block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#oidc IamWorkloadIdentityPoolProvider#oidc}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#oidc IamWorkloadIdentityPoolProvider#oidc}
   */
   readonly oidc?: IamWorkloadIdentityPoolProviderOidc;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#timeouts IamWorkloadIdentityPoolProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#timeouts IamWorkloadIdentityPoolProvider#timeouts}
   */
   readonly timeouts?: IamWorkloadIdentityPoolProviderTimeouts;
 }
@@ -170,7 +170,7 @@ export interface IamWorkloadIdentityPoolProviderAws {
   /**
   * The AWS account ID.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#account_id IamWorkloadIdentityPoolProvider#account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#account_id IamWorkloadIdentityPoolProvider#account_id}
   */
   readonly accountId: string;
 }
@@ -245,15 +245,43 @@ For example:
 https://iam.googleapis.com/projects/<project-number>/locations/<location>/workloadIdentityPools/<pool-id>/providers/<provider-id>
 ```
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#allowed_audiences IamWorkloadIdentityPoolProvider#allowed_audiences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#allowed_audiences IamWorkloadIdentityPoolProvider#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The OIDC issuer URL.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#issuer_uri IamWorkloadIdentityPoolProvider#issuer_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#issuer_uri IamWorkloadIdentityPoolProvider#issuer_uri}
   */
   readonly issuerUri: string;
+  /**
+  * OIDC JWKs in JSON String format. For details on definition of a
+JWK, see https:tools.ietf.org/html/rfc7517. If not set, then we
+use the 'jwks_uri' from the discovery document fetched from the
+.well-known path for the 'issuer_uri'. Currently, RSA and EC asymmetric
+keys are supported. The JWK must use following format and include only
+the following fields:
+```
+{
+  "keys": [
+    {
+          "kty": "RSA/EC",
+          "alg": "<algorithm>",
+          "use": "sig",
+          "kid": "<key-id>",
+          "n": "",
+          "e": "",
+          "x": "",
+          "y": "",
+          "crv": ""
+    }
+  ]
+}
+```
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#jwks_json IamWorkloadIdentityPoolProvider#jwks_json}
+  */
+  readonly jwksJson?: string;
 }
 
 export function iamWorkloadIdentityPoolProviderOidcToTerraform(struct?: IamWorkloadIdentityPoolProviderOidcOutputReference | IamWorkloadIdentityPoolProviderOidc): any {
@@ -264,6 +292,7 @@ export function iamWorkloadIdentityPoolProviderOidcToTerraform(struct?: IamWorkl
   return {
     allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.allowedAudiences),
     issuer_uri: cdktf.stringToTerraform(struct!.issuerUri),
+    jwks_json: cdktf.stringToTerraform(struct!.jwksJson),
   }
 }
 
@@ -289,6 +318,10 @@ export class IamWorkloadIdentityPoolProviderOidcOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.issuerUri = this._issuerUri;
     }
+    if (this._jwksJson !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.jwksJson = this._jwksJson;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -297,11 +330,13 @@ export class IamWorkloadIdentityPoolProviderOidcOutputReference extends cdktf.Co
       this.isEmptyObject = false;
       this._allowedAudiences = undefined;
       this._issuerUri = undefined;
+      this._jwksJson = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedAudiences = value.allowedAudiences;
       this._issuerUri = value.issuerUri;
+      this._jwksJson = value.jwksJson;
     }
   }
 
@@ -333,18 +368,34 @@ export class IamWorkloadIdentityPoolProviderOidcOutputReference extends cdktf.Co
   public get issuerUriInput() {
     return this._issuerUri;
   }
+
+  // jwks_json - computed: false, optional: true, required: false
+  private _jwksJson?: string; 
+  public get jwksJson() {
+    return this.getStringAttribute('jwks_json');
+  }
+  public set jwksJson(value: string) {
+    this._jwksJson = value;
+  }
+  public resetJwksJson() {
+    this._jwksJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jwksJsonInput() {
+    return this._jwksJson;
+  }
 }
 export interface IamWorkloadIdentityPoolProviderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#create IamWorkloadIdentityPoolProvider#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#create IamWorkloadIdentityPoolProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#delete IamWorkloadIdentityPoolProvider#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#delete IamWorkloadIdentityPoolProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider#update IamWorkloadIdentityPoolProvider#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider#update IamWorkloadIdentityPoolProvider#update}
   */
   readonly update?: string;
 }
@@ -465,7 +516,7 @@ export class IamWorkloadIdentityPoolProviderTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider}
 */
 export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
 
@@ -479,7 +530,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/iam_workload_identity_pool_provider google_iam_workload_identity_pool_provider} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -490,7 +541,7 @@ export class IamWorkloadIdentityPoolProvider extends cdktf.TerraformResource {
       terraformResourceType: 'google_iam_workload_identity_pool_provider',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.70.0',
+        providerVersion: '4.71.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

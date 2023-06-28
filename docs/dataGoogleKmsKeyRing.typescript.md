@@ -1,6 +1,6 @@
 # `data_google_kms_key_ring`
 
-Refer to the Terraform Registory for docs: [`data_google_kms_key_ring`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring).
+Refer to the Terraform Registory for docs: [`data_google_kms_key_ring`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring).
 
 # `dataGoogleKmsKeyRing` Submodule <a name="`dataGoogleKmsKeyRing` Submodule" id="@cdktf/provider-google.dataGoogleKmsKeyRing"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_kms_key_ring`](https://
 
 ### DataGoogleKmsKeyRing <a name="DataGoogleKmsKeyRing" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring google_kms_key_ring}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring google_kms_key_ring}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.Initializer"></a>
 
@@ -613,8 +613,8 @@ const dataGoogleKmsKeyRingConfig: dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfi
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.location">location</a></code> | <code>string</code> | The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'. |
 | <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.name">name</a></code> | <code>string</code> | The resource name for the KeyRing. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}. |
 
 ---
 
@@ -698,7 +698,7 @@ public readonly location: string;
 
 The location for the KeyRing. A full list of valid locations can be found by running 'gcloud kms locations list'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
 
 ---
 
@@ -712,7 +712,7 @@ public readonly name: string;
 
 The resource name for the KeyRing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#name DataGoogleKmsKeyRing#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#name DataGoogleKmsKeyRing#name}
 
 ---
 
@@ -724,7 +724,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -739,7 +739,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}.
 
 ---
 

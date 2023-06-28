@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub
+// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArgumen
   /**
   * An optional description of the hub.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#id NetworkConnectivityHub#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,25 +28,25 @@ export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArgumen
   /**
   * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
   */
   readonly name: string;
   /**
   * The project for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
   */
   readonly timeouts?: NetworkConnectivityHubTimeouts;
 }
@@ -116,15 +116,15 @@ export class NetworkConnectivityHubRoutingVpcsList extends cdktf.ComplexList {
 }
 export interface NetworkConnectivityHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#create NetworkConnectivityHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#delete NetworkConnectivityHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub#update NetworkConnectivityHub#update}
   */
   readonly update?: string;
 }
@@ -245,7 +245,7 @@ export class NetworkConnectivityHubTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub google_network_connectivity_hub}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub google_network_connectivity_hub}
 */
 export class NetworkConnectivityHub extends cdktf.TerraformResource {
 
@@ -259,7 +259,7 @@ export class NetworkConnectivityHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/network_connectivity_hub google_network_connectivity_hub} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/network_connectivity_hub google_network_connectivity_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -270,7 +270,7 @@ export class NetworkConnectivityHub extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_connectivity_hub',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.70.0',
+        providerVersion: '4.71.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

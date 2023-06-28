@@ -1,6 +1,6 @@
 # `google_game_services_game_server_cluster`
 
-Refer to the Terraform Registory for docs: [`google_game_services_game_server_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster).
+Refer to the Terraform Registory for docs: [`google_game_services_game_server_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster).
 
 # `gameServicesGameServerCluster` Submodule <a name="`gameServicesGameServerCluster` Submodule" id="@cdktf/provider-google.gameServicesGameServerCluster"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_game_services_game_server_cl
 
 ### GameServicesGameServerCluster <a name="GameServicesGameServerCluster" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster google_game_services_game_server_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster google_game_services_game_server_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerCluster.Initializer"></a>
 
@@ -829,10 +829,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserv
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.connectionInfo">ConnectionInfo</a></code> | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConnectionInfo">GameServicesGameServerClusterConnectionInfo</a></code> | connection_info block. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.realmId">RealmId</a></code> | <code>*string</code> | The realm id of the game server realm. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.description">Description</a></code> | <code>*string</code> | Human readable description of the cluster. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels associated with this game server cluster. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.location">Location</a></code> | <code>*string</code> | Location of the Cluster. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts">GameServicesGameServerClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -917,7 +917,7 @@ ClusterId *string
 
 Required. The resource name of the game server cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#cluster_id GameServicesGameServerCluster#cluster_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#cluster_id GameServicesGameServerCluster#cluster_id}
 
 ---
 
@@ -931,7 +931,7 @@ ConnectionInfo GameServicesGameServerClusterConnectionInfo
 
 connection_info block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#connection_info GameServicesGameServerCluster#connection_info}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#connection_info GameServicesGameServerCluster#connection_info}
 
 ---
 
@@ -945,7 +945,7 @@ RealmId *string
 
 The realm id of the game server realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#realm_id GameServicesGameServerCluster#realm_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#realm_id GameServicesGameServerCluster#realm_id}
 
 ---
 
@@ -959,7 +959,7 @@ Description *string
 
 Human readable description of the cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#description GameServicesGameServerCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#description GameServicesGameServerCluster#description}
 
 ---
 
@@ -971,7 +971,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#id GameServicesGameServerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -988,7 +988,7 @@ Labels *map[string]*string
 
 The labels associated with this game server cluster. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#labels GameServicesGameServerCluster#labels}
 
 ---
 
@@ -1002,7 +1002,7 @@ Location *string
 
 Location of the Cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#location GameServicesGameServerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#location GameServicesGameServerCluster#location}
 
 ---
 
@@ -1014,7 +1014,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#project GameServicesGameServerCluster#project}.
 
 ---
 
@@ -1028,7 +1028,7 @@ Timeouts GameServicesGameServerClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#timeouts GameServicesGameServerCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#timeouts GameServicesGameServerCluster#timeouts}
 
 ---
 
@@ -1064,7 +1064,7 @@ GkeClusterReference GameServicesGameServerClusterConnectionInfoGkeClusterReferen
 
 gke_cluster_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#gke_cluster_reference GameServicesGameServerCluster#gke_cluster_reference}
 
 ---
 
@@ -1081,7 +1081,7 @@ Namespace designated on the game server cluster where the game server instances 
 The namespace existence will be validated
 during creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#namespace GameServicesGameServerCluster#namespace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#namespace GameServicesGameServerCluster#namespace}
 
 ---
 
@@ -1123,7 +1123,7 @@ If project and location are not specified, the project and location of the
 GameServerCluster resource are used to generate the full name of the
 GKE cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#cluster GameServicesGameServerCluster#cluster}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#cluster GameServicesGameServerCluster#cluster}
 
 ---
 
@@ -1145,9 +1145,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserv
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.gameServicesGameServerCluster.GameServicesGameServerClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}. |
 
 ---
 
@@ -1159,7 +1159,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#create GameServicesGameServerCluster#create}.
 
 ---
 
@@ -1171,7 +1171,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#delete GameServicesGameServerCluster#delete}.
 
 ---
 
@@ -1183,7 +1183,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.70.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/game_services_game_server_cluster#update GameServicesGameServerCluster#update}.
 
 ---
 
