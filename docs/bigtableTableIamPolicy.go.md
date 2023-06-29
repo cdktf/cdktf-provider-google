@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.bigtableTableIamPolicy.BigtableTableIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/bigtabletableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletableiampolicy"
 
 bigtabletableiampolicy.NewBigtableTableIamPolicy(scope Construct, id *string, config BigtableTableIamPolicyConfig) BigtableTableIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.bigtableTableIamPolicy.BigtableTableIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/bigtabletableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletableiampolicy"
 
 bigtabletableiampolicy.BigtableTableIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.bigtableTableIamPolicy.BigtableTableIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/bigtabletableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletableiampolicy"
 
 bigtabletableiampolicy.BigtableTableIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ bigtabletableiampolicy.BigtableTableIamPolicy_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.bigtableTableIamPolicy.BigtableTableIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/bigtabletableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletableiampolicy"
 
 bigtabletableiampolicy.BigtableTableIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -650,7 +650,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.bigtableTableIamPolicy.BigtableTableIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/bigtabletableiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/bigtabletableiampolicy"
 
 &bigtabletableiampolicy.BigtableTableIamPolicyConfig {
 	Connection: interface{},

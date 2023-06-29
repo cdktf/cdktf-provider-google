@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.NewAccessContextManagerAccessPolicyIamMember(scope Construct, id *string, config AccessContextManagerAccessPolicyIamMemberConfig) AccessContextManagerAccessPolicyIamMember
 ```
@@ -297,7 +297,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMem
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 &accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMemberCondition {
 	Expression: *string,
@@ -723,7 +723,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 &accesscontextmanageraccesspolicyiammember.AccessContextManagerAccessPolicyIamMemberConfig {
 	Connection: interface{},
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanager
 	Member: *string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberCondition,
 	Id: *string,
 }
 ```
@@ -902,7 +902,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerAccessPolicyIamMember.AccessContextManagerAccessPolicyIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/accesscontextmanageraccesspolicyiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/accesscontextmanageraccesspolicyiammember"
 
 accesscontextmanageraccesspolicyiammember.NewAccessContextManagerAccessPolicyIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AccessContextManagerAccessPolicyIamMemberConditionOutputReference
 ```
