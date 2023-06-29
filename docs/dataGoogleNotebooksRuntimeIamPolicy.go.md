@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleNotebooksRuntimeIamPolicy.DataGoogleNotebooksRuntimeIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglenotebooksruntimeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglenotebooksruntimeiampolicy"
 
 datagooglenotebooksruntimeiampolicy.NewDataGoogleNotebooksRuntimeIamPolicy(scope Construct, id *string, config DataGoogleNotebooksRuntimeIamPolicyConfig) DataGoogleNotebooksRuntimeIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleNotebooksRuntimeIamPolicy.DataGoogleNotebooksRuntimeIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglenotebooksruntimeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglenotebooksruntimeiampolicy"
 
 datagooglenotebooksruntimeiampolicy.DataGoogleNotebooksRuntimeIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleNotebooksRuntimeIamPolicy.DataGoogleNotebooksRuntimeIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglenotebooksruntimeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglenotebooksruntimeiampolicy"
 
 datagooglenotebooksruntimeiampolicy.DataGoogleNotebooksRuntimeIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglenotebooksruntimeiampolicy.DataGoogleNotebooksRuntimeIamPolicy_IsTerraf
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleNotebooksRuntimeIamPolicy.DataGoogleNotebooksRuntimeIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglenotebooksruntimeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglenotebooksruntimeiampolicy"
 
 datagooglenotebooksruntimeiampolicy.DataGoogleNotebooksRuntimeIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleNotebooksRuntimeIamPolicy.DataGoogleNotebooksRuntimeIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglenotebooksruntimeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglenotebooksruntimeiampolicy"
 
 &datagooglenotebooksruntimeiampolicy.DataGoogleNotebooksRuntimeIamPolicyConfig {
 	Connection: interface{},

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/tags_tag_value_iam_binding
 // generated from terraform resource schema
 
