@@ -1,6 +1,6 @@
 # `data_google_game_services_game_server_deployment_rollout`
 
-Refer to the Terraform Registory for docs: [`data_google_game_services_game_server_deployment_rollout`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/game_services_game_server_deployment_rollout).
+Refer to the Terraform Registory for docs: [`data_google_game_services_game_server_deployment_rollout`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/game_services_game_server_deployment_rollout).
 
 # `dataGoogleGameServicesGameServerDeploymentRollout` Submodule <a name="`dataGoogleGameServicesGameServerDeploymentRollout` Submodule" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_game_services_game_serv
 
 ### DataGoogleGameServicesGameServerDeploymentRollout <a name="DataGoogleGameServicesGameServerDeploymentRollout" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRollout"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/game_services_game_server_deployment_rollout google_game_services_game_server_deployment_rollout}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRollout.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.NewDataGoogleGameServicesGameServerDeploymentRollout(scope Construct, id *string, config DataGoogleGameServicesGameServerDeploymentRolloutConfig) DataGoogleGameServicesGameServerDeploymentRollout
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRollout.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRollout_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRollout.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRollout_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServ
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRollout.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRollout_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -588,7 +588,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 &datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig {
 	Connection: interface{},
@@ -615,7 +615,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservic
 | <code><a href="#@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.property.deploymentId">DeploymentId</a></code> | <code>*string</code> | The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment. |
-| <code><a href="#@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}. |
 
 ---
 
@@ -699,7 +699,7 @@ DeploymentId *string
 
 The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
 
 ---
 
@@ -711,7 +711,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/game_services_game_server_deployment_rollout#id DataGoogleGameServicesGameServerDeploymentRollout#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -723,7 +723,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 &datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
 
@@ -736,7 +736,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservic
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 &datagooglegameservicesgameserverdeploymentrollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector {
 
@@ -751,7 +751,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservic
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.NewDataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesList
 ```
@@ -883,7 +883,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.NewDataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesOutputReference
 ```
@@ -1172,7 +1172,7 @@ func InternalValue() DataGoogleGameServicesGameServerDeploymentRolloutGameServer
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.NewDataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorList
 ```
@@ -1304,7 +1304,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleGameServicesGameServerDeploymentRollout.DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglegameservicesgameserverdeploymentrollout"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglegameservicesgameserverdeploymentrollout"
 
 datagooglegameservicesgameserverdeploymentrollout.NewDataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleGameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelectorOutputReference
 ```

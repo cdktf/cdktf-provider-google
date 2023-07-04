@@ -1,6 +1,6 @@
 # `data_google_compute_network_peering`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_network_peering`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering).
+Refer to the Terraform Registory for docs: [`data_google_compute_network_peering`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering).
 
 # `dataGoogleComputeNetworkPeering` Submodule <a name="`dataGoogleComputeNetworkPeering` Submodule" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_compute_network_peering
 
 ### DataGoogleComputeNetworkPeering <a name="DataGoogleComputeNetworkPeering" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeering"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering google_compute_network_peering}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering google_compute_network_peering}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 datagooglecomputenetworkpeering.NewDataGoogleComputeNetworkPeering(scope Construct, id *string, config DataGoogleComputeNetworkPeeringConfig) DataGoogleComputeNetworkPeering
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeering.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeering_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeering.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeering_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeering_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeering.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeering_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -696,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 &datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeeringConfig {
 	Connection: interface{},
@@ -709,7 +709,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenet
 	Name: *string,
 	Network: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts,
 }
 ```
 
@@ -726,7 +726,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenet
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.name">Name</a></code> | <code>*string</code> | Name of the peering. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.network">Network</a></code> | <code>*string</code> | The primary network of the peering. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#id DataGoogleComputeNetworkPeering#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#id DataGoogleComputeNetworkPeering#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts">DataGoogleComputeNetworkPeeringTimeouts</a></code> | timeouts block. |
 
 ---
@@ -811,7 +811,7 @@ Name *string
 
 Name of the peering.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#name DataGoogleComputeNetworkPeering#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#name DataGoogleComputeNetworkPeering#name}
 
 ---
 
@@ -825,7 +825,7 @@ Network *string
 
 The primary network of the peering.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#network DataGoogleComputeNetworkPeering#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#network DataGoogleComputeNetworkPeering#network}
 
 ---
 
@@ -837,7 +837,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#id DataGoogleComputeNetworkPeering#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#id DataGoogleComputeNetworkPeering#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -854,7 +854,7 @@ Timeouts DataGoogleComputeNetworkPeeringTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#timeouts DataGoogleComputeNetworkPeering#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#timeouts DataGoogleComputeNetworkPeering#timeouts}
 
 ---
 
@@ -863,7 +863,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 &datagooglecomputenetworkpeering.DataGoogleComputeNetworkPeeringTimeouts {
 	Read: *string,
@@ -874,7 +874,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenet
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#read DataGoogleComputeNetworkPeering#read}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#read DataGoogleComputeNetworkPeering#read}. |
 
 ---
 
@@ -886,7 +886,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/compute_network_peering#read DataGoogleComputeNetworkPeering#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/compute_network_peering#read DataGoogleComputeNetworkPeering#read}.
 
 ---
 
@@ -897,7 +897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeNetworkPeering.DataGoogleComputeNetworkPeeringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputenetworkpeering"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputenetworkpeering"
 
 datagooglecomputenetworkpeering.NewDataGoogleComputeNetworkPeeringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataGoogleComputeNetworkPeeringTimeoutsOutputReference
 ```

@@ -772,6 +772,7 @@ The following submodules are available:
 - [projectService](./projectService.java.md)
 - [projectUsageExportBucket](./projectUsageExportBucket.java.md)
 - [provider](./provider.java.md)
+- [publicCaExternalAccountKey](./publicCaExternalAccountKey.java.md)
 - [pubsubLiteReservation](./pubsubLiteReservation.java.md)
 - [pubsubLiteSubscription](./pubsubLiteSubscription.java.md)
 - [pubsubLiteTopic](./pubsubLiteTopic.java.md)

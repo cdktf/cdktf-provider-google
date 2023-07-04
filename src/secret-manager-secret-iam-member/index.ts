@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface SecretManagerSecretIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}
   */
   readonly secretId: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#condition SecretManagerSecretIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#condition SecretManagerSecretIamMember#condition}
   */
   readonly condition?: SecretManagerSecretIamMemberCondition;
 }
 export interface SecretManagerSecretIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class SecretManagerSecretIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member}
 */
 export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class SecretManagerSecretIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_secret_manager_secret_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

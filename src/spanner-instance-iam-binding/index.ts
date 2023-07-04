@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface SpannerInstanceIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#id SpannerInstanceIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#id SpannerInstanceIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#instance SpannerInstanceIamBinding#instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#instance SpannerInstanceIamBinding#instance}
   */
   readonly instance: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#members SpannerInstanceIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#members SpannerInstanceIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#project SpannerInstanceIamBinding#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#project SpannerInstanceIamBinding#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#role SpannerInstanceIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#role SpannerInstanceIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#condition SpannerInstanceIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#condition SpannerInstanceIamBinding#condition}
   */
   readonly condition?: SpannerInstanceIamBindingCondition;
 }
 export interface SpannerInstanceIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#description SpannerInstanceIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#description SpannerInstanceIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#expression SpannerInstanceIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#expression SpannerInstanceIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding#title SpannerInstanceIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding#title SpannerInstanceIamBinding#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class SpannerInstanceIamBindingConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding google_spanner_instance_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding google_spanner_instance_iam_binding}
 */
 export class SpannerInstanceIamBinding extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class SpannerInstanceIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/spanner_instance_iam_binding google_spanner_instance_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/spanner_instance_iam_binding google_spanner_instance_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class SpannerInstanceIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_spanner_instance_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

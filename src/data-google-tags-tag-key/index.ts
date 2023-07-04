@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/tags_tag_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleTagsTagKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}
   */
   readonly parent: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}
   */
   readonly shortName: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key google_tags_tag_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/tags_tag_key google_tags_tag_key}
 */
 export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
 
@@ -37,7 +32,7 @@ export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/tags_tag_key google_tags_tag_key} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/tags_tag_key google_tags_tag_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -48,7 +43,7 @@ export class DataGoogleTagsTagKey extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_tags_tag_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

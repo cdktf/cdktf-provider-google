@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/iam_role
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/iam_role
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,20 +8,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleIamRoleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/iam_role#id DataGoogleIamRole#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/iam_role#id DataGoogleIamRole#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/iam_role#name DataGoogleIamRole#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/iam_role#name DataGoogleIamRole#name}
   */
   readonly name: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/iam_role google_iam_role}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/iam_role google_iam_role}
 */
 export class DataGoogleIamRole extends cdktf.TerraformDataSource {
 
@@ -40,7 +35,7 @@ export class DataGoogleIamRole extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/iam_role google_iam_role} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/iam_role google_iam_role} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -51,7 +46,7 @@ export class DataGoogleIamRole extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_iam_role',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,3 +1,3 @@
 # `google_logging_project_exclusion`
 
-Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/logging_project_exclusion).
+Refer to the Terraform Registory for docs: [`google_logging_project_exclusion`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/logging_project_exclusion).

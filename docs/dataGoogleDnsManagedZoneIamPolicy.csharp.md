@@ -1,6 +1,6 @@
 # `data_google_dns_managed_zone_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy).
 
 # `dataGoogleDnsManagedZoneIamPolicy` Submodule <a name="`dataGoogleDnsManagedZoneIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_dns_managed_zone_iam_po
 
 ### DataGoogleDnsManagedZoneIamPolicy <a name="DataGoogleDnsManagedZoneIamPolicy" id="@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy google_dns_managed_zone_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy google_dns_managed_zone_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicy.Initializer"></a>
 
@@ -622,9 +622,9 @@ new DataGoogleDnsManagedZoneIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.managedZone">ManagedZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#managed_zone DataGoogleDnsManagedZoneIamPolicy#managed_zone}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#id DataGoogleDnsManagedZoneIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#project DataGoogleDnsManagedZoneIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.managedZone">ManagedZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#managed_zone DataGoogleDnsManagedZoneIamPolicy#managed_zone}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#id DataGoogleDnsManagedZoneIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleDnsManagedZoneIamPolicy.DataGoogleDnsManagedZoneIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#project DataGoogleDnsManagedZoneIamPolicy#project}. |
 
 ---
 
@@ -706,7 +706,7 @@ public string ManagedZone { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#managed_zone DataGoogleDnsManagedZoneIamPolicy#managed_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#managed_zone DataGoogleDnsManagedZoneIamPolicy#managed_zone}.
 
 ---
 
@@ -718,7 +718,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#id DataGoogleDnsManagedZoneIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#id DataGoogleDnsManagedZoneIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -733,7 +733,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/dns_managed_zone_iam_policy#project DataGoogleDnsManagedZoneIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/dns_managed_zone_iam_policy#project DataGoogleDnsManagedZoneIamPolicy#project}.
 
 ---
 
