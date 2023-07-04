@@ -562,6 +562,7 @@ export * as projectIamPolicy from './project-iam-policy';
 export * as projectOrganizationPolicy from './project-organization-policy';
 export * as projectService from './project-service';
 export * as projectUsageExportBucket from './project-usage-export-bucket';
+export * as publicCaExternalAccountKey from './public-ca-external-account-key';
 export * as pubsubLiteReservation from './pubsub-lite-reservation';
 export * as pubsubLiteSubscription from './pubsub-lite-subscription';
 export * as pubsubLiteTopic from './pubsub-lite-topic';

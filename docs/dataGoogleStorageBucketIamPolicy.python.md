@@ -1,6 +1,6 @@
 # `data_google_storage_bucket_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_storage_bucket_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_storage_bucket_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy).
 
 # `dataGoogleStorageBucketIamPolicy` Submodule <a name="`dataGoogleStorageBucketIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleStorageBucketIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_storage_bucket_iam_poli
 
 ### DataGoogleStorageBucketIamPolicy <a name="DataGoogleStorageBucketIamPolicy" id="@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy google_storage_bucket_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy google_storage_bucket_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy(
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.bucket">bucket</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicy.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -698,8 +698,8 @@ dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.bucket">bucket</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.bucket">bucket</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleStorageBucketIamPolicy.DataGoogleStorageBucketIamPolicyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}. |
 
 ---
 
@@ -781,7 +781,7 @@ bucket: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#bucket DataGoogleStorageBucketIamPolicy#bucket}.
 
 ---
 
@@ -793,7 +793,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/storage_bucket_iam_policy#id DataGoogleStorageBucketIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

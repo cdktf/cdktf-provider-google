@@ -772,6 +772,7 @@ The following submodules are available:
 - [projectService](./projectService.typescript.md)
 - [projectUsageExportBucket](./projectUsageExportBucket.typescript.md)
 - [provider](./provider.typescript.md)
+- [publicCaExternalAccountKey](./publicCaExternalAccountKey.typescript.md)
 - [pubsubLiteReservation](./pubsubLiteReservation.typescript.md)
 - [pubsubLiteSubscription](./pubsubLiteSubscription.typescript.md)
 - [pubsubLiteTopic](./pubsubLiteTopic.typescript.md)

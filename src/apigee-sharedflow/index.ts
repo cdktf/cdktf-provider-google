@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface ApigeeSharedflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Path to the config zip bundle
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#config_bundle ApigeeSharedflow#config_bundle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#config_bundle ApigeeSharedflow#config_bundle}
   */
   readonly configBundle: string;
   /**
   * A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#detect_md5hash ApigeeSharedflow#detect_md5hash}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#detect_md5hash ApigeeSharedflow#detect_md5hash}
   */
   readonly detectMd5Hash?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#id ApigeeSharedflow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#id ApigeeSharedflow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,19 +34,19 @@ export interface ApigeeSharedflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the shared flow.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#name ApigeeSharedflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#name ApigeeSharedflow#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization name associated with the Apigee instance.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#org_id ApigeeSharedflow#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#org_id ApigeeSharedflow#org_id}
   */
   readonly orgId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#timeouts ApigeeSharedflow#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#timeouts ApigeeSharedflow#timeouts}
   */
   readonly timeouts?: ApigeeSharedflowTimeouts;
 }
@@ -126,15 +126,15 @@ export class ApigeeSharedflowMetaDataList extends cdktf.ComplexList {
 }
 export interface ApigeeSharedflowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#create ApigeeSharedflow#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#create ApigeeSharedflow#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#delete ApigeeSharedflow#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#delete ApigeeSharedflow#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow#update ApigeeSharedflow#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow#update ApigeeSharedflow#update}
   */
   readonly update?: string;
 }
@@ -255,7 +255,7 @@ export class ApigeeSharedflowTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow google_apigee_sharedflow}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow google_apigee_sharedflow}
 */
 export class ApigeeSharedflow extends cdktf.TerraformResource {
 
@@ -269,7 +269,7 @@ export class ApigeeSharedflow extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/apigee_sharedflow google_apigee_sharedflow} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/apigee_sharedflow google_apigee_sharedflow} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -280,7 +280,7 @@ export class ApigeeSharedflow extends cdktf.TerraformResource {
       terraformResourceType: 'google_apigee_sharedflow',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

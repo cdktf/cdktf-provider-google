@@ -772,6 +772,7 @@ The following submodules are available:
 - [projectService](./projectService.csharp.md)
 - [projectUsageExportBucket](./projectUsageExportBucket.csharp.md)
 - [provider](./provider.csharp.md)
+- [publicCaExternalAccountKey](./publicCaExternalAccountKey.csharp.md)
 - [pubsubLiteReservation](./pubsubLiteReservation.csharp.md)
 - [pubsubLiteSubscription](./pubsubLiteSubscription.csharp.md)
 - [pubsubLiteTopic](./pubsubLiteTopic.csharp.md)

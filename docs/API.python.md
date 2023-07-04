@@ -772,6 +772,7 @@ The following submodules are available:
 - [projectService](./projectService.python.md)
 - [projectUsageExportBucket](./projectUsageExportBucket.python.md)
 - [provider](./provider.python.md)
+- [publicCaExternalAccountKey](./publicCaExternalAccountKey.python.md)
 - [pubsubLiteReservation](./pubsubLiteReservation.python.md)
 - [pubsubLiteSubscription](./pubsubLiteSubscription.python.md)
 - [pubsubLiteTopic](./pubsubLiteTopic.python.md)

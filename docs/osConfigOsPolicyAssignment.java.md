@@ -1,6 +1,6 @@
 # `google_os_config_os_policy_assignment`
 
-Refer to the Terraform Registory for docs: [`google_os_config_os_policy_assignment`](https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment).
+Refer to the Terraform Registory for docs: [`google_os_config_os_policy_assignment`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment).
 
 # `osConfigOsPolicyAssignment` Submodule <a name="`osConfigOsPolicyAssignment` Submodule" id="@cdktf/provider-google.osConfigOsPolicyAssignment"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_os_config_os_policy_assignme
 
 ### OsConfigOsPolicyAssignment <a name="OsConfigOsPolicyAssignment" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment google_os_config_os_policy_assignment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment google_os_config_os_policy_assignment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer"></a>
 
@@ -59,7 +59,7 @@ OsConfigOsPolicyAssignment.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.osPolicies">osPolicies</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>></code> | os_policies block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.rollout">rollout</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout">OsConfigOsPolicyAssignmentRollout</a></code> | rollout block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | OS policy assignment description. Length of the description is limited to 1024 characters. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.skipAwaitRollout">skipAwaitRollout</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Set to true to skip awaiting rollout during resource creation and update. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignment.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a></code> | timeouts block. |
@@ -132,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 instance_filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#instance_filter OsConfigOsPolicyAssignment#instance_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#instance_filter OsConfigOsPolicyAssignment#instance_filter}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#location OsConfigOsPolicyAssignment#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#location OsConfigOsPolicyAssignment#location}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Resource name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 os_policies block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_policies OsConfigOsPolicyAssignment#os_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_policies OsConfigOsPolicyAssignment#os_policies}
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 rollout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#rollout OsConfigOsPolicyAssignment#rollout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#rollout OsConfigOsPolicyAssignment#rollout}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 OS policy assignment description. Length of the description is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
 
 ---
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -203,7 +203,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#project OsConfigOsPolicyAssignment#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#project OsConfigOsPolicyAssignment#project}
 
 ---
 
@@ -213,7 +213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Set to true to skip awaiting rollout during resource creation and update.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#skip_await_rollout OsConfigOsPolicyAssignment#skip_await_rollout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#skip_await_rollout OsConfigOsPolicyAssignment#skip_await_rollout}
 
 ---
 
@@ -223,7 +223,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#timeouts OsConfigOsPolicyAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#timeouts OsConfigOsPolicyAssignment#timeouts}
 
 ---
 
@@ -1133,7 +1133,7 @@ OsConfigOsPolicyAssignmentConfig.builder()
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.osPolicies">osPolicies</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies">OsConfigOsPolicyAssignmentOsPolicies</a>></code> | os_policies block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.rollout">rollout</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout">OsConfigOsPolicyAssignmentRollout</a></code> | rollout block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.description">description</a></code> | <code>java.lang.String</code> | OS policy assignment description. Length of the description is limited to 1024 characters. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.project">project</a></code> | <code>java.lang.String</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.skipAwaitRollout">skipAwaitRollout</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Set to true to skip awaiting rollout during resource creation and update. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts">OsConfigOsPolicyAssignmentTimeouts</a></code> | timeouts block. |
@@ -1220,7 +1220,7 @@ public OsConfigOsPolicyAssignmentInstanceFilter getInstanceFilter();
 
 instance_filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#instance_filter OsConfigOsPolicyAssignment#instance_filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#instance_filter OsConfigOsPolicyAssignment#instance_filter}
 
 ---
 
@@ -1234,7 +1234,7 @@ public java.lang.String getLocation();
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#location OsConfigOsPolicyAssignment#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#location OsConfigOsPolicyAssignment#location}
 
 ---
 
@@ -1248,7 +1248,7 @@ public java.lang.String getName();
 
 Resource name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -1262,7 +1262,7 @@ public java.lang.Object getOsPolicies();
 
 os_policies block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_policies OsConfigOsPolicyAssignment#os_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_policies OsConfigOsPolicyAssignment#os_policies}
 
 ---
 
@@ -1276,7 +1276,7 @@ public OsConfigOsPolicyAssignmentRollout getRollout();
 
 rollout block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#rollout OsConfigOsPolicyAssignment#rollout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#rollout OsConfigOsPolicyAssignment#rollout}
 
 ---
 
@@ -1290,7 +1290,7 @@ public java.lang.String getDescription();
 
 OS policy assignment description. Length of the description is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
 
 ---
 
@@ -1302,7 +1302,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1319,7 +1319,7 @@ public java.lang.String getProject();
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#project OsConfigOsPolicyAssignment#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#project OsConfigOsPolicyAssignment#project}
 
 ---
 
@@ -1333,7 +1333,7 @@ public java.lang.Object getSkipAwaitRollout();
 
 Set to true to skip awaiting rollout during resource creation and update.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#skip_await_rollout OsConfigOsPolicyAssignment#skip_await_rollout}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#skip_await_rollout OsConfigOsPolicyAssignment#skip_await_rollout}
 
 ---
 
@@ -1347,7 +1347,7 @@ public OsConfigOsPolicyAssignmentTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#timeouts OsConfigOsPolicyAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#timeouts OsConfigOsPolicyAssignment#timeouts}
 
 ---
 
@@ -1391,7 +1391,7 @@ public java.lang.Object getAll();
 
 Target all VMs in the project. If true, no other criteria is permitted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#all OsConfigOsPolicyAssignment#all}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#all OsConfigOsPolicyAssignment#all}
 
 ---
 
@@ -1405,7 +1405,7 @@ public java.lang.Object getExclusionLabels();
 
 exclusion_labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#exclusion_labels OsConfigOsPolicyAssignment#exclusion_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#exclusion_labels OsConfigOsPolicyAssignment#exclusion_labels}
 
 ---
 
@@ -1419,7 +1419,7 @@ public java.lang.Object getInclusionLabels();
 
 inclusion_labels block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#inclusion_labels OsConfigOsPolicyAssignment#inclusion_labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#inclusion_labels OsConfigOsPolicyAssignment#inclusion_labels}
 
 ---
 
@@ -1433,7 +1433,7 @@ public java.lang.Object getInventories();
 
 inventories block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#inventories OsConfigOsPolicyAssignment#inventories}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#inventories OsConfigOsPolicyAssignment#inventories}
 
 ---
 
@@ -1469,7 +1469,7 @@ Labels are identified by key/value pairs in this map.
 
 A VM should contain all the key/value pairs specified in this map to be selected.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#labels OsConfigOsPolicyAssignment#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#labels OsConfigOsPolicyAssignment#labels}
 
 ---
 
@@ -1505,7 +1505,7 @@ Labels are identified by key/value pairs in this map.
 
 A VM should contain all the key/value pairs specified in this map to be selected.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#labels OsConfigOsPolicyAssignment#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#labels OsConfigOsPolicyAssignment#labels}
 
 ---
 
@@ -1526,7 +1526,7 @@ OsConfigOsPolicyAssignmentInstanceFilterInventories.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories.property.osShortName">osShortName</a></code> | <code>java.lang.String</code> | Required. The OS short name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories.property.osShortName">osShortName</a></code> | <code>java.lang.String</code> | The OS short name. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentInstanceFilterInventories.property.osVersion">osVersion</a></code> | <code>java.lang.String</code> | The OS version Prefix matches are supported if asterisk(*) is provided as the last character. |
 
 ---
@@ -1539,9 +1539,9 @@ public java.lang.String getOsShortName();
 
 - *Type:* java.lang.String
 
-Required. The OS short name.
+The OS short name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_short_name OsConfigOsPolicyAssignment#os_short_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_short_name OsConfigOsPolicyAssignment#os_short_name}
 
 ---
 
@@ -1555,9 +1555,9 @@ public java.lang.String getOsVersion();
 
 The OS version Prefix matches are supported if asterisk(*) is provided as the last character.
 
-For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+For example, to match all versions with a major version of '7', specify the following value for this field '7.*' An empty string matches all OS versions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_version OsConfigOsPolicyAssignment#os_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_version OsConfigOsPolicyAssignment#os_version}
 
 ---
 
@@ -1583,8 +1583,8 @@ OsConfigOsPolicyAssignmentOsPolicies.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.id">id</a></code> | <code>java.lang.String</code> | Required. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.mode">mode</a></code> | <code>java.lang.String</code> | Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.id">id</a></code> | <code>java.lang.String</code> | The id of the OS policy with the following restrictions: Must contain only lowercase letters, numbers, and hyphens. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.mode">mode</a></code> | <code>java.lang.String</code> | Policy mode Possible values: ["MODE_UNSPECIFIED", "VALIDATION", "ENFORCEMENT"]. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.resourceGroups">resourceGroups</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroups">OsConfigOsPolicyAssignmentOsPoliciesResourceGroups</a>></code> | resource_groups block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.allowNoResourceGroupMatch">allowNoResourceGroupMatch</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPolicies.property.description">description</a></code> | <code>java.lang.String</code> | Policy description. Length of the description is limited to 1024 characters. |
@@ -1599,11 +1599,14 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Required.
+The id of the OS policy with the following restrictions: Must contain only lowercase letters, numbers, and hyphens.
 
-The id of the OS policy with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the assignment.
+Must start with a letter.
+Must be between 1-63 characters.
+Must end with a number or a letter.
+Must be unique within the assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1618,9 +1621,9 @@ public java.lang.String getMode();
 
 - *Type:* java.lang.String
 
-Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT.
+Policy mode Possible values: ["MODE_UNSPECIFIED", "VALIDATION", "ENFORCEMENT"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#mode OsConfigOsPolicyAssignment#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#mode OsConfigOsPolicyAssignment#mode}
 
 ---
 
@@ -1634,7 +1637,7 @@ public java.lang.Object getResourceGroups();
 
 resource_groups block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#resource_groups OsConfigOsPolicyAssignment#resource_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#resource_groups OsConfigOsPolicyAssignment#resource_groups}
 
 ---
 
@@ -1648,9 +1651,9 @@ public java.lang.Object getAllowNoResourceGroupMatch();
 
 This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM.
 
-Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
+Set this value to 'true' if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_no_resource_group_match OsConfigOsPolicyAssignment#allow_no_resource_group_match}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_no_resource_group_match OsConfigOsPolicyAssignment#allow_no_resource_group_match}
 
 ---
 
@@ -1664,7 +1667,7 @@ public java.lang.String getDescription();
 
 Policy description. Length of the description is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#description OsConfigOsPolicyAssignment#description}
 
 ---
 
@@ -1702,7 +1705,7 @@ public java.lang.Object getResources();
 
 resources block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#resources OsConfigOsPolicyAssignment#resources}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#resources OsConfigOsPolicyAssignment#resources}
 
 ---
 
@@ -1716,7 +1719,7 @@ public java.lang.Object getInventoryFilters();
 
 inventory_filters block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#inventory_filters OsConfigOsPolicyAssignment#inventory_filters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#inventory_filters OsConfigOsPolicyAssignment#inventory_filters}
 
 ---
 
@@ -1737,7 +1740,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters.property.osShortName">osShortName</a></code> | <code>java.lang.String</code> | Required. The OS short name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters.property.osShortName">osShortName</a></code> | <code>java.lang.String</code> | The OS short name. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsInventoryFilters.property.osVersion">osVersion</a></code> | <code>java.lang.String</code> | The OS version Prefix matches are supported if asterisk(*) is provided as the last character. |
 
 ---
@@ -1750,9 +1753,9 @@ public java.lang.String getOsShortName();
 
 - *Type:* java.lang.String
 
-Required. The OS short name.
+The OS short name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_short_name OsConfigOsPolicyAssignment#os_short_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_short_name OsConfigOsPolicyAssignment#os_short_name}
 
 ---
 
@@ -1766,9 +1769,10 @@ public java.lang.String getOsVersion();
 
 The OS version Prefix matches are supported if asterisk(*) is provided as the last character.
 
-For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+For example, to match all versions with a major version of '7', specify the following value for this field '7.*'
+An empty string matches all OS versions.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#os_version OsConfigOsPolicyAssignment#os_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#os_version OsConfigOsPolicyAssignment#os_version}
 
 ---
 
@@ -1792,7 +1796,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.property.id">id</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.property.id">id</a></code> | <code>java.lang.String</code> | The id of the resource with the following restrictions: Must contain only lowercase letters, numbers, and hyphens. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.property.exec">exec</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExec">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExec</a></code> | exec block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.property.file">file</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile</a></code> | file block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResources.property.pkg">pkg</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg</a></code> | pkg block. |
@@ -1808,11 +1812,14 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Required.
+The id of the resource with the following restrictions: Must contain only lowercase letters, numbers, and hyphens.
 
-The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
+Must start with a letter.
+Must be between 1-63 characters.
+Must end with a number or a letter.
+Must be unique within the OS policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1829,7 +1836,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExec getExec()
 
 exec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#exec OsConfigOsPolicyAssignment#exec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#exec OsConfigOsPolicyAssignment#exec}
 
 ---
 
@@ -1843,7 +1850,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile getFile()
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
 
 ---
 
@@ -1857,7 +1864,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg getPkg();
 
 pkg block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#pkg OsConfigOsPolicyAssignment#pkg}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#pkg OsConfigOsPolicyAssignment#pkg}
 
 ---
 
@@ -1871,7 +1878,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepository get
 
 repository block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#repository OsConfigOsPolicyAssignment#repository}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#repository OsConfigOsPolicyAssignment#repository}
 
 ---
 
@@ -1907,7 +1914,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate g
 
 validate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#validate OsConfigOsPolicyAssignment#validate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#validate OsConfigOsPolicyAssignment#validate}
 
 ---
 
@@ -1921,7 +1928,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce ge
 
 enforce block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#enforce OsConfigOsPolicyAssignment#enforce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#enforce OsConfigOsPolicyAssignment#enforce}
 
 ---
 
@@ -1945,7 +1952,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.property.interpreter">interpreter</a></code> | <code>java.lang.String</code> | Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.property.interpreter">interpreter</a></code> | <code>java.lang.String</code> | The script interpreter to use. Possible values: ["INTERPRETER_UNSPECIFIED", "NONE", "SHELL", "POWERSHELL"]. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.property.args">args</a></code> | <code>java.util.List<java.lang.String></code> | Optional arguments to pass to the source during execution. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.property.file">file</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFile">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFile</a></code> | file block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforce.property.outputFilePath">outputFilePath</a></code> | <code>java.lang.String</code> | Only recorded for enforce Exec. |
@@ -1961,9 +1968,9 @@ public java.lang.String getInterpreter();
 
 - *Type:* java.lang.String
 
-Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL.
+The script interpreter to use. Possible values: ["INTERPRETER_UNSPECIFIED", "NONE", "SHELL", "POWERSHELL"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#interpreter OsConfigOsPolicyAssignment#interpreter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#interpreter OsConfigOsPolicyAssignment#interpreter}
 
 ---
 
@@ -1977,7 +1984,7 @@ public java.util.List<java.lang.String> getArgs();
 
 Optional arguments to pass to the source during execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#args OsConfigOsPolicyAssignment#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#args OsConfigOsPolicyAssignment#args}
 
 ---
 
@@ -1991,7 +1998,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFil
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
 
 ---
 
@@ -2007,7 +2014,7 @@ Only recorded for enforce Exec.
 
 Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#output_file_path OsConfigOsPolicyAssignment#output_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#output_file_path OsConfigOsPolicyAssignment#output_file_path}
 
 ---
 
@@ -2021,7 +2028,7 @@ public java.lang.String getScript();
 
 An inline script. The size of the script is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#script OsConfigOsPolicyAssignment#script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#script OsConfigOsPolicyAssignment#script}
 
 ---
 
@@ -2064,7 +2071,7 @@ Defaults to false.
 
 When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -2078,7 +2085,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFil
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -2092,7 +2099,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -2106,7 +2113,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFil
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -2128,8 +2135,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.bu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -2142,9 +2149,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -2156,9 +2163,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -2172,7 +2179,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -2193,7 +2200,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileRemote
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecEnforceFileRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -2206,11 +2213,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -2224,7 +2229,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -2248,7 +2253,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.builder(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.property.interpreter">interpreter</a></code> | <code>java.lang.String</code> | Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.property.interpreter">interpreter</a></code> | <code>java.lang.String</code> | The script interpreter to use. Possible values: ["INTERPRETER_UNSPECIFIED", "NONE", "SHELL", "POWERSHELL"]. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.property.args">args</a></code> | <code>java.util.List<java.lang.String></code> | Optional arguments to pass to the source during execution. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.property.file">file</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFile">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFile</a></code> | file block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidate.property.outputFilePath">outputFilePath</a></code> | <code>java.lang.String</code> | Only recorded for enforce Exec. |
@@ -2264,9 +2269,9 @@ public java.lang.String getInterpreter();
 
 - *Type:* java.lang.String
 
-Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL.
+The script interpreter to use. Possible values: ["INTERPRETER_UNSPECIFIED", "NONE", "SHELL", "POWERSHELL"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#interpreter OsConfigOsPolicyAssignment#interpreter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#interpreter OsConfigOsPolicyAssignment#interpreter}
 
 ---
 
@@ -2280,7 +2285,7 @@ public java.util.List<java.lang.String> getArgs();
 
 Optional arguments to pass to the source during execution.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#args OsConfigOsPolicyAssignment#args}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#args OsConfigOsPolicyAssignment#args}
 
 ---
 
@@ -2294,7 +2299,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFi
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
 
 ---
 
@@ -2310,7 +2315,7 @@ Only recorded for enforce Exec.
 
 Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#output_file_path OsConfigOsPolicyAssignment#output_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#output_file_path OsConfigOsPolicyAssignment#output_file_path}
 
 ---
 
@@ -2324,7 +2329,7 @@ public java.lang.String getScript();
 
 An inline script. The size of the script is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#script OsConfigOsPolicyAssignment#script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#script OsConfigOsPolicyAssignment#script}
 
 ---
 
@@ -2365,9 +2370,10 @@ public java.lang.Object getAllowInsecure();
 
 Defaults to false.
 
-When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+When false, files are subject to validations based on the file type:
+Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -2381,7 +2387,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFi
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -2395,7 +2401,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -2409,7 +2415,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFi
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -2431,8 +2437,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.b
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -2445,9 +2451,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -2459,9 +2465,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -2475,7 +2481,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -2496,7 +2502,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileRemot
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesExecValidateFileRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -2509,11 +2515,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -2527,7 +2531,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -2550,8 +2554,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.path">path</a></code> | <code>java.lang.String</code> | Required. The absolute path of the file within the VM. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.state">state</a></code> | <code>java.lang.String</code> | Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.path">path</a></code> | <code>java.lang.String</code> | The absolute path of the file within the VM. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.state">state</a></code> | <code>java.lang.String</code> | Desired state of the file. Possible values: ["OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED", "COMPLIANT", "NON_COMPLIANT", "UNKNOWN", "NO_OS_POLICIES_APPLICABLE"]. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.content">content</a></code> | <code>java.lang.String</code> | A a file with this content. The size of the content is limited to 1024 characters. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFile.property.file">file</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFile">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFile</a></code> | file block. |
 
@@ -2565,9 +2569,9 @@ public java.lang.String getPath();
 
 - *Type:* java.lang.String
 
-Required. The absolute path of the file within the VM.
+The absolute path of the file within the VM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#path OsConfigOsPolicyAssignment#path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#path OsConfigOsPolicyAssignment#path}
 
 ---
 
@@ -2579,9 +2583,9 @@ public java.lang.String getState();
 
 - *Type:* java.lang.String
 
-Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE.
+Desired state of the file. Possible values: ["OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED", "COMPLIANT", "NON_COMPLIANT", "UNKNOWN", "NO_OS_POLICIES_APPLICABLE"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#state OsConfigOsPolicyAssignment#state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#state OsConfigOsPolicyAssignment#state}
 
 ---
 
@@ -2595,7 +2599,7 @@ public java.lang.String getContent();
 
 A a file with this content. The size of the content is limited to 1024 characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#content OsConfigOsPolicyAssignment#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#content OsConfigOsPolicyAssignment#content}
 
 ---
 
@@ -2609,7 +2613,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFile getFi
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#file OsConfigOsPolicyAssignment#file}
 
 ---
 
@@ -2652,7 +2656,7 @@ Defaults to false.
 
 When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -2666,7 +2670,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs ge
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -2680,7 +2684,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -2694,7 +2698,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileRemote
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -2716,8 +2720,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -2730,9 +2734,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -2744,9 +2748,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -2760,7 +2764,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -2781,7 +2785,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileRemote.builde
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesFileFileRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -2794,11 +2798,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -2812,7 +2814,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -2839,7 +2841,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.property.desiredState">desiredState</a></code> | <code>java.lang.String</code> | Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.property.desiredState">desiredState</a></code> | <code>java.lang.String</code> | The desired state the agent should maintain for this package. Possible values: ["DESIRED_STATE_UNSPECIFIED", "INSTALLED", "REMOVED"]. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.property.apt">apt</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt</a></code> | apt block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.property.deb">deb</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDeb">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDeb</a></code> | deb block. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkg.property.googet">googet</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget">OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget</a></code> | googet block. |
@@ -2858,9 +2860,9 @@ public java.lang.String getDesiredState();
 
 - *Type:* java.lang.String
 
-Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED.
+The desired state the agent should maintain for this package. Possible values: ["DESIRED_STATE_UNSPECIFIED", "INSTALLED", "REMOVED"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#desired_state OsConfigOsPolicyAssignment#desired_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#desired_state OsConfigOsPolicyAssignment#desired_state}
 
 ---
 
@@ -2874,7 +2876,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt getApt(
 
 apt block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#apt OsConfigOsPolicyAssignment#apt}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#apt OsConfigOsPolicyAssignment#apt}
 
 ---
 
@@ -2888,7 +2890,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDeb getDeb(
 
 deb block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#deb OsConfigOsPolicyAssignment#deb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#deb OsConfigOsPolicyAssignment#deb}
 
 ---
 
@@ -2902,7 +2904,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget getG
 
 googet block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#googet OsConfigOsPolicyAssignment#googet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#googet OsConfigOsPolicyAssignment#googet}
 
 ---
 
@@ -2916,7 +2918,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsi getMsi(
 
 msi block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#msi OsConfigOsPolicyAssignment#msi}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#msi OsConfigOsPolicyAssignment#msi}
 
 ---
 
@@ -2930,7 +2932,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpm getRpm(
 
 rpm block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#rpm OsConfigOsPolicyAssignment#rpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#rpm OsConfigOsPolicyAssignment#rpm}
 
 ---
 
@@ -2944,7 +2946,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgYum getYum(
 
 yum block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#yum OsConfigOsPolicyAssignment#yum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#yum OsConfigOsPolicyAssignment#yum}
 
 ---
 
@@ -2958,7 +2960,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgZypper getZ
 
 zypper block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#zypper OsConfigOsPolicyAssignment#zypper}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#zypper OsConfigOsPolicyAssignment#zypper}
 
 ---
 
@@ -2978,7 +2980,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt.property.name">name</a></code> | <code>java.lang.String</code> | Required. Package name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgApt.property.name">name</a></code> | <code>java.lang.String</code> | Package name. |
 
 ---
 
@@ -2990,9 +2992,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Required. Package name.
+Package name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -3029,7 +3031,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSource g
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
 
 ---
 
@@ -3043,9 +3045,9 @@ public java.lang.Object getPullDeps();
 
 Whether dependencies should also be installed.
 
-* install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+* install when false: 'dpkg -i package' - install when true: 'apt-get update && apt-get -y install package.deb'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#pull_deps OsConfigOsPolicyAssignment#pull_deps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#pull_deps OsConfigOsPolicyAssignment#pull_deps}
 
 ---
 
@@ -3086,9 +3088,10 @@ public java.lang.Object getAllowInsecure();
 
 Defaults to false.
 
-When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+When false, files are subject to validations based on the file type:
+Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -3102,7 +3105,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGc
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -3116,7 +3119,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -3130,7 +3133,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceRe
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -3152,8 +3155,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.build
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -3166,9 +3169,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -3180,9 +3183,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -3196,7 +3199,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -3217,7 +3220,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceRemote.bu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgDebSourceRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -3230,11 +3233,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -3248,7 +3249,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -3268,7 +3269,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget.property.name">name</a></code> | <code>java.lang.String</code> | Required. Package name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgGooget.property.name">name</a></code> | <code>java.lang.String</code> | Package name. |
 
 ---
 
@@ -3280,9 +3281,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Required. Package name.
+Package name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -3318,7 +3319,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSource g
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
 
 ---
 
@@ -3332,9 +3333,9 @@ public java.util.List<java.lang.String> getProperties();
 
 Additional properties to use during installation.
 
-This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
+This should be in the format of Property=Setting. Appended to the defaults of 'ACTION=INSTALL REBOOT=ReallySuppress'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#properties OsConfigOsPolicyAssignment#properties}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#properties OsConfigOsPolicyAssignment#properties}
 
 ---
 
@@ -3375,9 +3376,10 @@ public java.lang.Object getAllowInsecure();
 
 Defaults to false.
 
-When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+When false, files are subject to validations based on the file type:
+Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -3391,7 +3393,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGc
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -3405,7 +3407,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -3419,7 +3421,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceRe
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -3441,8 +3443,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.build
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -3455,9 +3457,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -3469,9 +3471,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -3485,7 +3487,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -3506,7 +3508,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote.bu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -3519,11 +3521,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -3537,7 +3537,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -3574,7 +3574,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSource g
 
 source block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#source OsConfigOsPolicyAssignment#source}
 
 ---
 
@@ -3588,9 +3588,9 @@ public java.lang.Object getPullDeps();
 
 Whether dependencies should also be installed.
 
-* install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+* install when false: 'rpm --upgrade --replacepkgs package.rpm' - install when true: 'yum -y install package.rpm' or 'zypper -y install package.rpm'
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#pull_deps OsConfigOsPolicyAssignment#pull_deps}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#pull_deps OsConfigOsPolicyAssignment#pull_deps}
 
 ---
 
@@ -3631,9 +3631,10 @@ public java.lang.Object getAllowInsecure();
 
 Defaults to false.
 
-When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
+When false, files are subject to validations based on the file type:
+Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#allow_insecure OsConfigOsPolicyAssignment#allow_insecure}
 
 ---
 
@@ -3647,7 +3648,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGc
 
 gcs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gcs OsConfigOsPolicyAssignment#gcs}
 
 ---
 
@@ -3661,7 +3662,7 @@ public java.lang.String getLocalPath();
 
 A local path within the VM to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#local_path OsConfigOsPolicyAssignment#local_path}
 
 ---
 
@@ -3675,7 +3676,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceRe
 
 remote block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#remote OsConfigOsPolicyAssignment#remote}
 
 ---
 
@@ -3697,8 +3698,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.build
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Required. Bucket of the Cloud Storage object. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Required. Name of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.property.bucket">bucket</a></code> | <code>java.lang.String</code> | Bucket of the Cloud Storage object. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.property.object">object</a></code> | <code>java.lang.String</code> | Name of the Cloud Storage object. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs.property.generation">generation</a></code> | <code>java.lang.Number</code> | Generation number of the Cloud Storage object. |
 
 ---
@@ -3711,9 +3712,9 @@ public java.lang.String getBucket();
 
 - *Type:* java.lang.String
 
-Required. Bucket of the Cloud Storage object.
+Bucket of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#bucket OsConfigOsPolicyAssignment#bucket}
 
 ---
 
@@ -3725,9 +3726,9 @@ public java.lang.String getObject();
 
 - *Type:* java.lang.String
 
-Required. Name of the Cloud Storage object.
+Name of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#object OsConfigOsPolicyAssignment#object}
 
 ---
 
@@ -3741,7 +3742,7 @@ public java.lang.Number getGeneration();
 
 Generation number of the Cloud Storage object.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#generation OsConfigOsPolicyAssignment#generation}
 
 ---
 
@@ -3762,7 +3763,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote.bu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote.property.uri">uri</a></code> | <code>java.lang.String</code> | URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote.property.sha256Checksum">sha256Checksum</a></code> | <code>java.lang.String</code> | SHA256 checksum of the remote file. |
 
 ---
@@ -3775,11 +3776,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required.
+URI from which to fetch the object. It should contain both the protocol and path following the format '{protocol}://{location}'.
 
-URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -3793,7 +3792,7 @@ public java.lang.String getSha256Checksum();
 
 SHA256 checksum of the remote file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#sha256_checksum OsConfigOsPolicyAssignment#sha256_checksum}
 
 ---
 
@@ -3813,7 +3812,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgYum.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgYum.property.name">name</a></code> | <code>java.lang.String</code> | Required. Package name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgYum.property.name">name</a></code> | <code>java.lang.String</code> | Package name. |
 
 ---
 
@@ -3825,9 +3824,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Required. Package name.
+Package name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -3847,7 +3846,7 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgZypper.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgZypper.property.name">name</a></code> | <code>java.lang.String</code> | Required. Package name. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesPkgZypper.property.name">name</a></code> | <code>java.lang.String</code> | Package name. |
 
 ---
 
@@ -3859,9 +3858,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Required. Package name.
+Package name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -3901,7 +3900,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt 
 
 apt block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#apt OsConfigOsPolicyAssignment#apt}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#apt OsConfigOsPolicyAssignment#apt}
 
 ---
 
@@ -3915,7 +3914,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo 
 
 goo block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#goo OsConfigOsPolicyAssignment#goo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#goo OsConfigOsPolicyAssignment#goo}
 
 ---
 
@@ -3929,7 +3928,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum 
 
 yum block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#yum OsConfigOsPolicyAssignment#yum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#yum OsConfigOsPolicyAssignment#yum}
 
 ---
 
@@ -3943,7 +3942,7 @@ public OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypp
 
 zypper block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#zypper OsConfigOsPolicyAssignment#zypper}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#zypper OsConfigOsPolicyAssignment#zypper}
 
 ---
 
@@ -3967,11 +3966,11 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.builder
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.archiveType">archiveType</a></code> | <code>java.lang.String</code> | Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.components">components</a></code> | <code>java.util.List<java.lang.String></code> | Required. List of components for this repository. Must contain at least one item. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.distribution">distribution</a></code> | <code>java.lang.String</code> | Required. Distribution of this repository. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.uri">uri</a></code> | <code>java.lang.String</code> | Required. URI for this repository. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.gpgKey">gpgKey</a></code> | <code>java.lang.String</code> | URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.archiveType">archiveType</a></code> | <code>java.lang.String</code> | Type of archive files in this repository. Possible values: ["ARCHIVE_TYPE_UNSPECIFIED", "DEB", "DEB_SRC"]. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.components">components</a></code> | <code>java.util.List<java.lang.String></code> | List of components for this repository. Must contain at least one item. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.distribution">distribution</a></code> | <code>java.lang.String</code> | Distribution of this repository. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.uri">uri</a></code> | <code>java.lang.String</code> | URI for this repository. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryApt.property.gpgKey">gpgKey</a></code> | <code>java.lang.String</code> | URI of the key file for this repository. The agent maintains a keyring at '/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg'. |
 
 ---
 
@@ -3983,9 +3982,9 @@ public java.lang.String getArchiveType();
 
 - *Type:* java.lang.String
 
-Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC.
+Type of archive files in this repository. Possible values: ["ARCHIVE_TYPE_UNSPECIFIED", "DEB", "DEB_SRC"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#archive_type OsConfigOsPolicyAssignment#archive_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#archive_type OsConfigOsPolicyAssignment#archive_type}
 
 ---
 
@@ -3997,9 +3996,9 @@ public java.util.List<java.lang.String> getComponents();
 
 - *Type:* java.util.List<java.lang.String>
 
-Required. List of components for this repository. Must contain at least one item.
+List of components for this repository. Must contain at least one item.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#components OsConfigOsPolicyAssignment#components}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#components OsConfigOsPolicyAssignment#components}
 
 ---
 
@@ -4011,9 +4010,9 @@ public java.lang.String getDistribution();
 
 - *Type:* java.lang.String
 
-Required. Distribution of this repository.
+Distribution of this repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#distribution OsConfigOsPolicyAssignment#distribution}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#distribution OsConfigOsPolicyAssignment#distribution}
 
 ---
 
@@ -4025,9 +4024,9 @@ public java.lang.String getUri();
 
 - *Type:* java.lang.String
 
-Required. URI for this repository.
+URI for this repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#uri OsConfigOsPolicyAssignment#uri}
 
 ---
 
@@ -4039,9 +4038,9 @@ public java.lang.String getGpgKey();
 
 - *Type:* java.lang.String
 
-URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+URI of the key file for this repository. The agent maintains a keyring at '/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg'.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gpg_key OsConfigOsPolicyAssignment#gpg_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gpg_key OsConfigOsPolicyAssignment#gpg_key}
 
 ---
 
@@ -4062,8 +4061,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo.builder
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo.property.name">name</a></code> | <code>java.lang.String</code> | Required. The name of the repository. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo.property.url">url</a></code> | <code>java.lang.String</code> | Required. The url of the repository. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo.property.name">name</a></code> | <code>java.lang.String</code> | The name of the repository. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryGoo.property.url">url</a></code> | <code>java.lang.String</code> | The url of the repository. |
 
 ---
 
@@ -4075,9 +4074,9 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Required. The name of the repository.
+The name of the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#name OsConfigOsPolicyAssignment#name}
 
 ---
 
@@ -4089,9 +4088,9 @@ public java.lang.String getUrl();
 
 - *Type:* java.lang.String
 
-Required. The url of the repository.
+The url of the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#url OsConfigOsPolicyAssignment#url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#url OsConfigOsPolicyAssignment#url}
 
 ---
 
@@ -4114,8 +4113,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.builder
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.baseUrl">baseUrl</a></code> | <code>java.lang.String</code> | Required. The location of the repository directory. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.id">id</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.baseUrl">baseUrl</a></code> | <code>java.lang.String</code> | The location of the repository directory. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.id">id</a></code> | <code>java.lang.String</code> | A one word, unique name for this repository. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name of the repository. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryYum.property.gpgKeys">gpgKeys</a></code> | <code>java.util.List<java.lang.String></code> | URIs of GPG keys. |
 
@@ -4129,9 +4128,9 @@ public java.lang.String getBaseUrl();
 
 - *Type:* java.lang.String
 
-Required. The location of the repository directory.
+The location of the repository directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#base_url OsConfigOsPolicyAssignment#base_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#base_url OsConfigOsPolicyAssignment#base_url}
 
 ---
 
@@ -4143,11 +4142,11 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Required.
+A one word, unique name for this repository.
 
-A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
+This is the 'repo id' in the yum config file and also the 'display_name' if 'display_name' is omitted. This id is also used as the unique identifier when checking for resource conflicts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4164,7 +4163,7 @@ public java.lang.String getDisplayName();
 
 The display name of the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#display_name OsConfigOsPolicyAssignment#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#display_name OsConfigOsPolicyAssignment#display_name}
 
 ---
 
@@ -4178,7 +4177,7 @@ public java.util.List<java.lang.String> getGpgKeys();
 
 URIs of GPG keys.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gpg_keys OsConfigOsPolicyAssignment#gpg_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gpg_keys OsConfigOsPolicyAssignment#gpg_keys}
 
 ---
 
@@ -4201,8 +4200,8 @@ OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.buil
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.baseUrl">baseUrl</a></code> | <code>java.lang.String</code> | Required. The location of the repository directory. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.id">id</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.baseUrl">baseUrl</a></code> | <code>java.lang.String</code> | The location of the repository directory. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.id">id</a></code> | <code>java.lang.String</code> | A one word, unique name for this repository. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.displayName">displayName</a></code> | <code>java.lang.String</code> | The display name of the repository. |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentOsPoliciesResourceGroupsResourcesRepositoryZypper.property.gpgKeys">gpgKeys</a></code> | <code>java.util.List<java.lang.String></code> | URIs of GPG keys. |
 
@@ -4216,9 +4215,9 @@ public java.lang.String getBaseUrl();
 
 - *Type:* java.lang.String
 
-Required. The location of the repository directory.
+The location of the repository directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#base_url OsConfigOsPolicyAssignment#base_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#base_url OsConfigOsPolicyAssignment#base_url}
 
 ---
 
@@ -4230,11 +4229,11 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Required.
+A one word, unique name for this repository.
 
-A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+This is the 'repo id' in the zypper config file and also the 'display_name' if 'display_name' is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#id OsConfigOsPolicyAssignment#id}
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4251,7 +4250,7 @@ public java.lang.String getDisplayName();
 
 The display name of the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#display_name OsConfigOsPolicyAssignment#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#display_name OsConfigOsPolicyAssignment#display_name}
 
 ---
 
@@ -4265,7 +4264,7 @@ public java.util.List<java.lang.String> getGpgKeys();
 
 URIs of GPG keys.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#gpg_keys OsConfigOsPolicyAssignment#gpg_keys}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#gpg_keys OsConfigOsPolicyAssignment#gpg_keys}
 
 ---
 
@@ -4287,7 +4286,7 @@ OsConfigOsPolicyAssignmentRollout.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout.property.disruptionBudget">disruptionBudget</a></code> | <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRolloutDisruptionBudget">OsConfigOsPolicyAssignmentRolloutDisruptionBudget</a></code> | disruption_budget block. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout.property.minWaitDuration">minWaitDuration</a></code> | <code>java.lang.String</code> | Required. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentRollout.property.minWaitDuration">minWaitDuration</a></code> | <code>java.lang.String</code> | This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. |
 
 ---
 
@@ -4301,7 +4300,7 @@ public OsConfigOsPolicyAssignmentRolloutDisruptionBudget getDisruptionBudget();
 
 disruption_budget block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#disruption_budget OsConfigOsPolicyAssignment#disruption_budget}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#disruption_budget OsConfigOsPolicyAssignment#disruption_budget}
 
 ---
 
@@ -4313,11 +4312,11 @@ public java.lang.String getMinWaitDuration();
 
 - *Type:* java.lang.String
 
-Required.
+This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout.
 
-This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+A VM continues to count towards the 'disruption_budget' at least until this duration of time has passed after configuration changes are applied.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#min_wait_duration OsConfigOsPolicyAssignment#min_wait_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#min_wait_duration OsConfigOsPolicyAssignment#min_wait_duration}
 
 ---
 
@@ -4353,7 +4352,7 @@ public java.lang.Number getFixed();
 
 Specifies a fixed value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#fixed OsConfigOsPolicyAssignment#fixed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#fixed OsConfigOsPolicyAssignment#fixed}
 
 ---
 
@@ -4367,7 +4366,7 @@ public java.lang.Number getPercent();
 
 Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#percent OsConfigOsPolicyAssignment#percent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#percent OsConfigOsPolicyAssignment#percent}
 
 ---
 
@@ -4389,9 +4388,9 @@ OsConfigOsPolicyAssignmentTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#create OsConfigOsPolicyAssignment#create}. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#delete OsConfigOsPolicyAssignment#delete}. |
-| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#update OsConfigOsPolicyAssignment#update}. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#create OsConfigOsPolicyAssignment#create}. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#delete OsConfigOsPolicyAssignment#delete}. |
+| <code><a href="#@cdktf/provider-google.osConfigOsPolicyAssignment.OsConfigOsPolicyAssignmentTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#update OsConfigOsPolicyAssignment#update}. |
 
 ---
 
@@ -4403,7 +4402,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#create OsConfigOsPolicyAssignment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#create OsConfigOsPolicyAssignment#create}.
 
 ---
 
@@ -4415,7 +4414,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#delete OsConfigOsPolicyAssignment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#delete OsConfigOsPolicyAssignment#delete}.
 
 ---
 
@@ -4427,7 +4426,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/os_config_os_policy_assignment#update OsConfigOsPolicyAssignment#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/os_config_os_policy_assignment#update OsConfigOsPolicyAssignment#update}.
 
 ---
 

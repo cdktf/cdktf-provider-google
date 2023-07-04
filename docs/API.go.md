@@ -772,6 +772,7 @@ The following submodules are available:
 - [projectService](./projectService.go.md)
 - [projectUsageExportBucket](./projectUsageExportBucket.go.md)
 - [provider](./provider.go.md)
+- [publicCaExternalAccountKey](./publicCaExternalAccountKey.go.md)
 - [pubsubLiteReservation](./pubsubLiteReservation.go.md)
 - [pubsubLiteSubscription](./pubsubLiteSubscription.go.md)
 - [pubsubLiteTopic](./pubsubLiteTopic.go.md)

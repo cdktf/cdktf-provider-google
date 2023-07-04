@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien
+// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#id ResourceManagerLien#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -24,7 +24,7 @@ export interface ResourceManagerLienConfig extends cdktf.TerraformMetaArguments 
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#origin ResourceManagerLien#origin}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#origin ResourceManagerLien#origin}
   */
   readonly origin: string;
   /**
@@ -33,14 +33,14 @@ The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#parent ResourceManagerLien#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#parent ResourceManagerLien#parent}
   */
   readonly parent: string;
   /**
   * Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#reason ResourceManagerLien#reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#reason ResourceManagerLien#reason}
   */
   readonly reason: string;
   /**
@@ -50,23 +50,23 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#restrictions ResourceManagerLien#restrictions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#restrictions ResourceManagerLien#restrictions}
   */
   readonly restrictions: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#timeouts ResourceManagerLien#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#timeouts ResourceManagerLien#timeouts}
   */
   readonly timeouts?: ResourceManagerLienTimeouts;
 }
 export interface ResourceManagerLienTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#create ResourceManagerLien#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien#delete ResourceManagerLien#delete}
   */
   readonly delete?: string;
 }
@@ -164,7 +164,7 @@ export class ResourceManagerLienTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien google_resource_manager_lien}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien google_resource_manager_lien}
 */
 export class ResourceManagerLien extends cdktf.TerraformResource {
 
@@ -178,7 +178,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.71.0/docs/resources/resource_manager_lien google_resource_manager_lien} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/resource_manager_lien google_resource_manager_lien} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -189,7 +189,7 @@ export class ResourceManagerLien extends cdktf.TerraformResource {
       terraformResourceType: 'google_resource_manager_lien',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.71.0',
+        providerVersion: '4.72.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
