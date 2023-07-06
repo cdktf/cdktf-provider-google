@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -16,18 +11,18 @@ export interface MonitoringGroupConfig extends cdktf.TerraformMetaArguments {
   * A user-assigned name for this group, used only for display
 purposes.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#display_name MonitoringGroup#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#display_name MonitoringGroup#display_name}
   */
   readonly displayName: string;
   /**
   * The filter used to determine which monitored resources
 belong to this group.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#filter MonitoringGroup#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#filter MonitoringGroup#filter}
   */
   readonly filter: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#id MonitoringGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#id MonitoringGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -38,7 +33,7 @@ belong to this group.
 cluster. The system can perform additional analysis on
 groups that are clusters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#is_cluster MonitoringGroup#is_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#is_cluster MonitoringGroup#is_cluster}
   */
   readonly isCluster?: boolean | cdktf.IResolvable;
   /**
@@ -46,31 +41,31 @@ groups that are clusters.
 "projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#parent_name MonitoringGroup#parent_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#parent_name MonitoringGroup#parent_name}
   */
   readonly parentName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#project MonitoringGroup#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#project MonitoringGroup#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#timeouts MonitoringGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#timeouts MonitoringGroup#timeouts}
   */
   readonly timeouts?: MonitoringGroupTimeouts;
 }
 export interface MonitoringGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#create MonitoringGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#create MonitoringGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#delete MonitoringGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#delete MonitoringGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group#update MonitoringGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group#update MonitoringGroup#update}
   */
   readonly update?: string;
 }
@@ -191,7 +186,7 @@ export class MonitoringGroupTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group google_monitoring_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group google_monitoring_group}
 */
 export class MonitoringGroup extends cdktf.TerraformResource {
 
@@ -205,7 +200,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_group google_monitoring_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_group google_monitoring_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -216,7 +211,7 @@ export class MonitoringGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

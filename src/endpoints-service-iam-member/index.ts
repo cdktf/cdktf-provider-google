@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +8,42 @@ import * as cdktf from 'cdktf';
 
 export interface EndpointsServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#id EndpointsServiceIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#id EndpointsServiceIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#member EndpointsServiceIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#member EndpointsServiceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#role EndpointsServiceIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#role EndpointsServiceIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#service_name EndpointsServiceIamMember#service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#service_name EndpointsServiceIamMember#service_name}
   */
   readonly serviceName: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#condition EndpointsServiceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#condition EndpointsServiceIamMember#condition}
   */
   readonly condition?: EndpointsServiceIamMemberCondition;
 }
 export interface EndpointsServiceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#description EndpointsServiceIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#description EndpointsServiceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#expression EndpointsServiceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#expression EndpointsServiceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member#title EndpointsServiceIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member#title EndpointsServiceIamMember#title}
   */
   readonly title: string;
 }
@@ -153,7 +148,7 @@ export class EndpointsServiceIamMemberConditionOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member google_endpoints_service_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member google_endpoints_service_iam_member}
 */
 export class EndpointsServiceIamMember extends cdktf.TerraformResource {
 
@@ -167,7 +162,7 @@ export class EndpointsServiceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/endpoints_service_iam_member google_endpoints_service_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/endpoints_service_iam_member google_endpoints_service_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -178,7 +173,7 @@ export class EndpointsServiceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_endpoints_service_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

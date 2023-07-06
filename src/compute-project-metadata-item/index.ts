@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ComputeProjectMetadataItemConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#id ComputeProjectMetadataItem#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#id ComputeProjectMetadataItem#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,39 +17,39 @@ export interface ComputeProjectMetadataItemConfig extends cdktf.TerraformMetaArg
   /**
   * The metadata key to set.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#key ComputeProjectMetadataItem#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#key ComputeProjectMetadataItem#key}
   */
   readonly key: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#project ComputeProjectMetadataItem#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#project ComputeProjectMetadataItem#project}
   */
   readonly project?: string;
   /**
   * The value to set for the given metadata key.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#value ComputeProjectMetadataItem#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#value ComputeProjectMetadataItem#value}
   */
   readonly value: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#timeouts ComputeProjectMetadataItem#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#timeouts ComputeProjectMetadataItem#timeouts}
   */
   readonly timeouts?: ComputeProjectMetadataItemTimeouts;
 }
 export interface ComputeProjectMetadataItemTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#create ComputeProjectMetadataItem#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#create ComputeProjectMetadataItem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#delete ComputeProjectMetadataItem#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#delete ComputeProjectMetadataItem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item#update ComputeProjectMetadataItem#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item#update ComputeProjectMetadataItem#update}
   */
   readonly update?: string;
 }
@@ -175,7 +170,7 @@ export class ComputeProjectMetadataItemTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item google_compute_project_metadata_item}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item google_compute_project_metadata_item}
 */
 export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
 
@@ -189,7 +184,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/compute_project_metadata_item google_compute_project_metadata_item} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_project_metadata_item google_compute_project_metadata_item} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -200,7 +195,7 @@ export class ComputeProjectMetadataItem extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_project_metadata_item',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

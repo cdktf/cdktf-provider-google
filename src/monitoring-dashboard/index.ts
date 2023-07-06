@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments 
   /**
   * The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#dashboard_json MonitoringDashboard#dashboard_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#dashboard_json MonitoringDashboard#dashboard_json}
   */
   readonly dashboardJson: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#id MonitoringDashboard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#id MonitoringDashboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,27 +23,27 @@ export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments 
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#project MonitoringDashboard#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#project MonitoringDashboard#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#timeouts MonitoringDashboard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#timeouts MonitoringDashboard#timeouts}
   */
   readonly timeouts?: MonitoringDashboardTimeouts;
 }
 export interface MonitoringDashboardTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#create MonitoringDashboard#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#create MonitoringDashboard#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#delete MonitoringDashboard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#delete MonitoringDashboard#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard#update MonitoringDashboard#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard#update MonitoringDashboard#update}
   */
   readonly update?: string;
 }
@@ -169,7 +164,7 @@ export class MonitoringDashboardTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard google_monitoring_dashboard}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard google_monitoring_dashboard}
 */
 export class MonitoringDashboard extends cdktf.TerraformResource {
 
@@ -183,7 +178,7 @@ export class MonitoringDashboard extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/monitoring_dashboard google_monitoring_dashboard} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/monitoring_dashboard google_monitoring_dashboard} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -194,7 +189,7 @@ export class MonitoringDashboard extends cdktf.TerraformResource {
       terraformResourceType: 'google_monitoring_dashboard',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `google_secret_manager_secret_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_secret_manager_secret_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member).
+Refer to the Terraform Registory for docs: [`google_secret_manager_secret_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member).
 
 # `secretManagerSecretIamMember` Submodule <a name="`secretManagerSecretIamMember` Submodule" id="@cdktf/provider-google.secretManagerSecretIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_secret_manager_secret_iam_me
 
 ### SecretManagerSecretIamMember <a name="SecretManagerSecretIamMember" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member google_secret_manager_secret_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 secretmanagersecretiammember.NewSecretManagerSecretIamMember(scope Construct, id *string, config SecretManagerSecretIamMemberConfig) SecretManagerSecretIamMember
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 secretmanagersecretiammember.SecretManagerSecretIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 secretmanagersecretiammember.SecretManagerSecretIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ secretmanagersecretiammember.SecretManagerSecretIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 secretmanagersecretiammember.SecretManagerSecretIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 &secretmanagersecretiammember.SecretManagerSecretIamMemberCondition {
 	Expression: *string,
@@ -705,9 +705,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecreti
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#expression SecretManagerSecretIamMember#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#title SecretManagerSecretIamMember#title}.
 
 ---
 
@@ -743,7 +743,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#description SecretManagerSecretIamMember#description}.
 
 ---
 
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 &secretmanagersecretiammember.SecretManagerSecretIamMemberConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecreti
 	Member: *string,
 	Role: *string,
 	SecretId: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -782,12 +782,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecreti
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.secretId">SecretId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.secretId">SecretId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}. |
 | <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberCondition">SecretManagerSecretIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#member SecretManagerSecretIamMember#member}.
 
 ---
 
@@ -881,7 +881,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#role SecretManagerSecretIamMember#role}.
 
 ---
 
@@ -893,7 +893,7 @@ SecretId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#secret_id SecretManagerSecretIamMember#secret_id}.
 
 ---
 
@@ -907,7 +907,7 @@ Condition SecretManagerSecretIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#condition SecretManagerSecretIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#condition SecretManagerSecretIamMember#condition}
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#id SecretManagerSecretIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/secret_manager_secret_iam_member#project SecretManagerSecretIamMember#project}.
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.secretManagerSecretIamMember.SecretManagerSecretIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/secretmanagersecretiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/secretmanagersecretiammember"
 
 secretmanagersecretiammember.NewSecretManagerSecretIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecretManagerSecretIamMemberConditionOutputReference
 ```
