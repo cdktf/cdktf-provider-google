@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudfunctions2FunctionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function#id DataGoogleCloudfunctions2Function#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function#id DataGoogleCloudfunctions2Function#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,18 +22,18 @@ export interface DataGoogleCloudfunctions2FunctionConfig extends cdktf.Terraform
   /**
   * The location of this cloud function.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function#location DataGoogleCloudfunctions2Function#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function#location DataGoogleCloudfunctions2Function#location}
   */
   readonly location: string;
   /**
   * A user-defined name of the function. Function names must
 be unique globally and match pattern 'projects/*\/locations/*\/functions/*'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function#name DataGoogleCloudfunctions2Function#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function#name DataGoogleCloudfunctions2Function#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function#project DataGoogleCloudfunctions2Function#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function#project DataGoogleCloudfunctions2Function#project}
   */
   readonly project?: string;
 }
@@ -918,7 +918,7 @@ export class DataGoogleCloudfunctions2FunctionServiceConfigList extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function google_cloudfunctions2_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function google_cloudfunctions2_function}
 */
 export class DataGoogleCloudfunctions2Function extends cdktf.TerraformDataSource {
 
@@ -932,7 +932,7 @@ export class DataGoogleCloudfunctions2Function extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloudfunctions2_function google_cloudfunctions2_function} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloudfunctions2_function google_cloudfunctions2_function} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -943,7 +943,7 @@ export class DataGoogleCloudfunctions2Function extends cdktf.TerraformDataSource
       terraformResourceType: 'google_cloudfunctions2_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

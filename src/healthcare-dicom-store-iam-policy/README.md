@@ -1,3 +1,3 @@
 # `google_healthcare_dicom_store_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_healthcare_dicom_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/healthcare_dicom_store_iam_policy).
+Refer to the Terraform Registory for docs: [`google_healthcare_dicom_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_dicom_store_iam_policy).

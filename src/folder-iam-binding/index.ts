@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface FolderIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#folder FolderIamBinding#folder}
   */
   readonly folder: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#id FolderIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#id FolderIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#members FolderIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#members FolderIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#role FolderIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#role FolderIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#condition FolderIamBinding#condition}
   */
   readonly condition?: FolderIamBindingCondition;
 }
 export interface FolderIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#description FolderIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#description FolderIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#expression FolderIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding#title FolderIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding#title FolderIamBinding#title}
   */
   readonly title: string;
 }
@@ -153,7 +153,7 @@ export class FolderIamBindingConditionOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding google_folder_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding google_folder_iam_binding}
 */
 export class FolderIamBinding extends cdktf.TerraformResource {
 
@@ -167,7 +167,7 @@ export class FolderIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/folder_iam_binding google_folder_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/folder_iam_binding google_folder_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -178,7 +178,7 @@ export class FolderIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_folder_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -19,7 +19,7 @@ create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#create_policy DeploymentManagerDeployment#create_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#create_policy DeploymentManagerDeployment#create_policy}
   */
   readonly createPolicy?: string;
   /**
@@ -30,17 +30,17 @@ resource is deleted after removal from Deployment Manager. If
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated. Default value: "DELETE" Possible values: ["ABANDON", "DELETE"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#delete_policy DeploymentManagerDeployment#delete_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#delete_policy DeploymentManagerDeployment#delete_policy}
   */
   readonly deletePolicy?: string;
   /**
   * Optional user-provided description of deployment.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#description DeploymentManagerDeployment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#description DeploymentManagerDeployment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#id DeploymentManagerDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#id DeploymentManagerDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -49,7 +49,7 @@ actually change the deployment, just how it is updated. Default value: "DELETE" 
   /**
   * Unique name for the deployment
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
   */
   readonly name: string;
   /**
@@ -62,29 +62,29 @@ of a deployment in preview (unless updating to preview=false). Thus,
 Terraform will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#preview DeploymentManagerDeployment#preview}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#preview DeploymentManagerDeployment#preview}
   */
   readonly preview?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#project DeploymentManagerDeployment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#project DeploymentManagerDeployment#project}
   */
   readonly project?: string;
   /**
   * labels block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#labels DeploymentManagerDeployment#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#labels DeploymentManagerDeployment#labels}
   */
   readonly labels?: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable;
   /**
   * target block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#target DeploymentManagerDeployment#target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#target DeploymentManagerDeployment#target}
   */
   readonly target: DeploymentManagerDeploymentTarget;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#timeouts DeploymentManagerDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#timeouts DeploymentManagerDeployment#timeouts}
   */
   readonly timeouts?: DeploymentManagerDeploymentTimeouts;
 }
@@ -92,13 +92,13 @@ export interface DeploymentManagerDeploymentLabels {
   /**
   * Key for label.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#key DeploymentManagerDeployment#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#key DeploymentManagerDeployment#key}
   */
   readonly key?: string;
   /**
   * Value of label.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#value DeploymentManagerDeployment#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#value DeploymentManagerDeployment#value}
   */
   readonly value?: string;
 }
@@ -220,7 +220,7 @@ export interface DeploymentManagerDeploymentTargetConfig {
   /**
   * The full YAML contents of your configuration file.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
   */
   readonly content: string;
 }
@@ -284,14 +284,14 @@ export interface DeploymentManagerDeploymentTargetImports {
   /**
   * The full contents of the template that you want to import.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
   */
   readonly content?: string;
   /**
   * The name of the template to import, as declared in the YAML
 configuration.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
   */
   readonly name?: string;
 }
@@ -413,13 +413,13 @@ export interface DeploymentManagerDeploymentTarget {
   /**
   * config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#config DeploymentManagerDeployment#config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#config DeploymentManagerDeployment#config}
   */
   readonly config: DeploymentManagerDeploymentTargetConfig;
   /**
   * imports block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#imports DeploymentManagerDeployment#imports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#imports DeploymentManagerDeployment#imports}
   */
   readonly imports?: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable;
 }
@@ -504,15 +504,15 @@ export class DeploymentManagerDeploymentTargetOutputReference extends cdktf.Comp
 }
 export interface DeploymentManagerDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#create DeploymentManagerDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#create DeploymentManagerDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#delete DeploymentManagerDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#delete DeploymentManagerDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment#update DeploymentManagerDeployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment#update DeploymentManagerDeployment#update}
   */
   readonly update?: string;
 }
@@ -633,7 +633,7 @@ export class DeploymentManagerDeploymentTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment google_deployment_manager_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment google_deployment_manager_deployment}
 */
 export class DeploymentManagerDeployment extends cdktf.TerraformResource {
 
@@ -647,7 +647,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/deployment_manager_deployment google_deployment_manager_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/deployment_manager_deployment google_deployment_manager_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -658,7 +658,7 @@ export class DeploymentManagerDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_deployment_manager_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

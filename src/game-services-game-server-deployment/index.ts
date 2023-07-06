@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment
+// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformM
   /**
   * A unique id for the deployment.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#deployment_id GameServicesGameServerDeployment#deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#deployment_id GameServicesGameServerDeployment#deployment_id}
   */
   readonly deploymentId: string;
   /**
   * Human readable description of the game server deployment.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#description GameServicesGameServerDeployment#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#description GameServicesGameServerDeployment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#id GameServicesGameServerDeployment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#id GameServicesGameServerDeployment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -35,37 +35,37 @@ export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformM
   * The labels associated with this game server deployment. Each label is a
 key-value pair.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#labels GameServicesGameServerDeployment#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#labels GameServicesGameServerDeployment#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location of the Deployment.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#location GameServicesGameServerDeployment#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#location GameServicesGameServerDeployment#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#project GameServicesGameServerDeployment#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#project GameServicesGameServerDeployment#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#timeouts GameServicesGameServerDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#timeouts GameServicesGameServerDeployment#timeouts}
   */
   readonly timeouts?: GameServicesGameServerDeploymentTimeouts;
 }
 export interface GameServicesGameServerDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#create GameServicesGameServerDeployment#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#create GameServicesGameServerDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#delete GameServicesGameServerDeployment#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#delete GameServicesGameServerDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment#update GameServicesGameServerDeployment#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment#update GameServicesGameServerDeployment#update}
   */
   readonly update?: string;
 }
@@ -186,7 +186,7 @@ export class GameServicesGameServerDeploymentTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment google_game_services_game_server_deployment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment google_game_services_game_server_deployment}
 */
 export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
 
@@ -200,7 +200,7 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/resources/game_services_game_server_deployment google_game_services_game_server_deployment} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_game_server_deployment google_game_services_game_server_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -211,7 +211,7 @@ export class GameServicesGameServerDeployment extends cdktf.TerraformResource {
       terraformResourceType: 'google_game_services_game_server_deployment',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.0',
+        providerVersion: '4.72.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

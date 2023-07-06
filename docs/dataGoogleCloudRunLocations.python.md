@@ -1,6 +1,6 @@
 # `data_google_cloud_run_locations`
 
-Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations).
+Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations).
 
 # `dataGoogleCloudRunLocations` Submodule <a name="`dataGoogleCloudRunLocations` Submodule" id="@cdktf/provider-google.dataGoogleCloudRunLocations"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_cloud_run_locations`](h
 
 ### DataGoogleCloudRunLocations <a name="DataGoogleCloudRunLocations" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations google_cloud_run_locations}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer"></a>
 
@@ -41,8 +41,8 @@ dataGoogleCloudRunLocations.DataGoogleCloudRunLocations(
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocations.Initializer.parameter.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -121,7 +121,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
 
 ---
 
@@ -694,8 +694,8 @@ dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleCloudRunLocations.DataGoogleCloudRunLocationsConfig.property.project">project</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}. |
 
 ---
 
@@ -777,7 +777,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#id DataGoogleCloudRunLocations#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -792,7 +792,7 @@ project: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.0/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/cloud_run_locations#project DataGoogleCloudRunLocations#project}.
 
 ---
 
