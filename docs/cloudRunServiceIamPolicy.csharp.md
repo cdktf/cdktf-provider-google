@@ -1,6 +1,6 @@
 # `google_cloud_run_service_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_cloud_run_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy).
+Refer to the Terraform Registory for docs: [`google_cloud_run_service_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy).
 
 # `cloudRunServiceIamPolicy` Submodule <a name="`cloudRunServiceIamPolicy` Submodule" id="@cdktf/provider-google.cloudRunServiceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_cloud_run_service_iam_policy
 
 ### CloudRunServiceIamPolicy <a name="CloudRunServiceIamPolicy" id="@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy google_cloud_run_service_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy google_cloud_run_service_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicy.Initializer"></a>
 
@@ -686,11 +686,11 @@ new CloudRunServiceIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#policy_data CloudRunServiceIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.service">Service</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#service CloudRunServiceIamPolicy#service}. |
-| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#id CloudRunServiceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#location CloudRunServiceIamPolicy#location}. |
-| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#project CloudRunServiceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#policy_data CloudRunServiceIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.service">Service</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#service CloudRunServiceIamPolicy#service}. |
+| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#id CloudRunServiceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#location CloudRunServiceIamPolicy#location}. |
+| <code><a href="#@cdktf/provider-google.cloudRunServiceIamPolicy.CloudRunServiceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#project CloudRunServiceIamPolicy#project}. |
 
 ---
 
@@ -772,7 +772,7 @@ public string PolicyData { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#policy_data CloudRunServiceIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#policy_data CloudRunServiceIamPolicy#policy_data}.
 
 ---
 
@@ -784,7 +784,7 @@ public string Service { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#service CloudRunServiceIamPolicy#service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#service CloudRunServiceIamPolicy#service}.
 
 ---
 
@@ -796,7 +796,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#id CloudRunServiceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#id CloudRunServiceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -811,7 +811,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#location CloudRunServiceIamPolicy#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#location CloudRunServiceIamPolicy#location}.
 
 ---
 
@@ -823,7 +823,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_run_service_iam_policy#project CloudRunServiceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.0/docs/resources/cloud_run_service_iam_policy#project CloudRunServiceIamPolicy#project}.
 
 ---
 
