@@ -167,6 +167,7 @@ The following submodules are available:
 - [computeBackendService](./computeBackendService.go.md)
 - [computeBackendServiceSignedUrlKey](./computeBackendServiceSignedUrlKey.go.md)
 - [computeDisk](./computeDisk.go.md)
+- [computeDiskAsyncReplication](./computeDiskAsyncReplication.go.md)
 - [computeDiskIamBinding](./computeDiskIamBinding.go.md)
 - [computeDiskIamMember](./computeDiskIamMember.go.md)
 - [computeDiskIamPolicy](./computeDiskIamPolicy.go.md)

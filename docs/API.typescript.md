@@ -167,6 +167,7 @@ The following submodules are available:
 - [computeBackendService](./computeBackendService.typescript.md)
 - [computeBackendServiceSignedUrlKey](./computeBackendServiceSignedUrlKey.typescript.md)
 - [computeDisk](./computeDisk.typescript.md)
+- [computeDiskAsyncReplication](./computeDiskAsyncReplication.typescript.md)
 - [computeDiskIamBinding](./computeDiskIamBinding.typescript.md)
 - [computeDiskIamMember](./computeDiskIamMember.typescript.md)
 - [computeDiskIamPolicy](./computeDiskIamPolicy.typescript.md)
