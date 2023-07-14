@@ -1,6 +1,6 @@
 # `google_dataplex_asset`
 
-Refer to the Terraform Registory for docs: [`google_dataplex_asset`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset).
+Refer to the Terraform Registory for docs: [`google_dataplex_asset`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset).
 
 # `dataplexAsset` Submodule <a name="`dataplexAsset` Submodule" id="@cdktf/provider-google.dataplexAsset"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_dataplex_asset`](https://reg
 
 ### DataplexAsset <a name="DataplexAsset" id="@cdktf/provider-google.dataplexAsset.DataplexAsset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset google_dataplex_asset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset google_dataplex_asset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer"></a>
 
@@ -59,7 +59,7 @@ dataplexAsset.DataplexAsset(
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.resourceSpec">resource_spec</a></code> | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetResourceSpec">DataplexAssetResourceSpec</a></code> | resource_spec block. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.description">description</a></code> | <code>str</code> | Optional. Description of the asset. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Optional. User friendly display name. |
-| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#id DataplexAsset#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#id DataplexAsset#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. User defined labels for the asset. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.project">project</a></code> | <code>str</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAsset.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts">DataplexAssetTimeouts</a></code> | timeouts block. |
@@ -132,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 The zone for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#dataplex_zone DataplexAsset#dataplex_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#dataplex_zone DataplexAsset#dataplex_zone}
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 discovery_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#discovery_spec DataplexAsset#discovery_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#discovery_spec DataplexAsset#discovery_spec}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The lake for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#lake DataplexAsset#lake}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#lake DataplexAsset#lake}
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#location DataplexAsset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#location DataplexAsset#location}
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The name of the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#name DataplexAsset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#name DataplexAsset#name}
 
 ---
 
@@ -182,7 +182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 resource_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#resource_spec DataplexAsset#resource_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#resource_spec DataplexAsset#resource_spec}
 
 ---
 
@@ -192,7 +192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. Description of the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#description DataplexAsset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#description DataplexAsset#description}
 
 ---
 
@@ -202,7 +202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#display_name DataplexAsset#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#display_name DataplexAsset#display_name}
 
 ---
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#id DataplexAsset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#id DataplexAsset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -223,7 +223,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Optional. User defined labels for the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#labels DataplexAsset#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#labels DataplexAsset#labels}
 
 ---
 
@@ -233,7 +233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#project DataplexAsset#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#project DataplexAsset#project}
 
 ---
 
@@ -243,7 +243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#timeouts DataplexAsset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#timeouts DataplexAsset#timeouts}
 
 ---
 
@@ -507,7 +507,7 @@ def put_discovery_spec(
 
 Required. Whether discovery is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#enabled DataplexAsset#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#enabled DataplexAsset#enabled}
 
 ---
 
@@ -517,7 +517,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 csv_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#csv_options DataplexAsset#csv_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#csv_options DataplexAsset#csv_options}
 
 ---
 
@@ -529,7 +529,7 @@ Optional.
 
 The list of patterns to apply for selecting data to exclude during discovery. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#exclude_patterns DataplexAsset#exclude_patterns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#exclude_patterns DataplexAsset#exclude_patterns}
 
 ---
 
@@ -541,7 +541,7 @@ Optional.
 
 The list of patterns to apply for selecting data to include during discovery if only a subset of the data should considered. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#include_patterns DataplexAsset#include_patterns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#include_patterns DataplexAsset#include_patterns}
 
 ---
 
@@ -551,7 +551,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 json_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#json_options DataplexAsset#json_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#json_options DataplexAsset#json_options}
 
 ---
 
@@ -563,7 +563,7 @@ Optional.
 
 Cron schedule (https://en.wikipedia.org/wiki/Cron) for running discovery periodically. Successive discovery runs must be scheduled at least 60 minutes apart. The default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#schedule DataplexAsset#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#schedule DataplexAsset#schedule}
 
 ---
 
@@ -582,7 +582,7 @@ def put_resource_spec(
 
 Required. Immutable. Type of resource. Possible values: STORAGE_BUCKET, BIGQUERY_DATASET.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#type DataplexAsset#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#type DataplexAsset#type}
 
 ---
 
@@ -594,7 +594,7 @@ Immutable.
 
 Relative name of the cloud resource that contains the data that is being managed within a lake. For example: `projects/{project_number}/buckets/{bucket_id}` `projects/{project_number}/datasets/{dataset_id}`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#name DataplexAsset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#name DataplexAsset#name}
 
 ---
 
@@ -612,7 +612,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#create DataplexAsset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#create DataplexAsset#create}.
 
 ---
 
@@ -620,7 +620,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}.
 
 ---
 
@@ -628,7 +628,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#update DataplexAsset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#update DataplexAsset#update}.
 
 ---
 
@@ -1317,7 +1317,7 @@ dataplexAsset.DataplexAssetConfig(
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.resourceSpec">resource_spec</a></code> | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetResourceSpec">DataplexAssetResourceSpec</a></code> | resource_spec block. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.description">description</a></code> | <code>str</code> | Optional. Description of the asset. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.displayName">display_name</a></code> | <code>str</code> | Optional. User friendly display name. |
-| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#id DataplexAsset#id}. |
+| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#id DataplexAsset#id}. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.labels">labels</a></code> | <code>typing.Mapping[str]</code> | Optional. User defined labels for the asset. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.project">project</a></code> | <code>str</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts">DataplexAssetTimeouts</a></code> | timeouts block. |
@@ -1404,7 +1404,7 @@ dataplex_zone: str
 
 The zone for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#dataplex_zone DataplexAsset#dataplex_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#dataplex_zone DataplexAsset#dataplex_zone}
 
 ---
 
@@ -1418,7 +1418,7 @@ discovery_spec: DataplexAssetDiscoverySpec
 
 discovery_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#discovery_spec DataplexAsset#discovery_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#discovery_spec DataplexAsset#discovery_spec}
 
 ---
 
@@ -1432,7 +1432,7 @@ lake: str
 
 The lake for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#lake DataplexAsset#lake}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#lake DataplexAsset#lake}
 
 ---
 
@@ -1446,7 +1446,7 @@ location: str
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#location DataplexAsset#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#location DataplexAsset#location}
 
 ---
 
@@ -1460,7 +1460,7 @@ name: str
 
 The name of the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#name DataplexAsset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#name DataplexAsset#name}
 
 ---
 
@@ -1474,7 +1474,7 @@ resource_spec: DataplexAssetResourceSpec
 
 resource_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#resource_spec DataplexAsset#resource_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#resource_spec DataplexAsset#resource_spec}
 
 ---
 
@@ -1488,7 +1488,7 @@ description: str
 
 Optional. Description of the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#description DataplexAsset#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#description DataplexAsset#description}
 
 ---
 
@@ -1502,7 +1502,7 @@ display_name: str
 
 Optional. User friendly display name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#display_name DataplexAsset#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#display_name DataplexAsset#display_name}
 
 ---
 
@@ -1514,7 +1514,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#id DataplexAsset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#id DataplexAsset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1531,7 +1531,7 @@ labels: typing.Mapping[str]
 
 Optional. User defined labels for the asset.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#labels DataplexAsset#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#labels DataplexAsset#labels}
 
 ---
 
@@ -1545,7 +1545,7 @@ project: str
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#project DataplexAsset#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#project DataplexAsset#project}
 
 ---
 
@@ -1559,7 +1559,7 @@ timeouts: DataplexAssetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#timeouts DataplexAsset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#timeouts DataplexAsset#timeouts}
 
 ---
 
@@ -1603,7 +1603,7 @@ enabled: typing.Union[bool, IResolvable]
 
 Required. Whether discovery is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#enabled DataplexAsset#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#enabled DataplexAsset#enabled}
 
 ---
 
@@ -1617,7 +1617,7 @@ csv_options: DataplexAssetDiscoverySpecCsvOptions
 
 csv_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#csv_options DataplexAsset#csv_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#csv_options DataplexAsset#csv_options}
 
 ---
 
@@ -1633,7 +1633,7 @@ Optional.
 
 The list of patterns to apply for selecting data to exclude during discovery. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#exclude_patterns DataplexAsset#exclude_patterns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#exclude_patterns DataplexAsset#exclude_patterns}
 
 ---
 
@@ -1649,7 +1649,7 @@ Optional.
 
 The list of patterns to apply for selecting data to include during discovery if only a subset of the data should considered. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#include_patterns DataplexAsset#include_patterns}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#include_patterns DataplexAsset#include_patterns}
 
 ---
 
@@ -1663,7 +1663,7 @@ json_options: DataplexAssetDiscoverySpecJsonOptions
 
 json_options block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#json_options DataplexAsset#json_options}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#json_options DataplexAsset#json_options}
 
 ---
 
@@ -1679,7 +1679,7 @@ Optional.
 
 Cron schedule (https://en.wikipedia.org/wiki/Cron) for running discovery periodically. Successive discovery runs must be scheduled at least 60 minutes apart. The default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#schedule DataplexAsset#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#schedule DataplexAsset#schedule}
 
 ---
 
@@ -1719,7 +1719,7 @@ delimiter: str
 
 Optional. The delimiter being used to separate values. This defaults to ','.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#delimiter DataplexAsset#delimiter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#delimiter DataplexAsset#delimiter}
 
 ---
 
@@ -1735,7 +1735,7 @@ Optional.
 
 Whether to disable the inference of data type for CSV data. If true, all columns will be registered as strings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
 
 ---
 
@@ -1749,7 +1749,7 @@ encoding: str
 
 Optional. The character encoding of the data. The default is UTF-8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
 
 ---
 
@@ -1763,7 +1763,7 @@ header_rows: typing.Union[int, float]
 
 Optional. The number of rows to interpret as header rows that should be skipped when reading data rows.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#header_rows DataplexAsset#header_rows}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#header_rows DataplexAsset#header_rows}
 
 ---
 
@@ -1801,7 +1801,7 @@ Optional.
 
 Whether to disable the inference of data type for Json data. If true, all columns will be registered as their primitive types (strings, number or boolean).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
 
 ---
 
@@ -1815,7 +1815,7 @@ encoding: str
 
 Optional. The character encoding of the data. The default is UTF-8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
 
 ---
 
@@ -1873,7 +1873,7 @@ type: str
 
 Required. Immutable. Type of resource. Possible values: STORAGE_BUCKET, BIGQUERY_DATASET.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#type DataplexAsset#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#type DataplexAsset#type}
 
 ---
 
@@ -1889,7 +1889,7 @@ Immutable.
 
 Relative name of the cloud resource that contains the data that is being managed within a lake. For example: `projects/{project_number}/buckets/{bucket_id}` `projects/{project_number}/datasets/{dataset_id}`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#name DataplexAsset#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#name DataplexAsset#name}
 
 ---
 
@@ -1933,9 +1933,9 @@ dataplexAsset.DataplexAssetTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#create DataplexAsset#create}. |
-| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}. |
-| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#update DataplexAsset#update}. |
+| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#create DataplexAsset#create}. |
+| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}. |
+| <code><a href="#@cdktf/provider-google.dataplexAsset.DataplexAssetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#update DataplexAsset#update}. |
 
 ---
 
@@ -1947,7 +1947,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#create DataplexAsset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#create DataplexAsset#create}.
 
 ---
 
@@ -1959,7 +1959,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#delete DataplexAsset#delete}.
 
 ---
 
@@ -1971,7 +1971,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#update DataplexAsset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#update DataplexAsset#update}.
 
 ---
 
@@ -2951,7 +2951,7 @@ def put_csv_options(
 
 Optional. The delimiter being used to separate values. This defaults to ','.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#delimiter DataplexAsset#delimiter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#delimiter DataplexAsset#delimiter}
 
 ---
 
@@ -2963,7 +2963,7 @@ Optional.
 
 Whether to disable the inference of data type for CSV data. If true, all columns will be registered as strings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
 
 ---
 
@@ -2973,7 +2973,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The character encoding of the data. The default is UTF-8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
 
 ---
 
@@ -2983,7 +2983,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The number of rows to interpret as header rows that should be skipped when reading data rows.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#header_rows DataplexAsset#header_rows}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#header_rows DataplexAsset#header_rows}
 
 ---
 
@@ -3004,7 +3004,7 @@ Optional.
 
 Whether to disable the inference of data type for Json data. If true, all columns will be registered as their primitive types (strings, number or boolean).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#disable_type_inference DataplexAsset#disable_type_inference}
 
 ---
 
@@ -3014,7 +3014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Optional. The character encoding of the data. The default is UTF-8.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/dataplex_asset#encoding DataplexAsset#encoding}
 
 ---
 

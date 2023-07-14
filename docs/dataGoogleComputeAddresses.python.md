@@ -1,6 +1,6 @@
 # `data_google_compute_addresses`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_addresses`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses).
+Refer to the Terraform Registory for docs: [`data_google_compute_addresses`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses).
 
 # `dataGoogleComputeAddresses` Submodule <a name="`dataGoogleComputeAddresses` Submodule" id="@cdktf/provider-google.dataGoogleComputeAddresses"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_addresses`](htt
 
 ### DataGoogleComputeAddresses <a name="DataGoogleComputeAddresses" id="@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses google_compute_addresses}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses google_compute_addresses}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer"></a>
 
@@ -44,7 +44,7 @@ dataGoogleComputeAddresses.DataGoogleComputeAddresses(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.filter">filter</a></code> | <code>str</code> | Filter sets the optional parameter "filter": A filter expression that filters resources listed in the response. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.project">project</a></code> | <code>str</code> | The google project in which addresses are listed. Defaults to provider's configuration if missing. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddresses.Initializer.parameter.region">region</a></code> | <code>str</code> | Region that should be considered to search addresses. All regions are considered if missing. |
 
@@ -138,7 +138,7 @@ can include "AND" and "OR" expressions explicitly. For example: """
 (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
 AND (scheduling.automaticRestart = true) """
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The google project in which addresses are listed. Defaults to provider's configuration if missing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
 
 ---
 
@@ -169,7 +169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Region that should be considered to search addresses. All regions are considered if missing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
 
 ---
 
@@ -814,7 +814,7 @@ dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.filter">filter</a></code> | <code>str</code> | Filter sets the optional parameter "filter": A filter expression that filters resources listed in the response. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.project">project</a></code> | <code>str</code> | The google project in which addresses are listed. Defaults to provider's configuration if missing. |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddresses.DataGoogleComputeAddressesConfig.property.region">region</a></code> | <code>str</code> | Region that should be considered to search addresses. All regions are considered if missing. |
 
@@ -922,7 +922,7 @@ can include "AND" and "OR" expressions explicitly. For example: """
 (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
 AND (scheduling.automaticRestart = true) """
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
 
 ---
 
@@ -934,7 +934,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#id DataGoogleComputeAddresses#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -951,7 +951,7 @@ project: str
 
 The google project in which addresses are listed. Defaults to provider's configuration if missing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
 
 ---
 
@@ -965,7 +965,7 @@ region: str
 
 Region that should be considered to search addresses. All regions are considered if missing.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
 
 ---
 

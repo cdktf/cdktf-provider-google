@@ -1,6 +1,6 @@
 # `data_google_healthcare_hl7_v2_store_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_healthcare_hl7_v2_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_healthcare_hl7_v2_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy).
 
 # `dataGoogleHealthcareHl7V2StoreIamPolicy` Submodule <a name="`dataGoogleHealthcareHl7V2StoreIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_healthcare_hl7_v2_store
 
 ### DataGoogleHealthcareHl7V2StoreIamPolicy <a name="DataGoogleHealthcareHl7V2StoreIamPolicy" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy google_healthcare_hl7_v2_store_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy google_healthcare_hl7_v2_store_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarehl7v2storeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarehl7v2storeiampolicy"
 
 datagooglehealthcarehl7v2storeiampolicy.NewDataGoogleHealthcareHl7V2StoreIamPolicy(scope Construct, id *string, config DataGoogleHealthcareHl7V2StoreIamPolicyConfig) DataGoogleHealthcareHl7V2StoreIamPolicy
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarehl7v2storeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarehl7v2storeiampolicy"
 
 datagooglehealthcarehl7v2storeiampolicy.DataGoogleHealthcareHl7V2StoreIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarehl7v2storeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarehl7v2storeiampolicy"
 
 datagooglehealthcarehl7v2storeiampolicy.DataGoogleHealthcareHl7V2StoreIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglehealthcarehl7v2storeiampolicy.DataGoogleHealthcareHl7V2StoreIamPolicy_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarehl7v2storeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarehl7v2storeiampolicy"
 
 datagooglehealthcarehl7v2storeiampolicy.DataGoogleHealthcareHl7V2StoreIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -566,7 +566,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarehl7v2storeiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarehl7v2storeiampolicy"
 
 &datagooglehealthcarehl7v2storeiampolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig {
 	Connection: interface{},
@@ -592,8 +592,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcare
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.hl7V2StoreId">Hl7V2StoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#hl7_v2_store_id DataGoogleHealthcareHl7V2StoreIamPolicy#hl7_v2_store_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#id DataGoogleHealthcareHl7V2StoreIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.hl7V2StoreId">Hl7V2StoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#hl7_v2_store_id DataGoogleHealthcareHl7V2StoreIamPolicy#hl7_v2_store_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareHl7V2StoreIamPolicy.DataGoogleHealthcareHl7V2StoreIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#id DataGoogleHealthcareHl7V2StoreIamPolicy#id}. |
 
 ---
 
@@ -675,7 +675,7 @@ Hl7V2StoreId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#hl7_v2_store_id DataGoogleHealthcareHl7V2StoreIamPolicy#hl7_v2_store_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#hl7_v2_store_id DataGoogleHealthcareHl7V2StoreIamPolicy#hl7_v2_store_id}.
 
 ---
 
@@ -687,7 +687,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#id DataGoogleHealthcareHl7V2StoreIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/healthcare_hl7_v2_store_iam_policy#id DataGoogleHealthcareHl7V2StoreIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

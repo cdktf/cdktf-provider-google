@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs
+// https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,513 +8,513 @@ import * as cdktf from 'cdktf';
 
 export interface GoogleProviderConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#access_approval_custom_endpoint GoogleProvider#access_approval_custom_endpoint}
   */
   readonly accessApprovalCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#access_context_manager_custom_endpoint GoogleProvider#access_context_manager_custom_endpoint}
   */
   readonly accessContextManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#access_token GoogleProvider#access_token}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#access_token GoogleProvider#access_token}
   */
   readonly accessToken?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#active_directory_custom_endpoint GoogleProvider#active_directory_custom_endpoint}
   */
   readonly activeDirectoryCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#alloydb_custom_endpoint GoogleProvider#alloydb_custom_endpoint}
   */
   readonly alloydbCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#apigee_custom_endpoint GoogleProvider#apigee_custom_endpoint}
   */
   readonly apigeeCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#apikeys_custom_endpoint GoogleProvider#apikeys_custom_endpoint}
   */
   readonly apikeysCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#app_engine_custom_endpoint GoogleProvider#app_engine_custom_endpoint}
   */
   readonly appEngineCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#artifact_registry_custom_endpoint GoogleProvider#artifact_registry_custom_endpoint}
   */
   readonly artifactRegistryCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#assured_workloads_custom_endpoint GoogleProvider#assured_workloads_custom_endpoint}
   */
   readonly assuredWorkloadsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#beyondcorp_custom_endpoint GoogleProvider#beyondcorp_custom_endpoint}
   */
   readonly beyondcorpCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#big_query_custom_endpoint GoogleProvider#big_query_custom_endpoint}
   */
   readonly bigQueryCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigquery_analytics_hub_custom_endpoint GoogleProvider#bigquery_analytics_hub_custom_endpoint}
   */
   readonly bigqueryAnalyticsHubCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigquery_connection_custom_endpoint GoogleProvider#bigquery_connection_custom_endpoint}
   */
   readonly bigqueryConnectionCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigquery_data_transfer_custom_endpoint GoogleProvider#bigquery_data_transfer_custom_endpoint}
   */
   readonly bigqueryDataTransferCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigquery_datapolicy_custom_endpoint GoogleProvider#bigquery_datapolicy_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigquery_datapolicy_custom_endpoint GoogleProvider#bigquery_datapolicy_custom_endpoint}
   */
   readonly bigqueryDatapolicyCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigquery_reservation_custom_endpoint GoogleProvider#bigquery_reservation_custom_endpoint}
   */
   readonly bigqueryReservationCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#bigtable_custom_endpoint GoogleProvider#bigtable_custom_endpoint}
   */
   readonly bigtableCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#billing_custom_endpoint GoogleProvider#billing_custom_endpoint}
   */
   readonly billingCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#billing_project GoogleProvider#billing_project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#billing_project GoogleProvider#billing_project}
   */
   readonly billingProject?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#binary_authorization_custom_endpoint GoogleProvider#binary_authorization_custom_endpoint}
   */
   readonly binaryAuthorizationCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#certificate_manager_custom_endpoint GoogleProvider#certificate_manager_custom_endpoint}
   */
   readonly certificateManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_asset_custom_endpoint GoogleProvider#cloud_asset_custom_endpoint}
   */
   readonly cloudAssetCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_billing_custom_endpoint GoogleProvider#cloud_billing_custom_endpoint}
   */
   readonly cloudBillingCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_build_custom_endpoint GoogleProvider#cloud_build_custom_endpoint}
   */
   readonly cloudBuildCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_build_worker_pool_custom_endpoint GoogleProvider#cloud_build_worker_pool_custom_endpoint}
   */
   readonly cloudBuildWorkerPoolCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_functions_custom_endpoint GoogleProvider#cloud_functions_custom_endpoint}
   */
   readonly cloudFunctionsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_identity_custom_endpoint GoogleProvider#cloud_identity_custom_endpoint}
   */
   readonly cloudIdentityCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_ids_custom_endpoint GoogleProvider#cloud_ids_custom_endpoint}
   */
   readonly cloudIdsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_iot_custom_endpoint GoogleProvider#cloud_iot_custom_endpoint}
   */
   readonly cloudIotCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_resource_manager_custom_endpoint GoogleProvider#cloud_resource_manager_custom_endpoint}
   */
   readonly cloudResourceManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_run_custom_endpoint GoogleProvider#cloud_run_custom_endpoint}
   */
   readonly cloudRunCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_run_v2_custom_endpoint GoogleProvider#cloud_run_v2_custom_endpoint}
   */
   readonly cloudRunV2CustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_scheduler_custom_endpoint GoogleProvider#cloud_scheduler_custom_endpoint}
   */
   readonly cloudSchedulerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloud_tasks_custom_endpoint GoogleProvider#cloud_tasks_custom_endpoint}
   */
   readonly cloudTasksCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#clouddeploy_custom_endpoint GoogleProvider#clouddeploy_custom_endpoint}
   */
   readonly clouddeployCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#cloudfunctions2_custom_endpoint GoogleProvider#cloudfunctions2_custom_endpoint}
   */
   readonly cloudfunctions2CustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#composer_custom_endpoint GoogleProvider#composer_custom_endpoint}
   */
   readonly composerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#compute_custom_endpoint GoogleProvider#compute_custom_endpoint}
   */
   readonly computeCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#container_analysis_custom_endpoint GoogleProvider#container_analysis_custom_endpoint}
   */
   readonly containerAnalysisCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#container_attached_custom_endpoint GoogleProvider#container_attached_custom_endpoint}
   */
   readonly containerAttachedCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#container_aws_custom_endpoint GoogleProvider#container_aws_custom_endpoint}
   */
   readonly containerAwsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#container_azure_custom_endpoint GoogleProvider#container_azure_custom_endpoint}
   */
   readonly containerAzureCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#container_custom_endpoint GoogleProvider#container_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#container_custom_endpoint GoogleProvider#container_custom_endpoint}
   */
   readonly containerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#credentials GoogleProvider#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#credentials GoogleProvider#credentials}
   */
   readonly credentials?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#data_catalog_custom_endpoint GoogleProvider#data_catalog_custom_endpoint}
   */
   readonly dataCatalogCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#data_fusion_custom_endpoint GoogleProvider#data_fusion_custom_endpoint}
   */
   readonly dataFusionCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#data_loss_prevention_custom_endpoint GoogleProvider#data_loss_prevention_custom_endpoint}
   */
   readonly dataLossPreventionCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#database_migration_service_custom_endpoint GoogleProvider#database_migration_service_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#database_migration_service_custom_endpoint GoogleProvider#database_migration_service_custom_endpoint}
   */
   readonly databaseMigrationServiceCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dataflow_custom_endpoint GoogleProvider#dataflow_custom_endpoint}
   */
   readonly dataflowCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dataplex_custom_endpoint GoogleProvider#dataplex_custom_endpoint}
   */
   readonly dataplexCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dataproc_custom_endpoint GoogleProvider#dataproc_custom_endpoint}
   */
   readonly dataprocCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dataproc_metastore_custom_endpoint GoogleProvider#dataproc_metastore_custom_endpoint}
   */
   readonly dataprocMetastoreCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#datastore_custom_endpoint GoogleProvider#datastore_custom_endpoint}
   */
   readonly datastoreCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#datastream_custom_endpoint GoogleProvider#datastream_custom_endpoint}
   */
   readonly datastreamCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#deployment_manager_custom_endpoint GoogleProvider#deployment_manager_custom_endpoint}
   */
   readonly deploymentManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dialogflow_custom_endpoint GoogleProvider#dialogflow_custom_endpoint}
   */
   readonly dialogflowCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dialogflow_cx_custom_endpoint GoogleProvider#dialogflow_cx_custom_endpoint}
   */
   readonly dialogflowCxCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#dns_custom_endpoint GoogleProvider#dns_custom_endpoint}
   */
   readonly dnsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#document_ai_custom_endpoint GoogleProvider#document_ai_custom_endpoint}
   */
   readonly documentAiCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#essential_contacts_custom_endpoint GoogleProvider#essential_contacts_custom_endpoint}
   */
   readonly essentialContactsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#eventarc_custom_endpoint GoogleProvider#eventarc_custom_endpoint}
   */
   readonly eventarcCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#filestore_custom_endpoint GoogleProvider#filestore_custom_endpoint}
   */
   readonly filestoreCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#firebaserules_custom_endpoint GoogleProvider#firebaserules_custom_endpoint}
   */
   readonly firebaserulesCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#firestore_custom_endpoint GoogleProvider#firestore_custom_endpoint}
   */
   readonly firestoreCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#game_services_custom_endpoint GoogleProvider#game_services_custom_endpoint}
   */
   readonly gameServicesCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#gke_backup_custom_endpoint GoogleProvider#gke_backup_custom_endpoint}
   */
   readonly gkeBackupCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#gke_hub2_custom_endpoint GoogleProvider#gke_hub2_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#gke_hub2_custom_endpoint GoogleProvider#gke_hub2_custom_endpoint}
   */
   readonly gkeHub2CustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#gke_hub_custom_endpoint GoogleProvider#gke_hub_custom_endpoint}
   */
   readonly gkeHubCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#healthcare_custom_endpoint GoogleProvider#healthcare_custom_endpoint}
   */
   readonly healthcareCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iam2_custom_endpoint GoogleProvider#iam2_custom_endpoint}
   */
   readonly iam2CustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iam_beta_custom_endpoint GoogleProvider#iam_beta_custom_endpoint}
   */
   readonly iamBetaCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iam_credentials_custom_endpoint GoogleProvider#iam_credentials_custom_endpoint}
   */
   readonly iamCredentialsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iam_custom_endpoint GoogleProvider#iam_custom_endpoint}
   */
   readonly iamCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iam_workforce_pool_custom_endpoint GoogleProvider#iam_workforce_pool_custom_endpoint}
   */
   readonly iamWorkforcePoolCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#iap_custom_endpoint GoogleProvider#iap_custom_endpoint}
   */
   readonly iapCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#identity_platform_custom_endpoint GoogleProvider#identity_platform_custom_endpoint}
   */
   readonly identityPlatformCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#impersonate_service_account GoogleProvider#impersonate_service_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#impersonate_service_account GoogleProvider#impersonate_service_account}
   */
   readonly impersonateServiceAccount?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#impersonate_service_account_delegates GoogleProvider#impersonate_service_account_delegates}
   */
   readonly impersonateServiceAccountDelegates?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#kms_custom_endpoint GoogleProvider#kms_custom_endpoint}
   */
   readonly kmsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#logging_custom_endpoint GoogleProvider#logging_custom_endpoint}
   */
   readonly loggingCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#memcache_custom_endpoint GoogleProvider#memcache_custom_endpoint}
   */
   readonly memcacheCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#ml_engine_custom_endpoint GoogleProvider#ml_engine_custom_endpoint}
   */
   readonly mlEngineCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#monitoring_custom_endpoint GoogleProvider#monitoring_custom_endpoint}
   */
   readonly monitoringCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#network_connectivity_custom_endpoint GoogleProvider#network_connectivity_custom_endpoint}
   */
   readonly networkConnectivityCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#network_management_custom_endpoint GoogleProvider#network_management_custom_endpoint}
   */
   readonly networkManagementCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#network_services_custom_endpoint GoogleProvider#network_services_custom_endpoint}
   */
   readonly networkServicesCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#notebooks_custom_endpoint GoogleProvider#notebooks_custom_endpoint}
   */
   readonly notebooksCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#org_policy_custom_endpoint GoogleProvider#org_policy_custom_endpoint}
   */
   readonly orgPolicyCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#os_config_custom_endpoint GoogleProvider#os_config_custom_endpoint}
   */
   readonly osConfigCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#os_login_custom_endpoint GoogleProvider#os_login_custom_endpoint}
   */
   readonly osLoginCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#privateca_custom_endpoint GoogleProvider#privateca_custom_endpoint}
   */
   readonly privatecaCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#project GoogleProvider#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#project GoogleProvider#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#public_ca_custom_endpoint GoogleProvider#public_ca_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#public_ca_custom_endpoint GoogleProvider#public_ca_custom_endpoint}
   */
   readonly publicCaCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#pubsub_custom_endpoint GoogleProvider#pubsub_custom_endpoint}
   */
   readonly pubsubCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#pubsub_lite_custom_endpoint GoogleProvider#pubsub_lite_custom_endpoint}
   */
   readonly pubsubLiteCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#recaptcha_enterprise_custom_endpoint GoogleProvider#recaptcha_enterprise_custom_endpoint}
   */
   readonly recaptchaEnterpriseCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#redis_custom_endpoint GoogleProvider#redis_custom_endpoint}
   */
   readonly redisCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#region GoogleProvider#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#region GoogleProvider#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#request_reason GoogleProvider#request_reason}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#request_reason GoogleProvider#request_reason}
   */
   readonly requestReason?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#request_timeout GoogleProvider#request_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#request_timeout GoogleProvider#request_timeout}
   */
   readonly requestTimeout?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#resource_manager_custom_endpoint GoogleProvider#resource_manager_custom_endpoint}
   */
   readonly resourceManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#resource_manager_v3_custom_endpoint GoogleProvider#resource_manager_v3_custom_endpoint}
   */
   readonly resourceManagerV3CustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#scopes GoogleProvider#scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#scopes GoogleProvider#scopes}
   */
   readonly scopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#secret_manager_custom_endpoint GoogleProvider#secret_manager_custom_endpoint}
   */
   readonly secretManagerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#security_center_custom_endpoint GoogleProvider#security_center_custom_endpoint}
   */
   readonly securityCenterCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#service_management_custom_endpoint GoogleProvider#service_management_custom_endpoint}
   */
   readonly serviceManagementCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#service_networking_custom_endpoint GoogleProvider#service_networking_custom_endpoint}
   */
   readonly serviceNetworkingCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#service_usage_custom_endpoint GoogleProvider#service_usage_custom_endpoint}
   */
   readonly serviceUsageCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#source_repo_custom_endpoint GoogleProvider#source_repo_custom_endpoint}
   */
   readonly sourceRepoCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#spanner_custom_endpoint GoogleProvider#spanner_custom_endpoint}
   */
   readonly spannerCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#sql_custom_endpoint GoogleProvider#sql_custom_endpoint}
   */
   readonly sqlCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#storage_custom_endpoint GoogleProvider#storage_custom_endpoint}
   */
   readonly storageCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#storage_transfer_custom_endpoint GoogleProvider#storage_transfer_custom_endpoint}
   */
   readonly storageTransferCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#tags_custom_endpoint GoogleProvider#tags_custom_endpoint}
   */
   readonly tagsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#tags_location_custom_endpoint GoogleProvider#tags_location_custom_endpoint}
   */
   readonly tagsLocationCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#tpu_custom_endpoint GoogleProvider#tpu_custom_endpoint}
   */
   readonly tpuCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#user_project_override GoogleProvider#user_project_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#user_project_override GoogleProvider#user_project_override}
   */
   readonly userProjectOverride?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#vertex_ai_custom_endpoint GoogleProvider#vertex_ai_custom_endpoint}
   */
   readonly vertexAiCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#vpc_access_custom_endpoint GoogleProvider#vpc_access_custom_endpoint}
   */
   readonly vpcAccessCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#workflows_custom_endpoint GoogleProvider#workflows_custom_endpoint}
   */
   readonly workflowsCustomEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#zone GoogleProvider#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#zone GoogleProvider#zone}
   */
   readonly zone?: string;
   /**
   * Alias name
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#alias GoogleProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#alias GoogleProvider#alias}
   */
   readonly alias?: string;
   /**
   * batching block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#batching GoogleProvider#batching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#batching GoogleProvider#batching}
   */
   readonly batching?: GoogleProviderBatching;
 }
 export interface GoogleProviderBatching {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#enable_batching GoogleProvider#enable_batching}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#enable_batching GoogleProvider#enable_batching}
   */
   readonly enableBatching?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs#send_after GoogleProvider#send_after}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs#send_after GoogleProvider#send_after}
   */
   readonly sendAfter?: string;
 }
@@ -537,7 +532,7 @@ export function googleProviderBatchingToTerraform(struct?: GoogleProviderBatchin
 
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs google}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs google}
 */
 export class GoogleProvider extends cdktf.TerraformProvider {
 
@@ -551,7 +546,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs google} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs google} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -562,7 +557,7 @@ export class GoogleProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'google',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.1',
         providerVersionConstraint: '~> 4.0'
       },
       terraformProviderSource: 'google'

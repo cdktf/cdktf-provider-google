@@ -167,6 +167,7 @@ The following submodules are available:
 - [computeBackendService](./computeBackendService.java.md)
 - [computeBackendServiceSignedUrlKey](./computeBackendServiceSignedUrlKey.java.md)
 - [computeDisk](./computeDisk.java.md)
+- [computeDiskAsyncReplication](./computeDiskAsyncReplication.java.md)
 - [computeDiskIamBinding](./computeDiskIamBinding.java.md)
 - [computeDiskIamMember](./computeDiskIamMember.java.md)
 - [computeDiskIamPolicy](./computeDiskIamPolicy.java.md)

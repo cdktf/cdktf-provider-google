@@ -1,6 +1,6 @@
 # `google_container_azure_client`
 
-Refer to the Terraform Registory for docs: [`google_container_azure_client`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client).
+Refer to the Terraform Registory for docs: [`google_container_azure_client`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client).
 
 # `containerAzureClient` Submodule <a name="`containerAzureClient` Submodule" id="@cdktf/provider-google.containerAzureClient"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_container_azure_client`](htt
 
 ### ContainerAzureClient <a name="ContainerAzureClient" id="@cdktf/provider-google.containerAzureClient.ContainerAzureClient"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client google_container_azure_client}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client google_container_azure_client}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAzureClient.ContainerAzureClient.Initializer"></a>
 
@@ -756,7 +756,7 @@ const containerAzureClientConfig: containerAzureClient.ContainerAzureClientConfi
 | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.location">location</a></code> | <code>string</code> | The location for the resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.name">name</a></code> | <code>string</code> | The name of this resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.tenantId">tenantId</a></code> | <code>string</code> | The Azure Active Directory Tenant ID. |
-| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#id ContainerAzureClient#id}. |
+| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#id ContainerAzureClient#id}. |
 | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.project">project</a></code> | <code>string</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientTimeouts">ContainerAzureClientTimeouts</a></code> | timeouts block. |
 
@@ -842,7 +842,7 @@ public readonly applicationId: string;
 
 The Azure Active Directory Application ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#application_id ContainerAzureClient#application_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#application_id ContainerAzureClient#application_id}
 
 ---
 
@@ -856,7 +856,7 @@ public readonly location: string;
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#location ContainerAzureClient#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#location ContainerAzureClient#location}
 
 ---
 
@@ -870,7 +870,7 @@ public readonly name: string;
 
 The name of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#name ContainerAzureClient#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#name ContainerAzureClient#name}
 
 ---
 
@@ -884,7 +884,7 @@ public readonly tenantId: string;
 
 The Azure Active Directory Tenant ID.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#tenant_id ContainerAzureClient#tenant_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#tenant_id ContainerAzureClient#tenant_id}
 
 ---
 
@@ -896,7 +896,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#id ContainerAzureClient#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#id ContainerAzureClient#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -913,7 +913,7 @@ public readonly project: string;
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#project ContainerAzureClient#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#project ContainerAzureClient#project}
 
 ---
 
@@ -927,7 +927,7 @@ public readonly timeouts: ContainerAzureClientTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#timeouts ContainerAzureClient#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#timeouts ContainerAzureClient#timeouts}
 
 ---
 
@@ -945,8 +945,8 @@ const containerAzureClientTimeouts: containerAzureClient.ContainerAzureClientTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#create ContainerAzureClient#create}. |
-| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#delete ContainerAzureClient#delete}. |
+| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#create ContainerAzureClient#create}. |
+| <code><a href="#@cdktf/provider-google.containerAzureClient.ContainerAzureClientTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#delete ContainerAzureClient#delete}. |
 
 ---
 
@@ -958,7 +958,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#create ContainerAzureClient#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#create ContainerAzureClient#create}.
 
 ---
 
@@ -970,7 +970,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_azure_client#delete ContainerAzureClient#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/resources/container_azure_client#delete ContainerAzureClient#delete}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `data_google_bigquery_default_service_account`
 
-Refer to the Terraform Registory for docs: [`data_google_bigquery_default_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account).
+Refer to the Terraform Registory for docs: [`data_google_bigquery_default_service_account`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account).
 
 # `dataGoogleBigqueryDefaultServiceAccount` Submodule <a name="`dataGoogleBigqueryDefaultServiceAccount` Submodule" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_bigquery_default_servic
 
 ### DataGoogleBigqueryDefaultServiceAccount <a name="DataGoogleBigqueryDefaultServiceAccount" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account google_bigquery_default_service_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account google_bigquery_default_service_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccount.Initializer"></a>
 
@@ -599,8 +599,8 @@ new DataGoogleBigqueryDefaultServiceAccountConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account#id DataGoogleBigqueryDefaultServiceAccount#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account#project DataGoogleBigqueryDefaultServiceAccount#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account#id DataGoogleBigqueryDefaultServiceAccount#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleBigqueryDefaultServiceAccount.DataGoogleBigqueryDefaultServiceAccountConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account#project DataGoogleBigqueryDefaultServiceAccount#project}. |
 
 ---
 
@@ -682,7 +682,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account#id DataGoogleBigqueryDefaultServiceAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account#id DataGoogleBigqueryDefaultServiceAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -697,7 +697,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/bigquery_default_service_account#project DataGoogleBigqueryDefaultServiceAccount#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/bigquery_default_service_account#project DataGoogleBigqueryDefaultServiceAccount#project}.
 
 ---
 

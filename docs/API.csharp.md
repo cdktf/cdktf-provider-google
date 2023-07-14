@@ -167,6 +167,7 @@ The following submodules are available:
 - [computeBackendService](./computeBackendService.csharp.md)
 - [computeBackendServiceSignedUrlKey](./computeBackendServiceSignedUrlKey.csharp.md)
 - [computeDisk](./computeDisk.csharp.md)
+- [computeDiskAsyncReplication](./computeDiskAsyncReplication.csharp.md)
 - [computeDiskIamBinding](./computeDiskIamBinding.csharp.md)
 - [computeDiskIamMember](./computeDiskIamMember.csharp.md)
 - [computeDiskIamPolicy](./computeDiskIamPolicy.csharp.md)
