@@ -1,6 +1,6 @@
 # `data_google_sql_ca_certs`
 
-Refer to the Terraform Registory for docs: [`data_google_sql_ca_certs`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs).
+Refer to the Terraform Registory for docs: [`data_google_sql_ca_certs`](https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs).
 
 # `dataGoogleSqlCaCerts` Submodule <a name="`dataGoogleSqlCaCerts` Submodule" id="@cdktf/provider-google.dataGoogleSqlCaCerts"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_sql_ca_certs`](https://
 
 ### DataGoogleSqlCaCerts <a name="DataGoogleSqlCaCerts" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs google_sql_ca_certs}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs google_sql_ca_certs}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCerts.Initializer"></a>
 
@@ -635,9 +635,9 @@ new DataGoogleSqlCaCertsConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlCaCerts.DataGoogleSqlCaCertsConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}. |
 
 ---
 
@@ -719,7 +719,7 @@ public string Instance { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#instance DataGoogleSqlCaCerts#instance}.
 
 ---
 
@@ -731,7 +731,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#id DataGoogleSqlCaCerts#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -746,7 +746,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/sql_ca_certs#project DataGoogleSqlCaCerts#project}.
 
 ---
 

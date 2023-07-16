@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeResourcePolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy#id DataGoogleComputeResourcePolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,19 +23,83 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy#name DataGoogleComputeResourcePolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy#project DataGoogleComputeResourcePolicy#project}
   */
   readonly project?: string;
   /**
   * Region where resource policy resides.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy#region DataGoogleComputeResourcePolicy#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy#region DataGoogleComputeResourcePolicy#region}
   */
   readonly region?: string;
+}
+export interface DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy {
+}
+
+export function dataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyToTerraform(struct?: DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+}
+
+export class DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference {
+    return new DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataGoogleComputeResourcePolicyGroupPlacementPolicy {
 }
@@ -907,7 +966,7 @@ export class DataGoogleComputeResourcePolicySnapshotSchedulePolicyList extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy google_compute_resource_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy google_compute_resource_policy}
 */
 export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
 
@@ -921,7 +980,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_resource_policy google_compute_resource_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.1/docs/data-sources/compute_resource_policy google_compute_resource_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -932,7 +991,7 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_resource_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -956,6 +1015,12 @@ export class DataGoogleComputeResourcePolicy extends cdktf.TerraformDataSource {
   // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
+  }
+
+  // disk_consistency_group_policy - computed: true, optional: false, required: false
+  private _diskConsistencyGroupPolicy = new DataGoogleComputeResourcePolicyDiskConsistencyGroupPolicyList(this, "disk_consistency_group_policy", false);
+  public get diskConsistencyGroupPolicy() {
+    return this._diskConsistencyGroupPolicy;
   }
 
   // group_placement_policy - computed: true, optional: false, required: false
