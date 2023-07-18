@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy#id OrganizationIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy#id OrganizationIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,17 +17,17 @@ export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArgument
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy#org_id OrganizationIamPolicy#org_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy#org_id OrganizationIamPolicy#org_id}
   */
   readonly orgId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy#policy_data OrganizationIamPolicy#policy_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy#policy_data OrganizationIamPolicy#policy_data}
   */
   readonly policyData: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy google_organization_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy google_organization_iam_policy}
 */
 export class OrganizationIamPolicy extends cdktf.TerraformResource {
 
@@ -46,7 +41,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/organization_iam_policy google_organization_iam_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/organization_iam_policy google_organization_iam_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -57,7 +52,7 @@ export class OrganizationIamPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'google_organization_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareConsentStoreIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#consent_store_id HealthcareConsentStoreIamMember#consent_store_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#consent_store_id HealthcareConsentStoreIamMember#consent_store_id}
   */
   readonly consentStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#dataset HealthcareConsentStoreIamMember#dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#dataset HealthcareConsentStoreIamMember#dataset}
   */
   readonly dataset: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#id HealthcareConsentStoreIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#id HealthcareConsentStoreIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#member HealthcareConsentStoreIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#member HealthcareConsentStoreIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#role HealthcareConsentStoreIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#role HealthcareConsentStoreIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#condition HealthcareConsentStoreIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#condition HealthcareConsentStoreIamMember#condition}
   */
   readonly condition?: HealthcareConsentStoreIamMemberCondition;
 }
 export interface HealthcareConsentStoreIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#description HealthcareConsentStoreIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#description HealthcareConsentStoreIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#expression HealthcareConsentStoreIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#expression HealthcareConsentStoreIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member#title HealthcareConsentStoreIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member#title HealthcareConsentStoreIamMember#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class HealthcareConsentStoreIamMemberConditionOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member google_healthcare_consent_store_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member google_healthcare_consent_store_iam_member}
 */
 export class HealthcareConsentStoreIamMember extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class HealthcareConsentStoreIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/healthcare_consent_store_iam_member google_healthcare_consent_store_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/healthcare_consent_store_iam_member google_healthcare_consent_store_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class HealthcareConsentStoreIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_healthcare_consent_store_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

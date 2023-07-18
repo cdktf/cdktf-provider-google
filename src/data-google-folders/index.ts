@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/folders
+// https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/folders
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,14 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleFoldersConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/folders#id DataGoogleFolders#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/folders#id DataGoogleFolders#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/folders#parent_id DataGoogleFolders#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/folders#parent_id DataGoogleFolders#parent_id}
   */
   readonly parentId: string;
 }
@@ -125,7 +120,7 @@ export class DataGoogleFoldersFoldersList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/folders google_folders}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/folders google_folders}
 */
 export class DataGoogleFolders extends cdktf.TerraformDataSource {
 
@@ -139,7 +134,7 @@ export class DataGoogleFolders extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/folders google_folders} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/folders google_folders} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -150,7 +145,7 @@ export class DataGoogleFolders extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_folders',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

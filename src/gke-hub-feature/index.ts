@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature
+// https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface GkeHubFeatureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#id GkeHubFeature#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#id GkeHubFeature#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,35 +17,35 @@ export interface GkeHubFeatureConfig extends cdktf.TerraformMetaArguments {
   /**
   * GCP labels for this Feature.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#labels GkeHubFeature#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#labels GkeHubFeature#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#location GkeHubFeature#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#location GkeHubFeature#location}
   */
   readonly location: string;
   /**
   * The full, unique name of this Feature resource
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#name GkeHubFeature#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#name GkeHubFeature#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#project GkeHubFeature#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#project GkeHubFeature#project}
   */
   readonly project?: string;
   /**
   * spec block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#spec GkeHubFeature#spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#spec GkeHubFeature#spec}
   */
   readonly spec?: GkeHubFeatureSpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#timeouts GkeHubFeature#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#timeouts GkeHubFeature#timeouts}
   */
   readonly timeouts?: GkeHubFeatureTimeouts;
 }
@@ -266,7 +261,7 @@ export interface GkeHubFeatureSpecMulticlusteringress {
   /**
   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: 'projects/foo-proj/locations/global/memberships/bar'
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#config_membership GkeHubFeature#config_membership}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#config_membership GkeHubFeature#config_membership}
   */
   readonly configMembership: string;
 }
@@ -330,7 +325,7 @@ export interface GkeHubFeatureSpec {
   /**
   * multiclusteringress block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#multiclusteringress GkeHubFeature#multiclusteringress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#multiclusteringress GkeHubFeature#multiclusteringress}
   */
   readonly multiclusteringress?: GkeHubFeatureSpecMulticlusteringress;
 }
@@ -395,15 +390,15 @@ export class GkeHubFeatureSpecOutputReference extends cdktf.ComplexObject {
 }
 export interface GkeHubFeatureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#create GkeHubFeature#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#create GkeHubFeature#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#delete GkeHubFeature#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#delete GkeHubFeature#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature#update GkeHubFeature#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature#update GkeHubFeature#update}
   */
   readonly update?: string;
 }
@@ -524,7 +519,7 @@ export class GkeHubFeatureTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature google_gke_hub_feature}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature google_gke_hub_feature}
 */
 export class GkeHubFeature extends cdktf.TerraformResource {
 
@@ -538,7 +533,7 @@ export class GkeHubFeature extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/gke_hub_feature google_gke_hub_feature} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/gke_hub_feature google_gke_hub_feature} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -549,7 +544,7 @@ export class GkeHubFeature extends cdktf.TerraformResource {
       terraformResourceType: 'google_gke_hub_feature',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

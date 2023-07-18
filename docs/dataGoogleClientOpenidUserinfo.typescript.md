@@ -1,6 +1,6 @@
 # `data_google_client_openid_userinfo`
 
-Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/client_openid_userinfo).
+Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`](https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/client_openid_userinfo).
 
 # `dataGoogleClientOpenidUserinfo` Submodule <a name="`dataGoogleClientOpenidUserinfo` Submodule" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_client_openid_userinfo`
 
 ### DataGoogleClientOpenidUserinfo <a name="DataGoogleClientOpenidUserinfo" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleClientOpenidUserinfo.DataGoogleClientOpenidUserinfo.Initializer"></a>
 

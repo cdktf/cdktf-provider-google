@@ -167,6 +167,7 @@ The following submodules are available:
 - [computeBackendService](./computeBackendService.python.md)
 - [computeBackendServiceSignedUrlKey](./computeBackendServiceSignedUrlKey.python.md)
 - [computeDisk](./computeDisk.python.md)
+- [computeDiskAsyncReplication](./computeDiskAsyncReplication.python.md)
 - [computeDiskIamBinding](./computeDiskIamBinding.python.md)
 - [computeDiskIamMember](./computeDiskIamMember.python.md)
 - [computeDiskIamPolicy](./computeDiskIamPolicy.python.md)

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control
+// https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +10,7 @@ export interface StorageBucketAccessControlConfig extends cdktf.TerraformMetaArg
   /**
   * The name of the bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#bucket StorageBucketAccessControl#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#bucket StorageBucketAccessControl#bucket}
   */
   readonly bucket: string;
   /**
@@ -35,11 +30,11 @@ Examples:
   To refer to all members of the Google Apps for Business domain
   example.com, the entity would be domain-example.com.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#entity StorageBucketAccessControl#entity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#entity StorageBucketAccessControl#entity}
   */
   readonly entity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#id StorageBucketAccessControl#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#id StorageBucketAccessControl#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -48,27 +43,27 @@ Examples:
   /**
   * The access permission for the entity. Possible values: ["OWNER", "READER", "WRITER"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#role StorageBucketAccessControl#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#role StorageBucketAccessControl#role}
   */
   readonly role?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#timeouts StorageBucketAccessControl#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#timeouts StorageBucketAccessControl#timeouts}
   */
   readonly timeouts?: StorageBucketAccessControlTimeouts;
 }
 export interface StorageBucketAccessControlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#create StorageBucketAccessControl#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#create StorageBucketAccessControl#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#delete StorageBucketAccessControl#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#delete StorageBucketAccessControl#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control#update StorageBucketAccessControl#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control#update StorageBucketAccessControl#update}
   */
   readonly update?: string;
 }
@@ -189,7 +184,7 @@ export class StorageBucketAccessControlTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control google_storage_bucket_access_control}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control google_storage_bucket_access_control}
 */
 export class StorageBucketAccessControl extends cdktf.TerraformResource {
 
@@ -203,7 +198,7 @@ export class StorageBucketAccessControl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/storage_bucket_access_control google_storage_bucket_access_control} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.73.2/docs/resources/storage_bucket_access_control google_storage_bucket_access_control} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -214,7 +209,7 @@ export class StorageBucketAccessControl extends cdktf.TerraformResource {
       terraformResourceType: 'google_storage_bucket_access_control',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.73.2',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
