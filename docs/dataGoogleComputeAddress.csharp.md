@@ -1,6 +1,6 @@
 # `data_google_compute_address`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_address`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address).
+Refer to the Terraform Registory for docs: [`data_google_compute_address`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address).
 
 # `dataGoogleComputeAddress` Submodule <a name="`dataGoogleComputeAddress` Submodule" id="@cdktf/provider-google.dataGoogleComputeAddress"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_compute_address`](https
 
 ### DataGoogleComputeAddress <a name="DataGoogleComputeAddress" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address google_compute_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address google_compute_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddress.Initializer"></a>
 
@@ -740,10 +740,10 @@ new DataGoogleComputeAddressConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleComputeAddress.DataGoogleComputeAddressConfig.property.region">Region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}. |
 
 ---
 
@@ -825,7 +825,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#name DataGoogleComputeAddress#name}.
 
 ---
 
@@ -837,7 +837,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#id DataGoogleComputeAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -852,7 +852,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#project DataGoogleComputeAddress#project}.
 
 ---
 
@@ -864,7 +864,7 @@ public string Region { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_address#region DataGoogleComputeAddress#region}.
 
 ---
 

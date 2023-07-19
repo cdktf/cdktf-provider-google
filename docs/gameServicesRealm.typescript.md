@@ -1,6 +1,6 @@
 # `google_game_services_realm`
 
-Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm).
+Refer to the Terraform Registory for docs: [`google_game_services_realm`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm).
 
 # `gameServicesRealm` Submodule <a name="`gameServicesRealm` Submodule" id="@cdktf/provider-google.gameServicesRealm"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_game_services_realm`](https:
 
 ### GameServicesRealm <a name="GameServicesRealm" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm google_game_services_realm}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm google_game_services_realm}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesRealm.GameServicesRealm.Initializer"></a>
 
@@ -787,10 +787,10 @@ const gameServicesRealmConfig: gameServicesRealm.GameServicesRealmConfig = { ...
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.realmId">realmId</a></code> | <code>string</code> | GCP region of the Realm. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.timeZone">timeZone</a></code> | <code>string</code> | Required. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.description">description</a></code> | <code>string</code> | Human readable description of the realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#id GameServicesRealm#id}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#id GameServicesRealm#id}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | The labels associated with this realm. Each label is a key-value pair. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.location">location</a></code> | <code>string</code> | Location of the Realm. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#project GameServicesRealm#project}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#project GameServicesRealm#project}. |
 | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts">GameServicesRealmTimeouts</a></code> | timeouts block. |
 
 ---
@@ -875,7 +875,7 @@ public readonly realmId: string;
 
 GCP region of the Realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#realm_id GameServicesRealm#realm_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#realm_id GameServicesRealm#realm_id}
 
 ---
 
@@ -893,7 +893,7 @@ Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#time_zone GameServicesRealm#time_zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#time_zone GameServicesRealm#time_zone}
 
 ---
 
@@ -907,7 +907,7 @@ public readonly description: string;
 
 Human readable description of the realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#description GameServicesRealm#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#description GameServicesRealm#description}
 
 ---
 
@@ -919,7 +919,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#id GameServicesRealm#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#id GameServicesRealm#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -936,7 +936,7 @@ public readonly labels: {[ key: string ]: string};
 
 The labels associated with this realm. Each label is a key-value pair.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#labels GameServicesRealm#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#labels GameServicesRealm#labels}
 
 ---
 
@@ -950,7 +950,7 @@ public readonly location: string;
 
 Location of the Realm.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#location GameServicesRealm#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#location GameServicesRealm#location}
 
 ---
 
@@ -962,7 +962,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#project GameServicesRealm#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#project GameServicesRealm#project}.
 
 ---
 
@@ -976,7 +976,7 @@ public readonly timeouts: GameServicesRealmTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#timeouts GameServicesRealm#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#timeouts GameServicesRealm#timeouts}
 
 ---
 
@@ -994,9 +994,9 @@ const gameServicesRealmTimeouts: gameServicesRealm.GameServicesRealmTimeouts = {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#create GameServicesRealm#create}. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#delete GameServicesRealm#delete}. |
-| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#update GameServicesRealm#update}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#create GameServicesRealm#create}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#delete GameServicesRealm#delete}. |
+| <code><a href="#@cdktf/provider-google.gameServicesRealm.GameServicesRealmTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#update GameServicesRealm#update}. |
 
 ---
 
@@ -1008,7 +1008,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#create GameServicesRealm#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#create GameServicesRealm#create}.
 
 ---
 
@@ -1020,7 +1020,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#delete GameServicesRealm#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#delete GameServicesRealm#delete}.
 
 ---
 
@@ -1032,7 +1032,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/game_services_realm#update GameServicesRealm#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/game_services_realm#update GameServicesRealm#update}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `google_container_aws_cluster`
 
-Refer to the Terraform Registory for docs: [`google_container_aws_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster).
+Refer to the Terraform Registory for docs: [`google_container_aws_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster).
 
 # `containerAwsCluster` Submodule <a name="`containerAwsCluster` Submodule" id="@cdktf/provider-google.containerAwsCluster"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_container_aws_cluster`](http
 
 ### ContainerAwsCluster <a name="ContainerAwsCluster" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster google_container_aws_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster google_container_aws_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsCluster(scope Construct, id *string, config ContainerAwsClusterConfig) ContainerAwsCluster
 ```
@@ -370,7 +370,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsConstruct(x interface{}) *bool
 ```
@@ -402,7 +402,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -416,7 +416,7 @@ containerawscluster.ContainerAwsCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.ContainerAwsCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -967,7 +967,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterAuthorization {
 	AdminUsers: interface{},
@@ -992,7 +992,7 @@ AdminUsers interface{}
 
 admin_users block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#admin_users ContainerAwsCluster#admin_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#admin_users ContainerAwsCluster#admin_users}
 
 ---
 
@@ -1001,7 +1001,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterAuthorizationAdminUsers {
 	Username: *string,
@@ -1026,7 +1026,7 @@ Username *string
 
 The name of the user, e.g. `my-gcp-id@gmail.com`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#username ContainerAwsCluster#username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#username ContainerAwsCluster#username}
 
 ---
 
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterConfig {
 	Connection: interface{},
@@ -1045,18 +1045,18 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Authorization: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterAuthorization,
+	Authorization: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterAuthorization,
 	AwsRegion: *string,
-	ControlPlane: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlane,
-	Fleet: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterFleet,
+	ControlPlane: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlane,
+	Fleet: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterFleet,
 	Location: *string,
 	Name: *string,
-	Networking: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterNetworking,
+	Networking: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterNetworking,
 	Annotations: *map[string]*string,
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterTimeouts,
 }
 ```
 
@@ -1080,7 +1080,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.networking">Networking</a></code> | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking">ContainerAwsClusterNetworking</a></code> | networking block. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.annotations">Annotations</a></code> | <code>*map[string]*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.description">Description</a></code> | <code>*string</code> | Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes. |
-| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.project">Project</a></code> | <code>*string</code> | The project for the resource. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts">ContainerAwsClusterTimeouts</a></code> | timeouts block. |
 
@@ -1166,7 +1166,7 @@ Authorization ContainerAwsClusterAuthorization
 
 authorization block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#authorization ContainerAwsCluster#authorization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#authorization ContainerAwsCluster#authorization}
 
 ---
 
@@ -1182,7 +1182,7 @@ The AWS region where the cluster runs.
 
 Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#aws_region ContainerAwsCluster#aws_region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#aws_region ContainerAwsCluster#aws_region}
 
 ---
 
@@ -1196,7 +1196,7 @@ ControlPlane ContainerAwsClusterControlPlane
 
 control_plane block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#control_plane ContainerAwsCluster#control_plane}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#control_plane ContainerAwsCluster#control_plane}
 
 ---
 
@@ -1210,7 +1210,7 @@ Fleet ContainerAwsClusterFleet
 
 fleet block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#fleet ContainerAwsCluster#fleet}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#fleet ContainerAwsCluster#fleet}
 
 ---
 
@@ -1224,7 +1224,7 @@ Location *string
 
 The location for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#location ContainerAwsCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#location ContainerAwsCluster#location}
 
 ---
 
@@ -1238,7 +1238,7 @@ Name *string
 
 The name of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#name ContainerAwsCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#name ContainerAwsCluster#name}
 
 ---
 
@@ -1252,7 +1252,7 @@ Networking ContainerAwsClusterNetworking
 
 networking block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#networking ContainerAwsCluster#networking}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#networking ContainerAwsCluster#networking}
 
 ---
 
@@ -1268,7 +1268,7 @@ Optional.
 
 Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#annotations ContainerAwsCluster#annotations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#annotations ContainerAwsCluster#annotations}
 
 ---
 
@@ -1282,7 +1282,7 @@ Description *string
 
 Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#description ContainerAwsCluster#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#description ContainerAwsCluster#description}
 
 ---
 
@@ -1294,7 +1294,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#id ContainerAwsCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1311,7 +1311,7 @@ Project *string
 
 The project for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
 
 ---
 
@@ -1325,7 +1325,7 @@ Timeouts ContainerAwsClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#timeouts ContainerAwsCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#timeouts ContainerAwsCluster#timeouts}
 
 ---
 
@@ -1334,21 +1334,21 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlane.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlane {
-	AwsServicesAuthentication: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication,
-	ConfigEncryption: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption,
-	DatabaseEncryption: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption,
+	AwsServicesAuthentication: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication,
+	ConfigEncryption: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption,
+	DatabaseEncryption: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption,
 	IamInstanceProfile: *string,
 	SubnetIds: *[]*string,
 	Version: *string,
 	InstanceType: *string,
-	MainVolume: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume,
-	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig,
-	RootVolume: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume,
+	MainVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume,
+	ProxyConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig,
+	RootVolume: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume,
 	SecurityGroupIds: *[]*string,
-	SshConfig: github.com/cdktf/cdktf-provider-google-go/google/v8.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig,
+	SshConfig: github.com/cdktf/cdktf-provider-google-go/google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig,
 	Tags: *map[string]*string,
 }
 ```
@@ -1383,7 +1383,7 @@ AwsServicesAuthentication ContainerAwsClusterControlPlaneAwsServicesAuthenticati
 
 aws_services_authentication block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#aws_services_authentication ContainerAwsCluster#aws_services_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#aws_services_authentication ContainerAwsCluster#aws_services_authentication}
 
 ---
 
@@ -1397,7 +1397,7 @@ ConfigEncryption ContainerAwsClusterControlPlaneConfigEncryption
 
 config_encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#config_encryption ContainerAwsCluster#config_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#config_encryption ContainerAwsCluster#config_encryption}
 
 ---
 
@@ -1411,7 +1411,7 @@ DatabaseEncryption ContainerAwsClusterControlPlaneDatabaseEncryption
 
 database_encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#database_encryption ContainerAwsCluster#database_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#database_encryption ContainerAwsCluster#database_encryption}
 
 ---
 
@@ -1425,7 +1425,7 @@ IamInstanceProfile *string
 
 The name of the AWS IAM instance pofile to assign to each control plane replica.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#iam_instance_profile ContainerAwsCluster#iam_instance_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#iam_instance_profile ContainerAwsCluster#iam_instance_profile}
 
 ---
 
@@ -1441,7 +1441,7 @@ The list of subnets where control plane replicas will run.
 
 A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#subnet_ids ContainerAwsCluster#subnet_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#subnet_ids ContainerAwsCluster#subnet_ids}
 
 ---
 
@@ -1455,7 +1455,7 @@ Version *string
 
 The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#version ContainerAwsCluster#version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#version ContainerAwsCluster#version}
 
 ---
 
@@ -1469,7 +1469,7 @@ InstanceType *string
 
 Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#instance_type ContainerAwsCluster#instance_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#instance_type ContainerAwsCluster#instance_type}
 
 ---
 
@@ -1483,7 +1483,7 @@ MainVolume ContainerAwsClusterControlPlaneMainVolume
 
 main_volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#main_volume ContainerAwsCluster#main_volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#main_volume ContainerAwsCluster#main_volume}
 
 ---
 
@@ -1497,7 +1497,7 @@ ProxyConfig ContainerAwsClusterControlPlaneProxyConfig
 
 proxy_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#proxy_config ContainerAwsCluster#proxy_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#proxy_config ContainerAwsCluster#proxy_config}
 
 ---
 
@@ -1511,7 +1511,7 @@ RootVolume ContainerAwsClusterControlPlaneRootVolume
 
 root_volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#root_volume ContainerAwsCluster#root_volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#root_volume ContainerAwsCluster#root_volume}
 
 ---
 
@@ -1527,7 +1527,7 @@ Optional.
 
 The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#security_group_ids ContainerAwsCluster#security_group_ids}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#security_group_ids ContainerAwsCluster#security_group_ids}
 
 ---
 
@@ -1541,7 +1541,7 @@ SshConfig ContainerAwsClusterControlPlaneSshConfig
 
 ssh_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#ssh_config ContainerAwsCluster#ssh_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#ssh_config ContainerAwsCluster#ssh_config}
 
 ---
 
@@ -1557,7 +1557,7 @@ Optional.
 
 A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#tags ContainerAwsCluster#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#tags ContainerAwsCluster#tags}
 
 ---
 
@@ -1566,7 +1566,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneAwsServicesAuthentication {
 	RoleArn: *string,
@@ -1593,7 +1593,7 @@ RoleArn *string
 
 The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#role_arn ContainerAwsCluster#role_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#role_arn ContainerAwsCluster#role_arn}
 
 ---
 
@@ -1607,7 +1607,7 @@ RoleSessionName *string
 
 Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#role_session_name ContainerAwsCluster#role_session_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#role_session_name ContainerAwsCluster#role_session_name}
 
 ---
 
@@ -1616,7 +1616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneConfigEncryption {
 	KmsKeyArn: *string,
@@ -1641,7 +1641,7 @@ KmsKeyArn *string
 
 The ARN of the AWS KMS key used to encrypt cluster configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
 
 ---
 
@@ -1650,7 +1650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneDatabaseEncryption {
 	KmsKeyArn: *string,
@@ -1675,7 +1675,7 @@ KmsKeyArn *string
 
 The ARN of the AWS KMS key used to encrypt cluster secrets.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
 
 ---
 
@@ -1684,12 +1684,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneMainVolume {
 	Iops: *f64,
 	KmsKeyArn: *string,
 	SizeGib: *f64,
+	Throughput: *f64,
 	VolumeType: *string,
 }
 ```
@@ -1701,6 +1702,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.iops">Iops</a></code> | <code>*f64</code> | Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.kmsKeyArn">KmsKeyArn</a></code> | <code>*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.sizeGib">SizeGib</a></code> | <code>*f64</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.throughput">Throughput</a></code> | <code>*f64</code> | Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.volumeType">VolumeType</a></code> | <code>*string</code> | Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3. |
 
 ---
@@ -1715,7 +1717,7 @@ Iops *f64
 
 Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
 
 ---
 
@@ -1731,7 +1733,7 @@ Optional.
 
 The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
 
 ---
 
@@ -1747,7 +1749,21 @@ Optional.
 
 The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+
+---
+
+##### `Throughput`<sup>Optional</sup> <a name="Throughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume.property.throughput"></a>
+
+```go
+Throughput *f64
+```
+
+- *Type:* *f64
+
+Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
 
 ---
 
@@ -1761,7 +1777,7 @@ VolumeType *string
 
 Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
 
 ---
 
@@ -1770,7 +1786,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneProxyConfig {
 	SecretArn: *string,
@@ -1797,7 +1813,7 @@ SecretArn *string
 
 The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#secret_arn ContainerAwsCluster#secret_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#secret_arn ContainerAwsCluster#secret_arn}
 
 ---
 
@@ -1811,7 +1827,7 @@ SecretVersion *string
 
 The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#secret_version ContainerAwsCluster#secret_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#secret_version ContainerAwsCluster#secret_version}
 
 ---
 
@@ -1820,12 +1836,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneRootVolume {
 	Iops: *f64,
 	KmsKeyArn: *string,
 	SizeGib: *f64,
+	Throughput: *f64,
 	VolumeType: *string,
 }
 ```
@@ -1837,6 +1854,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.iops">Iops</a></code> | <code>*f64</code> | Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.kmsKeyArn">KmsKeyArn</a></code> | <code>*string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.sizeGib">SizeGib</a></code> | <code>*f64</code> | Optional. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.throughput">Throughput</a></code> | <code>*f64</code> | Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.volumeType">VolumeType</a></code> | <code>*string</code> | Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3. |
 
 ---
@@ -1851,7 +1869,7 @@ Iops *f64
 
 Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#iops ContainerAwsCluster#iops}
 
 ---
 
@@ -1867,7 +1885,7 @@ Optional.
 
 The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#kms_key_arn ContainerAwsCluster#kms_key_arn}
 
 ---
 
@@ -1883,7 +1901,21 @@ Optional.
 
 The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#size_gib ContainerAwsCluster#size_gib}
+
+---
+
+##### `Throughput`<sup>Optional</sup> <a name="Throughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume.property.throughput"></a>
+
+```go
+Throughput *f64
+```
+
+- *Type:* *f64
+
+Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#throughput ContainerAwsCluster#throughput}
 
 ---
 
@@ -1897,7 +1929,7 @@ VolumeType *string
 
 Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#volume_type ContainerAwsCluster#volume_type}
 
 ---
 
@@ -1906,7 +1938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterControlPlaneSshConfig {
 	Ec2KeyPair: *string,
@@ -1931,7 +1963,7 @@ Ec2KeyPair *string
 
 The name of the EC2 key pair used to login into cluster machines.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#ec2_key_pair ContainerAwsCluster#ec2_key_pair}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#ec2_key_pair ContainerAwsCluster#ec2_key_pair}
 
 ---
 
@@ -1940,7 +1972,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterFleet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterFleet {
 	Project: *string,
@@ -1965,7 +1997,7 @@ Project *string
 
 The number of the Fleet host project where this cluster will be registered.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#project ContainerAwsCluster#project}
 
 ---
 
@@ -1974,12 +2006,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterNetworking {
 	PodAddressCidrBlocks: *[]*string,
 	ServiceAddressCidrBlocks: *[]*string,
 	VpcId: *string,
+	PerNodePoolSgRulesDisabled: interface{},
 }
 ```
 
@@ -1990,6 +2023,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.property.podAddressCidrBlocks">PodAddressCidrBlocks</a></code> | <code>*[]*string</code> | All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.property.serviceAddressCidrBlocks">ServiceAddressCidrBlocks</a></code> | <code>*[]*string</code> | All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.property.vpcId">VpcId</a></code> | <code>*string</code> | The VPC associated with the cluster. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.property.perNodePoolSgRulesDisabled">PerNodePoolSgRulesDisabled</a></code> | <code>interface{}</code> | Disable the per node pool subnet security group rules on the control plane security group. |
 
 ---
 
@@ -2005,7 +2039,7 @@ All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges.
 
 Only a single range is supported. This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#pod_address_cidr_blocks ContainerAwsCluster#pod_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#pod_address_cidr_blocks ContainerAwsCluster#pod_address_cidr_blocks}
 
 ---
 
@@ -2021,7 +2055,7 @@ All services in the cluster are assigned an RFC1918 IPv4 address from these rang
 
 Only a single range is supported. This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#service_address_cidr_blocks ContainerAwsCluster#service_address_cidr_blocks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#service_address_cidr_blocks ContainerAwsCluster#service_address_cidr_blocks}
 
 ---
 
@@ -2037,7 +2071,23 @@ The VPC associated with the cluster.
 
 All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#vpc_id ContainerAwsCluster#vpc_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#vpc_id ContainerAwsCluster#vpc_id}
+
+---
+
+##### `PerNodePoolSgRulesDisabled`<sup>Optional</sup> <a name="PerNodePoolSgRulesDisabled" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworking.property.perNodePoolSgRulesDisabled"></a>
+
+```go
+PerNodePoolSgRulesDisabled interface{}
+```
+
+- *Type:* interface{}
+
+Disable the per node pool subnet security group rules on the control plane security group.
+
+When set to true, you must also provide one or more security groups that ensure node pools are able to send requests to the control plane on TCP/443 and TCP/8132. Failure to do so may result in unavailable node pools.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#per_node_pool_sg_rules_disabled ContainerAwsCluster#per_node_pool_sg_rules_disabled}
 
 ---
 
@@ -2046,7 +2096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterTimeouts {
 	Create: *string,
@@ -2059,9 +2109,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}. |
-| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}. |
-| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}. |
 
 ---
 
@@ -2073,7 +2123,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#create ContainerAwsCluster#create}.
 
 ---
 
@@ -2085,7 +2135,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#delete ContainerAwsCluster#delete}.
 
 ---
 
@@ -2097,7 +2147,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/container_aws_cluster#update ContainerAwsCluster#update}.
 
 ---
 
@@ -2106,7 +2156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 &containerawscluster.ContainerAwsClusterWorkloadIdentityConfig {
 
@@ -2121,7 +2171,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationAdminUsersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAwsClusterAuthorizationAdminUsersList
 ```
@@ -2264,7 +2314,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationAdminUsersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationAdminUsersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAwsClusterAuthorizationAdminUsersOutputReference
 ```
@@ -2553,7 +2603,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterAuthorizationOutputReference
 ```
@@ -2837,7 +2887,7 @@ func InternalValue() ContainerAwsClusterAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneAwsServicesAuthenticationOutputReference
 ```
@@ -3137,7 +3187,7 @@ func InternalValue() ContainerAwsClusterControlPlaneAwsServicesAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneConfigEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneConfigEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneConfigEncryptionOutputReference
 ```
@@ -3408,7 +3458,7 @@ func InternalValue() ContainerAwsClusterControlPlaneConfigEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneDatabaseEncryptionOutputReference
 ```
@@ -3679,7 +3729,7 @@ func InternalValue() ContainerAwsClusterControlPlaneDatabaseEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneMainVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneMainVolumeOutputReference
 ```
@@ -3727,6 +3777,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetIops">ResetIops</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetKmsKeyArn">ResetKmsKeyArn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetSizeGib">ResetSizeGib</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetThroughput">ResetThroughput</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetVolumeType">ResetVolumeType</a></code> | *No description.* |
 
 ---
@@ -3899,6 +3950,12 @@ func ResetKmsKeyArn()
 func ResetSizeGib()
 ```
 
+##### `ResetThroughput` <a name="ResetThroughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetThroughput"></a>
+
+```go
+func ResetThroughput()
+```
+
 ##### `ResetVolumeType` <a name="ResetVolumeType" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.resetVolumeType"></a>
 
 ```go
@@ -3915,10 +3972,12 @@ func ResetVolumeType()
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.iopsInput">IopsInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.kmsKeyArnInput">KmsKeyArnInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.sizeGibInput">SizeGibInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.throughputInput">ThroughputInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.volumeTypeInput">VolumeTypeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.iops">Iops</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.kmsKeyArn">KmsKeyArn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.sizeGib">SizeGib</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.throughput">Throughput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.volumeType">VolumeType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolume">ContainerAwsClusterControlPlaneMainVolume</a></code> | *No description.* |
 
@@ -3978,6 +4037,16 @@ func SizeGibInput() *f64
 
 ---
 
+##### `ThroughputInput`<sup>Optional</sup> <a name="ThroughputInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.throughputInput"></a>
+
+```go
+func ThroughputInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `VolumeTypeInput`<sup>Optional</sup> <a name="VolumeTypeInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.volumeTypeInput"></a>
 
 ```go
@@ -4018,6 +4087,16 @@ func SizeGib() *f64
 
 ---
 
+##### `Throughput`<sup>Required</sup> <a name="Throughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.throughput"></a>
+
+```go
+func Throughput() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `VolumeType`<sup>Required</sup> <a name="VolumeType" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneMainVolumeOutputReference.property.volumeType"></a>
 
 ```go
@@ -4044,7 +4123,7 @@ func InternalValue() ContainerAwsClusterControlPlaneMainVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneOutputReference
 ```
@@ -4719,7 +4798,7 @@ func InternalValue() ContainerAwsClusterControlPlane
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneProxyConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneProxyConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneProxyConfigOutputReference
 ```
@@ -5012,7 +5091,7 @@ func InternalValue() ContainerAwsClusterControlPlaneProxyConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneRootVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneRootVolumeOutputReference
 ```
@@ -5060,6 +5139,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetIops">ResetIops</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetKmsKeyArn">ResetKmsKeyArn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetSizeGib">ResetSizeGib</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetThroughput">ResetThroughput</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetVolumeType">ResetVolumeType</a></code> | *No description.* |
 
 ---
@@ -5232,6 +5312,12 @@ func ResetKmsKeyArn()
 func ResetSizeGib()
 ```
 
+##### `ResetThroughput` <a name="ResetThroughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetThroughput"></a>
+
+```go
+func ResetThroughput()
+```
+
 ##### `ResetVolumeType` <a name="ResetVolumeType" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.resetVolumeType"></a>
 
 ```go
@@ -5248,10 +5334,12 @@ func ResetVolumeType()
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.iopsInput">IopsInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.kmsKeyArnInput">KmsKeyArnInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.sizeGibInput">SizeGibInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.throughputInput">ThroughputInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.volumeTypeInput">VolumeTypeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.iops">Iops</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.kmsKeyArn">KmsKeyArn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.sizeGib">SizeGib</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.throughput">Throughput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.volumeType">VolumeType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolume">ContainerAwsClusterControlPlaneRootVolume</a></code> | *No description.* |
 
@@ -5311,6 +5399,16 @@ func SizeGibInput() *f64
 
 ---
 
+##### `ThroughputInput`<sup>Optional</sup> <a name="ThroughputInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.throughputInput"></a>
+
+```go
+func ThroughputInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `VolumeTypeInput`<sup>Optional</sup> <a name="VolumeTypeInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.volumeTypeInput"></a>
 
 ```go
@@ -5351,6 +5449,16 @@ func SizeGib() *f64
 
 ---
 
+##### `Throughput`<sup>Required</sup> <a name="Throughput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.throughput"></a>
+
+```go
+func Throughput() *f64
+```
+
+- *Type:* *f64
+
+---
+
 ##### `VolumeType`<sup>Required</sup> <a name="VolumeType" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneRootVolumeOutputReference.property.volumeType"></a>
 
 ```go
@@ -5377,7 +5485,7 @@ func InternalValue() ContainerAwsClusterControlPlaneRootVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterControlPlaneSshConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterControlPlaneSshConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterControlPlaneSshConfigOutputReference
 ```
@@ -5648,7 +5756,7 @@ func InternalValue() ContainerAwsClusterControlPlaneSshConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterFleetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterFleetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterFleetOutputReference
 ```
@@ -5937,7 +6045,7 @@ func InternalValue() ContainerAwsClusterFleet
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterNetworkingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterNetworkingOutputReference
 ```
@@ -5982,6 +6090,7 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.resetPerNodePoolSgRulesDisabled">ResetPerNodePoolSgRulesDisabled</a></code> | *No description.* |
 
 ---
 
@@ -6135,6 +6244,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetPerNodePoolSgRulesDisabled` <a name="ResetPerNodePoolSgRulesDisabled" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.resetPerNodePoolSgRulesDisabled"></a>
+
+```go
+func ResetPerNodePoolSgRulesDisabled()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -6142,9 +6257,11 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.perNodePoolSgRulesDisabledInput">PerNodePoolSgRulesDisabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.podAddressCidrBlocksInput">PodAddressCidrBlocksInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.serviceAddressCidrBlocksInput">ServiceAddressCidrBlocksInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.vpcIdInput">VpcIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.perNodePoolSgRulesDisabled">PerNodePoolSgRulesDisabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.podAddressCidrBlocks">PodAddressCidrBlocks</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.serviceAddressCidrBlocks">ServiceAddressCidrBlocks</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.vpcId">VpcId</a></code> | <code>*string</code> | *No description.* |
@@ -6176,6 +6293,16 @@ func Fqn() *string
 
 ---
 
+##### `PerNodePoolSgRulesDisabledInput`<sup>Optional</sup> <a name="PerNodePoolSgRulesDisabledInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.perNodePoolSgRulesDisabledInput"></a>
+
+```go
+func PerNodePoolSgRulesDisabledInput() interface{}
+```
+
+- *Type:* interface{}
+
+---
+
 ##### `PodAddressCidrBlocksInput`<sup>Optional</sup> <a name="PodAddressCidrBlocksInput" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.podAddressCidrBlocksInput"></a>
 
 ```go
@@ -6203,6 +6330,16 @@ func VpcIdInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `PerNodePoolSgRulesDisabled`<sup>Required</sup> <a name="PerNodePoolSgRulesDisabled" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterNetworkingOutputReference.property.perNodePoolSgRulesDisabled"></a>
+
+```go
+func PerNodePoolSgRulesDisabled() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -6252,7 +6389,7 @@ func InternalValue() ContainerAwsClusterNetworking
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAwsClusterTimeoutsOutputReference
 ```
@@ -6588,7 +6725,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterWorkloadIdentityConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAwsClusterWorkloadIdentityConfigList
 ```
@@ -6720,7 +6857,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerAwsCluster.ContainerAwsClusterWorkloadIdentityConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerawscluster"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerawscluster"
 
 containerawscluster.NewContainerAwsClusterWorkloadIdentityConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAwsClusterWorkloadIdentityConfigOutputReference
 ```

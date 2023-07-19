@@ -1,6 +1,6 @@
 # `google_compute_managed_ssl_certificate`
 
-Refer to the Terraform Registory for docs: [`google_compute_managed_ssl_certificate`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate).
+Refer to the Terraform Registory for docs: [`google_compute_managed_ssl_certificate`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate).
 
 # `computeManagedSslCertificate` Submodule <a name="`computeManagedSslCertificate` Submodule" id="@cdktf/provider-google.computeManagedSslCertificate"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_managed_ssl_certific
 
 ### ComputeManagedSslCertificate <a name="ComputeManagedSslCertificate" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate google_compute_managed_ssl_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificate.Initializer"></a>
 
@@ -851,10 +851,10 @@ new ComputeManagedSslCertificateConfig {
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.certificateId">CertificateId</a></code> | <code>double</code> | The unique identifier for the resource. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.description">Description</a></code> | <code>string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.managed">Managed</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateManaged">ComputeManagedSslCertificateManaged</a></code> | managed block. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.name">Name</a></code> | <code>string</code> | Name of the resource. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts">ComputeManagedSslCertificateTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateConfig.property.type">Type</a></code> | <code>string</code> | Enum field whose value is always 'MANAGED' - used to signal to the API which type this is. |
 
@@ -940,7 +940,7 @@ public double CertificateId { get; set; }
 
 The unique identifier for the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
 
 ---
 
@@ -954,7 +954,7 @@ public string Description { get; set; }
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
 
 ---
 
@@ -966,7 +966,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#id ComputeManagedSslCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -983,7 +983,7 @@ public ComputeManagedSslCertificateManaged Managed { get; set; }
 
 managed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
 
 ---
 
@@ -1007,7 +1007,7 @@ character, which cannot be a dash.
 
 These are in the same namespace as the managed SSL certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
 
 ---
 
@@ -1019,7 +1019,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#project ComputeManagedSslCertificate#project}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public ComputeManagedSslCertificateTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
 
 ---
 
@@ -1049,7 +1049,7 @@ Enum field whose value is always 'MANAGED' - used to signal to the API which typ
 
 Default value: "MANAGED" Possible values: ["MANAGED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
 
 ---
 
@@ -1086,7 +1086,7 @@ Domains for which a managed SSL certificate will be valid.
 Currently,
 there can be up to 100 domains in this list.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
 
 ---
 
@@ -1107,8 +1107,8 @@ new ComputeManagedSslCertificateTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}. |
-| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}. |
+| <code><a href="#@cdktf/provider-google.computeManagedSslCertificate.ComputeManagedSslCertificateTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}. |
 
 ---
 
@@ -1120,7 +1120,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#create ComputeManagedSslCertificate#create}.
 
 ---
 
@@ -1132,7 +1132,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/compute_managed_ssl_certificate#delete ComputeManagedSslCertificate#delete}.
 
 ---
 

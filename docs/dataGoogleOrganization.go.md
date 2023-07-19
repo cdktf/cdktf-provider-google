@@ -1,6 +1,6 @@
 # `data_google_organization`
 
-Refer to the Terraform Registory for docs: [`data_google_organization`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization).
+Refer to the Terraform Registory for docs: [`data_google_organization`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization).
 
 # `dataGoogleOrganization` Submodule <a name="`dataGoogleOrganization` Submodule" id="@cdktf/provider-google.dataGoogleOrganization"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_organization`](https://
 
 ### DataGoogleOrganization <a name="DataGoogleOrganization" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization google_organization}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization google_organization}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.NewDataGoogleOrganization(scope Construct, id *string, config DataGoogleOrganizationConfig) DataGoogleOrganization
 ```
@@ -291,7 +291,7 @@ func ResetOrganization()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagoogleorganization.DataGoogleOrganization_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganization.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 datagoogleorganization.DataGoogleOrganization_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -635,7 +635,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganization"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogleorganization"
 
 &datagoogleorganization.DataGoogleOrganizationConfig {
 	Connection: interface{},
@@ -662,9 +662,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogleorganizati
 | <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.domain">Domain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#domain DataGoogleOrganization#domain}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#id DataGoogleOrganization#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.organization">Organization</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#organization DataGoogleOrganization#organization}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.domain">Domain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#domain DataGoogleOrganization#domain}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#id DataGoogleOrganization#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleOrganization.DataGoogleOrganizationConfig.property.organization">Organization</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#organization DataGoogleOrganization#organization}. |
 
 ---
 
@@ -746,7 +746,7 @@ Domain *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#domain DataGoogleOrganization#domain}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#domain DataGoogleOrganization#domain}.
 
 ---
 
@@ -758,7 +758,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#id DataGoogleOrganization#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#id DataGoogleOrganization#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -773,7 +773,7 @@ Organization *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/organization#organization DataGoogleOrganization#organization}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/organization#organization DataGoogleOrganization#organization}.
 
 ---
 

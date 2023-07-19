@@ -1,6 +1,6 @@
 # `google_cloud_asset_project_feed`
 
-Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed).
+Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed).
 
 # `cloudAssetProjectFeed` Submodule <a name="`cloudAssetProjectFeed` Submodule" id="@cdktf/provider-google.cloudAssetProjectFeed"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_cloud_asset_project_feed`](h
 
 ### CloudAssetProjectFeed <a name="CloudAssetProjectFeed" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed google_cloud_asset_project_feed}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed google_cloud_asset_project_feed}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeed(scope Construct, id *string, config CloudAssetProjectFeedConfig) CloudAssetProjectFeed
 ```
@@ -365,7 +365,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsConstruct(x interface{}) *bool
 ```
@@ -397,7 +397,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformElement(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeed.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.CloudAssetProjectFeed_IsTerraformResource(x interface{}) *bool
 ```
@@ -841,7 +841,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedCondition {
 	Expression: *string,
@@ -872,7 +872,7 @@ Expression *string
 
 Textual representation of an expression in Common Expression Language syntax.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#expression CloudAssetProjectFeed#expression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#expression CloudAssetProjectFeed#expression}
 
 ---
 
@@ -889,7 +889,7 @@ Description of the expression.
 This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#description CloudAssetProjectFeed#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#description CloudAssetProjectFeed#description}
 
 ---
 
@@ -903,7 +903,7 @@ Location *string
 
 String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#location CloudAssetProjectFeed#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#location CloudAssetProjectFeed#location}
 
 ---
 
@@ -917,7 +917,7 @@ Title *string
 
 Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#title CloudAssetProjectFeed#title}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#title CloudAssetProjectFeed#title}
 
 ---
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedConfig {
 	Connection: interface{},
@@ -937,15 +937,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfee
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	FeedId: *string,
-	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google/v8.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig,
+	FeedOutputConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig,
 	AssetNames: *[]*string,
 	AssetTypes: *[]*string,
 	BillingProject: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.cloudAssetProjectFeed.CloudAssetProjectFeedCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition,
 	ContentType: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts,
 }
 ```
 
@@ -967,8 +967,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfee
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.billingProject">BillingProject</a></code> | <code>*string</code> | The project whose identity will be used when sending messages to the destination pubsub topic. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedCondition">CloudAssetProjectFeedCondition</a></code> | condition block. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.contentType">ContentType</a></code> | <code>*string</code> | Asset content type. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}. |
 | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts">CloudAssetProjectFeedTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1053,7 +1053,7 @@ FeedId *string
 
 This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#feed_id CloudAssetProjectFeed#feed_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#feed_id CloudAssetProjectFeed#feed_id}
 
 ---
 
@@ -1067,7 +1067,7 @@ FeedOutputConfig CloudAssetProjectFeedFeedOutputConfig
 
 feed_output_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#feed_output_config CloudAssetProjectFeed#feed_output_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#feed_output_config CloudAssetProjectFeed#feed_output_config}
 
 ---
 
@@ -1086,7 +1086,7 @@ assetNames and assetTypes. Only asset updates matching specified assetNames and 
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#asset_names CloudAssetProjectFeed#asset_names}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#asset_names CloudAssetProjectFeed#asset_names}
 
 ---
 
@@ -1106,7 +1106,7 @@ the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#asset_types CloudAssetProjectFeed#asset_types}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#asset_types CloudAssetProjectFeed#asset_types}
 
 ---
 
@@ -1124,7 +1124,7 @@ It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#billing_project CloudAssetProjectFeed#billing_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#billing_project CloudAssetProjectFeed#billing_project}
 
 ---
 
@@ -1138,7 +1138,7 @@ Condition CloudAssetProjectFeedCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#condition CloudAssetProjectFeed#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#condition CloudAssetProjectFeed#condition}
 
 ---
 
@@ -1154,7 +1154,7 @@ Asset content type.
 
 If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#content_type CloudAssetProjectFeed#content_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#content_type CloudAssetProjectFeed#content_type}
 
 ---
 
@@ -1166,7 +1166,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#id CloudAssetProjectFeed#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1181,7 +1181,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#project CloudAssetProjectFeed#project}.
 
 ---
 
@@ -1195,7 +1195,7 @@ Timeouts CloudAssetProjectFeedTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#timeouts CloudAssetProjectFeed#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#timeouts CloudAssetProjectFeed#timeouts}
 
 ---
 
@@ -1204,10 +1204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedFeedOutputConfig {
-	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google/v8.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination,
+	PubsubDestination: github.com/cdktf/cdktf-provider-google-go/google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination,
 }
 ```
 
@@ -1229,7 +1229,7 @@ PubsubDestination CloudAssetProjectFeedFeedOutputConfigPubsubDestination
 
 pubsub_destination block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#pubsub_destination CloudAssetProjectFeed#pubsub_destination}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#pubsub_destination CloudAssetProjectFeed#pubsub_destination}
 
 ---
 
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestination {
 	Topic: *string,
@@ -1263,7 +1263,7 @@ Topic *string
 
 Destination on Cloud Pubsub topic.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#topic CloudAssetProjectFeed#topic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#topic CloudAssetProjectFeed#topic}
 
 ---
 
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 &cloudassetprojectfeed.CloudAssetProjectFeedTimeouts {
 	Create: *string,
@@ -1285,9 +1285,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfee
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}. |
-| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}. |
+| <code><a href="#@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}. |
 
 ---
 
@@ -1299,7 +1299,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#create CloudAssetProjectFeed#create}.
 
 ---
 
@@ -1311,7 +1311,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#delete CloudAssetProjectFeed#delete}.
 
 ---
 
@@ -1323,7 +1323,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/cloud_asset_project_feed#update CloudAssetProjectFeed#update}.
 
 ---
 
@@ -1334,7 +1334,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedConditionOutputReference
 ```
@@ -1692,7 +1692,7 @@ func InternalValue() CloudAssetProjectFeedCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedFeedOutputConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedFeedOutputConfigOutputReference
 ```
@@ -1976,7 +1976,7 @@ func InternalValue() CloudAssetProjectFeedFeedOutputConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReference
 ```
@@ -2247,7 +2247,7 @@ func InternalValue() CloudAssetProjectFeedFeedOutputConfigPubsubDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudAssetProjectFeed.CloudAssetProjectFeedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/cloudassetprojectfeed"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudassetprojectfeed"
 
 cloudassetprojectfeed.NewCloudAssetProjectFeedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudAssetProjectFeedTimeoutsOutputReference
 ```

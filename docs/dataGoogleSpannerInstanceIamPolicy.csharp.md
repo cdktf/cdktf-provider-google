@@ -1,6 +1,6 @@
 # `data_google_spanner_instance_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_spanner_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_spanner_instance_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy).
 
 # `dataGoogleSpannerInstanceIamPolicy` Submodule <a name="`dataGoogleSpannerInstanceIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_spanner_instance_iam_po
 
 ### DataGoogleSpannerInstanceIamPolicy <a name="DataGoogleSpannerInstanceIamPolicy" id="@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy google_spanner_instance_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy google_spanner_instance_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicy.Initializer"></a>
 
@@ -622,9 +622,9 @@ new DataGoogleSpannerInstanceIamPolicyConfig {
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#instance DataGoogleSpannerInstanceIamPolicy#instance}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#id DataGoogleSpannerInstanceIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#project DataGoogleSpannerInstanceIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.instance">Instance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#instance DataGoogleSpannerInstanceIamPolicy#instance}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#id DataGoogleSpannerInstanceIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSpannerInstanceIamPolicy.DataGoogleSpannerInstanceIamPolicyConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#project DataGoogleSpannerInstanceIamPolicy#project}. |
 
 ---
 
@@ -706,7 +706,7 @@ public string Instance { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#instance DataGoogleSpannerInstanceIamPolicy#instance}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#instance DataGoogleSpannerInstanceIamPolicy#instance}.
 
 ---
 
@@ -718,7 +718,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#id DataGoogleSpannerInstanceIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#id DataGoogleSpannerInstanceIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -733,7 +733,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/spanner_instance_iam_policy#project DataGoogleSpannerInstanceIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/spanner_instance_iam_policy#project DataGoogleSpannerInstanceIamPolicy#project}.
 
 ---
 

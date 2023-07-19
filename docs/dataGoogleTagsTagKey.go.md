@@ -1,6 +1,6 @@
 # `data_google_tags_tag_key`
 
-Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key).
+Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key).
 
 # `dataGoogleTagsTagKey` Submodule <a name="`dataGoogleTagsTagKey` Submodule" id="@cdktf/provider-google.dataGoogleTagsTagKey"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_tags_tag_key`](https://
 
 ### DataGoogleTagsTagKey <a name="DataGoogleTagsTagKey" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key google_tags_tag_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key google_tags_tag_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
 
 datagoogletagstagkey.NewDataGoogleTagsTagKey(scope Construct, id *string, config DataGoogleTagsTagKeyConfig) DataGoogleTagsTagKey
 ```
@@ -270,7 +270,7 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsConstruct(x interface{}) *bool
 ```
@@ -302,7 +302,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKey.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
 
 datagoogletagstagkey.DataGoogleTagsTagKey_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -603,7 +603,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagoogletagstagkey"
 
 &datagoogletagstagkey.DataGoogleTagsTagKeyConfig {
 	Connection: interface{},
@@ -629,8 +629,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogletagstagkey
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">Parent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">ShortName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.parent">Parent</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleTagsTagKey.DataGoogleTagsTagKeyConfig.property.shortName">ShortName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}. |
 
 ---
 
@@ -712,7 +712,7 @@ Parent *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key#parent DataGoogleTagsTagKey#parent}.
 
 ---
 
@@ -724,7 +724,7 @@ ShortName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/tags_tag_key#short_name DataGoogleTagsTagKey#short_name}.
 
 ---
 

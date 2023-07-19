@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring
+// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring#id DataGoogleKmsKeyRing#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -23,23 +18,23 @@ export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments
   * The location for the KeyRing.
 A full list of valid locations can be found by running 'gcloud kms locations list'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
   */
   readonly location: string;
   /**
   * The resource name for the KeyRing.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring#name DataGoogleKmsKeyRing#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring#name DataGoogleKmsKeyRing#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring#project DataGoogleKmsKeyRing#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring google_kms_key_ring}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring google_kms_key_ring}
 */
 export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
 
@@ -53,7 +48,7 @@ export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/kms_key_ring google_kms_key_ring} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_key_ring google_kms_key_ring} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -64,7 +59,7 @@ export class DataGoogleKmsKeyRing extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_kms_key_ring',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.74.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
