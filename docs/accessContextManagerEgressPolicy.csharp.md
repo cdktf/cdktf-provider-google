@@ -1,6 +1,6 @@
 # `google_access_context_manager_egress_policy`
 
-Refer to the Terraform Registory for docs: [`google_access_context_manager_egress_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy).
+Refer to the Terraform Registory for docs: [`google_access_context_manager_egress_policy`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy).
 
 # `accessContextManagerEgressPolicy` Submodule <a name="`accessContextManagerEgressPolicy` Submodule" id="@cdktf/provider-google.accessContextManagerEgressPolicy"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_access_context_manager_egres
 
 ### AccessContextManagerEgressPolicy <a name="AccessContextManagerEgressPolicy" id="@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy google_access_context_manager_egress_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicy.Initializer"></a>
 
@@ -660,7 +660,7 @@ new AccessContextManagerEgressPolicyConfig {
 | <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.egressPolicyName">EgressPolicyName</a></code> | <code>string</code> | The name of the Service Perimeter to add this resource to. |
 | <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.resource">Resource</a></code> | <code>string</code> | A GCP resource that is inside of the service perimeter. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}. |
 | <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyTimeouts">AccessContextManagerEgressPolicyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -745,7 +745,7 @@ public string EgressPolicyName { get; set; }
 
 The name of the Service Perimeter to add this resource to.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#egress_policy_name AccessContextManagerEgressPolicy#egress_policy_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#egress_policy_name AccessContextManagerEgressPolicy#egress_policy_name}
 
 ---
 
@@ -759,7 +759,7 @@ public string Resource { get; set; }
 
 A GCP resource that is inside of the service perimeter.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#resource AccessContextManagerEgressPolicy#resource}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#resource AccessContextManagerEgressPolicy#resource}
 
 ---
 
@@ -771,7 +771,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#id AccessContextManagerEgressPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -788,7 +788,7 @@ public AccessContextManagerEgressPolicyTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#timeouts AccessContextManagerEgressPolicy#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#timeouts AccessContextManagerEgressPolicy#timeouts}
 
 ---
 
@@ -809,8 +809,8 @@ new AccessContextManagerEgressPolicyTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}. |
-| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}. |
+| <code><a href="#@cdktf/provider-google.accessContextManagerEgressPolicy.AccessContextManagerEgressPolicyTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}. |
 
 ---
 
@@ -822,7 +822,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#create AccessContextManagerEgressPolicy#create}.
 
 ---
 
@@ -834,7 +834,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/access_context_manager_egress_policy#delete AccessContextManagerEgressPolicy#delete}.
 
 ---
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule
+// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule#id DataGoogleComputeGlobalForwardingRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,11 +34,11 @@ For Private Service Connect forwarding rules that forward traffic to Google
 APIs, the forwarding rule name must be a 1-20 characters string with
 lowercase letters and numbers and must start with a letter.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule#name DataGoogleComputeGlobalForwardingRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule#project DataGoogleComputeGlobalForwardingRule#project}
   */
   readonly project?: string;
 }
@@ -183,7 +183,7 @@ export class DataGoogleComputeGlobalForwardingRuleMetadataFiltersList extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule}
 */
 export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSource {
 
@@ -197,7 +197,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_global_forwarding_rule google_compute_global_forwarding_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -208,7 +208,7 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
       terraformResourceType: 'google_compute_global_forwarding_rule',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.74.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -307,6 +307,11 @@ export class DataGoogleComputeGlobalForwardingRule extends cdktf.TerraformDataSo
   // network - computed: true, optional: false, required: false
   public get network() {
     return this.getStringAttribute('network');
+  }
+
+  // no_automate_dns_zone - computed: true, optional: false, required: false
+  public get noAutomateDnsZone() {
+    return this.getBooleanAttribute('no_automate_dns_zone');
   }
 
   // port_range - computed: true, optional: false, required: false

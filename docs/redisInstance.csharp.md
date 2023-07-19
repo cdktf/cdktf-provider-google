@@ -1,6 +1,6 @@
 # `google_redis_instance`
 
-Refer to the Terraform Registory for docs: [`google_redis_instance`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance).
+Refer to the Terraform Registory for docs: [`google_redis_instance`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance).
 
 # `redisInstance` Submodule <a name="`redisInstance` Submodule" id="@cdktf/provider-google.redisInstance"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_redis_instance`](https://reg
 
 ### RedisInstance <a name="RedisInstance" id="@cdktf/provider-google.redisInstance.RedisInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance google_redis_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance google_redis_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisInstance.RedisInstance.Initializer"></a>
 
@@ -71,7 +71,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.putMaintenancePolicy">PutMaintenancePolicy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.putMaintenanceSchedule">PutMaintenanceSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.putPersistenceConfig">PutPersistenceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetAlternativeLocationId">ResetAlternativeLocationId</a></code> | *No description.* |
@@ -84,7 +83,6 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetLabels">ResetLabels</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetLocationId">ResetLocationId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenancePolicy">ResetMaintenancePolicy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenanceSchedule">ResetMaintenanceSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetPersistenceConfig">ResetPersistenceConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetProject">ResetProject</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.resetReadReplicasMode">ResetReadReplicasMode</a></code> | *No description.* |
@@ -296,18 +294,6 @@ private void PutMaintenancePolicy(RedisInstanceMaintenancePolicy Value)
 
 ---
 
-##### `PutMaintenanceSchedule` <a name="PutMaintenanceSchedule" id="@cdktf/provider-google.redisInstance.RedisInstance.putMaintenanceSchedule"></a>
-
-```csharp
-private void PutMaintenanceSchedule(RedisInstanceMaintenanceSchedule Value)
-```
-
-###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-google.redisInstance.RedisInstance.putMaintenanceSchedule.parameter.value"></a>
-
-- *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceSchedule">RedisInstanceMaintenanceSchedule</a>
-
----
-
 ##### `PutPersistenceConfig` <a name="PutPersistenceConfig" id="@cdktf/provider-google.redisInstance.RedisInstance.putPersistenceConfig"></a>
 
 ```csharp
@@ -390,12 +376,6 @@ private void ResetLocationId()
 
 ```csharp
 private void ResetMaintenancePolicy()
-```
-
-##### `ResetMaintenanceSchedule` <a name="ResetMaintenanceSchedule" id="@cdktf/provider-google.redisInstance.RedisInstance.resetMaintenanceSchedule"></a>
-
-```csharp
-private void ResetMaintenanceSchedule()
 ```
 
 ##### `ResetPersistenceConfig` <a name="ResetPersistenceConfig" id="@cdktf/provider-google.redisInstance.RedisInstance.resetPersistenceConfig"></a>
@@ -563,7 +543,7 @@ RedisInstance.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.currentLocationId">CurrentLocationId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.host">Host</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenancePolicy">MaintenancePolicy</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicyOutputReference">RedisInstanceMaintenancePolicyOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceSchedule">MaintenanceSchedule</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference">RedisInstanceMaintenanceScheduleOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceSchedule">MaintenanceSchedule</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList">RedisInstanceMaintenanceScheduleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.nodes">Nodes</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceNodesList">RedisInstanceNodesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.persistenceConfig">PersistenceConfig</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfigOutputReference">RedisInstancePersistenceConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.persistenceIamIdentity">PersistenceIamIdentity</a></code> | <code>string</code> | *No description.* |
@@ -582,7 +562,6 @@ RedisInstance.IsTerraformResource(object X);
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.labelsInput">LabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.locationIdInput">LocationIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenancePolicyInput">MaintenancePolicyInput</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceScheduleInput">MaintenanceScheduleInput</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceSchedule">RedisInstanceMaintenanceSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.memorySizeGbInput">MemorySizeGbInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstance.property.persistenceConfigInput">PersistenceConfigInput</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfig">RedisInstancePersistenceConfig</a></code> | *No description.* |
@@ -816,10 +795,10 @@ public RedisInstanceMaintenancePolicyOutputReference MaintenancePolicy { get; }
 ##### `MaintenanceSchedule`<sup>Required</sup> <a name="MaintenanceSchedule" id="@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceSchedule"></a>
 
 ```csharp
-public RedisInstanceMaintenanceScheduleOutputReference MaintenanceSchedule { get; }
+public RedisInstanceMaintenanceScheduleList MaintenanceSchedule { get; }
 ```
 
-- *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference">RedisInstanceMaintenanceScheduleOutputReference</a>
+- *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList">RedisInstanceMaintenanceScheduleList</a>
 
 ---
 
@@ -1000,16 +979,6 @@ public RedisInstanceMaintenancePolicy MaintenancePolicyInput { get; }
 ```
 
 - *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a>
-
----
-
-##### `MaintenanceScheduleInput`<sup>Optional</sup> <a name="MaintenanceScheduleInput" id="@cdktf/provider-google.redisInstance.RedisInstance.property.maintenanceScheduleInput"></a>
-
-```csharp
-public RedisInstanceMaintenanceSchedule MaintenanceScheduleInput { get; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceSchedule">RedisInstanceMaintenanceSchedule</a>
 
 ---
 
@@ -1410,7 +1379,6 @@ new RedisInstanceConfig {
     System.Collections.Generic.IDictionary<string, string> Labels = null,
     string LocationId = null,
     RedisInstanceMaintenancePolicy MaintenancePolicy = null,
-    RedisInstanceMaintenanceSchedule MaintenanceSchedule = null,
     RedisInstancePersistenceConfig PersistenceConfig = null,
     string Project = null,
     string ReadReplicasMode = null,
@@ -1445,13 +1413,12 @@ new RedisInstanceConfig {
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.connectMode">ConnectMode</a></code> | <code>string</code> | The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.customerManagedKey">CustomerManagedKey</a></code> | <code>string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.displayName">DisplayName</a></code> | <code>string</code> | An arbitrary and optional user-provided name for the instance. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#id RedisInstance#id}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#id RedisInstance#id}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.labels">Labels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Resource labels to represent user provided metadata. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.locationId">LocationId</a></code> | <code>string</code> | The zone where the instance will be provisioned. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenancePolicy">MaintenancePolicy</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenancePolicy">RedisInstanceMaintenancePolicy</a></code> | maintenance_policy block. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenanceSchedule">MaintenanceSchedule</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceSchedule">RedisInstanceMaintenanceSchedule</a></code> | maintenance_schedule block. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.persistenceConfig">PersistenceConfig</a></code> | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstancePersistenceConfig">RedisInstancePersistenceConfig</a></code> | persistence_config block. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#project RedisInstance#project}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.project">Project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#project RedisInstance#project}. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.readReplicasMode">ReadReplicasMode</a></code> | <code>string</code> | Optional. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.redisConfigs">RedisConfigs</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.redisVersion">RedisVersion</a></code> | <code>string</code> | The version of Redis software. |
@@ -1545,7 +1512,7 @@ public double MemorySizeGb { get; set; }
 
 Redis memory size in GiB.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
 
 ---
 
@@ -1559,7 +1526,7 @@ public string Name { get; set; }
 
 The ID of the instance or a fully qualified identifier for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#name RedisInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#name RedisInstance#name}
 
 ---
 
@@ -1576,7 +1543,7 @@ Only applicable to STANDARD_HA tier which protects the instance against zonal fa
 If provided, it must be a different zone from the one provided in
 [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
 
 ---
 
@@ -1594,7 +1561,7 @@ Indicates whether OSS Redis AUTH is enabled for the
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
 
 ---
 
@@ -1611,7 +1578,7 @@ The full name of the Google Compute Engine network to which the instance is conn
 If left unspecified, the default network
 will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
 
 ---
 
@@ -1625,7 +1592,7 @@ public string ConnectMode { get; set; }
 
 The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
 
 ---
 
@@ -1642,7 +1609,7 @@ Optional.
 The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
 
 ---
 
@@ -1656,7 +1623,7 @@ public string DisplayName { get; set; }
 
 An arbitrary and optional user-provided name for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#display_name RedisInstance#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
 
 ---
 
@@ -1668,7 +1635,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#id RedisInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#id RedisInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1685,7 +1652,7 @@ public System.Collections.Generic.IDictionary<string, string> Labels { get; set;
 
 Resource labels to represent user provided metadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#labels RedisInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#labels RedisInstance#labels}
 
 ---
 
@@ -1705,7 +1672,7 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#location_id RedisInstance#location_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
 
 ---
 
@@ -1719,21 +1686,7 @@ public RedisInstanceMaintenancePolicy MaintenancePolicy { get; set; }
 
 maintenance_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
-
----
-
-##### `MaintenanceSchedule`<sup>Optional</sup> <a name="MaintenanceSchedule" id="@cdktf/provider-google.redisInstance.RedisInstanceConfig.property.maintenanceSchedule"></a>
-
-```csharp
-public RedisInstanceMaintenanceSchedule MaintenanceSchedule { get; set; }
-```
-
-- *Type:* <a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceSchedule">RedisInstanceMaintenanceSchedule</a>
-
-maintenance_schedule block.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#maintenance_schedule RedisInstance#maintenance_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
 
 ---
 
@@ -1747,7 +1700,7 @@ public RedisInstancePersistenceConfig PersistenceConfig { get; set; }
 
 persistence_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
 
 ---
 
@@ -1759,7 +1712,7 @@ public string Project { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#project RedisInstance#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#project RedisInstance#project}.
 
 ---
 
@@ -1781,7 +1734,7 @@ If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
 * READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
   can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
 
 ---
 
@@ -1795,7 +1748,7 @@ public System.Collections.Generic.IDictionary<string, string> RedisConfigs { get
 
 Redis configuration parameters, according to http://redis.io/topics/config. Please check Memorystore documentation for the list of supported parameters: https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
 
 ---
 
@@ -1813,7 +1766,7 @@ If not provided, latest supported
 version will be used. Please check the API documentation linked
 at the top for the latest valid values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
 
 ---
 
@@ -1827,7 +1780,7 @@ public string Region { get; set; }
 
 The name of the Redis region of the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#region RedisInstance#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#region RedisInstance#region}
 
 ---
 
@@ -1846,7 +1799,7 @@ read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabl
 for a Standard Tier instance, the only valid value is 1 and the default is 1.
 The valid value for basic tier is 0 and the default is also 0.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
 
 ---
 
@@ -1865,7 +1818,7 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
 
 ---
 
@@ -1884,7 +1837,7 @@ an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size
 "auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
 range associated with the private service access connection, or "auto".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
 
 ---
 
@@ -1901,7 +1854,7 @@ The service tier of the instance. Must be one of these values:.
 * BASIC: standalone instance
 * STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#tier RedisInstance#tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#tier RedisInstance#tier}
 
 ---
 
@@ -1915,7 +1868,7 @@ public RedisInstanceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
 
 ---
 
@@ -1931,7 +1884,7 @@ The TLS mode of the Redis instance, If not provided, TLS is disabled for the ins
 
 * SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
 
 ---
 
@@ -1967,7 +1920,7 @@ public string Description { get; set; }
 
 Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#description RedisInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#description RedisInstance#description}
 
 ---
 
@@ -1981,7 +1934,7 @@ public object WeeklyMaintenanceWindow { get; set; }
 
 weekly_maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
 
 ---
 
@@ -2026,7 +1979,7 @@ Required. The day of week that maintenance updates occur.
 * SATURDAY: Saturday
 * SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#day RedisInstance#day}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#day RedisInstance#day}
 
 ---
 
@@ -2040,7 +1993,7 @@ public RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime 
 
 start_time block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#start_time RedisInstance#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#start_time RedisInstance#start_time}
 
 ---
 
@@ -2083,7 +2036,7 @@ Hours of day in 24 hour format.
 Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#hours RedisInstance#hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#hours RedisInstance#hours}
 
 ---
 
@@ -2097,7 +2050,7 @@ public double Minutes { get; set; }
 
 Minutes of hour of day. Must be from 0 to 59.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#minutes RedisInstance#minutes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
 
 ---
 
@@ -2111,7 +2064,7 @@ public double Nanos { get; set; }
 
 Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#nanos RedisInstance#nanos}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
 
 ---
 
@@ -2128,7 +2081,7 @@ Seconds of minutes of the time.
 Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#seconds RedisInstance#seconds}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
 
 ---
 
@@ -2195,7 +2148,7 @@ Optional. Controls whether Persistence features are enabled. If not provided, th
 * DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
 * RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
 
 ---
 
@@ -2214,7 +2167,7 @@ Optional. Available snapshot periods for scheduling.
 * TWELVE_HOURS:	Snapshot every 12 hours.
 * TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
 
 ---
 
@@ -2235,7 +2188,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
 and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
 
 ---
 
@@ -2270,9 +2223,9 @@ new RedisInstanceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#create RedisInstance#create}. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#delete RedisInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#update RedisInstance#update}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#create RedisInstance#create}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#delete RedisInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#update RedisInstance#update}. |
 
 ---
 
@@ -2284,7 +2237,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#create RedisInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#create RedisInstance#create}.
 
 ---
 
@@ -2296,7 +2249,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#delete RedisInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#delete RedisInstance#delete}.
 
 ---
 
@@ -2308,7 +2261,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#update RedisInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#update RedisInstance#update}.
 
 ---
 
@@ -3499,6 +3452,138 @@ public RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime InternalVa
 ---
 
 
+### RedisInstanceMaintenanceScheduleList <a name="RedisInstanceMaintenanceScheduleList" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer"></a>
+
+```csharp
+using HashiCorp.Cdktf.Providers.Google;
+
+new RedisInstanceMaintenanceScheduleList(IInterpolatingParent TerraformResource, string TerraformAttribute, bool WrapsSet);
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.wrapsSet">WrapsSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `TerraformResource`<sup>Required</sup> <a name="TerraformResource" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* HashiCorp.Cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `TerraformAttribute`<sup>Required</sup> <a name="TerraformAttribute" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `WrapsSet`<sup>Required</sup> <a name="WrapsSet" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.computeFqn"></a>
+
+```csharp
+private string ComputeFqn()
+```
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.resolve"></a>
+
+```csharp
+private object Resolve(IResolveContext Context)
+```
+
+Produce the Token's value at resolution time.
+
+###### `Context`<sup>Required</sup> <a name="Context" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.resolve.parameter._context"></a>
+
+- *Type:* HashiCorp.Cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.toString"></a>
+
+```csharp
+private string ToString()
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `Get` <a name="Get" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.get"></a>
+
+```csharp
+private RedisInstanceMaintenanceScheduleOutputReference Get(double Index)
+```
+
+###### `Index`<sup>Required</sup> <a name="Index" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.get.parameter.index"></a>
+
+- *Type:* double
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.property.creationStack"></a>
+
+```csharp
+public string[] CreationStack { get; }
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleList.property.fqn"></a>
+
+```csharp
+public string Fqn { get; }
+```
+
+- *Type:* string
+
+---
+
+
 ### RedisInstanceMaintenanceScheduleOutputReference <a name="RedisInstanceMaintenanceScheduleOutputReference" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer"></a>
@@ -3506,13 +3591,15 @@ public RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime InternalVa
 ```csharp
 using HashiCorp.Cdktf.Providers.Google;
 
-new RedisInstanceMaintenanceScheduleOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute);
+new RedisInstanceMaintenanceScheduleOutputReference(IInterpolatingParent TerraformResource, string TerraformAttribute, double ComplexObjectIndex, bool ComplexObjectIsFromSet);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.terraformResource">TerraformResource</a></code> | <code>HashiCorp.Cdktf.IInterpolatingParent</code> | The parent resource. |
 | <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.terraformAttribute">TerraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.complexObjectIndex">ComplexObjectIndex</a></code> | <code>double</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.complexObjectIsFromSet">ComplexObjectIsFromSet</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
 
 ---
 
@@ -3529,6 +3616,22 @@ The parent resource.
 - *Type:* string
 
 The attribute on the parent resource this class is referencing.
+
+---
+
+##### `ComplexObjectIndex`<sup>Required</sup> <a name="ComplexObjectIndex" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* double
+
+the index of this item in the list.
+
+---
+
+##### `ComplexObjectIsFromSet`<sup>Required</sup> <a name="ComplexObjectIsFromSet" id="@cdktf/provider-google.redisInstance.RedisInstanceMaintenanceScheduleOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 
 ---
 

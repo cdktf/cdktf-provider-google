@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/access_context_manager_access_policy_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/access_context_manager_access_policy_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,20 +13,20 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleAccessContextManagerAccessPolicyIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/access_context_manager_access_policy_iam_policy#id DataGoogleAccessContextManagerAccessPolicyIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/access_context_manager_access_policy_iam_policy#id DataGoogleAccessContextManagerAccessPolicyIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/access_context_manager_access_policy_iam_policy#name DataGoogleAccessContextManagerAccessPolicyIamPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/access_context_manager_access_policy_iam_policy#name DataGoogleAccessContextManagerAccessPolicyIamPolicy#name}
   */
   readonly name: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/access_context_manager_access_policy_iam_policy google_access_context_manager_access_policy_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/access_context_manager_access_policy_iam_policy google_access_context_manager_access_policy_iam_policy}
 */
 export class DataGoogleAccessContextManagerAccessPolicyIamPolicy extends cdktf.TerraformDataSource {
 
@@ -40,7 +40,7 @@ export class DataGoogleAccessContextManagerAccessPolicyIamPolicy extends cdktf.T
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/data-sources/access_context_manager_access_policy_iam_policy google_access_context_manager_access_policy_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/access_context_manager_access_policy_iam_policy google_access_context_manager_access_policy_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -51,7 +51,7 @@ export class DataGoogleAccessContextManagerAccessPolicyIamPolicy extends cdktf.T
       terraformResourceType: 'google_access_context_manager_access_policy_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.74.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

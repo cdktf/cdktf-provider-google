@@ -1,3 +1,3 @@
 # `google_billing_account_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_billing_account_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/billing_account_iam_policy).
+Refer to the Terraform Registory for docs: [`google_billing_account_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/billing_account_iam_policy).

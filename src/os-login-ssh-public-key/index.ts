@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key
+// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * An expiration time in microseconds since epoch.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#expiration_time_usec OsLoginSshPublicKey#expiration_time_usec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#expiration_time_usec OsLoginSshPublicKey#expiration_time_usec}
   */
   readonly expirationTimeUsec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#id OsLoginSshPublicKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#id OsLoginSshPublicKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,39 +28,39 @@ export interface OsLoginSshPublicKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * Public key text in SSH format, defined by RFC4253 section 6.6.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#key OsLoginSshPublicKey#key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#key OsLoginSshPublicKey#key}
   */
   readonly key: string;
   /**
   * The project ID of the Google Cloud Platform project.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#project OsLoginSshPublicKey#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#project OsLoginSshPublicKey#project}
   */
   readonly project?: string;
   /**
   * The user email.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#user OsLoginSshPublicKey#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#user OsLoginSshPublicKey#user}
   */
   readonly user: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#timeouts OsLoginSshPublicKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#timeouts OsLoginSshPublicKey#timeouts}
   */
   readonly timeouts?: OsLoginSshPublicKeyTimeouts;
 }
 export interface OsLoginSshPublicKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#create OsLoginSshPublicKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#create OsLoginSshPublicKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#delete OsLoginSshPublicKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#delete OsLoginSshPublicKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key#update OsLoginSshPublicKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key#update OsLoginSshPublicKey#update}
   */
   readonly update?: string;
 }
@@ -181,7 +181,7 @@ export class OsLoginSshPublicKeyTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key}
 */
 export class OsLoginSshPublicKey extends cdktf.TerraformResource {
 
@@ -195,7 +195,7 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/os_login_ssh_public_key google_os_login_ssh_public_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -206,7 +206,7 @@ export class OsLoginSshPublicKey extends cdktf.TerraformResource {
       terraformResourceType: 'google_os_login_ssh_public_key',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.74.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance
+// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -18,7 +18,7 @@ against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#alternative_location_id RedisInstance#alternative_location_id}
   */
   readonly alternativeLocationId?: string;
   /**
@@ -26,7 +26,7 @@ If provided, it must be a different zone from the one provided in
 instance. If set to "true" AUTH is enabled on the instance.
 Default value is "false" meaning AUTH is disabled.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#auth_enabled RedisInstance#auth_enabled}
   */
   readonly authEnabled?: boolean | cdktf.IResolvable;
   /**
@@ -34,30 +34,30 @@ Default value is "false" meaning AUTH is disabled.
 instance is connected. If left unspecified, the default network
 will be used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#authorized_network RedisInstance#authorized_network}
   */
   readonly authorizedNetwork?: string;
   /**
   * The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#connect_mode RedisInstance#connect_mode}
   */
   readonly connectMode?: string;
   /**
   * Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#customer_managed_key RedisInstance#customer_managed_key}
   */
   readonly customerManagedKey?: string;
   /**
   * An arbitrary and optional user-provided name for the instance.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#display_name RedisInstance#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#display_name RedisInstance#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#id RedisInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#id RedisInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -66,7 +66,7 @@ instance. If this is provided, CMEK is enabled.
   /**
   * Resource labels to represent user provided metadata.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#labels RedisInstance#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#labels RedisInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
@@ -76,23 +76,23 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#location_id RedisInstance#location_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#location_id RedisInstance#location_id}
   */
   readonly locationId?: string;
   /**
   * Redis memory size in GiB.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#memory_size_gb RedisInstance#memory_size_gb}
   */
   readonly memorySizeGb: number;
   /**
   * The ID of the instance or a fully qualified identifier for the instance.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#name RedisInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#name RedisInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#project RedisInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#project RedisInstance#project}
   */
   readonly project?: string;
   /**
@@ -103,7 +103,7 @@ instance cannot scale up or down the number of replicas.
 - READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance
 can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#read_replicas_mode RedisInstance#read_replicas_mode}
   */
   readonly readReplicasMode?: string;
   /**
@@ -111,7 +111,7 @@ can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_D
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#redis_configs RedisInstance#redis_configs}
   */
   readonly redisConfigs?: { [key: string]: string };
   /**
@@ -119,13 +119,13 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
 version will be used. Please check the API documentation linked
 at the top for the latest valid values.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#redis_version RedisInstance#redis_version}
   */
   readonly redisVersion?: string;
   /**
   * The name of the Redis region of the instance.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#region RedisInstance#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#region RedisInstance#region}
   */
   readonly region?: string;
   /**
@@ -134,7 +134,7 @@ read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabl
 for a Standard Tier instance, the only valid value is 1 and the default is 1.
 The valid value for basic tier is 0 and the default is also 0.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#replica_count RedisInstance#replica_count}
   */
   readonly replicaCount?: number;
   /**
@@ -144,7 +144,7 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#reserved_ip_range RedisInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;
   /**
@@ -153,7 +153,7 @@ an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size
 "auto". For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
 range associated with the private service access connection, or "auto".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#secondary_ip_range RedisInstance#secondary_ip_range}
   */
   readonly secondaryIpRange?: string;
   /**
@@ -162,7 +162,7 @@ range associated with the private service access connection, or "auto".
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances Default value: "BASIC" Possible values: ["BASIC", "STANDARD_HA"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#tier RedisInstance#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#tier RedisInstance#tier}
   */
   readonly tier?: string;
   /**
@@ -170,33 +170,101 @@ range associated with the private service access connection, or "auto".
 
 - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: "DISABLED" Possible values: ["SERVER_AUTHENTICATION", "DISABLED"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#transit_encryption_mode RedisInstance#transit_encryption_mode}
   */
   readonly transitEncryptionMode?: string;
   /**
   * maintenance_policy block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#maintenance_policy RedisInstance#maintenance_policy}
   */
   readonly maintenancePolicy?: RedisInstanceMaintenancePolicy;
   /**
-  * maintenance_schedule block
-  * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#maintenance_schedule RedisInstance#maintenance_schedule}
-  */
-  readonly maintenanceSchedule?: RedisInstanceMaintenanceSchedule;
-  /**
   * persistence_config block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#persistence_config RedisInstance#persistence_config}
   */
   readonly persistenceConfig?: RedisInstancePersistenceConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#timeouts RedisInstance#timeouts}
   */
   readonly timeouts?: RedisInstanceTimeouts;
+}
+export interface RedisInstanceMaintenanceSchedule {
+}
+
+export function redisInstanceMaintenanceScheduleToTerraform(struct?: RedisInstanceMaintenanceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class RedisInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): RedisInstanceMaintenanceSchedule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisInstanceMaintenanceSchedule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // end_time - computed: true, optional: false, required: false
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+
+  // schedule_deadline_time - computed: true, optional: false, required: false
+  public get scheduleDeadlineTime() {
+    return this.getStringAttribute('schedule_deadline_time');
+  }
+
+  // start_time - computed: true, optional: false, required: false
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+}
+
+export class RedisInstanceMaintenanceScheduleList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): RedisInstanceMaintenanceScheduleOutputReference {
+    return new RedisInstanceMaintenanceScheduleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface RedisInstanceNodes {
 }
@@ -356,26 +424,26 @@ export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
   * Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#hours RedisInstance#hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#hours RedisInstance#hours}
   */
   readonly hours?: number;
   /**
   * Minutes of hour of day. Must be from 0 to 59.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#minutes RedisInstance#minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#minutes RedisInstance#minutes}
   */
   readonly minutes?: number;
   /**
   * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#nanos RedisInstance#nanos}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#nanos RedisInstance#nanos}
   */
   readonly nanos?: number;
   /**
   * Seconds of minutes of the time. Must normally be from 0 to 59.
 An API may allow the value 60 if it allows leap-seconds.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#seconds RedisInstance#seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#seconds RedisInstance#seconds}
   */
   readonly seconds?: number;
 }
@@ -520,13 +588,13 @@ export interface RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow {
 - SATURDAY: Saturday
 - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#day RedisInstance#day}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#day RedisInstance#day}
   */
   readonly day: string;
   /**
   * start_time block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#start_time RedisInstance#start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#start_time RedisInstance#start_time}
   */
   readonly startTime: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 }
@@ -649,13 +717,13 @@ export interface RedisInstanceMaintenancePolicy {
 Create/Update methods return INVALID_ARGUMENT if the
 length is greater than 512.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#description RedisInstance#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#description RedisInstance#description}
   */
   readonly description?: string;
   /**
   * weekly_maintenance_window block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#weekly_maintenance_window RedisInstance#weekly_maintenance_window}
   */
   readonly weeklyMaintenanceWindow?: RedisInstanceMaintenancePolicyWeeklyMaintenanceWindow[] | cdktf.IResolvable;
 }
@@ -751,59 +819,6 @@ export class RedisInstanceMaintenancePolicyOutputReference extends cdktf.Complex
     return this._weeklyMaintenanceWindow.internalValue;
   }
 }
-export interface RedisInstanceMaintenanceSchedule {
-}
-
-export function redisInstanceMaintenanceScheduleToTerraform(struct?: RedisInstanceMaintenanceScheduleOutputReference | RedisInstanceMaintenanceSchedule): any {
-  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
-  if (cdktf.isComplexElement(struct)) {
-    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
-  }
-  return {
-  }
-}
-
-export class RedisInstanceMaintenanceScheduleOutputReference extends cdktf.ComplexObject {
-  private isEmptyObject = false;
-
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  */
-  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
-    super(terraformResource, terraformAttribute, false, 0);
-  }
-
-  public get internalValue(): RedisInstanceMaintenanceSchedule | undefined {
-    let hasAnyValues = this.isEmptyObject;
-    const internalValueResult: any = {};
-    return hasAnyValues ? internalValueResult : undefined;
-  }
-
-  public set internalValue(value: RedisInstanceMaintenanceSchedule | undefined) {
-    if (value === undefined) {
-      this.isEmptyObject = false;
-    }
-    else {
-      this.isEmptyObject = Object.keys(value).length === 0;
-    }
-  }
-
-  // end_time - computed: true, optional: false, required: false
-  public get endTime() {
-    return this.getStringAttribute('end_time');
-  }
-
-  // schedule_deadline_time - computed: true, optional: false, required: false
-  public get scheduleDeadlineTime() {
-    return this.getStringAttribute('schedule_deadline_time');
-  }
-
-  // start_time - computed: true, optional: false, required: false
-  public get startTime() {
-    return this.getStringAttribute('start_time');
-  }
-}
 export interface RedisInstancePersistenceConfig {
   /**
   * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
@@ -811,7 +826,7 @@ export interface RedisInstancePersistenceConfig {
 - DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted.
 - RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#persistence_mode RedisInstance#persistence_mode}
   */
   readonly persistenceMode?: string;
   /**
@@ -822,7 +837,7 @@ export interface RedisInstancePersistenceConfig {
 - TWELVE_HOURS:	Snapshot every 12 hours.
 - TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: ["ONE_HOUR", "SIX_HOURS", "TWELVE_HOURS", "TWENTY_FOUR_HOURS"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#rdb_snapshot_period RedisInstance#rdb_snapshot_period}
   */
   readonly rdbSnapshotPeriod?: string;
   /**
@@ -833,7 +848,7 @@ A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution
 and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#rdb_snapshot_start_time RedisInstance#rdb_snapshot_start_time}
   */
   readonly rdbSnapshotStartTime?: string;
 }
@@ -949,15 +964,15 @@ export class RedisInstancePersistenceConfigOutputReference extends cdktf.Complex
 }
 export interface RedisInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#create RedisInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#create RedisInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#delete RedisInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#delete RedisInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance#update RedisInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance#update RedisInstance#update}
   */
   readonly update?: string;
 }
@@ -1078,7 +1093,7 @@ export class RedisInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance google_redis_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance google_redis_instance}
 */
 export class RedisInstance extends cdktf.TerraformResource {
 
@@ -1092,7 +1107,7 @@ export class RedisInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.72.1/docs/resources/redis_instance google_redis_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/redis_instance google_redis_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1103,7 +1118,7 @@ export class RedisInstance extends cdktf.TerraformResource {
       terraformResourceType: 'google_redis_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.72.1',
+        providerVersion: '4.74.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1136,7 +1151,6 @@ export class RedisInstance extends cdktf.TerraformResource {
     this._tier = config.tier;
     this._transitEncryptionMode = config.transitEncryptionMode;
     this._maintenancePolicy.internalValue = config.maintenancePolicy;
-    this._maintenanceSchedule.internalValue = config.maintenanceSchedule;
     this._persistenceConfig.internalValue = config.persistenceConfig;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1307,6 +1321,12 @@ export class RedisInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationIdInput() {
     return this._locationId;
+  }
+
+  // maintenance_schedule - computed: true, optional: false, required: false
+  private _maintenanceSchedule = new RedisInstanceMaintenanceScheduleList(this, "maintenance_schedule", false);
+  public get maintenanceSchedule() {
+    return this._maintenanceSchedule;
   }
 
   // memory_size_gb - computed: false, optional: false, required: true
@@ -1543,22 +1563,6 @@ export class RedisInstance extends cdktf.TerraformResource {
     return this._maintenancePolicy.internalValue;
   }
 
-  // maintenance_schedule - computed: false, optional: true, required: false
-  private _maintenanceSchedule = new RedisInstanceMaintenanceScheduleOutputReference(this, "maintenance_schedule");
-  public get maintenanceSchedule() {
-    return this._maintenanceSchedule;
-  }
-  public putMaintenanceSchedule(value: RedisInstanceMaintenanceSchedule) {
-    this._maintenanceSchedule.internalValue = value;
-  }
-  public resetMaintenanceSchedule() {
-    this._maintenanceSchedule.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get maintenanceScheduleInput() {
-    return this._maintenanceSchedule.internalValue;
-  }
-
   // persistence_config - computed: false, optional: true, required: false
   private _persistenceConfig = new RedisInstancePersistenceConfigOutputReference(this, "persistence_config");
   public get persistenceConfig() {
@@ -1619,7 +1623,6 @@ export class RedisInstance extends cdktf.TerraformResource {
       tier: cdktf.stringToTerraform(this._tier),
       transit_encryption_mode: cdktf.stringToTerraform(this._transitEncryptionMode),
       maintenance_policy: redisInstanceMaintenancePolicyToTerraform(this._maintenancePolicy.internalValue),
-      maintenance_schedule: redisInstanceMaintenanceScheduleToTerraform(this._maintenanceSchedule.internalValue),
       persistence_config: redisInstancePersistenceConfigToTerraform(this._persistenceConfig.internalValue),
       timeouts: redisInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
