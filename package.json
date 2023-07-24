@@ -51,7 +51,7 @@
     "cdktf-cli": "^0.17.0",
     "constructs": "^10.0.0",
     "dot-prop": "^5.2.0",
-    "jsii": "^5.0.1",
+    "jsii": "^5.1.9",
     "jsii-diff": "^1.81.0",
     "jsii-docgen": "~9.0.0",
     "jsii-pacmak": "^1.81.0",
@@ -84,7 +84,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.0",
+  "version": "8.0.5",
   "types": "lib/index.d.ts",
   "stability": "stable",
   "jsii": {
