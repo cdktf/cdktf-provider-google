@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway
+// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -17,27 +17,27 @@ export interface NetworkServicesGatewayConfig extends cdktf.TerraformMetaArgumen
 an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'.
 Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#addresses NetworkServicesGateway#addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#addresses NetworkServicesGateway#addresses}
   */
   readonly addresses?: string[];
   /**
   * A fully-qualified Certificates URL reference. The proxy presents a Certificate (selected based on SNI) when establishing a TLS connection.
 This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#certificate_urls NetworkServicesGateway#certificate_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#certificate_urls NetworkServicesGateway#certificate_urls}
   */
   readonly certificateUrls?: string[];
   /**
   * When deleting a gateway of type 'SECURE_WEB_GATEWAY', this boolean option will also delete auto generated router by the gateway creation.
 If there is no other gateway of type 'SECURE_WEB_GATEWAY' remaining for that region and network it will be deleted.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#delete_swg_autogen_router_on_destroy NetworkServicesGateway#delete_swg_autogen_router_on_destroy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#delete_swg_autogen_router_on_destroy NetworkServicesGateway#delete_swg_autogen_router_on_destroy}
   */
   readonly deleteSwgAutogenRouterOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * A free-text description of the resource. Max length 1024 characters.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#description NetworkServicesGateway#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#description NetworkServicesGateway#description}
   */
   readonly description?: string;
   /**
@@ -45,11 +45,11 @@ If there is no other gateway of type 'SECURE_WEB_GATEWAY' remaining for that reg
 For example: 'projects/*\/locations/*\/gatewaySecurityPolicies/swg-policy'.
 This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#gateway_security_policy NetworkServicesGateway#gateway_security_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#gateway_security_policy NetworkServicesGateway#gateway_security_policy}
   */
   readonly gatewaySecurityPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#id NetworkServicesGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#id NetworkServicesGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -58,20 +58,20 @@ This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
   /**
   * Set of label tags associated with the Gateway resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#labels NetworkServicesGateway#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#labels NetworkServicesGateway#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the gateway.
 The default value is 'global'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#location NetworkServicesGateway#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#location NetworkServicesGateway#location}
   */
   readonly location?: string;
   /**
   * Short name of the Gateway resource to be created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#name NetworkServicesGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#name NetworkServicesGateway#name}
   */
   readonly name: string;
   /**
@@ -79,7 +79,7 @@ The default value is 'global'.
 For example: 'projects/*\/global/networks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#network NetworkServicesGateway#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#network NetworkServicesGateway#network}
   */
   readonly network?: string;
   /**
@@ -87,11 +87,11 @@ Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
 The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are
 limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#ports NetworkServicesGateway#ports}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#ports NetworkServicesGateway#ports}
   */
   readonly ports: number[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#project NetworkServicesGateway#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#project NetworkServicesGateway#project}
   */
   readonly project?: string;
   /**
@@ -100,14 +100,14 @@ The configuration for multiple Gateway instances with the same scope will be mer
 a single coniguration to the proxy/load balancer.
 Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#scope NetworkServicesGateway#scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#scope NetworkServicesGateway#scope}
   */
   readonly scope: string;
   /**
   * A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated.
 If empty, TLS termination is disabled.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#server_tls_policy NetworkServicesGateway#server_tls_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#server_tls_policy NetworkServicesGateway#server_tls_policy}
   */
   readonly serverTlsPolicy?: string;
   /**
@@ -115,33 +115,33 @@ If empty, TLS termination is disabled.
 For example: 'projects/*\/regions/us-central1/subnetworks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#subnetwork NetworkServicesGateway#subnetwork}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#subnetwork NetworkServicesGateway#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * Immutable. The type of the customer-managed gateway. Possible values are: * OPEN_MESH * SECURE_WEB_GATEWAY. Possible values: ["TYPE_UNSPECIFIED", "OPEN_MESH", "SECURE_WEB_GATEWAY"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#type NetworkServicesGateway#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#type NetworkServicesGateway#type}
   */
   readonly type: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#timeouts NetworkServicesGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#timeouts NetworkServicesGateway#timeouts}
   */
   readonly timeouts?: NetworkServicesGatewayTimeouts;
 }
 export interface NetworkServicesGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#create NetworkServicesGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#create NetworkServicesGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#delete NetworkServicesGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#delete NetworkServicesGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway#update NetworkServicesGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway#update NetworkServicesGateway#update}
   */
   readonly update?: string;
 }
@@ -262,7 +262,7 @@ export class NetworkServicesGatewayTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway google_network_services_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway google_network_services_gateway}
 */
 export class NetworkServicesGateway extends cdktf.TerraformResource {
 
@@ -276,7 +276,7 @@ export class NetworkServicesGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/network_services_gateway google_network_services_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_services_gateway google_network_services_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -287,7 +287,7 @@ export class NetworkServicesGateway extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_services_gateway',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.74.0',
+        providerVersion: '4.75.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

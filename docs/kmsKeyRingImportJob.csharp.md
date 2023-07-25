@@ -1,6 +1,6 @@
 # `google_kms_key_ring_import_job`
 
-Refer to the Terraform Registory for docs: [`google_kms_key_ring_import_job`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job).
+Refer to the Terraform Registory for docs: [`google_kms_key_ring_import_job`](https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job).
 
 # `kmsKeyRingImportJob` Submodule <a name="`kmsKeyRingImportJob` Submodule" id="@cdktf/provider-google.kmsKeyRingImportJob"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_kms_key_ring_import_job`](ht
 
 ### KmsKeyRingImportJob <a name="KmsKeyRingImportJob" id="@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJob"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job google_kms_key_ring_import_job}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job google_kms_key_ring_import_job}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJob.Initializer"></a>
 
@@ -776,7 +776,7 @@ new KmsKeyRingImportJobConfig {
 | <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.importMethod">ImportMethod</a></code> | <code>string</code> | The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"]. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.keyRing">KeyRing</a></code> | <code>string</code> | The KeyRing that this import job belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.protectionLevel">ProtectionLevel</a></code> | <code>string</code> | The protection level of the ImportJob. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#id KmsKeyRingImportJob#id}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#id KmsKeyRingImportJob#id}. |
 | <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobTimeouts">KmsKeyRingImportJobTimeouts</a></code> | timeouts block. |
 
 ---
@@ -861,7 +861,7 @@ public string ImportJobId { get; set; }
 
 It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#import_job_id KmsKeyRingImportJob#import_job_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#import_job_id KmsKeyRingImportJob#import_job_id}
 
 ---
 
@@ -875,7 +875,7 @@ public string ImportMethod { get; set; }
 
 The wrapping method to be used for incoming key material. Possible values: ["RSA_OAEP_3072_SHA1_AES_256", "RSA_OAEP_4096_SHA1_AES_256"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#import_method KmsKeyRingImportJob#import_method}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#import_method KmsKeyRingImportJob#import_method}
 
 ---
 
@@ -889,7 +889,7 @@ public string KeyRing { get; set; }
 
 The KeyRing that this import job belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#key_ring KmsKeyRingImportJob#key_ring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#key_ring KmsKeyRingImportJob#key_ring}
 
 ---
 
@@ -906,7 +906,7 @@ The protection level of the ImportJob.
 This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into. Possible values: ["SOFTWARE", "HSM", "EXTERNAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#protection_level KmsKeyRingImportJob#protection_level}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#protection_level KmsKeyRingImportJob#protection_level}
 
 ---
 
@@ -918,7 +918,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#id KmsKeyRingImportJob#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#id KmsKeyRingImportJob#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -935,7 +935,7 @@ public KmsKeyRingImportJobTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#timeouts KmsKeyRingImportJob#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#timeouts KmsKeyRingImportJob#timeouts}
 
 ---
 
@@ -969,8 +969,8 @@ new KmsKeyRingImportJobTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#create KmsKeyRingImportJob#create}. |
-| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#create KmsKeyRingImportJob#create}. |
+| <code><a href="#@cdktf/provider-google.kmsKeyRingImportJob.KmsKeyRingImportJobTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}. |
 
 ---
 
@@ -982,7 +982,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#create KmsKeyRingImportJob#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#create KmsKeyRingImportJob#create}.
 
 ---
 
@@ -994,7 +994,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_import_job#delete KmsKeyRingImportJob#delete}.
 
 ---
 

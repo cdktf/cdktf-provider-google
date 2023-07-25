@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image
+// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +13,36 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image#family DataGoogleComputeImage#family}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#family DataGoogleComputeImage#family}
   */
   readonly family?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image#filter DataGoogleComputeImage#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#filter DataGoogleComputeImage#filter}
   */
   readonly filter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image#id DataGoogleComputeImage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#id DataGoogleComputeImage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image#name DataGoogleComputeImage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#most_recent DataGoogleComputeImage#most_recent}
+  */
+  readonly mostRecent?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#name DataGoogleComputeImage#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image#project DataGoogleComputeImage#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image#project DataGoogleComputeImage#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image google_compute_image}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image google_compute_image}
 */
 export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
 
@@ -52,7 +56,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/compute_image google_compute_image} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/compute_image google_compute_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -63,7 +67,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_image',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.74.0',
+        providerVersion: '4.75.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -77,6 +81,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
     this._family = config.family;
     this._filter = config.filter;
     this._id = config.id;
+    this._mostRecent = config.mostRecent;
     this._name = config.name;
     this._project = config.project;
   }
@@ -179,6 +184,22 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
     return this.getListAttribute('licenses');
   }
 
+  // most_recent - computed: false, optional: true, required: false
+  private _mostRecent?: boolean | cdktf.IResolvable; 
+  public get mostRecent() {
+    return this.getBooleanAttribute('most_recent');
+  }
+  public set mostRecent(value: boolean | cdktf.IResolvable) {
+    this._mostRecent = value;
+  }
+  public resetMostRecent() {
+    this._mostRecent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mostRecentInput() {
+    return this._mostRecent;
+  }
+
   // name - computed: true, optional: true, required: false
   private _name?: string; 
   public get name() {
@@ -250,6 +271,7 @@ export class DataGoogleComputeImage extends cdktf.TerraformDataSource {
       family: cdktf.stringToTerraform(this._family),
       filter: cdktf.stringToTerraform(this._filter),
       id: cdktf.stringToTerraform(this._id),
+      most_recent: cdktf.booleanToTerraform(this._mostRecent),
       name: cdktf.stringToTerraform(this._name),
       project: cdktf.stringToTerraform(this._project),
     };
