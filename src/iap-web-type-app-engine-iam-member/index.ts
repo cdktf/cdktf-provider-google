@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface IapWebTypeAppEngineIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#condition IapWebTypeAppEngineIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#condition IapWebTypeAppEngineIamMember#condition}
   */
   readonly condition?: IapWebTypeAppEngineIamMemberCondition;
 }
 export interface IapWebTypeAppEngineIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}
   */
   readonly title: string;
 }
@@ -157,7 +152,7 @@ export class IapWebTypeAppEngineIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member}
 */
 export class IapWebTypeAppEngineIamMember extends cdktf.TerraformResource {
 
@@ -171,7 +166,7 @@ export class IapWebTypeAppEngineIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -182,7 +177,7 @@ export class IapWebTypeAppEngineIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_iap_web_type_app_engine_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.74.0',
+        providerVersion: '4.75.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

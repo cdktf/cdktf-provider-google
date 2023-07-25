@@ -1,6 +1,6 @@
 # `data_google_healthcare_fhir_store_iam_policy`
 
-Refer to the Terraform Registory for docs: [`data_google_healthcare_fhir_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy).
+Refer to the Terraform Registory for docs: [`data_google_healthcare_fhir_store_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy).
 
 # `dataGoogleHealthcareFhirStoreIamPolicy` Submodule <a name="`dataGoogleHealthcareFhirStoreIamPolicy` Submodule" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_google_healthcare_fhir_store_i
 
 ### DataGoogleHealthcareFhirStoreIamPolicy <a name="DataGoogleHealthcareFhirStoreIamPolicy" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy google_healthcare_fhir_store_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy google_healthcare_fhir_store_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarefhirstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarefhirstoreiampolicy"
 
 datagooglehealthcarefhirstoreiampolicy.NewDataGoogleHealthcareFhirStoreIamPolicy(scope Construct, id *string, config DataGoogleHealthcareFhirStoreIamPolicyConfig) DataGoogleHealthcareFhirStoreIamPolicy
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarefhirstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarefhirstoreiampolicy"
 
 datagooglehealthcarefhirstoreiampolicy.DataGoogleHealthcareFhirStoreIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarefhirstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarefhirstoreiampolicy"
 
 datagooglehealthcarefhirstoreiampolicy.DataGoogleHealthcareFhirStoreIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglehealthcarefhirstoreiampolicy.DataGoogleHealthcareFhirStoreIamPolicy_Is
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarefhirstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarefhirstoreiampolicy"
 
 datagooglehealthcarefhirstoreiampolicy.DataGoogleHealthcareFhirStoreIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -566,7 +566,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcarefhirstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcarefhirstoreiampolicy"
 
 &datagooglehealthcarefhirstoreiampolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig {
 	Connection: interface{},
@@ -592,8 +592,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglehealthcare
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.fhirStoreId">FhirStoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy#fhir_store_id DataGoogleHealthcareFhirStoreIamPolicy#fhir_store_id}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy#id DataGoogleHealthcareFhirStoreIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.fhirStoreId">FhirStoreId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy#fhir_store_id DataGoogleHealthcareFhirStoreIamPolicy#fhir_store_id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleHealthcareFhirStoreIamPolicy.DataGoogleHealthcareFhirStoreIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy#id DataGoogleHealthcareFhirStoreIamPolicy#id}. |
 
 ---
 
@@ -675,7 +675,7 @@ FhirStoreId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy#fhir_store_id DataGoogleHealthcareFhirStoreIamPolicy#fhir_store_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy#fhir_store_id DataGoogleHealthcareFhirStoreIamPolicy#fhir_store_id}.
 
 ---
 
@@ -687,7 +687,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/healthcare_fhir_store_iam_policy#id DataGoogleHealthcareFhirStoreIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/healthcare_fhir_store_iam_policy#id DataGoogleHealthcareFhirStoreIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

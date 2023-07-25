@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_crypto_key_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/kms_crypto_key_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleKmsCryptoKeyIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/kms_crypto_key_iam_policy#crypto_key_id DataGoogleKmsCryptoKeyIamPolicy#crypto_key_id}
   */
   readonly cryptoKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/kms_crypto_key_iam_policy#id DataGoogleKmsCryptoKeyIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +21,7 @@ export interface DataGoogleKmsCryptoKeyIamPolicyConfig extends cdktf.TerraformMe
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy}
 */
 export class DataGoogleKmsCryptoKeyIamPolicy extends cdktf.TerraformDataSource {
 
@@ -40,7 +35,7 @@ export class DataGoogleKmsCryptoKeyIamPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.74.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/data-sources/kms_crypto_key_iam_policy google_kms_crypto_key_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -51,7 +46,7 @@ export class DataGoogleKmsCryptoKeyIamPolicy extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_kms_crypto_key_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.74.0',
+        providerVersion: '4.75.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
