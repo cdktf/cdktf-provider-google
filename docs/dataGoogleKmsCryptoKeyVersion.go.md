@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.NewDataGoogleKmsCryptoKeyVersion(scope Construct, id *string, config DataGoogleKmsCryptoKeyVersionConfig) DataGoogleKmsCryptoKeyVersion
 ```
@@ -284,7 +284,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersion_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersion_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersion.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersion_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -628,7 +628,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 &datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersionConfig {
 	Connection: interface{},
@@ -775,7 +775,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersionPublicKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 &datagooglekmscryptokeyversion.DataGoogleKmsCryptoKeyVersionPublicKey {
 
@@ -790,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptok
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersionPublicKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.NewDataGoogleKmsCryptoKeyVersionPublicKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleKmsCryptoKeyVersionPublicKeyList
 ```
@@ -922,7 +922,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsCryptoKeyVersion.DataGoogleKmsCryptoKeyVersionPublicKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmscryptokeyversion"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglekmscryptokeyversion"
 
 datagooglekmscryptokeyversion.NewDataGoogleKmsCryptoKeyVersionPublicKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleKmsCryptoKeyVersionPublicKeyOutputReference
 ```

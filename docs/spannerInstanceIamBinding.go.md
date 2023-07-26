@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 spannerinstanceiambinding.NewSpannerInstanceIamBinding(scope Construct, id *string, config SpannerInstanceIamBindingConfig) SpannerInstanceIamBinding
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 spannerinstanceiambinding.SpannerInstanceIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 spannerinstanceiambinding.SpannerInstanceIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ spannerinstanceiambinding.SpannerInstanceIamBinding_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 spannerinstanceiambinding.SpannerInstanceIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 &spannerinstanceiambinding.SpannerInstanceIamBindingCondition {
 	Expression: *string,
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 &spannerinstanceiambinding.SpannerInstanceIamBindingConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambi
 	Instance: *string,
 	Members: *[]*string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.spannerInstanceIamBinding.SpannerInstanceIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.spannerInstanceIamBinding.SpannerInstanceIamBindingCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerInstanceIamBinding.SpannerInstanceIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/spannerinstanceiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/spannerinstanceiambinding"
 
 spannerinstanceiambinding.NewSpannerInstanceIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpannerInstanceIamBindingConditionOutputReference
 ```
