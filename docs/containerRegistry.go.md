@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.containerRegistry.ContainerRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerregistry"
 
 containerregistry.NewContainerRegistry(scope Construct, id *string, config ContainerRegistryConfig) ContainerRegistry
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.containerRegistry.ContainerRegistry.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerregistry"
 
 containerregistry.ContainerRegistry_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.containerRegistry.ContainerRegistry.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerregistry"
 
 containerregistry.ContainerRegistry_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ containerregistry.ContainerRegistry_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.containerRegistry.ContainerRegistry.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerregistry"
 
 containerregistry.ContainerRegistry_IsTerraformResource(x interface{}) *bool
 ```
@@ -613,7 +613,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.containerRegistry.ContainerRegistryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/containerregistry"
+import "github.com/cdktf/cdktf-provider-google-go/google/containerregistry"
 
 &containerregistry.ContainerRegistryConfig {
 	Connection: interface{},

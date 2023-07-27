@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlan(scope Construct, id *string, config GkeBackupBackupPlanConfig) GkeBackupBackupPlan
 ```
@@ -385,7 +385,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.GkeBackupBackupPlan_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.GkeBackupBackupPlan_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ gkebackupbackupplan.GkeBackupBackupPlan_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlan.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.GkeBackupBackupPlan_IsTerraformResource(x interface{}) *bool
 ```
@@ -949,15 +949,15 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupConfig {
 	AllNamespaces: interface{},
-	EncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigEncryptionKey,
+	EncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigEncryptionKey,
 	IncludeSecrets: interface{},
 	IncludeVolumeData: interface{},
-	SelectedApplications: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplications,
-	SelectedNamespaces: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedNamespaces,
+	SelectedApplications: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplications,
+	SelectedNamespaces: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedNamespaces,
 }
 ```
 
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupConfigEncryptionKey {
 	GcpKmsEncryptionKey: *string,
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplications.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupConfigSelectedApplications {
 	NamespacedNames: interface{},
@@ -1131,7 +1131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNames {
 	Name: *string,
@@ -1181,7 +1181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedNamespaces.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupConfigSelectedNamespaces {
 	Namespaces: *[]*string,
@@ -1215,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanBackupSchedule {
 	CronSchedule: *string,
@@ -1267,7 +1267,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanConfig {
 	Connection: interface{},
@@ -1280,15 +1280,15 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
 	Cluster: *string,
 	Location: *string,
 	Name: *string,
-	BackupConfig: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfig,
-	BackupSchedule: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanBackupSchedule,
+	BackupConfig: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfig,
+	BackupSchedule: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupSchedule,
 	Deactivated: interface{},
 	Description: *string,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	RetentionPolicy: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanRetentionPolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.gkeBackupBackupPlan.GkeBackupBackupPlanTimeouts,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanRetentionPolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.gkeBackupBackupPlan.GkeBackupBackupPlanTimeouts,
 }
 ```
 
@@ -1567,7 +1567,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanRetentionPolicy {
 	BackupDeleteLockDays: *f64,
@@ -1652,7 +1652,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 &gkebackupbackupplan.GkeBackupBackupPlanTimeouts {
 	Create: *string,
@@ -1714,7 +1714,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanBackupConfigEncryptionKeyOutputReference
 ```
@@ -1985,7 +1985,7 @@ func InternalValue() GkeBackupBackupPlanBackupConfigEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanBackupConfigOutputReference
 ```
@@ -2447,7 +2447,7 @@ func InternalValue() GkeBackupBackupPlanBackupConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesList
 ```
@@ -2590,7 +2590,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GkeBackupBackupPlanBackupConfigSelectedApplicationsNamespacedNamesOutputReference
 ```
@@ -2901,7 +2901,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedApplicationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigSelectedApplicationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanBackupConfigSelectedApplicationsOutputReference
 ```
@@ -3185,7 +3185,7 @@ func InternalValue() GkeBackupBackupPlanBackupConfigSelectedApplications
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupConfigSelectedNamespacesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupConfigSelectedNamespacesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanBackupConfigSelectedNamespacesOutputReference
 ```
@@ -3456,7 +3456,7 @@ func InternalValue() GkeBackupBackupPlanBackupConfigSelectedNamespaces
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanBackupScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanBackupScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanBackupScheduleOutputReference
 ```
@@ -3763,7 +3763,7 @@ func InternalValue() GkeBackupBackupPlanBackupSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanRetentionPolicyOutputReference
 ```
@@ -4099,7 +4099,7 @@ func InternalValue() GkeBackupBackupPlanRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gkeBackupBackupPlan.GkeBackupBackupPlanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gkebackupbackupplan"
+import "github.com/cdktf/cdktf-provider-google-go/google/gkebackupbackupplan"
 
 gkebackupbackupplan.NewGkeBackupBackupPlanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GkeBackupBackupPlanTimeoutsOutputReference
 ```

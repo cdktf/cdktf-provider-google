@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.NewComputeForwardingRule(scope Construct, id *string, config ComputeForwardingRuleConfig) ComputeForwardingRule
 ```
@@ -464,7 +464,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.ComputeForwardingRule_IsConstruct(x interface{}) *bool
 ```
@@ -496,7 +496,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.ComputeForwardingRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -510,7 +510,7 @@ computeforwardingrule.ComputeForwardingRule_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.ComputeForwardingRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -1336,7 +1336,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 &computeforwardingrule.ComputeForwardingRuleConfig {
 	Connection: interface{},
@@ -1365,12 +1365,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrul
 	Ports: *[]*string,
 	Project: *string,
 	Region: *string,
-	ServiceDirectoryRegistrations: github.com/cdktf/cdktf-provider-google-go/google/v8.computeForwardingRule.ComputeForwardingRuleServiceDirectoryRegistrations,
+	ServiceDirectoryRegistrations: github.com/cdktf/cdktf-provider-google-go/google.computeForwardingRule.ComputeForwardingRuleServiceDirectoryRegistrations,
 	ServiceLabel: *string,
 	SourceIpRanges: *[]*string,
 	Subnetwork: *string,
 	Target: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.computeForwardingRule.ComputeForwardingRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeForwardingRule.ComputeForwardingRuleTimeouts,
 }
 ```
 
@@ -2021,7 +2021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleServiceDirectoryRegistrations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 &computeforwardingrule.ComputeForwardingRuleServiceDirectoryRegistrations {
 	Namespace: *string,
@@ -2071,7 +2071,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 &computeforwardingrule.ComputeForwardingRuleTimeouts {
 	Create: *string,
@@ -2133,7 +2133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.NewComputeForwardingRuleServiceDirectoryRegistrationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeForwardingRuleServiceDirectoryRegistrationsOutputReference
 ```
@@ -2440,7 +2440,7 @@ func InternalValue() ComputeForwardingRuleServiceDirectoryRegistrations
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeForwardingRule.ComputeForwardingRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeforwardingrule"
+import "github.com/cdktf/cdktf-provider-google-go/google/computeforwardingrule"
 
 computeforwardingrule.NewComputeForwardingRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeForwardingRuleTimeoutsOutputReference
 ```
