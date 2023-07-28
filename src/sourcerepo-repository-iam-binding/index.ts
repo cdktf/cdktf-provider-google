@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/sourcerepo_repository_iam_binding
 // generated from terraform resource schema
 
