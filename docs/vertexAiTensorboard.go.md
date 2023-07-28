@@ -1,6 +1,6 @@
 # `google_vertex_ai_tensorboard`
 
-Refer to the Terraform Registory for docs: [`google_vertex_ai_tensorboard`](https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard).
+Refer to the Terraform Registory for docs: [`google_vertex_ai_tensorboard`](https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard).
 
 # `vertexAiTensorboard` Submodule <a name="`vertexAiTensorboard` Submodule" id="@cdktf/provider-google.vertexAiTensorboard"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_vertex_ai_tensorboard`](http
 
 ### VertexAiTensorboard <a name="VertexAiTensorboard" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboard(scope Construct, id *string, config VertexAiTensorboardConfig) VertexAiTensorboard
 ```
@@ -345,7 +345,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ vertexaitensorboard.VertexAiTensorboard_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboard.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.VertexAiTensorboard_IsTerraformResource(x interface{}) *bool
 ```
@@ -821,7 +821,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardConfig {
 	Connection: interface{},
@@ -833,12 +833,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
 	Provisioners: *[]interface{},
 	DisplayName: *string,
 	Description: *string,
-	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google/v8.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec,
+	EncryptionSpec: github.com/cdktf/cdktf-provider-google-go/google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec,
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
 	Region: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.vertexAiTensorboard.VertexAiTensorboardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.vertexAiTensorboard.VertexAiTensorboardTimeouts,
 }
 ```
 
@@ -856,9 +856,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | User provided name of this Tensorboard. |
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.description">Description</a></code> | <code>*string</code> | Description of this Tensorboard. |
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.encryptionSpec">EncryptionSpec</a></code> | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec">VertexAiTensorboardEncryptionSpec</a></code> | encryption_spec block. |
-| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}. |
+| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}. |
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | The labels with user-defined metadata to organize your Tensorboards. |
-| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}. |
+| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}. |
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.region">Region</a></code> | <code>*string</code> | The region of the tensorboard. eg us-central1. |
 | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts">VertexAiTensorboardTimeouts</a></code> | timeouts block. |
 
@@ -944,7 +944,7 @@ DisplayName *string
 
 User provided name of this Tensorboard.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#display_name VertexAiTensorboard#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#display_name VertexAiTensorboard#display_name}
 
 ---
 
@@ -958,7 +958,7 @@ Description *string
 
 Description of this Tensorboard.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#description VertexAiTensorboard#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#description VertexAiTensorboard#description}
 
 ---
 
@@ -972,7 +972,7 @@ EncryptionSpec VertexAiTensorboardEncryptionSpec
 
 encryption_spec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#encryption_spec VertexAiTensorboard#encryption_spec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#encryption_spec VertexAiTensorboard#encryption_spec}
 
 ---
 
@@ -984,7 +984,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1001,7 +1001,7 @@ Labels *map[string]*string
 
 The labels with user-defined metadata to organize your Tensorboards.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#labels VertexAiTensorboard#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#labels VertexAiTensorboard#labels}
 
 ---
 
@@ -1013,7 +1013,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}.
 
 ---
 
@@ -1027,7 +1027,7 @@ Region *string
 
 The region of the tensorboard. eg us-central1.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#region VertexAiTensorboard#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#region VertexAiTensorboard#region}
 
 ---
 
@@ -1041,7 +1041,7 @@ Timeouts VertexAiTensorboardTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#timeouts VertexAiTensorboard#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#timeouts VertexAiTensorboard#timeouts}
 
 ---
 
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardEncryptionSpec {
 	KmsKeyName: *string,
@@ -1077,7 +1077,7 @@ The Cloud KMS resource identifier of the customer managed encryption key used to
 
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#kms_key_name VertexAiTensorboard#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#kms_key_name VertexAiTensorboard#kms_key_name}
 
 ---
 
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 &vertexaitensorboard.VertexAiTensorboardTimeouts {
 	Create: *string,
@@ -1099,9 +1099,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}. |
-| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}. |
-| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}. |
+| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}. |
+| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}. |
+| <code><a href="#@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}. |
 
 ---
 
@@ -1113,7 +1113,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}.
 
 ---
 
@@ -1125,7 +1125,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}.
 
 ---
 
@@ -1137,7 +1137,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}.
 
 ---
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardEncryptionSpecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboardEncryptionSpecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiTensorboardEncryptionSpecOutputReference
 ```
@@ -1419,7 +1419,7 @@ func InternalValue() VertexAiTensorboardEncryptionSpec
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.vertexAiTensorboard.VertexAiTensorboardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/vertexaitensorboard"
+import "github.com/cdktf/cdktf-provider-google-go/google/vertexaitensorboard"
 
 vertexaitensorboard.NewVertexAiTensorboardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VertexAiTensorboardTimeoutsOutputReference
 ```
