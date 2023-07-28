@@ -1,3 +1,3 @@
 # `google_spanner_database_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_spanner_database_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/spanner_database_iam_policy).
+Refer to the Terraform Registory for docs: [`google_spanner_database_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database_iam_policy).

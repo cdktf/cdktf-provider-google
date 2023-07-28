@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding
+// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface KmsKeyRingIamBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#id KmsKeyRingIamBinding#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#key_ring_id KmsKeyRingIamBinding#key_ring_id}
   */
   readonly keyRingId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#members KmsKeyRingIamBinding#members}
   */
   readonly members: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#role KmsKeyRingIamBinding#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#condition KmsKeyRingIamBinding#condition}
   */
   readonly condition?: KmsKeyRingIamBindingCondition;
 }
 export interface KmsKeyRingIamBindingCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#description KmsKeyRingIamBinding#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#expression KmsKeyRingIamBinding#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding#title KmsKeyRingIamBinding#title}
   */
   readonly title: string;
 }
@@ -153,7 +153,7 @@ export class KmsKeyRingIamBindingConditionOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding google_kms_key_ring_iam_binding}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding google_kms_key_ring_iam_binding}
 */
 export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
 
@@ -167,7 +167,7 @@ export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/kms_key_ring_iam_binding google_kms_key_ring_iam_binding} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/kms_key_ring_iam_binding google_kms_key_ring_iam_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -178,7 +178,7 @@ export class KmsKeyRingIamBinding extends cdktf.TerraformResource {
       terraformResourceType: 'google_kms_key_ring_iam_binding',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.0',
+        providerVersion: '4.75.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

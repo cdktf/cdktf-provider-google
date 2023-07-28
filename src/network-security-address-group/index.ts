@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group
+// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface NetworkSecurityAddressGroupConfig extends cdktf.TerraformMetaAr
   /**
   * Capacity of the Address Group.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#capacity NetworkSecurityAddressGroup#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#capacity NetworkSecurityAddressGroup#capacity}
   */
   readonly capacity: number;
   /**
   * Free-text description of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#description NetworkSecurityAddressGroup#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#description NetworkSecurityAddressGroup#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#id NetworkSecurityAddressGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#id NetworkSecurityAddressGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,59 +34,59 @@ export interface NetworkSecurityAddressGroupConfig extends cdktf.TerraformMetaAr
   /**
   * List of items.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#items NetworkSecurityAddressGroup#items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#items NetworkSecurityAddressGroup#items}
   */
   readonly items?: string[];
   /**
   * Set of label tags associated with the AddressGroup resource.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#labels NetworkSecurityAddressGroup#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#labels NetworkSecurityAddressGroup#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the gateway security policy.
 The default value is 'global'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#location NetworkSecurityAddressGroup#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#location NetworkSecurityAddressGroup#location}
   */
   readonly location: string;
   /**
   * Name of the AddressGroup resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#name NetworkSecurityAddressGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#name NetworkSecurityAddressGroup#name}
   */
   readonly name: string;
   /**
   * The name of the parent this address group belongs to. Format: organizations/{organization_id} or projects/{project_id}.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#parent NetworkSecurityAddressGroup#parent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#parent NetworkSecurityAddressGroup#parent}
   */
   readonly parent?: string;
   /**
   * The type of the Address Group. Possible values are "IPV4" or "IPV6". Possible values: ["IPV4", "IPV6"]
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#type NetworkSecurityAddressGroup#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#type NetworkSecurityAddressGroup#type}
   */
   readonly type: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#timeouts NetworkSecurityAddressGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#timeouts NetworkSecurityAddressGroup#timeouts}
   */
   readonly timeouts?: NetworkSecurityAddressGroupTimeouts;
 }
 export interface NetworkSecurityAddressGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#create NetworkSecurityAddressGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#create NetworkSecurityAddressGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#delete NetworkSecurityAddressGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#delete NetworkSecurityAddressGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group#update NetworkSecurityAddressGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group#update NetworkSecurityAddressGroup#update}
   */
   readonly update?: string;
 }
@@ -207,7 +207,7 @@ export class NetworkSecurityAddressGroupTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group google_network_security_address_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group google_network_security_address_group}
 */
 export class NetworkSecurityAddressGroup extends cdktf.TerraformResource {
 
@@ -221,7 +221,7 @@ export class NetworkSecurityAddressGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.0/docs/resources/network_security_address_group google_network_security_address_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/network_security_address_group google_network_security_address_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -232,7 +232,7 @@ export class NetworkSecurityAddressGroup extends cdktf.TerraformResource {
       terraformResourceType: 'google_network_security_address_group',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.0',
+        providerVersion: '4.75.1',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
