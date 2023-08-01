@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface DataCatalogTaxonomyIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#id DataCatalogTaxonomyIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#member DataCatalogTaxonomyIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#project DataCatalogTaxonomyIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#region DataCatalogTaxonomyIamMember#region}
   */
   readonly region?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#role DataCatalogTaxonomyIamMember#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#taxonomy DataCatalogTaxonomyIamMember#taxonomy}
   */
   readonly taxonomy: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#condition DataCatalogTaxonomyIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#condition DataCatalogTaxonomyIamMember#condition}
   */
   readonly condition?: DataCatalogTaxonomyIamMemberCondition;
 }
 export interface DataCatalogTaxonomyIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#description DataCatalogTaxonomyIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#expression DataCatalogTaxonomyIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member#title DataCatalogTaxonomyIamMember#title}
   */
   readonly title: string;
 }
@@ -161,7 +161,7 @@ export class DataCatalogTaxonomyIamMemberConditionOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member}
 */
 export class DataCatalogTaxonomyIamMember extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class DataCatalogTaxonomyIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/data_catalog_taxonomy_iam_member google_data_catalog_taxonomy_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +186,7 @@ export class DataCatalogTaxonomyIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_data_catalog_taxonomy_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.1',
+        providerVersion: '4.76.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

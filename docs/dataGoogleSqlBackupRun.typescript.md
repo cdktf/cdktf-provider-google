@@ -1,6 +1,6 @@
 # `data_google_sql_backup_run`
 
-Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run).
+Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run).
 
 # `dataGoogleSqlBackupRun` Submodule <a name="`dataGoogleSqlBackupRun` Submodule" id="@cdktf/provider-google.dataGoogleSqlBackupRun"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_sql_backup_run`](https:
 
 ### DataGoogleSqlBackupRun <a name="DataGoogleSqlBackupRun" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run google_sql_backup_run}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run google_sql_backup_run}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRun.Initializer"></a>
 
@@ -682,7 +682,7 @@ const dataGoogleSqlBackupRunConfig: dataGoogleSqlBackupRun.DataGoogleSqlBackupRu
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.instance">instance</a></code> | <code>string</code> | Name of the database instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.backupId">backupId</a></code> | <code>number</code> | The identifier for this backup run. |
-| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.mostRecent">mostRecent</a></code> | <code>boolean \| cdktf.IResolvable</code> | Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance. |
 | <code><a href="#@cdktf/provider-google.dataGoogleSqlBackupRun.DataGoogleSqlBackupRunConfig.property.project">project</a></code> | <code>string</code> | Project ID of the project that contains the instance. |
 
@@ -768,7 +768,7 @@ public readonly instance: string;
 
 Name of the database instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
 
 ---
 
@@ -784,7 +784,7 @@ The identifier for this backup run.
 
 Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
 
 ---
 
@@ -796,7 +796,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#id DataGoogleSqlBackupRun#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -813,7 +813,7 @@ public readonly mostRecent: boolean | IResolvable;
 
 Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
 
 ---
 
@@ -827,7 +827,7 @@ public readonly project: string;
 
 Project ID of the project that contains the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
 
 ---
 

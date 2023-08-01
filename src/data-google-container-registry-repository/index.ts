@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository
+// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleContainerRegistryRepositoryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository#id DataGoogleContainerRegistryRepository#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository#project DataGoogleContainerRegistryRepository#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository#region DataGoogleContainerRegistryRepository#region}
   */
   readonly region?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository google_container_registry_repository}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository google_container_registry_repository}
 */
 export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSource {
 
@@ -44,7 +44,7 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/container_registry_repository google_container_registry_repository} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/container_registry_repository google_container_registry_repository} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -55,7 +55,7 @@ export class DataGoogleContainerRegistryRepository extends cdktf.TerraformDataSo
       terraformResourceType: 'google_container_registry_repository',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.1',
+        providerVersion: '4.76.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
