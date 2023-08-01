@@ -1,6 +1,6 @@
 # `google_spanner_database`
 
-Refer to the Terraform Registory for docs: [`google_spanner_database`](https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database).
+Refer to the Terraform Registory for docs: [`google_spanner_database`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database).
 
 # `spannerDatabase` Submodule <a name="`spannerDatabase` Submodule" id="@cdktf/provider-google.spannerDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_spanner_database`](https://r
 
 ### SpannerDatabase <a name="SpannerDatabase" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database google_spanner_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database google_spanner_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer"></a>
 
@@ -33,6 +33,8 @@ SpannerDatabase.Builder.create(Construct scope, java.lang.String id)
 //  .ddl(java.util.List<java.lang.String>)
 //  .deletionProtection(java.lang.Boolean)
 //  .deletionProtection(IResolvable)
+//  .enableDropProtection(java.lang.Boolean)
+//  .enableDropProtection(IResolvable)
 //  .encryptionConfig(SpannerDatabaseEncryptionConfig)
 //  .id(java.lang.String)
 //  .project(java.lang.String)
@@ -56,10 +58,11 @@ SpannerDatabase.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | A unique identifier for the database, which cannot be changed after the instance is created. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.databaseDialect">databaseDialect</a></code> | <code>java.lang.String</code> | The dialect of the Cloud Spanner Database. If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.ddl">ddl</a></code> | <code>java.util.List<java.lang.String></code> | An optional list of DDL statements to run inside the newly created database. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.deletionProtection">deletionProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not to allow Terraform to destroy the instance. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.deletionProtection">deletionProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not to allow Terraform to destroy the database. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.enableDropProtection">enableDropProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether drop protection is enabled for this database. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseEncryptionConfig">SpannerDatabaseEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#id SpannerDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#project SpannerDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#id SpannerDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#project SpannerDatabase#project}. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts">SpannerDatabaseTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.versionRetentionPeriod">versionRetentionPeriod</a></code> | <code>java.lang.String</code> | The retention period for the database. |
 
@@ -131,7 +134,7 @@ Must be unique amongst siblings in the same scope
 
 The instance to create the database on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#instance SpannerDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#instance SpannerDatabase#instance}
 
 ---
 
@@ -143,7 +146,7 @@ A unique identifier for the database, which cannot be changed after the instance
 
 Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#name SpannerDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#name SpannerDatabase#name}
 
 ---
 
@@ -153,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The dialect of the Cloud Spanner Database. If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#database_dialect SpannerDatabase#database_dialect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#database_dialect SpannerDatabase#database_dialect}
 
 ---
 
@@ -167,7 +170,7 @@ Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#ddl SpannerDatabase#ddl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#ddl SpannerDatabase#ddl}
 
 ---
 
@@ -175,12 +178,30 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Whether or not to allow Terraform to destroy the instance.
+Whether or not to allow Terraform to destroy the database.
 
-Unless this field is set to false
-in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the instance will fail.
+Defaults to true. Unless this field is set to false
+in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the database will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
+
+---
+
+##### `enableDropProtection`<sup>Optional</sup> <a name="enableDropProtection" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.Initializer.parameter.enableDropProtection"></a>
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Whether drop protection is enabled for this database.
+
+Defaults to false.
+Drop protection is different from
+the "deletion_protection" attribute in the following ways:
+(1) "deletion_protection" only protects the database from deletions in Terraform.
+whereas setting “enableDropProtection” to true protects the database from deletions in all interfaces.
+(2) Setting "enableDropProtection" to true also prevents the deletion of the parent instance containing the database.
+"deletion_protection" attribute does not provide protection against the deletion of the parent instance.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#enable_drop_protection SpannerDatabase#enable_drop_protection}
 
 ---
 
@@ -190,7 +211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#encryption_config SpannerDatabase#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#encryption_config SpannerDatabase#encryption_config}
 
 ---
 
@@ -198,7 +219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#id SpannerDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#id SpannerDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -209,7 +230,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#project SpannerDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#project SpannerDatabase#project}.
 
 ---
 
@@ -219,7 +240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#timeouts SpannerDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#timeouts SpannerDatabase#timeouts}
 
 ---
 
@@ -235,7 +256,7 @@ the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
 If this property is used, you must avoid adding new DDL statements to 'ddl' that
 update the database's version_retention_period.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
 
 ---
 
@@ -264,6 +285,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetDatabaseDialect">resetDatabaseDialect</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetDdl">resetDdl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetDeletionProtection">resetDeletionProtection</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetEnableDropProtection">resetEnableDropProtection</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetEncryptionConfig">resetEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetId">resetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetProject">resetProject</a></code> | *No description.* |
@@ -498,6 +520,12 @@ public void resetDdl()
 public void resetDeletionProtection()
 ```
 
+##### `resetEnableDropProtection` <a name="resetEnableDropProtection" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetEnableDropProtection"></a>
+
+```java
+public void resetEnableDropProtection()
+```
+
 ##### `resetEncryptionConfig` <a name="resetEncryptionConfig" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.resetEncryptionConfig"></a>
 
 ```java
@@ -622,6 +650,7 @@ SpannerDatabase.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.databaseDialectInput">databaseDialectInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.ddlInput">ddlInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.deletionProtectionInput">deletionProtectionInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.enableDropProtectionInput">enableDropProtectionInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.encryptionConfigInput">encryptionConfigInput</a></code> | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseEncryptionConfig">SpannerDatabaseEncryptionConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.instanceInput">instanceInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -632,6 +661,7 @@ SpannerDatabase.isTerraformResource(java.lang.Object x)
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.databaseDialect">databaseDialect</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.ddl">ddl</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.deletionProtection">deletionProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.enableDropProtection">enableDropProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.instance">instance</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -842,6 +872,16 @@ public java.lang.Object getDeletionProtectionInput();
 
 ---
 
+##### `enableDropProtectionInput`<sup>Optional</sup> <a name="enableDropProtectionInput" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.enableDropProtectionInput"></a>
+
+```java
+public java.lang.Object getEnableDropProtectionInput();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+---
+
 ##### `encryptionConfigInput`<sup>Optional</sup> <a name="encryptionConfigInput" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.encryptionConfigInput"></a>
 
 ```java
@@ -936,6 +976,16 @@ public java.util.List<java.lang.String> getDdl();
 
 ```java
 public java.lang.Object getDeletionProtection();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+---
+
+##### `enableDropProtection`<sup>Required</sup> <a name="enableDropProtection" id="@cdktf/provider-google.spannerDatabase.SpannerDatabase.property.enableDropProtection"></a>
+
+```java
+public java.lang.Object getEnableDropProtection();
 ```
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
@@ -1037,6 +1087,8 @@ SpannerDatabaseConfig.builder()
 //  .ddl(java.util.List<java.lang.String>)
 //  .deletionProtection(java.lang.Boolean)
 //  .deletionProtection(IResolvable)
+//  .enableDropProtection(java.lang.Boolean)
+//  .enableDropProtection(IResolvable)
 //  .encryptionConfig(SpannerDatabaseEncryptionConfig)
 //  .id(java.lang.String)
 //  .project(java.lang.String)
@@ -1060,10 +1112,11 @@ SpannerDatabaseConfig.builder()
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.name">name</a></code> | <code>java.lang.String</code> | A unique identifier for the database, which cannot be changed after the instance is created. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.databaseDialect">databaseDialect</a></code> | <code>java.lang.String</code> | The dialect of the Cloud Spanner Database. If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.ddl">ddl</a></code> | <code>java.util.List<java.lang.String></code> | An optional list of DDL statements to run inside the newly created database. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.deletionProtection">deletionProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not to allow Terraform to destroy the instance. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.deletionProtection">deletionProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether or not to allow Terraform to destroy the database. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.enableDropProtection">enableDropProtection</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Whether drop protection is enabled for this database. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.encryptionConfig">encryptionConfig</a></code> | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseEncryptionConfig">SpannerDatabaseEncryptionConfig</a></code> | encryption_config block. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#id SpannerDatabase#id}. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#project SpannerDatabase#project}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#id SpannerDatabase#id}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#project SpannerDatabase#project}. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts">SpannerDatabaseTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.versionRetentionPeriod">versionRetentionPeriod</a></code> | <code>java.lang.String</code> | The retention period for the database. |
 
@@ -1149,7 +1202,7 @@ public java.lang.String getInstance();
 
 The instance to create the database on.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#instance SpannerDatabase#instance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#instance SpannerDatabase#instance}
 
 ---
 
@@ -1165,7 +1218,7 @@ A unique identifier for the database, which cannot be changed after the instance
 
 Values are of the form [a-z][-a-z0-9]*[a-z0-9].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#name SpannerDatabase#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#name SpannerDatabase#name}
 
 ---
 
@@ -1179,7 +1232,7 @@ public java.lang.String getDatabaseDialect();
 
 The dialect of the Cloud Spanner Database. If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#database_dialect SpannerDatabase#database_dialect}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#database_dialect SpannerDatabase#database_dialect}
 
 ---
 
@@ -1197,7 +1250,7 @@ Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#ddl SpannerDatabase#ddl}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#ddl SpannerDatabase#ddl}
 
 ---
 
@@ -1209,12 +1262,34 @@ public java.lang.Object getDeletionProtection();
 
 - *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
 
-Whether or not to allow Terraform to destroy the instance.
+Whether or not to allow Terraform to destroy the database.
 
-Unless this field is set to false
-in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the instance will fail.
+Defaults to true. Unless this field is set to false
+in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the database will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
+
+---
+
+##### `enableDropProtection`<sup>Optional</sup> <a name="enableDropProtection" id="@cdktf/provider-google.spannerDatabase.SpannerDatabaseConfig.property.enableDropProtection"></a>
+
+```java
+public java.lang.Object getEnableDropProtection();
+```
+
+- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+
+Whether drop protection is enabled for this database.
+
+Defaults to false.
+Drop protection is different from
+the "deletion_protection" attribute in the following ways:
+(1) "deletion_protection" only protects the database from deletions in Terraform.
+whereas setting “enableDropProtection” to true protects the database from deletions in all interfaces.
+(2) Setting "enableDropProtection" to true also prevents the deletion of the parent instance containing the database.
+"deletion_protection" attribute does not provide protection against the deletion of the parent instance.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#enable_drop_protection SpannerDatabase#enable_drop_protection}
 
 ---
 
@@ -1228,7 +1303,7 @@ public SpannerDatabaseEncryptionConfig getEncryptionConfig();
 
 encryption_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#encryption_config SpannerDatabase#encryption_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#encryption_config SpannerDatabase#encryption_config}
 
 ---
 
@@ -1240,7 +1315,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#id SpannerDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#id SpannerDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1255,7 +1330,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#project SpannerDatabase#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#project SpannerDatabase#project}.
 
 ---
 
@@ -1269,7 +1344,7 @@ public SpannerDatabaseTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#timeouts SpannerDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#timeouts SpannerDatabase#timeouts}
 
 ---
 
@@ -1289,7 +1364,7 @@ the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
 If this property is used, you must avoid adding new DDL statements to 'ddl' that
 update the database's version_retention_period.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
 
 ---
 
@@ -1326,7 +1401,7 @@ Fully qualified name of the KMS key to use to encrypt this database.
 This key must exist
 in the same location as the Spanner Database.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#kms_key_name SpannerDatabase#kms_key_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#kms_key_name SpannerDatabase#kms_key_name}
 
 ---
 
@@ -1348,9 +1423,9 @@ SpannerDatabaseTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#create SpannerDatabase#create}. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#delete SpannerDatabase#delete}. |
-| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#update SpannerDatabase#update}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#create SpannerDatabase#create}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#delete SpannerDatabase#delete}. |
+| <code><a href="#@cdktf/provider-google.spannerDatabase.SpannerDatabaseTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#update SpannerDatabase#update}. |
 
 ---
 
@@ -1362,7 +1437,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#create SpannerDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#create SpannerDatabase#create}.
 
 ---
 
@@ -1374,7 +1449,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#delete SpannerDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#delete SpannerDatabase#delete}.
 
 ---
 
@@ -1386,7 +1461,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/spanner_database#update SpannerDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/spanner_database#update SpannerDatabase#update}.
 
 ---
 

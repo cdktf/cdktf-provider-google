@@ -1,3 +1,3 @@
 # `data_google_compute_subnetwork`
 
-Refer to the Terraform Registory for docs: [`data_google_compute_subnetwork`](https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/compute_subnetwork).
+Refer to the Terraform Registory for docs: [`data_google_compute_subnetwork`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_subnetwork).

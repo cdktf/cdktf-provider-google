@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map
+// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +10,11 @@ export interface CertificateManagerCertificateMapConfig extends cdktf.TerraformM
   /**
   * A human-readable description of the resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#description CertificateManagerCertificateMap#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#description CertificateManagerCertificateMap#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#id CertificateManagerCertificateMap#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,24 +23,24 @@ export interface CertificateManagerCertificateMapConfig extends cdktf.TerraformM
   /**
   * Set of labels associated with a Certificate Map resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#labels CertificateManagerCertificateMap#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#labels CertificateManagerCertificateMap#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A user-defined name of the Certificate Map. Certificate Map names must be unique
 globally and match the pattern 'projects/*\/locations/*\/certificateMaps/*'.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#name CertificateManagerCertificateMap#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#name CertificateManagerCertificateMap#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#project CertificateManagerCertificateMap#project}
   */
   readonly project?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#timeouts CertificateManagerCertificateMap#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#timeouts CertificateManagerCertificateMap#timeouts}
   */
   readonly timeouts?: CertificateManagerCertificateMapTimeouts;
 }
@@ -195,15 +190,15 @@ export class CertificateManagerCertificateMapGclbTargetsList extends cdktf.Compl
 }
 export interface CertificateManagerCertificateMapTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#create CertificateManagerCertificateMap#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#delete CertificateManagerCertificateMap#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map#update CertificateManagerCertificateMap#update}
   */
   readonly update?: string;
 }
@@ -324,7 +319,7 @@ export class CertificateManagerCertificateMapTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map}
 */
 export class CertificateManagerCertificateMap extends cdktf.TerraformResource {
 
@@ -338,7 +333,7 @@ export class CertificateManagerCertificateMap extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/certificate_manager_certificate_map google_certificate_manager_certificate_map} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -349,7 +344,7 @@ export class CertificateManagerCertificateMap extends cdktf.TerraformResource {
       terraformResourceType: 'google_certificate_manager_certificate_map',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.1',
+        providerVersion: '4.76.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function
+// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function#id DataGoogleCloudfunctionsFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function#id DataGoogleCloudfunctionsFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,19 +17,19 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   /**
   * A user-defined name of the function. Function names must be unique globally.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
   */
   readonly region?: string;
 }
@@ -476,7 +471,7 @@ export class DataGoogleCloudfunctionsFunctionSourceRepositoryList extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function google_cloudfunctions_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function}
 */
 export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource {
 
@@ -490,7 +485,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.75.1/docs/data-sources/cloudfunctions_function google_cloudfunctions_function} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/cloudfunctions_function google_cloudfunctions_function} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -501,7 +496,7 @@ export class DataGoogleCloudfunctionsFunction extends cdktf.TerraformDataSource 
       terraformResourceType: 'google_cloudfunctions_function',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.75.1',
+        providerVersion: '4.76.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
