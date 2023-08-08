@@ -1,6 +1,6 @@
 # `google_iap_web_type_app_engine_iam_policy`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy).
+Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_policy`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy).
 
 # `iapWebTypeAppEngineIamPolicy` Submodule <a name="`iapWebTypeAppEngineIamPolicy` Submodule" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_
 
 ### IapWebTypeAppEngineIamPolicy <a name="IapWebTypeAppEngineIamPolicy" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicy"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy google_iap_web_type_app_engine_iam_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy google_iap_web_type_app_engine_iam_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiampolicy"
 
 iapwebtypeappengineiampolicy.NewIapWebTypeAppEngineIamPolicy(scope Construct, id *string, config IapWebTypeAppEngineIamPolicyConfig) IapWebTypeAppEngineIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiampolicy"
 
 iapwebtypeappengineiampolicy.IapWebTypeAppEngineIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiampolicy"
 
 iapwebtypeappengineiampolicy.IapWebTypeAppEngineIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ iapwebtypeappengineiampolicy.IapWebTypeAppEngineIamPolicy_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiampolicy"
 
 iapwebtypeappengineiampolicy.IapWebTypeAppEngineIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -628,7 +628,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiampolicy"
 
 &iapwebtypeappengineiampolicy.IapWebTypeAppEngineIamPolicyConfig {
 	Connection: interface{},
@@ -656,10 +656,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappenginei
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#app_id IapWebTypeAppEngineIamPolicy#app_id}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#policy_data IapWebTypeAppEngineIamPolicy#policy_data}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#id IapWebTypeAppEngineIamPolicy#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#project IapWebTypeAppEngineIamPolicy#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#app_id IapWebTypeAppEngineIamPolicy#app_id}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.policyData">PolicyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#policy_data IapWebTypeAppEngineIamPolicy#policy_data}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#id IapWebTypeAppEngineIamPolicy#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamPolicy.IapWebTypeAppEngineIamPolicyConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#project IapWebTypeAppEngineIamPolicy#project}. |
 
 ---
 
@@ -741,7 +741,7 @@ AppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#app_id IapWebTypeAppEngineIamPolicy#app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#app_id IapWebTypeAppEngineIamPolicy#app_id}.
 
 ---
 
@@ -753,7 +753,7 @@ PolicyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#policy_data IapWebTypeAppEngineIamPolicy#policy_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#policy_data IapWebTypeAppEngineIamPolicy#policy_data}.
 
 ---
 
@@ -765,7 +765,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#id IapWebTypeAppEngineIamPolicy#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#id IapWebTypeAppEngineIamPolicy#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -780,7 +780,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/iap_web_type_app_engine_iam_policy#project IapWebTypeAppEngineIamPolicy#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/iap_web_type_app_engine_iam_policy#project IapWebTypeAppEngineIamPolicy#project}.
 
 ---
 

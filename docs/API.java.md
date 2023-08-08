@@ -597,6 +597,8 @@ The following submodules are available:
 - [dnsResponsePolicyRule](./dnsResponsePolicyRule.java.md)
 - [documentAiProcessor](./documentAiProcessor.java.md)
 - [documentAiProcessorDefaultVersion](./documentAiProcessorDefaultVersion.java.md)
+- [documentAiWarehouseDocumentSchema](./documentAiWarehouseDocumentSchema.java.md)
+- [documentAiWarehouseLocation](./documentAiWarehouseLocation.java.md)
 - [endpointsService](./endpointsService.java.md)
 - [endpointsServiceConsumersIamBinding](./endpointsServiceConsumersIamBinding.java.md)
 - [endpointsServiceConsumersIamMember](./endpointsServiceConsumersIamMember.java.md)

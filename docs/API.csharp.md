@@ -597,6 +597,8 @@ The following submodules are available:
 - [dnsResponsePolicyRule](./dnsResponsePolicyRule.csharp.md)
 - [documentAiProcessor](./documentAiProcessor.csharp.md)
 - [documentAiProcessorDefaultVersion](./documentAiProcessorDefaultVersion.csharp.md)
+- [documentAiWarehouseDocumentSchema](./documentAiWarehouseDocumentSchema.csharp.md)
+- [documentAiWarehouseLocation](./documentAiWarehouseLocation.csharp.md)
 - [endpointsService](./endpointsService.csharp.md)
 - [endpointsServiceConsumersIamBinding](./endpointsServiceConsumersIamBinding.csharp.md)
 - [endpointsServiceConsumersIamMember](./endpointsServiceConsumersIamMember.csharp.md)

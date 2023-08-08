@@ -597,6 +597,8 @@ The following submodules are available:
 - [dnsResponsePolicyRule](./dnsResponsePolicyRule.typescript.md)
 - [documentAiProcessor](./documentAiProcessor.typescript.md)
 - [documentAiProcessorDefaultVersion](./documentAiProcessorDefaultVersion.typescript.md)
+- [documentAiWarehouseDocumentSchema](./documentAiWarehouseDocumentSchema.typescript.md)
+- [documentAiWarehouseLocation](./documentAiWarehouseLocation.typescript.md)
 - [endpointsService](./endpointsService.typescript.md)
 - [endpointsServiceConsumersIamBinding](./endpointsServiceConsumersIamBinding.typescript.md)
 - [endpointsServiceConsumersIamMember](./endpointsServiceConsumersIamMember.typescript.md)

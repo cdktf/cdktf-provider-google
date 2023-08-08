@@ -1,6 +1,6 @@
 # `google_compute_router_interface`
 
-Refer to the Terraform Registory for docs: [`google_compute_router_interface`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface).
+Refer to the Terraform Registory for docs: [`google_compute_router_interface`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface).
 
 # `computeRouterInterface` Submodule <a name="`computeRouterInterface` Submodule" id="@cdktf/provider-google.computeRouterInterface"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_router_interface`](h
 
 ### ComputeRouterInterface <a name="ComputeRouterInterface" id="@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface google_compute_router_interface}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface google_compute_router_interface}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer"></a>
 
@@ -53,7 +53,7 @@ computeRouterInterface.ComputeRouterInterface(
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.name">name</a></code> | <code>str</code> | A unique name for the interface, required by GCE. Changing this forces a new interface to be created. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.router">router</a></code> | <code>str</code> | The name of the router this interface will be attached to. |
-| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.interconnectAttachment">interconnect_attachment</a></code> | <code>str</code> | The name or resource link to the VLAN interconnect for this interface. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.ipRange">ip_range</a></code> | <code>str</code> | The IP address and range of the interface. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterface.Initializer.parameter.privateIpAddress">private_ip_address</a></code> | <code>str</code> | The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance. |
@@ -132,7 +132,7 @@ Must be unique amongst siblings in the same scope
 
 A unique name for the interface, required by GCE. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#name ComputeRouterInterface#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#name ComputeRouterInterface#name}
 
 ---
 
@@ -144,7 +144,7 @@ The name of the router this interface will be attached to.
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#router ComputeRouterInterface#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#router ComputeRouterInterface#router}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -167,7 +167,7 @@ The name or resource link to the VLAN interconnect for this interface.
 
 Changing this forces a new interface to be created. Only one of interconnect_attachment, subnetwork or vpn_tunnel can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
 
 ---
 
@@ -179,7 +179,7 @@ The IP address and range of the interface.
 
 The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#ip_range ComputeRouterInterface#ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#ip_range ComputeRouterInterface#ip_range}
 
 ---
 
@@ -191,7 +191,7 @@ The regional private internal IP address that is used to establish BGP sessions 
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#private_ip_address ComputeRouterInterface#private_ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#private_ip_address ComputeRouterInterface#private_ip_address}
 
 ---
 
@@ -203,7 +203,7 @@ The ID of the project in which this interface's router belongs.
 
 If it is not provided, the provider project is used. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#project ComputeRouterInterface#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#project ComputeRouterInterface#project}
 
 ---
 
@@ -215,7 +215,7 @@ The name of the interface that is redundant to this interface.
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
 
 ---
 
@@ -227,7 +227,7 @@ The region this interface's router sits in.
 
 If not specified, the project region will be used. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#region ComputeRouterInterface#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#region ComputeRouterInterface#region}
 
 ---
 
@@ -239,7 +239,7 @@ The URI of the subnetwork resource that this interface belongs to, which must be
 
 Changing this forces a new interface to be created. Only one of subnetwork, interconnect_attachment or vpn_tunnel can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#subnetwork ComputeRouterInterface#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#subnetwork ComputeRouterInterface#subnetwork}
 
 ---
 
@@ -249,7 +249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#timeouts ComputeRouterInterface#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#timeouts ComputeRouterInterface#timeouts}
 
 ---
 
@@ -261,7 +261,7 @@ The name or resource link to the VPN tunnel this interface will be linked to.
 
 Changing this forces a new interface to be created. Only one of vpn_tunnel, interconnect_attachment or subnetwork can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
 
 ---
 
@@ -521,7 +521,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}.
 
 ---
 
@@ -529,7 +529,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}.
 
 ---
 
@@ -1159,7 +1159,7 @@ computeRouterInterface.ComputeRouterInterfaceConfig(
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.name">name</a></code> | <code>str</code> | A unique name for the interface, required by GCE. Changing this forces a new interface to be created. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.router">router</a></code> | <code>str</code> | The name of the router this interface will be attached to. |
-| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}. |
+| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.interconnectAttachment">interconnect_attachment</a></code> | <code>str</code> | The name or resource link to the VLAN interconnect for this interface. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.ipRange">ip_range</a></code> | <code>str</code> | The IP address and range of the interface. |
 | <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceConfig.property.privateIpAddress">private_ip_address</a></code> | <code>str</code> | The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance. |
@@ -1252,7 +1252,7 @@ name: str
 
 A unique name for the interface, required by GCE. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#name ComputeRouterInterface#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#name ComputeRouterInterface#name}
 
 ---
 
@@ -1268,7 +1268,7 @@ The name of the router this interface will be attached to.
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#router ComputeRouterInterface#router}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#router ComputeRouterInterface#router}
 
 ---
 
@@ -1280,7 +1280,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#id ComputeRouterInterface#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1299,7 +1299,7 @@ The name or resource link to the VLAN interconnect for this interface.
 
 Changing this forces a new interface to be created. Only one of interconnect_attachment, subnetwork or vpn_tunnel can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#interconnect_attachment ComputeRouterInterface#interconnect_attachment}
 
 ---
 
@@ -1315,7 +1315,7 @@ The IP address and range of the interface.
 
 The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#ip_range ComputeRouterInterface#ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#ip_range ComputeRouterInterface#ip_range}
 
 ---
 
@@ -1331,7 +1331,7 @@ The regional private internal IP address that is used to establish BGP sessions 
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#private_ip_address ComputeRouterInterface#private_ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#private_ip_address ComputeRouterInterface#private_ip_address}
 
 ---
 
@@ -1347,7 +1347,7 @@ The ID of the project in which this interface's router belongs.
 
 If it is not provided, the provider project is used. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#project ComputeRouterInterface#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#project ComputeRouterInterface#project}
 
 ---
 
@@ -1363,7 +1363,7 @@ The name of the interface that is redundant to this interface.
 
 Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#redundant_interface ComputeRouterInterface#redundant_interface}
 
 ---
 
@@ -1379,7 +1379,7 @@ The region this interface's router sits in.
 
 If not specified, the project region will be used. Changing this forces a new interface to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#region ComputeRouterInterface#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#region ComputeRouterInterface#region}
 
 ---
 
@@ -1395,7 +1395,7 @@ The URI of the subnetwork resource that this interface belongs to, which must be
 
 Changing this forces a new interface to be created. Only one of subnetwork, interconnect_attachment or vpn_tunnel can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#subnetwork ComputeRouterInterface#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#subnetwork ComputeRouterInterface#subnetwork}
 
 ---
 
@@ -1409,7 +1409,7 @@ timeouts: ComputeRouterInterfaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#timeouts ComputeRouterInterface#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#timeouts ComputeRouterInterface#timeouts}
 
 ---
 
@@ -1425,7 +1425,7 @@ The name or resource link to the VPN tunnel this interface will be linked to.
 
 Changing this forces a new interface to be created. Only one of vpn_tunnel, interconnect_attachment or subnetwork can be specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#vpn_tunnel ComputeRouterInterface#vpn_tunnel}
 
 ---
 
@@ -1446,8 +1446,8 @@ computeRouterInterface.ComputeRouterInterfaceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}. |
-| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}. |
+| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}. |
+| <code><a href="#@cdktf/provider-google.computeRouterInterface.ComputeRouterInterfaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}. |
 
 ---
 
@@ -1459,7 +1459,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#create ComputeRouterInterface#create}.
 
 ---
 
@@ -1471,7 +1471,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_router_interface#delete ComputeRouterInterface#delete}.
 
 ---
 

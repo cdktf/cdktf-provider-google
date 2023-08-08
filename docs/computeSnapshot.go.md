@@ -1,6 +1,6 @@
 # `google_compute_snapshot`
 
-Refer to the Terraform Registory for docs: [`google_compute_snapshot`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot).
+Refer to the Terraform Registory for docs: [`google_compute_snapshot`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot).
 
 # `computeSnapshot` Submodule <a name="`computeSnapshot` Submodule" id="@cdktf/provider-google.computeSnapshot"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_compute_snapshot`](https://r
 
 ### ComputeSnapshot <a name="ComputeSnapshot" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot google_compute_snapshot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot google_compute_snapshot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshot(scope Construct, id *string, config ComputeSnapshotConfig) ComputeSnapshot
 ```
@@ -379,7 +379,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -411,7 +411,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ computesnapshot.ComputeSnapshot_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.ComputeSnapshot_IsTerraformResource(x interface{}) *bool
 ```
@@ -965,7 +965,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotConfig {
 	Connection: interface{},
@@ -982,10 +982,10 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
 	Id: *string,
 	Labels: *map[string]*string,
 	Project: *string,
-	SnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v8.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey,
-	SourceDiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google/v8.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey,
+	SnapshotEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey,
+	SourceDiskEncryptionKey: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey,
 	StorageLocations: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.computeSnapshot.ComputeSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computeSnapshot.ComputeSnapshotTimeouts,
 	Zone: *string,
 }
 ```
@@ -1005,9 +1005,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.sourceDisk">SourceDisk</a></code> | <code>*string</code> | A reference to the disk used to create this snapshot. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.chainName">ChainName</a></code> | <code>*string</code> | Creates the new snapshot in the snapshot chain labeled with the specified name. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.description">Description</a></code> | <code>*string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#id ComputeSnapshot#id}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#id ComputeSnapshot#id}. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | Labels to apply to this Snapshot. |
-| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#project ComputeSnapshot#project}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#project ComputeSnapshot#project}. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.snapshotEncryptionKey">SnapshotEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey">ComputeSnapshotSnapshotEncryptionKey</a></code> | snapshot_encryption_key block. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.sourceDiskEncryptionKey">SourceDiskEncryptionKey</a></code> | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey">ComputeSnapshotSourceDiskEncryptionKey</a></code> | source_disk_encryption_key block. |
 | <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotConfig.property.storageLocations">StorageLocations</a></code> | <code>*[]*string</code> | Cloud Storage bucket storage location of the snapshot (regional or multi-regional). |
@@ -1104,7 +1104,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#name ComputeSnapshot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#name ComputeSnapshot#name}
 
 ---
 
@@ -1118,7 +1118,7 @@ SourceDisk *string
 
 A reference to the disk used to create this snapshot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#source_disk ComputeSnapshot#source_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#source_disk ComputeSnapshot#source_disk}
 
 ---
 
@@ -1138,7 +1138,7 @@ service owners who needs to create separate snapshot chains, for
 example, for chargeback tracking.  When you describe your snapshot
 resource, this field is visible only if it has a non-empty value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#chain_name ComputeSnapshot#chain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#chain_name ComputeSnapshot#chain_name}
 
 ---
 
@@ -1152,7 +1152,7 @@ Description *string
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#description ComputeSnapshot#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#description ComputeSnapshot#description}
 
 ---
 
@@ -1164,7 +1164,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#id ComputeSnapshot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#id ComputeSnapshot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1181,7 +1181,7 @@ Labels *map[string]*string
 
 Labels to apply to this Snapshot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#labels ComputeSnapshot#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#labels ComputeSnapshot#labels}
 
 ---
 
@@ -1193,7 +1193,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#project ComputeSnapshot#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#project ComputeSnapshot#project}.
 
 ---
 
@@ -1207,7 +1207,7 @@ SnapshotEncryptionKey ComputeSnapshotSnapshotEncryptionKey
 
 snapshot_encryption_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#snapshot_encryption_key ComputeSnapshot#snapshot_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#snapshot_encryption_key ComputeSnapshot#snapshot_encryption_key}
 
 ---
 
@@ -1221,7 +1221,7 @@ SourceDiskEncryptionKey ComputeSnapshotSourceDiskEncryptionKey
 
 source_disk_encryption_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#source_disk_encryption_key ComputeSnapshot#source_disk_encryption_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#source_disk_encryption_key ComputeSnapshot#source_disk_encryption_key}
 
 ---
 
@@ -1235,7 +1235,7 @@ StorageLocations *[]*string
 
 Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#storage_locations ComputeSnapshot#storage_locations}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#storage_locations ComputeSnapshot#storage_locations}
 
 ---
 
@@ -1249,7 +1249,7 @@ Timeouts ComputeSnapshotTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#timeouts ComputeSnapshot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#timeouts ComputeSnapshot#timeouts}
 
 ---
 
@@ -1263,7 +1263,7 @@ Zone *string
 
 A reference to the zone where the disk is hosted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#zone ComputeSnapshot#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#zone ComputeSnapshot#zone}
 
 ---
 
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotSnapshotEncryptionKey {
 	KmsKeySelfLink: *string,
@@ -1301,7 +1301,7 @@ KmsKeySelfLink *string
 
 The name of the encryption key that is stored in Google Cloud KMS.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#kms_key_self_link ComputeSnapshot#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#kms_key_self_link ComputeSnapshot#kms_key_self_link}
 
 ---
 
@@ -1317,7 +1317,7 @@ The service account used for the encryption request for the given KMS key.
 
 If absent, the Compute Engine Service Agent service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
 
 ---
 
@@ -1331,7 +1331,7 @@ RawKey *string
 
 Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
 
 ---
 
@@ -1340,7 +1340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotSourceDiskEncryptionKey {
 	KmsKeyServiceAccount: *string,
@@ -1369,7 +1369,7 @@ The service account used for the encryption request for the given KMS key.
 
 If absent, the Compute Engine Service Agent service account is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#kms_key_service_account ComputeSnapshot#kms_key_service_account}
 
 ---
 
@@ -1383,7 +1383,7 @@ RawKey *string
 
 Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#raw_key ComputeSnapshot#raw_key}
 
 ---
 
@@ -1392,7 +1392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 &computesnapshot.ComputeSnapshotTimeouts {
 	Create: *string,
@@ -1405,9 +1405,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#create ComputeSnapshot#create}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#delete ComputeSnapshot#delete}. |
-| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#update ComputeSnapshot#update}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#create ComputeSnapshot#create}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#delete ComputeSnapshot#delete}. |
+| <code><a href="#@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#update ComputeSnapshot#update}. |
 
 ---
 
@@ -1419,7 +1419,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#create ComputeSnapshot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#create ComputeSnapshot#create}.
 
 ---
 
@@ -1431,7 +1431,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#delete ComputeSnapshot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#delete ComputeSnapshot#delete}.
 
 ---
 
@@ -1443,7 +1443,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_snapshot#update ComputeSnapshot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_snapshot#update ComputeSnapshot#update}.
 
 ---
 
@@ -1454,7 +1454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSnapshotEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotSnapshotEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotSnapshotEncryptionKeyOutputReference
 ```
@@ -1801,7 +1801,7 @@ func InternalValue() ComputeSnapshotSnapshotEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotSourceDiskEncryptionKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotSourceDiskEncryptionKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotSourceDiskEncryptionKeyOutputReference
 ```
@@ -2108,7 +2108,7 @@ func InternalValue() ComputeSnapshotSourceDiskEncryptionKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeSnapshot.ComputeSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/computesnapshot"
+import "github.com/cdktf/cdktf-provider-google-go/google/computesnapshot"
 
 computesnapshot.NewComputeSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeSnapshotTimeoutsOutputReference
 ```
