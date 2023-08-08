@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface ComputeFirewallPolicyAssociationConfig extends cdktf.TerraformM
   /**
   * The target that the firewall policy is attached to.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#attachment_target ComputeFirewallPolicyAssociation#attachment_target}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#attachment_target ComputeFirewallPolicyAssociation#attachment_target}
   */
   readonly attachmentTarget: string;
   /**
   * The firewall policy ID of the association.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#firewall_policy ComputeFirewallPolicyAssociation#firewall_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#firewall_policy ComputeFirewallPolicyAssociation#firewall_policy}
   */
   readonly firewallPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#id ComputeFirewallPolicyAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#id ComputeFirewallPolicyAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,23 +34,23 @@ export interface ComputeFirewallPolicyAssociationConfig extends cdktf.TerraformM
   /**
   * The name for an association.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#name ComputeFirewallPolicyAssociation#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#name ComputeFirewallPolicyAssociation#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#timeouts ComputeFirewallPolicyAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#timeouts ComputeFirewallPolicyAssociation#timeouts}
   */
   readonly timeouts?: ComputeFirewallPolicyAssociationTimeouts;
 }
 export interface ComputeFirewallPolicyAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#create ComputeFirewallPolicyAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#create ComputeFirewallPolicyAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association#delete ComputeFirewallPolicyAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association#delete ComputeFirewallPolicyAssociation#delete}
   */
   readonly delete?: string;
 }
@@ -148,7 +148,7 @@ export class ComputeFirewallPolicyAssociationTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association google_compute_firewall_policy_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association google_compute_firewall_policy_association}
 */
 export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_firewall_policy_association google_compute_firewall_policy_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_firewall_policy_association google_compute_firewall_policy_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -173,7 +173,7 @@ export class ComputeFirewallPolicyAssociation extends cdktf.TerraformResource {
       terraformResourceType: 'google_compute_firewall_policy_association',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

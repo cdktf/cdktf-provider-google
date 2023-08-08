@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGooglePubsubSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription#id DataGooglePubsubSubscription#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription#id DataGooglePubsubSubscription#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,11 +22,11 @@ export interface DataGooglePubsubSubscriptionConfig extends cdktf.TerraformMetaA
   /**
   * Name of the subscription.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription#name DataGooglePubsubSubscription#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription#name DataGooglePubsubSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription#project DataGooglePubsubSubscription#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription#project DataGooglePubsubSubscription#project}
   */
   readonly project?: string;
 }
@@ -242,6 +242,70 @@ export class DataGooglePubsubSubscriptionExpirationPolicyList extends cdktf.Comp
     return new DataGooglePubsubSubscriptionExpirationPolicyOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGooglePubsubSubscriptionPushConfigNoWrapper {
+}
+
+export function dataGooglePubsubSubscriptionPushConfigNoWrapperToTerraform(struct?: DataGooglePubsubSubscriptionPushConfigNoWrapper): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGooglePubsubSubscriptionPushConfigNoWrapperOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGooglePubsubSubscriptionPushConfigNoWrapper | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGooglePubsubSubscriptionPushConfigNoWrapper | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // write_metadata - computed: true, optional: false, required: false
+  public get writeMetadata() {
+    return this.getBooleanAttribute('write_metadata');
+  }
+}
+
+export class DataGooglePubsubSubscriptionPushConfigNoWrapperList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGooglePubsubSubscriptionPushConfigNoWrapperOutputReference {
+    return new DataGooglePubsubSubscriptionPushConfigNoWrapperOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGooglePubsubSubscriptionPushConfigOidcToken {
 }
 
@@ -357,6 +421,12 @@ export class DataGooglePubsubSubscriptionPushConfigOutputReference extends cdktf
     return this._attributes;
   }
 
+  // no_wrapper - computed: true, optional: false, required: false
+  private _noWrapper = new DataGooglePubsubSubscriptionPushConfigNoWrapperList(this, "no_wrapper", false);
+  public get noWrapper() {
+    return this._noWrapper;
+  }
+
   // oidc_token - computed: true, optional: false, required: false
   private _oidcToken = new DataGooglePubsubSubscriptionPushConfigOidcTokenList(this, "oidc_token", false);
   public get oidcToken() {
@@ -458,7 +528,7 @@ export class DataGooglePubsubSubscriptionRetryPolicyList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription google_pubsub_subscription}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription google_pubsub_subscription}
 */
 export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
 
@@ -472,7 +542,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/pubsub_subscription google_pubsub_subscription} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/pubsub_subscription google_pubsub_subscription} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -483,7 +553,7 @@ export class DataGooglePubsubSubscription extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_pubsub_subscription',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

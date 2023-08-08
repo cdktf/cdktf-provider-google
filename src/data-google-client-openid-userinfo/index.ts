@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/client_openid_userinfo
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/client_openid_userinfo
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,7 +15,7 @@ export interface DataGoogleClientOpenidUserinfoConfig extends cdktf.TerraformMet
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo}
 */
 export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
 
@@ -29,7 +29,7 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/client_openid_userinfo google_client_openid_userinfo} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -40,7 +40,7 @@ export class DataGoogleClientOpenidUserinfo extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_client_openid_userinfo',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

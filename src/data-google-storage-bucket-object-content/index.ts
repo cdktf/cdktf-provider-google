@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +15,17 @@ export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.Terraf
   /**
   * The name of the containing bucket.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content#bucket DataGoogleStorageBucketObjectContent#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content#bucket DataGoogleStorageBucketObjectContent#bucket}
   */
   readonly bucket: string;
   /**
   * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content#content DataGoogleStorageBucketObjectContent#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content#content DataGoogleStorageBucketObjectContent#content}
   */
   readonly content?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content#id DataGoogleStorageBucketObjectContent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content#id DataGoogleStorageBucketObjectContent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,7 +34,7 @@ export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.Terraf
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content#name DataGoogleStorageBucketObjectContent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content#name DataGoogleStorageBucketObjectContent#name}
   */
   readonly name: string;
 }
@@ -109,7 +109,7 @@ export class DataGoogleStorageBucketObjectContentCustomerEncryptionList extends 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content google_storage_bucket_object_content}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content google_storage_bucket_object_content}
 */
 export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSource {
 
@@ -123,7 +123,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/storage_bucket_object_content google_storage_bucket_object_content} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/storage_bucket_object_content google_storage_bucket_object_content} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -134,7 +134,7 @@ export class DataGoogleStorageBucketObjectContent extends cdktf.TerraformDataSou
       terraformResourceType: 'google_storage_bucket_object_content',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

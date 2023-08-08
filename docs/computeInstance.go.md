@@ -1,6 +1,6 @@
 # `google_compute_instance`
 
-Refer to the Terraform Registory for docs: [`google_compute_instance`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance).
+Refer to the Terraform Registory for docs: [`google_compute_instance`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance).
 
 # `computeInstance` Submodule <a name="`computeInstance` Submodule" id="@cdktf/provider-google.computeInstance"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_instance`](https://r
 
 ### ComputeInstance <a name="ComputeInstance" id="@cdktf/provider-google.computeInstance.ComputeInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance google_compute_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance google_compute_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstance.Initializer"></a>
 
@@ -1703,7 +1703,7 @@ EnableNestedVirtualization interface{}
 
 Whether to enable nested virtualization or not.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_nested_virtualization ComputeInstance#enable_nested_virtualization}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_nested_virtualization ComputeInstance#enable_nested_virtualization}
 
 ---
 
@@ -1719,7 +1719,7 @@ The number of threads per physical core.
 
 To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#threads_per_core ComputeInstance#threads_per_core}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#threads_per_core ComputeInstance#threads_per_core}
 
 ---
 
@@ -1735,7 +1735,7 @@ The number of physical cores to expose to an instance.
 
 Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#visible_core_count ComputeInstance#visible_core_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#visible_core_count ComputeInstance#visible_core_count}
 
 ---
 
@@ -1777,7 +1777,7 @@ Source *string
 
 The name or self_link of the disk attached to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#source ComputeInstance#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#source ComputeInstance#source}
 
 ---
 
@@ -1791,7 +1791,7 @@ DeviceName *string
 
 Name with which the attached disk is accessible under /dev/disk/by-id/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
 
 ---
 
@@ -1807,7 +1807,7 @@ A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encryp
 
 Only one of kms_key_self_link and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
 
 ---
 
@@ -1823,7 +1823,7 @@ The self_link of the encryption key that is stored in Google Cloud KMS to encryp
 
 Only one of kms_key_self_link and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
 
 ---
 
@@ -1837,7 +1837,7 @@ Mode *string
 
 Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#mode ComputeInstance#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#mode ComputeInstance#mode}
 
 ---
 
@@ -1883,7 +1883,7 @@ AutoDelete interface{}
 
 Whether the disk will be auto-deleted when the instance is deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#auto_delete ComputeInstance#auto_delete}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#auto_delete ComputeInstance#auto_delete}
 
 ---
 
@@ -1897,7 +1897,7 @@ DeviceName *string
 
 Name with which attached disk will be accessible under /dev/disk/by-id/.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#device_name ComputeInstance#device_name}
 
 ---
 
@@ -1913,7 +1913,7 @@ A 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to encryp
 
 Only one of kms_key_self_link and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#disk_encryption_key_raw ComputeInstance#disk_encryption_key_raw}
 
 ---
 
@@ -1927,7 +1927,7 @@ InitializeParams ComputeInstanceBootDiskInitializeParams
 
 initialize_params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#initialize_params ComputeInstance#initialize_params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#initialize_params ComputeInstance#initialize_params}
 
 ---
 
@@ -1943,7 +1943,7 @@ The self_link of the encryption key that is stored in Google Cloud KMS to encryp
 
 Only one of kms_key_self_link and disk_encryption_key_raw may be set.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#kms_key_self_link ComputeInstance#kms_key_self_link}
 
 ---
 
@@ -1957,7 +1957,7 @@ Mode *string
 
 Read/write mode for the disk. One of "READ_ONLY" or "READ_WRITE".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#mode ComputeInstance#mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#mode ComputeInstance#mode}
 
 ---
 
@@ -1971,7 +1971,7 @@ Source *string
 
 The name or self_link of the disk attached to this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#source ComputeInstance#source}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#source ComputeInstance#source}
 
 ---
 
@@ -2013,7 +2013,7 @@ Image *string
 
 The image from which this disk was initialised.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#image ComputeInstance#image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#image ComputeInstance#image}
 
 ---
 
@@ -2027,7 +2027,7 @@ Labels *map[string]*string
 
 A set of key/value label pairs assigned to the disk.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#labels ComputeInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#labels ComputeInstance#labels}
 
 ---
 
@@ -2043,7 +2043,7 @@ A map of resource manager tags.
 
 Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
 
 ---
 
@@ -2057,7 +2057,7 @@ Size *f64
 
 The size of the image in gigabytes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#size ComputeInstance#size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#size ComputeInstance#size}
 
 ---
 
@@ -2071,7 +2071,7 @@ Type *string
 
 The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#type ComputeInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#type ComputeInstance#type}
 
 ---
 
@@ -2105,7 +2105,7 @@ EnableConfidentialCompute interface{}
 
 Defines whether the instance should have confidential compute enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_confidential_compute ComputeInstance#enable_confidential_compute}
 
 ---
 
@@ -2185,7 +2185,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.enableDisplay">EnableDisplay</a></code> | <code>interface{}</code> | Whether the instance has virtual displays enabled. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.guestAccelerator">GuestAccelerator</a></code> | <code>interface{}</code> | List of the type and count of accelerator cards attached to the instance. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.hostname">Hostname</a></code> | <code>*string</code> | A custom hostname for the instance. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#id ComputeInstance#id}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#id ComputeInstance#id}. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.labels">Labels</a></code> | <code>*map[string]*string</code> | A set of key/value label pairs assigned to the instance. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Metadata key/value pairs made available within the instance. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceConfig.property.metadataStartupScript">MetadataStartupScript</a></code> | <code>*string</code> | Metadata startup scripts made available within the instance. |
@@ -2285,7 +2285,7 @@ BootDisk ComputeInstanceBootDisk
 
 boot_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#boot_disk ComputeInstance#boot_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#boot_disk ComputeInstance#boot_disk}
 
 ---
 
@@ -2299,7 +2299,7 @@ MachineType *string
 
 The machine type to create.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#machine_type ComputeInstance#machine_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#machine_type ComputeInstance#machine_type}
 
 ---
 
@@ -2313,7 +2313,7 @@ Name *string
 
 The name of the instance. One of name or self_link must be provided.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#name ComputeInstance#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#name ComputeInstance#name}
 
 ---
 
@@ -2327,7 +2327,7 @@ NetworkInterface interface{}
 
 network_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network_interface ComputeInstance#network_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network_interface ComputeInstance#network_interface}
 
 ---
 
@@ -2341,7 +2341,7 @@ AdvancedMachineFeatures ComputeInstanceAdvancedMachineFeatures
 
 advanced_machine_features block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#advanced_machine_features ComputeInstance#advanced_machine_features}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#advanced_machine_features ComputeInstance#advanced_machine_features}
 
 ---
 
@@ -2357,7 +2357,7 @@ If true, allows Terraform to stop the instance to update its properties.
 
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#allow_stopping_for_update ComputeInstance#allow_stopping_for_update}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#allow_stopping_for_update ComputeInstance#allow_stopping_for_update}
 
 ---
 
@@ -2371,7 +2371,7 @@ AttachedDisk interface{}
 
 attached_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#attached_disk ComputeInstance#attached_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#attached_disk ComputeInstance#attached_disk}
 
 ---
 
@@ -2385,7 +2385,7 @@ CanIpForward interface{}
 
 Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#can_ip_forward ComputeInstance#can_ip_forward}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#can_ip_forward ComputeInstance#can_ip_forward}
 
 ---
 
@@ -2399,7 +2399,7 @@ ConfidentialInstanceConfig ComputeInstanceConfidentialInstanceConfig
 
 confidential_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#confidential_instance_config ComputeInstance#confidential_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#confidential_instance_config ComputeInstance#confidential_instance_config}
 
 ---
 
@@ -2413,7 +2413,7 @@ DeletionProtection interface{}
 
 Whether deletion protection is enabled on this instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#deletion_protection ComputeInstance#deletion_protection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#deletion_protection ComputeInstance#deletion_protection}
 
 ---
 
@@ -2427,7 +2427,7 @@ Description *string
 
 A brief description of the resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#description ComputeInstance#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#description ComputeInstance#description}
 
 ---
 
@@ -2441,7 +2441,7 @@ DesiredStatus *string
 
 Desired status of the instance. Either "RUNNING" or "TERMINATED".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#desired_status ComputeInstance#desired_status}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#desired_status ComputeInstance#desired_status}
 
 ---
 
@@ -2455,7 +2455,7 @@ EnableDisplay interface{}
 
 Whether the instance has virtual displays enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_display ComputeInstance#enable_display}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_display ComputeInstance#enable_display}
 
 ---
 
@@ -2469,7 +2469,7 @@ GuestAccelerator interface{}
 
 List of the type and count of accelerator cards attached to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#guest_accelerator ComputeInstance#guest_accelerator}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#guest_accelerator ComputeInstance#guest_accelerator}
 
 ---
 
@@ -2485,7 +2485,7 @@ A custom hostname for the instance.
 
 Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z](%5B-a-z0-9%5D*%5Ba-z0-9%5D), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#hostname ComputeInstance#hostname}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#hostname ComputeInstance#hostname}
 
 ---
 
@@ -2497,7 +2497,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#id ComputeInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#id ComputeInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2514,7 +2514,7 @@ Labels *map[string]*string
 
 A set of key/value label pairs assigned to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#labels ComputeInstance#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#labels ComputeInstance#labels}
 
 ---
 
@@ -2528,7 +2528,7 @@ Metadata *map[string]*string
 
 Metadata key/value pairs made available within the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#metadata ComputeInstance#metadata}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#metadata ComputeInstance#metadata}
 
 ---
 
@@ -2542,7 +2542,7 @@ MetadataStartupScript *string
 
 Metadata startup scripts made available within the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#metadata_startup_script ComputeInstance#metadata_startup_script}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#metadata_startup_script ComputeInstance#metadata_startup_script}
 
 ---
 
@@ -2556,7 +2556,7 @@ MinCpuPlatform *string
 
 The minimum CPU platform specified for the VM instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#min_cpu_platform ComputeInstance#min_cpu_platform}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#min_cpu_platform ComputeInstance#min_cpu_platform}
 
 ---
 
@@ -2570,7 +2570,7 @@ NetworkPerformanceConfig ComputeInstanceNetworkPerformanceConfig
 
 network_performance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network_performance_config ComputeInstance#network_performance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network_performance_config ComputeInstance#network_performance_config}
 
 ---
 
@@ -2584,7 +2584,7 @@ Params ComputeInstanceParams
 
 params block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#params ComputeInstance#params}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#params ComputeInstance#params}
 
 ---
 
@@ -2600,7 +2600,7 @@ The ID of the project in which the resource belongs.
 
 If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#project ComputeInstance#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#project ComputeInstance#project}
 
 ---
 
@@ -2614,7 +2614,7 @@ ReservationAffinity ComputeInstanceReservationAffinity
 
 reservation_affinity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#reservation_affinity ComputeInstance#reservation_affinity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#reservation_affinity ComputeInstance#reservation_affinity}
 
 ---
 
@@ -2630,7 +2630,7 @@ A list of self_links of resource policies to attach to the instance.
 
 Currently a max of 1 resource policy is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#resource_policies ComputeInstance#resource_policies}
 
 ---
 
@@ -2644,7 +2644,7 @@ Scheduling ComputeInstanceScheduling
 
 scheduling block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#scheduling ComputeInstance#scheduling}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#scheduling ComputeInstance#scheduling}
 
 ---
 
@@ -2658,7 +2658,7 @@ ScratchDisk interface{}
 
 scratch_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#scratch_disk ComputeInstance#scratch_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#scratch_disk ComputeInstance#scratch_disk}
 
 ---
 
@@ -2672,7 +2672,7 @@ ServiceAccount ComputeInstanceServiceAccount
 
 service_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#service_account ComputeInstance#service_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#service_account ComputeInstance#service_account}
 
 ---
 
@@ -2686,7 +2686,7 @@ ShieldedInstanceConfig ComputeInstanceShieldedInstanceConfig
 
 shielded_instance_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#shielded_instance_config ComputeInstance#shielded_instance_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#shielded_instance_config ComputeInstance#shielded_instance_config}
 
 ---
 
@@ -2700,7 +2700,7 @@ Tags *[]*string
 
 The list of tags attached to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#tags ComputeInstance#tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#tags ComputeInstance#tags}
 
 ---
 
@@ -2714,7 +2714,7 @@ Timeouts ComputeInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#timeouts ComputeInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#timeouts ComputeInstance#timeouts}
 
 ---
 
@@ -2730,7 +2730,7 @@ The zone of the instance.
 
 If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#zone ComputeInstance#zone}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#zone ComputeInstance#zone}
 
 ---
 
@@ -2751,8 +2751,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#count ComputeInstance#count}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#type ComputeInstance#type}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#count ComputeInstance#count}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceGuestAccelerator.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#type ComputeInstance#type}. |
 
 ---
 
@@ -2764,7 +2764,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#count ComputeInstance#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#count ComputeInstance#count}.
 
 ---
 
@@ -2776,7 +2776,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#type ComputeInstance#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#type ComputeInstance#type}.
 
 ---
 
@@ -2828,7 +2828,7 @@ AccessConfig interface{}
 
 access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#access_config ComputeInstance#access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#access_config ComputeInstance#access_config}
 
 ---
 
@@ -2842,7 +2842,7 @@ AliasIpRange interface{}
 
 alias_ip_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#alias_ip_range ComputeInstance#alias_ip_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#alias_ip_range ComputeInstance#alias_ip_range}
 
 ---
 
@@ -2856,7 +2856,7 @@ Ipv6AccessConfig interface{}
 
 ipv6_access_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#ipv6_access_config ComputeInstance#ipv6_access_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#ipv6_access_config ComputeInstance#ipv6_access_config}
 
 ---
 
@@ -2870,7 +2870,7 @@ Network *string
 
 The name or self_link of the network attached to this interface.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network ComputeInstance#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network ComputeInstance#network}
 
 ---
 
@@ -2884,7 +2884,7 @@ NetworkIp *string
 
 The private IP address assigned to the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network_ip ComputeInstance#network_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network_ip ComputeInstance#network_ip}
 
 ---
 
@@ -2898,7 +2898,7 @@ NicType *string
 
 The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#nic_type ComputeInstance#nic_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#nic_type ComputeInstance#nic_type}
 
 ---
 
@@ -2914,7 +2914,7 @@ The networking queue count that's specified by users for the network interface.
 
 Both Rx and Tx queues will be set to this number. It will be empty if not specified.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#queue_count ComputeInstance#queue_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#queue_count ComputeInstance#queue_count}
 
 ---
 
@@ -2930,7 +2930,7 @@ The stack type for this network interface to identify whether the IPv6 feature i
 
 If not specified, IPV4_ONLY will be used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#stack_type ComputeInstance#stack_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#stack_type ComputeInstance#stack_type}
 
 ---
 
@@ -2944,7 +2944,7 @@ Subnetwork *string
 
 The name or self_link of the subnetwork attached to this interface.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#subnetwork ComputeInstance#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#subnetwork ComputeInstance#subnetwork}
 
 ---
 
@@ -2958,7 +2958,7 @@ SubnetworkProject *string
 
 The project in which the subnetwork belongs.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#subnetwork_project ComputeInstance#subnetwork_project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#subnetwork_project ComputeInstance#subnetwork_project}
 
 ---
 
@@ -2996,7 +2996,7 @@ NatIp *string
 
 The IP address that is be 1:1 mapped to the instance's network ip.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#nat_ip ComputeInstance#nat_ip}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#nat_ip ComputeInstance#nat_ip}
 
 ---
 
@@ -3010,7 +3010,7 @@ NetworkTier *string
 
 The networking tier used for configuring this instance. One of PREMIUM or STANDARD.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
 
 ---
 
@@ -3024,7 +3024,7 @@ PublicPtrDomainName *string
 
 The DNS domain name for the public PTR record.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
 
 ---
 
@@ -3060,7 +3060,7 @@ IpCidrRange *string
 
 The IP CIDR range represented by this alias IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#ip_cidr_range ComputeInstance#ip_cidr_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#ip_cidr_range ComputeInstance#ip_cidr_range}
 
 ---
 
@@ -3074,7 +3074,7 @@ SubnetworkRangeName *string
 
 The subnetwork secondary range name specifying the secondary range from which to allocate the IP CIDR range for this alias IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#subnetwork_range_name ComputeInstance#subnetwork_range_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#subnetwork_range_name ComputeInstance#subnetwork_range_name}
 
 ---
 
@@ -3087,6 +3087,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 
 &computeinstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig {
 	NetworkTier: *string,
+	ExternalIpv6: *string,
+	ExternalIpv6PrefixLength: *string,
+	Name: *string,
 	PublicPtrDomainName: *string,
 }
 ```
@@ -3096,6 +3099,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.networkTier">NetworkTier</a></code> | <code>*string</code> | The service-level to be provided for IPv6 traffic when the subnet has an external subnet. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.externalIpv6">ExternalIpv6</a></code> | <code>*string</code> | The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.externalIpv6PrefixLength">ExternalIpv6PrefixLength</a></code> | <code>*string</code> | The prefix length of the external IPv6 range. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.name">Name</a></code> | <code>*string</code> | The name of this access configuration. In ipv6AccessConfigs, the recommended name is External IPv6. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.publicPtrDomainName">PublicPtrDomainName</a></code> | <code>*string</code> | The domain name to be used when creating DNSv6 records for the external IPv6 ranges. |
 
 ---
@@ -3112,7 +3118,51 @@ The service-level to be provided for IPv6 traffic when the subnet has an externa
 
 Only PREMIUM tier is valid for IPv6
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#network_tier ComputeInstance#network_tier}
+
+---
+
+##### `ExternalIpv6`<sup>Optional</sup> <a name="ExternalIpv6" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.externalIpv6"></a>
+
+```go
+ExternalIpv6 *string
+```
+
+- *Type:* *string
+
+The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig.
+
+To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#external_ipv6 ComputeInstance#external_ipv6}
+
+---
+
+##### `ExternalIpv6PrefixLength`<sup>Optional</sup> <a name="ExternalIpv6PrefixLength" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.externalIpv6PrefixLength"></a>
+
+```go
+ExternalIpv6PrefixLength *string
+```
+
+- *Type:* *string
+
+The prefix length of the external IPv6 range.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#external_ipv6_prefix_length ComputeInstance#external_ipv6_prefix_length}
+
+---
+
+##### `Name`<sup>Optional</sup> <a name="Name" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfig.property.name"></a>
+
+```go
+Name *string
+```
+
+- *Type:* *string
+
+The name of this access configuration. In ipv6AccessConfigs, the recommended name is External IPv6.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#name ComputeInstance#name}
 
 ---
 
@@ -3126,7 +3176,7 @@ PublicPtrDomainName *string
 
 The domain name to be used when creating DNSv6 records for the external IPv6 ranges.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#public_ptr_domain_name ComputeInstance#public_ptr_domain_name}
 
 ---
 
@@ -3160,7 +3210,7 @@ TotalEgressBandwidthTier *string
 
 The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#total_egress_bandwidth_tier ComputeInstance#total_egress_bandwidth_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#total_egress_bandwidth_tier ComputeInstance#total_egress_bandwidth_tier}
 
 ---
 
@@ -3196,7 +3246,7 @@ A map of resource manager tags.
 
 Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT & PATCH) when empty.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#resource_manager_tags ComputeInstance#resource_manager_tags}
 
 ---
 
@@ -3232,7 +3282,7 @@ Type *string
 
 The type of reservation from which this instance can consume resources.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#type ComputeInstance#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#type ComputeInstance#type}
 
 ---
 
@@ -3246,7 +3296,7 @@ SpecificReservation ComputeInstanceReservationAffinitySpecificReservation
 
 specific_reservation block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#specific_reservation ComputeInstance#specific_reservation}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#specific_reservation ComputeInstance#specific_reservation}
 
 ---
 
@@ -3284,7 +3334,7 @@ Corresponds to the label key of a reservation resource.
 
 To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#key ComputeInstance#key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#key ComputeInstance#key}
 
 ---
 
@@ -3298,7 +3348,7 @@ Values *[]*string
 
 Corresponds to the label values of a reservation resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#values ComputeInstance#values}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#values ComputeInstance#values}
 
 ---
 
@@ -3312,6 +3362,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 &computeinstance.ComputeInstanceScheduling {
 	AutomaticRestart: interface{},
 	InstanceTerminationAction: *string,
+	LocalSsdRecoveryTimeout: github.com/cdktf/cdktf-provider-google-go/google/v8.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout,
 	MinNodeCpus: *f64,
 	NodeAffinities: interface{},
 	OnHostMaintenance: *string,
@@ -3326,7 +3377,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.automaticRestart">AutomaticRestart</a></code> | <code>interface{}</code> | Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.instanceTerminationAction">InstanceTerminationAction</a></code> | <code>*string</code> | Specifies the action GCE should take when SPOT VM is preempted. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.minNodeCpus">MinNodeCpus</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.localSsdRecoveryTimeout">LocalSsdRecoveryTimeout</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a></code> | local_ssd_recovery_timeout block. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.minNodeCpus">MinNodeCpus</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.nodeAffinities">NodeAffinities</a></code> | <code>interface{}</code> | node_affinities block. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.onHostMaintenance">OnHostMaintenance</a></code> | <code>*string</code> | Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.preemptible">Preemptible</a></code> | <code>interface{}</code> | Whether the instance is preemptible. |
@@ -3344,7 +3396,7 @@ AutomaticRestart interface{}
 
 Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#automatic_restart ComputeInstance#automatic_restart}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#automatic_restart ComputeInstance#automatic_restart}
 
 ---
 
@@ -3358,7 +3410,21 @@ InstanceTerminationAction *string
 
 Specifies the action GCE should take when SPOT VM is preempted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#instance_termination_action ComputeInstance#instance_termination_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#instance_termination_action ComputeInstance#instance_termination_action}
+
+---
+
+##### `LocalSsdRecoveryTimeout`<sup>Optional</sup> <a name="LocalSsdRecoveryTimeout" id="@cdktf/provider-google.computeInstance.ComputeInstanceScheduling.property.localSsdRecoveryTimeout"></a>
+
+```go
+LocalSsdRecoveryTimeout ComputeInstanceSchedulingLocalSsdRecoveryTimeout
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a>
+
+local_ssd_recovery_timeout block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#local_ssd_recovery_timeout ComputeInstance#local_ssd_recovery_timeout}
 
 ---
 
@@ -3370,7 +3436,7 @@ MinNodeCpus *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#min_node_cpus ComputeInstance#min_node_cpus}.
 
 ---
 
@@ -3384,7 +3450,7 @@ NodeAffinities interface{}
 
 node_affinities block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#node_affinities ComputeInstance#node_affinities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#node_affinities ComputeInstance#node_affinities}
 
 ---
 
@@ -3398,7 +3464,7 @@ OnHostMaintenance *string
 
 Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE,.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#on_host_maintenance ComputeInstance#on_host_maintenance}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#on_host_maintenance ComputeInstance#on_host_maintenance}
 
 ---
 
@@ -3412,7 +3478,7 @@ Preemptible interface{}
 
 Whether the instance is preemptible.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#preemptible ComputeInstance#preemptible}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#preemptible ComputeInstance#preemptible}
 
 ---
 
@@ -3426,7 +3492,61 @@ ProvisioningModel *string
 
 Whether the instance is spot. If this is set as SPOT.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#provisioning_model ComputeInstance#provisioning_model}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#provisioning_model ComputeInstance#provisioning_model}
+
+---
+
+### ComputeInstanceSchedulingLocalSsdRecoveryTimeout <a name="ComputeInstanceSchedulingLocalSsdRecoveryTimeout" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
+
+&computeinstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout {
+	Seconds: *f64,
+	Nanos: *f64,
+}
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout.property.seconds">Seconds</a></code> | <code>*f64</code> | Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout.property.nanos">Nanos</a></code> | <code>*f64</code> | Span of time that's a fraction of a second at nanosecond resolution. |
+
+---
+
+##### `Seconds`<sup>Required</sup> <a name="Seconds" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout.property.seconds"></a>
+
+```go
+Seconds *f64
+```
+
+- *Type:* *f64
+
+Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#seconds ComputeInstance#seconds}
+
+---
+
+##### `Nanos`<sup>Optional</sup> <a name="Nanos" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout.property.nanos"></a>
+
+```go
+Nanos *f64
+```
+
+- *Type:* *f64
+
+Span of time that's a fraction of a second at nanosecond resolution.
+
+Durations less than one second are represented
+with a 0 seconds field and a positive nanos field. Must
+be from 0 to 999,999,999 inclusive.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#nanos ComputeInstance#nanos}
 
 ---
 
@@ -3448,9 +3568,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.key">Key</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#key ComputeInstance#key}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#operator ComputeInstance#operator}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#values ComputeInstance#values}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.key">Key</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#key ComputeInstance#key}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#operator ComputeInstance#operator}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinities.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#values ComputeInstance#values}. |
 
 ---
 
@@ -3462,7 +3582,7 @@ Key *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#key ComputeInstance#key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#key ComputeInstance#key}.
 
 ---
 
@@ -3474,7 +3594,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#operator ComputeInstance#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#operator ComputeInstance#operator}.
 
 ---
 
@@ -3486,7 +3606,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#values ComputeInstance#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#values ComputeInstance#values}.
 
 ---
 
@@ -3522,7 +3642,7 @@ Interface *string
 
 The disk interface used for attaching this disk. One of SCSI or NVME.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#interface ComputeInstance#interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#interface ComputeInstance#interface}
 
 ---
 
@@ -3536,7 +3656,7 @@ Size *f64
 
 The size of the disk in gigabytes. One of 375 or 3000.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#size ComputeInstance#size}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#size ComputeInstance#size}
 
 ---
 
@@ -3572,7 +3692,7 @@ Scopes *[]*string
 
 A list of service scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#scopes ComputeInstance#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#scopes ComputeInstance#scopes}
 
 ---
 
@@ -3586,7 +3706,7 @@ Email *string
 
 The service account e-mail address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#email ComputeInstance#email}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#email ComputeInstance#email}
 
 ---
 
@@ -3624,7 +3744,7 @@ EnableIntegrityMonitoring interface{}
 
 Whether integrity monitoring is enabled for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_integrity_monitoring ComputeInstance#enable_integrity_monitoring}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_integrity_monitoring ComputeInstance#enable_integrity_monitoring}
 
 ---
 
@@ -3638,7 +3758,7 @@ EnableSecureBoot interface{}
 
 Whether secure boot is enabled for the instance.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_secure_boot ComputeInstance#enable_secure_boot}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_secure_boot ComputeInstance#enable_secure_boot}
 
 ---
 
@@ -3652,7 +3772,7 @@ EnableVtpm interface{}
 
 Whether the instance uses vTPM.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#enable_vtpm ComputeInstance#enable_vtpm}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#enable_vtpm ComputeInstance#enable_vtpm}
 
 ---
 
@@ -3674,9 +3794,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#create ComputeInstance#create}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#delete ComputeInstance#delete}. |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#update ComputeInstance#update}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#create ComputeInstance#create}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#delete ComputeInstance#delete}. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#update ComputeInstance#update}. |
 
 ---
 
@@ -3688,7 +3808,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#create ComputeInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#create ComputeInstance#create}.
 
 ---
 
@@ -3700,7 +3820,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#delete ComputeInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#delete ComputeInstance#delete}.
 
 ---
 
@@ -3712,7 +3832,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_instance#update ComputeInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_instance#update ComputeInstance#update}.
 
 ---
 
@@ -7391,6 +7511,9 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetExternalIpv6">ResetExternalIpv6</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetExternalIpv6PrefixLength">ResetExternalIpv6PrefixLength</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetName">ResetName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetPublicPtrDomainName">ResetPublicPtrDomainName</a></code> | *No description.* |
 
 ---
@@ -7545,6 +7668,24 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetExternalIpv6` <a name="ResetExternalIpv6" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetExternalIpv6"></a>
+
+```go
+func ResetExternalIpv6()
+```
+
+##### `ResetExternalIpv6PrefixLength` <a name="ResetExternalIpv6PrefixLength" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetExternalIpv6PrefixLength"></a>
+
+```go
+func ResetExternalIpv6PrefixLength()
+```
+
+##### `ResetName` <a name="ResetName" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetName"></a>
+
+```go
+func ResetName()
+```
+
 ##### `ResetPublicPtrDomainName` <a name="ResetPublicPtrDomainName" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.resetPublicPtrDomainName"></a>
 
 ```go
@@ -7558,10 +7699,14 @@ func ResetPublicPtrDomainName()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6">ExternalIpv6</a></code> | <code>*string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLength">ExternalIpv6PrefixLength</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6Input">ExternalIpv6Input</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLengthInput">ExternalIpv6PrefixLengthInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.networkTierInput">NetworkTierInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.publicPtrDomainNameInput">PublicPtrDomainNameInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6">ExternalIpv6</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLength">ExternalIpv6PrefixLength</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.networkTier">NetworkTier</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.publicPtrDomainName">PublicPtrDomainName</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.internalValue">InternalValue</a></code> | <code>interface{}</code> | *No description.* |
@@ -7592,20 +7737,30 @@ func Fqn() *string
 
 ---
 
-##### `ExternalIpv6`<sup>Required</sup> <a name="ExternalIpv6" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6"></a>
+##### `ExternalIpv6Input`<sup>Optional</sup> <a name="ExternalIpv6Input" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6Input"></a>
 
 ```go
-func ExternalIpv6() *string
+func ExternalIpv6Input() *string
 ```
 
 - *Type:* *string
 
 ---
 
-##### `ExternalIpv6PrefixLength`<sup>Required</sup> <a name="ExternalIpv6PrefixLength" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLength"></a>
+##### `ExternalIpv6PrefixLengthInput`<sup>Optional</sup> <a name="ExternalIpv6PrefixLengthInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLengthInput"></a>
 
 ```go
-func ExternalIpv6PrefixLength() *string
+func ExternalIpv6PrefixLengthInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NameInput`<sup>Optional</sup> <a name="NameInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.nameInput"></a>
+
+```go
+func NameInput() *string
 ```
 
 - *Type:* *string
@@ -7626,6 +7781,36 @@ func NetworkTierInput() *string
 
 ```go
 func PublicPtrDomainNameInput() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ExternalIpv6`<sup>Required</sup> <a name="ExternalIpv6" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6"></a>
+
+```go
+func ExternalIpv6() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `ExternalIpv6PrefixLength`<sup>Required</sup> <a name="ExternalIpv6PrefixLength" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.externalIpv6PrefixLength"></a>
+
+```go
+func ExternalIpv6PrefixLength() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `Name`<sup>Required</sup> <a name="Name" id="@cdktf/provider-google.computeInstance.ComputeInstanceNetworkInterfaceIpv6AccessConfigOutputReference.property.name"></a>
+
+```go
+func Name() *string
 ```
 
 - *Type:* *string
@@ -9579,6 +9764,306 @@ func InternalValue() ComputeInstanceReservationAffinitySpecificReservation
 ---
 
 
+### ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference <a name="ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/computeinstance"
+
+computeinstance.NewComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>*string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.computeFqn">ComputeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getListAttribute">GetListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberAttribute">GetNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberListAttribute">GetNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.resetNanos">ResetNanos</a></code> | *No description.* |
+
+---
+
+##### `ComputeFqn` <a name="ComputeFqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.computeFqn"></a>
+
+```go
+func ComputeFqn() *string
+```
+
+##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getAnyMapAttribute"></a>
+
+```go
+func GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanAttribute` <a name="GetBooleanAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanAttribute"></a>
+
+```go
+func GetBooleanAttribute(terraformAttribute *string) IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetBooleanMapAttribute` <a name="GetBooleanMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanMapAttribute"></a>
+
+```go
+func GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetListAttribute` <a name="GetListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getListAttribute"></a>
+
+```go
+func GetListAttribute(terraformAttribute *string) *[]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberAttribute` <a name="GetNumberAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberAttribute"></a>
+
+```go
+func GetNumberAttribute(terraformAttribute *string) *f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberListAttribute` <a name="GetNumberListAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberListAttribute"></a>
+
+```go
+func GetNumberListAttribute(terraformAttribute *string) *[]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetNumberMapAttribute` <a name="GetNumberMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberMapAttribute"></a>
+
+```go
+func GetNumberMapAttribute(terraformAttribute *string) *map[string]*f64
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringAttribute` <a name="GetStringAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringAttribute"></a>
+
+```go
+func GetStringAttribute(terraformAttribute *string) *string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `GetStringMapAttribute` <a name="GetStringMapAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringMapAttribute"></a>
+
+```go
+func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* *string
+
+---
+
+##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.interpolationForAttribute"></a>
+
+```go
+func InterpolationForAttribute(property *string) IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* *string
+
+---
+
+##### `Resolve` <a name="Resolve" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.resolve"></a>
+
+```go
+func Resolve(_context IResolveContext) interface{}
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.resolve.parameter._context"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.IResolveContext
+
+---
+
+##### `ToString` <a name="ToString" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.toString"></a>
+
+```go
+func ToString() *string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `ResetNanos` <a name="ResetNanos" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.resetNanos"></a>
+
+```go
+func ResetNanos()
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.nanosInput">NanosInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.secondsInput">SecondsInput</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.nanos">Nanos</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.seconds">Seconds</a></code> | <code>*f64</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a></code> | *No description.* |
+
+---
+
+##### `CreationStack`<sup>Required</sup> <a name="CreationStack" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.creationStack"></a>
+
+```go
+func CreationStack() *[]*string
+```
+
+- *Type:* *[]*string
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `Fqn`<sup>Required</sup> <a name="Fqn" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.fqn"></a>
+
+```go
+func Fqn() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `NanosInput`<sup>Optional</sup> <a name="NanosInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.nanosInput"></a>
+
+```go
+func NanosInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `SecondsInput`<sup>Optional</sup> <a name="SecondsInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.secondsInput"></a>
+
+```go
+func SecondsInput() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `Nanos`<sup>Required</sup> <a name="Nanos" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.nanos"></a>
+
+```go
+func Nanos() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `Seconds`<sup>Required</sup> <a name="Seconds" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.seconds"></a>
+
+```go
+func Seconds() *f64
+```
+
+- *Type:* *f64
+
+---
+
+##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference.property.internalValue"></a>
+
+```go
+func InternalValue() ComputeInstanceSchedulingLocalSsdRecoveryTimeout
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a>
+
+---
+
+
 ### ComputeInstanceSchedulingNodeAffinitiesList <a name="ComputeInstanceSchedulingNodeAffinitiesList" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinitiesList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinitiesList.Initializer"></a>
@@ -10105,9 +10590,11 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.putLocalSsdRecoveryTimeout">PutLocalSsdRecoveryTimeout</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.putNodeAffinities">PutNodeAffinities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetAutomaticRestart">ResetAutomaticRestart</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetInstanceTerminationAction">ResetInstanceTerminationAction</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetLocalSsdRecoveryTimeout">ResetLocalSsdRecoveryTimeout</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetMinNodeCpus">ResetMinNodeCpus</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetNodeAffinities">ResetNodeAffinities</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetOnHostMaintenance">ResetOnHostMaintenance</a></code> | *No description.* |
@@ -10266,6 +10753,18 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `PutLocalSsdRecoveryTimeout` <a name="PutLocalSsdRecoveryTimeout" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.putLocalSsdRecoveryTimeout"></a>
+
+```go
+func PutLocalSsdRecoveryTimeout(value ComputeInstanceSchedulingLocalSsdRecoveryTimeout)
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.putLocalSsdRecoveryTimeout.parameter.value"></a>
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a>
+
+---
+
 ##### `PutNodeAffinities` <a name="PutNodeAffinities" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.putNodeAffinities"></a>
 
 ```go
@@ -10288,6 +10787,12 @@ func ResetAutomaticRestart()
 
 ```go
 func ResetInstanceTerminationAction()
+```
+
+##### `ResetLocalSsdRecoveryTimeout` <a name="ResetLocalSsdRecoveryTimeout" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetLocalSsdRecoveryTimeout"></a>
+
+```go
+func ResetLocalSsdRecoveryTimeout()
 ```
 
 ##### `ResetMinNodeCpus` <a name="ResetMinNodeCpus" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.resetMinNodeCpus"></a>
@@ -10327,9 +10832,11 @@ func ResetProvisioningModel()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.localSsdRecoveryTimeout">LocalSsdRecoveryTimeout</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference">ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.nodeAffinities">NodeAffinities</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingNodeAffinitiesList">ComputeInstanceSchedulingNodeAffinitiesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.automaticRestartInput">AutomaticRestartInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.instanceTerminationActionInput">InstanceTerminationActionInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.localSsdRecoveryTimeoutInput">LocalSsdRecoveryTimeoutInput</a></code> | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.minNodeCpusInput">MinNodeCpusInput</a></code> | <code>*f64</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.nodeAffinitiesInput">NodeAffinitiesInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.onHostMaintenanceInput">OnHostMaintenanceInput</a></code> | <code>*string</code> | *No description.* |
@@ -10369,6 +10876,16 @@ func Fqn() *string
 
 ---
 
+##### `LocalSsdRecoveryTimeout`<sup>Required</sup> <a name="LocalSsdRecoveryTimeout" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.localSsdRecoveryTimeout"></a>
+
+```go
+func LocalSsdRecoveryTimeout() ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference">ComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference</a>
+
+---
+
 ##### `NodeAffinities`<sup>Required</sup> <a name="NodeAffinities" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.nodeAffinities"></a>
 
 ```go
@@ -10396,6 +10913,16 @@ func InstanceTerminationActionInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `LocalSsdRecoveryTimeoutInput`<sup>Optional</sup> <a name="LocalSsdRecoveryTimeoutInput" id="@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingOutputReference.property.localSsdRecoveryTimeoutInput"></a>
+
+```go
+func LocalSsdRecoveryTimeoutInput() ComputeInstanceSchedulingLocalSsdRecoveryTimeout
+```
+
+- *Type:* <a href="#@cdktf/provider-google.computeInstance.ComputeInstanceSchedulingLocalSsdRecoveryTimeout">ComputeInstanceSchedulingLocalSsdRecoveryTimeout</a>
 
 ---
 

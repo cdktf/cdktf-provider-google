@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,7 +13,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance#id DataGoogleComputeInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -22,25 +22,25 @@ export interface DataGoogleComputeInstanceConfig extends cdktf.TerraformMetaArgu
   /**
   * The name of the instance. One of name or self_link must be provided.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance#name DataGoogleComputeInstance#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither self_link nor project are provided, the provider project is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance#project DataGoogleComputeInstance#project}
   */
   readonly project?: string;
   /**
   * The URI of the created resource.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance#self_link DataGoogleComputeInstance#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone of the instance. If self_link is provided, this value is ignored. If neither self_link nor zone are provided, the provider zone is used.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance#zone DataGoogleComputeInstance#zone}
   */
   readonly zone?: string;
 }
@@ -719,6 +719,11 @@ export class DataGoogleComputeInstanceNetworkInterfaceIpv6AccessConfigOutputRefe
     return this.getStringAttribute('external_ipv6_prefix_length');
   }
 
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
   // network_tier - computed: true, optional: false, required: false
   public get networkTier() {
     return this.getStringAttribute('network_tier');
@@ -1138,6 +1143,75 @@ export class DataGoogleComputeInstanceReservationAffinityList extends cdktf.Comp
     return new DataGoogleComputeInstanceReservationAffinityOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout {
+}
+
+export function dataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutToTerraform(struct?: DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeout | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // nanos - computed: true, optional: false, required: false
+  public get nanos() {
+    return this.getNumberAttribute('nanos');
+  }
+
+  // seconds - computed: true, optional: false, required: false
+  public get seconds() {
+    return this.getNumberAttribute('seconds');
+  }
+}
+
+export class DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference {
+    return new DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataGoogleComputeInstanceSchedulingNodeAffinities {
 }
 
@@ -1260,6 +1334,12 @@ export class DataGoogleComputeInstanceSchedulingOutputReference extends cdktf.Co
   // instance_termination_action - computed: true, optional: false, required: false
   public get instanceTerminationAction() {
     return this.getStringAttribute('instance_termination_action');
+  }
+
+  // local_ssd_recovery_timeout - computed: true, optional: false, required: false
+  private _localSsdRecoveryTimeout = new DataGoogleComputeInstanceSchedulingLocalSsdRecoveryTimeoutList(this, "local_ssd_recovery_timeout", false);
+  public get localSsdRecoveryTimeout() {
+    return this._localSsdRecoveryTimeout;
   }
 
   // min_node_cpus - computed: true, optional: false, required: false
@@ -1521,7 +1601,7 @@ export class DataGoogleComputeInstanceShieldedInstanceConfigList extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance google_compute_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance google_compute_instance}
 */
 export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
 
@@ -1535,7 +1615,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/data-sources/compute_instance google_compute_instance} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_instance google_compute_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1546,7 +1626,7 @@ export class DataGoogleComputeInstance extends cdktf.TerraformDataSource {
       terraformResourceType: 'google_compute_instance',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

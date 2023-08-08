@@ -385,6 +385,8 @@ export * as dnsResponsePolicy from './dns-response-policy';
 export * as dnsResponsePolicyRule from './dns-response-policy-rule';
 export * as documentAiProcessor from './document-ai-processor';
 export * as documentAiProcessorDefaultVersion from './document-ai-processor-default-version';
+export * as documentAiWarehouseDocumentSchema from './document-ai-warehouse-document-schema';
+export * as documentAiWarehouseLocation from './document-ai-warehouse-location';
 export * as endpointsService from './endpoints-service';
 export * as endpointsServiceConsumersIamBinding from './endpoints-service-consumers-iam-binding';
 export * as endpointsServiceConsumersIamMember from './endpoints-service-consumers-iam-member';

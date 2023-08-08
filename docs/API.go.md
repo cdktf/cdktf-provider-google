@@ -597,6 +597,8 @@ The following submodules are available:
 - [dnsResponsePolicyRule](./dnsResponsePolicyRule.go.md)
 - [documentAiProcessor](./documentAiProcessor.go.md)
 - [documentAiProcessorDefaultVersion](./documentAiProcessorDefaultVersion.go.md)
+- [documentAiWarehouseDocumentSchema](./documentAiWarehouseDocumentSchema.go.md)
+- [documentAiWarehouseLocation](./documentAiWarehouseLocation.go.md)
 - [endpointsService](./endpointsService.go.md)
 - [endpointsServiceConsumersIamBinding](./endpointsServiceConsumersIamBinding.go.md)
 - [endpointsServiceConsumersIamMember](./endpointsServiceConsumersIamMember.go.md)

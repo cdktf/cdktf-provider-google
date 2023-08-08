@@ -597,6 +597,8 @@ The following submodules are available:
 - [dnsResponsePolicyRule](./dnsResponsePolicyRule.python.md)
 - [documentAiProcessor](./documentAiProcessor.python.md)
 - [documentAiProcessorDefaultVersion](./documentAiProcessorDefaultVersion.python.md)
+- [documentAiWarehouseDocumentSchema](./documentAiWarehouseDocumentSchema.python.md)
+- [documentAiWarehouseLocation](./documentAiWarehouseLocation.python.md)
 - [endpointsService](./endpointsService.python.md)
 - [endpointsServiceConsumersIamBinding](./endpointsServiceConsumersIamBinding.python.md)
 - [endpointsServiceConsumersIamMember](./endpointsServiceConsumersIamMember.python.md)

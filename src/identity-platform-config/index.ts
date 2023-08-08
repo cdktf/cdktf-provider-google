@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config
+// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,40 +13,593 @@ import * as cdktf from 'cdktf';
 
 export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArguments {
   /**
+  * List of domains authorized for OAuth redirects.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
+  */
+  readonly authorizedDomains?: string[];
+  /**
   * Whether anonymous users will be auto-deleted after a period of 30 days
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
   */
   readonly autodeleteAnonymousUsers?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}
   */
   readonly project?: string;
   /**
+  * blocking_functions block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+  */
+  readonly blockingFunctions?: IdentityPlatformConfigBlockingFunctions;
+  /**
+  * quota block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  */
+  readonly quota?: IdentityPlatformConfigQuota;
+  /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformConfigTimeouts;
 }
+export interface IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials {
+  /**
+  * Whether to pass the user's OAuth identity provider's access token.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
+  */
+  readonly accessToken?: boolean | cdktf.IResolvable;
+  /**
+  * Whether to pass the user's OIDC identity provider's ID token.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
+  */
+  readonly idToken?: boolean | cdktf.IResolvable;
+  /**
+  * Whether to pass the user's OAuth identity provider's refresh token.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
+  */
+  readonly refreshToken?: boolean | cdktf.IResolvable;
+}
+
+export function identityPlatformConfigBlockingFunctionsForwardInboundCredentialsToTerraform(struct?: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference | IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    access_token: cdktf.booleanToTerraform(struct!.accessToken),
+    id_token: cdktf.booleanToTerraform(struct!.idToken),
+    refresh_token: cdktf.booleanToTerraform(struct!.refreshToken),
+  }
+}
+
+export class IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._accessToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.accessToken = this._accessToken;
+    }
+    if (this._idToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.idToken = this._idToken;
+    }
+    if (this._refreshToken !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.refreshToken = this._refreshToken;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._accessToken = undefined;
+      this._idToken = undefined;
+      this._refreshToken = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._accessToken = value.accessToken;
+      this._idToken = value.idToken;
+      this._refreshToken = value.refreshToken;
+    }
+  }
+
+  // access_token - computed: false, optional: true, required: false
+  private _accessToken?: boolean | cdktf.IResolvable; 
+  public get accessToken() {
+    return this.getBooleanAttribute('access_token');
+  }
+  public set accessToken(value: boolean | cdktf.IResolvable) {
+    this._accessToken = value;
+  }
+  public resetAccessToken() {
+    this._accessToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessTokenInput() {
+    return this._accessToken;
+  }
+
+  // id_token - computed: false, optional: true, required: false
+  private _idToken?: boolean | cdktf.IResolvable; 
+  public get idToken() {
+    return this.getBooleanAttribute('id_token');
+  }
+  public set idToken(value: boolean | cdktf.IResolvable) {
+    this._idToken = value;
+  }
+  public resetIdToken() {
+    this._idToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idTokenInput() {
+    return this._idToken;
+  }
+
+  // refresh_token - computed: false, optional: true, required: false
+  private _refreshToken?: boolean | cdktf.IResolvable; 
+  public get refreshToken() {
+    return this.getBooleanAttribute('refresh_token');
+  }
+  public set refreshToken(value: boolean | cdktf.IResolvable) {
+    this._refreshToken = value;
+  }
+  public resetRefreshToken() {
+    this._refreshToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get refreshTokenInput() {
+    return this._refreshToken;
+  }
+}
+export interface IdentityPlatformConfigBlockingFunctionsTriggers {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}
+  */
+  readonly eventType: string;
+  /**
+  * HTTP URI trigger for the Cloud Function.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+  */
+  readonly functionUri: string;
+}
+
+export function identityPlatformConfigBlockingFunctionsTriggersToTerraform(struct?: IdentityPlatformConfigBlockingFunctionsTriggers | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    event_type: cdktf.stringToTerraform(struct!.eventType),
+    function_uri: cdktf.stringToTerraform(struct!.functionUri),
+  }
+}
+
+export class IdentityPlatformConfigBlockingFunctionsTriggersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): IdentityPlatformConfigBlockingFunctionsTriggers | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._eventType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.eventType = this._eventType;
+    }
+    if (this._functionUri !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.functionUri = this._functionUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigBlockingFunctionsTriggers | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._eventType = undefined;
+      this._functionUri = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._eventType = value.eventType;
+      this._functionUri = value.functionUri;
+    }
+  }
+
+  // event_type - computed: false, optional: false, required: true
+  private _eventType?: string; 
+  public get eventType() {
+    return this.getStringAttribute('event_type');
+  }
+  public set eventType(value: string) {
+    this._eventType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventTypeInput() {
+    return this._eventType;
+  }
+
+  // function_uri - computed: false, optional: false, required: true
+  private _functionUri?: string; 
+  public get functionUri() {
+    return this.getStringAttribute('function_uri');
+  }
+  public set functionUri(value: string) {
+    this._functionUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionUriInput() {
+    return this._functionUri;
+  }
+
+  // update_time - computed: true, optional: false, required: false
+  public get updateTime() {
+    return this.getStringAttribute('update_time');
+  }
+}
+
+export class IdentityPlatformConfigBlockingFunctionsTriggersList extends cdktf.ComplexList {
+  public internalValue? : IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): IdentityPlatformConfigBlockingFunctionsTriggersOutputReference {
+    return new IdentityPlatformConfigBlockingFunctionsTriggersOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface IdentityPlatformConfigBlockingFunctions {
+  /**
+  * forward_inbound_credentials block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
+  */
+  readonly forwardInboundCredentials?: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials;
+  /**
+  * triggers block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
+  */
+  readonly triggers: IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable;
+}
+
+export function identityPlatformConfigBlockingFunctionsToTerraform(struct?: IdentityPlatformConfigBlockingFunctionsOutputReference | IdentityPlatformConfigBlockingFunctions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    forward_inbound_credentials: identityPlatformConfigBlockingFunctionsForwardInboundCredentialsToTerraform(struct!.forwardInboundCredentials),
+    triggers: cdktf.listMapper(identityPlatformConfigBlockingFunctionsTriggersToTerraform, true)(struct!.triggers),
+  }
+}
+
+export class IdentityPlatformConfigBlockingFunctionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigBlockingFunctions | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._forwardInboundCredentials?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.forwardInboundCredentials = this._forwardInboundCredentials?.internalValue;
+    }
+    if (this._triggers?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggers = this._triggers?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigBlockingFunctions | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._forwardInboundCredentials.internalValue = undefined;
+      this._triggers.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._forwardInboundCredentials.internalValue = value.forwardInboundCredentials;
+      this._triggers.internalValue = value.triggers;
+    }
+  }
+
+  // forward_inbound_credentials - computed: false, optional: true, required: false
+  private _forwardInboundCredentials = new IdentityPlatformConfigBlockingFunctionsForwardInboundCredentialsOutputReference(this, "forward_inbound_credentials");
+  public get forwardInboundCredentials() {
+    return this._forwardInboundCredentials;
+  }
+  public putForwardInboundCredentials(value: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials) {
+    this._forwardInboundCredentials.internalValue = value;
+  }
+  public resetForwardInboundCredentials() {
+    this._forwardInboundCredentials.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardInboundCredentialsInput() {
+    return this._forwardInboundCredentials.internalValue;
+  }
+
+  // triggers - computed: false, optional: false, required: true
+  private _triggers = new IdentityPlatformConfigBlockingFunctionsTriggersList(this, "triggers", true);
+  public get triggers() {
+    return this._triggers;
+  }
+  public putTriggers(value: IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable) {
+    this._triggers.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggersInput() {
+    return this._triggers.internalValue;
+  }
+}
+export interface IdentityPlatformConfigQuotaSignUpQuotaConfig {
+  /**
+  * A sign up APIs quota that customers can override temporarily.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+  */
+  readonly quota?: number;
+  /**
+  * How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
+  */
+  readonly quotaDuration?: string;
+  /**
+  * When this quota will take affect.
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
+  */
+  readonly startTime?: string;
+}
+
+export function identityPlatformConfigQuotaSignUpQuotaConfigToTerraform(struct?: IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference | IdentityPlatformConfigQuotaSignUpQuotaConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    quota: cdktf.numberToTerraform(struct!.quota),
+    quota_duration: cdktf.stringToTerraform(struct!.quotaDuration),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
+export class IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigQuotaSignUpQuotaConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._quota !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.quota = this._quota;
+    }
+    if (this._quotaDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.quotaDuration = this._quotaDuration;
+    }
+    if (this._startTime !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigQuotaSignUpQuotaConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._quota = undefined;
+      this._quotaDuration = undefined;
+      this._startTime = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._quota = value.quota;
+      this._quotaDuration = value.quotaDuration;
+      this._startTime = value.startTime;
+    }
+  }
+
+  // quota - computed: false, optional: true, required: false
+  private _quota?: number; 
+  public get quota() {
+    return this.getNumberAttribute('quota');
+  }
+  public set quota(value: number) {
+    this._quota = value;
+  }
+  public resetQuota() {
+    this._quota = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaInput() {
+    return this._quota;
+  }
+
+  // quota_duration - computed: false, optional: true, required: false
+  private _quotaDuration?: string; 
+  public get quotaDuration() {
+    return this.getStringAttribute('quota_duration');
+  }
+  public set quotaDuration(value: string) {
+    this._quotaDuration = value;
+  }
+  public resetQuotaDuration() {
+    this._quotaDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaDurationInput() {
+    return this._quotaDuration;
+  }
+
+  // start_time - computed: false, optional: true, required: false
+  private _startTime?: string; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string) {
+    this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime;
+  }
+}
+export interface IdentityPlatformConfigQuota {
+  /**
+  * sign_up_quota_config block
+  * 
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
+  */
+  readonly signUpQuotaConfig?: IdentityPlatformConfigQuotaSignUpQuotaConfig;
+}
+
+export function identityPlatformConfigQuotaToTerraform(struct?: IdentityPlatformConfigQuotaOutputReference | IdentityPlatformConfigQuota): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    sign_up_quota_config: identityPlatformConfigQuotaSignUpQuotaConfigToTerraform(struct!.signUpQuotaConfig),
+  }
+}
+
+export class IdentityPlatformConfigQuotaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): IdentityPlatformConfigQuota | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._signUpQuotaConfig?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.signUpQuotaConfig = this._signUpQuotaConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IdentityPlatformConfigQuota | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._signUpQuotaConfig.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._signUpQuotaConfig.internalValue = value.signUpQuotaConfig;
+    }
+  }
+
+  // sign_up_quota_config - computed: false, optional: true, required: false
+  private _signUpQuotaConfig = new IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference(this, "sign_up_quota_config");
+  public get signUpQuotaConfig() {
+    return this._signUpQuotaConfig;
+  }
+  public putSignUpQuotaConfig(value: IdentityPlatformConfigQuotaSignUpQuotaConfig) {
+    this._signUpQuotaConfig.internalValue = value;
+  }
+  public resetSignUpQuotaConfig() {
+    this._signUpQuotaConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signUpQuotaConfigInput() {
+    return this._signUpQuotaConfig.internalValue;
+  }
+}
 export interface IdentityPlatformConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}
   */
   readonly update?: string;
 }
@@ -167,7 +720,7 @@ export class IdentityPlatformConfigTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config google_identity_platform_config}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config google_identity_platform_config}
 */
 export class IdentityPlatformConfig extends cdktf.TerraformResource {
 
@@ -181,7 +734,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config google_identity_platform_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -192,7 +745,7 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
       terraformResourceType: 'google_identity_platform_config',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.76.0',
+        providerVersion: '4.77.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -203,15 +756,34 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._authorizedDomains = config.authorizedDomains;
     this._autodeleteAnonymousUsers = config.autodeleteAnonymousUsers;
     this._id = config.id;
     this._project = config.project;
+    this._blockingFunctions.internalValue = config.blockingFunctions;
+    this._quota.internalValue = config.quota;
     this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authorized_domains - computed: false, optional: true, required: false
+  private _authorizedDomains?: string[]; 
+  public get authorizedDomains() {
+    return this.getListAttribute('authorized_domains');
+  }
+  public set authorizedDomains(value: string[]) {
+    this._authorizedDomains = value;
+  }
+  public resetAuthorizedDomains() {
+    this._authorizedDomains = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorizedDomainsInput() {
+    return this._authorizedDomains;
+  }
 
   // autodelete_anonymous_users - computed: false, optional: true, required: false
   private _autodeleteAnonymousUsers?: boolean | cdktf.IResolvable; 
@@ -266,6 +838,38 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
     return this._project;
   }
 
+  // blocking_functions - computed: false, optional: true, required: false
+  private _blockingFunctions = new IdentityPlatformConfigBlockingFunctionsOutputReference(this, "blocking_functions");
+  public get blockingFunctions() {
+    return this._blockingFunctions;
+  }
+  public putBlockingFunctions(value: IdentityPlatformConfigBlockingFunctions) {
+    this._blockingFunctions.internalValue = value;
+  }
+  public resetBlockingFunctions() {
+    this._blockingFunctions.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blockingFunctionsInput() {
+    return this._blockingFunctions.internalValue;
+  }
+
+  // quota - computed: false, optional: true, required: false
+  private _quota = new IdentityPlatformConfigQuotaOutputReference(this, "quota");
+  public get quota() {
+    return this._quota;
+  }
+  public putQuota(value: IdentityPlatformConfigQuota) {
+    this._quota.internalValue = value;
+  }
+  public resetQuota() {
+    this._quota.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaInput() {
+    return this._quota.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IdentityPlatformConfigTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -288,9 +892,12 @@ export class IdentityPlatformConfig extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authorized_domains: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authorizedDomains),
       autodelete_anonymous_users: cdktf.booleanToTerraform(this._autodeleteAnonymousUsers),
       id: cdktf.stringToTerraform(this._id),
       project: cdktf.stringToTerraform(this._project),
+      blocking_functions: identityPlatformConfigBlockingFunctionsToTerraform(this._blockingFunctions.internalValue),
+      quota: identityPlatformConfigQuotaToTerraform(this._quota.internalValue),
       timeouts: identityPlatformConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -1,6 +1,6 @@
 # `google_compute_address`
 
-Refer to the Terraform Registory for docs: [`google_compute_address`](https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address).
+Refer to the Terraform Registory for docs: [`google_compute_address`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address).
 
 # `computeAddress` Submodule <a name="`computeAddress` Submodule" id="@cdktf/provider-google.computeAddress"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_compute_address`](https://re
 
 ### ComputeAddress <a name="ComputeAddress" id="@cdktf/provider-google.computeAddress.ComputeAddress"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address google_compute_address}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address google_compute_address}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computeAddress.ComputeAddress.Initializer"></a>
 
@@ -75,6 +75,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetAddressType">resetAddressType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetDescription">resetDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetIpv6EndpointType">resetIpv6EndpointType</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetIpVersion">resetIpVersion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetNetwork">resetNetwork</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetNetworkTier">resetNetworkTier</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.resetPrefixLength">resetPrefixLength</a></code> | *No description.* |
@@ -306,6 +308,18 @@ public resetDescription(): void
 public resetId(): void
 ```
 
+##### `resetIpv6EndpointType` <a name="resetIpv6EndpointType" id="@cdktf/provider-google.computeAddress.ComputeAddress.resetIpv6EndpointType"></a>
+
+```typescript
+public resetIpv6EndpointType(): void
+```
+
+##### `resetIpVersion` <a name="resetIpVersion" id="@cdktf/provider-google.computeAddress.ComputeAddress.resetIpVersion"></a>
+
+```typescript
+public resetIpVersion(): void
+```
+
 ##### `resetNetwork` <a name="resetNetwork" id="@cdktf/provider-google.computeAddress.ComputeAddress.resetNetwork"></a>
 
 ```typescript
@@ -450,6 +464,8 @@ computeAddress.ComputeAddress.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.addressTypeInput">addressTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.descriptionInput">descriptionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.ipv6EndpointTypeInput">ipv6EndpointTypeInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.ipVersionInput">ipVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.networkInput">networkInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.networkTierInput">networkTierInput</a></code> | <code>string</code> | *No description.* |
@@ -463,6 +479,8 @@ computeAddress.ComputeAddress.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.addressType">addressType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.description">description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.ipv6EndpointType">ipv6EndpointType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.ipVersion">ipVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.name">name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.network">network</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddress.property.networkTier">networkTier</a></code> | <code>string</code> | *No description.* |
@@ -696,6 +714,26 @@ public readonly idInput: string;
 
 ---
 
+##### `ipv6EndpointTypeInput`<sup>Optional</sup> <a name="ipv6EndpointTypeInput" id="@cdktf/provider-google.computeAddress.ComputeAddress.property.ipv6EndpointTypeInput"></a>
+
+```typescript
+public readonly ipv6EndpointTypeInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `ipVersionInput`<sup>Optional</sup> <a name="ipVersionInput" id="@cdktf/provider-google.computeAddress.ComputeAddress.property.ipVersionInput"></a>
+
+```typescript
+public readonly ipVersionInput: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `nameInput`<sup>Optional</sup> <a name="nameInput" id="@cdktf/provider-google.computeAddress.ComputeAddress.property.nameInput"></a>
 
 ```typescript
@@ -820,6 +858,26 @@ public readonly description: string;
 
 ```typescript
 public readonly id: string;
+```
+
+- *Type:* string
+
+---
+
+##### `ipv6EndpointType`<sup>Required</sup> <a name="ipv6EndpointType" id="@cdktf/provider-google.computeAddress.ComputeAddress.property.ipv6EndpointType"></a>
+
+```typescript
+public readonly ipv6EndpointType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `ipVersion`<sup>Required</sup> <a name="ipVersion" id="@cdktf/provider-google.computeAddress.ComputeAddress.property.ipVersion"></a>
+
+```typescript
+public readonly ipVersion: string;
 ```
 
 - *Type:* string
@@ -951,11 +1009,13 @@ const computeAddressConfig: computeAddress.ComputeAddressConfig = { ... }
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.address">address</a></code> | <code>string</code> | The static external IP address represented by this resource. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.addressType">addressType</a></code> | <code>string</code> | The type of address to reserve. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.description">description</a></code> | <code>string</code> | An optional description of this resource. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#id ComputeAddress#id}. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#id ComputeAddress#id}. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.ipv6EndpointType">ipv6EndpointType</a></code> | <code>string</code> | The endpoint type of this address, which should be VM or NETLB. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.ipVersion">ipVersion</a></code> | <code>string</code> | The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"]. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.network">network</a></code> | <code>string</code> | The URL of the network in which to reserve the address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.networkTier">networkTier</a></code> | <code>string</code> | The networking tier used for configuring this address. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.prefixLength">prefixLength</a></code> | <code>number</code> | The prefix length if the resource represents an IP range. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#project ComputeAddress#project}. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.project">project</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#project ComputeAddress#project}. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.purpose">purpose</a></code> | <code>string</code> | The purpose of this resource, which can be one of the following values. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.region">region</a></code> | <code>string</code> | The Region in which the created address should reside. If it is not provided, the provider region is used. |
 | <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.subnetwork">subnetwork</a></code> | <code>string</code> | The URL of the subnetwork in which to reserve the address. |
@@ -1050,7 +1110,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#name ComputeAddress#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#name ComputeAddress#name}
 
 ---
 
@@ -1064,12 +1124,10 @@ public readonly address: string;
 
 The static external IP address represented by this resource.
 
-Only
-IPv4 is supported. An address may only be specified for INTERNAL
-address types. The IP address must be inside the specified subnetwork,
+The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#address ComputeAddress#address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#address ComputeAddress#address}
 
 ---
 
@@ -1085,7 +1143,7 @@ The type of address to reserve.
 
 Note: if you set this argument's value as 'INTERNAL' you need to leave the 'network_tier' argument unset in that resource block. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#address_type ComputeAddress#address_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#address_type ComputeAddress#address_type}
 
 ---
 
@@ -1099,7 +1157,7 @@ public readonly description: string;
 
 An optional description of this resource.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#description ComputeAddress#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#description ComputeAddress#description}
 
 ---
 
@@ -1111,10 +1169,42 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#id ComputeAddress#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#id ComputeAddress#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `ipv6EndpointType`<sup>Optional</sup> <a name="ipv6EndpointType" id="@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.ipv6EndpointType"></a>
+
+```typescript
+public readonly ipv6EndpointType: string;
+```
+
+- *Type:* string
+
+The endpoint type of this address, which should be VM or NETLB.
+
+This is
+used for deciding which type of endpoint this address can be used after
+the external IPv6 address reservation. Possible values: ["VM", "NETLB"]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#ipv6_endpoint_type ComputeAddress#ipv6_endpoint_type}
+
+---
+
+##### `ipVersion`<sup>Optional</sup> <a name="ipVersion" id="@cdktf/provider-google.computeAddress.ComputeAddressConfig.property.ipVersion"></a>
+
+```typescript
+public readonly ipVersion: string;
+```
+
+- *Type:* string
+
+The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"].
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#ip_version ComputeAddress#ip_version}
 
 ---
 
@@ -1132,7 +1222,7 @@ This field
 can only be used with INTERNAL type with the VPC_PEERING and
 IPSEC_INTERCONNECT purposes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#network ComputeAddress#network}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#network ComputeAddress#network}
 
 ---
 
@@ -1150,7 +1240,7 @@ If this field is not
 specified, it is assumed to be PREMIUM.
 This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it's always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: ["PREMIUM", "STANDARD"]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#network_tier ComputeAddress#network_tier}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#network_tier ComputeAddress#network_tier}
 
 ---
 
@@ -1164,7 +1254,7 @@ public readonly prefixLength: number;
 
 The prefix length if the resource represents an IP range.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#prefix_length ComputeAddress#prefix_length}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#prefix_length ComputeAddress#prefix_length}
 
 ---
 
@@ -1176,7 +1266,7 @@ public readonly project: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#project ComputeAddress#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#project ComputeAddress#project}.
 
 ---
 
@@ -1209,7 +1299,7 @@ this purpose.
 
 This should only be set when using an Internal address.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#purpose ComputeAddress#purpose}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#purpose ComputeAddress#purpose}
 
 ---
 
@@ -1223,7 +1313,7 @@ public readonly region: string;
 
 The Region in which the created address should reside. If it is not provided, the provider region is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#region ComputeAddress#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#region ComputeAddress#region}
 
 ---
 
@@ -1242,7 +1332,7 @@ address is specified, it must be within the subnetwork's IP range.
 This field can only be used with INTERNAL type with
 GCE_ENDPOINT/DNS_RESOLVER purposes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#subnetwork ComputeAddress#subnetwork}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#subnetwork ComputeAddress#subnetwork}
 
 ---
 
@@ -1256,7 +1346,7 @@ public readonly timeouts: ComputeAddressTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#timeouts ComputeAddress#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#timeouts ComputeAddress#timeouts}
 
 ---
 
@@ -1274,8 +1364,8 @@ const computeAddressTimeouts: computeAddress.ComputeAddressTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#create ComputeAddress#create}. |
-| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#delete ComputeAddress#delete}. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#create ComputeAddress#create}. |
+| <code><a href="#@cdktf/provider-google.computeAddress.ComputeAddressTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#delete ComputeAddress#delete}. |
 
 ---
 
@@ -1287,7 +1377,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#create ComputeAddress#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#create ComputeAddress#create}.
 
 ---
 
@@ -1299,7 +1389,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.76.0/docs/resources/compute_address#delete ComputeAddress#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/compute_address#delete ComputeAddress#delete}.
 
 ---
 
