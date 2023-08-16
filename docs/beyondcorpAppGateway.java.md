@@ -1,6 +1,6 @@
 # `google_beyondcorp_app_gateway`
 
-Refer to the Terraform Registory for docs: [`google_beyondcorp_app_gateway`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway).
+Refer to the Terraform Registory for docs: [`google_beyondcorp_app_gateway`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway).
 
 # `beyondcorpAppGateway` Submodule <a name="`beyondcorpAppGateway` Submodule" id="@cdktf/provider-google.beyondcorpAppGateway"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_beyondcorp_app_gateway`](htt
 
 ### BeyondcorpAppGateway <a name="BeyondcorpAppGateway" id="@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway google_beyondcorp_app_gateway}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway google_beyondcorp_app_gateway}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer"></a>
 
@@ -53,9 +53,9 @@ BeyondcorpAppGateway.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | ID of the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.displayName">displayName</a></code> | <code>java.lang.String</code> | An arbitrary user-provided name for the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.hostType">hostType</a></code> | <code>java.lang.String</code> | The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"]. |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Resource labels to represent user provided metadata. |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.region">region</a></code> | <code>java.lang.String</code> | The region of the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts">BeyondcorpAppGatewayTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGateway.Initializer.parameter.type">type</a></code> | <code>java.lang.String</code> | The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"]. |
@@ -128,7 +128,7 @@ Must be unique amongst siblings in the same scope
 
 ID of the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 An arbitrary user-provided name for the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -169,7 +169,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 Resource labels to represent user provided metadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
 
 ---
 
@@ -177,7 +177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}.
 
 ---
 
@@ -187,7 +187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The region of the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
 
 ---
 
@@ -197,7 +197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
 
 ---
 
@@ -207,7 +207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
 
 ---
 
@@ -1028,9 +1028,9 @@ BeyondcorpAppGatewayConfig.builder()
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.name">name</a></code> | <code>java.lang.String</code> | ID of the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.displayName">displayName</a></code> | <code>java.lang.String</code> | An arbitrary user-provided name for the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.hostType">hostType</a></code> | <code>java.lang.String</code> | The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"]. |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Resource labels to represent user provided metadata. |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.project">project</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.region">region</a></code> | <code>java.lang.String</code> | The region of the AppGateway. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts">BeyondcorpAppGatewayTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayConfig.property.type">type</a></code> | <code>java.lang.String</code> | The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"]. |
@@ -1117,7 +1117,7 @@ public java.lang.String getName();
 
 ID of the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
 
 ---
 
@@ -1131,7 +1131,7 @@ public java.lang.String getDisplayName();
 
 An arbitrary user-provided name for the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
 
 ---
 
@@ -1145,7 +1145,7 @@ public java.lang.String getHostType();
 
 The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
 
 ---
 
@@ -1157,7 +1157,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#id BeyondcorpAppGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1174,7 +1174,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLabels();
 
 Resource labels to represent user provided metadata.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
 
 ---
 
@@ -1186,7 +1186,7 @@ public java.lang.String getProject();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#project BeyondcorpAppGateway#project}.
 
 ---
 
@@ -1200,7 +1200,7 @@ public java.lang.String getRegion();
 
 The region of the AppGateway.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
 
 ---
 
@@ -1214,7 +1214,7 @@ public BeyondcorpAppGatewayTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
 
 ---
 
@@ -1228,7 +1228,7 @@ public java.lang.String getType();
 
 The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"].
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
 
 ---
 
@@ -1249,8 +1249,8 @@ BeyondcorpAppGatewayTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}. |
-| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}. |
+| <code><a href="#@cdktf/provider-google.beyondcorpAppGateway.BeyondcorpAppGatewayTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}. |
 
 ---
 
@@ -1262,7 +1262,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#create BeyondcorpAppGateway#create}.
 
 ---
 
@@ -1274,7 +1274,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/beyondcorp_app_gateway#delete BeyondcorpAppGateway#delete}.
 
 ---
 

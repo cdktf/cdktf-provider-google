@@ -1,6 +1,6 @@
 # `data_google_container_cluster`
 
-Refer to the Terraform Registory for docs: [`data_google_container_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster).
+Refer to the Terraform Registory for docs: [`data_google_container_cluster`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster).
 
 # `dataGoogleContainerCluster` Submodule <a name="`dataGoogleContainerCluster` Submodule" id="@cdktf/provider-google.dataGoogleContainerCluster"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_container_cluster`](htt
 
 ### DataGoogleContainerCluster <a name="DataGoogleContainerCluster" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster google_container_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster google_container_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerCluster.Initializer"></a>
 
@@ -1554,7 +1554,7 @@ const dataGoogleContainerClusterConfig: dataGoogleContainerCluster.DataGoogleCon
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.name">name</a></code> | <code>string</code> | The name of the cluster, unique within the project and location. |
-| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.location">location</a></code> | <code>string</code> | The location (region or zone) in which the cluster master will be created, as well as the default node location. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterConfig.property.project">project</a></code> | <code>string</code> | The ID of the project in which the resource belongs. |
 
@@ -1640,7 +1640,7 @@ public readonly name: string;
 
 The name of the cluster, unique within the project and location.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster#name DataGoogleContainerCluster#name}
 
 ---
 
@@ -1652,7 +1652,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster#id DataGoogleContainerCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1671,7 +1671,7 @@ The location (region or zone) in which the cluster master will be created, as we
 
 If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster#location DataGoogleContainerCluster#location}
 
 ---
 
@@ -1687,7 +1687,7 @@ The ID of the project in which the resource belongs.
 
 If it is not provided, the provider project is used.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/container_cluster#project DataGoogleContainerCluster#project}
 
 ---
 
@@ -1908,6 +1908,17 @@ const dataGoogleContainerClusterMeshCertificates: dataGoogleContainerCluster.Dat
 import { dataGoogleContainerCluster } from '@cdktf/provider-google'
 
 const dataGoogleContainerClusterMonitoringConfig: dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfig = { ... }
+```
+
+
+### DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig <a name="DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig.Initializer"></a>
+
+```typescript
+import { dataGoogleContainerCluster } from '@cdktf/provider-google'
+
+const dataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig: dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig = { ... }
 ```
 
 
@@ -20409,6 +20420,427 @@ public readonly internalValue: DataGoogleContainerClusterMeshCertificates;
 ---
 
 
+### DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList <a name="DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer"></a>
+
+```typescript
+import { dataGoogleContainerCluster } from '@cdktf/provider-google'
+
+new dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList(terraformResource: IInterpolatingParent, terraformAttribute: string, wrapsSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.wrapsSet">wrapsSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wrapsSet`<sup>Required</sup> <a name="wrapsSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.get">get</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.get"></a>
+
+```typescript
+public get(index: number): DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.get.parameter.index"></a>
+
+- *Type:* number
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+
+### DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference <a name="DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer"></a>
+
+```typescript
+import { dataGoogleContainerCluster } from '@cdktf/provider-google'
+
+new dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.complexObjectIndex">complexObjectIndex</a></code> | <code>number</code> | the index of this item in the list. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.complexObjectIsFromSet">complexObjectIsFromSet</a></code> | <code>boolean</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complexObjectIndex`<sup>Required</sup> <a name="complexObjectIndex" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* number
+
+the index of this item in the list.
+
+---
+
+##### `complexObjectIsFromSet`<sup>Required</sup> <a name="complexObjectIsFromSet" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* boolean
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.enableMetrics">enableMetrics</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.relayMode">relayMode</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig">DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `enableMetrics`<sup>Required</sup> <a name="enableMetrics" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.enableMetrics"></a>
+
+```typescript
+public readonly enableMetrics: IResolvable;
+```
+
+- *Type:* cdktf.IResolvable
+
+---
+
+##### `relayMode`<sup>Required</sup> <a name="relayMode" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.relayMode"></a>
+
+```typescript
+public readonly relayMode: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig">DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfig</a>
+
+---
+
+
 ### DataGoogleContainerClusterMonitoringConfigList <a name="DataGoogleContainerClusterMonitoringConfigList" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigList"></a>
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigList.Initializer"></a>
@@ -21179,6 +21611,7 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.advancedDatapathObservabilityConfig">advancedDatapathObservabilityConfig</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList">DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.enableComponents">enableComponents</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.managedPrometheus">managedPrometheus</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigManagedPrometheusList">DataGoogleContainerClusterMonitoringConfigManagedPrometheusList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfig">DataGoogleContainerClusterMonitoringConfig</a></code> | *No description.* |
@@ -21206,6 +21639,16 @@ public readonly fqn: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `advancedDatapathObservabilityConfig`<sup>Required</sup> <a name="advancedDatapathObservabilityConfig" id="@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigOutputReference.property.advancedDatapathObservabilityConfig"></a>
+
+```typescript
+public readonly advancedDatapathObservabilityConfig: DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList;
+```
+
+- *Type:* <a href="#@cdktf/provider-google.dataGoogleContainerCluster.DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList">DataGoogleContainerClusterMonitoringConfigAdvancedDatapathObservabilityConfigList</a>
 
 ---
 

@@ -1,6 +1,6 @@
 # `data_google_active_folder`
 
-Refer to the Terraform Registory for docs: [`data_google_active_folder`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder).
+Refer to the Terraform Registory for docs: [`data_google_active_folder`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder).
 
 # `dataGoogleActiveFolder` Submodule <a name="`dataGoogleActiveFolder` Submodule" id="@cdktf/provider-google.dataGoogleActiveFolder"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_google_active_folder`](https:/
 
 ### DataGoogleActiveFolder <a name="DataGoogleActiveFolder" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder google_active_folder}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder google_active_folder}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer"></a>
 
@@ -42,9 +42,9 @@ dataGoogleActiveFolder.DataGoogleActiveFolder(
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolder.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
 
 ---
 
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -720,9 +720,9 @@ dataGoogleActiveFolder.DataGoogleActiveFolderConfig(
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
-| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.displayName">display_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.parent">parent</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}. |
+| <code><a href="#@cdktf/provider-google.dataGoogleActiveFolder.DataGoogleActiveFolderConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}. |
 
 ---
 
@@ -804,7 +804,7 @@ display_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#display_name DataGoogleActiveFolder#display_name}.
 
 ---
 
@@ -816,7 +816,7 @@ parent: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#parent DataGoogleActiveFolder#parent}.
 
 ---
 
@@ -828,7 +828,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/active_folder#id DataGoogleActiveFolder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

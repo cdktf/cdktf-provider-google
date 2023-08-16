@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy
+// https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataGoogleComputeSnapshotIamPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy#id DataGoogleComputeSnapshotIamPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy#name DataGoogleComputeSnapshotIamPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy#project DataGoogleComputeSnapshotIamPolicy#project}
   */
   readonly project?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy}
 */
 export class DataGoogleComputeSnapshotIamPolicy extends cdktf.TerraformDataSource {
 
@@ -44,7 +44,7 @@ export class DataGoogleComputeSnapshotIamPolicy extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/data-sources/compute_snapshot_iam_policy google_compute_snapshot_iam_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -55,7 +55,7 @@ export class DataGoogleComputeSnapshotIamPolicy extends cdktf.TerraformDataSourc
       terraformResourceType: 'google_compute_snapshot_iam_policy',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.77.0',
+        providerVersion: '4.78.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

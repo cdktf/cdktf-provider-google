@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member
+// https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface CloudRunV2ServiceIamMemberConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#id CloudRunV2ServiceIamMember#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#id CloudRunV2ServiceIamMember#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#location CloudRunV2ServiceIamMember#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#location CloudRunV2ServiceIamMember#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#member CloudRunV2ServiceIamMember#member}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#member CloudRunV2ServiceIamMember#member}
   */
   readonly member: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#name CloudRunV2ServiceIamMember#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#name CloudRunV2ServiceIamMember#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#project CloudRunV2ServiceIamMember#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#project CloudRunV2ServiceIamMember#project}
   */
   readonly project?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#role CloudRunV2ServiceIamMember#role}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#role CloudRunV2ServiceIamMember#role}
   */
   readonly role: string;
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#condition CloudRunV2ServiceIamMember#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#condition CloudRunV2ServiceIamMember#condition}
   */
   readonly condition?: CloudRunV2ServiceIamMemberCondition;
 }
 export interface CloudRunV2ServiceIamMemberCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#description CloudRunV2ServiceIamMember#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#description CloudRunV2ServiceIamMember#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#expression CloudRunV2ServiceIamMember#expression}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#expression CloudRunV2ServiceIamMember#expression}
   */
   readonly expression: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member#title CloudRunV2ServiceIamMember#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member#title CloudRunV2ServiceIamMember#title}
   */
   readonly title: string;
 }
@@ -161,7 +161,7 @@ export class CloudRunV2ServiceIamMemberConditionOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member google_cloud_run_v2_service_iam_member}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member google_cloud_run_v2_service_iam_member}
 */
 export class CloudRunV2ServiceIamMember extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class CloudRunV2ServiceIamMember extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/cloud_run_v2_service_iam_member google_cloud_run_v2_service_iam_member} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service_iam_member google_cloud_run_v2_service_iam_member} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +186,7 @@ export class CloudRunV2ServiceIamMember extends cdktf.TerraformResource {
       terraformResourceType: 'google_cloud_run_v2_service_iam_member',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.77.0',
+        providerVersion: '4.78.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

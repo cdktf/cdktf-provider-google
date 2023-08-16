@@ -1,6 +1,6 @@
 # `google_identity_platform_config`
 
-Refer to the Terraform Registory for docs: [`google_identity_platform_config`](https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config).
+Refer to the Terraform Registory for docs: [`google_identity_platform_config`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config).
 
 # `identityPlatformConfig` Submodule <a name="`identityPlatformConfig` Submodule" id="@cdktf/provider-google.identityPlatformConfig"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`google_identity_platform_config`](h
 
 ### IdentityPlatformConfig <a name="IdentityPlatformConfig" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config google_identity_platform_config}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config google_identity_platform_config}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfig.Initializer"></a>
 
@@ -795,7 +795,7 @@ Triggers interface{}
 
 triggers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
 
 ---
 
@@ -809,7 +809,7 @@ ForwardInboundCredentials IdentityPlatformConfigBlockingFunctionsForwardInboundC
 
 forward_inbound_credentials block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
 
 ---
 
@@ -847,7 +847,7 @@ AccessToken interface{}
 
 Whether to pass the user's OAuth identity provider's access token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
 
 ---
 
@@ -861,7 +861,7 @@ IdToken interface{}
 
 Whether to pass the user's OIDC identity provider's ID token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
 
 ---
 
@@ -875,7 +875,7 @@ RefreshToken interface{}
 
 Whether to pass the user's OAuth identity provider's refresh token.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
 
 ---
 
@@ -896,7 +896,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/identityplatformconf
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.eventType">EventType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.eventType">EventType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctionsTriggers.property.functionUri">FunctionUri</a></code> | <code>*string</code> | HTTP URI trigger for the Cloud Function. |
 
 ---
@@ -909,7 +909,7 @@ EventType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#event_type IdentityPlatformConfig#event_type}.
 
 ---
 
@@ -923,7 +923,7 @@ FunctionUri *string
 
 HTTP URI trigger for the Cloud Function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
 
 ---
 
@@ -966,8 +966,8 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/identityplatformconf
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.authorizedDomains">AuthorizedDomains</a></code> | <code>*[]*string</code> | List of domains authorized for OAuth redirects. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.autodeleteAnonymousUsers">AutodeleteAnonymousUsers</a></code> | <code>interface{}</code> | Whether anonymous users will be auto-deleted after a period of 30 days. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.blockingFunctions">BlockingFunctions</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigBlockingFunctions">IdentityPlatformConfigBlockingFunctions</a></code> | blocking_functions block. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.quota">Quota</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigQuota">IdentityPlatformConfigQuota</a></code> | quota block. |
 | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts">IdentityPlatformConfigTimeouts</a></code> | timeouts block. |
 
@@ -1053,7 +1053,7 @@ AuthorizedDomains *[]*string
 
 List of domains authorized for OAuth redirects.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
 
 ---
 
@@ -1067,7 +1067,7 @@ AutodeleteAnonymousUsers interface{}
 
 Whether anonymous users will be auto-deleted after a period of 30 days.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
 
 ---
 
@@ -1081,7 +1081,7 @@ BlockingFunctions IdentityPlatformConfigBlockingFunctions
 
 blocking_functions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
 
 ---
 
@@ -1093,7 +1093,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#id IdentityPlatformConfig#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1108,7 +1108,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#project IdentityPlatformConfig#project}.
 
 ---
 
@@ -1122,7 +1122,7 @@ Quota IdentityPlatformConfigQuota
 
 quota block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
 
 ---
 
@@ -1136,7 +1136,7 @@ Timeouts IdentityPlatformConfigTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
 
 ---
 
@@ -1170,7 +1170,7 @@ SignUpQuotaConfig IdentityPlatformConfigQuotaSignUpQuotaConfig
 
 sign_up_quota_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
 
 ---
 
@@ -1208,7 +1208,7 @@ Quota *f64
 
 A sign up APIs quota that customers can override temporarily.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
 
 ---
 
@@ -1222,7 +1222,7 @@ QuotaDuration *string
 
 How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
 
 ---
 
@@ -1236,7 +1236,7 @@ StartTime *string
 
 When this quota will take affect.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
 
 ---
 
@@ -1258,9 +1258,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/identityplatformconf
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}. |
-| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}. |
+| <code><a href="#@cdktf/provider-google.identityPlatformConfig.IdentityPlatformConfigTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}. |
 
 ---
 
@@ -1272,7 +1272,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#create IdentityPlatformConfig#create}.
 
 ---
 
@@ -1284,7 +1284,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#delete IdentityPlatformConfig#delete}.
 
 ---
 
@@ -1296,7 +1296,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/identity_platform_config#update IdentityPlatformConfig#update}.
 
 ---
 
