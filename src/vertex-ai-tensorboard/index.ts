@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard
+// https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,17 +10,17 @@ export interface VertexAiTensorboardConfig extends cdktf.TerraformMetaArguments 
   /**
   * Description of this Tensorboard.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#description VertexAiTensorboard#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#description VertexAiTensorboard#description}
   */
   readonly description?: string;
   /**
   * User provided name of this Tensorboard.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#display_name VertexAiTensorboard#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#display_name VertexAiTensorboard#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#id VertexAiTensorboard#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -34,29 +29,29 @@ export interface VertexAiTensorboardConfig extends cdktf.TerraformMetaArguments 
   /**
   * The labels with user-defined metadata to organize your Tensorboards.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#labels VertexAiTensorboard#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#labels VertexAiTensorboard#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#project VertexAiTensorboard#project}
   */
   readonly project?: string;
   /**
   * The region of the tensorboard. eg us-central1
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#region VertexAiTensorboard#region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#region VertexAiTensorboard#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#encryption_spec VertexAiTensorboard#encryption_spec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#encryption_spec VertexAiTensorboard#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiTensorboardEncryptionSpec;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#timeouts VertexAiTensorboard#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#timeouts VertexAiTensorboard#timeouts}
   */
   readonly timeouts?: VertexAiTensorboardTimeouts;
 }
@@ -65,7 +60,7 @@ export interface VertexAiTensorboardEncryptionSpec {
   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
   * 
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#kms_key_name VertexAiTensorboard#kms_key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#kms_key_name VertexAiTensorboard#kms_key_name}
   */
   readonly kmsKeyName: string;
 }
@@ -127,15 +122,15 @@ export class VertexAiTensorboardEncryptionSpecOutputReference extends cdktf.Comp
 }
 export interface VertexAiTensorboardTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#create VertexAiTensorboard#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#delete VertexAiTensorboard#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard#update VertexAiTensorboard#update}
   */
   readonly update?: string;
 }
@@ -256,7 +251,7 @@ export class VertexAiTensorboardTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard}
 */
 export class VertexAiTensorboard extends cdktf.TerraformResource {
 
@@ -270,7 +265,7 @@ export class VertexAiTensorboard extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.77.0/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/vertex_ai_tensorboard google_vertex_ai_tensorboard} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -281,7 +276,7 @@ export class VertexAiTensorboard extends cdktf.TerraformResource {
       terraformResourceType: 'google_vertex_ai_tensorboard',
       terraformGeneratorMetadata: {
         providerName: 'google',
-        providerVersion: '4.77.0',
+        providerVersion: '4.78.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
