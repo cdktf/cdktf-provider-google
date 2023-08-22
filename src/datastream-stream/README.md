@@ -1,3 +1,3 @@
 # `google_datastream_stream`
 
-Refer to the Terraform Registory for docs: [`google_datastream_stream`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/datastream_stream).
+Refer to the Terraform Registory for docs: [`google_datastream_stream`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_stream).

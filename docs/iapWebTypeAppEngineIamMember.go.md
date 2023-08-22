@@ -1,6 +1,6 @@
 # `google_iap_web_type_app_engine_iam_member`
 
-Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member).
+Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_member`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member).
 
 # `iapWebTypeAppEngineIamMember` Submodule <a name="`iapWebTypeAppEngineIamMember` Submodule" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`google_iap_web_type_app_engine_iam_
 
 ### IapWebTypeAppEngineIamMember <a name="IapWebTypeAppEngineIamMember" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMember"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member google_iap_web_type_app_engine_iam_member}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 iapwebtypeappengineiammember.NewIapWebTypeAppEngineIamMember(scope Construct, id *string, config IapWebTypeAppEngineIamMemberConfig) IapWebTypeAppEngineIamMember
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 iapwebtypeappengineiammember.IapWebTypeAppEngineIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 iapwebtypeappengineiammember.IapWebTypeAppEngineIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapwebtypeappengineiammember.IapWebTypeAppEngineIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 iapwebtypeappengineiammember.IapWebTypeAppEngineIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -692,7 +692,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 &iapwebtypeappengineiammember.IapWebTypeAppEngineIamMemberCondition {
 	Expression: *string,
@@ -705,9 +705,9 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappenginei
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.expression">Expression</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.title">Title</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}. |
 
 ---
 
@@ -719,7 +719,7 @@ Expression *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#expression IapWebTypeAppEngineIamMember#expression}.
 
 ---
 
@@ -731,7 +731,7 @@ Title *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#title IapWebTypeAppEngineIamMember#title}.
 
 ---
 
@@ -743,7 +743,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#description IapWebTypeAppEngineIamMember#description}.
 
 ---
 
@@ -752,7 +752,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 &iapwebtypeappengineiammember.IapWebTypeAppEngineIamMemberConfig {
 	Connection: interface{},
@@ -765,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappenginei
 	AppId: *string,
 	Member: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google/v8.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -782,12 +782,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappenginei
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.appId">AppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.member">Member</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.role">Role</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}. |
 | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberCondition">IapWebTypeAppEngineIamMemberCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}. |
-| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}. |
+| <code><a href="#@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConfig.property.project">Project</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}. |
 
 ---
 
@@ -869,7 +869,7 @@ AppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#app_id IapWebTypeAppEngineIamMember#app_id}.
 
 ---
 
@@ -881,7 +881,7 @@ Member *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#member IapWebTypeAppEngineIamMember#member}.
 
 ---
 
@@ -893,7 +893,7 @@ Role *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#role IapWebTypeAppEngineIamMember#role}.
 
 ---
 
@@ -907,7 +907,7 @@ Condition IapWebTypeAppEngineIamMemberCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#condition IapWebTypeAppEngineIamMember#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#condition IapWebTypeAppEngineIamMember#condition}
 
 ---
 
@@ -919,7 +919,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#id IapWebTypeAppEngineIamMember#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -934,7 +934,7 @@ Project *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#project IapWebTypeAppEngineIamMember#project}.
 
 ---
 
@@ -945,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapWebTypeAppEngineIamMember.IapWebTypeAppEngineIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/iapwebtypeappengineiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/iapwebtypeappengineiammember"
 
 iapwebtypeappengineiammember.NewIapWebTypeAppEngineIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapWebTypeAppEngineIamMemberConditionOutputReference
 ```

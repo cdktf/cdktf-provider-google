@@ -1,3 +1,3 @@
 # `google_cloud_run_v2_service`
 
-Refer to the Terraform Registory for docs: [`google_cloud_run_v2_service`](https://registry.terraform.io/providers/hashicorp/google/4.78.0/docs/resources/cloud_run_v2_service).
+Refer to the Terraform Registory for docs: [`google_cloud_run_v2_service`](https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_v2_service).
