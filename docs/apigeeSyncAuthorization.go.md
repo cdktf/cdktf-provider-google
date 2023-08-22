@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 apigeesyncauthorization.NewApigeeSyncAuthorization(scope Construct, id *string, config ApigeeSyncAuthorizationConfig) ApigeeSyncAuthorization
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorization.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 apigeesyncauthorization.ApigeeSyncAuthorization_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorization.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 apigeesyncauthorization.ApigeeSyncAuthorization_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ apigeesyncauthorization.ApigeeSyncAuthorization_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorization.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 apigeesyncauthorization.ApigeeSyncAuthorization_IsTerraformResource(x interface{}) *bool
 ```
@@ -641,7 +641,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorizationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 &apigeesyncauthorization.ApigeeSyncAuthorizationConfig {
 	Connection: interface{},
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization
 	Identities: *[]*string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.apigeeSyncAuthorization.ApigeeSyncAuthorizationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.apigeeSyncAuthorization.ApigeeSyncAuthorizationTimeouts,
 }
 ```
 
@@ -814,7 +814,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorizationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 &apigeesyncauthorization.ApigeeSyncAuthorizationTimeouts {
 	Create: *string,
@@ -876,7 +876,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.apigeeSyncAuthorization.ApigeeSyncAuthorizationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/apigeesyncauthorization"
+import "github.com/cdktf/cdktf-provider-google-go/google/v8/apigeesyncauthorization"
 
 apigeesyncauthorization.NewApigeeSyncAuthorizationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApigeeSyncAuthorizationTimeoutsOutputReference
 ```
