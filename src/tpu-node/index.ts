@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface TpuNodeConfig extends cdktf.TerraformMetaArguments {
   /**
   * The type of hardware accelerators associated with this node.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#accelerator_type TpuNode#accelerator_type}
   */
   readonly acceleratorType: string;
@@ -28,13 +23,13 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#cidr_block TpuNode#cidr_block}
   */
   readonly cidrBlock?: string;
   /**
   * The user-supplied description of the TPU. Maximum of 512 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#description TpuNode#description}
   */
   readonly description?: string;
@@ -47,13 +42,13 @@ is peered with another network that is using that CIDR block.
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#labels TpuNode#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The immutable name of the TPU.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#name TpuNode#name}
   */
   readonly name: string;
@@ -62,7 +57,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#network TpuNode#network}
   */
   readonly network?: string;
@@ -72,7 +67,7 @@ used.
   readonly project?: string;
   /**
   * The version of Tensorflow running in the Node.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#tensorflow_version TpuNode#tensorflow_version}
   */
   readonly tensorflowVersion: string;
@@ -81,25 +76,25 @@ used.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#use_service_networking TpuNode#use_service_networking}
   */
   readonly useServiceNetworking?: boolean | cdktf.IResolvable;
   /**
   * The GCP location for the TPU. If it is not provided, the provider zone is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#zone TpuNode#zone}
   */
   readonly zone?: string;
   /**
   * scheduling_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#scheduling_config TpuNode#scheduling_config}
   */
   readonly schedulingConfig?: TpuNodeSchedulingConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#timeouts TpuNode#timeouts}
   */
   readonly timeouts?: TpuNodeTimeouts;
@@ -176,7 +171,7 @@ export class TpuNodeNetworkEndpointsList extends cdktf.ComplexList {
 export interface TpuNodeSchedulingConfig {
   /**
   * Defines whether the TPU instance is preemptible.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tpu_node#preemptible TpuNode#preemptible}
   */
   readonly preemptible: boolean | cdktf.IResolvable;

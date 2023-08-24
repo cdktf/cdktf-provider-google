@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_hmac_key
 // generated from terraform resource schema
 
@@ -25,19 +20,19 @@ export interface StorageHmacKeyConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The email address of the key's associated service account.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_hmac_key#service_account_email StorageHmacKey#service_account_email}
   */
   readonly serviceAccountEmail: string;
   /**
   * The state of the key. Can be set to one of ACTIVE, INACTIVE. Default value: "ACTIVE" Possible values: ["ACTIVE", "INACTIVE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_hmac_key#state StorageHmacKey#state}
   */
   readonly state?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_hmac_key#timeouts StorageHmacKey#timeouts}
   */
   readonly timeouts?: StorageHmacKeyTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database
 // generated from terraform resource schema
 
@@ -15,7 +10,7 @@ export interface SpannerDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The dialect of the Cloud Spanner Database.
 If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GOOGLE_STANDARD_SQL", "POSTGRESQL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#database_dialect SpannerDatabase#database_dialect}
   */
   readonly databaseDialect?: string;
@@ -24,14 +19,14 @@ If it is not provided, "GOOGLE_STANDARD_SQL" will be used. Possible values: ["GO
 database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#ddl SpannerDatabase#ddl}
   */
   readonly ddl?: string[];
   /**
   * Whether or not to allow Terraform to destroy the database. Defaults to true. Unless this field is set to false
 in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the database will fail.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#deletion_protection SpannerDatabase#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
@@ -43,7 +38,7 @@ the "deletion_protection" attribute in the following ways:
 whereas setting “enableDropProtection” to true protects the database from deletions in all interfaces.
 (2) Setting "enableDropProtection" to true also prevents the deletion of the parent instance containing the database.
 "deletion_protection" attribute does not provide protection against the deletion of the parent instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#enable_drop_protection SpannerDatabase#enable_drop_protection}
   */
   readonly enableDropProtection?: boolean | cdktf.IResolvable;
@@ -56,14 +51,14 @@ whereas setting “enableDropProtection” to true protects the database from de
   readonly id?: string;
   /**
   * The instance to create the database on.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#instance SpannerDatabase#instance}
   */
   readonly instance: string;
   /**
   * A unique identifier for the database, which cannot be changed after
 the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#name SpannerDatabase#name}
   */
   readonly name: string;
@@ -77,19 +72,19 @@ and 7 days, and can be specified in days, hours, minutes, or seconds. For exampl
 the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
 If this property is used, you must avoid adding new DDL statements to 'ddl' that
 update the database's version_retention_period.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#version_retention_period SpannerDatabase#version_retention_period}
   */
   readonly versionRetentionPeriod?: string;
   /**
   * encryption_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#encryption_config SpannerDatabase#encryption_config}
   */
   readonly encryptionConfig?: SpannerDatabaseEncryptionConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#timeouts SpannerDatabase#timeouts}
   */
   readonly timeouts?: SpannerDatabaseTimeouts;
@@ -98,7 +93,7 @@ export interface SpannerDatabaseEncryptionConfig {
   /**
   * Fully qualified name of the KMS key to use to encrypt this database. This key must exist
 in the same location as the Spanner Database.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database#kms_key_name SpannerDatabase#kms_key_name}
   */
   readonly kmsKeyName: string;

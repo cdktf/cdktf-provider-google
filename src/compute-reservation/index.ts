@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeReservationConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#description ComputeReservation#description}
   */
   readonly description?: string;
@@ -33,7 +28,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#name ComputeReservation#name}
   */
   readonly name: string;
@@ -45,31 +40,31 @@ character, which cannot be a dash.
   * When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#specific_reservation_required ComputeReservation#specific_reservation_required}
   */
   readonly specificReservationRequired?: boolean | cdktf.IResolvable;
   /**
   * The zone where the reservation is made.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#zone ComputeReservation#zone}
   */
   readonly zone: string;
   /**
   * share_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#share_settings ComputeReservation#share_settings}
   */
   readonly shareSettings?: ComputeReservationShareSettings;
   /**
   * specific_reservation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#specific_reservation ComputeReservation#specific_reservation}
   */
   readonly specificReservation: ComputeReservationSpecificReservation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#timeouts ComputeReservation#timeouts}
   */
   readonly timeouts?: ComputeReservationTimeouts;
@@ -84,7 +79,7 @@ export interface ComputeReservationShareSettingsProjectMap {
   readonly id: string;
   /**
   * The project id/number, should be same as the key of this project config in the project map.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#project_id ComputeReservation#project_id}
   */
   readonly projectId?: string;
@@ -203,13 +198,13 @@ export class ComputeReservationShareSettingsProjectMapList extends cdktf.Complex
 export interface ComputeReservationShareSettings {
   /**
   * Type of sharing for this shared-reservation Possible values: ["LOCAL", "SPECIFIC_PROJECTS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#share_type ComputeReservation#share_type}
   */
   readonly shareType?: string;
   /**
   * project_map block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#project_map ComputeReservation#project_map}
   */
   readonly projectMap?: ComputeReservationShareSettingsProjectMap[] | cdktf.IResolvable;
@@ -300,7 +295,7 @@ export interface ComputeReservationSpecificReservationInstancePropertiesGuestAcc
   /**
   * The number of the guest accelerator cards exposed to
 this instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#accelerator_count ComputeReservation#accelerator_count}
   */
   readonly acceleratorCount: number;
@@ -310,7 +305,7 @@ attach to this instance. For example:
 'projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100'
 
 If you are creating an instance template, specify only the accelerator name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#accelerator_type ComputeReservation#accelerator_type}
   */
   readonly acceleratorType: string;
@@ -426,13 +421,13 @@ export class ComputeReservationSpecificReservationInstancePropertiesGuestAcceler
 export interface ComputeReservationSpecificReservationInstancePropertiesLocalSsds {
   /**
   * The size of the disk in base-2 GB.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#disk_size_gb ComputeReservation#disk_size_gb}
   */
   readonly diskSizeGb: number;
   /**
   * The disk interface to use for attaching this disk. Default value: "SCSI" Possible values: ["SCSI", "NVME"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#interface ComputeReservation#interface}
   */
   readonly interface?: string;
@@ -551,7 +546,7 @@ export class ComputeReservationSpecificReservationInstancePropertiesLocalSsdsLis
 export interface ComputeReservationSpecificReservationInstanceProperties {
   /**
   * The name of the machine type to reserve.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#machine_type ComputeReservation#machine_type}
   */
   readonly machineType: string;
@@ -560,19 +555,19 @@ export interface ComputeReservationSpecificReservationInstanceProperties {
 '"Intel Skylake"'. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#min_cpu_platform ComputeReservation#min_cpu_platform}
   */
   readonly minCpuPlatform?: string;
   /**
   * guest_accelerators block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#guest_accelerators ComputeReservation#guest_accelerators}
   */
   readonly guestAccelerators?: ComputeReservationSpecificReservationInstancePropertiesGuestAccelerators[] | cdktf.IResolvable;
   /**
   * local_ssds block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#local_ssds ComputeReservation#local_ssds}
   */
   readonly localSsds?: ComputeReservationSpecificReservationInstancePropertiesLocalSsds[] | cdktf.IResolvable;
@@ -705,13 +700,13 @@ export class ComputeReservationSpecificReservationInstancePropertiesOutputRefere
 export interface ComputeReservationSpecificReservation {
   /**
   * The number of resources that are allocated.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#count ComputeReservation#count}
   */
   readonly count: number;
   /**
   * instance_properties block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_reservation#instance_properties ComputeReservation#instance_properties}
   */
   readonly instanceProperties: ComputeReservationSpecificReservationInstanceProperties;

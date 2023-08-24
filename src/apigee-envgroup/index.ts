@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_envgroup
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ApigeeEnvgroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Hostnames of the environment group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_envgroup#hostnames ApigeeEnvgroup#hostnames}
   */
   readonly hostnames?: string[];
@@ -27,20 +22,20 @@ export interface ApigeeEnvgroupConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The resource ID of the environment group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_envgroup#name ApigeeEnvgroup#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment group,
 in the format 'organizations/{{org_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_envgroup#org_id ApigeeEnvgroup#org_id}
   */
   readonly orgId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_envgroup#timeouts ApigeeEnvgroup#timeouts}
   */
   readonly timeouts?: ApigeeEnvgroupTimeouts;

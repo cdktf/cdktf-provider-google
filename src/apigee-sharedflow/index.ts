@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface ApigeeSharedflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Path to the config zip bundle
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow#config_bundle ApigeeSharedflow#config_bundle}
   */
   readonly configBundle: string;
   /**
   * A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow#detect_md5hash ApigeeSharedflow#detect_md5hash}
   */
   readonly detectMd5Hash?: string;
@@ -33,19 +28,19 @@ export interface ApigeeSharedflowConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The ID of the shared flow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow#name ApigeeSharedflow#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization name associated with the Apigee instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow#org_id ApigeeSharedflow#org_id}
   */
   readonly orgId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow#timeouts ApigeeSharedflow#timeouts}
   */
   readonly timeouts?: ApigeeSharedflowTimeouts;

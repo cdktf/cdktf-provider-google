@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface ComputeAttachedDiskConfig extends cdktf.TerraformMetaArguments {
   /**
   * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disks-x, where x is a number assigned by Google Compute Engine.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#device_name ComputeAttachedDisk#device_name}
   */
   readonly deviceName?: string;
   /**
   * name or self_link of the disk that will be attached.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#disk ComputeAttachedDisk#disk}
   */
   readonly disk: string;
@@ -33,31 +28,31 @@ export interface ComputeAttachedDiskConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * name or self_link of the compute instance that the disk will be attached to. If the self_link is provided then zone and project are extracted from the self link. If only the name is used then zone and project must be defined as properties on the resource or provider.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#instance ComputeAttachedDisk#instance}
   */
   readonly instance: string;
   /**
   * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#mode ComputeAttachedDisk#mode}
   */
   readonly mode?: string;
   /**
   * The project that the referenced compute instance is a part of. If instance is referenced by its self_link the project defined in the link will take precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#project ComputeAttachedDisk#project}
   */
   readonly project?: string;
   /**
   * The zone that the referenced compute instance is located within. If instance is referenced by its self_link the zone defined in the link will take precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#zone ComputeAttachedDisk#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_attached_disk#timeouts ComputeAttachedDisk#timeouts}
   */
   readonly timeouts?: ComputeAttachedDiskTimeouts;

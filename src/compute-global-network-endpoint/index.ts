@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint
 // generated from terraform resource schema
 
@@ -15,13 +10,13 @@ export interface ComputeGlobalNetworkEndpointConfig extends cdktf.TerraformMetaA
   /**
   * Fully qualified domain name of network endpoint.
 This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint#fqdn ComputeGlobalNetworkEndpoint#fqdn}
   */
   readonly fqdn?: string;
   /**
   * The global network endpoint group this endpoint is part of.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint#global_network_endpoint_group ComputeGlobalNetworkEndpoint#global_network_endpoint_group}
   */
   readonly globalNetworkEndpointGroup: string;
@@ -34,13 +29,13 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
   readonly id?: string;
   /**
   * IPv4 address external endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint#ip_address ComputeGlobalNetworkEndpoint#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * Port number of the external endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint#port ComputeGlobalNetworkEndpoint#port}
   */
   readonly port: number;
@@ -50,7 +45,7 @@ This can only be specified when network_endpoint_type of the NEG is INTERNET_FQD
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_network_endpoint#timeouts ComputeGlobalNetworkEndpoint#timeouts}
   */
   readonly timeouts?: ComputeGlobalNetworkEndpointTimeouts;

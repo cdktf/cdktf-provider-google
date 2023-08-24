@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface NetworkSecurityUrlListsConfig extends cdktf.TerraformMetaArguments {
   /**
   * Free-text description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists#description NetworkSecurityUrlLists#description}
   */
   readonly description?: string;
@@ -27,14 +22,14 @@ export interface NetworkSecurityUrlListsConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The location of the url lists.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists#location NetworkSecurityUrlLists#location}
   */
   readonly location: string;
   /**
   * Short name of the UrlList resource to be created.
 This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. 'urlList'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists#name NetworkSecurityUrlLists#name}
   */
   readonly name: string;
@@ -44,13 +39,13 @@ This value should be 1-63 characters long, containing only letters, numbers, hyp
   readonly project?: string;
   /**
   * FQDNs and URLs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists#values NetworkSecurityUrlLists#values}
   */
   readonly values: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_url_lists#timeouts NetworkSecurityUrlLists#timeouts}
   */
   readonly timeouts?: NetworkSecurityUrlListsTimeouts;

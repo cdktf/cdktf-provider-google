@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_version
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DialogflowCxVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_version#description DialogflowCxVersion#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the version. Limit of 64 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_version#display_name DialogflowCxVersion#display_name}
   */
   readonly displayName: string;
@@ -34,13 +29,13 @@ export interface DialogflowCxVersionConfig extends cdktf.TerraformMetaArguments 
   /**
   * The Flow to create an Version for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_version#parent DialogflowCxVersion#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_version#timeouts DialogflowCxVersion#timeouts}
   */
   readonly timeouts?: DialogflowCxVersionTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk_async_replication
 // generated from terraform resource schema
 
@@ -21,19 +16,19 @@ export interface ComputeDiskAsyncReplicationConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * Primary disk for asynchronous replication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk_async_replication#primary_disk ComputeDiskAsyncReplication#primary_disk}
   */
   readonly primaryDisk: string;
   /**
   * secondary_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk_async_replication#secondary_disk ComputeDiskAsyncReplication#secondary_disk}
   */
   readonly secondaryDisk: ComputeDiskAsyncReplicationSecondaryDisk;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk_async_replication#timeouts ComputeDiskAsyncReplication#timeouts}
   */
   readonly timeouts?: ComputeDiskAsyncReplicationTimeouts;
@@ -41,7 +36,7 @@ export interface ComputeDiskAsyncReplicationConfig extends cdktf.TerraformMetaAr
 export interface ComputeDiskAsyncReplicationSecondaryDisk {
   /**
   * Secondary disk for asynchronous replication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk_async_replication#disk ComputeDiskAsyncReplication#disk}
   */
   readonly disk: string;

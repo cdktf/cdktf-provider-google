@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_default_network_tier
 // generated from terraform resource schema
 
@@ -21,19 +16,19 @@ export interface ComputeProjectDefaultNetworkTierConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_default_network_tier#network_tier ComputeProjectDefaultNetworkTier#network_tier}
   */
   readonly networkTier: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_default_network_tier#project ComputeProjectDefaultNetworkTier#project}
   */
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_default_network_tier#timeouts ComputeProjectDefaultNetworkTier#timeouts}
   */
   readonly timeouts?: ComputeProjectDefaultNetworkTierTimeouts;

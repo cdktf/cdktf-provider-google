@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional textual description of the instance group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#description ComputeInstanceGroup#description}
   */
   readonly description?: string;
@@ -27,43 +22,43 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * The list of instances in the group, in self_link format. When adding instances they must all be in the same network and zone as the instance group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#instances ComputeInstanceGroup#instances}
   */
   readonly instances?: string[];
   /**
   * The name of the instance group. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
   */
   readonly name: string;
   /**
   * The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#network ComputeInstanceGroup#network}
   */
   readonly network?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#project ComputeInstanceGroup#project}
   */
   readonly project?: string;
   /**
   * The zone that this instance group should be created in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#zone ComputeInstanceGroup#zone}
   */
   readonly zone?: string;
   /**
   * named_port block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#named_port ComputeInstanceGroup#named_port}
   */
   readonly namedPort?: ComputeInstanceGroupNamedPort[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#timeouts ComputeInstanceGroup#timeouts}
   */
   readonly timeouts?: ComputeInstanceGroupTimeouts;
@@ -71,13 +66,13 @@ export interface ComputeInstanceGroupConfig extends cdktf.TerraformMetaArguments
 export interface ComputeInstanceGroupNamedPort {
   /**
   * The name which the port will be mapped to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#name ComputeInstanceGroup#name}
   */
   readonly name: string;
   /**
   * The port number to map the name to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group#port ComputeInstanceGroup#port}
   */
   readonly port: number;

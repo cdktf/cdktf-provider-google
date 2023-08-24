@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dataset
 // generated from terraform resource schema
 
@@ -21,13 +16,13 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location for the Dataset.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dataset#location HealthcareDataset#location}
   */
   readonly location: string;
   /**
   * The resource name for the Dataset.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dataset#name HealthcareDataset#name}
   */
   readonly name: string;
@@ -39,13 +34,13 @@ export interface HealthcareDatasetConfig extends cdktf.TerraformMetaArguments {
   * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
 "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
 (e.g., HL7 messages) where no explicit timezone is specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dataset#time_zone HealthcareDataset#time_zone}
   */
   readonly timeZone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dataset#timeouts HealthcareDataset#timeouts}
   */
   readonly timeouts?: HealthcareDatasetTimeouts;

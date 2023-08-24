@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_exclusion
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface LoggingProjectExclusionConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_exclusion#description LoggingProjectExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_exclusion#disabled LoggingProjectExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_exclusion#filter LoggingProjectExclusion#filter}
   */
   readonly filter: string;
@@ -39,7 +34,7 @@ export interface LoggingProjectExclusionConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The name of the logging exclusion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_exclusion#name LoggingProjectExclusion#name}
   */
   readonly name: string;

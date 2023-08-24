@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/project
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleProjectConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The project ID. Changing this forces a new project to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/project#project_id DataGoogleProject#project_id}
   */
   readonly projectId?: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_usage_export_bucket
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ProjectUsageExportBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * The bucket to store reports in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_usage_export_bucket#bucket_name ProjectUsageExportBucket#bucket_name}
   */
   readonly bucketName: string;
@@ -27,19 +22,19 @@ export interface ProjectUsageExportBucketConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * A prefix for the reports, for instance, the project name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_usage_export_bucket#prefix ProjectUsageExportBucket#prefix}
   */
   readonly prefix?: string;
   /**
   * The project to set the export bucket on. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_usage_export_bucket#project ProjectUsageExportBucket#project}
   */
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_usage_export_bucket#timeouts ProjectUsageExportBucket#timeouts}
   */
   readonly timeouts?: ProjectUsageExportBucketTimeouts;

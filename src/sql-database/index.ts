@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database
 // generated from terraform resource schema
 
@@ -18,7 +13,7 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of 'UTF8' at creation time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#charset SqlDatabase#charset}
   */
   readonly charset?: string;
@@ -28,7 +23,7 @@ a value of 'UTF8' at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of 'en_US.UTF8' at creation time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#collation SqlDatabase#collation}
   */
   readonly collation?: string;
@@ -37,7 +32,7 @@ a value of 'en_US.UTF8' at creation time.
 to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be
 deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
 values are: "ABANDON", "DELETE". Defaults to "DELETE".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#deletion_policy SqlDatabase#deletion_policy}
   */
   readonly deletionPolicy?: string;
@@ -51,14 +46,14 @@ values are: "ABANDON", "DELETE". Defaults to "DELETE".
   /**
   * The name of the Cloud SQL instance. This does not include the project
 ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#instance SqlDatabase#instance}
   */
   readonly instance: string;
   /**
   * The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#name SqlDatabase#name}
   */
   readonly name: string;
@@ -68,7 +63,7 @@ This does not include the project ID or instance name.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;

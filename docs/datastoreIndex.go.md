@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.NewDatastoreIndex(scope Construct, id *string, config DatastoreIndexConfig) DatastoreIndex
 ```
@@ -331,7 +331,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.DatastoreIndex_IsConstruct(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.DatastoreIndex_IsTerraformElement(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ datastoreindex.DatastoreIndex_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.datastoreIndex.DatastoreIndex.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.DatastoreIndex_IsTerraformResource(x interface{}) *bool
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 &datastoreindex.DatastoreIndexConfig {
 	Connection: interface{},
@@ -734,7 +734,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
 	Id: *string,
 	Project: *string,
 	Properties: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.datastoreIndex.DatastoreIndexTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.datastoreIndex.DatastoreIndexTimeouts,
 }
 ```
 
@@ -916,7 +916,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 &datastoreindex.DatastoreIndexProperties {
 	Direction: *string,
@@ -966,7 +966,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 &datastoreindex.DatastoreIndexTimeouts {
 	Create: *string,
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.NewDatastoreIndexPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatastoreIndexPropertiesList
 ```
@@ -1157,7 +1157,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.NewDatastoreIndexPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatastoreIndexPropertiesOutputReference
 ```
@@ -1468,7 +1468,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.datastoreIndex.DatastoreIndexTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datastoreindex"
+import "github.com/cdktf/cdktf-provider-google-go/google/datastoreindex"
 
 datastoreindex.NewDatastoreIndexTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatastoreIndexTimeoutsOutputReference
 ```

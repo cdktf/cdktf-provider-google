@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function
 // generated from terraform resource schema
 
@@ -14,61 +9,61 @@ import * as cdktf from 'cdktf';
 export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
   * Memory (in MB), available to the function. Default value is 256. Possible values include 128, 256, 512, 1024, etc.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#available_memory_mb CloudfunctionsFunction#available_memory_mb}
   */
   readonly availableMemoryMb?: number;
   /**
   *  A set of key/value environment variable pairs available during build time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#build_environment_variables CloudfunctionsFunction#build_environment_variables}
   */
   readonly buildEnvironmentVariables?: { [key: string]: string };
   /**
   * Name of the Cloud Build Custom Worker Pool that should be used to build the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#build_worker_pool CloudfunctionsFunction#build_worker_pool}
   */
   readonly buildWorkerPool?: string;
   /**
   * Description of the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#description CloudfunctionsFunction#description}
   */
   readonly description?: string;
   /**
   * Docker Registry to use for storing the function's Docker images. Allowed values are CONTAINER_REGISTRY (default) and ARTIFACT_REGISTRY.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#docker_registry CloudfunctionsFunction#docker_registry}
   */
   readonly dockerRegistry?: string;
   /**
   * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry for storing images built with Cloud Build.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#docker_repository CloudfunctionsFunction#docker_repository}
   */
   readonly dockerRepository?: string;
   /**
   * Name of the function that will be executed when the Google Cloud Function is triggered.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#entry_point CloudfunctionsFunction#entry_point}
   */
   readonly entryPoint?: string;
   /**
   * A set of key/value environment variable pairs to assign to the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#environment_variables CloudfunctionsFunction#environment_variables}
   */
   readonly environmentVariables?: { [key: string]: string };
   /**
   * The security level for the function. Defaults to SECURE_OPTIONAL. Valid only if trigger_http is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#https_trigger_security_level CloudfunctionsFunction#https_trigger_security_level}
   */
   readonly httpsTriggerSecurityLevel?: string;
   /**
   * URL which triggers function execution. Returned only if trigger_http is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#https_trigger_url CloudfunctionsFunction#https_trigger_url}
   */
   readonly httpsTriggerUrl?: string;
@@ -81,127 +76,129 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#ingress_settings CloudfunctionsFunction#ingress_settings}
   */
   readonly ingressSettings?: string;
   /**
   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#kms_key_name CloudfunctionsFunction#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#labels CloudfunctionsFunction#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The limit on the maximum number of function instances that may coexist at a given time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#max_instances CloudfunctionsFunction#max_instances}
   */
   readonly maxInstances?: number;
   /**
   * The limit on the minimum number of function instances that may coexist at a given time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#min_instances CloudfunctionsFunction#min_instances}
   */
   readonly minInstances?: number;
   /**
   * A user-defined name of the function. Function names must be unique globally.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#name CloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#project CloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#region CloudfunctionsFunction#region}
   */
   readonly region?: string;
   /**
   * The runtime in which the function is going to run. Eg. "nodejs12", "nodejs14", "python37", "go111".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#runtime CloudfunctionsFunction#runtime}
   */
   readonly runtime: string;
   /**
   *  If provided, the self-provided service account to run the function with.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#service_account_email CloudfunctionsFunction#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * The GCS bucket containing the zip archive which contains the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#source_archive_bucket CloudfunctionsFunction#source_archive_bucket}
   */
   readonly sourceArchiveBucket?: string;
   /**
   * The source archive object (file) in archive bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#source_archive_object CloudfunctionsFunction#source_archive_object}
   */
   readonly sourceArchiveObject?: string;
   /**
   * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#timeout CloudfunctionsFunction#timeout}
   */
   readonly timeout?: number;
   /**
   * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as https_trigger_url. Cannot be used with trigger_bucket and trigger_topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#trigger_http CloudfunctionsFunction#trigger_http}
   */
   readonly triggerHttp?: boolean | cdktf.IResolvable;
   /**
-  * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/*\/locations/*\/connectors/*.
-  * 
+  * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is projects/* /locations/* /connectors/*.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#vpc_connector CloudfunctionsFunction#vpc_connector}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly vpcConnector?: string;
   /**
   * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are ALL_TRAFFIC and PRIVATE_RANGES_ONLY. Defaults to PRIVATE_RANGES_ONLY. If unset, this field preserves the previously set value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#vpc_connector_egress_settings CloudfunctionsFunction#vpc_connector_egress_settings}
   */
   readonly vpcConnectorEgressSettings?: string;
   /**
   * event_trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#event_trigger CloudfunctionsFunction#event_trigger}
   */
   readonly eventTrigger?: CloudfunctionsFunctionEventTrigger;
   /**
   * secret_environment_variables block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#secret_environment_variables CloudfunctionsFunction#secret_environment_variables}
   */
   readonly secretEnvironmentVariables?: CloudfunctionsFunctionSecretEnvironmentVariables[] | cdktf.IResolvable;
   /**
   * secret_volumes block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#secret_volumes CloudfunctionsFunction#secret_volumes}
   */
   readonly secretVolumes?: CloudfunctionsFunctionSecretVolumes[] | cdktf.IResolvable;
   /**
   * source_repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#source_repository CloudfunctionsFunction#source_repository}
   */
   readonly sourceRepository?: CloudfunctionsFunctionSourceRepository;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#timeouts CloudfunctionsFunction#timeouts}
   */
   readonly timeouts?: CloudfunctionsFunctionTimeouts;
@@ -209,7 +206,7 @@ export interface CloudfunctionsFunctionConfig extends cdktf.TerraformMetaArgumen
 export interface CloudfunctionsFunctionEventTriggerFailurePolicy {
   /**
   * Whether the function should be retried on failure. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#retry CloudfunctionsFunction#retry}
   */
   readonly retry: boolean | cdktf.IResolvable;
@@ -273,19 +270,19 @@ export class CloudfunctionsFunctionEventTriggerFailurePolicyOutputReference exte
 export interface CloudfunctionsFunctionEventTrigger {
   /**
   * The type of event to observe. For example: "google.storage.object.finalize". See the documentation on calling Cloud Functions for a full reference of accepted triggers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#event_type CloudfunctionsFunction#event_type}
   */
   readonly eventType: string;
   /**
   * The name or partial URI of the resource from which to observe events. For example, "myBucket" or "projects/my-project/topics/my-topic"
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#resource CloudfunctionsFunction#resource}
   */
   readonly resource: string;
   /**
   * failure_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#failure_policy CloudfunctionsFunction#failure_policy}
   */
   readonly failurePolicy?: CloudfunctionsFunctionEventTriggerFailurePolicy;
@@ -392,25 +389,25 @@ export class CloudfunctionsFunctionEventTriggerOutputReference extends cdktf.Com
 export interface CloudfunctionsFunctionSecretEnvironmentVariables {
   /**
   * Name of the environment variable.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#key CloudfunctionsFunction#key}
   */
   readonly key: string;
   /**
   * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
   */
   readonly projectId?: string;
   /**
   * ID of the secret in secret manager (not the full resource name).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
   */
   readonly secret: string;
   /**
   * Version of the secret (version number or the string "latest"). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
   */
   readonly version: string;
@@ -569,13 +566,13 @@ export class CloudfunctionsFunctionSecretEnvironmentVariablesList extends cdktf.
 export interface CloudfunctionsFunctionSecretVolumesVersions {
   /**
   * Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mount_path as "/etc/secrets" and path as "/secret_foo" would mount the secret value file at "/etc/secrets/secret_foo".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#path CloudfunctionsFunction#path}
   */
   readonly path: string;
   /**
   * Version of the secret (version number or the string "latest"). It is preferable to use "latest" version with secret volumes as secret value changes are reflected immediately.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#version CloudfunctionsFunction#version}
   */
   readonly version: string;
@@ -691,25 +688,25 @@ export class CloudfunctionsFunctionSecretVolumesVersionsList extends cdktf.Compl
 export interface CloudfunctionsFunctionSecretVolumes {
   /**
   * The path within the container to mount the secret volume. For example, setting the mount_path as "/etc/secrets" would mount the secret value files under the "/etc/secrets" directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: "/etc/secrets" Restricted mount paths: "/cloudsql", "/dev/log", "/pod", "/proc", "/var/log".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#mount_path CloudfunctionsFunction#mount_path}
   */
   readonly mountPath: string;
   /**
   * Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function's project, assuming that the secret exists in the same project as of the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#project_id CloudfunctionsFunction#project_id}
   */
   readonly projectId?: string;
   /**
   * ID of the secret in secret manager (not the full resource name).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#secret CloudfunctionsFunction#secret}
   */
   readonly secret: string;
   /**
   * versions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#versions CloudfunctionsFunction#versions}
   */
   readonly versions?: CloudfunctionsFunctionSecretVolumesVersions[] | cdktf.IResolvable;
@@ -871,7 +868,7 @@ export class CloudfunctionsFunctionSecretVolumesList extends cdktf.ComplexList {
 export interface CloudfunctionsFunctionSourceRepository {
   /**
   * The URL pointing to the hosted repository where the function is defined.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudfunctions_function#url CloudfunctionsFunction#url}
   */
   readonly url: string;

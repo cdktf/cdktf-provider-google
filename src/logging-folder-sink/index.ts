@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink
 // generated from terraform resource schema
 
@@ -14,31 +9,31 @@ import * as cdktf from 'cdktf';
 export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of this sink. The maximum length of the description is 8000 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
   */
   readonly description?: string;
   /**
   * The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The writer associated with the sink must have access to write to the above resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#destination LoggingFolderSink#destination}
   */
   readonly destination: string;
   /**
   * If set to True, then this sink is disabled and it does not export any log entries.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when exporting logs. Only log entries that match the filter are exported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
   */
   readonly filter?: string;
   /**
   * The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is accepted.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#folder LoggingFolderSink#folder}
   */
   readonly folder: string;
@@ -51,25 +46,25 @@ export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Whether or not to include children folders in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#include_children LoggingFolderSink#include_children}
   */
   readonly includeChildren?: boolean | cdktf.IResolvable;
   /**
   * The name of the logging sink.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
   */
   readonly name: string;
   /**
   * bigquery_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#bigquery_options LoggingFolderSink#bigquery_options}
   */
   readonly bigqueryOptions?: LoggingFolderSinkBigqueryOptions;
   /**
   * exclusions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#exclusions LoggingFolderSink#exclusions}
   */
   readonly exclusions?: LoggingFolderSinkExclusions[] | cdktf.IResolvable;
@@ -77,7 +72,7 @@ export interface LoggingFolderSinkConfig extends cdktf.TerraformMetaArguments {
 export interface LoggingFolderSinkBigqueryOptions {
   /**
   * Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#use_partitioned_tables LoggingFolderSink#use_partitioned_tables}
   */
   readonly usePartitionedTables: boolean | cdktf.IResolvable;
@@ -141,25 +136,25 @@ export class LoggingFolderSinkBigqueryOptionsOutputReference extends cdktf.Compl
 export interface LoggingFolderSinkExclusions {
   /**
   * A description of this exclusion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#description LoggingFolderSink#description}
   */
   readonly description?: string;
   /**
   * If set to True, then this exclusion is disabled and it does not exclude any log entries
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#disabled LoggingFolderSink#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#filter LoggingFolderSink#filter}
   */
   readonly filter: string;
   /**
   * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_sink#name LoggingFolderSink#name}
   */
   readonly name: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/vpc_access_connector
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleVpcAccessConnectorConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * The name of the resource (Max 25 characters).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/vpc_access_connector#name DataGoogleVpcAccessConnector#name}
   */
   readonly name: string;
@@ -31,7 +26,7 @@ export interface DataGoogleVpcAccessConnectorConfig extends cdktf.TerraformMetaA
   readonly project?: string;
   /**
   * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/vpc_access_connector#region DataGoogleVpcAccessConnector#region}
   */
   readonly region?: string;

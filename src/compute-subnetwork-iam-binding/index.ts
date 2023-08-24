@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork_iam_binding
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface ComputeSubnetworkIamBindingConfig extends cdktf.TerraformMetaAr
   readonly subnetwork: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork_iam_binding#condition ComputeSubnetworkIamBinding#condition}
   */
   readonly condition?: ComputeSubnetworkIamBindingCondition;

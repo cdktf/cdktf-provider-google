@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/kms_key_ring
 // generated from terraform resource schema
 
@@ -22,13 +17,13 @@ export interface DataGoogleKmsKeyRingConfig extends cdktf.TerraformMetaArguments
   /**
   * The location for the KeyRing.
 A full list of valid locations can be found by running 'gcloud kms locations list'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/kms_key_ring#location DataGoogleKmsKeyRing#location}
   */
   readonly location: string;
   /**
   * The resource name for the KeyRing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/kms_key_ring#name DataGoogleKmsKeyRing#name}
   */
   readonly name: string;

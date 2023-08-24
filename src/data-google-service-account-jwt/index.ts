@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/service_account_jwt
 // generated from terraform resource schema
 
@@ -18,7 +13,7 @@ export interface DataGoogleServiceAccountJwtConfig extends cdktf.TerraformMetaAr
   readonly delegates?: string[];
   /**
   * Number of seconds until the JWT expires. If set and non-zero an `exp` claim will be added to the payload derived from the current timestamp plus expires_in seconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/service_account_jwt#expires_in DataGoogleServiceAccountJwt#expires_in}
   */
   readonly expiresIn?: number;
@@ -31,7 +26,7 @@ export interface DataGoogleServiceAccountJwtConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * A JSON-encoded JWT claims set that will be included in the signed JWT.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/service_account_jwt#payload DataGoogleServiceAccountJwt#payload}
   */
   readonly payload: string;

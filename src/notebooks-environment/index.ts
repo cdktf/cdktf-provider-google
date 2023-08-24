@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * A brief description of this environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#description NotebooksEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of this environment for the UI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#display_name NotebooksEnvironment#display_name}
   */
   readonly displayName?: string;
@@ -33,21 +28,21 @@ export interface NotebooksEnvironmentConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * A reference to the zone where the machine resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#location NotebooksEnvironment#location}
   */
   readonly location: string;
   /**
   * The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#name NotebooksEnvironment#name}
   */
   readonly name: string;
   /**
   * Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#post_startup_script NotebooksEnvironment#post_startup_script}
   */
   readonly postStartupScript?: string;
@@ -57,19 +52,19 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
   readonly project?: string;
   /**
   * container_image block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#container_image NotebooksEnvironment#container_image}
   */
   readonly containerImage?: NotebooksEnvironmentContainerImage;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#timeouts NotebooksEnvironment#timeouts}
   */
   readonly timeouts?: NotebooksEnvironmentTimeouts;
   /**
   * vm_image block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#vm_image NotebooksEnvironment#vm_image}
   */
   readonly vmImage?: NotebooksEnvironmentVmImage;
@@ -78,13 +73,13 @@ export interface NotebooksEnvironmentContainerImage {
   /**
   * The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#repository NotebooksEnvironment#repository}
   */
   readonly repository: string;
   /**
   * The tag of the container image. If not specified, this defaults to the latest tag.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#tag NotebooksEnvironment#tag}
   */
   readonly tag?: string;
@@ -300,20 +295,20 @@ export class NotebooksEnvironmentTimeoutsOutputReference extends cdktf.ComplexOb
 export interface NotebooksEnvironmentVmImage {
   /**
   * Use this VM image family to find the image; the newest image in this family will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#image_family NotebooksEnvironment#image_family}
   */
   readonly imageFamily?: string;
   /**
   * Use VM image name to find the image.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#image_name NotebooksEnvironment#image_name}
   */
   readonly imageName?: string;
   /**
   * The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_environment#project NotebooksEnvironment#project}
   */
   readonly project: string;

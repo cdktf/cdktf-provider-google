@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_app_engine_service_iam_member
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface IapAppEngineServiceIamMemberConfig extends cdktf.TerraformMetaA
   readonly service: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_app_engine_service_iam_member#condition IapAppEngineServiceIamMember#condition}
   */
   readonly condition?: IapAppEngineServiceIamMemberCondition;

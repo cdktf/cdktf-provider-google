@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions_function
 // generated from terraform resource schema
 
@@ -21,19 +16,19 @@ export interface DataGoogleCloudfunctionsFunctionConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * A user-defined name of the function. Function names must be unique globally.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions_function#name DataGoogleCloudfunctionsFunction#name}
   */
   readonly name: string;
   /**
   * Project of the function. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions_function#project DataGoogleCloudfunctionsFunction#project}
   */
   readonly project?: string;
   /**
   * Region of function. If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions_function#region DataGoogleCloudfunctionsFunction#region}
   */
   readonly region?: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ProjectIamCustomRoleConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description for the role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#description ProjectIamCustomRole#description}
   */
   readonly description?: string;
@@ -27,31 +22,31 @@ export interface ProjectIamCustomRoleConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#permissions ProjectIamCustomRole#permissions}
   */
   readonly permissions: string[];
   /**
   * The project that the service account will be created in. Defaults to the provider project configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#project ProjectIamCustomRole#project}
   */
   readonly project?: string;
   /**
   * The camel case role id to use for this role. Cannot contain - characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#role_id ProjectIamCustomRole#role_id}
   */
   readonly roleId: string;
   /**
   * The current launch stage of the role. Defaults to GA.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#stage ProjectIamCustomRole#stage}
   */
   readonly stage?: string;
   /**
   * A human-readable title for the role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_custom_role#title ProjectIamCustomRole#title}
   */
   readonly title: string;

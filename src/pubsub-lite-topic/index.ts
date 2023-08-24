@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Name of the topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#name PubsubLiteTopic#name}
   */
   readonly name: string;
@@ -31,37 +26,37 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The region of the pubsub lite topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#region PubsubLiteTopic#region}
   */
   readonly region?: string;
   /**
   * The zone of the pubsub lite topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#zone PubsubLiteTopic#zone}
   */
   readonly zone?: string;
   /**
   * partition_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#partition_config PubsubLiteTopic#partition_config}
   */
   readonly partitionConfig?: PubsubLiteTopicPartitionConfig;
   /**
   * reservation_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#reservation_config PubsubLiteTopic#reservation_config}
   */
   readonly reservationConfig?: PubsubLiteTopicReservationConfig;
   /**
   * retention_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#retention_config PubsubLiteTopic#retention_config}
   */
   readonly retentionConfig?: PubsubLiteTopicRetentionConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#timeouts PubsubLiteTopic#timeouts}
   */
   readonly timeouts?: PubsubLiteTopicTimeouts;
@@ -69,13 +64,13 @@ export interface PubsubLiteTopicConfig extends cdktf.TerraformMetaArguments {
 export interface PubsubLiteTopicPartitionConfigCapacity {
   /**
   * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#publish_mib_per_sec PubsubLiteTopic#publish_mib_per_sec}
   */
   readonly publishMibPerSec: number;
   /**
   * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#subscribe_mib_per_sec PubsubLiteTopic#subscribe_mib_per_sec}
   */
   readonly subscribeMibPerSec: number;
@@ -159,13 +154,13 @@ export class PubsubLiteTopicPartitionConfigCapacityOutputReference extends cdktf
 export interface PubsubLiteTopicPartitionConfig {
   /**
   * The number of partitions in the topic. Must be at least 1.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#count PubsubLiteTopic#count}
   */
   readonly count: number;
   /**
   * capacity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#capacity PubsubLiteTopic#capacity}
   */
   readonly capacity?: PubsubLiteTopicPartitionConfigCapacity;
@@ -252,7 +247,7 @@ export class PubsubLiteTopicPartitionConfigOutputReference extends cdktf.Complex
 export interface PubsubLiteTopicReservationConfig {
   /**
   * The Reservation to use for this topic's throughput capacity.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#throughput_reservation PubsubLiteTopic#throughput_reservation}
   */
   readonly throughputReservation?: string;
@@ -321,7 +316,7 @@ export interface PubsubLiteTopicRetentionConfig {
   * The provisioned storage, in bytes, per partition. If the number of bytes stored
 in any of the topic's partitions grows beyond this value, older messages will be
 dropped to make room for newer ones, regardless of the value of period.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#per_partition_bytes PubsubLiteTopic#per_partition_bytes}
   */
   readonly perPartitionBytes: string;
@@ -330,7 +325,7 @@ dropped to make room for newer ones, regardless of the value of period.
 long as the bytes retained for each partition is below perPartitionBytes. A
 duration in seconds with up to nine fractional digits, terminated by 's'.
 Example: "3.5s".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_topic#period PubsubLiteTopic#period}
   */
   readonly period?: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address
 // generated from terraform resource schema
 
@@ -16,20 +11,20 @@ export interface ComputeAddressConfig extends cdktf.TerraformMetaArguments {
   * The static external IP address represented by this resource.
 The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#address ComputeAddress#address}
   */
   readonly address?: string;
   /**
   * The type of address to reserve.
 Note: if you set this argument's value as 'INTERNAL' you need to leave the 'network_tier' argument unset in that resource block. Default value: "EXTERNAL" Possible values: ["INTERNAL", "EXTERNAL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#address_type ComputeAddress#address_type}
   */
   readonly addressType?: string;
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#description ComputeAddress#description}
   */
   readonly description?: string;
@@ -42,7 +37,7 @@ Note: if you set this argument's value as 'INTERNAL' you need to leave the 'netw
   readonly id?: string;
   /**
   * The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: ["IPV4", "IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#ip_version ComputeAddress#ip_version}
   */
   readonly ipVersion?: string;
@@ -50,7 +45,7 @@ Note: if you set this argument's value as 'INTERNAL' you need to leave the 'netw
   * The endpoint type of this address, which should be VM or NETLB. This is
 used for deciding which type of endpoint this address can be used after
 the external IPv6 address reservation. Possible values: ["VM", "NETLB"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#ipv6_endpoint_type ComputeAddress#ipv6_endpoint_type}
   */
   readonly ipv6EndpointType?: string;
@@ -61,7 +56,7 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#name ComputeAddress#name}
   */
   readonly name: string;
@@ -69,7 +64,7 @@ except the last character, which cannot be a dash.
   * The URL of the network in which to reserve the address. This field
 can only be used with INTERNAL type with the VPC_PEERING and
 IPSEC_INTERCONNECT purposes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#network ComputeAddress#network}
   */
   readonly network?: string;
@@ -77,13 +72,13 @@ IPSEC_INTERCONNECT purposes.
   * The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
 This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it's always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: ["PREMIUM", "STANDARD"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#network_tier ComputeAddress#network_tier}
   */
   readonly networkTier?: string;
   /**
   * The prefix length if the resource represents an IP range.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#prefix_length ComputeAddress#prefix_length}
   */
   readonly prefixLength?: number;
@@ -112,14 +107,14 @@ this purpose.
 
 
 This should only be set when using an Internal address.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#purpose ComputeAddress#purpose}
   */
   readonly purpose?: string;
   /**
   * The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#region ComputeAddress#region}
   */
   readonly region?: string;
@@ -128,13 +123,13 @@ If it is not provided, the provider region is used.
 address is specified, it must be within the subnetwork's IP range.
 This field can only be used with INTERNAL type with
 GCE_ENDPOINT/DNS_RESOLVER purposes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#subnetwork ComputeAddress#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_address#timeouts ComputeAddress#timeouts}
   */
   readonly timeouts?: ComputeAddressTimeouts;

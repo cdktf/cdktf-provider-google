@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_schema
 // generated from terraform resource schema
 
@@ -16,7 +11,7 @@ export interface PubsubSchemaConfig extends cdktf.TerraformMetaArguments {
   * The definition of the schema.
 This should contain a string representing the full definition of the schema
 that is a valid schema definition of the type specified in type.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_schema#definition PubsubSchema#definition}
   */
   readonly definition?: string;
@@ -29,7 +24,7 @@ that is a valid schema definition of the type specified in type.
   readonly id?: string;
   /**
   * The ID to use for the schema, which will become the final component of the schema's resource name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_schema#name PubsubSchema#name}
   */
   readonly name: string;
@@ -39,13 +34,13 @@ that is a valid schema definition of the type specified in type.
   readonly project?: string;
   /**
   * The type of the schema definition Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "PROTOCOL_BUFFER", "AVRO"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_schema#type PubsubSchema#type}
   */
   readonly type?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_schema#timeouts PubsubSchema#timeouts}
   */
   readonly timeouts?: PubsubSchemaTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/alloydb_supported_database_flags
 // generated from terraform resource schema
 
@@ -21,13 +16,13 @@ export interface DataGoogleAlloydbSupportedDatabaseFlagsConfig extends cdktf.Ter
   readonly id?: string;
   /**
   * The canonical id for the location. For example: "us-east1".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/alloydb_supported_database_flags#location DataGoogleAlloydbSupportedDatabaseFlags#location}
   */
   readonly location: string;
   /**
   * Project ID of the project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/alloydb_supported_database_flags#project DataGoogleAlloydbSupportedDatabaseFlags#project}
   */
   readonly project?: string;

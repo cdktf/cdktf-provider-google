@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface CertificateManagerDnsAuthorizationConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization#description CertificateManagerDnsAuthorization#description}
   */
   readonly description?: string;
@@ -22,7 +17,7 @@ export interface CertificateManagerDnsAuthorizationConfig extends cdktf.Terrafor
   * A domain which is being authorized. A DnsAuthorization resource covers a
 single domain and its wildcard, e.g. authorization for "example.com" can
 be used to issue certificates for "example.com" and "*.example.com".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization#domain CertificateManagerDnsAuthorization#domain}
   */
   readonly domain: string;
@@ -35,7 +30,7 @@ be used to issue certificates for "example.com" and "*.example.com".
   readonly id?: string;
   /**
   * Set of label tags associated with the DNS Authorization resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization#labels CertificateManagerDnsAuthorization#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -43,7 +38,7 @@ be used to issue certificates for "example.com" and "*.example.com".
   * Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization#name CertificateManagerDnsAuthorization#name}
   */
   readonly name: string;
@@ -53,7 +48,7 @@ and all following characters must be a dash, underscore, letter or digit.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_dns_authorization#timeouts CertificateManagerDnsAuthorization#timeouts}
   */
   readonly timeouts?: CertificateManagerDnsAuthorizationTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"].
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#additional_experiments DataflowJob#additional_experiments}
   */
   readonly additionalExperiments?: string[];
   /**
   * Indicates if the job should use the streaming engine feature.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#enable_streaming_engine DataflowJob#enable_streaming_engine}
   */
   readonly enableStreamingEngine?: boolean | cdktf.IResolvable;
@@ -33,115 +28,115 @@ export interface DataflowJobConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The configuration for VM IPs. Options are "WORKER_IP_PUBLIC" or "WORKER_IP_PRIVATE".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#ip_configuration DataflowJob#ip_configuration}
   */
   readonly ipConfiguration?: string;
   /**
   * The name for the Cloud KMS key for the job. Key format is: projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#kms_key_name DataflowJob#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * User labels to be specified for the job. Keys and values should follow the restrictions specified in the labeling restrictions page. NOTE: Google-provided Dataflow templates often provide default labels that begin with goog-dataflow-provided. Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#labels DataflowJob#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The machine type to use for the job.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#machine_type DataflowJob#machine_type}
   */
   readonly machineType?: string;
   /**
   * The number of workers permitted to work on the job. More workers may improve processing speed at additional cost.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#max_workers DataflowJob#max_workers}
   */
   readonly maxWorkers?: number;
   /**
   * A unique name for the resource, required by Dataflow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#name DataflowJob#name}
   */
   readonly name: string;
   /**
   * The network to which VMs will be assigned. If it is not provided, "default" will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#network DataflowJob#network}
   */
   readonly network?: string;
   /**
   * One of "drain" or "cancel". Specifies behavior of deletion during terraform destroy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#on_delete DataflowJob#on_delete}
   */
   readonly onDelete?: string;
   /**
   * Key/Value pairs to be passed to the Dataflow job (as used in the template).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#parameters DataflowJob#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * The project in which the resource belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#project DataflowJob#project}
   */
   readonly project?: string;
   /**
   * The region in which the created job should run.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#region DataflowJob#region}
   */
   readonly region?: string;
   /**
   * The Service Account email used to create the job.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#service_account_email DataflowJob#service_account_email}
   */
   readonly serviceAccountEmail?: string;
   /**
   * If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are different, e.g. by embedding a release ID or by using a random_id.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#skip_wait_on_job_termination DataflowJob#skip_wait_on_job_termination}
   */
   readonly skipWaitOnJobTermination?: boolean | cdktf.IResolvable;
   /**
   * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#subnetwork DataflowJob#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * A writeable location on Google Cloud Storage for the Dataflow job to dump its temporary data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#temp_gcs_location DataflowJob#temp_gcs_location}
   */
   readonly tempGcsLocation: string;
   /**
   * The Google Cloud Storage path to the Dataflow job template.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#template_gcs_path DataflowJob#template_gcs_path}
   */
   readonly templateGcsPath: string;
   /**
   * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#transform_name_mapping DataflowJob#transform_name_mapping}
   */
   readonly transformNameMapping?: { [key: string]: string };
   /**
   * The zone in which the created job should run. If it is not provided, the provider zone is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#zone DataflowJob#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataflow_job#timeouts DataflowJob#timeouts}
   */
   readonly timeouts?: DataflowJobTimeouts;

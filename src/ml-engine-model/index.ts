@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description specified for the model when it was created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#description MlEngineModel#description}
   */
   readonly description?: string;
@@ -27,25 +22,25 @@ export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * One or more labels that you can add, to organize your models.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#labels MlEngineModel#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name specified for the model.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#name MlEngineModel#name}
   */
   readonly name: string;
   /**
   * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#online_prediction_console_logging MlEngineModel#online_prediction_console_logging}
   */
   readonly onlinePredictionConsoleLogging?: boolean | cdktf.IResolvable;
   /**
   * If true, online prediction access logs are sent to StackDriver Logging.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#online_prediction_logging MlEngineModel#online_prediction_logging}
   */
   readonly onlinePredictionLogging?: boolean | cdktf.IResolvable;
@@ -56,19 +51,19 @@ export interface MlEngineModelConfig extends cdktf.TerraformMetaArguments {
   /**
   * The list of regions where the model is going to be deployed.
 Currently only one region per model is supported
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#regions MlEngineModel#regions}
   */
   readonly regions?: string[];
   /**
   * default_version block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#default_version MlEngineModel#default_version}
   */
   readonly defaultVersion?: MlEngineModelDefaultVersion;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#timeouts MlEngineModel#timeouts}
   */
   readonly timeouts?: MlEngineModelTimeouts;
@@ -76,7 +71,7 @@ Currently only one region per model is supported
 export interface MlEngineModelDefaultVersion {
   /**
   * The name specified for the version when it was created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/ml_engine_model#name MlEngineModel#name}
   */
   readonly name: string;

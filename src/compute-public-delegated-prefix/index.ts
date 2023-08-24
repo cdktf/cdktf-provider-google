@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputePublicDelegatedPrefixConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#description ComputePublicDelegatedPrefix#description}
   */
   readonly description?: string;
@@ -27,13 +22,13 @@ export interface ComputePublicDelegatedPrefixConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#ip_cidr_range ComputePublicDelegatedPrefix#ip_cidr_range}
   */
   readonly ipCidrRange: string;
   /**
   * If true, the prefix will be live migrated.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#is_live_migration ComputePublicDelegatedPrefix#is_live_migration}
   */
   readonly isLiveMigration?: boolean | cdktf.IResolvable;
@@ -44,13 +39,13 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#name ComputePublicDelegatedPrefix#name}
   */
   readonly name: string;
   /**
   * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#parent_prefix ComputePublicDelegatedPrefix#parent_prefix}
   */
   readonly parentPrefix: string;
@@ -60,13 +55,13 @@ except the last character, which cannot be a dash.
   readonly project?: string;
   /**
   * A region where the prefix will reside.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#region ComputePublicDelegatedPrefix#region}
   */
   readonly region: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_delegated_prefix#timeouts ComputePublicDelegatedPrefix#timeouts}
   */
   readonly timeouts?: ComputePublicDelegatedPrefixTimeouts;

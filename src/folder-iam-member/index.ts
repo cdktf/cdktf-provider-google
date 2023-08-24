@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_member
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface FolderIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_member#condition FolderIamMember#condition}
   */
   readonly condition?: FolderIamMemberCondition;

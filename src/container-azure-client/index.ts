@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ContainerAzureClientConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Azure Active Directory Application ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#application_id ContainerAzureClient#application_id}
   */
   readonly applicationId: string;
@@ -27,31 +22,31 @@ export interface ContainerAzureClientConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#location ContainerAzureClient#location}
   */
   readonly location: string;
   /**
   * The name of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#name ContainerAzureClient#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#project ContainerAzureClient#project}
   */
   readonly project?: string;
   /**
   * The Azure Active Directory Tenant ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#tenant_id ContainerAzureClient#tenant_id}
   */
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_client#timeouts ContainerAzureClient#timeouts}
   */
   readonly timeouts?: ContainerAzureClientTimeouts;

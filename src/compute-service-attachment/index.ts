@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment
 // generated from terraform resource schema
 
@@ -15,20 +10,20 @@ export interface ComputeServiceAttachmentConfig extends cdktf.TerraformMetaArgum
   /**
   * The connection preference to use for this service attachment. Valid
 values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#connection_preference ComputeServiceAttachment#connection_preference}
   */
   readonly connectionPreference: string;
   /**
   * An array of projects that are not allowed to connect to this service
 attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#consumer_reject_lists ComputeServiceAttachment#consumer_reject_lists}
   */
   readonly consumerRejectLists?: string[];
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#description ComputeServiceAttachment#description}
   */
   readonly description?: string;
@@ -37,7 +32,7 @@ attachment.
 the PSC connected endpoints and the Cloud DNS. For example, this is a
 valid domain name: "p.mycompany.com.". Current max number of domain names
 supported is 1.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#domain_names ComputeServiceAttachment#domain_names}
   */
   readonly domainNames?: string[];
@@ -45,7 +40,7 @@ supported is 1.
   * If true, enable the proxy protocol which is for supplying client TCP/IP
 address data in TCP connections that traverse proxies on their way to
 destination servers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#enable_proxy_protocol ComputeServiceAttachment#enable_proxy_protocol}
   */
   readonly enableProxyProtocol: boolean | cdktf.IResolvable;
@@ -63,13 +58,13 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#name ComputeServiceAttachment#name}
   */
   readonly name: string;
   /**
   * An array of subnets that is provided for NAT in this service attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#nat_subnets ComputeServiceAttachment#nat_subnets}
   */
   readonly natSubnets: string[];
@@ -84,32 +79,32 @@ If false, connection policy update will only affect existing PENDING PSC endpoin
 If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
 
 For newly created service attachment, this boolean defaults to true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#reconcile_connections ComputeServiceAttachment#reconcile_connections}
   */
   readonly reconcileConnections?: boolean | cdktf.IResolvable;
   /**
   * URL of the region where the resource resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#region ComputeServiceAttachment#region}
   */
   readonly region?: string;
   /**
   * The URL of a forwarding rule that represents the service identified by
 this service attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#target_service ComputeServiceAttachment#target_service}
   */
   readonly targetService: string;
   /**
   * consumer_accept_lists block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#consumer_accept_lists ComputeServiceAttachment#consumer_accept_lists}
   */
   readonly consumerAcceptLists?: ComputeServiceAttachmentConsumerAcceptLists[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#timeouts ComputeServiceAttachment#timeouts}
   */
   readonly timeouts?: ComputeServiceAttachmentTimeouts;
@@ -187,13 +182,13 @@ export interface ComputeServiceAttachmentConsumerAcceptLists {
   /**
   * The number of consumer forwarding rules the consumer project can
 create.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#connection_limit ComputeServiceAttachment#connection_limit}
   */
   readonly connectionLimit: number;
   /**
   * A project that is allowed to connect to this service attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_service_attachment#project_id_or_num ComputeServiceAttachment#project_id_or_num}
   */
   readonly projectIdOrNum: string;

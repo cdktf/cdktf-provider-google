@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sourcerepo_repository
 // generated from terraform resource schema
 
@@ -22,7 +17,7 @@ export interface DataGoogleSourcerepoRepositoryConfig extends cdktf.TerraformMet
   /**
   * Resource name of the repository, of the form '{{repo}}'.
 The repo name may contain slashes. eg, 'name/with/slash'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sourcerepo_repository#name DataGoogleSourcerepoRepository#name}
   */
   readonly name: string;

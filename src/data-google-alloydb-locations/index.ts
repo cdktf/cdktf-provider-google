@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/alloydb_locations
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleAlloydbLocationsConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * Project ID of the project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/alloydb_locations#project DataGoogleAlloydbLocations#project}
   */
   readonly project?: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface AppEngineDomainMappingConfig extends cdktf.TerraformMetaArguments {
   /**
   * Relative name of the domain serving the application. Example: example.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#domain_name AppEngineDomainMapping#domain_name}
   */
   readonly domainName: string;
@@ -28,7 +23,7 @@ export interface AppEngineDomainMappingConfig extends cdktf.TerraformMetaArgumen
   /**
   * Whether the domain creation should override any existing mappings for this domain.
 By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#override_strategy AppEngineDomainMapping#override_strategy}
   */
   readonly overrideStrategy?: string;
@@ -38,13 +33,13 @@ By default, overrides are rejected. Default value: "STRICT" Possible values: ["S
   readonly project?: string;
   /**
   * ssl_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#ssl_settings AppEngineDomainMapping#ssl_settings}
   */
   readonly sslSettings?: AppEngineDomainMappingSslSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#timeouts AppEngineDomainMapping#timeouts}
   */
   readonly timeouts?: AppEngineDomainMappingTimeouts;
@@ -131,14 +126,14 @@ By default, a managed certificate is automatically created for every domain mapp
 or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' or 'UPDATE' request. You must be
 authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource.
 Example: 12345.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#certificate_id AppEngineDomainMapping#certificate_id}
   */
   readonly certificateId?: string;
   /**
   * SSL management type for this domain. If 'AUTOMATIC', a managed certificate is automatically provisioned.
 If 'MANUAL', 'certificateId' must be manually specified in order to configure SSL for this domain. Possible values: ["AUTOMATIC", "MANUAL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_domain_mapping#ssl_management_type AppEngineDomainMapping#ssl_management_type}
   */
   readonly sslManagementType: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/endpoints_service_consumers_iam_binding
 // generated from terraform resource schema
 
@@ -37,7 +32,7 @@ export interface EndpointsServiceConsumersIamBindingConfig extends cdktf.Terrafo
   readonly serviceName: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/endpoints_service_consumers_iam_binding#condition EndpointsServiceConsumersIamBinding#condition}
   */
   readonly condition?: EndpointsServiceConsumersIamBindingCondition;

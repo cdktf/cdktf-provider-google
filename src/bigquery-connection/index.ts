@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface BigqueryConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional connection id that should be assigned to the created connection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#connection_id BigqueryConnection#connection_id}
   */
   readonly connectionId?: string;
   /**
   * A descriptive description for the connection
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#description BigqueryConnection#description}
   */
   readonly description?: string;
   /**
   * A descriptive name for the connection
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#friendly_name BigqueryConnection#friendly_name}
   */
   readonly friendlyName?: string;
@@ -45,7 +40,7 @@ Examples: US, EU, asia-northeast1, us-central1, europe-west1.
 Spanner Connections same as spanner region
 AWS allowed regions are aws-us-east-1
 Azure allowed regions are azure-eastus2
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#location BigqueryConnection#location}
   */
   readonly location?: string;
@@ -55,37 +50,37 @@ Azure allowed regions are azure-eastus2
   readonly project?: string;
   /**
   * aws block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#aws BigqueryConnection#aws}
   */
   readonly aws?: BigqueryConnectionAws;
   /**
   * azure block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#azure BigqueryConnection#azure}
   */
   readonly azure?: BigqueryConnectionAzure;
   /**
   * cloud_resource block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#cloud_resource BigqueryConnection#cloud_resource}
   */
   readonly cloudResource?: BigqueryConnectionCloudResource;
   /**
   * cloud_spanner block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#cloud_spanner BigqueryConnection#cloud_spanner}
   */
   readonly cloudSpanner?: BigqueryConnectionCloudSpanner;
   /**
   * cloud_sql block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#cloud_sql BigqueryConnection#cloud_sql}
   */
   readonly cloudSql?: BigqueryConnectionCloudSql;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#timeouts BigqueryConnection#timeouts}
   */
   readonly timeouts?: BigqueryConnectionTimeouts;
@@ -93,7 +88,7 @@ Azure allowed regions are azure-eastus2
 export interface BigqueryConnectionAwsAccessRole {
   /**
   * The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#iam_role_id BigqueryConnection#iam_role_id}
   */
   readonly iamRoleId: string;
@@ -162,7 +157,7 @@ export class BigqueryConnectionAwsAccessRoleOutputReference extends cdktf.Comple
 export interface BigqueryConnectionAws {
   /**
   * access_role block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#access_role BigqueryConnection#access_role}
   */
   readonly accessRole: BigqueryConnectionAwsAccessRole;
@@ -226,13 +221,13 @@ export class BigqueryConnectionAwsOutputReference extends cdktf.ComplexObject {
 export interface BigqueryConnectionAzure {
   /**
   * The id of customer's directory that host the data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#customer_tenant_id BigqueryConnection#customer_tenant_id}
   */
   readonly customerTenantId: string;
   /**
   * The Azure Application (client) ID where the federated credentials will be hosted.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#federated_application_client_id BigqueryConnection#federated_application_client_id}
   */
   readonly federatedApplicationClientId?: string;
@@ -387,19 +382,19 @@ export class BigqueryConnectionCloudResourceOutputReference extends cdktf.Comple
 export interface BigqueryConnectionCloudSpanner {
   /**
   * Cloud Spanner database in the form 'project/instance/database'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#database BigqueryConnection#database}
   */
   readonly database: string;
   /**
   * If parallelism should be used when reading from Cloud Spanner
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#use_parallelism BigqueryConnection#use_parallelism}
   */
   readonly useParallelism?: boolean | cdktf.IResolvable;
   /**
   * If the serverless analytics service should be used to read data from Cloud Spanner. useParallelism must be set when using serverless analytics
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#use_serverless_analytics BigqueryConnection#use_serverless_analytics}
   */
   readonly useServerlessAnalytics?: boolean | cdktf.IResolvable;
@@ -509,13 +504,13 @@ export class BigqueryConnectionCloudSpannerOutputReference extends cdktf.Complex
 export interface BigqueryConnectionCloudSqlCredential {
   /**
   * Password for database.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#password BigqueryConnection#password}
   */
   readonly password: string;
   /**
   * Username for database.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#username BigqueryConnection#username}
   */
   readonly username: string;
@@ -599,25 +594,25 @@ export class BigqueryConnectionCloudSqlCredentialOutputReference extends cdktf.C
 export interface BigqueryConnectionCloudSql {
   /**
   * Database name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#database BigqueryConnection#database}
   */
   readonly database: string;
   /**
   * Cloud SQL instance ID in the form project:location:instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#instance_id BigqueryConnection#instance_id}
   */
   readonly instanceId: string;
   /**
   * Type of the Cloud SQL database. Possible values: ["DATABASE_TYPE_UNSPECIFIED", "POSTGRES", "MYSQL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#type BigqueryConnection#type}
   */
   readonly type: string;
   /**
   * credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection#credential BigqueryConnection#credential}
   */
   readonly credential: BigqueryConnectionCloudSqlCredential;

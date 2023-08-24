@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface GameServicesGameServerConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * A unique id for the deployment config.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#config_id GameServicesGameServerConfig#config_id}
   */
   readonly configId: string;
   /**
   * A unique id for the deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#deployment_id GameServicesGameServerConfig#deployment_id}
   */
   readonly deploymentId: string;
   /**
   * The description of the game server config.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#description GameServicesGameServerConfig#description}
   */
   readonly description?: string;
@@ -40,13 +35,13 @@ export interface GameServicesGameServerConfigConfig extends cdktf.TerraformMetaA
   /**
   * The labels associated with this game server config. Each label is a
 key-value pair.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location of the Deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#location GameServicesGameServerConfig#location}
   */
   readonly location?: string;
@@ -56,19 +51,19 @@ key-value pair.
   readonly project?: string;
   /**
   * fleet_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#fleet_configs GameServicesGameServerConfig#fleet_configs}
   */
   readonly fleetConfigs: GameServicesGameServerConfigFleetConfigs[] | cdktf.IResolvable;
   /**
   * scaling_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#scaling_configs GameServicesGameServerConfig#scaling_configs}
   */
   readonly scalingConfigs?: GameServicesGameServerConfigScalingConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#timeouts GameServicesGameServerConfig#timeouts}
   */
   readonly timeouts?: GameServicesGameServerConfigTimeouts;
@@ -84,13 +79,13 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 
 The format of the spec can be found :
 'https://agones.dev/site/docs/reference/fleet/'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#fleet_spec GameServicesGameServerConfig#fleet_spec}
   */
   readonly fleetSpec: string;
   /**
   * The name of the FleetConfig.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
   */
   readonly name?: string;
@@ -212,7 +207,7 @@ export interface GameServicesGameServerConfigScalingConfigsSchedules {
 after the cron job's start time.
 
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#cron_job_duration GameServicesGameServerConfig#cron_job_duration}
   */
   readonly cronJobDuration?: string;
@@ -220,7 +215,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
   * The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#cron_spec GameServicesGameServerConfig#cron_spec}
   */
   readonly cronSpec?: string;
@@ -228,7 +223,7 @@ defined by the realm.
   * The end time of the event.
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#end_time GameServicesGameServerConfig#end_time}
   */
   readonly endTime?: string;
@@ -236,7 +231,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
   * The start time of the event.
 
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#start_time GameServicesGameServerConfig#start_time}
   */
   readonly startTime?: string;
@@ -404,7 +399,7 @@ export class GameServicesGameServerConfigScalingConfigsSchedulesList extends cdk
 export interface GameServicesGameServerConfigScalingConfigsSelectors {
   /**
   * Set of labels to group by.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#labels GameServicesGameServerConfig#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -505,25 +500,25 @@ export interface GameServicesGameServerConfigScalingConfigs {
   * Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#fleet_autoscaler_spec GameServicesGameServerConfig#fleet_autoscaler_spec}
   */
   readonly fleetAutoscalerSpec: string;
   /**
   * The name of the ScalingConfig
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#name GameServicesGameServerConfig#name}
   */
   readonly name: string;
   /**
   * schedules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#schedules GameServicesGameServerConfig#schedules}
   */
   readonly schedules?: GameServicesGameServerConfigScalingConfigsSchedules[] | cdktf.IResolvable;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_config#selectors GameServicesGameServerConfig#selectors}
   */
   readonly selectors?: GameServicesGameServerConfigScalingConfigsSelectors[] | cdktf.IResolvable;

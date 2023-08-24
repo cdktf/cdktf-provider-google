@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed
 // generated from terraform resource schema
 
@@ -17,7 +12,7 @@ export interface CloudAssetOrganizationFeedConfig extends cdktf.TerraformMetaArg
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#asset_names CloudAssetOrganizationFeed#asset_names}
   */
   readonly assetNames?: string[];
@@ -27,7 +22,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#asset_types CloudAssetOrganizationFeed#asset_types}
   */
   readonly assetTypes?: string[];
@@ -35,19 +30,19 @@ supported asset types.
   * The project whose identity will be used when sending messages to the
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#billing_project CloudAssetOrganizationFeed#billing_project}
   */
   readonly billingProject: string;
   /**
   * Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#content_type CloudAssetOrganizationFeed#content_type}
   */
   readonly contentType?: string;
   /**
   * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#feed_id CloudAssetOrganizationFeed#feed_id}
   */
   readonly feedId: string;
@@ -60,25 +55,25 @@ enablement check, quota, and billing.
   readonly id?: string;
   /**
   * The organization this feed should be created in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#org_id CloudAssetOrganizationFeed#org_id}
   */
   readonly orgId: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#condition CloudAssetOrganizationFeed#condition}
   */
   readonly condition?: CloudAssetOrganizationFeedCondition;
   /**
   * feed_output_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#feed_output_config CloudAssetOrganizationFeed#feed_output_config}
   */
   readonly feedOutputConfig: CloudAssetOrganizationFeedFeedOutputConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#timeouts CloudAssetOrganizationFeed#timeouts}
   */
   readonly timeouts?: CloudAssetOrganizationFeedTimeouts;
@@ -87,27 +82,27 @@ export interface CloudAssetOrganizationFeedCondition {
   /**
   * Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#description CloudAssetOrganizationFeed#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#expression CloudAssetOrganizationFeed#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#location CloudAssetOrganizationFeed#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#title CloudAssetOrganizationFeed#title}
   */
   readonly title?: string;
@@ -240,7 +235,7 @@ export class CloudAssetOrganizationFeedConditionOutputReference extends cdktf.Co
 export interface CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination {
   /**
   * Destination on Cloud Pubsub topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#topic CloudAssetOrganizationFeed#topic}
   */
   readonly topic: string;
@@ -304,7 +299,7 @@ export class CloudAssetOrganizationFeedFeedOutputConfigPubsubDestinationOutputRe
 export interface CloudAssetOrganizationFeedFeedOutputConfig {
   /**
   * pubsub_destination block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_organization_feed#pubsub_destination CloudAssetOrganizationFeed#pubsub_destination}
   */
   readonly pubsubDestination: CloudAssetOrganizationFeedFeedOutputConfigPubsubDestination;

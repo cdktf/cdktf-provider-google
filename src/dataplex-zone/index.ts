@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DataplexZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Description of the zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#description DataplexZone#description}
   */
   readonly description?: string;
   /**
   * Optional. User friendly display name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#display_name DataplexZone#display_name}
   */
   readonly displayName?: string;
@@ -33,55 +28,55 @@ export interface DataplexZoneConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Optional. User defined labels for the zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#labels DataplexZone#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The lake for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#lake DataplexZone#lake}
   */
   readonly lake: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#location DataplexZone#location}
   */
   readonly location: string;
   /**
   * The name of the zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#name DataplexZone#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#project DataplexZone#project}
   */
   readonly project?: string;
   /**
   * Required. Immutable. The type of the zone. Possible values: TYPE_UNSPECIFIED, RAW, CURATED
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#type DataplexZone#type}
   */
   readonly type: string;
   /**
   * discovery_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#discovery_spec DataplexZone#discovery_spec}
   */
   readonly discoverySpec: DataplexZoneDiscoverySpec;
   /**
   * resource_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#resource_spec DataplexZone#resource_spec}
   */
   readonly resourceSpec: DataplexZoneResourceSpec;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#timeouts DataplexZone#timeouts}
   */
   readonly timeouts?: DataplexZoneTimeouts;
@@ -163,25 +158,25 @@ export class DataplexZoneAssetStatusList extends cdktf.ComplexList {
 export interface DataplexZoneDiscoverySpecCsvOptions {
   /**
   * Optional. The delimiter being used to separate values. This defaults to ','.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#delimiter DataplexZone#delimiter}
   */
   readonly delimiter?: string;
   /**
   * Optional. Whether to disable the inference of data type for CSV data. If true, all columns will be registered as strings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#disable_type_inference DataplexZone#disable_type_inference}
   */
   readonly disableTypeInference?: boolean | cdktf.IResolvable;
   /**
   * Optional. The character encoding of the data. The default is UTF-8.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#encoding DataplexZone#encoding}
   */
   readonly encoding?: string;
   /**
   * Optional. The number of rows to interpret as header rows that should be skipped when reading data rows.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#header_rows DataplexZone#header_rows}
   */
   readonly headerRows?: number;
@@ -317,13 +312,13 @@ export class DataplexZoneDiscoverySpecCsvOptionsOutputReference extends cdktf.Co
 export interface DataplexZoneDiscoverySpecJsonOptions {
   /**
   * Optional. Whether to disable the inference of data type for Json data. If true, all columns will be registered as their primitive types (strings, number or boolean).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#disable_type_inference DataplexZone#disable_type_inference}
   */
   readonly disableTypeInference?: boolean | cdktf.IResolvable;
   /**
   * Optional. The character encoding of the data. The default is UTF-8.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#encoding DataplexZone#encoding}
   */
   readonly encoding?: string;
@@ -413,37 +408,37 @@ export class DataplexZoneDiscoverySpecJsonOptionsOutputReference extends cdktf.C
 export interface DataplexZoneDiscoverySpec {
   /**
   * Required. Whether discovery is enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#enabled DataplexZone#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Optional. The list of patterns to apply for selecting data to exclude during discovery. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#exclude_patterns DataplexZone#exclude_patterns}
   */
   readonly excludePatterns?: string[];
   /**
   * Optional. The list of patterns to apply for selecting data to include during discovery if only a subset of the data should considered. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#include_patterns DataplexZone#include_patterns}
   */
   readonly includePatterns?: string[];
   /**
   * Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running discovery periodically. Successive discovery runs must be scheduled at least 60 minutes apart. The default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or TZ=${IANA_TIME_ZONE}". The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York 1 * * * *".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#schedule DataplexZone#schedule}
   */
   readonly schedule?: string;
   /**
   * csv_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#csv_options DataplexZone#csv_options}
   */
   readonly csvOptions?: DataplexZoneDiscoverySpecCsvOptions;
   /**
   * json_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#json_options DataplexZone#json_options}
   */
   readonly jsonOptions?: DataplexZoneDiscoverySpecJsonOptions;
@@ -622,7 +617,7 @@ export class DataplexZoneDiscoverySpecOutputReference extends cdktf.ComplexObjec
 export interface DataplexZoneResourceSpec {
   /**
   * Required. Immutable. The location type of the resources that are allowed to be attached to the assets within this zone. Possible values: LOCATION_TYPE_UNSPECIFIED, SINGLE_REGION, MULTI_REGION
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone#location_type DataplexZone#location_type}
   */
   readonly locationType: string;

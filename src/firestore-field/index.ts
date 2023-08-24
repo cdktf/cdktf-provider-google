@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface FirestoreFieldConfig extends cdktf.TerraformMetaArguments {
   /**
   * The id of the collection group to configure.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#collection FirestoreField#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#database FirestoreField#database}
   */
   readonly database?: string;
   /**
   * The id of the field to configure.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#field FirestoreField#field}
   */
   readonly field: string;
@@ -43,19 +38,19 @@ export interface FirestoreFieldConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * index_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#index_config FirestoreField#index_config}
   */
   readonly indexConfig?: FirestoreFieldIndexConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#timeouts FirestoreField#timeouts}
   */
   readonly timeouts?: FirestoreFieldTimeouts;
   /**
   * ttl_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#ttl_config FirestoreField#ttl_config}
   */
   readonly ttlConfig?: FirestoreFieldTtlConfig;
@@ -64,14 +59,14 @@ export interface FirestoreFieldIndexConfigIndexes {
   /**
   * Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
 be specified. Possible values: ["CONTAINS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#array_config FirestoreField#array_config}
   */
   readonly arrayConfig?: string;
   /**
   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=, !=.
 Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#order FirestoreField#order}
   */
   readonly order?: string;
@@ -79,7 +74,7 @@ Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCEN
   * The scope at which a query is run. Collection scoped queries require you specify
 the collection at query time. Collection group scope allows queries across all
 collections with the same id. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#query_scope FirestoreField#query_scope}
   */
   readonly queryScope?: string;
@@ -224,7 +219,7 @@ export class FirestoreFieldIndexConfigIndexesList extends cdktf.ComplexList {
 export interface FirestoreFieldIndexConfig {
   /**
   * indexes block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_field#indexes FirestoreField#indexes}
   */
   readonly indexes?: FirestoreFieldIndexConfigIndexes[] | cdktf.IResolvable;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The human-readable name of the fulfillment, unique within the agent.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#display_name DialogflowFulfillment#display_name}
   */
   readonly displayName: string;
   /**
   * Whether fulfillment is enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#enabled DialogflowFulfillment#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -37,19 +32,19 @@ export interface DialogflowFulfillmentConfig extends cdktf.TerraformMetaArgument
   readonly project?: string;
   /**
   * features block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#features DialogflowFulfillment#features}
   */
   readonly features?: DialogflowFulfillmentFeatures[] | cdktf.IResolvable;
   /**
   * generic_web_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#generic_web_service DialogflowFulfillment#generic_web_service}
   */
   readonly genericWebService?: DialogflowFulfillmentGenericWebService;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#timeouts DialogflowFulfillment#timeouts}
   */
   readonly timeouts?: DialogflowFulfillmentTimeouts;
@@ -58,7 +53,7 @@ export interface DialogflowFulfillmentFeatures {
   /**
   * The type of the feature that enabled for fulfillment.
 * SMALLTALK: Fulfillment is enabled for SmallTalk. Possible values: ["SMALLTALK"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#type DialogflowFulfillment#type}
   */
   readonly type: string;
@@ -154,25 +149,25 @@ export class DialogflowFulfillmentFeaturesList extends cdktf.ComplexList {
 export interface DialogflowFulfillmentGenericWebService {
   /**
   * The password for HTTP Basic authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#password DialogflowFulfillment#password}
   */
   readonly password?: string;
   /**
   * The HTTP request headers to send together with fulfillment requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#request_headers DialogflowFulfillment#request_headers}
   */
   readonly requestHeaders?: { [key: string]: string };
   /**
   * The fulfillment URI for receiving POST requests. It must use https protocol.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#uri DialogflowFulfillment#uri}
   */
   readonly uri: string;
   /**
   * The user name for HTTP Basic authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_fulfillment#username DialogflowFulfillment#username}
   */
   readonly username?: string;

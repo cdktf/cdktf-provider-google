@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user
 // generated from terraform resource schema
 
@@ -16,13 +11,13 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   * The deletion policy for the user. Setting ABANDON allows the resource
 				to be abandoned rather than deleted. This is useful for Postgres, where users cannot be deleted from the API if they
 				have been granted SQL roles. Possible values are: "ABANDON".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#deletion_policy SqlUser#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#host SqlUser#host}
   */
   readonly host?: string;
@@ -35,45 +30,45 @@ export interface SqlUserConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The name of the Cloud SQL instance. Changing this forces a new resource to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#instance SqlUser#instance}
   */
   readonly instance: string;
   /**
   * The name of the user. Changing this forces a new resource to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#name SqlUser#name}
   */
   readonly name: string;
   /**
   * The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#password SqlUser#password}
   */
   readonly password?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#project SqlUser#project}
   */
   readonly project?: string;
   /**
   * The user type. It determines the method to authenticate the user during login.
                 The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#type SqlUser#type}
   */
   readonly type?: string;
   /**
   * password_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#password_policy SqlUser#password_policy}
   */
   readonly passwordPolicy?: SqlUserPasswordPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#timeouts SqlUser#timeouts}
   */
   readonly timeouts?: SqlUserTimeouts;
@@ -219,25 +214,25 @@ export class SqlUserPasswordPolicyStatusList extends cdktf.ComplexList {
 export interface SqlUserPasswordPolicy {
   /**
   * Number of failed attempts allowed before the user get locked.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#allowed_failed_attempts SqlUser#allowed_failed_attempts}
   */
   readonly allowedFailedAttempts?: number;
   /**
   * If true, the check that will lock user after too many failed login attempts will be enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#enable_failed_attempts_check SqlUser#enable_failed_attempts_check}
   */
   readonly enableFailedAttemptsCheck?: boolean | cdktf.IResolvable;
   /**
   * If true, the user must specify the current password before changing the password. This flag is supported only for MySQL.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#enable_password_verification SqlUser#enable_password_verification}
   */
   readonly enablePasswordVerification?: boolean | cdktf.IResolvable;
   /**
   * Password expiration duration with one week grace period.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sql_user#password_expiration_duration SqlUser#password_expiration_duration}
   */
   readonly passwordExpirationDuration?: string;

@@ -1869,7 +1869,7 @@ secretManagerSecret.SecretManagerSecretTopics(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTopics.property.name">name</a></code> | <code>str</code> | The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*\/topics/*. |
+| <code><a href="#@cdktf/provider-google.secretManagerSecret.SecretManagerSecretTopics.property.name">name</a></code> | <code>str</code> | The resource name of the Pub/Sub topic that will be published to, in the following format: projects/* /topics/*. |
 
 ---
 
@@ -1881,11 +1881,13 @@ name: str
 
 - *Type:* str
 
-The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*\/topics/*.
+The resource name of the Pub/Sub topic that will be published to, in the following format: projects/* /topics/*.
 
 For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret#name SecretManagerSecret#name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

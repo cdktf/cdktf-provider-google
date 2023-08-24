@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config
 // generated from terraform resource schema
 
@@ -25,13 +20,13 @@ export interface FolderIamAuditConfigConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * Service which will be enabled for audit logging. The special value allServices covers all services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#service FolderIamAuditConfig#service}
   */
   readonly service: string;
   /**
   * audit_log_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#audit_log_config FolderIamAuditConfig#audit_log_config}
   */
   readonly auditLogConfig: FolderIamAuditConfigAuditLogConfig[] | cdktf.IResolvable;
@@ -39,13 +34,13 @@ export interface FolderIamAuditConfigConfig extends cdktf.TerraformMetaArguments
 export interface FolderIamAuditConfigAuditLogConfig {
   /**
   * Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#exempted_members FolderIamAuditConfig#exempted_members}
   */
   readonly exemptedMembers?: string[];
   /**
   * Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_iam_audit_config#log_type FolderIamAuditConfig#log_type}
   */
   readonly logType: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/monitoring_cluster_istio_service
 // generated from terraform resource schema
 
@@ -15,7 +10,7 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   /**
   * The name of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the clusterName resource label in k8s_cluster resources.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/monitoring_cluster_istio_service#cluster_name DataGoogleMonitoringClusterIstioService#cluster_name}
   */
   readonly clusterName: string;
@@ -29,7 +24,7 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   /**
   * The location of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the location resource label in k8s_cluster resources.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/monitoring_cluster_istio_service#location DataGoogleMonitoringClusterIstioService#location}
   */
   readonly location: string;
@@ -40,14 +35,14 @@ export interface DataGoogleMonitoringClusterIstioServiceConfig extends cdktf.Ter
   /**
   * The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/monitoring_cluster_istio_service#service_name DataGoogleMonitoringClusterIstioService#service_name}
   */
   readonly serviceName: string;
   /**
   * The namespace of the Istio service underlying this service. 
                         Corresponds to the destination_service_namespace metric label in Istio metrics.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/monitoring_cluster_istio_service#service_namespace DataGoogleMonitoringClusterIstioService#service_namespace}
   */
   readonly serviceNamespace: string;

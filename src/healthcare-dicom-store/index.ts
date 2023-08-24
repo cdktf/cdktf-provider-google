@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store
 // generated from terraform resource schema
 
@@ -15,7 +10,7 @@ export interface HealthcareDicomStoreConfig extends cdktf.TerraformMetaArguments
   /**
   * Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#dataset HealthcareDicomStore#dataset}
   */
   readonly dataset: string;
@@ -39,7 +34,7 @@ No more than 64 labels can be associated with a given store.
 
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#labels HealthcareDicomStore#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -47,19 +42,19 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
   * The resource name for the DicomStore.
 
 ** Changing this property may recreate the Dicom store (removing all data) **
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#name HealthcareDicomStore#name}
   */
   readonly name: string;
   /**
   * notification_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#notification_config HealthcareDicomStore#notification_config}
   */
   readonly notificationConfig?: HealthcareDicomStoreNotificationConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#timeouts HealthcareDicomStore#timeouts}
   */
   readonly timeouts?: HealthcareDicomStoreTimeouts;
@@ -72,7 +67,7 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_dicom_store#pubsub_topic HealthcareDicomStore#pubsub_topic}
   */
   readonly pubsubTopic: string;

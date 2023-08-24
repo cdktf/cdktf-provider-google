@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iam_policy
 // generated from terraform resource schema
 
@@ -21,13 +16,13 @@ export interface DataGoogleIamPolicyConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * audit_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iam_policy#audit_config DataGoogleIamPolicy#audit_config}
   */
   readonly auditConfig?: DataGoogleIamPolicyAuditConfig[] | cdktf.IResolvable;
   /**
   * binding block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iam_policy#binding DataGoogleIamPolicy#binding}
   */
   readonly binding?: DataGoogleIamPolicyBinding[] | cdktf.IResolvable;
@@ -160,7 +155,7 @@ export interface DataGoogleIamPolicyAuditConfig {
   readonly service: string;
   /**
   * audit_log_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iam_policy#audit_log_configs DataGoogleIamPolicy#audit_log_configs}
   */
   readonly auditLogConfigs: DataGoogleIamPolicyAuditConfigAuditLogConfigs[] | cdktf.IResolvable;
@@ -397,7 +392,7 @@ export interface DataGoogleIamPolicyBinding {
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iam_policy#condition DataGoogleIamPolicy#condition}
   */
   readonly condition?: DataGoogleIamPolicyBindingCondition;

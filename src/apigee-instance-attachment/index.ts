@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_instance_attachment
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ApigeeInstanceAttachmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource ID of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_instance_attachment#environment ApigeeInstanceAttachment#environment}
   */
   readonly environment: string;
@@ -28,13 +23,13 @@ export interface ApigeeInstanceAttachmentConfig extends cdktf.TerraformMetaArgum
   /**
   * The Apigee instance associated with the Apigee environment,
 in the format 'organisations/{{org_name}}/instances/{{instance_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_instance_attachment#instance_id ApigeeInstanceAttachment#instance_id}
   */
   readonly instanceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_instance_attachment#timeouts ApigeeInstanceAttachment#timeouts}
   */
   readonly timeouts?: ApigeeInstanceAttachmentTimeouts;

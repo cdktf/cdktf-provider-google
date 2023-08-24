@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_reservation
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface PubsubLiteReservationConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * Name of the reservation.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_reservation#name PubsubLiteReservation#name}
   */
   readonly name: string;
@@ -31,7 +26,7 @@ export interface PubsubLiteReservationConfig extends cdktf.TerraformMetaArgument
   readonly project?: string;
   /**
   * The region of the pubsub lite reservation.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_reservation#region PubsubLiteReservation#region}
   */
   readonly region?: string;
@@ -39,13 +34,13 @@ export interface PubsubLiteReservationConfig extends cdktf.TerraformMetaArgument
   * The reserved throughput capacity. Every unit of throughput capacity is
 equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
 messages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_reservation#throughput_capacity PubsubLiteReservation#throughput_capacity}
   */
   readonly throughputCapacity: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_reservation#timeouts PubsubLiteReservation#timeouts}
   */
   readonly timeouts?: PubsubLiteReservationTimeouts;

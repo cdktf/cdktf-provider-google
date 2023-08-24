@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the containing bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object#bucket DataGoogleStorageBucketObject#bucket}
   */
   readonly bucket?: string;
@@ -27,7 +22,7 @@ export interface DataGoogleStorageBucketObjectConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object#name DataGoogleStorageBucketObject#name}
   */
   readonly name?: string;

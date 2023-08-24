@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_exclusion
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_exclusion#description LoggingFolderExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_exclusion#disabled LoggingFolderExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_exclusion#filter LoggingFolderExclusion#filter}
   */
   readonly filter: string;
@@ -43,7 +38,7 @@ export interface LoggingFolderExclusionConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The name of the logging exclusion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_folder_exclusion#name LoggingFolderExclusion#name}
   */
   readonly name: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DialogflowCxEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#description DialogflowCxEnvironment#description}
   */
   readonly description?: string;
   /**
   * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#display_name DialogflowCxEnvironment#display_name}
   */
   readonly displayName: string;
@@ -34,19 +29,19 @@ export interface DialogflowCxEnvironmentConfig extends cdktf.TerraformMetaArgume
   /**
   * The Agent to create an Environment for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#parent DialogflowCxEnvironment#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#timeouts DialogflowCxEnvironment#timeouts}
   */
   readonly timeouts?: DialogflowCxEnvironmentTimeouts;
   /**
   * version_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#version_configs DialogflowCxEnvironment#version_configs}
   */
   readonly versionConfigs: DialogflowCxEnvironmentVersionConfigs[] | cdktf.IResolvable;
@@ -183,7 +178,7 @@ export class DialogflowCxEnvironmentTimeoutsOutputReference extends cdktf.Comple
 export interface DialogflowCxEnvironmentVersionConfigs {
   /**
   * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_environment#version DialogflowCxEnvironment#version}
   */
   readonly version: string;

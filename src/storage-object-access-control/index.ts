@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control#bucket StorageObjectAccessControl#bucket}
   */
   readonly bucket: string;
@@ -28,7 +23,7 @@ export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArg
   * project-team-{{projectId}}
   * allUsers
   * allAuthenticatedUsers
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control#entity StorageObjectAccessControl#entity}
   */
   readonly entity: string;
@@ -41,19 +36,19 @@ export interface StorageObjectAccessControlConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The name of the object to apply the access control to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control#object StorageObjectAccessControl#object}
   */
   readonly object: string;
   /**
   * The access permission for the entity. Possible values: ["OWNER", "READER"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control#role StorageObjectAccessControl#role}
   */
   readonly role: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_object_access_control#timeouts StorageObjectAccessControl#timeouts}
   */
   readonly timeouts?: StorageObjectAccessControlTimeouts;

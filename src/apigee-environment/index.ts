@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment
 // generated from terraform resource schema
 
@@ -15,7 +10,7 @@ export interface ApigeeEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. API Proxy type supported by the environment. The type can be set when creating
 the Environment and cannot be changed. Possible values: ["API_PROXY_TYPE_UNSPECIFIED", "PROGRAMMABLE", "CONFIGURABLE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#api_proxy_type ApigeeEnvironment#api_proxy_type}
   */
   readonly apiProxyType?: string;
@@ -27,19 +22,19 @@ environment, including:
 Managing the deployment of API proxy or shared flow revisions;
 Creating, updating, or deleting resource files;
 Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TYPE_UNSPECIFIED", "PROXY", "ARCHIVE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#deployment_type ApigeeEnvironment#deployment_type}
   */
   readonly deploymentType?: string;
   /**
   * Description of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#description ApigeeEnvironment#description}
   */
   readonly description?: string;
   /**
   * Display name of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#display_name ApigeeEnvironment#display_name}
   */
   readonly displayName?: string;
@@ -52,26 +47,26 @@ Creating, updating, or deleting target servers. Possible values: ["DEPLOYMENT_TY
   readonly id?: string;
   /**
   * The resource ID of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#name ApigeeEnvironment#name}
   */
   readonly name: string;
   /**
   * The Apigee Organization associated with the Apigee environment,
 in the format 'organizations/{{org_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#org_id ApigeeEnvironment#org_id}
   */
   readonly orgId: string;
   /**
   * node_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#node_config ApigeeEnvironment#node_config}
   */
   readonly nodeConfig?: ApigeeEnvironmentNodeConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#timeouts ApigeeEnvironment#timeouts}
   */
   readonly timeouts?: ApigeeEnvironmentTimeouts;
@@ -81,7 +76,7 @@ export interface ApigeeEnvironmentNodeConfig {
   * The maximum total number of gateway nodes that the is reserved for all instances that
 has the specified environment. If not specified, the default is determined by the
 recommended maximum number of nodes for that gateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#max_node_count ApigeeEnvironment#max_node_count}
   */
   readonly maxNodeCount?: string;
@@ -89,7 +84,7 @@ recommended maximum number of nodes for that gateway.
   * The minimum total number of gateway nodes that the is reserved for all instances that
 has the specified environment. If not specified, the default is determined by the
 recommended minimum number of nodes for that gateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment#min_node_count ApigeeEnvironment#min_node_count}
   */
   readonly minNodeCount?: string;

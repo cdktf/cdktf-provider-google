@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_networking_connection
 // generated from terraform resource schema
 
@@ -21,25 +16,25 @@ export interface ServiceNetworkingConnectionConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * Name of VPC network connected with service producers using VPC peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_networking_connection#network ServiceNetworkingConnection#network}
   */
   readonly network: string;
   /**
   * Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_networking_connection#reserved_peering_ranges ServiceNetworkingConnection#reserved_peering_ranges}
   */
   readonly reservedPeeringRanges: string[];
   /**
   * Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_networking_connection#service ServiceNetworkingConnection#service}
   */
   readonly service: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_networking_connection#timeouts ServiceNetworkingConnection#timeouts}
   */
   readonly timeouts?: ServiceNetworkingConnectionTimeouts;

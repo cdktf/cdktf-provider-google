@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Group to create this membership in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#group CloudIdentityGroupMembership#group}
   */
   readonly group: string;
@@ -27,19 +22,19 @@ export interface CloudIdentityGroupMembershipConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * preferred_member_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#preferred_member_key CloudIdentityGroupMembership#preferred_member_key}
   */
   readonly preferredMemberKey?: CloudIdentityGroupMembershipPreferredMemberKey;
   /**
   * roles block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#roles CloudIdentityGroupMembership#roles}
   */
   readonly roles: CloudIdentityGroupMembershipRoles[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#timeouts CloudIdentityGroupMembership#timeouts}
   */
   readonly timeouts?: CloudIdentityGroupMembershipTimeouts;
@@ -55,7 +50,7 @@ For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 
 Must be unique within a namespace.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#id CloudIdentityGroupMembership#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -71,7 +66,7 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of 'identitysources/{identity_source_id}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#namespace CloudIdentityGroupMembership#namespace}
   */
   readonly namespace?: string;
@@ -158,7 +153,7 @@ export class CloudIdentityGroupMembershipPreferredMemberKeyOutputReference exten
 export interface CloudIdentityGroupMembershipRoles {
   /**
   * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: ["OWNER", "MANAGER", "MEMBER"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_identity_group_membership#name CloudIdentityGroupMembership#name}
   */
   readonly name: string;

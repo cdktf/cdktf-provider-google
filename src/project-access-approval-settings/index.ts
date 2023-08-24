@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings
 // generated from terraform resource schema
 
@@ -16,7 +11,7 @@ export interface ProjectAccessApprovalSettingsConfig extends cdktf.TerraformMeta
   * The asymmetric crypto key version to use for signing approval requests.
 Empty active_key_version indicates that a Google-managed key should be used for signing.
 This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#active_key_version ProjectAccessApprovalSettings#active_key_version}
   */
   readonly activeKeyVersion?: string;
@@ -31,31 +26,31 @@ This property will be ignored if set by an ancestor of the resource, and new non
   * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#notification_emails ProjectAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * Deprecated in favor of 'project_id'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#project ProjectAccessApprovalSettings#project}
   */
   readonly project?: string;
   /**
   * ID of the project of the access approval settings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#project_id ProjectAccessApprovalSettings#project_id}
   */
   readonly projectId: string;
   /**
   * enrolled_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#enrolled_services ProjectAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: ProjectAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#timeouts ProjectAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: ProjectAccessApprovalSettingsTimeouts;
@@ -73,13 +68,13 @@ export interface ProjectAccessApprovalSettingsEnrolledServices {
   iam.googleapis.com
   pubsub.googleapis.com
   storage.googleapis.com
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#cloud_product ProjectAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_access_approval_settings#enrollment_level ProjectAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;

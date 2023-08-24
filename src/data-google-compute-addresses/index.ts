@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_addresses
 // generated from terraform resource schema
 
@@ -35,7 +30,7 @@ separate expression within parentheses. For example: """
 can include "AND" and "OR" expressions explicitly. For example: """
 (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
 AND (scheduling.automaticRestart = true) """
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_addresses#filter DataGoogleComputeAddresses#filter}
   */
   readonly filter?: string;
@@ -48,13 +43,13 @@ AND (scheduling.automaticRestart = true) """
   readonly id?: string;
   /**
   * The google project in which addresses are listed. Defaults to provider's configuration if missing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_addresses#project DataGoogleComputeAddresses#project}
   */
   readonly project?: string;
   /**
   * Region that should be considered to search addresses. All regions are considered if missing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_addresses#region DataGoogleComputeAddresses#region}
   */
   readonly region?: string;

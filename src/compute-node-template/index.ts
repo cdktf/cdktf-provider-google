@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
   * CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#cpu_overcommit_type ComputeNodeTemplate#cpu_overcommit_type}
   */
   readonly cpuOvercommitType?: string;
   /**
   * An optional textual description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#description ComputeNodeTemplate#description}
   */
   readonly description?: string;
@@ -33,21 +28,21 @@ export interface ComputeNodeTemplateConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * Name of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#name ComputeNodeTemplate#name}
   */
   readonly name?: string;
   /**
   * Labels to use for node affinity, which will be used in
 instance scheduling.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#node_affinity_labels ComputeNodeTemplate#node_affinity_labels}
   */
   readonly nodeAffinityLabels?: { [key: string]: string };
   /**
   * Node type to use for nodes group that are created from this template.
 Only one of nodeTypeFlexibility and nodeType can be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#node_type ComputeNodeTemplate#node_type}
   */
   readonly nodeType?: string;
@@ -58,25 +53,25 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
   /**
   * Region where nodes using the node template will be created.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#region ComputeNodeTemplate#region}
   */
   readonly region?: string;
   /**
   * node_type_flexibility block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#node_type_flexibility ComputeNodeTemplate#node_type_flexibility}
   */
   readonly nodeTypeFlexibility?: ComputeNodeTemplateNodeTypeFlexibility;
   /**
   * server_binding block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#server_binding ComputeNodeTemplate#server_binding}
   */
   readonly serverBinding?: ComputeNodeTemplateServerBinding;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#timeouts ComputeNodeTemplate#timeouts}
   */
   readonly timeouts?: ComputeNodeTemplateTimeouts;
@@ -84,13 +79,13 @@ If it is not provided, the provider region is used.
 export interface ComputeNodeTemplateNodeTypeFlexibility {
   /**
   * Number of virtual CPUs to use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#cpus ComputeNodeTemplate#cpus}
   */
   readonly cpus?: string;
   /**
   * Physical memory available to the node, defined in MB.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#memory ComputeNodeTemplate#memory}
   */
   readonly memory?: string;
@@ -196,7 +191,7 @@ software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_node_template#type ComputeNodeTemplate#type}
   */
   readonly type: string;

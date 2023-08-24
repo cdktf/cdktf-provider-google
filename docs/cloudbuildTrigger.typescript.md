@@ -2028,7 +2028,7 @@ const cloudbuildTriggerBuildAvailableSecretsSecretManager: cloudbuildTrigger.Clo
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManager.property.env">env</a></code> | <code>string</code> | Environment variable name to associate with the secret. |
-| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManager.property.versionName">versionName</a></code> | <code>string</code> | Resource name of the SecretVersion. In format: projects/*\/secrets/*\/versions/*. |
+| <code><a href="#@cdktf/provider-google.cloudbuildTrigger.CloudbuildTriggerBuildAvailableSecretsSecretManager.property.versionName">versionName</a></code> | <code>string</code> | Resource name of the SecretVersion. In format: projects/* /secrets/* /versions/*. |
 
 ---
 
@@ -2058,9 +2058,11 @@ public readonly versionName: string;
 
 - *Type:* string
 
-Resource name of the SecretVersion. In format: projects/*\/secrets/*\/versions/*.
+Resource name of the SecretVersion. In format: projects/* /secrets/* /versions/*.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuild_trigger#version_name CloudbuildTrigger#version_name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_managed_zone
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleDnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * A unique name for the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_managed_zone#name DataGoogleDnsManagedZone#name}
   */
   readonly name: string;
   /**
   * The ID of the project for the Google Cloud.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_managed_zone#project DataGoogleDnsManagedZone#project}
   */
   readonly project?: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface BinaryAuthorizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * A descriptive comment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#description BinaryAuthorizationPolicy#description}
   */
   readonly description?: string;
@@ -22,7 +17,7 @@ export interface BinaryAuthorizationPolicyConfig extends cdktf.TerraformMetaArgu
   * Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy. Possible values: ["ENABLE", "DISABLE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#global_policy_evaluation_mode BinaryAuthorizationPolicy#global_policy_evaluation_mode}
   */
   readonly globalPolicyEvaluationMode?: string;
@@ -39,25 +34,25 @@ policy will be subject to the project admission policy. Possible values: ["ENABL
   readonly project?: string;
   /**
   * admission_whitelist_patterns block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#admission_whitelist_patterns BinaryAuthorizationPolicy#admission_whitelist_patterns}
   */
   readonly admissionWhitelistPatterns?: BinaryAuthorizationPolicyAdmissionWhitelistPatterns[] | cdktf.IResolvable;
   /**
   * cluster_admission_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#cluster_admission_rules BinaryAuthorizationPolicy#cluster_admission_rules}
   */
   readonly clusterAdmissionRules?: BinaryAuthorizationPolicyClusterAdmissionRules[] | cdktf.IResolvable;
   /**
   * default_admission_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#default_admission_rule BinaryAuthorizationPolicy#default_admission_rule}
   */
   readonly defaultAdmissionRule: BinaryAuthorizationPolicyDefaultAdmissionRule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#timeouts BinaryAuthorizationPolicy#timeouts}
   */
   readonly timeouts?: BinaryAuthorizationPolicyTimeouts;
@@ -68,7 +63,7 @@ export interface BinaryAuthorizationPolicyAdmissionWhitelistPatterns {
 'registry/path/to/image'. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#name_pattern BinaryAuthorizationPolicy#name_pattern}
   */
   readonly namePattern: string;
@@ -168,28 +163,30 @@ export interface BinaryAuthorizationPolicyClusterAdmissionRules {
   readonly cluster: string;
   /**
   * The action when a pod creation is denied by the admission rule. Possible values: ["ENFORCED_BLOCK_AND_AUDIT_LOG", "DRYRUN_AUDIT_LOG_ONLY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#enforcement_mode BinaryAuthorizationPolicy#enforcement_mode}
   */
   readonly enforcementMode: string;
   /**
   * How this admission rule will be evaluated. Possible values: ["ALWAYS_ALLOW", "REQUIRE_ATTESTATION", "ALWAYS_DENY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#evaluation_mode BinaryAuthorizationPolicy#evaluation_mode}
   */
   readonly evaluationMode: string;
   /**
   * The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/*\/attestors/*'.
+policy, it should be specified in the format 'projects/* /attestors/*'.
 Each attestor must exist before a policy can reference it. To add an
 attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly requireAttestationsBy?: string[];
 }
@@ -347,28 +344,30 @@ export class BinaryAuthorizationPolicyClusterAdmissionRulesList extends cdktf.Co
 export interface BinaryAuthorizationPolicyDefaultAdmissionRule {
   /**
   * The action when a pod creation is denied by the admission rule. Possible values: ["ENFORCED_BLOCK_AND_AUDIT_LOG", "DRYRUN_AUDIT_LOG_ONLY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#enforcement_mode BinaryAuthorizationPolicy#enforcement_mode}
   */
   readonly enforcementMode: string;
   /**
   * How this admission rule will be evaluated. Possible values: ["ALWAYS_ALLOW", "REQUIRE_ATTESTATION", "ALWAYS_DENY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#evaluation_mode BinaryAuthorizationPolicy#evaluation_mode}
   */
   readonly evaluationMode: string;
   /**
   * The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/*\/attestors/*'.
+policy, it should be specified in the format 'projects/* /attestors/*'.
 Each attestor must exist before a policy can reference it. To add an
 attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly requireAttestationsBy?: string[];
 }

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 networkservicesgateway.NewNetworkServicesGateway(scope Construct, id *string, config NetworkServicesGatewayConfig) NetworkServicesGateway
 ```
@@ -381,7 +381,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 networkservicesgateway.NetworkServicesGateway_IsConstruct(x interface{}) *bool
 ```
@@ -413,7 +413,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 networkservicesgateway.NetworkServicesGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -427,7 +427,7 @@ networkservicesgateway.NetworkServicesGateway_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 networkservicesgateway.NetworkServicesGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -1033,7 +1033,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 &networkservicesgateway.NetworkServicesGatewayConfig {
 	Connection: interface{},
@@ -1059,7 +1059,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgatew
 	Scope: *string,
 	ServerTlsPolicy: *string,
 	Subnetwork: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.networkServicesGateway.NetworkServicesGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.networkServicesGateway.NetworkServicesGatewayTimeouts,
 }
 ```
 
@@ -1285,10 +1285,12 @@ GatewaySecurityPolicy *string
 A fully-qualified GatewaySecurityPolicy URL reference.
 
 Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections.
-For example: 'projects/*/locations/*/gatewaySecurityPolicies/swg-policy'.
+For example: 'projects/* /locations/* /gatewaySecurityPolicies/swg-policy'.
 This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#gateway_security_policy NetworkServicesGateway#gateway_security_policy}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1345,10 +1347,12 @@ Network *string
 
 The relative resource name identifying the VPC network that is using this configuration.
 
-For example: 'projects/*/global/networks/network-1'.
+For example: 'projects/* /global/networks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#network NetworkServicesGateway#network}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1407,10 +1411,12 @@ Subnetwork *string
 
 The relative resource name identifying the subnetwork in which this SWG is allocated.
 
-For example: 'projects/*/regions/us-central1/subnetworks/network-1'.
+For example: 'projects/* /regions/us-central1/subnetworks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#subnetwork NetworkServicesGateway#subnetwork}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1433,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 &networkservicesgateway.NetworkServicesGatewayTimeouts {
 	Create: *string,
@@ -1495,7 +1501,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.networkServicesGateway.NetworkServicesGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/networkservicesgateway"
+import "github.com/cdktf/cdktf-provider-google-go/google/networkservicesgateway"
 
 networkservicesgateway.NewNetworkServicesGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkServicesGatewayTimeoutsOutputReference
 ```

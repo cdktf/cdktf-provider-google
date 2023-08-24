@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sync_authorization
 // generated from terraform resource schema
 
@@ -27,19 +22,19 @@ The 'service-account-name' is formatted like an email address. For example: my-s
 You might specify multiple service accounts, for example, if you have multiple environments and wish to assign a unique service account to each one.
 
 The service accounts must have **Apigee Synchronizer Manager** role. See also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/v1.8/sa-about#create-the-service-accounts).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sync_authorization#identities ApigeeSyncAuthorization#identities}
   */
   readonly identities: string[];
   /**
   * Name of the Apigee organization.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sync_authorization#name ApigeeSyncAuthorization#name}
   */
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sync_authorization#timeouts ApigeeSyncAuthorization#timeouts}
   */
   readonly timeouts?: ApigeeSyncAuthorizationTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed
 // generated from terraform resource schema
 
@@ -17,7 +12,7 @@ export interface CloudAssetProjectFeedConfig extends cdktf.TerraformMetaArgument
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#asset_names CloudAssetProjectFeed#asset_names}
   */
   readonly assetNames?: string[];
@@ -27,7 +22,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#asset_types CloudAssetProjectFeed#asset_types}
   */
   readonly assetTypes?: string[];
@@ -36,19 +31,19 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#billing_project CloudAssetProjectFeed#billing_project}
   */
   readonly billingProject?: string;
   /**
   * Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#content_type CloudAssetProjectFeed#content_type}
   */
   readonly contentType?: string;
   /**
   * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#feed_id CloudAssetProjectFeed#feed_id}
   */
   readonly feedId: string;
@@ -65,19 +60,19 @@ project will be used.
   readonly project?: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#condition CloudAssetProjectFeed#condition}
   */
   readonly condition?: CloudAssetProjectFeedCondition;
   /**
   * feed_output_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#feed_output_config CloudAssetProjectFeed#feed_output_config}
   */
   readonly feedOutputConfig: CloudAssetProjectFeedFeedOutputConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#timeouts CloudAssetProjectFeed#timeouts}
   */
   readonly timeouts?: CloudAssetProjectFeedTimeouts;
@@ -86,27 +81,27 @@ export interface CloudAssetProjectFeedCondition {
   /**
   * Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#description CloudAssetProjectFeed#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#expression CloudAssetProjectFeed#expression}
   */
   readonly expression: string;
   /**
   * String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#location CloudAssetProjectFeed#location}
   */
   readonly location?: string;
   /**
   * Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#title CloudAssetProjectFeed#title}
   */
   readonly title?: string;
@@ -239,7 +234,7 @@ export class CloudAssetProjectFeedConditionOutputReference extends cdktf.Complex
 export interface CloudAssetProjectFeedFeedOutputConfigPubsubDestination {
   /**
   * Destination on Cloud Pubsub topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#topic CloudAssetProjectFeed#topic}
   */
   readonly topic: string;
@@ -303,7 +298,7 @@ export class CloudAssetProjectFeedFeedOutputConfigPubsubDestinationOutputReferen
 export interface CloudAssetProjectFeedFeedOutputConfig {
   /**
   * pubsub_destination block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_asset_project_feed#pubsub_destination CloudAssetProjectFeed#pubsub_destination}
   */
   readonly pubsubDestination: CloudAssetProjectFeedFeedOutputConfigPubsubDestination;

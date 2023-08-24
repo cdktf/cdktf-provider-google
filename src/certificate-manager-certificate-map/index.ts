@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface CertificateManagerCertificateMapConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map#description CertificateManagerCertificateMap#description}
   */
   readonly description?: string;
@@ -27,15 +22,17 @@ export interface CertificateManagerCertificateMapConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * Set of labels associated with a Certificate Map resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map#labels CertificateManagerCertificateMap#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A user-defined name of the Certificate Map. Certificate Map names must be unique
-globally and match the pattern 'projects/*\/locations/*\/certificateMaps/*'.
-  * 
+globally and match the pattern 'projects/* /locations/* /certificateMaps/*'.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map#name CertificateManagerCertificateMap#name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**
@@ -44,7 +41,7 @@ globally and match the pattern 'projects/*\/locations/*\/certificateMaps/*'.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map#timeouts CertificateManagerCertificateMap#timeouts}
   */
   readonly timeouts?: CertificateManagerCertificateMapTimeouts;

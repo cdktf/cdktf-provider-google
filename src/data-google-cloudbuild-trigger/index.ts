@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudbuild_trigger
 // generated from terraform resource schema
 
@@ -22,7 +17,7 @@ export interface DataGoogleCloudbuildTriggerConfig extends cdktf.TerraformMetaAr
   /**
   * The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
 If not specified, "global" is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudbuild_trigger#location DataGoogleCloudbuildTrigger#location}
   */
   readonly location: string;
@@ -32,7 +27,7 @@ If not specified, "global" is used.
   readonly project?: string;
   /**
   * The unique identifier for the trigger.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudbuild_trigger#trigger_id DataGoogleCloudbuildTrigger#trigger_id}
   */
   readonly triggerId: string;

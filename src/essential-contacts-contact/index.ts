@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface EssentialContactsContactConfig extends cdktf.TerraformMetaArguments {
   /**
   * The email address to send notifications to. This does not need to be a Google account.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact#email EssentialContactsContact#email}
   */
   readonly email: string;
@@ -27,25 +22,25 @@ export interface EssentialContactsContactConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact#language_tag EssentialContactsContact#language_tag}
   */
   readonly languageTag: string;
   /**
   * The categories of notifications that the contact will receive communications for.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact#notification_category_subscriptions EssentialContactsContact#notification_category_subscriptions}
   */
   readonly notificationCategorySubscriptions: string[];
   /**
   * The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact#parent EssentialContactsContact#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/essential_contacts_contact#timeouts EssentialContactsContact#timeouts}
   */
   readonly timeouts?: EssentialContactsContactTimeouts;

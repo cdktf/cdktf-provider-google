@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface AlloydbInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#annotations AlloydbInstance#annotations}
   */
   readonly annotations?: { [key: string]: string };
@@ -25,32 +20,32 @@ Only READ_POOL instance supports ZONAL type. Users can't specify the zone for RE
 Zone is automatically chosen from the list of zones in the region specified.
 Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
 can have regional availability (nodes are present in 2 or more zones in a region).' Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#availability_type AlloydbInstance#availability_type}
   */
   readonly availabilityType?: string;
   /**
   * Identifies the alloydb cluster. Must be in the format
 'projects/{project}/locations/{location}/clusters/{cluster_id}'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#cluster AlloydbInstance#cluster}
   */
   readonly cluster: string;
   /**
   * Database flags. Set at instance level. * They are copied from primary instance on read instance creation. * Read instances can set new or override existing flags that are relevant for reads, e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not be present on primary.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#database_flags AlloydbInstance#database_flags}
   */
   readonly databaseFlags?: { [key: string]: string };
   /**
   * User-settable and human-readable display name for the Instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#display_name AlloydbInstance#display_name}
   */
   readonly displayName?: string;
   /**
   * The Compute Engine zone that the instance should serve from, per https://cloud.google.com/compute/docs/regions-zones This can ONLY be specified for ZONAL instances. If present for a REGIONAL instance, an error will be thrown. If this is absent for a ZONAL instance, instance is created in a random zone with available capacity.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#gce_zone AlloydbInstance#gce_zone}
   */
   readonly gceZone?: string;
@@ -63,37 +58,37 @@ can have regional availability (nodes are present in 2 or more zones in a region
   readonly id?: string;
   /**
   * The ID of the alloydb instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#instance_id AlloydbInstance#instance_id}
   */
   readonly instanceId: string;
   /**
   * The type of the instance. If the instance type is READ_POOL, provide the associated PRIMARY instance in the 'depends_on' meta-data attribute. Possible values: ["PRIMARY", "READ_POOL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#instance_type AlloydbInstance#instance_type}
   */
   readonly instanceType: string;
   /**
   * User-defined labels for the alloydb instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#labels AlloydbInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * machine_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#machine_config AlloydbInstance#machine_config}
   */
   readonly machineConfig?: AlloydbInstanceMachineConfig;
   /**
   * read_pool_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#read_pool_config AlloydbInstance#read_pool_config}
   */
   readonly readPoolConfig?: AlloydbInstanceReadPoolConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#timeouts AlloydbInstance#timeouts}
   */
   readonly timeouts?: AlloydbInstanceTimeouts;
@@ -101,7 +96,7 @@ can have regional availability (nodes are present in 2 or more zones in a region
 export interface AlloydbInstanceMachineConfig {
   /**
   * The number of CPU's in the VM instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#cpu_count AlloydbInstance#cpu_count}
   */
   readonly cpuCount?: number;
@@ -168,7 +163,7 @@ export class AlloydbInstanceMachineConfigOutputReference extends cdktf.ComplexOb
 export interface AlloydbInstanceReadPoolConfig {
   /**
   * Read capacity, i.e. number of nodes in a read pool instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/alloydb_instance#node_count AlloydbInstance#node_count}
   */
   readonly nodeCount?: number;

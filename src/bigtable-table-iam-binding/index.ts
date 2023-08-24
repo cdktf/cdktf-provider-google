@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table_iam_binding
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface BigtableTableIamBindingConfig extends cdktf.TerraformMetaArgume
   readonly table: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table_iam_binding#condition BigtableTableIamBinding#condition}
   */
   readonly condition?: BigtableTableIamBindingCondition;

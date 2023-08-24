@@ -1285,10 +1285,12 @@ public string GatewaySecurityPolicy { get; set; }
 A fully-qualified GatewaySecurityPolicy URL reference.
 
 Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections.
-For example: 'projects/*/locations/*/gatewaySecurityPolicies/swg-policy'.
+For example: 'projects/* /locations/* /gatewaySecurityPolicies/swg-policy'.
 This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#gateway_security_policy NetworkServicesGateway#gateway_security_policy}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1345,10 +1347,12 @@ public string Network { get; set; }
 
 The relative resource name identifying the VPC network that is using this configuration.
 
-For example: 'projects/*/global/networks/network-1'.
+For example: 'projects/* /global/networks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#network NetworkServicesGateway#network}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1407,10 +1411,12 @@ public string Subnetwork { get; set; }
 
 The relative resource name identifying the subnetwork in which this SWG is allocated.
 
-For example: 'projects/*/regions/us-central1/subnetworks/network-1'.
+For example: 'projects/* /regions/us-central1/subnetworks/network-1'.
 Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_gateway#subnetwork NetworkServicesGateway#subnetwork}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

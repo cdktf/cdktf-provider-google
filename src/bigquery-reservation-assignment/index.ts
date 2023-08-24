@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface BigqueryReservationAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource which will use the reservation. E.g. projects/myproject, folders/123, organizations/456.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#assignee BigqueryReservationAssignment#assignee}
   */
   readonly assignee: string;
@@ -27,31 +22,31 @@ export interface BigqueryReservationAssignmentConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#job_type BigqueryReservationAssignment#job_type}
   */
   readonly jobType: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#location BigqueryReservationAssignment#location}
   */
   readonly location?: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#project BigqueryReservationAssignment#project}
   */
   readonly project?: string;
   /**
   * The reservation for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#reservation BigqueryReservationAssignment#reservation}
   */
   readonly reservation: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_reservation_assignment#timeouts BigqueryReservationAssignment#timeouts}
   */
   readonly timeouts?: BigqueryReservationAssignmentTimeouts;

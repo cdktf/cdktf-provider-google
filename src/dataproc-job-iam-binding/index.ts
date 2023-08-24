@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_job_iam_binding
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface DataprocJobIamBindingConfig extends cdktf.TerraformMetaArgument
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_job_iam_binding#condition DataprocJobIamBinding#condition}
   */
   readonly condition?: DataprocJobIamBindingCondition;

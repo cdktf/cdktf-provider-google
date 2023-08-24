@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router
 // generated from terraform resource schema
 
@@ -14,14 +9,14 @@ import * as cdktf from 'cdktf';
 export interface ComputeRouterConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#description ComputeRouter#description}
   */
   readonly description?: string;
   /**
   * Indicates if a router is dedicated for use with encrypted VLAN
 attachments (interconnectAttachments).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#encrypted_interconnect_router ComputeRouter#encrypted_interconnect_router}
   */
   readonly encryptedInterconnectRouter?: boolean | cdktf.IResolvable;
@@ -39,13 +34,13 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#name ComputeRouter#name}
   */
   readonly name: string;
   /**
   * A reference to the network to which this router belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#network ComputeRouter#network}
   */
   readonly network: string;
@@ -55,19 +50,19 @@ except the last character, which cannot be a dash.
   readonly project?: string;
   /**
   * Region where the router resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#region ComputeRouter#region}
   */
   readonly region?: string;
   /**
   * bgp block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#bgp ComputeRouter#bgp}
   */
   readonly bgp?: ComputeRouterBgp;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#timeouts ComputeRouter#timeouts}
   */
   readonly timeouts?: ComputeRouterTimeouts;
@@ -75,14 +70,14 @@ except the last character, which cannot be a dash.
 export interface ComputeRouterBgpAdvertisedIpRanges {
   /**
   * User-specified description for the IP range.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#description ComputeRouter#description}
   */
   readonly description?: string;
   /**
   * The IP range to advertise. The value must be a
 CIDR-formatted string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#range ComputeRouter#range}
   */
   readonly range: string;
@@ -201,7 +196,7 @@ export class ComputeRouterBgpAdvertisedIpRangesList extends cdktf.ComplexList {
 export interface ComputeRouterBgp {
   /**
   * User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#advertise_mode ComputeRouter#advertise_mode}
   */
   readonly advertiseMode?: string;
@@ -213,7 +208,7 @@ advertised in addition to any specified prefixes. Leave this field
 blank to advertise no custom groups.
 
 This enum field has the one valid value: ALL_SUBNETS
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#advertised_groups ComputeRouter#advertised_groups}
   */
   readonly advertisedGroups?: string[];
@@ -222,7 +217,7 @@ This enum field has the one valid value: ALL_SUBNETS
 private ASN, either 16-bit or 32-bit. The value will be fixed for
 this router resource. All VPN tunnels that link to this router
 will have the same local ASN.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#asn ComputeRouter#asn}
   */
   readonly asn: number;
@@ -237,13 +232,13 @@ BGP will use the smaller of either the local hold time value or the
 peer's hold time value as the hold time for the BGP connection
 between the two peers. If set, this value must be between 20 and 60.
 The default is 20.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#keepalive_interval ComputeRouter#keepalive_interval}
   */
   readonly keepaliveInterval?: number;
   /**
   * advertised_ip_ranges block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router#advertised_ip_ranges ComputeRouter#advertised_ip_ranges}
   */
   readonly advertisedIpRanges?: ComputeRouterBgpAdvertisedIpRanges[] | cdktf.IResolvable;

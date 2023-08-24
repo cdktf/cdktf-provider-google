@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check
 // generated from terraform resource schema
 
@@ -15,21 +10,21 @@ export interface ComputeHttpsHealthCheckConfig extends cdktf.TerraformMetaArgume
   /**
   * How often (in seconds) to send a health check. The default value is 5
 seconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#check_interval_sec ComputeHttpsHealthCheck#check_interval_sec}
   */
   readonly checkIntervalSec?: number;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#description ComputeHttpsHealthCheck#description}
   */
   readonly description?: string;
   /**
   * A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#healthy_threshold ComputeHttpsHealthCheck#healthy_threshold}
   */
   readonly healthyThreshold?: number;
@@ -37,7 +32,7 @@ consecutive successes. The default value is 2.
   * The value of the host header in the HTTPS health check request. If
 left empty (default value), the public IP on behalf of which this
 health check is performed will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#host ComputeHttpsHealthCheck#host}
   */
   readonly host?: string;
@@ -56,14 +51,14 @@ match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#name ComputeHttpsHealthCheck#name}
   */
   readonly name: string;
   /**
   * The TCP port number for the HTTPS health check request.
 The default value is 443.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#port ComputeHttpsHealthCheck#port}
   */
   readonly port?: number;
@@ -74,7 +69,7 @@ The default value is 443.
   /**
   * The request path of the HTTPS health check request.
 The default value is /.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#request_path ComputeHttpsHealthCheck#request_path}
   */
   readonly requestPath?: string;
@@ -82,20 +77,20 @@ The default value is /.
   * How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#timeout_sec ComputeHttpsHealthCheck#timeout_sec}
   */
   readonly timeoutSec?: number;
   /**
   * A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#unhealthy_threshold ComputeHttpsHealthCheck#unhealthy_threshold}
   */
   readonly unhealthyThreshold?: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_https_health_check#timeouts ComputeHttpsHealthCheck#timeouts}
   */
   readonly timeouts?: ComputeHttpsHealthCheckTimeouts;

@@ -152,9 +152,11 @@ The resource name of the Cloud KMS CryptoKey to be used to protect access to mes
 Your project's PubSub service account
 ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-The expected format is 'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_topic#kms_key_name PubsubTopic#kms_key_name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1142,9 +1144,11 @@ The resource name of the Cloud KMS CryptoKey to be used to protect access to mes
 Your project's PubSub service account
 ('service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
-The expected format is 'projects/*/locations/*/keyRings/*/cryptoKeys/*'
+The expected format is 'projects/* /locations/* /keyRings/* /cryptoKeys/*'
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_topic#kms_key_name PubsubTopic#kms_key_name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

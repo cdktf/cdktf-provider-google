@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook
 // generated from terraform resource schema
 
@@ -14,25 +9,25 @@ import * as cdktf from 'cdktf';
 export interface DialogflowCxWebhookConfig extends cdktf.TerraformMetaArguments {
   /**
   * Indicates whether the webhook is disabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#disabled DialogflowCxWebhook#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The human-readable name of the webhook, unique within the agent.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#display_name DialogflowCxWebhook#display_name}
   */
   readonly displayName: string;
   /**
   * Indicates if automatic spell correction is enabled in detect intent requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#enable_spell_correction DialogflowCxWebhook#enable_spell_correction}
   */
   readonly enableSpellCorrection?: boolean | cdktf.IResolvable;
   /**
   * Determines whether this agent should log conversation queries.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#enable_stackdriver_logging DialogflowCxWebhook#enable_stackdriver_logging}
   */
   readonly enableStackdriverLogging?: boolean | cdktf.IResolvable;
@@ -46,37 +41,37 @@ export interface DialogflowCxWebhookConfig extends cdktf.TerraformMetaArguments 
   /**
   * The agent to create a webhook for.
 Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#parent DialogflowCxWebhook#parent}
   */
   readonly parent?: string;
   /**
   * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#security_settings DialogflowCxWebhook#security_settings}
   */
   readonly securitySettings?: string;
   /**
   * Webhook execution timeout.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#timeout DialogflowCxWebhook#timeout}
   */
   readonly timeout?: string;
   /**
   * generic_web_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
   */
   readonly genericWebService?: DialogflowCxWebhookGenericWebService;
   /**
   * service_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#service_directory DialogflowCxWebhook#service_directory}
   */
   readonly serviceDirectory?: DialogflowCxWebhookServiceDirectory;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#timeouts DialogflowCxWebhook#timeouts}
   */
   readonly timeouts?: DialogflowCxWebhookTimeouts;
@@ -84,19 +79,19 @@ Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
 export interface DialogflowCxWebhookGenericWebService {
   /**
   * Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
   */
   readonly allowedCaCerts?: string[];
   /**
   * The HTTP request headers to send together with webhook requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
   */
   readonly requestHeaders?: { [key: string]: string };
   /**
   * Whether to use speech adaptation for speech recognition.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
   */
   readonly uri: string;
@@ -206,19 +201,19 @@ export class DialogflowCxWebhookGenericWebServiceOutputReference extends cdktf.C
 export interface DialogflowCxWebhookServiceDirectoryGenericWebService {
   /**
   * Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#allowed_ca_certs DialogflowCxWebhook#allowed_ca_certs}
   */
   readonly allowedCaCerts?: string[];
   /**
   * The HTTP request headers to send together with webhook requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#request_headers DialogflowCxWebhook#request_headers}
   */
   readonly requestHeaders?: { [key: string]: string };
   /**
   * Whether to use speech adaptation for speech recognition.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#uri DialogflowCxWebhook#uri}
   */
   readonly uri: string;
@@ -328,13 +323,13 @@ export class DialogflowCxWebhookServiceDirectoryGenericWebServiceOutputReference
 export interface DialogflowCxWebhookServiceDirectory {
   /**
   * The name of Service Directory service.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#service DialogflowCxWebhook#service}
   */
   readonly service: string;
   /**
   * generic_web_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_cx_webhook#generic_web_service DialogflowCxWebhook#generic_web_service}
   */
   readonly genericWebService: DialogflowCxWebhookServiceDirectoryGenericWebService;

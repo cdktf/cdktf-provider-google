@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_record_set
 // generated from terraform resource schema
 
@@ -14,25 +9,25 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleDnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Name of the zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_record_set#managed_zone DataGoogleDnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
   * The DNS name for the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_record_set#name DataGoogleDnsRecordSet#name}
   */
   readonly name: string;
   /**
   * The ID of the project for the Google Cloud.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_record_set#project DataGoogleDnsRecordSet#project}
   */
   readonly project?: string;
   /**
   * The identifier of a supported record type. See the list of Supported DNS record types.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/dns_record_set#type DataGoogleDnsRecordSet#type}
   */
   readonly type: string;

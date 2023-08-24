@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool
 // generated from terraform resource schema
 
@@ -14,20 +9,20 @@ import * as cdktf from 'cdktf';
 export interface IamWorkforcePoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * A user-specified description of the pool. Cannot exceed 256 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#description IamWorkforcePool#description}
   */
   readonly description?: string;
   /**
   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens,
 or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#disabled IamWorkforcePool#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * A user-specified display name of the pool in Google Cloud Console. Cannot exceed 32 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#display_name IamWorkforcePool#display_name}
   */
   readonly displayName?: string;
@@ -40,13 +35,13 @@ or use existing tokens to access resources. If the pool is re-enabled, existing 
   readonly id?: string;
   /**
   * The location for the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#location IamWorkforcePool#location}
   */
   readonly location: string;
   /**
   * Immutable. The resource name of the parent. Format: 'organizations/{org-id}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#parent IamWorkforcePool#parent}
   */
   readonly parent: string;
@@ -56,7 +51,7 @@ and 'gcloud' sign-in sessions from this pool are valid.
 Must be greater than 15 minutes (900s) and less than 12 hours (43200s).
 If 'sessionDuration' is not configured, minted credentials have a default duration of one hour (3600s).
 A duration in seconds with up to nine fractional digits, ending with ''s''. Example: "'3.5s'".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#session_duration IamWorkforcePool#session_duration}
   */
   readonly sessionDuration?: string;
@@ -64,13 +59,13 @@ A duration in seconds with up to nine fractional digits, ending with ''s''. Exam
   * The name of the pool. The ID must be a globally unique string of 6 to 63 lowercase letters,
 digits, or hyphens. It must start with a letter, and cannot have a trailing hyphen.
 The prefix 'gcp-' is reserved for use by Google, and may not be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#workforce_pool_id IamWorkforcePool#workforce_pool_id}
   */
   readonly workforcePoolId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iam_workforce_pool#timeouts IamWorkforcePool#timeouts}
   */
   readonly timeouts?: IamWorkforcePoolTimeouts;

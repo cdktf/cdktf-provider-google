@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ApigeeSharedflowDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The resource ID of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#environment ApigeeSharedflowDeployment#environment}
   */
   readonly environment: string;
@@ -27,31 +22,31 @@ export interface ApigeeSharedflowDeploymentConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The Apigee Organization associated with the Apigee instance
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#org_id ApigeeSharedflowDeployment#org_id}
   */
   readonly orgId: string;
   /**
   * Revision of the Sharedflow to be deployed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#revision ApigeeSharedflowDeployment#revision}
   */
   readonly revision: string;
   /**
   * The service account represents the identity of the deployed proxy, and determines what permissions it has. The format must be {ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#service_account ApigeeSharedflowDeployment#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Id of the Sharedflow to be deployed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#sharedflow_id ApigeeSharedflowDeployment#sharedflow_id}
   */
   readonly sharedflowId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_sharedflow_deployment#timeouts ApigeeSharedflowDeployment#timeouts}
   */
   readonly timeouts?: ApigeeSharedflowDeploymentTimeouts;

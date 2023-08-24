@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document
 // generated from terraform resource schema
 
@@ -14,25 +9,25 @@ import * as cdktf from 'cdktf';
 export interface FirestoreDocumentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document#collection FirestoreDocument#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document#database FirestoreDocument#database}
   */
   readonly database?: string;
   /**
   * The client-assigned document ID to use for this document during creation.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document#document_id FirestoreDocument#document_id}
   */
   readonly documentId: string;
   /**
   * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document#fields FirestoreDocument#fields}
   */
   readonly fields: string;
@@ -49,7 +44,7 @@ export interface FirestoreDocumentConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_document#timeouts FirestoreDocument#timeouts}
   */
   readonly timeouts?: FirestoreDocumentTimeouts;

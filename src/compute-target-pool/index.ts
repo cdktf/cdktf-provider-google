@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool
 // generated from terraform resource schema
 
@@ -14,25 +9,25 @@ import * as cdktf from 'cdktf';
 export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * URL to the backup target pool. Must also set failover_ratio.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#backup_pool ComputeTargetPool#backup_pool}
   */
   readonly backupPool?: string;
   /**
   * Textual description field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#description ComputeTargetPool#description}
   */
   readonly description?: string;
   /**
   * Ratio (0 to 1) of failed nodes before using the backup pool (which must also be set).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#failover_ratio ComputeTargetPool#failover_ratio}
   */
   readonly failoverRatio?: number;
   /**
   * List of zero or one health check name or self_link. Only legacy google_compute_http_health_check is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#health_checks ComputeTargetPool#health_checks}
   */
   readonly healthChecks?: string[];
@@ -45,37 +40,37 @@ export interface ComputeTargetPoolConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * List of instances in the pool. They can be given as URLs, or in the form of "zone/name". Note that the instances need not exist at the time of target pool creation, so there is no need to use the Terraform interpolators to create a dependency on the instances from the target pool.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#instances ComputeTargetPool#instances}
   */
   readonly instances?: string[];
   /**
   * A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#name ComputeTargetPool#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#project ComputeTargetPool#project}
   */
   readonly project?: string;
   /**
   * Where the target pool resides. Defaults to project region.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#region ComputeTargetPool#region}
   */
   readonly region?: string;
   /**
   * How to distribute load. Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#session_affinity ComputeTargetPool#session_affinity}
   */
   readonly sessionAffinity?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_pool#timeouts ComputeTargetPool#timeouts}
   */
   readonly timeouts?: ComputeTargetPoolTimeouts;

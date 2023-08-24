@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface AppEngineFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule#action AppEngineFirewallRule#action}
   */
   readonly action: string;
   /**
   * An optional string description of this rule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule#description AppEngineFirewallRule#description}
   */
   readonly description?: string;
@@ -38,7 +33,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule#priority AppEngineFirewallRule#priority}
   */
   readonly priority?: number;
@@ -48,13 +43,13 @@ this rule can be modified by the user.
   readonly project?: string;
   /**
   * IP address or range, defined using CIDR notation, of requests that this rule applies to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule#source_range AppEngineFirewallRule#source_range}
   */
   readonly sourceRange: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/app_engine_firewall_rule#timeouts AppEngineFirewallRule#timeouts}
   */
   readonly timeouts?: AppEngineFirewallRuleTimeouts;

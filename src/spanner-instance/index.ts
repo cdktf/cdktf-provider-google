@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance
 // generated from terraform resource schema
 
@@ -19,21 +14,21 @@ replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form 'regional-europe-west1' , 'us-central' etc.
 In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#config SpannerInstance#config}
   */
   readonly config: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
 unique per project and between 4 and 30 characters in length.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#display_name SpannerInstance#display_name}
   */
   readonly displayName: string;
   /**
   * When deleting a spanner instance, this boolean option will delete all backups of this instance.
 This must be set to true if you created a backup manually in the console.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#force_destroy SpannerInstance#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
@@ -47,7 +42,7 @@ This must be set to true if you created a backup manually in the console.
   /**
   * An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#labels SpannerInstance#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -58,21 +53,21 @@ in length.
 
 
 If not provided, a random string starting with 'tf-' will be selected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#name SpannerInstance#name}
   */
   readonly name?: string;
   /**
   * The number of nodes allocated to this instance. Exactly one of either node_count or processing_units
 must be present in terraform.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#num_nodes SpannerInstance#num_nodes}
   */
   readonly numNodes?: number;
   /**
   * The number of processing units allocated to this instance. Exactly one of processing_units
 or node_count must be present in terraform.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#processing_units SpannerInstance#processing_units}
   */
   readonly processingUnits?: number;
@@ -82,7 +77,7 @@ or node_count must be present in terraform.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance#timeouts SpannerInstance#timeouts}
   */
   readonly timeouts?: SpannerInstanceTimeouts;

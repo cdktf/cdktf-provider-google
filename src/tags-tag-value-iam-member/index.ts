@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value_iam_member
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface TagsTagValueIamMemberConfig extends cdktf.TerraformMetaArgument
   readonly tagValue: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value_iam_member#condition TagsTagValueIamMember#condition}
   */
   readonly condition?: TagsTagValueIamMemberCondition;

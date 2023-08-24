@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
   /**
   * Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#change_stream_retention BigtableTable#change_stream_retention}
   */
   readonly changeStreamRetention?: string;
   /**
   * A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#deletion_protection BigtableTable#deletion_protection}
   */
   readonly deletionProtection?: string;
@@ -33,37 +28,37 @@ export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The name of the Bigtable instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#instance_name BigtableTable#instance_name}
   */
   readonly instanceName: string;
   /**
   * The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#name BigtableTable#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#project BigtableTable#project}
   */
   readonly project?: string;
   /**
   * A list of predefined keys to split the table on. !> Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#split_keys BigtableTable#split_keys}
   */
   readonly splitKeys?: string[];
   /**
   * column_family block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#column_family BigtableTable#column_family}
   */
   readonly columnFamily?: BigtableTableColumnFamily[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#timeouts BigtableTable#timeouts}
   */
   readonly timeouts?: BigtableTableTimeouts;
@@ -71,7 +66,7 @@ export interface BigtableTableConfig extends cdktf.TerraformMetaArguments {
 export interface BigtableTableColumnFamily {
   /**
   * The name of the column family.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_table#family BigtableTable#family}
   */
   readonly family: string;

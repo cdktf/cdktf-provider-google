@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule
 // generated from terraform resource schema
 
@@ -28,7 +23,7 @@ forwarding rule.
 
 The 'ports', 'port_range', and
 'allPorts' fields are mutually exclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#all_ports ComputeForwardingRule#all_ports}
   */
   readonly allPorts?: boolean | cdktf.IResolvable;
@@ -42,13 +37,13 @@ regions.
 
 Otherwise only allows access from clients in the same region as the
 internal load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#allow_global_access ComputeForwardingRule#allow_global_access}
   */
   readonly allowGlobalAccess?: boolean | cdktf.IResolvable;
   /**
   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#allow_psc_global_access ComputeForwardingRule#allow_psc_global_access}
   */
   readonly allowPscGlobalAccess?: boolean | cdktf.IResolvable;
@@ -57,14 +52,14 @@ internal load balancer.
 
 Required for Internal TCP/UDP Load Balancing and Network Load Balancing;
 must be omitted for all other load balancer types.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#backend_service ComputeForwardingRule#backend_service}
   */
   readonly backendService?: string;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#description ComputeForwardingRule#description}
   */
   readonly description?: string;
@@ -116,7 +111,7 @@ specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-con
 
 When reading an 'IPAddress', the API always returns the IP
 address number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#ip_address ComputeForwardingRule#ip_address}
   */
   readonly ipAddress?: string;
@@ -135,7 +130,7 @@ features](https://cloud.google.com/load-balancing/docs/features#protocols_from_t
 A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or
 backend service with UNSPECIFIED protocol.
 A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP", "L3_DEFAULT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#ip_protocol ComputeForwardingRule#ip_protocol}
   */
   readonly ipProtocol?: string;
@@ -144,7 +139,7 @@ A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend s
 Valid options are IPV4 and IPV6.
 
 If not set, the IPv4 address will be used by default. Possible values: ["IPV4", "IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#ip_version ComputeForwardingRule#ip_version}
   */
   readonly ipVersion?: string;
@@ -156,13 +151,13 @@ load balancer will not have their traffic mirrored even if a
 
 This can only be set to true for load balancers that have their
 'loadBalancingScheme' set to 'INTERNAL'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#is_mirroring_collector ComputeForwardingRule#is_mirroring_collector}
   */
   readonly isMirroringCollector?: boolean | cdktf.IResolvable;
   /**
   * Labels to apply to this forwarding rule.  A list of key->value pairs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#labels ComputeForwardingRule#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -171,7 +166,7 @@ This can only be set to true for load balancers that have their
 
 For more information about forwarding rules, refer to
 [Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL", "INTERNAL_MANAGED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#load_balancing_scheme ComputeForwardingRule#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
@@ -189,7 +184,7 @@ cannot be a dash.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, the forwarding rule name must be a 1-20 characters string with
 lowercase letters and numbers and must start with a letter.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#name ComputeForwardingRule#name}
   */
   readonly name: string;
@@ -204,7 +199,7 @@ be used.
 
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#network ComputeForwardingRule#network}
   */
   readonly network?: string;
@@ -220,13 +215,13 @@ For regional ForwardingRule, the valid values are 'PREMIUM' and
 If this field is not specified, it is assumed to be 'PREMIUM'.
 If 'IPAddress' is specified, this value must be equal to the
 networkTier of the Address. Possible values: ["PREMIUM", "STANDARD"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#network_tier ComputeForwardingRule#network_tier}
   */
   readonly networkTier?: string;
   /**
   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#no_automate_dns_zone ComputeForwardingRule#no_automate_dns_zone}
   */
   readonly noAutomateDnsZone?: boolean | cdktf.IResolvable;
@@ -254,7 +249,7 @@ overlapping 'portRange's.
 For internal forwarding rules within the same VPC network, two or more
 forwarding rules cannot use the same '[IPAddress, IPProtocol]'
 pair, and cannot have overlapping 'portRange's.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#port_range ComputeForwardingRule#port_range}
   */
   readonly portRange?: string;
@@ -280,7 +275,7 @@ forwarding rules cannot use the same '[IPAddress, IPProtocol]'
 pair, and cannot share any values defined in 'ports'.
 
 The 'ports' and 'port_range' fields are mutually exclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#ports ComputeForwardingRule#ports}
   */
   readonly ports?: string[];
@@ -292,7 +287,7 @@ The 'ports' and 'port_range' fields are mutually exclusive.
   * A reference to the region where the regional forwarding rule resides.
 
 This field is not applicable to global forwarding rules.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#region ComputeForwardingRule#region}
   */
   readonly region?: string;
@@ -309,13 +304,13 @@ must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 
 This field is only used for INTERNAL load balancing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#service_label ComputeForwardingRule#service_label}
   */
   readonly serviceLabel?: string;
   /**
   * If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#source_ip_ranges ComputeForwardingRule#source_ip_ranges}
   */
   readonly sourceIpRanges?: string[];
@@ -327,7 +322,7 @@ network load balancing with IPv6.
 If the network specified is in auto subnet mode, this field is optional.
 However, a subnetwork must be specified if the network is in custom subnet
 mode or when creating external forwarding rule with IPv6.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#subnetwork ComputeForwardingRule#subnetwork}
   */
   readonly subnetwork?: string;
@@ -345,19 +340,19 @@ The forwarded traffic must be of a type appropriate to the target object.
 
 
 For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#target ComputeForwardingRule#target}
   */
   readonly target?: string;
   /**
   * service_directory_registrations block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#service_directory_registrations ComputeForwardingRule#service_directory_registrations}
   */
   readonly serviceDirectoryRegistrations?: ComputeForwardingRuleServiceDirectoryRegistrations;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#timeouts ComputeForwardingRule#timeouts}
   */
   readonly timeouts?: ComputeForwardingRuleTimeouts;
@@ -365,13 +360,13 @@ For Private Service Connect forwarding rules that forward traffic to managed ser
 export interface ComputeForwardingRuleServiceDirectoryRegistrations {
   /**
   * Service Directory namespace to register the forwarding rule under.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#namespace ComputeForwardingRule#namespace}
   */
   readonly namespace?: string;
   /**
   * Service Directory service to register the forwarding rule under.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_forwarding_rule#service ComputeForwardingRule#service}
   */
   readonly service?: string;

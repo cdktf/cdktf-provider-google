@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_connection
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataGoogleBeyondcorpAppConnectionConfig extends cdktf.Terraform
   readonly id?: string;
   /**
   * ID of the AppConnection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_connection#name DataGoogleBeyondcorpAppConnection#name}
   */
   readonly name: string;
@@ -31,7 +26,7 @@ export interface DataGoogleBeyondcorpAppConnectionConfig extends cdktf.Terraform
   readonly project?: string;
   /**
   * The region of the AppConnection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_connection#region DataGoogleBeyondcorpAppConnection#region}
   */
   readonly region?: string;

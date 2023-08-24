@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/privateca_certificate_authority
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user provided Resource ID for this Certificate Authority.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/privateca_certificate_authority#certificate_authority_id DataGooglePrivatecaCertificateAuthority#certificate_authority_id}
   */
   readonly certificateAuthorityId?: string;
@@ -28,13 +23,13 @@ export interface DataGooglePrivatecaCertificateAuthorityConfig extends cdktf.Ter
   /**
   * Location of the CertificateAuthority. A full list of valid locations can be found by
 running 'gcloud privateca locations list'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/privateca_certificate_authority#location DataGooglePrivatecaCertificateAuthority#location}
   */
   readonly location?: string;
   /**
   * The name of the CaPool this Certificate Authority belongs to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/privateca_certificate_authority#pool DataGooglePrivatecaCertificateAuthority#pool}
   */
   readonly pool?: string;

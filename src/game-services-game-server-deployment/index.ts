@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
   * A unique id for the deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment#deployment_id GameServicesGameServerDeployment#deployment_id}
   */
   readonly deploymentId: string;
   /**
   * Human readable description of the game server deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment#description GameServicesGameServerDeployment#description}
   */
   readonly description?: string;
@@ -34,13 +29,13 @@ export interface GameServicesGameServerDeploymentConfig extends cdktf.TerraformM
   /**
   * The labels associated with this game server deployment. Each label is a
 key-value pair.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment#labels GameServicesGameServerDeployment#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location of the Deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment#location GameServicesGameServerDeployment#location}
   */
   readonly location?: string;
@@ -50,7 +45,7 @@ key-value pair.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment#timeouts GameServicesGameServerDeployment#timeouts}
   */
   readonly timeouts?: GameServicesGameServerDeploymentTimeouts;

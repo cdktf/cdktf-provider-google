@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeInstanceGroupNamedPortAConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the instance group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port#group ComputeInstanceGroupNamedPortA#group}
   */
   readonly group: string;
@@ -28,13 +23,13 @@ export interface ComputeInstanceGroupNamedPortAConfig extends cdktf.TerraformMet
   /**
   * The name for this named port. The name must be 1-63 characters
 long, and comply with RFC1035.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port#name ComputeInstanceGroupNamedPortA#name}
   */
   readonly name: string;
   /**
   * The port number, which can be a value between 1 and 65535.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port#port ComputeInstanceGroupNamedPortA#port}
   */
   readonly port: number;
@@ -44,13 +39,13 @@ long, and comply with RFC1035.
   readonly project?: string;
   /**
   * The zone of the instance group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port#zone ComputeInstanceGroupNamedPortA#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_instance_group_named_port#timeouts ComputeInstanceGroupNamedPortA#timeouts}
   */
   readonly timeouts?: ComputeInstanceGroupNamedPortTimeouts;

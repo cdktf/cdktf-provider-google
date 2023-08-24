@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_location
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface NotebooksLocationConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Name of the Location resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_location#name NotebooksLocation#name}
   */
   readonly name?: string;
@@ -31,7 +26,7 @@ export interface NotebooksLocationConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_location#timeouts NotebooksLocation#timeouts}
   */
   readonly timeouts?: NotebooksLocationTimeouts;

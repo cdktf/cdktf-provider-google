@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_version
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The current state of the SecretVersion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_version#enabled SecretManagerSecretVersion#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -27,19 +22,19 @@ export interface SecretManagerSecretVersionConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * Secret Manager secret resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_version#secret SecretManagerSecretVersion#secret}
   */
   readonly secret: string;
   /**
   * The secret data. Must be no larger than 64KiB.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_version#secret_data SecretManagerSecretVersion#secret_data}
   */
   readonly secretData: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_version#timeouts SecretManagerSecretVersion#timeouts}
   */
   readonly timeouts?: SecretManagerSecretVersionTimeouts;

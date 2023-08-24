@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#constraint ProjectOrganizationPolicy#constraint}
   */
   readonly constraint: string;
@@ -27,37 +22,37 @@ export interface ProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * The project ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#project ProjectOrganizationPolicy#project}
   */
   readonly project: string;
   /**
   * Version of the Policy. Default version is 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#version ProjectOrganizationPolicy#version}
   */
   readonly version?: number;
   /**
   * boolean_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#boolean_policy ProjectOrganizationPolicy#boolean_policy}
   */
   readonly booleanPolicy?: ProjectOrganizationPolicyBooleanPolicy;
   /**
   * list_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#list_policy ProjectOrganizationPolicy#list_policy}
   */
   readonly listPolicy?: ProjectOrganizationPolicyListPolicy;
   /**
   * restore_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#restore_policy ProjectOrganizationPolicy#restore_policy}
   */
   readonly restorePolicy?: ProjectOrganizationPolicyRestorePolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#timeouts ProjectOrganizationPolicy#timeouts}
   */
   readonly timeouts?: ProjectOrganizationPolicyTimeouts;
@@ -65,7 +60,7 @@ export interface ProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArgu
 export interface ProjectOrganizationPolicyBooleanPolicy {
   /**
   * If true, then the Policy is enforced. If false, then any configuration is acceptable.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#enforced ProjectOrganizationPolicy#enforced}
   */
   readonly enforced: boolean | cdktf.IResolvable;
@@ -129,13 +124,13 @@ export class ProjectOrganizationPolicyBooleanPolicyOutputReference extends cdktf
 export interface ProjectOrganizationPolicyListPolicyAllow {
   /**
   * The policy allows or denies all values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
   */
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
   */
   readonly values?: string[];
@@ -225,13 +220,13 @@ export class ProjectOrganizationPolicyListPolicyAllowOutputReference extends cdk
 export interface ProjectOrganizationPolicyListPolicyDeny {
   /**
   * The policy allows or denies all values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#all ProjectOrganizationPolicy#all}
   */
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#values ProjectOrganizationPolicy#values}
   */
   readonly values?: string[];
@@ -321,25 +316,25 @@ export class ProjectOrganizationPolicyListPolicyDenyOutputReference extends cdkt
 export interface ProjectOrganizationPolicyListPolicy {
   /**
   * If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#inherit_from_parent ProjectOrganizationPolicy#inherit_from_parent}
   */
   readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#suggested_value ProjectOrganizationPolicy#suggested_value}
   */
   readonly suggestedValue?: string;
   /**
   * allow block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#allow ProjectOrganizationPolicy#allow}
   */
   readonly allow?: ProjectOrganizationPolicyListPolicyAllow;
   /**
   * deny block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#deny ProjectOrganizationPolicy#deny}
   */
   readonly deny?: ProjectOrganizationPolicyListPolicyDeny;
@@ -475,7 +470,7 @@ export class ProjectOrganizationPolicyListPolicyOutputReference extends cdktf.Co
 export interface ProjectOrganizationPolicyRestorePolicy {
   /**
   * May only be set to true. If set, then the default Policy is restored.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_organization_policy#default ProjectOrganizationPolicy#default}
   */
   readonly default: boolean | cdktf.IResolvable;
