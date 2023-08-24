@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.NewDataGoogleComputeSnapshotIamPolicy(scope Construct, id *string, config DataGoogleComputeSnapshotIamPolicyConfig) DataGoogleComputeSnapshotIamPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesnapshotiampolicy"
 
 datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSnapshotIamPolicy.DataGoogleComputeSnapshotIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecomputesnapshotiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesnapshotiampolicy"
 
 &datagooglecomputesnapshotiampolicy.DataGoogleComputeSnapshotIamPolicyConfig {
 	Connection: interface{},

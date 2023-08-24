@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgent(scope Construct, id *string, config DialogflowAgentConfig) DialogflowAgent
 ```
@@ -360,7 +360,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsConstruct(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ```
@@ -406,7 +406,7 @@ dialogflowagent.DialogflowAgent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 dialogflowagent.DialogflowAgent_IsTerraformResource(x interface{}) *bool
 ```
@@ -924,7 +924,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
 	Project: *string,
 	SupportedLanguageCodes: *[]*string,
 	Tier: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.dialogflowAgent.DialogflowAgentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.dialogflowAgent.DialogflowAgentTimeouts,
 }
 ```
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 &dialogflowagent.DialogflowAgentTimeouts {
 	Create: *string,
@@ -1342,7 +1342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dialogflowAgent.DialogflowAgentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/dialogflowagent"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/dialogflowagent"
 
 dialogflowagent.NewDialogflowAgentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DialogflowAgentTimeoutsOutputReference
 ```

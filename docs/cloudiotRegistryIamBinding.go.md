@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 cloudiotregistryiambinding.NewCloudiotRegistryIamBinding(scope Construct, id *string, config CloudiotRegistryIamBindingConfig) CloudiotRegistryIamBinding
 ```
@@ -311,7 +311,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 cloudiotregistryiambinding.CloudiotRegistryIamBinding_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 cloudiotregistryiambinding.CloudiotRegistryIamBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ cloudiotregistryiambinding.CloudiotRegistryIamBinding_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 cloudiotregistryiambinding.CloudiotRegistryIamBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBindingCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 &cloudiotregistryiambinding.CloudiotRegistryIamBindingCondition {
 	Expression: *string,
@@ -781,7 +781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 &cloudiotregistryiambinding.CloudiotRegistryIamBindingConfig {
 	Connection: interface{},
@@ -794,7 +794,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambind
 	Members: *[]*string,
 	Name: *string,
 	Role: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.cloudiotRegistryIamBinding.CloudiotRegistryIamBindingCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudiotRegistryIamBinding.CloudiotRegistryIamBindingCondition,
 	Id: *string,
 	Project: *string,
 	Region: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudiotRegistryIamBinding.CloudiotRegistryIamBindingConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudiotregistryiambinding"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudiotregistryiambinding"
 
 cloudiotregistryiambinding.NewCloudiotRegistryIamBindingConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CloudiotRegistryIamBindingConditionOutputReference
 ```
