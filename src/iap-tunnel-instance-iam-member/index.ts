@@ -41,7 +41,7 @@ export interface IapTunnelInstanceIamMemberConfig extends cdktf.TerraformMetaArg
   readonly zone?: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_tunnel_instance_iam_member#condition IapTunnelInstanceIamMember#condition}
   */
   readonly condition?: IapTunnelInstanceIamMemberCondition;

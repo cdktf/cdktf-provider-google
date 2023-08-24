@@ -21,13 +21,13 @@ export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Arbitrary map of values that, when changed, will trigger recreation of resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account_key#keepers ServiceAccountKey#keepers}
   */
   readonly keepers?: { [key: string]: string };
   /**
   * The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account_key#key_algorithm ServiceAccountKey#key_algorithm}
   */
   readonly keyAlgorithm?: string;
@@ -37,7 +37,7 @@ export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   readonly privateKeyType?: string;
   /**
   * A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account_key#public_key_data ServiceAccountKey#public_key_data}
   */
   readonly publicKeyData?: string;
@@ -47,7 +47,7 @@ export interface ServiceAccountKeyConfig extends cdktf.TerraformMetaArguments {
   readonly publicKeyType?: string;
   /**
   * The ID of the parent service account of the key. This can be a string in the format {ACCOUNT} or projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}, where {ACCOUNT} is the email address or unique id of the service account. If the {ACCOUNT} syntax is used, the project will be inferred from the provider's configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account_key#service_account_id ServiceAccountKey#service_account_id}
   */
   readonly serviceAccountId: string;

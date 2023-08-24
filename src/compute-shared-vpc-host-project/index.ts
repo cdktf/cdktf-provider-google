@@ -21,13 +21,13 @@ export interface ComputeSharedVpcHostProjectConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The ID of the project that will serve as a Shared VPC host project
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_host_project#project ComputeSharedVpcHostProject#project}
   */
   readonly project: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_host_project#timeouts ComputeSharedVpcHostProject#timeouts}
   */
   readonly timeouts?: ComputeSharedVpcHostProjectTimeouts;

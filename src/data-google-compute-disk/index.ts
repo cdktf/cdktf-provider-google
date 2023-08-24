@@ -27,7 +27,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_disk#name DataGoogleComputeDisk#name}
   */
   readonly name: string;
@@ -37,7 +37,7 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * A reference to the zone where the disk resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_disk#zone DataGoogleComputeDisk#zone}
   */
   readonly zone?: string;

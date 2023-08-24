@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#description NetworkServicesEdgeCacheKeyset#description}
   */
   readonly description?: string;
@@ -27,7 +27,7 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * Set of label tags associated with the EdgeCache resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#labels NetworkServicesEdgeCacheKeyset#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -35,7 +35,7 @@ export interface NetworkServicesEdgeCacheKeysetConfig extends cdktf.TerraformMet
   * Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#name NetworkServicesEdgeCacheKeyset#name}
   */
   readonly name: string;
@@ -45,19 +45,19 @@ and all following characters must be a dash, underscore, letter or digit.
   readonly project?: string;
   /**
   * public_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#public_key NetworkServicesEdgeCacheKeyset#public_key}
   */
   readonly publicKey?: NetworkServicesEdgeCacheKeysetPublicKey[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#timeouts NetworkServicesEdgeCacheKeyset#timeouts}
   */
   readonly timeouts?: NetworkServicesEdgeCacheKeysetTimeouts;
   /**
   * validation_shared_keys block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#validation_shared_keys NetworkServicesEdgeCacheKeyset#validation_shared_keys}
   */
   readonly validationSharedKeys?: NetworkServicesEdgeCacheKeysetValidationSharedKeys[] | cdktf.IResolvable;
@@ -67,7 +67,7 @@ export interface NetworkServicesEdgeCacheKeysetPublicKey {
   * The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
 which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#id NetworkServicesEdgeCacheKeyset#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -76,14 +76,14 @@ which means the first character must be a letter, and all following characters m
   readonly id: string;
   /**
   * Set to true to have the CDN automatically manage this public key value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#managed NetworkServicesEdgeCacheKeyset#managed}
   */
   readonly managed?: boolean | cdktf.IResolvable;
   /**
   * The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes).
 Representations or encodings of the public key other than this will be rejected with an error.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#value NetworkServicesEdgeCacheKeyset#value}
   */
   readonly value?: string;
@@ -355,13 +355,15 @@ export interface NetworkServicesEdgeCacheKeysetValidationSharedKeys {
   /**
   * The name of the secret version in Secret Manager.
 
-The resource name of the secret version must be in the format 'projects/*\/secrets/*\/versions/*' where the '*' values are replaced by the secrets themselves.
+The resource name of the secret version must be in the format 'projects/* /secrets/* /versions/*' where the '*' values are replaced by the secrets themselves.
 The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using.
 * If you are using HMAC-SHA1, we suggest 20-byte secrets.
 * If you are using HMAC-SHA256, we suggest 32-byte secrets.
 See RFC 2104, Section 3 for more details on these recommendations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_services_edge_cache_keyset#secret_version NetworkServicesEdgeCacheKeyset#secret_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly secretVersion: string;
 }

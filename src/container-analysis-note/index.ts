@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArguments {
   /**
   * Time of expiration for this note. Leave empty if note does not expire.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#expiration_time ContainerAnalysisNote#expiration_time}
   */
   readonly expirationTime?: string;
@@ -27,13 +27,13 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * A detailed description of the note
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#long_description ContainerAnalysisNote#long_description}
   */
   readonly longDescription?: string;
   /**
   * The name of the note.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#name ContainerAnalysisNote#name}
   */
   readonly name: string;
@@ -43,31 +43,31 @@ export interface ContainerAnalysisNoteConfig extends cdktf.TerraformMetaArgument
   readonly project?: string;
   /**
   * Names of other notes related to this note.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#related_note_names ContainerAnalysisNote#related_note_names}
   */
   readonly relatedNoteNames?: string[];
   /**
   * A one sentence description of the note.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#short_description ContainerAnalysisNote#short_description}
   */
   readonly shortDescription?: string;
   /**
   * attestation_authority block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#attestation_authority ContainerAnalysisNote#attestation_authority}
   */
   readonly attestationAuthority: ContainerAnalysisNoteAttestationAuthority;
   /**
   * related_url block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#related_url ContainerAnalysisNote#related_url}
   */
   readonly relatedUrl?: ContainerAnalysisNoteRelatedUrl[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#timeouts ContainerAnalysisNote#timeouts}
   */
   readonly timeouts?: ContainerAnalysisNoteTimeouts;
@@ -76,7 +76,7 @@ export interface ContainerAnalysisNoteAttestationAuthorityHint {
   /**
   * The human readable name of this Attestation Authority, for
 example "qa".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#human_readable_name ContainerAnalysisNote#human_readable_name}
   */
   readonly humanReadableName: string;
@@ -140,7 +140,7 @@ export class ContainerAnalysisNoteAttestationAuthorityHintOutputReference extend
 export interface ContainerAnalysisNoteAttestationAuthority {
   /**
   * hint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#hint ContainerAnalysisNote#hint}
   */
   readonly hint: ContainerAnalysisNoteAttestationAuthorityHint;
@@ -204,13 +204,13 @@ export class ContainerAnalysisNoteAttestationAuthorityOutputReference extends cd
 export interface ContainerAnalysisNoteRelatedUrl {
   /**
   * Label to describe usage of the URL
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#label ContainerAnalysisNote#label}
   */
   readonly label?: string;
   /**
   * Specific URL associated with the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_note#url ContainerAnalysisNote#url}
   */
   readonly url: string;

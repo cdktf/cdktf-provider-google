@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface IapBrandConfig extends cdktf.TerraformMetaArguments {
   /**
   * Application name displayed on OAuth consent screen.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_brand#application_title IapBrand#application_title}
   */
   readonly applicationTitle: string;
@@ -35,13 +35,13 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_brand#support_email IapBrand#support_email}
   */
   readonly supportEmail: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_brand#timeouts IapBrand#timeouts}
   */
   readonly timeouts?: IapBrandTimeouts;

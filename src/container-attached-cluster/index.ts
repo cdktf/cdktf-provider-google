@@ -19,27 +19,27 @@ values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
 with dashes (-), underscores (_), dots (.), and alphanumerics between.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#annotations ContainerAttachedCluster#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Policy to determine what flags to send on delete.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#deletion_policy ContainerAttachedCluster#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#description ContainerAttachedCluster#description}
   */
   readonly description?: string;
   /**
   * The Kubernetes distribution of the underlying attached cluster. Supported values:
 "eks", "aks".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#distribution ContainerAttachedCluster#distribution}
   */
   readonly distribution: string;
@@ -52,19 +52,19 @@ than 255 UTF-8 encoded bytes.
   readonly id?: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#location ContainerAttachedCluster#location}
   */
   readonly location: string;
   /**
   * The name of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#name ContainerAttachedCluster#name}
   */
   readonly name: string;
   /**
   * The platform version for the cluster (e.g. '1.23.0-gke.1').
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#platform_version ContainerAttachedCluster#platform_version}
   */
   readonly platformVersion: string;
@@ -74,37 +74,37 @@ than 255 UTF-8 encoded bytes.
   readonly project?: string;
   /**
   * authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#authorization ContainerAttachedCluster#authorization}
   */
   readonly authorization?: ContainerAttachedClusterAuthorization;
   /**
   * fleet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#fleet ContainerAttachedCluster#fleet}
   */
   readonly fleet: ContainerAttachedClusterFleet;
   /**
   * logging_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#logging_config ContainerAttachedCluster#logging_config}
   */
   readonly loggingConfig?: ContainerAttachedClusterLoggingConfig;
   /**
   * monitoring_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#monitoring_config ContainerAttachedCluster#monitoring_config}
   */
   readonly monitoringConfig?: ContainerAttachedClusterMonitoringConfig;
   /**
   * oidc_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#oidc_config ContainerAttachedCluster#oidc_config}
   */
   readonly oidcConfig: ContainerAttachedClusterOidcConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#timeouts ContainerAttachedCluster#timeouts}
   */
   readonly timeouts?: ContainerAttachedClusterTimeouts;
@@ -255,7 +255,7 @@ to the users. Up to ten admin users can be provided.
 
 For more info on RBAC, see
 https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#admin_users ContainerAttachedCluster#admin_users}
   */
   readonly adminUsers?: string[];
@@ -322,7 +322,7 @@ export class ContainerAttachedClusterAuthorizationOutputReference extends cdktf.
 export interface ContainerAttachedClusterFleet {
   /**
   * The number of the Fleet host project where this cluster will be registered.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#project ContainerAttachedCluster#project}
   */
   readonly project: string;
@@ -391,7 +391,7 @@ export class ContainerAttachedClusterFleetOutputReference extends cdktf.ComplexO
 export interface ContainerAttachedClusterLoggingConfigComponentConfig {
   /**
   * The components to be enabled. Possible values: ["SYSTEM_COMPONENTS", "WORKLOADS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#enable_components ContainerAttachedCluster#enable_components}
   */
   readonly enableComponents?: string[];
@@ -458,7 +458,7 @@ export class ContainerAttachedClusterLoggingConfigComponentConfigOutputReference
 export interface ContainerAttachedClusterLoggingConfig {
   /**
   * component_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#component_config ContainerAttachedCluster#component_config}
   */
   readonly componentConfig?: ContainerAttachedClusterLoggingConfigComponentConfig;
@@ -525,7 +525,7 @@ export class ContainerAttachedClusterLoggingConfigOutputReference extends cdktf.
 export interface ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig {
   /**
   * Enable Managed Collection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#enabled ContainerAttachedCluster#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -592,7 +592,7 @@ export class ContainerAttachedClusterMonitoringConfigManagedPrometheusConfigOutp
 export interface ContainerAttachedClusterMonitoringConfig {
   /**
   * managed_prometheus_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#managed_prometheus_config ContainerAttachedCluster#managed_prometheus_config}
   */
   readonly managedPrometheusConfig?: ContainerAttachedClusterMonitoringConfigManagedPrometheusConfig;
@@ -659,13 +659,13 @@ export class ContainerAttachedClusterMonitoringConfigOutputReference extends cdk
 export interface ContainerAttachedClusterOidcConfig {
   /**
   * A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#issuer_url ContainerAttachedCluster#issuer_url}
   */
   readonly issuerUrl: string;
   /**
   * OIDC verification keys in JWKS format (RFC 7517).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_attached_cluster#jwks ContainerAttachedCluster#jwks}
   */
   readonly jwks?: string;

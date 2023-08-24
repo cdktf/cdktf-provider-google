@@ -21,19 +21,19 @@ export interface OrganizationIamAuditConfigConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_audit_config#org_id OrganizationIamAuditConfig#org_id}
   */
   readonly orgId: string;
   /**
   * Service which will be enabled for audit logging. The special value allServices covers all services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_audit_config#service OrganizationIamAuditConfig#service}
   */
   readonly service: string;
   /**
   * audit_log_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_audit_config#audit_log_config OrganizationIamAuditConfig#audit_log_config}
   */
   readonly auditLogConfig: OrganizationIamAuditConfigAuditLogConfig[] | cdktf.IResolvable;
@@ -41,13 +41,13 @@ export interface OrganizationIamAuditConfigConfig extends cdktf.TerraformMetaArg
 export interface OrganizationIamAuditConfigAuditLogConfig {
   /**
   * Identities that do not cause logging for this type of permission. Each entry can have one of the following values:user:{emailid}: An email address that represents a specific Google account. For example, alice@gmail.com or joe@example.com. serviceAccount:{emailid}: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email address that represents a Google group. For example, admins@example.com. domain:{domain}: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_audit_config#exempted_members OrganizationIamAuditConfig#exempted_members}
   */
   readonly exemptedMembers?: string[];
   /**
   * Permission type for which logging is to be configured. Must be one of DATA_READ, DATA_WRITE, or ADMIN_READ.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_audit_config#log_type OrganizationIamAuditConfig#log_type}
   */
   readonly logType: string;

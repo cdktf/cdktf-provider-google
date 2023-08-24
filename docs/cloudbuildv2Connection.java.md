@@ -1407,7 +1407,7 @@ Cloudbuildv2ConnectionGithubConfigAuthorizerCredential.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential.property.oauthTokenSecretVersion">oauthTokenSecretVersion</a></code> | <code>java.lang.String</code> | A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential.property.oauthTokenSecretVersion">oauthTokenSecretVersion</a></code> | <code>java.lang.String</code> | A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`. |
 
 ---
 
@@ -1419,9 +1419,11 @@ public java.lang.String getOauthTokenSecretVersion();
 
 - *Type:* java.lang.String
 
-A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`.
+A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#oauth_token_secret_version Cloudbuildv2Connection#oauth_token_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1452,10 +1454,10 @@ Cloudbuildv2ConnectionGithubEnterpriseConfig.builder()
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.appId">appId</a></code> | <code>java.lang.Number</code> | Id of the GitHub App created from the manifest. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.appInstallationId">appInstallationId</a></code> | <code>java.lang.Number</code> | ID of the installation of the GitHub App. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.appSlug">appSlug</a></code> | <code>java.lang.String</code> | The URL-friendly name of the GitHub App. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.privateKeySecretVersion">privateKeySecretVersion</a></code> | <code>java.lang.String</code> | SecretManager resource containing the private key of the GitHub App, formatted as `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.privateKeySecretVersion">privateKeySecretVersion</a></code> | <code>java.lang.String</code> | SecretManager resource containing the private key of the GitHub App, formatted as `projects/* /secrets/* /versions/*`. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.serviceDirectoryConfig">serviceDirectoryConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig">Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig</a></code> | service_directory_config block. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.sslCa">sslCa</a></code> | <code>java.lang.String</code> | SSL certificate to use for requests to GitHub Enterprise. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.webhookSecretSecretVersion">webhookSecretSecretVersion</a></code> | <code>java.lang.String</code> | SecretManager resource containing the webhook secret of the GitHub App, formatted as `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.property.webhookSecretSecretVersion">webhookSecretSecretVersion</a></code> | <code>java.lang.String</code> | SecretManager resource containing the webhook secret of the GitHub App, formatted as `projects/* /secrets/* /versions/*`. |
 
 ---
 
@@ -1523,9 +1525,11 @@ public java.lang.String getPrivateKeySecretVersion();
 
 - *Type:* java.lang.String
 
-SecretManager resource containing the private key of the GitHub App, formatted as `projects/*\/secrets/*\/versions/*`.
+SecretManager resource containing the private key of the GitHub App, formatted as `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#private_key_secret_version Cloudbuildv2Connection#private_key_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1565,9 +1569,11 @@ public java.lang.String getWebhookSecretSecretVersion();
 
 - *Type:* java.lang.String
 
-SecretManager resource containing the webhook secret of the GitHub App, formatted as `projects/*\/secrets/*\/versions/*`.
+SecretManager resource containing the webhook secret of the GitHub App, formatted as `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1628,7 +1634,7 @@ Cloudbuildv2ConnectionGitlabConfig.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.authorizerCredential">authorizerCredential</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential">Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential</a></code> | authorizer_credential block. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.readAuthorizerCredential">readAuthorizerCredential</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential">Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential</a></code> | read_authorizer_credential block. |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.webhookSecretSecretVersion">webhookSecretSecretVersion</a></code> | <code>java.lang.String</code> | Required. Immutable. SecretManager resource containing the webhook secret of a GitLab Enterprise project, formatted as `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.webhookSecretSecretVersion">webhookSecretSecretVersion</a></code> | <code>java.lang.String</code> | Required. Immutable. SecretManager resource containing the webhook secret of a GitLab Enterprise project, formatted as `projects/* /secrets/* /versions/*`. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.hostUri">hostUri</a></code> | <code>java.lang.String</code> | The URI of the GitLab Enterprise host this connection is for. If not specified, the default value is https://gitlab.com. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.serviceDirectoryConfig">serviceDirectoryConfig</a></code> | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig">Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig</a></code> | service_directory_config block. |
 | <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.property.sslCa">sslCa</a></code> | <code>java.lang.String</code> | SSL certificate to use for requests to GitLab Enterprise. |
@@ -1671,9 +1677,11 @@ public java.lang.String getWebhookSecretSecretVersion();
 
 - *Type:* java.lang.String
 
-Required. Immutable. SecretManager resource containing the webhook secret of a GitLab Enterprise project, formatted as `projects/*\/secrets/*\/versions/*`.
+Required. Immutable. SecretManager resource containing the webhook secret of a GitLab Enterprise project, formatted as `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#webhook_secret_secret_version Cloudbuildv2Connection#webhook_secret_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1735,7 +1743,7 @@ Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential.property.userTokenSecretVersion">userTokenSecretVersion</a></code> | <code>java.lang.String</code> | Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential.property.userTokenSecretVersion">userTokenSecretVersion</a></code> | <code>java.lang.String</code> | Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`. |
 
 ---
 
@@ -1747,9 +1755,11 @@ public java.lang.String getUserTokenSecretVersion();
 
 - *Type:* java.lang.String
 
-Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`.
+Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1769,7 +1779,7 @@ Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential.property.userTokenSecretVersion">userTokenSecretVersion</a></code> | <code>java.lang.String</code> | Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`. |
+| <code><a href="#@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential.property.userTokenSecretVersion">userTokenSecretVersion</a></code> | <code>java.lang.String</code> | Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`. |
 
 ---
 
@@ -1781,9 +1791,11 @@ public java.lang.String getUserTokenSecretVersion();
 
 - *Type:* java.lang.String
 
-Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/*\/secrets/*\/versions/*`.
+Required. A SecretManager resource containing the user token that authorizes the Cloud Build connection. Format: `projects/* /secrets/* /versions/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_connection#user_token_secret_version Cloudbuildv2Connection#user_token_secret_version}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

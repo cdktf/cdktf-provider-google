@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglekmskeyring"
 
 datagooglekmskeyring.NewDataGoogleKmsKeyRing(scope Construct, id *string, config DataGoogleKmsKeyRingConfig) DataGoogleKmsKeyRing
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRing.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglekmskeyring"
 
 datagooglekmskeyring.DataGoogleKmsKeyRing_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -595,7 +595,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleKmsKeyRing.DataGoogleKmsKeyRingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglekmskeyring"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglekmskeyring"
 
 &datagooglekmskeyring.DataGoogleKmsKeyRingConfig {
 	Connection: interface{},

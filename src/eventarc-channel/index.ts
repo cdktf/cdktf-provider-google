@@ -13,9 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface EventarcChannelConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*\/locations/*\/keyRings/*\/cryptoKeys/*`.
-  * 
+  * Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#crypto_key_name EventarcChannel#crypto_key_name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly cryptoKeyName?: string;
   /**
@@ -27,31 +29,31 @@ export interface EventarcChannelConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#location EventarcChannel#location}
   */
   readonly location: string;
   /**
   * Required. The resource name of the channel. Must be unique within the location on the project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#name EventarcChannel#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#project EventarcChannel#project}
   */
   readonly project?: string;
   /**
   * The name of the event provider (e.g. Eventarc SaaS partner) associated with the channel. This provider will be granted permissions to publish events to the channel. Format: `projects/{project}/locations/{location}/providers/{provider_id}`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#third_party_provider EventarcChannel#third_party_provider}
   */
   readonly thirdPartyProvider?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#timeouts EventarcChannel#timeouts}
   */
   readonly timeouts?: EventarcChannelTimeouts;

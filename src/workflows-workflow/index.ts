@@ -16,13 +16,13 @@ export interface WorkflowsWorkflowConfig extends cdktf.TerraformMetaArguments {
   * The KMS key used to encrypt workflow and execution data.
 
 Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#crypto_key_name WorkflowsWorkflow#crypto_key_name}
   */
   readonly cryptoKeyName?: string;
   /**
   * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#description WorkflowsWorkflow#description}
   */
   readonly description?: string;
@@ -35,13 +35,13 @@ Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{c
   readonly id?: string;
   /**
   * A set of key/value label pairs to assign to this Workflow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#labels WorkflowsWorkflow#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Name of the Workflow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#name WorkflowsWorkflow#name}
   */
   readonly name?: string;
@@ -55,7 +55,7 @@ Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{c
   readonly project?: string;
   /**
   * The region of the workflow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#region WorkflowsWorkflow#region}
   */
   readonly region?: string;
@@ -67,19 +67,19 @@ Using - as a wildcard for the {project} or not providing one at all will infer t
 The {account} value can be the email address or the unique_id of the service account.
 If not provided, workflow will use the project's default service account.
 Modifying this field for an existing workflow results in a new workflow revision.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#service_account WorkflowsWorkflow#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * Workflow code to be executed. The size limit is 32KB.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#source_contents WorkflowsWorkflow#source_contents}
   */
   readonly sourceContents?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/workflows_workflow#timeouts WorkflowsWorkflow#timeouts}
   */
   readonly timeouts?: WorkflowsWorkflowTimeouts;

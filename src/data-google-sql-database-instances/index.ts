@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMetaArguments {
   /**
   * To filter out the database instances which are of the specified database version.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#database_version DataGoogleSqlDatabaseInstances#database_version}
   */
   readonly databaseVersion?: string;
@@ -27,31 +27,31 @@ export interface DataGoogleSqlDatabaseInstancesConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * Project ID of the project that contains the instances.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#project DataGoogleSqlDatabaseInstances#project}
   */
   readonly project?: string;
   /**
   * To filter out the database instances which are located in this specified region.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#region DataGoogleSqlDatabaseInstances#region}
   */
   readonly region?: string;
   /**
   * To filter out the database instances based on the current state of the database instance, valid values include : "SQL_INSTANCE_STATE_UNSPECIFIED", "RUNNABLE", "SUSPENDED", "PENDING_DELETE", "PENDING_CREATE", "MAINTENANCE" and "FAILED".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#state DataGoogleSqlDatabaseInstances#state}
   */
   readonly state?: string;
   /**
   * To filter out the database instances based on the machine type.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#tier DataGoogleSqlDatabaseInstances#tier}
   */
   readonly tier?: string;
   /**
   * To filter out the database instances which are located in this specified zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database_instances#zone DataGoogleSqlDatabaseInstances#zone}
   */
   readonly zone?: string;

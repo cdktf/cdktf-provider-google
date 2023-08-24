@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface PrivatecaCertificateTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. A human-readable description of scenarios this template is intended for.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#description PrivatecaCertificateTemplate#description}
   */
   readonly description?: string;
@@ -27,49 +27,51 @@ export interface PrivatecaCertificateTemplateConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * Optional. Labels with user-defined metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#labels PrivatecaCertificateTemplate#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#location PrivatecaCertificateTemplate#location}
   */
   readonly location: string;
   /**
-  * The resource name for this CertificateTemplate in the format `projects/*\/locations/*\/certificateTemplates/*`.
-  * 
+  * The resource name for this CertificateTemplate in the format `projects/* /locations/* /certificateTemplates/*`.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#name PrivatecaCertificateTemplate#name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#project PrivatecaCertificateTemplate#project}
   */
   readonly project?: string;
   /**
   * identity_constraints block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#identity_constraints PrivatecaCertificateTemplate#identity_constraints}
   */
   readonly identityConstraints?: PrivatecaCertificateTemplateIdentityConstraints;
   /**
   * passthrough_extensions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#passthrough_extensions PrivatecaCertificateTemplate#passthrough_extensions}
   */
   readonly passthroughExtensions?: PrivatecaCertificateTemplatePassthroughExtensions;
   /**
   * predefined_values block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#predefined_values PrivatecaCertificateTemplate#predefined_values}
   */
   readonly predefinedValues?: PrivatecaCertificateTemplatePredefinedValues;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#timeouts PrivatecaCertificateTemplate#timeouts}
   */
   readonly timeouts?: PrivatecaCertificateTemplateTimeouts;
@@ -77,25 +79,25 @@ export interface PrivatecaCertificateTemplateConfig extends cdktf.TerraformMetaA
 export interface PrivatecaCertificateTemplateIdentityConstraintsCelExpression {
   /**
   * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#description PrivatecaCertificateTemplate#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#expression PrivatecaCertificateTemplate#expression}
   */
   readonly expression?: string;
   /**
   * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#location PrivatecaCertificateTemplate#location}
   */
   readonly location?: string;
   /**
   * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#title PrivatecaCertificateTemplate#title}
   */
   readonly title?: string;
@@ -231,19 +233,19 @@ export class PrivatecaCertificateTemplateIdentityConstraintsCelExpressionOutputR
 export interface PrivatecaCertificateTemplateIdentityConstraints {
   /**
   * Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#allow_subject_alt_names_passthrough PrivatecaCertificateTemplate#allow_subject_alt_names_passthrough}
   */
   readonly allowSubjectAltNamesPassthrough: boolean | cdktf.IResolvable;
   /**
   * Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#allow_subject_passthrough PrivatecaCertificateTemplate#allow_subject_passthrough}
   */
   readonly allowSubjectPassthrough: boolean | cdktf.IResolvable;
   /**
   * cel_expression block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#cel_expression PrivatecaCertificateTemplate#cel_expression}
   */
   readonly celExpression?: PrivatecaCertificateTemplateIdentityConstraintsCelExpression;
@@ -350,7 +352,7 @@ export class PrivatecaCertificateTemplateIdentityConstraintsOutputReference exte
 export interface PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions {
   /**
   * Required. The parts of an OID path. The most significant parts of the path come first.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#object_id_path PrivatecaCertificateTemplate#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -446,13 +448,13 @@ export class PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensio
 export interface PrivatecaCertificateTemplatePassthroughExtensions {
   /**
   * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#known_extensions PrivatecaCertificateTemplate#known_extensions}
   */
   readonly knownExtensions?: string[];
   /**
   * additional_extensions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#additional_extensions PrivatecaCertificateTemplate#additional_extensions}
   */
   readonly additionalExtensions?: PrivatecaCertificateTemplatePassthroughExtensionsAdditionalExtensions[] | cdktf.IResolvable;
@@ -542,7 +544,7 @@ export class PrivatecaCertificateTemplatePassthroughExtensionsOutputReference ex
 export interface PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectId {
   /**
   * Required. The parts of an OID path. The most significant parts of the path come first.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#object_id_path PrivatecaCertificateTemplate#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -606,19 +608,19 @@ export class PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObj
 export interface PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions {
   /**
   * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#critical PrivatecaCertificateTemplate#critical}
   */
   readonly critical?: boolean | cdktf.IResolvable;
   /**
   * Required. The value of this X.509 extension.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#value PrivatecaCertificateTemplate#value}
   */
   readonly value: string;
   /**
   * object_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#object_id PrivatecaCertificateTemplate#object_id}
   */
   readonly objectId: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsObjectId;
@@ -757,13 +759,13 @@ export class PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensionsLis
 export interface PrivatecaCertificateTemplatePredefinedValuesCaOptions {
   /**
   * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#is_ca PrivatecaCertificateTemplate#is_ca}
   */
   readonly isCa?: boolean | cdktf.IResolvable;
   /**
   * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#max_issuer_path_length PrivatecaCertificateTemplate#max_issuer_path_length}
   */
   readonly maxIssuerPathLength?: number;
@@ -853,55 +855,55 @@ export class PrivatecaCertificateTemplatePredefinedValuesCaOptionsOutputReferenc
 export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage {
   /**
   * The key may be used to sign certificates.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#cert_sign PrivatecaCertificateTemplate#cert_sign}
   */
   readonly certSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#content_commitment PrivatecaCertificateTemplate#content_commitment}
   */
   readonly contentCommitment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used sign certificate revocation lists.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#crl_sign PrivatecaCertificateTemplate#crl_sign}
   */
   readonly crlSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#data_encipherment PrivatecaCertificateTemplate#data_encipherment}
   */
   readonly dataEncipherment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to decipher only.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#decipher_only PrivatecaCertificateTemplate#decipher_only}
   */
   readonly decipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for digital signatures.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#digital_signature PrivatecaCertificateTemplate#digital_signature}
   */
   readonly digitalSignature?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher only.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#encipher_only PrivatecaCertificateTemplate#encipher_only}
   */
   readonly encipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used in a key agreement protocol.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#key_agreement PrivatecaCertificateTemplate#key_agreement}
   */
   readonly keyAgreement?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher other keys.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#key_encipherment PrivatecaCertificateTemplate#key_encipherment}
   */
   readonly keyEncipherment?: boolean | cdktf.IResolvable;
@@ -1152,37 +1154,37 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsageOut
 export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#client_auth PrivatecaCertificateTemplate#client_auth}
   */
   readonly clientAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#code_signing PrivatecaCertificateTemplate#code_signing}
   */
   readonly codeSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#email_protection PrivatecaCertificateTemplate#email_protection}
   */
   readonly emailProtection?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#ocsp_signing PrivatecaCertificateTemplate#ocsp_signing}
   */
   readonly ocspSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#server_auth PrivatecaCertificateTemplate#server_auth}
   */
   readonly serverAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#time_stamping PrivatecaCertificateTemplate#time_stamping}
   */
   readonly timeStamping?: boolean | cdktf.IResolvable;
@@ -1364,7 +1366,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsag
 export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages {
   /**
   * Required. The parts of an OID path. The most significant parts of the path come first.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#object_id_path PrivatecaCertificateTemplate#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -1460,19 +1462,19 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtended
 export interface PrivatecaCertificateTemplatePredefinedValuesKeyUsage {
   /**
   * base_key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#base_key_usage PrivatecaCertificateTemplate#base_key_usage}
   */
   readonly baseKeyUsage?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage;
   /**
   * extended_key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#extended_key_usage PrivatecaCertificateTemplate#extended_key_usage}
   */
   readonly extendedKeyUsage?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage;
   /**
   * unknown_extended_key_usages block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#unknown_extended_key_usages PrivatecaCertificateTemplate#unknown_extended_key_usages}
   */
   readonly unknownExtendedKeyUsages?: PrivatecaCertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsages[] | cdktf.IResolvable;
@@ -1585,7 +1587,7 @@ export class PrivatecaCertificateTemplatePredefinedValuesKeyUsageOutputReference
 export interface PrivatecaCertificateTemplatePredefinedValuesPolicyIds {
   /**
   * Required. The parts of an OID path. The most significant parts of the path come first.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#object_id_path PrivatecaCertificateTemplate#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -1681,31 +1683,31 @@ export class PrivatecaCertificateTemplatePredefinedValuesPolicyIdsList extends c
 export interface PrivatecaCertificateTemplatePredefinedValues {
   /**
   * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#aia_ocsp_servers PrivatecaCertificateTemplate#aia_ocsp_servers}
   */
   readonly aiaOcspServers?: string[];
   /**
   * additional_extensions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#additional_extensions PrivatecaCertificateTemplate#additional_extensions}
   */
   readonly additionalExtensions?: PrivatecaCertificateTemplatePredefinedValuesAdditionalExtensions[] | cdktf.IResolvable;
   /**
   * ca_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#ca_options PrivatecaCertificateTemplate#ca_options}
   */
   readonly caOptions?: PrivatecaCertificateTemplatePredefinedValuesCaOptions;
   /**
   * key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#key_usage PrivatecaCertificateTemplate#key_usage}
   */
   readonly keyUsage?: PrivatecaCertificateTemplatePredefinedValuesKeyUsage;
   /**
   * policy_ids block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#policy_ids PrivatecaCertificateTemplate#policy_ids}
   */
   readonly policyIds?: PrivatecaCertificateTemplatePredefinedValuesPolicyIds[] | cdktf.IResolvable;

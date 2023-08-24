@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface VertexAiIndexConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description of the Index.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#description VertexAiIndex#description}
   */
   readonly description?: string;
   /**
   * The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#display_name VertexAiIndex#display_name}
   */
   readonly displayName: string;
@@ -35,13 +35,13 @@ export interface VertexAiIndexConfig extends cdktf.TerraformMetaArguments {
   * The update method to use with this Index. The value must be the followings. If not set, BATCH_UPDATE will be used by default.
 * BATCH_UPDATE: user can call indexes.patch with files on Cloud Storage of datapoints to update.
 * STREAM_UPDATE: user can call indexes.upsertDatapoints/DeleteDatapoints to update the Index and the updates will be applied in corresponding DeployedIndexes in nearly real-time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#index_update_method VertexAiIndex#index_update_method}
   */
   readonly indexUpdateMethod?: string;
   /**
   * The labels with user-defined metadata to organize your Indexes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#labels VertexAiIndex#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -51,19 +51,19 @@ export interface VertexAiIndexConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The region of the index. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#region VertexAiIndex#region}
   */
   readonly region?: string;
   /**
   * metadata block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#metadata VertexAiIndex#metadata}
   */
   readonly metadata?: VertexAiIndexMetadata;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#timeouts VertexAiIndex#timeouts}
   */
   readonly timeouts?: VertexAiIndexTimeouts;
@@ -247,14 +247,14 @@ export class VertexAiIndexMetadataConfigAlgorithmConfigBruteForceConfigOutputRef
 export interface VertexAiIndexMetadataConfigAlgorithmConfigTreeAhConfig {
   /**
   * Number of embeddings on each leaf node. The default value is 1000 if not set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#leaf_node_embedding_count VertexAiIndex#leaf_node_embedding_count}
   */
   readonly leafNodeEmbeddingCount?: number;
   /**
   * The default percentage of leaf nodes that any query may be searched. Must be in
 range 1-100, inclusive. The default value is 10 (means 10%) if not set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#leaf_nodes_to_search_percent VertexAiIndex#leaf_nodes_to_search_percent}
   */
   readonly leafNodesToSearchPercent?: number;
@@ -344,13 +344,13 @@ export class VertexAiIndexMetadataConfigAlgorithmConfigTreeAhConfigOutputReferen
 export interface VertexAiIndexMetadataConfigAlgorithmConfig {
   /**
   * brute_force_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#brute_force_config VertexAiIndex#brute_force_config}
   */
   readonly bruteForceConfig?: VertexAiIndexMetadataConfigAlgorithmConfigBruteForceConfig;
   /**
   * tree_ah_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#tree_ah_config VertexAiIndex#tree_ah_config}
   */
   readonly treeAhConfig?: VertexAiIndexMetadataConfigAlgorithmConfigTreeAhConfig;
@@ -443,13 +443,13 @@ export interface VertexAiIndexMetadataConfig {
 performed. Exact reordering is a procedure where results returned by an
 approximate search algorithm are reordered via a more expensive distance computation.
 Required if tree-AH algorithm is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#approximate_neighbors_count VertexAiIndex#approximate_neighbors_count}
   */
   readonly approximateNeighborsCount?: number;
   /**
   * The number of dimensions of the input vectors.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#dimensions VertexAiIndex#dimensions}
   */
   readonly dimensions: number;
@@ -459,7 +459,7 @@ Required if tree-AH algorithm is used.
 * L1_DISTANCE: Manhattan (L_1) Distance
 * COSINE_DISTANCE: Cosine Distance. Defined as 1 - cosine similarity.
 * DOT_PRODUCT_DISTANCE: Dot Product Distance. Defined as a negative of the dot product
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#distance_measure_type VertexAiIndex#distance_measure_type}
   */
   readonly distanceMeasureType?: string;
@@ -467,7 +467,7 @@ Required if tree-AH algorithm is used.
   * Type of normalization to be carried out on each vector. The value must be one of the followings:
 * UNIT_L2_NORM: Unit L2 normalization type
 * NONE: No normalization type is specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#feature_norm_type VertexAiIndex#feature_norm_type}
   */
   readonly featureNormType?: string;
@@ -477,13 +477,13 @@ The shard size must be specified when creating an index. The value must be one o
 * SHARD_SIZE_SMALL: Small (2GB)
 * SHARD_SIZE_MEDIUM: Medium (20GB)
 * SHARD_SIZE_LARGE: Large (50GB)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#shard_size VertexAiIndex#shard_size}
   */
   readonly shardSize?: string;
   /**
   * algorithm_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#algorithm_config VertexAiIndex#algorithm_config}
   */
   readonly algorithmConfig?: VertexAiIndexMetadataConfigAlgorithmConfig;
@@ -667,20 +667,20 @@ field is set when calling IndexService.UpdateIndex, then no other
 Index field can be also updated as part of the same call.
 The expected structure and format of the files this URI points to is
 described at https://cloud.google.com/vertex-ai/docs/matching-engine/using-matching-engine#input-data-format
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#contents_delta_uri VertexAiIndex#contents_delta_uri}
   */
   readonly contentsDeltaUri?: string;
   /**
   * If this field is set together with contentsDeltaUri when calling IndexService.UpdateIndex,
 then existing content of the Index will be replaced by the data from the contentsDeltaUri.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#is_complete_overwrite VertexAiIndex#is_complete_overwrite}
   */
   readonly isCompleteOverwrite?: boolean | cdktf.IResolvable;
   /**
   * config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index#config VertexAiIndex#config}
   */
   readonly config?: VertexAiIndexMetadataConfig;

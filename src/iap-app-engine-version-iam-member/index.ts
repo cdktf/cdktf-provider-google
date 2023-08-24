@@ -45,7 +45,7 @@ export interface IapAppEngineVersionIamMemberConfig extends cdktf.TerraformMetaA
   readonly versionId: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_app_engine_version_iam_member#condition IapAppEngineVersionIamMember#condition}
   */
   readonly condition?: IapAppEngineVersionIamMemberCondition;

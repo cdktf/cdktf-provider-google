@@ -33,7 +33,7 @@ export interface HealthcareHl7V2StoreIamBindingConfig extends cdktf.TerraformMet
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_hl7_v2_store_iam_binding#condition HealthcareHl7V2StoreIamBinding#condition}
   */
   readonly condition?: HealthcareHl7V2StoreIamBindingCondition;

@@ -14,25 +14,25 @@ import * as cdktf from 'cdktf';
 export interface ApigeeFlowhookConfig extends cdktf.TerraformMetaArguments {
   /**
   * Flag that specifies whether execution should continue if the flow hook throws an exception. Set to true to continue execution. Set to false to stop execution if the flow hook throws an exception. Defaults to true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#continue_on_error ApigeeFlowhook#continue_on_error}
   */
   readonly continueOnError?: boolean | cdktf.IResolvable;
   /**
   * Description of the flow hook.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#description ApigeeFlowhook#description}
   */
   readonly description?: string;
   /**
   * The resource ID of the environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#environment ApigeeFlowhook#environment}
   */
   readonly environment: string;
   /**
   * Where in the API call flow the flow hook is invoked. Must be one of PreProxyFlowHook, PostProxyFlowHook, PreTargetFlowHook, or PostTargetFlowHook.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#flow_hook_point ApigeeFlowhook#flow_hook_point}
   */
   readonly flowHookPoint: string;
@@ -45,19 +45,19 @@ export interface ApigeeFlowhookConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The Apigee Organization associated with the environment
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#org_id ApigeeFlowhook#org_id}
   */
   readonly orgId: string;
   /**
   * Id of the Sharedflow attaching to a flowhook point.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#sharedflow ApigeeFlowhook#sharedflow}
   */
   readonly sharedflow: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_flowhook#timeouts ApigeeFlowhook#timeouts}
   */
   readonly timeouts?: ApigeeFlowhookTimeouts;

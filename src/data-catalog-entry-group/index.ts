@@ -14,20 +14,20 @@ import * as cdktf from 'cdktf';
 export interface DataCatalogEntryGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_entry_group#description DataCatalogEntryGroup#description}
   */
   readonly description?: string;
   /**
   * A short name to identify the entry group, for example, "analytics data - jan 2011".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_entry_group#display_name DataCatalogEntryGroup#display_name}
   */
   readonly displayName?: string;
   /**
   * The id of the entry group to create. The id must begin with a letter or underscore,
 contain only English letters, numbers and underscores, and be at most 64 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_entry_group#entry_group_id DataCatalogEntryGroup#entry_group_id}
   */
   readonly entryGroupId: string;
@@ -44,13 +44,13 @@ contain only English letters, numbers and underscores, and be at most 64 charact
   readonly project?: string;
   /**
   * EntryGroup location region.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_entry_group#region DataCatalogEntryGroup#region}
   */
   readonly region?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_entry_group#timeouts DataCatalogEntryGroup#timeouts}
   */
   readonly timeouts?: DataCatalogEntryGroupTimeouts;

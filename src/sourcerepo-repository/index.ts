@@ -22,7 +22,7 @@ export interface SourcerepoRepositoryConfig extends cdktf.TerraformMetaArguments
   /**
   * Resource name of the repository, of the form '{{repo}}'.
 The repo name may contain slashes. eg, 'name/with/slash'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sourcerepo_repository#name SourcerepoRepository#name}
   */
   readonly name: string;
@@ -32,13 +32,13 @@ The repo name may contain slashes. eg, 'name/with/slash'
   readonly project?: string;
   /**
   * pubsub_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sourcerepo_repository#pubsub_configs SourcerepoRepository#pubsub_configs}
   */
   readonly pubsubConfigs?: SourcerepoRepositoryPubsubConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sourcerepo_repository#timeouts SourcerepoRepository#timeouts}
   */
   readonly timeouts?: SourcerepoRepositoryTimeouts;
@@ -48,7 +48,7 @@ export interface SourcerepoRepositoryPubsubConfigs {
   * The format of the Cloud Pub/Sub messages.
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sourcerepo_repository#message_format SourcerepoRepository#message_format}
   */
   readonly messageFormat: string;
@@ -57,7 +57,7 @@ export interface SourcerepoRepositoryPubsubConfigs {
 This service account needs to be in the same project as the PubsubConfig. When added,
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/sourcerepo_repository#service_account_email SourcerepoRepository#service_account_email}
   */
   readonly serviceAccountEmail?: string;

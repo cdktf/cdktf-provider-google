@@ -37,7 +37,7 @@ export interface EndpointsServiceConsumersIamMemberConfig extends cdktf.Terrafor
   readonly serviceName: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/endpoints_service_consumers_iam_member#condition EndpointsServiceConsumersIamMember#condition}
   */
   readonly condition?: EndpointsServiceConsumersIamMemberCondition;

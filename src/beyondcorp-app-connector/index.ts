@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface BeyondcorpAppConnectorConfig extends cdktf.TerraformMetaArguments {
   /**
   * An arbitrary user-provided name for the AppConnector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#display_name BeyondcorpAppConnector#display_name}
   */
   readonly displayName?: string;
@@ -27,13 +27,13 @@ export interface BeyondcorpAppConnectorConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#labels BeyondcorpAppConnector#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the AppConnector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#name BeyondcorpAppConnector#name}
   */
   readonly name: string;
@@ -43,19 +43,19 @@ export interface BeyondcorpAppConnectorConfig extends cdktf.TerraformMetaArgumen
   readonly project?: string;
   /**
   * The region of the AppConnector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#region BeyondcorpAppConnector#region}
   */
   readonly region?: string;
   /**
   * principal_info block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#principal_info BeyondcorpAppConnector#principal_info}
   */
   readonly principalInfo: BeyondcorpAppConnectorPrincipalInfo;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#timeouts BeyondcorpAppConnector#timeouts}
   */
   readonly timeouts?: BeyondcorpAppConnectorTimeouts;
@@ -63,7 +63,7 @@ export interface BeyondcorpAppConnectorConfig extends cdktf.TerraformMetaArgumen
 export interface BeyondcorpAppConnectorPrincipalInfoServiceAccount {
   /**
   * Email address of the service account.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#email BeyondcorpAppConnector#email}
   */
   readonly email: string;
@@ -127,7 +127,7 @@ export class BeyondcorpAppConnectorPrincipalInfoServiceAccountOutputReference ex
 export interface BeyondcorpAppConnectorPrincipalInfo {
   /**
   * service_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connector#service_account BeyondcorpAppConnector#service_account}
   */
   readonly serviceAccount: BeyondcorpAppConnectorPrincipalInfoServiceAccount;

@@ -21,43 +21,43 @@ export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The name of the zone in which this record set will reside.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#managed_zone DnsRecordSet#managed_zone}
   */
   readonly managedZone: string;
   /**
   * The DNS name this record set will apply to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#name DnsRecordSet#name}
   */
   readonly name: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#project DnsRecordSet#project}
   */
   readonly project?: string;
   /**
   * The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \" if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \"\" inside the Terraform configuration string (e.g. "first255characters\"\"morecharacters").
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#rrdatas DnsRecordSet#rrdatas}
   */
   readonly rrdatas?: string[];
   /**
   * The time-to-live of this record set (seconds).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ttl DnsRecordSet#ttl}
   */
   readonly ttl?: number;
   /**
   * The DNS record set type.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#type DnsRecordSet#type}
   */
   readonly type: string;
   /**
   * routing_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#routing_policy DnsRecordSet#routing_policy}
   */
   readonly routingPolicy?: DnsRecordSetRoutingPolicy;
@@ -65,43 +65,43 @@ export interface DnsRecordSetConfig extends cdktf.TerraformMetaArguments {
 export interface DnsRecordSetRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers {
   /**
   * The frontend IP address of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_address DnsRecordSet#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_protocol DnsRecordSet#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
   * The type of load balancer. This value is case-sensitive. Possible values: ["regionalL4ilb", "regionalL7ilb", "globalL7ilb"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#load_balancer_type DnsRecordSet#load_balancer_type}
   */
   readonly loadBalancerType: string;
   /**
   * The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#network_url DnsRecordSet#network_url}
   */
   readonly networkUrl: string;
   /**
   * The configured port of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#port DnsRecordSet#port}
   */
   readonly port: string;
   /**
   * The ID of the project in which the load balancer belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#project DnsRecordSet#project}
   */
   readonly project: string;
   /**
   * The region of the load balancer. Only needed for regional load balancers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#region DnsRecordSet#region}
   */
   readonly region?: string;
@@ -320,7 +320,7 @@ export class DnsRecordSetRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalance
 export interface DnsRecordSetRoutingPolicyGeoHealthCheckedTargets {
   /**
   * internal_load_balancers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#internal_load_balancers DnsRecordSet#internal_load_balancers}
   */
   readonly internalLoadBalancers: DnsRecordSetRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers[] | cdktf.IResolvable;
@@ -384,7 +384,7 @@ export class DnsRecordSetRoutingPolicyGeoHealthCheckedTargetsOutputReference ext
 export interface DnsRecordSetRoutingPolicyGeo {
   /**
   * The location name defined in Google Cloud.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#location DnsRecordSet#location}
   */
   readonly location: string;
@@ -394,7 +394,7 @@ export interface DnsRecordSetRoutingPolicyGeo {
   readonly rrdatas?: string[];
   /**
   * health_checked_targets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#health_checked_targets DnsRecordSet#health_checked_targets}
   */
   readonly healthCheckedTargets?: DnsRecordSetRoutingPolicyGeoHealthCheckedTargets;
@@ -536,43 +536,43 @@ export class DnsRecordSetRoutingPolicyGeoList extends cdktf.ComplexList {
 export interface DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers {
   /**
   * The frontend IP address of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_address DnsRecordSet#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_protocol DnsRecordSet#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
   * The type of load balancer. This value is case-sensitive. Possible values: ["regionalL4ilb", "regionalL7ilb", "globalL7ilb"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#load_balancer_type DnsRecordSet#load_balancer_type}
   */
   readonly loadBalancerType: string;
   /**
   * The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#network_url DnsRecordSet#network_url}
   */
   readonly networkUrl: string;
   /**
   * The configured port of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#port DnsRecordSet#port}
   */
   readonly port: string;
   /**
   * The ID of the project in which the load balancer belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#project DnsRecordSet#project}
   */
   readonly project: string;
   /**
   * The region of the load balancer. Only needed for regional load balancers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#region DnsRecordSet#region}
   */
   readonly region?: string;
@@ -791,7 +791,7 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 export interface DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets {
   /**
   * internal_load_balancers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#internal_load_balancers DnsRecordSet#internal_load_balancers}
   */
   readonly internalLoadBalancers: DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers[] | cdktf.IResolvable;
@@ -855,7 +855,7 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 export interface DnsRecordSetRoutingPolicyPrimaryBackupBackupGeo {
   /**
   * The location name defined in Google Cloud.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#location DnsRecordSet#location}
   */
   readonly location: string;
@@ -865,7 +865,7 @@ export interface DnsRecordSetRoutingPolicyPrimaryBackupBackupGeo {
   readonly rrdatas?: string[];
   /**
   * health_checked_targets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#health_checked_targets DnsRecordSet#health_checked_targets}
   */
   readonly healthCheckedTargets?: DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets;
@@ -1007,43 +1007,43 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupBackupGeoList extends cdktf.C
 export interface DnsRecordSetRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers {
   /**
   * The frontend IP address of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_address DnsRecordSet#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_protocol DnsRecordSet#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
   * The type of load balancer. This value is case-sensitive. Possible values: ["regionalL4ilb", "regionalL7ilb", "globalL7ilb"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#load_balancer_type DnsRecordSet#load_balancer_type}
   */
   readonly loadBalancerType: string;
   /**
   * The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#network_url DnsRecordSet#network_url}
   */
   readonly networkUrl: string;
   /**
   * The configured port of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#port DnsRecordSet#port}
   */
   readonly port: string;
   /**
   * The ID of the project in which the load balancer belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#project DnsRecordSet#project}
   */
   readonly project: string;
   /**
   * The region of the load balancer. Only needed for regional load balancers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#region DnsRecordSet#region}
   */
   readonly region?: string;
@@ -1262,7 +1262,7 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersL
 export interface DnsRecordSetRoutingPolicyPrimaryBackupPrimary {
   /**
   * internal_load_balancers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#internal_load_balancers DnsRecordSet#internal_load_balancers}
   */
   readonly internalLoadBalancers: DnsRecordSetRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers[] | cdktf.IResolvable;
@@ -1326,25 +1326,25 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupPrimaryOutputReference extend
 export interface DnsRecordSetRoutingPolicyPrimaryBackup {
   /**
   * Specifies whether to enable fencing for backup geo queries.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#enable_geo_fencing_for_backups DnsRecordSet#enable_geo_fencing_for_backups}
   */
   readonly enableGeoFencingForBackups?: boolean | cdktf.IResolvable;
   /**
   * Specifies the percentage of traffic to send to the backup targets even when the primary targets are healthy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#trickle_ratio DnsRecordSet#trickle_ratio}
   */
   readonly trickleRatio?: number;
   /**
   * backup_geo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#backup_geo DnsRecordSet#backup_geo}
   */
   readonly backupGeo: DnsRecordSetRoutingPolicyPrimaryBackupBackupGeo[] | cdktf.IResolvable;
   /**
   * primary block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#primary DnsRecordSet#primary}
   */
   readonly primary: DnsRecordSetRoutingPolicyPrimaryBackupPrimary;
@@ -1474,43 +1474,43 @@ export class DnsRecordSetRoutingPolicyPrimaryBackupOutputReference extends cdktf
 export interface DnsRecordSetRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers {
   /**
   * The frontend IP address of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_address DnsRecordSet#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#ip_protocol DnsRecordSet#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
   * The type of load balancer. This value is case-sensitive. Possible values: ["regionalL4ilb", "regionalL7ilb", "globalL7ilb"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#load_balancer_type DnsRecordSet#load_balancer_type}
   */
   readonly loadBalancerType: string;
   /**
   * The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#network_url DnsRecordSet#network_url}
   */
   readonly networkUrl: string;
   /**
   * The configured port of the load balancer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#port DnsRecordSet#port}
   */
   readonly port: string;
   /**
   * The ID of the project in which the load balancer belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#project DnsRecordSet#project}
   */
   readonly project: string;
   /**
   * The region of the load balancer. Only needed for regional load balancers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#region DnsRecordSet#region}
   */
   readonly region?: string;
@@ -1729,7 +1729,7 @@ export class DnsRecordSetRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalance
 export interface DnsRecordSetRoutingPolicyWrrHealthCheckedTargets {
   /**
   * internal_load_balancers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#internal_load_balancers DnsRecordSet#internal_load_balancers}
   */
   readonly internalLoadBalancers: DnsRecordSetRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers[] | cdktf.IResolvable;
@@ -1797,13 +1797,13 @@ export interface DnsRecordSetRoutingPolicyWrr {
   readonly rrdatas?: string[];
   /**
   * The ratio of traffic routed to the target.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#weight DnsRecordSet#weight}
   */
   readonly weight: number;
   /**
   * health_checked_targets block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#health_checked_targets DnsRecordSet#health_checked_targets}
   */
   readonly healthCheckedTargets?: DnsRecordSetRoutingPolicyWrrHealthCheckedTargets;
@@ -1945,25 +1945,25 @@ export class DnsRecordSetRoutingPolicyWrrList extends cdktf.ComplexList {
 export interface DnsRecordSetRoutingPolicy {
   /**
   * Specifies whether to enable fencing for geo queries.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#enable_geo_fencing DnsRecordSet#enable_geo_fencing}
   */
   readonly enableGeoFencing?: boolean | cdktf.IResolvable;
   /**
   * geo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#geo DnsRecordSet#geo}
   */
   readonly geo?: DnsRecordSetRoutingPolicyGeo[] | cdktf.IResolvable;
   /**
   * primary_backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#primary_backup DnsRecordSet#primary_backup}
   */
   readonly primaryBackup?: DnsRecordSetRoutingPolicyPrimaryBackup;
   /**
   * wrr block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_record_set#wrr DnsRecordSet#wrr}
   */
   readonly wrr?: DnsRecordSetRoutingPolicyWrr[] | cdktf.IResolvable;

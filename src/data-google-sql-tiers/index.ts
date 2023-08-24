@@ -21,7 +21,7 @@ export interface DataGoogleSqlTiersConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Project ID of the project for which to list tiers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_tiers#project DataGoogleSqlTiers#project}
   */
   readonly project?: string;

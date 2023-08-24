@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#bucket_id LoggingProjectBucketConfig#bucket_id}
   */
   readonly bucketId: string;
   /**
   * An optional description for this bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#description LoggingProjectBucketConfig#description}
   */
   readonly description?: string;
   /**
   * Enable log analytics for the bucket. Cannot be disabled once enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#enable_analytics LoggingProjectBucketConfig#enable_analytics}
   */
   readonly enableAnalytics?: boolean | cdktf.IResolvable;
@@ -39,31 +39,31 @@ export interface LoggingProjectBucketConfigConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The location of the bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#location LoggingProjectBucketConfig#location}
   */
   readonly location: string;
   /**
   * Whether the bucket is locked. The retention period on a locked bucket cannot be changed. Locked buckets may only be deleted if they are empty.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#locked LoggingProjectBucketConfig#locked}
   */
   readonly locked?: boolean | cdktf.IResolvable;
   /**
   * The parent project that contains the logging bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#project LoggingProjectBucketConfig#project}
   */
   readonly project: string;
   /**
   * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#retention_days LoggingProjectBucketConfig#retention_days}
   */
   readonly retentionDays?: number;
   /**
   * cmek_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#cmek_settings LoggingProjectBucketConfig#cmek_settings}
   */
   readonly cmekSettings?: LoggingProjectBucketConfigCmekSettings;
@@ -76,7 +76,7 @@ KMS key name format:
 To enable CMEK for the bucket, set this field to a valid kmsKeyName for which the associated service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the key.
 The Cloud KMS key used by the bucket can be updated by changing the kmsKeyName to a new valid key name. Encryption operations that are in progress will be completed with the key that was in use when they started. Decryption operations will be completed using the key that was used at the time of encryption unless access to that key has been revoked.
 See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/routing/managed-encryption-storage) for more information.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_project_bucket_config#kms_key_name LoggingProjectBucketConfig#kms_key_name}
   */
   readonly kmsKeyName: string;

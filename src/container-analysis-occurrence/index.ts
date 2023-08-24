@@ -23,7 +23,7 @@ export interface ContainerAnalysisOccurrenceConfig extends cdktf.TerraformMetaAr
   * The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#note_name ContainerAnalysisOccurrence#note_name}
   */
   readonly noteName: string;
@@ -33,7 +33,7 @@ filter in list requests.
   readonly project?: string;
   /**
   * A description of actions that can be taken to remedy the note.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#remediation ContainerAnalysisOccurrence#remediation}
   */
   readonly remediation?: string;
@@ -41,19 +41,19 @@ filter in list requests.
   * Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
 https://gcr.io/project/image@sha256:123abc for a Docker image.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#resource_uri ContainerAnalysisOccurrence#resource_uri}
   */
   readonly resourceUri: string;
   /**
   * attestation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#attestation ContainerAnalysisOccurrence#attestation}
   */
   readonly attestation: ContainerAnalysisOccurrenceAttestation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#timeouts ContainerAnalysisOccurrence#timeouts}
   */
   readonly timeouts?: ContainerAnalysisOccurrenceTimeouts;
@@ -71,7 +71,7 @@ Examples of valid values:
     * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA'
 * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
     * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#public_key_id ContainerAnalysisOccurrence#public_key_id}
   */
   readonly publicKeyId: string;
@@ -83,7 +83,7 @@ verification. A wrapper message might provide the
 payload explicitly. Alternatively, a message might
 have a canonical serialization that can always be
 unambiguously computed to derive the payload.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#signature ContainerAnalysisOccurrence#signature}
   */
   readonly signature?: string;
@@ -203,13 +203,13 @@ export interface ContainerAnalysisOccurrenceAttestation {
   /**
   * The serialized payload that is verified by one or
 more signatures. A base64-encoded string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#serialized_payload ContainerAnalysisOccurrence#serialized_payload}
   */
   readonly serializedPayload: string;
   /**
   * signatures block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_analysis_occurrence#signatures ContainerAnalysisOccurrence#signatures}
   */
   readonly signatures: ContainerAnalysisOccurrenceAttestationSignatures[] | cdktf.IResolvable;

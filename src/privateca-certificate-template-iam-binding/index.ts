@@ -41,7 +41,7 @@ export interface PrivatecaCertificateTemplateIamBindingConfig extends cdktf.Terr
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template_iam_binding#condition PrivatecaCertificateTemplateIamBinding#condition}
   */
   readonly condition?: PrivatecaCertificateTemplateIamBindingCondition;

@@ -21,7 +21,7 @@ export interface DataGooglePubsubSubscriptionConfig extends cdktf.TerraformMetaA
   readonly id?: string;
   /**
   * Name of the subscription.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/pubsub_subscription#name DataGooglePubsubSubscription#name}
   */
   readonly name: string;

@@ -41,7 +41,7 @@ export interface DataprocAutoscalingPolicyIamMemberConfig extends cdktf.Terrafor
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy_iam_member#condition DataprocAutoscalingPolicyIamMember#condition}
   */
   readonly condition?: DataprocAutoscalingPolicyIamMemberCondition;

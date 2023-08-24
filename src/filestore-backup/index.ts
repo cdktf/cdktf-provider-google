@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface FilestoreBackupConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#description FilestoreBackup#description}
   */
   readonly description?: string;
@@ -27,13 +27,13 @@ export interface FilestoreBackupConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Resource labels to represent user-provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#labels FilestoreBackup#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#location FilestoreBackup#location}
   */
   readonly location: string;
@@ -46,7 +46,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#name FilestoreBackup#name}
   */
   readonly name: string;
@@ -56,19 +56,19 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * Name of the file share in the source Cloud Filestore instance that the backup is created from.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#source_file_share FilestoreBackup#source_file_share}
   */
   readonly sourceFileShare: string;
   /**
   * The resource name of the source Cloud Filestore instance, in the format projects/{projectId}/locations/{locationId}/instances/{instanceId}, used to create this backup.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#source_instance FilestoreBackup#source_instance}
   */
   readonly sourceInstance: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_backup#timeouts FilestoreBackup#timeouts}
   */
   readonly timeouts?: FilestoreBackupTimeouts;

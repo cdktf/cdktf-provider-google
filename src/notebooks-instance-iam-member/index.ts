@@ -41,7 +41,7 @@ export interface NotebooksInstanceIamMemberConfig extends cdktf.TerraformMetaArg
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_instance_iam_member#condition NotebooksInstanceIamMember#condition}
   */
   readonly condition?: NotebooksInstanceIamMemberCondition;

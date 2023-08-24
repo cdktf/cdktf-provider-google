@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface IdentityPlatformTenantInboundSamlConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * Human friendly display name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#display_name IdentityPlatformTenantInboundSamlConfig#display_name}
   */
   readonly displayName: string;
   /**
   * If this config allows users to sign in with the provider.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#enabled IdentityPlatformTenantInboundSamlConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -35,7 +35,7 @@ export interface IdentityPlatformTenantInboundSamlConfigConfig extends cdktf.Ter
   * The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#name IdentityPlatformTenantInboundSamlConfig#name}
   */
   readonly name: string;
@@ -45,25 +45,25 @@ alphanumeric character, and have at least 2 characters.
   readonly project?: string;
   /**
   * The name of the tenant where this inbound SAML config resource exists
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#tenant IdentityPlatformTenantInboundSamlConfig#tenant}
   */
   readonly tenant: string;
   /**
   * idp_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#idp_config IdentityPlatformTenantInboundSamlConfig#idp_config}
   */
   readonly idpConfig: IdentityPlatformTenantInboundSamlConfigIdpConfig;
   /**
   * sp_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#sp_config IdentityPlatformTenantInboundSamlConfig#sp_config}
   */
   readonly spConfig: IdentityPlatformTenantInboundSamlConfigSpConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#timeouts IdentityPlatformTenantInboundSamlConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformTenantInboundSamlConfigTimeouts;
@@ -71,7 +71,7 @@ alphanumeric character, and have at least 2 characters.
 export interface IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates {
   /**
   * The x509 certificate
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#x509_certificate IdentityPlatformTenantInboundSamlConfig#x509_certificate}
   */
   readonly x509Certificate?: string;
@@ -170,25 +170,25 @@ export class IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificatesList
 export interface IdentityPlatformTenantInboundSamlConfigIdpConfig {
   /**
   * Unique identifier for all SAML entities
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#idp_entity_id IdentityPlatformTenantInboundSamlConfig#idp_entity_id}
   */
   readonly idpEntityId: string;
   /**
   * Indicates if outbounding SAMLRequest should be signed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#sign_request IdentityPlatformTenantInboundSamlConfig#sign_request}
   */
   readonly signRequest?: boolean | cdktf.IResolvable;
   /**
   * URL to send Authentication request to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#sso_url IdentityPlatformTenantInboundSamlConfig#sso_url}
   */
   readonly ssoUrl: string;
   /**
   * idp_certificates block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#idp_certificates IdentityPlatformTenantInboundSamlConfig#idp_certificates}
   */
   readonly idpCertificates: IdentityPlatformTenantInboundSamlConfigIdpConfigIdpCertificates[] | cdktf.IResolvable;
@@ -379,13 +379,13 @@ export class IdentityPlatformTenantInboundSamlConfigSpConfigSpCertificatesList e
 export interface IdentityPlatformTenantInboundSamlConfigSpConfig {
   /**
   * Callback URI where responses from IDP are handled. Must start with 'https://'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#callback_uri IdentityPlatformTenantInboundSamlConfig#callback_uri}
   */
   readonly callbackUri: string;
   /**
   * Unique identifier for all SAML entities.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_tenant_inbound_saml_config#sp_entity_id IdentityPlatformTenantInboundSamlConfig#sp_entity_id}
   */
   readonly spEntityId: string;

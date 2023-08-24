@@ -14,25 +14,25 @@ import * as cdktf from 'cdktf';
 export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#account_id ServiceAccount#account_id}
   */
   readonly accountId: string;
   /**
   * A text description of the service account. Must be less than or equal to 256 UTF-8 bytes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#description ServiceAccount#description}
   */
   readonly description?: string;
   /**
   * Whether the service account is disabled. Defaults to false
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#disabled ServiceAccount#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The display name for the service account. Can be updated without creating a new resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#display_name ServiceAccount#display_name}
   */
   readonly displayName?: string;
@@ -45,13 +45,13 @@ export interface ServiceAccountConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The ID of the project that the service account will be created in. Defaults to the provider project configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#project ServiceAccount#project}
   */
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/service_account#timeouts ServiceAccount#timeouts}
   */
   readonly timeouts?: ServiceAccountTimeouts;

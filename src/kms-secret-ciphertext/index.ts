@@ -14,14 +14,14 @@ import * as cdktf from 'cdktf';
 export interface KmsSecretCiphertextConfig extends cdktf.TerraformMetaArguments {
   /**
   * The additional authenticated data used for integrity checks during encryption and decryption.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#additional_authenticated_data KmsSecretCiphertext#additional_authenticated_data}
   */
   readonly additionalAuthenticatedData?: string;
   /**
   * The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#crypto_key KmsSecretCiphertext#crypto_key}
   */
   readonly cryptoKey: string;
@@ -34,13 +34,13 @@ Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
   readonly id?: string;
   /**
   * The plaintext to be encrypted.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#plaintext KmsSecretCiphertext#plaintext}
   */
   readonly plaintext: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/kms_secret_ciphertext#timeouts KmsSecretCiphertext#timeouts}
   */
   readonly timeouts?: KmsSecretCiphertextTimeouts;

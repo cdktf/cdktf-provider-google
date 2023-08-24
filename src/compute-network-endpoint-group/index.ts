@@ -15,14 +15,14 @@ export interface ComputeNetworkEndpointGroupConfig extends cdktf.TerraformMetaAr
   /**
   * The default port used if the port number is not specified in the
 network endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#default_port ComputeNetworkEndpointGroup#default_port}
   */
   readonly defaultPort?: number;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#description ComputeNetworkEndpointGroup#description}
   */
   readonly description?: string;
@@ -41,14 +41,14 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#name ComputeNetworkEndpointGroup#name}
   */
   readonly name: string;
   /**
   * The network to which all network endpoints in the NEG belong.
 Uses "default" project network if unspecified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#network ComputeNetworkEndpointGroup#network}
   */
   readonly network: string;
@@ -62,7 +62,7 @@ INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
 CONNECTION balancing modes.
 
 Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, and NON_GCP_PRIVATE_IP_PORT. Default value: "GCE_VM_IP_PORT" Possible values: ["GCE_VM_IP", "GCE_VM_IP_PORT", "NON_GCP_PRIVATE_IP_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#network_endpoint_type ComputeNetworkEndpointGroup#network_endpoint_type}
   */
   readonly networkEndpointType?: string;
@@ -72,19 +72,19 @@ Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, and NON_GCP_PRIVATE_IP_PORT.
   readonly project?: string;
   /**
   * Optional subnetwork to which all network endpoints in the NEG belong.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#subnetwork ComputeNetworkEndpointGroup#subnetwork}
   */
   readonly subnetwork?: string;
   /**
   * Zone where the network endpoint group is located.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#zone ComputeNetworkEndpointGroup#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint_group#timeouts ComputeNetworkEndpointGroup#timeouts}
   */
   readonly timeouts?: ComputeNetworkEndpointGroupTimeouts;

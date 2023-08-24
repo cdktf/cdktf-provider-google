@@ -726,7 +726,7 @@ const apigeeEndpointAttachmentConfig: apigeeEndpointAttachment.ApigeeEndpointAtt
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.endpointAttachmentId">endpointAttachmentId</a></code> | <code>string</code> | ID of the endpoint attachment. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.location">location</a></code> | <code>string</code> | Location of the endpoint attachment. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.orgId">orgId</a></code> | <code>string</code> | The Apigee Organization associated with the Apigee instance, in the format 'organizations/{{org_name}}'. |
-| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.serviceAttachment">serviceAttachment</a></code> | <code>string</code> | Format: projects/*\/regions/*\/serviceAttachments/*. |
+| <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.serviceAttachment">serviceAttachment</a></code> | <code>string</code> | Format: projects/* /regions/* /serviceAttachments/*. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#id ApigeeEndpointAttachment#id}. |
 | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-google.apigeeEndpointAttachment.ApigeeEndpointAttachmentTimeouts">ApigeeEndpointAttachmentTimeouts</a></code> | timeouts block. |
 
@@ -852,9 +852,11 @@ public readonly serviceAttachment: string;
 
 - *Type:* string
 
-Format: projects/*\/regions/*\/serviceAttachments/*.
+Format: projects/* /regions/* /serviceAttachments/*.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#service_attachment ApigeeEndpointAttachment#service_attachment}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

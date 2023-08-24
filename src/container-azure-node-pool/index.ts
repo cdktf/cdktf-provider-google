@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface ContainerAzureNodePoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#annotations ContainerAzureNodePool#annotations}
   */
   readonly annotations?: { [key: string]: string };
   /**
   * Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#azure_availability_zone ContainerAzureNodePool#azure_availability_zone}
   */
   readonly azureAvailabilityZone?: string;
   /**
   * The azureCluster for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#cluster ContainerAzureNodePool#cluster}
   */
   readonly cluster: string;
@@ -39,55 +39,55 @@ export interface ContainerAzureNodePoolConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#location ContainerAzureNodePool#location}
   */
   readonly location: string;
   /**
   * The name of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#name ContainerAzureNodePool#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#project ContainerAzureNodePool#project}
   */
   readonly project?: string;
   /**
   * The ARM ID of the subnet where the node pool VMs run. Make sure it's a subnet under the virtual network in the cluster configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#subnet_id ContainerAzureNodePool#subnet_id}
   */
   readonly subnetId: string;
   /**
   * The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#version ContainerAzureNodePool#version}
   */
   readonly version: string;
   /**
   * autoscaling block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#autoscaling ContainerAzureNodePool#autoscaling}
   */
   readonly autoscaling: ContainerAzureNodePoolAutoscaling;
   /**
   * config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#config ContainerAzureNodePool#config}
   */
   readonly config: ContainerAzureNodePoolConfigA;
   /**
   * max_pods_constraint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#max_pods_constraint ContainerAzureNodePool#max_pods_constraint}
   */
   readonly maxPodsConstraint: ContainerAzureNodePoolMaxPodsConstraint;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#timeouts ContainerAzureNodePool#timeouts}
   */
   readonly timeouts?: ContainerAzureNodePoolTimeouts;
@@ -95,13 +95,13 @@ export interface ContainerAzureNodePoolConfig extends cdktf.TerraformMetaArgumen
 export interface ContainerAzureNodePoolAutoscaling {
   /**
   * Maximum number of nodes in the node pool. Must be >= min_node_count.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#max_node_count ContainerAzureNodePool#max_node_count}
   */
   readonly maxNodeCount: number;
   /**
   * Minimum number of nodes in the node pool. Must be >= 1 and <= max_node_count.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#min_node_count ContainerAzureNodePool#min_node_count}
   */
   readonly minNodeCount: number;
@@ -185,13 +185,13 @@ export class ContainerAzureNodePoolAutoscalingOutputReference extends cdktf.Comp
 export interface ContainerAzureNodePoolConfigProxyConfig {
   /**
   * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#resource_group_id ContainerAzureNodePool#resource_group_id}
   */
   readonly resourceGroupId: string;
   /**
   * The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#secret_id ContainerAzureNodePool#secret_id}
   */
   readonly secretId: string;
@@ -275,7 +275,7 @@ export class ContainerAzureNodePoolConfigProxyConfigOutputReference extends cdkt
 export interface ContainerAzureNodePoolConfigRootVolume {
   /**
   * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#size_gib ContainerAzureNodePool#size_gib}
   */
   readonly sizeGib?: number;
@@ -342,7 +342,7 @@ export class ContainerAzureNodePoolConfigRootVolumeOutputReference extends cdktf
 export interface ContainerAzureNodePoolConfigSshConfig {
   /**
   * The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#authorized_key ContainerAzureNodePool#authorized_key}
   */
   readonly authorizedKey: string;
@@ -406,31 +406,31 @@ export class ContainerAzureNodePoolConfigSshConfigOutputReference extends cdktf.
 export interface ContainerAzureNodePoolConfigA {
   /**
   * Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#tags ContainerAzureNodePool#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#vm_size ContainerAzureNodePool#vm_size}
   */
   readonly vmSize?: string;
   /**
   * proxy_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#proxy_config ContainerAzureNodePool#proxy_config}
   */
   readonly proxyConfig?: ContainerAzureNodePoolConfigProxyConfig;
   /**
   * root_volume block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#root_volume ContainerAzureNodePool#root_volume}
   */
   readonly rootVolume?: ContainerAzureNodePoolConfigRootVolume;
   /**
   * ssh_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#ssh_config ContainerAzureNodePool#ssh_config}
   */
   readonly sshConfig: ContainerAzureNodePoolConfigSshConfig;
@@ -586,7 +586,7 @@ export class ContainerAzureNodePoolConfigAOutputReference extends cdktf.ComplexO
 export interface ContainerAzureNodePoolMaxPodsConstraint {
   /**
   * The maximum number of pods to schedule on a single node.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_node_pool#max_pods_per_node ContainerAzureNodePool#max_pods_per_node}
   */
   readonly maxPodsPerNode: number;

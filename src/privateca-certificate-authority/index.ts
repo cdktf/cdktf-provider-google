@@ -14,20 +14,20 @@ import * as cdktf from 'cdktf';
 export interface PrivatecaCertificateAuthorityConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user provided Resource ID for this Certificate Authority.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#certificate_authority_id PrivatecaCertificateAuthority#certificate_authority_id}
   */
   readonly certificateAuthorityId: string;
   /**
   * Whether or not to allow Terraform to destroy the CertificateAuthority. Unless this field is set to false
 in Terraform state, a 'terraform destroy' or 'terraform apply' that would delete the instance will fail.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#deletion_protection PrivatecaCertificateAuthority#deletion_protection}
   */
   readonly deletionProtection?: boolean | cdktf.IResolvable;
   /**
   * Desired state of the CertificateAuthority. Set this field to 'STAGED' to create a 'STAGED' root CA.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#desired_state PrivatecaCertificateAuthority#desired_state}
   */
   readonly desiredState?: string;
@@ -37,7 +37,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as 'gs://') or suffixes (such as '.googleapis.com'). For example, to use a bucket named
 my-bucket, you would simply specify 'my-bucket'. If not specified, a managed bucket will be
 created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#gcs_bucket PrivatecaCertificateAuthority#gcs_bucket}
   */
   readonly gcsBucket?: string;
@@ -51,7 +51,7 @@ created.
   /**
   * This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
 Use with care. Defaults to 'false'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#ignore_active_certificates_on_deletion PrivatecaCertificateAuthority#ignore_active_certificates_on_deletion}
   */
   readonly ignoreActiveCertificatesOnDeletion?: boolean | cdktf.IResolvable;
@@ -60,7 +60,7 @@ Use with care. Defaults to 'false'.
 
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#labels PrivatecaCertificateAuthority#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -68,26 +68,26 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
   * The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#lifetime PrivatecaCertificateAuthority#lifetime}
   */
   readonly lifetime?: string;
   /**
   * Location of the CertificateAuthority. A full list of valid locations can be found by
 running 'gcloud privateca locations list'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#location PrivatecaCertificateAuthority#location}
   */
   readonly location: string;
   /**
   * The signed CA certificate issued from the subordinated CA's CSR. This is needed when activating the subordiante CA with a third party issuer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#pem_ca_certificate PrivatecaCertificateAuthority#pem_ca_certificate}
   */
   readonly pemCaCertificate?: string;
   /**
   * The name of the CaPool this Certificate Authority belongs to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#pool PrivatecaCertificateAuthority#pool}
   */
   readonly pool: string;
@@ -100,7 +100,7 @@ running 'gcloud privateca locations list'.
 possible without a 30-day grace period where undeletion would have been
 allowed. If you proceed, there will be no way to recover this CA.
 Use with care. Defaults to 'false'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#skip_grace_period PrivatecaCertificateAuthority#skip_grace_period}
   */
   readonly skipGracePeriod?: boolean | cdktf.IResolvable;
@@ -109,31 +109,31 @@ Use with care. Defaults to 'false'.
 
 ~> **Note:** For 'SUBORDINATE' Certificate Authorities, they need to
 be activated before they can issue certificates. Default value: "SELF_SIGNED" Possible values: ["SELF_SIGNED", "SUBORDINATE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#type PrivatecaCertificateAuthority#type}
   */
   readonly type?: string;
   /**
   * config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#config PrivatecaCertificateAuthority#config}
   */
   readonly config: PrivatecaCertificateAuthorityConfigA;
   /**
   * key_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#key_spec PrivatecaCertificateAuthority#key_spec}
   */
   readonly keySpec: PrivatecaCertificateAuthorityKeySpec;
   /**
   * subordinate_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#subordinate_config PrivatecaCertificateAuthority#subordinate_config}
   */
   readonly subordinateConfig?: PrivatecaCertificateAuthoritySubordinateConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#timeouts PrivatecaCertificateAuthority#timeouts}
   */
   readonly timeouts?: PrivatecaCertificateAuthorityTimeouts;
@@ -210,49 +210,49 @@ export class PrivatecaCertificateAuthorityAccessUrlsList extends cdktf.ComplexLi
 export interface PrivatecaCertificateAuthorityConfigSubjectConfigSubject {
   /**
   * The common name of the distinguished name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#common_name PrivatecaCertificateAuthority#common_name}
   */
   readonly commonName: string;
   /**
   * The country code of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#country_code PrivatecaCertificateAuthority#country_code}
   */
   readonly countryCode?: string;
   /**
   * The locality or city of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#locality PrivatecaCertificateAuthority#locality}
   */
   readonly locality?: string;
   /**
   * The organization of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#organization PrivatecaCertificateAuthority#organization}
   */
   readonly organization: string;
   /**
   * The organizational unit of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#organizational_unit PrivatecaCertificateAuthority#organizational_unit}
   */
   readonly organizationalUnit?: string;
   /**
   * The postal code of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#postal_code PrivatecaCertificateAuthority#postal_code}
   */
   readonly postalCode?: string;
   /**
   * The province, territory, or regional state of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#province PrivatecaCertificateAuthority#province}
   */
   readonly province?: string;
   /**
   * The street address of the subject.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#street_address PrivatecaCertificateAuthority#street_address}
   */
   readonly streetAddress?: string;
@@ -474,25 +474,25 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectOutputRefere
 export interface PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName {
   /**
   * Contains only valid, fully-qualified host names.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#dns_names PrivatecaCertificateAuthority#dns_names}
   */
   readonly dnsNames?: string[];
   /**
   * Contains only valid RFC 2822 E-mail addresses.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#email_addresses PrivatecaCertificateAuthority#email_addresses}
   */
   readonly emailAddresses?: string[];
   /**
   * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#ip_addresses PrivatecaCertificateAuthority#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
   * Contains only valid RFC 3986 URIs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#uris PrivatecaCertificateAuthority#uris}
   */
   readonly uris?: string[];
@@ -628,13 +628,13 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltNameOutpu
 export interface PrivatecaCertificateAuthorityConfigSubjectConfig {
   /**
   * subject block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#subject PrivatecaCertificateAuthority#subject}
   */
   readonly subject: PrivatecaCertificateAuthorityConfigSubjectConfigSubject;
   /**
   * subject_alt_name block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#subject_alt_name PrivatecaCertificateAuthority#subject_alt_name}
   */
   readonly subjectAltName?: PrivatecaCertificateAuthorityConfigSubjectConfigSubjectAltName;
@@ -721,7 +721,7 @@ export class PrivatecaCertificateAuthorityConfigSubjectConfigOutputReference ext
 export interface PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#object_id_path PrivatecaCertificateAuthority#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -786,19 +786,19 @@ export interface PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensio
   /**
   * Indicates whether or not this extension is critical (i.e., if the client does not know how to
 handle this extension, the client should consider this to be an error).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#critical PrivatecaCertificateAuthority#critical}
   */
   readonly critical: boolean | cdktf.IResolvable;
   /**
   * The value of this X.509 extension. A base64-encoded string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#value PrivatecaCertificateAuthority#value}
   */
   readonly value: string;
   /**
   * object_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#object_id PrivatecaCertificateAuthority#object_id}
   */
   readonly objectId: PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsObjectId;
@@ -934,7 +934,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensionsLi
 export interface PrivatecaCertificateAuthorityConfigX509ConfigCaOptions {
   /**
   * When true, the "CA" in Basic Constraints extension will be set to true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#is_ca PrivatecaCertificateAuthority#is_ca}
   */
   readonly isCa: boolean | cdktf.IResolvable;
@@ -942,14 +942,14 @@ export interface PrivatecaCertificateAuthorityConfigX509ConfigCaOptions {
   * Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
 subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. Setting the value to 0
 requires setting 'zero_max_issuer_path_length = true'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#max_issuer_path_length PrivatecaCertificateAuthority#max_issuer_path_length}
   */
   readonly maxIssuerPathLength?: number;
   /**
   * When true, the "CA" in Basic Constraints extension will be set to false.
 If both 'is_ca' and 'non_ca' are unset, the extension will be omitted from the CA certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#non_ca PrivatecaCertificateAuthority#non_ca}
   */
   readonly nonCa?: boolean | cdktf.IResolvable;
@@ -957,7 +957,7 @@ If both 'is_ca' and 'non_ca' are unset, the extension will be omitted from the C
   * When true, the "path length constraint" in Basic Constraints extension will be set to 0.
 If both 'max_issuer_path_length' and 'zero_max_issuer_path_length' are unset,
 the max path length will be omitted from the CA certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#zero_max_issuer_path_length PrivatecaCertificateAuthority#zero_max_issuer_path_length}
   */
   readonly zeroMaxIssuerPathLength?: boolean | cdktf.IResolvable;
@@ -1090,55 +1090,55 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigCaOptionsOutputReferen
 export interface PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage {
   /**
   * The key may be used to sign certificates.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#cert_sign PrivatecaCertificateAuthority#cert_sign}
   */
   readonly certSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#content_commitment PrivatecaCertificateAuthority#content_commitment}
   */
   readonly contentCommitment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used sign certificate revocation lists.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#crl_sign PrivatecaCertificateAuthority#crl_sign}
   */
   readonly crlSign?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#data_encipherment PrivatecaCertificateAuthority#data_encipherment}
   */
   readonly dataEncipherment?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to decipher only.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#decipher_only PrivatecaCertificateAuthority#decipher_only}
   */
   readonly decipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used for digital signatures.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#digital_signature PrivatecaCertificateAuthority#digital_signature}
   */
   readonly digitalSignature?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher only.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#encipher_only PrivatecaCertificateAuthority#encipher_only}
   */
   readonly encipherOnly?: boolean | cdktf.IResolvable;
   /**
   * The key may be used in a key agreement protocol.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#key_agreement PrivatecaCertificateAuthority#key_agreement}
   */
   readonly keyAgreement?: boolean | cdktf.IResolvable;
   /**
   * The key may be used to encipher other keys.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#key_encipherment PrivatecaCertificateAuthority#key_encipherment}
   */
   readonly keyEncipherment?: boolean | cdktf.IResolvable;
@@ -1389,37 +1389,37 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsageOu
 export interface PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage {
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#client_auth PrivatecaCertificateAuthority#client_auth}
   */
   readonly clientAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#code_signing PrivatecaCertificateAuthority#code_signing}
   */
   readonly codeSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#email_protection PrivatecaCertificateAuthority#email_protection}
   */
   readonly emailProtection?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#ocsp_signing PrivatecaCertificateAuthority#ocsp_signing}
   */
   readonly ocspSigning?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#server_auth PrivatecaCertificateAuthority#server_auth}
   */
   readonly serverAuth?: boolean | cdktf.IResolvable;
   /**
   * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#time_stamping PrivatecaCertificateAuthority#time_stamping}
   */
   readonly timeStamping?: boolean | cdktf.IResolvable;
@@ -1601,7 +1601,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsa
 export interface PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#object_id_path PrivatecaCertificateAuthority#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -1697,19 +1697,19 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtende
 export interface PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage {
   /**
   * base_key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#base_key_usage PrivatecaCertificateAuthority#base_key_usage}
   */
   readonly baseKeyUsage: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageBaseKeyUsage;
   /**
   * extended_key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#extended_key_usage PrivatecaCertificateAuthority#extended_key_usage}
   */
   readonly extendedKeyUsage: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageExtendedKeyUsage;
   /**
   * unknown_extended_key_usages block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#unknown_extended_key_usages PrivatecaCertificateAuthority#unknown_extended_key_usages}
   */
   readonly unknownExtendedKeyUsages?: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsages[] | cdktf.IResolvable;
@@ -1816,7 +1816,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigKeyUsageOutputReferenc
 export interface PrivatecaCertificateAuthorityConfigX509ConfigNameConstraints {
   /**
   * Indicates whether or not the name constraints are marked critical.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#critical PrivatecaCertificateAuthority#critical}
   */
   readonly critical: boolean | cdktf.IResolvable;
@@ -1826,7 +1826,7 @@ constructed by simply adding zero or more labels to
 the left-hand side of the name satisfies the name constraint.
 For example, 'example.com', 'www.example.com', 'www.sub.example.com'
 would satisfy 'example.com' while 'example1.com' does not.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#excluded_dns_names PrivatecaCertificateAuthority#excluded_dns_names}
   */
   readonly excludedDnsNames?: string[];
@@ -1835,7 +1835,7 @@ would satisfy 'example.com' while 'example1.com' does not.
 email address, a hostname to indicate all email addresses on that host or
 a domain with a leading period (e.g. '.example.com') to indicate
 all email addresses in that domain.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#excluded_email_addresses PrivatecaCertificateAuthority#excluded_email_addresses}
   */
   readonly excludedEmailAddresses?: string[];
@@ -1844,7 +1844,7 @@ all email addresses in that domain.
 are expressed using CIDR notation as specified in RFC 4632.
 For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
 addresses.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#excluded_ip_ranges PrivatecaCertificateAuthority#excluded_ip_ranges}
   */
   readonly excludedIpRanges?: string[];
@@ -1852,7 +1852,7 @@ addresses.
   * Contains the excluded URIs that apply to the host part of the name.
 The value can be a hostname or a domain with a
 leading period (like '.example.com')
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#excluded_uris PrivatecaCertificateAuthority#excluded_uris}
   */
   readonly excludedUris?: string[];
@@ -1862,7 +1862,7 @@ constructed by simply adding zero or more labels to
 the left-hand side of the name satisfies the name constraint.
 For example, 'example.com', 'www.example.com', 'www.sub.example.com'
 would satisfy 'example.com' while 'example1.com' does not.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#permitted_dns_names PrivatecaCertificateAuthority#permitted_dns_names}
   */
   readonly permittedDnsNames?: string[];
@@ -1871,7 +1871,7 @@ would satisfy 'example.com' while 'example1.com' does not.
 email address, a hostname to indicate all email addresses on that host or
 a domain with a leading period (e.g. '.example.com') to indicate
 all email addresses in that domain.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#permitted_email_addresses PrivatecaCertificateAuthority#permitted_email_addresses}
   */
   readonly permittedEmailAddresses?: string[];
@@ -1880,7 +1880,7 @@ all email addresses in that domain.
 are expressed using CIDR notation as specified in RFC 4632.
 For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
 addresses.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#permitted_ip_ranges PrivatecaCertificateAuthority#permitted_ip_ranges}
   */
   readonly permittedIpRanges?: string[];
@@ -1888,7 +1888,7 @@ addresses.
   * Contains the permitted URIs that apply to the host part of the name.
 The value can be a hostname or a domain with a
 leading period (like '.example.com')
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#permitted_uris PrivatecaCertificateAuthority#permitted_uris}
   */
   readonly permittedUris?: string[];
@@ -2136,7 +2136,7 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigNameConstraintsOutputR
 export interface PrivatecaCertificateAuthorityConfigX509ConfigPolicyIds {
   /**
   * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#object_id_path PrivatecaCertificateAuthority#object_id_path}
   */
   readonly objectIdPath: number[];
@@ -2233,37 +2233,37 @@ export interface PrivatecaCertificateAuthorityConfigX509Config {
   /**
   * Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
 "Authority Information Access" extension in the certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#aia_ocsp_servers PrivatecaCertificateAuthority#aia_ocsp_servers}
   */
   readonly aiaOcspServers?: string[];
   /**
   * additional_extensions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#additional_extensions PrivatecaCertificateAuthority#additional_extensions}
   */
   readonly additionalExtensions?: PrivatecaCertificateAuthorityConfigX509ConfigAdditionalExtensions[] | cdktf.IResolvable;
   /**
   * ca_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#ca_options PrivatecaCertificateAuthority#ca_options}
   */
   readonly caOptions: PrivatecaCertificateAuthorityConfigX509ConfigCaOptions;
   /**
   * key_usage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#key_usage PrivatecaCertificateAuthority#key_usage}
   */
   readonly keyUsage: PrivatecaCertificateAuthorityConfigX509ConfigKeyUsage;
   /**
   * name_constraints block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#name_constraints PrivatecaCertificateAuthority#name_constraints}
   */
   readonly nameConstraints?: PrivatecaCertificateAuthorityConfigX509ConfigNameConstraints;
   /**
   * policy_ids block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#policy_ids PrivatecaCertificateAuthority#policy_ids}
   */
   readonly policyIds?: PrivatecaCertificateAuthorityConfigX509ConfigPolicyIds[] | cdktf.IResolvable;
@@ -2439,13 +2439,13 @@ export class PrivatecaCertificateAuthorityConfigX509ConfigOutputReference extend
 export interface PrivatecaCertificateAuthorityConfigA {
   /**
   * subject_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#subject_config PrivatecaCertificateAuthority#subject_config}
   */
   readonly subjectConfig: PrivatecaCertificateAuthorityConfigSubjectConfig;
   /**
   * x509_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#x509_config PrivatecaCertificateAuthority#x509_config}
   */
   readonly x509Config: PrivatecaCertificateAuthorityConfigX509Config;
@@ -2530,15 +2530,17 @@ export interface PrivatecaCertificateAuthorityKeySpec {
   /**
   * The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM. Possible values: ["SIGN_HASH_ALGORITHM_UNSPECIFIED", "RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256", "EC_P256_SHA256", "EC_P384_SHA384"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#algorithm PrivatecaCertificateAuthority#algorithm}
   */
   readonly algorithm?: string;
   /**
   * The resource name for an existing Cloud KMS CryptoKeyVersion in the format
-'projects/*\/locations/*\/keyRings/*\/cryptoKeys/*\/cryptoKeyVersions/*'.
-  * 
+'projects/* /locations/* /keyRings/* /cryptoKeys/* /cryptoKeyVersions/*'.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#cloud_kms_key_version PrivatecaCertificateAuthority#cloud_kms_key_version}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly cloudKmsKeyVersion?: string;
 }
@@ -2627,7 +2629,7 @@ export class PrivatecaCertificateAuthorityKeySpecOutputReference extends cdktf.C
 export interface PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain {
   /**
   * Expected to be in leaf-to-root order according to RFC 5246.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#pem_certificates PrivatecaCertificateAuthority#pem_certificates}
   */
   readonly pemCertificates?: string[];
@@ -2696,14 +2698,16 @@ export interface PrivatecaCertificateAuthoritySubordinateConfig {
   * This can refer to a CertificateAuthority that was used to create a
 subordinate CertificateAuthority. This field is used for information
 and usability purposes only. The resource name is in the format
-'projects/*\/locations/*\/caPools/*\/certificateAuthorities/*'.
-  * 
+'projects/* /locations/* /caPools/* /certificateAuthorities/*'.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#certificate_authority PrivatecaCertificateAuthority#certificate_authority}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly certificateAuthority?: string;
   /**
   * pem_issuer_chain block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_authority#pem_issuer_chain PrivatecaCertificateAuthority#pem_issuer_chain}
   */
   readonly pemIssuerChain?: PrivatecaCertificateAuthoritySubordinateConfigPemIssuerChain;

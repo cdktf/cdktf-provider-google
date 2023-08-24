@@ -16,13 +16,13 @@ export interface IapClientConfig extends cdktf.TerraformMetaArguments {
   * Identifier of the brand to which this client
 is attached to. The format is
 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_client#brand IapClient#brand}
   */
   readonly brand: string;
   /**
   * Human-friendly name given to the OAuth client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_client#display_name IapClient#display_name}
   */
   readonly displayName: string;
@@ -35,7 +35,7 @@ is attached to. The format is
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_client#timeouts IapClient#timeouts}
   */
   readonly timeouts?: IapClientTimeouts;

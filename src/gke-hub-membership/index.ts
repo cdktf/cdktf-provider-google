@@ -21,13 +21,13 @@ export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Labels to apply to this membership.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#labels GkeHubMembership#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The client-provided identifier of the membership.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#membership_id GkeHubMembership#membership_id}
   */
   readonly membershipId: string;
@@ -37,19 +37,19 @@ export interface GkeHubMembershipConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * authority block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#authority GkeHubMembership#authority}
   */
   readonly authority?: GkeHubMembershipAuthority;
   /**
   * endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#endpoint GkeHubMembership#endpoint}
   */
   readonly endpoint?: GkeHubMembershipEndpoint;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#timeouts GkeHubMembership#timeouts}
   */
   readonly timeouts?: GkeHubMembershipTimeouts;
@@ -58,7 +58,7 @@ export interface GkeHubMembershipAuthority {
   /**
   * A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://' and // be a valid
 with length <2000 characters. For example: 'https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster' (must be 'locations' rather than 'zones'). If the cluster is provisioned with Terraform, this is '"https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}"'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#issuer GkeHubMembership#issuer}
   */
   readonly issuer: string;
@@ -126,7 +126,7 @@ For example: '//container.googleapis.com/projects/my-project/zones/us-west1-a/cl
 It can be at the most 1000 characters in length. If the cluster is provisioned with Terraform,
 this can be '"//container.googleapis.com/${google_container_cluster.my-cluster.id}"' or
 'google_container_cluster.my-cluster.id'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#resource_link GkeHubMembership#resource_link}
   */
   readonly resourceLink: string;
@@ -190,7 +190,7 @@ export class GkeHubMembershipEndpointGkeClusterOutputReference extends cdktf.Com
 export interface GkeHubMembershipEndpoint {
   /**
   * gke_cluster block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_hub_membership#gke_cluster GkeHubMembership#gke_cluster}
   */
   readonly gkeCluster?: GkeHubMembershipEndpointGkeCluster;

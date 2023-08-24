@@ -37,7 +37,7 @@ export interface ApigeeEnvironmentIamBindingConfig extends cdktf.TerraformMetaAr
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_environment_iam_binding#condition ApigeeEnvironmentIamBinding#condition}
   */
   readonly condition?: ApigeeEnvironmentIamBindingCondition;

@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface ComputeTargetTcpProxyConfig extends cdktf.TerraformMetaArguments {
   /**
   * A reference to the BackendService resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#backend_service ComputeTargetTcpProxy#backend_service}
   */
   readonly backendService: string;
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#description ComputeTargetTcpProxy#description}
   */
   readonly description?: string;
@@ -39,7 +39,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#name ComputeTargetTcpProxy#name}
   */
   readonly name: string;
@@ -50,20 +50,20 @@ character, which cannot be a dash.
   /**
   * This field only applies when the forwarding rule that references
 this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#proxy_bind ComputeTargetTcpProxy#proxy_bind}
   */
   readonly proxyBind?: boolean | cdktf.IResolvable;
   /**
   * Specifies the type of proxy header to append before sending data to
 the backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#proxy_header ComputeTargetTcpProxy#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_tcp_proxy#timeouts ComputeTargetTcpProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetTcpProxyTimeouts;

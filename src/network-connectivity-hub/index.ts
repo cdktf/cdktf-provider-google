@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of the hub.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_hub#description NetworkConnectivityHub#description}
   */
   readonly description?: string;
@@ -27,25 +27,25 @@ export interface NetworkConnectivityHubConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_hub#labels NetworkConnectivityHub#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_hub#name NetworkConnectivityHub#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_hub#project NetworkConnectivityHub#project}
   */
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_hub#timeouts NetworkConnectivityHub#timeouts}
   */
   readonly timeouts?: NetworkConnectivityHubTimeouts;

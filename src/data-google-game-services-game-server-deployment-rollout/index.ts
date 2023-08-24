@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleGameServicesGameServerDeploymentRolloutConfig extends cdktf.TerraformMetaArguments {
   /**
   * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/game_services_game_server_deployment_rollout#deployment_id DataGoogleGameServicesGameServerDeploymentRollout#deployment_id}
   */
   readonly deploymentId: string;

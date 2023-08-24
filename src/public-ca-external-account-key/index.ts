@@ -21,7 +21,7 @@ export interface PublicCaExternalAccountKeyConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * Location for the externalAccountKey. Currently only 'global' is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/public_ca_external_account_key#location PublicCaExternalAccountKey#location}
   */
   readonly location?: string;
@@ -31,7 +31,7 @@ export interface PublicCaExternalAccountKeyConfig extends cdktf.TerraformMetaArg
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/public_ca_external_account_key#timeouts PublicCaExternalAccountKey#timeouts}
   */
   readonly timeouts?: PublicCaExternalAccountKeyTimeouts;

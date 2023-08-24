@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleFolderOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/folder_organization_policy#constraint DataGoogleFolderOrganizationPolicy#constraint}
   */
   readonly constraint: string;
   /**
   * The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/folder_organization_policy#folder DataGoogleFolderOrganizationPolicy#folder}
   */
   readonly folder: string;

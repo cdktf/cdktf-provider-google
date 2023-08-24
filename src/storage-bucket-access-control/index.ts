@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface StorageBucketAccessControlConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_bucket_access_control#bucket StorageBucketAccessControl#bucket}
   */
   readonly bucket: string;
@@ -34,7 +34,7 @@ Examples:
   group-example@googlegroups.com.
   To refer to all members of the Google Apps for Business domain
   example.com, the entity would be domain-example.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_bucket_access_control#entity StorageBucketAccessControl#entity}
   */
   readonly entity: string;
@@ -47,13 +47,13 @@ Examples:
   readonly id?: string;
   /**
   * The access permission for the entity. Possible values: ["OWNER", "READER", "WRITER"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_bucket_access_control#role StorageBucketAccessControl#role}
   */
   readonly role?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_bucket_access_control#timeouts StorageBucketAccessControl#timeouts}
   */
   readonly timeouts?: StorageBucketAccessControlTimeouts;

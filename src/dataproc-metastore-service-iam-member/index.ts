@@ -41,7 +41,7 @@ export interface DataprocMetastoreServiceIamMemberConfig extends cdktf.Terraform
   readonly serviceId: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_metastore_service_iam_member#condition DataprocMetastoreServiceIamMember#condition}
   */
   readonly condition?: DataprocMetastoreServiceIamMemberCondition;

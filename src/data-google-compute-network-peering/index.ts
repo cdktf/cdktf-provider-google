@@ -21,19 +21,19 @@ export interface DataGoogleComputeNetworkPeeringConfig extends cdktf.TerraformMe
   readonly id?: string;
   /**
   * Name of the peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_network_peering#name DataGoogleComputeNetworkPeering#name}
   */
   readonly name: string;
   /**
   * The primary network of the peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_network_peering#network DataGoogleComputeNetworkPeering#network}
   */
   readonly network: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_network_peering#timeouts DataGoogleComputeNetworkPeering#timeouts}
   */
   readonly timeouts?: DataGoogleComputeNetworkPeeringTimeouts;

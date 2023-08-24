@@ -21,7 +21,7 @@ export interface PubsubLiteSubscriptionConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Name of the subscription.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#name PubsubLiteSubscription#name}
   */
   readonly name: string;
@@ -31,31 +31,31 @@ export interface PubsubLiteSubscriptionConfig extends cdktf.TerraformMetaArgumen
   readonly project?: string;
   /**
   * The region of the pubsub lite topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#region PubsubLiteSubscription#region}
   */
   readonly region?: string;
   /**
   * A reference to a Topic resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#topic PubsubLiteSubscription#topic}
   */
   readonly topic: string;
   /**
   * The zone of the pubsub lite topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#zone PubsubLiteSubscription#zone}
   */
   readonly zone?: string;
   /**
   * delivery_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#delivery_config PubsubLiteSubscription#delivery_config}
   */
   readonly deliveryConfig?: PubsubLiteSubscriptionDeliveryConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#timeouts PubsubLiteSubscription#timeouts}
   */
   readonly timeouts?: PubsubLiteSubscriptionTimeouts;
@@ -63,7 +63,7 @@ export interface PubsubLiteSubscriptionConfig extends cdktf.TerraformMetaArgumen
 export interface PubsubLiteSubscriptionDeliveryConfig {
   /**
   * When this subscription should send messages to subscribers relative to messages persistence in storage. Possible values: ["DELIVER_IMMEDIATELY", "DELIVER_AFTER_STORED", "DELIVERY_REQUIREMENT_UNSPECIFIED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_lite_subscription#delivery_requirement PubsubLiteSubscription#delivery_requirement}
   */
   readonly deliveryRequirement: string;

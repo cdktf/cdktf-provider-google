@@ -15,13 +15,13 @@ export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMet
   /**
   * The deletion policy for the shared VPC service. Setting ABANDON allows the resource
 				to be abandoned rather than deleted. Possible values are: "ABANDON".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_service_project#deletion_policy ComputeSharedVpcServiceProject#deletion_policy}
   */
   readonly deletionPolicy?: string;
   /**
   * The ID of a host project to associate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_service_project#host_project ComputeSharedVpcServiceProject#host_project}
   */
   readonly hostProject: string;
@@ -34,13 +34,13 @@ export interface ComputeSharedVpcServiceProjectConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * The ID of the project that will serve as a Shared VPC service project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_service_project#service_project ComputeSharedVpcServiceProject#service_project}
   */
   readonly serviceProject: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_shared_vpc_service_project#timeouts ComputeSharedVpcServiceProject#timeouts}
   */
   readonly timeouts?: ComputeSharedVpcServiceProjectTimeouts;

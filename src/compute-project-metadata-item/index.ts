@@ -21,25 +21,25 @@ export interface ComputeProjectMetadataItemConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The metadata key to set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_metadata_item#key ComputeProjectMetadataItem#key}
   */
   readonly key: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_metadata_item#project ComputeProjectMetadataItem#project}
   */
   readonly project?: string;
   /**
   * The value to set for the given metadata key.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_metadata_item#value ComputeProjectMetadataItem#value}
   */
   readonly value: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_project_metadata_item#timeouts ComputeProjectMetadataItem#timeouts}
   */
   readonly timeouts?: ComputeProjectMetadataItemTimeouts;

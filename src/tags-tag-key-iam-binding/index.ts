@@ -33,7 +33,7 @@ export interface TagsTagKeyIamBindingConfig extends cdktf.TerraformMetaArguments
   readonly tagKey: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_key_iam_binding#condition TagsTagKeyIamBinding#condition}
   */
   readonly condition?: TagsTagKeyIamBindingCondition;

@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/project_organization_policy#constraint DataGoogleProjectOrganizationPolicy#constraint}
   */
   readonly constraint: string;
@@ -27,7 +27,7 @@ export interface DataGoogleProjectOrganizationPolicyConfig extends cdktf.Terrafo
   readonly id?: string;
   /**
   * The project ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/project_organization_policy#project DataGoogleProjectOrganizationPolicy#project}
   */
   readonly project: string;

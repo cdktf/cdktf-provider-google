@@ -17,19 +17,19 @@ export interface BigqueryCapacityCommitmentConfig extends cdktf.TerraformMetaArg
 empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character
 cannot be a dash. Max length is 64 characters. NOTE: this ID won't be kept if the capacity commitment is split
 or merged.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#capacity_commitment_id BigqueryCapacityCommitment#capacity_commitment_id}
   */
   readonly capacityCommitmentId?: string;
   /**
   * The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#edition BigqueryCapacityCommitment#edition}
   */
   readonly edition?: string;
   /**
   * If true, fail the request if another project in the organization has a capacity commitment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#enforce_single_admin_project_per_org BigqueryCapacityCommitment#enforce_single_admin_project_per_org}
   */
   readonly enforceSingleAdminProjectPerOrg?: string;
@@ -43,13 +43,13 @@ or merged.
   /**
   * The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#location BigqueryCapacityCommitment#location}
   */
   readonly location?: string;
   /**
   * Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#plan BigqueryCapacityCommitment#plan}
   */
   readonly plan: string;
@@ -59,19 +59,19 @@ Examples: US, EU, asia-northeast1. The default value is US.
   readonly project?: string;
   /**
   * The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#renewal_plan BigqueryCapacityCommitment#renewal_plan}
   */
   readonly renewalPlan?: string;
   /**
   * Number of slots in this commitment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#slot_count BigqueryCapacityCommitment#slot_count}
   */
   readonly slotCount: number;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_capacity_commitment#timeouts BigqueryCapacityCommitment#timeouts}
   */
   readonly timeouts?: BigqueryCapacityCommitmentTimeouts;

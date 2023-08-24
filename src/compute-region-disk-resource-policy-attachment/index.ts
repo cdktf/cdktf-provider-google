@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionDiskResourcePolicyAttachmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the regional disk in which the resource policies are attached to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_disk_resource_policy_attachment#disk ComputeRegionDiskResourcePolicyAttachment#disk}
   */
   readonly disk: string;
@@ -28,7 +28,7 @@ export interface ComputeRegionDiskResourcePolicyAttachmentConfig extends cdktf.T
   /**
   * The resource policy to be attached to the disk for scheduling snapshot
 creation. Do not specify the self link.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_disk_resource_policy_attachment#name ComputeRegionDiskResourcePolicyAttachment#name}
   */
   readonly name: string;
@@ -38,13 +38,13 @@ creation. Do not specify the self link.
   readonly project?: string;
   /**
   * A reference to the region where the disk resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_disk_resource_policy_attachment#region ComputeRegionDiskResourcePolicyAttachment#region}
   */
   readonly region?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_disk_resource_policy_attachment#timeouts ComputeRegionDiskResourcePolicyAttachment#timeouts}
   */
   readonly timeouts?: ComputeRegionDiskResourcePolicyAttachmentTimeouts;

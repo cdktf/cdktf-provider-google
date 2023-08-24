@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface MonitoringMetricDescriptorConfig extends cdktf.TerraformMetaArguments {
   /**
   * A detailed description of the metric, which can be used in documentation.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
   */
   readonly description: string;
   /**
   * A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#display_name MonitoringMetricDescriptor#display_name}
   */
   readonly displayName: string;
@@ -33,13 +33,13 @@ export interface MonitoringMetricDescriptorConfig extends cdktf.TerraformMetaArg
   readonly id?: string;
   /**
   * The launch stage of the metric definition. Possible values: ["LAUNCH_STAGE_UNSPECIFIED", "UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#launch_stage MonitoringMetricDescriptor#launch_stage}
   */
   readonly launchStage?: string;
   /**
   * Whether the metric records instantaneous values, changes to a value, etc. Some combinations of metricKind and valueType might not be supported. Possible values: ["METRIC_KIND_UNSPECIFIED", "GAUGE", "DELTA", "CUMULATIVE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#metric_kind MonitoringMetricDescriptor#metric_kind}
   */
   readonly metricKind: string;
@@ -49,7 +49,7 @@ export interface MonitoringMetricDescriptorConfig extends cdktf.TerraformMetaArg
   readonly project?: string;
   /**
   * The metric type, including its DNS name prefix. The type is not URL-encoded. All service defined metrics must be prefixed with the service name, in the format of {service name}/{relative metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric name must have only upper and lower-case letters, digits, '/' and underscores '_' are allowed. Additionally, the maximum number of characters allowed for the relative_metric_name is 100. All user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or logging.googleapis.com/user/.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#type MonitoringMetricDescriptor#type}
   */
   readonly type: string;
@@ -74,31 +74,31 @@ can create a DOUBLE CUMULATIVE metric whose unit is ks{CPU}, and then write the 
 The supported units are a subset of The Unified Code for Units of Measure standard.
 More info can be found in the API documentation
 (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#unit MonitoringMetricDescriptor#unit}
   */
   readonly unit?: string;
   /**
   * Whether the measurement is an integer, a floating-point number, etc. Some combinations of metricKind and valueType might not be supported. Possible values: ["BOOL", "INT64", "DOUBLE", "STRING", "DISTRIBUTION"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
   */
   readonly valueType: string;
   /**
   * labels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#labels MonitoringMetricDescriptor#labels}
   */
   readonly labels?: MonitoringMetricDescriptorLabels[] | cdktf.IResolvable;
   /**
   * metadata block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#metadata MonitoringMetricDescriptor#metadata}
   */
   readonly metadata?: MonitoringMetricDescriptorMetadata;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#timeouts MonitoringMetricDescriptor#timeouts}
   */
   readonly timeouts?: MonitoringMetricDescriptorTimeouts;
@@ -106,19 +106,19 @@ More info can be found in the API documentation
 export interface MonitoringMetricDescriptorLabels {
   /**
   * A human-readable description for the label.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#description MonitoringMetricDescriptor#description}
   */
   readonly description?: string;
   /**
   * The key for this label. The key must not exceed 100 characters. The first character of the key must be an upper- or lower-case letter, the remaining characters must be letters, digits or underscores, and the key must match the regular expression [a-zA-Z][a-zA-Z0-9_]*
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#key MonitoringMetricDescriptor#key}
   */
   readonly key: string;
   /**
   * The type of data that can be assigned to the label. Default value: "STRING" Possible values: ["STRING", "BOOL", "INT64"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#value_type MonitoringMetricDescriptor#value_type}
   */
   readonly valueType?: string;
@@ -260,13 +260,13 @@ export class MonitoringMetricDescriptorLabelsList extends cdktf.ComplexList {
 export interface MonitoringMetricDescriptorMetadata {
   /**
   * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#ingest_delay MonitoringMetricDescriptor#ingest_delay}
   */
   readonly ingestDelay?: string;
   /**
   * The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period. In '[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_metric_descriptor#sample_period MonitoringMetricDescriptor#sample_period}
   */
   readonly samplePeriod?: string;

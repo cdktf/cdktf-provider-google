@@ -14,14 +14,14 @@ import * as cdktf from 'cdktf';
 export interface ApigeeEnvReferencesConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. A human-readable description of this reference.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#description ApigeeEnvReferences#description}
   */
   readonly description?: string;
   /**
   * The Apigee environment group associated with the Apigee environment,
 in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#env_id ApigeeEnvReferences#env_id}
   */
   readonly envId: string;
@@ -34,25 +34,25 @@ in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
   readonly id?: string;
   /**
   * Required. The resource id of this reference. Values must match the regular expression [\w\s-.]+.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#name ApigeeEnvReferences#name}
   */
   readonly name: string;
   /**
   * Required. The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resourceType.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#refers ApigeeEnvReferences#refers}
   */
   readonly refers: string;
   /**
   * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#resource_type ApigeeEnvReferences#resource_type}
   */
   readonly resourceType: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_references#timeouts ApigeeEnvReferences#timeouts}
   */
   readonly timeouts?: ApigeeEnvReferencesTimeouts;

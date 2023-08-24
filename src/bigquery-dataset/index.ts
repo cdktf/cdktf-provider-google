@@ -16,7 +16,7 @@ export interface BigqueryDatasetConfig extends cdktf.TerraformMetaArguments {
   * A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
@@ -31,7 +31,7 @@ and does not alter the existing tables.
 The following values are supported:
 - 'und:ci': undetermined locale, case insensitive.
 - '': empty string. Default to case-sensitive behavior.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#default_collation BigqueryDataset#default_collation}
   */
   readonly defaultCollation?: string;
@@ -51,7 +51,7 @@ for partitioned tables: only one of 'defaultTableExpirationMs' and
 table. If you provide an explicit 'timePartitioning.expirationMs' when
 creating or updating a partitioned table, that value takes precedence
 over the default partition expiration time indicated by this property.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#default_partition_expiration_ms BigqueryDataset#default_partition_expiration_ms}
   */
   readonly defaultPartitionExpirationMs?: number;
@@ -69,7 +69,7 @@ If a table's 'expirationTime' is modified or removed before the
 table expires, or if you provide an explicit 'expirationTime' when
 creating a table, that value takes precedence over the default
 expiration time indicated by this property.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#default_table_expiration_ms BigqueryDataset#default_table_expiration_ms}
   */
   readonly defaultTableExpirationMs?: number;
@@ -77,19 +77,19 @@ expiration time indicated by this property.
   * If set to 'true', delete all the tables in the
 dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#delete_contents_on_destroy BigqueryDataset#delete_contents_on_destroy}
   */
   readonly deleteContentsOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * A user-friendly description of the dataset
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#description BigqueryDataset#description}
   */
   readonly description?: string;
   /**
   * A descriptive name for the dataset
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#friendly_name BigqueryDataset#friendly_name}
   */
   readonly friendlyName?: string;
@@ -104,14 +104,14 @@ destroying the resource will fail if tables are present.
   * TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#is_case_insensitive BigqueryDataset#is_case_insensitive}
   */
   readonly isCaseInsensitive?: boolean | cdktf.IResolvable;
   /**
   * The labels associated with this dataset. You can use these to
 organize and group your datasets
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#labels BigqueryDataset#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -128,13 +128,13 @@ contains at least two geographic places.
 
 The default value is multi-regional location 'US'.
 Changing this forces a new resource to be created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#location BigqueryDataset#location}
   */
   readonly location?: string;
   /**
   * Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#max_time_travel_hours BigqueryDataset#max_time_travel_hours}
   */
   readonly maxTimeTravelHours?: string;
@@ -148,25 +148,25 @@ Set this flag value to LOGICAL to use logical bytes for storage billing,
 or to PHYSICAL to use physical bytes instead.
 
 LOGICAL is the default if this flag isn't specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#storage_billing_model BigqueryDataset#storage_billing_model}
   */
   readonly storageBillingModel?: string;
   /**
   * access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#access BigqueryDataset#access}
   */
   readonly access?: BigqueryDatasetAccess[] | cdktf.IResolvable;
   /**
   * default_encryption_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#default_encryption_configuration BigqueryDataset#default_encryption_configuration}
   */
   readonly defaultEncryptionConfiguration?: BigqueryDatasetDefaultEncryptionConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#timeouts BigqueryDataset#timeouts}
   */
   readonly timeouts?: BigqueryDatasetTimeouts;
@@ -174,13 +174,13 @@ LOGICAL is the default if this flag isn't specified.
 export interface BigqueryDatasetAccessDatasetDataset {
   /**
   * The ID of the dataset containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
   */
   readonly projectId: string;
@@ -265,13 +265,13 @@ export interface BigqueryDatasetAccessDataset {
   /**
   * Which resources in the dataset this entry applies to. Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#target_types BigqueryDataset#target_types}
   */
   readonly targetTypes: string[];
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
   */
   readonly dataset: BigqueryDatasetAccessDatasetDataset;
@@ -355,13 +355,13 @@ export class BigqueryDatasetAccessDatasetOutputReference extends cdktf.ComplexOb
 export interface BigqueryDatasetAccessRoutine {
   /**
   * The ID of the dataset containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
   */
   readonly projectId: string;
@@ -369,7 +369,7 @@ export interface BigqueryDatasetAccessRoutine {
   * The ID of the routine. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 256 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#routine_id BigqueryDataset#routine_id}
   */
   readonly routineId: string;
@@ -473,13 +473,13 @@ export class BigqueryDatasetAccessRoutineOutputReference extends cdktf.ComplexOb
 export interface BigqueryDatasetAccessView {
   /**
   * The ID of the dataset containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset_id BigqueryDataset#dataset_id}
   */
   readonly datasetId: string;
   /**
   * The ID of the project containing this table.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#project_id BigqueryDataset#project_id}
   */
   readonly projectId: string;
@@ -487,7 +487,7 @@ export interface BigqueryDatasetAccessView {
   * The ID of the table. The ID must contain only letters (a-z,
 A-Z), numbers (0-9), or underscores (_). The maximum length
 is 1,024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#table_id BigqueryDataset#table_id}
   */
   readonly tableId: string;
@@ -592,13 +592,13 @@ export interface BigqueryDatasetAccess {
   /**
   * A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#domain BigqueryDataset#domain}
   */
   readonly domain?: string;
   /**
   * An email address of a Google Group to grant access to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#group_by_email BigqueryDataset#group_by_email}
   */
   readonly groupByEmail?: string;
@@ -608,7 +608,7 @@ member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles
 are swapped by the API to their basic counterparts. See
 [official docs](https://cloud.google.com/bigquery/docs/access-control).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#role BigqueryDataset#role}
   */
   readonly role?: string;
@@ -626,32 +626,32 @@ are swapped by the API to their basic counterparts. See
 
 
 * 'allAuthenticatedUsers': All authenticated BigQuery users.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#special_group BigqueryDataset#special_group}
   */
   readonly specialGroup?: string;
   /**
   * An email address of a user to grant access to. For example:
 fred@example.com
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#user_by_email BigqueryDataset#user_by_email}
   */
   readonly userByEmail?: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#dataset BigqueryDataset#dataset}
   */
   readonly dataset?: BigqueryDatasetAccessDataset;
   /**
   * routine block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#routine BigqueryDataset#routine}
   */
   readonly routine?: BigqueryDatasetAccessRoutine;
   /**
   * view block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#view BigqueryDataset#view}
   */
   readonly view?: BigqueryDatasetAccessView;
@@ -913,7 +913,7 @@ export interface BigqueryDatasetDefaultEncryptionConfiguration {
   * Describes the Cloud KMS encryption key that will be used to protect destination
 BigQuery table. The BigQuery Service Account associated with your project requires
 access to this encryption key.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset#kms_key_name BigqueryDataset#kms_key_name}
   */
   readonly kmsKeyName: string;

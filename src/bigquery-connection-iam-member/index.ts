@@ -41,7 +41,7 @@ export interface BigqueryConnectionIamMemberConfig extends cdktf.TerraformMetaAr
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_connection_iam_member#condition BigqueryConnectionIamMember#condition}
   */
   readonly condition?: BigqueryConnectionIamMemberCondition;

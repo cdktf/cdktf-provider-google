@@ -41,7 +41,7 @@ export interface NotebooksRuntimeIamBindingConfig extends cdktf.TerraformMetaArg
   readonly runtimeName: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/notebooks_runtime_iam_binding#condition NotebooksRuntimeIamBinding#condition}
   */
   readonly condition?: NotebooksRuntimeIamBindingCondition;

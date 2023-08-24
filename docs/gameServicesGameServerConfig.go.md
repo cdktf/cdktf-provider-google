@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfig(scope Construct, id *string, config GameServicesGameServerConfigConfig) GameServicesGameServerConfig
 ```
@@ -358,7 +358,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.GameServicesGameServerConfig_IsConstruct(x interface{}) *bool
 ```
@@ -390,7 +390,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.GameServicesGameServerConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -404,7 +404,7 @@ gameservicesgameserverconfig.GameServicesGameServerConfig_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.GameServicesGameServerConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -834,7 +834,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigConfig {
 	Connection: interface{},
@@ -853,7 +853,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserv
 	Location: *string,
 	Project: *string,
 	ScalingConfigs: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts,
 }
 ```
 
@@ -1095,7 +1095,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigFleetConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigFleetConfigs {
 	FleetSpec: *string,
@@ -1154,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigScalingConfigs {
 	FleetAutoscalerSpec: *string,
@@ -1236,7 +1236,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSchedules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigScalingConfigsSchedules {
 	CronJobDuration: *string,
@@ -1324,7 +1324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigScalingConfigsSelectors {
 	Labels: *map[string]*string,
@@ -1358,7 +1358,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 &gameservicesgameserverconfig.GameServicesGameServerConfigTimeouts {
 	Create: *string,
@@ -1406,7 +1406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigFleetConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigFleetConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GameServicesGameServerConfigFleetConfigsList
 ```
@@ -1549,7 +1549,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigFleetConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigFleetConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GameServicesGameServerConfigFleetConfigsOutputReference
 ```
@@ -1867,7 +1867,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GameServicesGameServerConfigScalingConfigsList
 ```
@@ -2010,7 +2010,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GameServicesGameServerConfigScalingConfigsOutputReference
 ```
@@ -2405,7 +2405,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSchedulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsSchedulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GameServicesGameServerConfigScalingConfigsSchedulesList
 ```
@@ -2548,7 +2548,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSchedulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsSchedulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GameServicesGameServerConfigScalingConfigsSchedulesOutputReference
 ```
@@ -2931,7 +2931,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GameServicesGameServerConfigScalingConfigsSelectorsList
 ```
@@ -3074,7 +3074,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigScalingConfigsSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigScalingConfigsSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GameServicesGameServerConfigScalingConfigsSelectorsOutputReference
 ```
@@ -3370,7 +3370,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.gameServicesGameServerConfig.GameServicesGameServerConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/gameservicesgameserverconfig"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/gameservicesgameserverconfig"
 
 gameservicesgameserverconfig.NewGameServicesGameServerConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GameServicesGameServerConfigTimeoutsOutputReference
 ```

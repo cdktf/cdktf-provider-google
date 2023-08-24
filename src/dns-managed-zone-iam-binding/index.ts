@@ -37,7 +37,7 @@ export interface DnsManagedZoneIamBindingConfig extends cdktf.TerraformMetaArgum
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone_iam_binding#condition DnsManagedZoneIamBinding#condition}
   */
   readonly condition?: DnsManagedZoneIamBindingCondition;

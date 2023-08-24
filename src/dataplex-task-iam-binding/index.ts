@@ -45,7 +45,7 @@ export interface DataplexTaskIamBindingConfig extends cdktf.TerraformMetaArgumen
   readonly taskId: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_task_iam_binding#condition DataplexTaskIamBinding#condition}
   */
   readonly condition?: DataplexTaskIamBindingCondition;

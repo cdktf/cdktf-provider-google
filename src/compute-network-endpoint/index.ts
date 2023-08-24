@@ -23,7 +23,7 @@ export interface ComputeNetworkEndpointConfig extends cdktf.TerraformMetaArgumen
   * The name for a specific VM instance that the IP address belongs to.
 This is required for network endpoints of type GCE_VM_IP_PORT.
 The instance must be in the same zone of network endpoint group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#instance ComputeNetworkEndpoint#instance}
   */
   readonly instance?: string;
@@ -31,13 +31,13 @@ The instance must be in the same zone of network endpoint group.
   * IPv4 address of network endpoint. The IP address must belong
 to a VM in GCE (either the primary IP or as part of an aliased IP
 range).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#ip_address ComputeNetworkEndpoint#ip_address}
   */
   readonly ipAddress: string;
   /**
   * The network endpoint group this endpoint is part of.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#network_endpoint_group ComputeNetworkEndpoint#network_endpoint_group}
   */
   readonly networkEndpointGroup: string;
@@ -45,7 +45,7 @@ range).
   * Port number of network endpoint.
 **Note** 'port' is required unless the Network Endpoint Group is created
 with the type of 'GCE_VM_IP'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#port ComputeNetworkEndpoint#port}
   */
   readonly port?: number;
@@ -55,13 +55,13 @@ with the type of 'GCE_VM_IP'
   readonly project?: string;
   /**
   * Zone where the containing network endpoint group is located.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#zone ComputeNetworkEndpoint#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_endpoint#timeouts ComputeNetworkEndpoint#timeouts}
   */
   readonly timeouts?: ComputeNetworkEndpointTimeouts;

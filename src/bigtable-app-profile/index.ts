@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   /**
   * The unique name of the app profile in the form '[_a-zA-Z0-9][-_.a-zA-Z0-9]*'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#app_profile_id BigtableAppProfile#app_profile_id}
   */
   readonly appProfileId: string;
   /**
   * Long form description of the use case for this app profile.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#description BigtableAppProfile#description}
   */
   readonly description?: string;
@@ -33,19 +33,19 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * If true, ignore safety checks when deleting/updating the app profile.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#ignore_warnings BigtableAppProfile#ignore_warnings}
   */
   readonly ignoreWarnings?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance to create the app profile within.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#instance BigtableAppProfile#instance}
   */
   readonly instance?: string;
   /**
   * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#multi_cluster_routing_cluster_ids BigtableAppProfile#multi_cluster_routing_cluster_ids}
   */
   readonly multiClusterRoutingClusterIds?: string[];
@@ -53,7 +53,7 @@ export interface BigtableAppProfileConfig extends cdktf.TerraformMetaArguments {
   * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#multi_cluster_routing_use_any BigtableAppProfile#multi_cluster_routing_use_any}
   */
   readonly multiClusterRoutingUseAny?: boolean | cdktf.IResolvable;
@@ -63,13 +63,13 @@ consistency to improve availability.
   readonly project?: string;
   /**
   * single_cluster_routing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#single_cluster_routing BigtableAppProfile#single_cluster_routing}
   */
   readonly singleClusterRouting?: BigtableAppProfileSingleClusterRouting;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#timeouts BigtableAppProfile#timeouts}
   */
   readonly timeouts?: BigtableAppProfileTimeouts;
@@ -78,13 +78,13 @@ export interface BigtableAppProfileSingleClusterRouting {
   /**
   * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#allow_transactional_writes BigtableAppProfile#allow_transactional_writes}
   */
   readonly allowTransactionalWrites?: boolean | cdktf.IResolvable;
   /**
   * The cluster to which read/write requests should be routed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_app_profile#cluster_id BigtableAppProfile#cluster_id}
   */
   readonly clusterId: string;

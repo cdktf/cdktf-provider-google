@@ -33,7 +33,7 @@ export interface HealthcareFhirStoreIamMemberConfig extends cdktf.TerraformMetaA
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/healthcare_fhir_store_iam_member#condition HealthcareFhirStoreIamMember#condition}
   */
   readonly condition?: HealthcareFhirStoreIamMemberCondition;

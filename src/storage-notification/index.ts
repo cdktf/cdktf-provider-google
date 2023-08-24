@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#bucket StorageNotification#bucket}
   */
   readonly bucket: string;
   /**
   *  A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#custom_attributes StorageNotification#custom_attributes}
   */
   readonly customAttributes?: { [key: string]: string };
   /**
   * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: "OBJECT_FINALIZE", "OBJECT_METADATA_UPDATE", "OBJECT_DELETE", "OBJECT_ARCHIVE"
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#event_types StorageNotification#event_types}
   */
   readonly eventTypes?: string[];
@@ -39,19 +39,19 @@ export interface StorageNotificationConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#object_name_prefix StorageNotification#object_name_prefix}
   */
   readonly objectNamePrefix?: string;
   /**
   * The desired content of the Payload. One of "JSON_API_V1" or "NONE".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#payload_format StorageNotification#payload_format}
   */
   readonly payloadFormat: string;
   /**
   * The Cloud Pub/Sub topic to which this subscription publishes. Expects either the  topic name, assumed to belong to the default GCP provider project, or the project-level name,  i.e. projects/my-gcp-project/topics/my-topic or my-topic. If the project is not set in the provider, you will need to use the project-level name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_notification#topic StorageNotification#topic}
   */
   readonly topic: string;

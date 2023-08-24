@@ -21,7 +21,7 @@ export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * The location of the cloud run instance. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloud_run_service#location DataGoogleCloudRunService#location}
   */
   readonly location: string;
@@ -30,7 +30,7 @@ export interface DataGoogleCloudRunServiceConfig extends cdktf.TerraformMetaArgu
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloud_run_service#name DataGoogleCloudRunService#name}
   */
   readonly name: string;

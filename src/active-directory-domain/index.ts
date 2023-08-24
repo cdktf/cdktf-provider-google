@@ -15,21 +15,21 @@ export interface ActiveDirectoryDomainConfig extends cdktf.TerraformMetaArgument
   /**
   * The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#admin ActiveDirectoryDomain#admin}
   */
   readonly admin?: string;
   /**
   * The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#authorized_networks ActiveDirectoryDomain#authorized_networks}
   */
   readonly authorizedNetworks?: string[];
   /**
   * The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#domain_name ActiveDirectoryDomain#domain_name}
   */
   readonly domainName: string;
@@ -42,14 +42,14 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   readonly id?: string;
   /**
   * Resource labels that can contain user-provided metadata
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#labels ActiveDirectoryDomain#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#locations ActiveDirectoryDomain#locations}
   */
   readonly locations: string[];
@@ -60,13 +60,13 @@ e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each locat
   /**
   * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#reserved_ip_range ActiveDirectoryDomain#reserved_ip_range}
   */
   readonly reservedIpRange: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/active_directory_domain#timeouts ActiveDirectoryDomain#timeouts}
   */
   readonly timeouts?: ActiveDirectoryDomainTimeouts;

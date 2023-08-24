@@ -41,7 +41,7 @@ export interface DataCatalogTagTemplateIamBindingConfig extends cdktf.TerraformM
   readonly tagTemplate: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template_iam_binding#condition DataCatalogTagTemplateIamBinding#condition}
   */
   readonly condition?: DataCatalogTagTemplateIamBindingCondition;

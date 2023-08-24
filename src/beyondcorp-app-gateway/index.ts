@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface BeyondcorpAppGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
   * An arbitrary user-provided name for the AppGateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#display_name BeyondcorpAppGateway#display_name}
   */
   readonly displayName?: string;
   /**
   * The type of hosting used by the AppGateway. Default value: "HOST_TYPE_UNSPECIFIED" Possible values: ["HOST_TYPE_UNSPECIFIED", "GCP_REGIONAL_MIG"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#host_type BeyondcorpAppGateway#host_type}
   */
   readonly hostType?: string;
@@ -33,13 +33,13 @@ export interface BeyondcorpAppGatewayConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#labels BeyondcorpAppGateway#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the AppGateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#name BeyondcorpAppGateway#name}
   */
   readonly name: string;
@@ -49,19 +49,19 @@ export interface BeyondcorpAppGatewayConfig extends cdktf.TerraformMetaArguments
   readonly project?: string;
   /**
   * The region of the AppGateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#region BeyondcorpAppGateway#region}
   */
   readonly region?: string;
   /**
   * The type of network connectivity used by the AppGateway. Default value: "TYPE_UNSPECIFIED" Possible values: ["TYPE_UNSPECIFIED", "TCP_PROXY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#type BeyondcorpAppGateway#type}
   */
   readonly type?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_gateway#timeouts BeyondcorpAppGateway#timeouts}
   */
   readonly timeouts?: BeyondcorpAppGatewayTimeouts;

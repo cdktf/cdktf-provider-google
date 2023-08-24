@@ -50,7 +50,7 @@ privatecaCertificateTemplate.PrivatecaCertificateTemplate(
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.location">location</a></code> | <code>str</code> | The location for the resource. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name for this CertificateTemplate in the format `projects/*\/locations/*\/certificateTemplates/*`. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.name">name</a></code> | <code>str</code> | The resource name for this CertificateTemplate in the format `projects/* /locations/* /certificateTemplates/*`. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.description">description</a></code> | <code>str</code> | Optional. A human-readable description of scenarios this template is intended for. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#id PrivatecaCertificateTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplate.Initializer.parameter.identityConstraints">identity_constraints</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateIdentityConstraints">PrivatecaCertificateTemplateIdentityConstraints</a></code> | identity_constraints block. |
@@ -136,9 +136,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-The resource name for this CertificateTemplate in the format `projects/*\/locations/*\/certificateTemplates/*`.
+The resource name for this CertificateTemplate in the format `projects/* /locations/* /certificateTemplates/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#name PrivatecaCertificateTemplate#name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1229,7 +1231,7 @@ privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig(
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.location">location</a></code> | <code>str</code> | The location for the resource. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.name">name</a></code> | <code>str</code> | The resource name for this CertificateTemplate in the format `projects/*\/locations/*\/certificateTemplates/*`. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.name">name</a></code> | <code>str</code> | The resource name for this CertificateTemplate in the format `projects/* /locations/* /certificateTemplates/*`. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.description">description</a></code> | <code>str</code> | Optional. A human-readable description of scenarios this template is intended for. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#id PrivatecaCertificateTemplate#id}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateConfig.property.identityConstraints">identity_constraints</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificateTemplate.PrivatecaCertificateTemplateIdentityConstraints">PrivatecaCertificateTemplateIdentityConstraints</a></code> | identity_constraints block. |
@@ -1333,9 +1335,11 @@ name: str
 
 - *Type:* str
 
-The resource name for this CertificateTemplate in the format `projects/*\/locations/*\/certificateTemplates/*`.
+The resource name for this CertificateTemplate in the format `projects/* /locations/* /certificateTemplates/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate_template#name PrivatecaCertificateTemplate#name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

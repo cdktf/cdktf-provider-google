@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleComputeSslPolicy.DataGoogleComputeSslPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputesslpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesslpolicy"
 
 datagooglecomputesslpolicy.NewDataGoogleComputeSslPolicy(scope Construct, id *string, config DataGoogleComputeSslPolicyConfig) DataGoogleComputeSslPolicy
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleComputeSslPolicy.DataGoogleComputeSslPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputesslpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesslpolicy"
 
 datagooglecomputesslpolicy.DataGoogleComputeSslPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleComputeSslPolicy.DataGoogleComputeSslPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputesslpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesslpolicy"
 
 datagooglecomputesslpolicy.DataGoogleComputeSslPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglecomputesslpolicy.DataGoogleComputeSslPolicy_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleComputeSslPolicy.DataGoogleComputeSslPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputesslpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesslpolicy"
 
 datagooglecomputesslpolicy.DataGoogleComputeSslPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -661,7 +661,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleComputeSslPolicy.DataGoogleComputeSslPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglecomputesslpolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecomputesslpolicy"
 
 &datagooglecomputesslpolicy.DataGoogleComputeSslPolicyConfig {
 	Connection: interface{},

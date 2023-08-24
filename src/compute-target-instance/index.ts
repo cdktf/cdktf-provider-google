@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeTargetInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#description ComputeTargetInstance#description}
   */
   readonly description?: string;
@@ -32,7 +32,7 @@ Accepts the instance self-link, relative path
 name is given, the zone will default to the given zone or
 the provider-default zone and the project will default to the
 provider-level project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#instance ComputeTargetInstance#instance}
   */
   readonly instance: string;
@@ -44,14 +44,14 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#name ComputeTargetInstance#name}
   */
   readonly name: string;
   /**
   * NAT option controlling how IPs are NAT'ed to the instance.
 Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Possible values: ["NO_NAT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#nat_policy ComputeTargetInstance#nat_policy}
   */
   readonly natPolicy?: string;
@@ -61,13 +61,13 @@ Currently only NO_NAT (default value) is supported. Default value: "NO_NAT" Poss
   readonly project?: string;
   /**
   * URL of the zone where the target instance resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#zone ComputeTargetInstance#zone}
   */
   readonly zone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_instance#timeouts ComputeTargetInstance#timeouts}
   */
   readonly timeouts?: ComputeTargetInstanceTimeouts;

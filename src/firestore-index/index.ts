@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
   /**
   * The collection being indexed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#collection FirestoreIndex#collection}
   */
   readonly collection: string;
   /**
   * The Firestore database id. Defaults to '"(default)"'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#database FirestoreIndex#database}
   */
   readonly database?: string;
@@ -37,19 +37,19 @@ export interface FirestoreIndexConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The scope at which a query is run. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#query_scope FirestoreIndex#query_scope}
   */
   readonly queryScope?: string;
   /**
   * fields block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#fields FirestoreIndex#fields}
   */
   readonly fields: FirestoreIndexFields[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#timeouts FirestoreIndex#timeouts}
   */
   readonly timeouts?: FirestoreIndexTimeouts;
@@ -58,20 +58,20 @@ export interface FirestoreIndexFields {
   /**
   * Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can
 be specified. Possible values: ["CONTAINS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#array_config FirestoreIndex#array_config}
   */
   readonly arrayConfig?: string;
   /**
   * Name of the field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#field_path FirestoreIndex#field_path}
   */
   readonly fieldPath?: string;
   /**
   * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["ASCENDING", "DESCENDING"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_index#order FirestoreIndex#order}
   */
   readonly order?: string;

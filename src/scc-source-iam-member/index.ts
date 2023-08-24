@@ -37,7 +37,7 @@ export interface SccSourceIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly source: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/scc_source_iam_member#condition SccSourceIamMember#condition}
   */
   readonly condition?: SccSourceIamMemberCondition;

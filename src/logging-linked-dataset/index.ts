@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface LoggingLinkedDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The bucket to which the linked dataset is attached.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#bucket LoggingLinkedDataset#bucket}
   */
   readonly bucket: string;
   /**
   * Describes this link. The maximum length of the description is 8000 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#description LoggingLinkedDataset#description}
   */
   readonly description?: string;
@@ -33,31 +33,31 @@ export interface LoggingLinkedDatasetConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * The id of the linked dataset.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#link_id LoggingLinkedDataset#link_id}
   */
   readonly linkId: string;
   /**
   * The location of the linked dataset.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#location LoggingLinkedDataset#location}
   */
   readonly location?: string;
   /**
   * The parent of the linked dataset.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#parent LoggingLinkedDataset#parent}
   */
   readonly parent?: string;
   /**
   * bigquery_dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#bigquery_dataset LoggingLinkedDataset#bigquery_dataset}
   */
   readonly bigqueryDataset?: LoggingLinkedDatasetBigqueryDataset[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_linked_dataset#timeouts LoggingLinkedDataset#timeouts}
   */
   readonly timeouts?: LoggingLinkedDatasetTimeouts;

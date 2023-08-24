@@ -15,14 +15,16 @@ export interface CertificateManagerCertificateMapEntryConfig extends cdktf.Terra
   /**
   * A set of Certificates defines for the given hostname.
 There can be defined up to fifteen certificates in each Certificate Map Entry.
-Each certificate must match pattern projects/*\/locations/*\/certificates/*.
-  * 
+Each certificate must match pattern projects/* /locations/* /certificates/*.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#certificates CertificateManagerCertificateMapEntry#certificates}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly certificates: string[];
   /**
   * A human-readable description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#description CertificateManagerCertificateMapEntry#description}
   */
   readonly description?: string;
@@ -30,7 +32,7 @@ Each certificate must match pattern projects/*\/locations/*\/certificates/*.
   * A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com)
 for a set of hostnames with common suffix. Used as Server Name Indication (SNI) for
 selecting a proper certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#hostname CertificateManagerCertificateMapEntry#hostname}
   */
   readonly hostname?: string;
@@ -45,28 +47,30 @@ selecting a proper certificate.
   * Set of labels associated with a Certificate Map Entry.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#labels CertificateManagerCertificateMapEntry#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * A map entry that is inputted into the cetrificate map
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#map CertificateManagerCertificateMapEntry#map}
   */
   readonly map: string;
   /**
   * A predefined matcher for particular cases, other than SNI selection
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#matcher CertificateManagerCertificateMapEntry#matcher}
   */
   readonly matcher?: string;
   /**
   * A user-defined name of the Certificate Map Entry. Certificate Map Entry
 names must be unique globally and match pattern
-'projects/*\/locations/*\/certificateMaps/*\/certificateMapEntries/*'
-  * 
+'projects/* /locations/* /certificateMaps/* /certificateMapEntries/*'
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#name CertificateManagerCertificateMapEntry#name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**
@@ -75,7 +79,7 @@ names must be unique globally and match pattern
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_map_entry#timeouts CertificateManagerCertificateMapEntry#timeouts}
   */
   readonly timeouts?: CertificateManagerCertificateMapEntryTimeouts;

@@ -15,21 +15,21 @@ export interface ComputeRegionHealthCheckConfig extends cdktf.TerraformMetaArgum
   /**
   * How often (in seconds) to send a health check. The default value is 5
 seconds.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#check_interval_sec ComputeRegionHealthCheck#check_interval_sec}
   */
   readonly checkIntervalSec?: number;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#description ComputeRegionHealthCheck#description}
   */
   readonly description?: string;
   /**
   * A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#healthy_threshold ComputeRegionHealthCheck#healthy_threshold}
   */
   readonly healthyThreshold?: number;
@@ -48,7 +48,7 @@ match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#name ComputeRegionHealthCheck#name}
   */
   readonly name: string;
@@ -59,7 +59,7 @@ last character, which cannot be a dash.
   /**
   * The Region in which the created health check should reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#region ComputeRegionHealthCheck#region}
   */
   readonly region?: string;
@@ -67,62 +67,62 @@ If it is not provided, the provider region is used.
   * How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#timeout_sec ComputeRegionHealthCheck#timeout_sec}
   */
   readonly timeoutSec?: number;
   /**
   * A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#unhealthy_threshold ComputeRegionHealthCheck#unhealthy_threshold}
   */
   readonly unhealthyThreshold?: number;
   /**
   * grpc_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#grpc_health_check ComputeRegionHealthCheck#grpc_health_check}
   */
   readonly grpcHealthCheck?: ComputeRegionHealthCheckGrpcHealthCheck;
   /**
   * http2_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#http2_health_check ComputeRegionHealthCheck#http2_health_check}
   */
   readonly http2HealthCheck?: ComputeRegionHealthCheckHttp2HealthCheck;
   /**
   * http_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#http_health_check ComputeRegionHealthCheck#http_health_check}
   */
   readonly httpHealthCheck?: ComputeRegionHealthCheckHttpHealthCheck;
   /**
   * https_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#https_health_check ComputeRegionHealthCheck#https_health_check}
   */
   readonly httpsHealthCheck?: ComputeRegionHealthCheckHttpsHealthCheck;
   /**
   * log_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#log_config ComputeRegionHealthCheck#log_config}
   */
   readonly logConfig?: ComputeRegionHealthCheckLogConfig;
   /**
   * ssl_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#ssl_health_check ComputeRegionHealthCheck#ssl_health_check}
   */
   readonly sslHealthCheck?: ComputeRegionHealthCheckSslHealthCheck;
   /**
   * tcp_health_check block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#tcp_health_check ComputeRegionHealthCheck#tcp_health_check}
   */
   readonly tcpHealthCheck?: ComputeRegionHealthCheckTcpHealthCheck;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#timeouts ComputeRegionHealthCheck#timeouts}
   */
   readonly timeouts?: ComputeRegionHealthCheckTimeouts;
@@ -136,7 +136,7 @@ The value of grpcServiceName has the following meanings by convention:
 * Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
 
 The grpcServiceName can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#grpc_service_name ComputeRegionHealthCheck#grpc_service_name}
   */
   readonly grpcServiceName?: string;
@@ -144,14 +144,14 @@ The grpcServiceName can only be ASCII.
   * The port number for the health check request.
 Must be specified if portName and portSpecification are not set
 or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -170,7 +170,7 @@ following values:
 
 If not specified, gRPC health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
@@ -308,21 +308,21 @@ export interface ComputeRegionHealthCheckHttp2HealthCheck {
   * The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#host ComputeRegionHealthCheck#host}
   */
   readonly host?: string;
   /**
   * The TCP port number for the HTTP2 health check request.
 The default value is 443.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -341,21 +341,21 @@ following values:
 
 If not specified, HTTP2 health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
   /**
   * Specifies the type of proxy header to append before sending data to the
 backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#proxy_header ComputeRegionHealthCheck#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
   * The request path of the HTTP2 health check request.
 The default value is /.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#request_path ComputeRegionHealthCheck#request_path}
   */
   readonly requestPath?: string;
@@ -363,7 +363,7 @@ The default value is /.
   * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#response ComputeRegionHealthCheck#response}
   */
   readonly response?: string;
@@ -570,21 +570,21 @@ export interface ComputeRegionHealthCheckHttpHealthCheck {
   * The value of the host header in the HTTP health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#host ComputeRegionHealthCheck#host}
   */
   readonly host?: string;
   /**
   * The TCP port number for the HTTP health check request.
 The default value is 80.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -603,21 +603,21 @@ following values:
 
 If not specified, HTTP health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
   /**
   * Specifies the type of proxy header to append before sending data to the
 backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#proxy_header ComputeRegionHealthCheck#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
   * The request path of the HTTP health check request.
 The default value is /.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#request_path ComputeRegionHealthCheck#request_path}
   */
   readonly requestPath?: string;
@@ -625,7 +625,7 @@ The default value is /.
   * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#response ComputeRegionHealthCheck#response}
   */
   readonly response?: string;
@@ -832,21 +832,21 @@ export interface ComputeRegionHealthCheckHttpsHealthCheck {
   * The value of the host header in the HTTPS health check request.
 If left empty (default value), the public IP on behalf of which this health
 check is performed will be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#host ComputeRegionHealthCheck#host}
   */
   readonly host?: string;
   /**
   * The TCP port number for the HTTPS health check request.
 The default value is 443.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -865,21 +865,21 @@ following values:
 
 If not specified, HTTPS health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
   /**
   * Specifies the type of proxy header to append before sending data to the
 backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#proxy_header ComputeRegionHealthCheck#proxy_header}
   */
   readonly proxyHeader?: string;
   /**
   * The request path of the HTTPS health check request.
 The default value is /.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#request_path ComputeRegionHealthCheck#request_path}
   */
   readonly requestPath?: string;
@@ -887,7 +887,7 @@ The default value is /.
   * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#response ComputeRegionHealthCheck#response}
   */
   readonly response?: string;
@@ -1093,7 +1093,7 @@ export interface ComputeRegionHealthCheckLogConfig {
   /**
   * Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#enable ComputeRegionHealthCheck#enable}
   */
   readonly enable?: boolean | cdktf.IResolvable;
@@ -1161,14 +1161,14 @@ export interface ComputeRegionHealthCheckSslHealthCheck {
   /**
   * The TCP port number for the SSL health check request.
 The default value is 443.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -1187,14 +1187,14 @@ following values:
 
 If not specified, SSL health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
   /**
   * Specifies the type of proxy header to append before sending data to the
 backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#proxy_header ComputeRegionHealthCheck#proxy_header}
   */
   readonly proxyHeader?: string;
@@ -1203,7 +1203,7 @@ backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#request ComputeRegionHealthCheck#request}
   */
   readonly request?: string;
@@ -1211,7 +1211,7 @@ data can only be ASCII.
   * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#response ComputeRegionHealthCheck#response}
   */
   readonly response?: string;
@@ -1394,14 +1394,14 @@ export interface ComputeRegionHealthCheckTcpHealthCheck {
   /**
   * The TCP port number for the TCP health check request.
 The default value is 80.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port ComputeRegionHealthCheck#port}
   */
   readonly port?: number;
   /**
   * Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_name ComputeRegionHealthCheck#port_name}
   */
   readonly portName?: string;
@@ -1420,14 +1420,14 @@ following values:
 
 If not specified, TCP health check follows behavior specified in 'port' and
 'portName' fields. Possible values: ["USE_FIXED_PORT", "USE_NAMED_PORT", "USE_SERVING_PORT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#port_specification ComputeRegionHealthCheck#port_specification}
   */
   readonly portSpecification?: string;
   /**
   * Specifies the type of proxy header to append before sending data to the
 backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#proxy_header ComputeRegionHealthCheck#proxy_header}
   */
   readonly proxyHeader?: string;
@@ -1436,7 +1436,7 @@ backend. Default value: "NONE" Possible values: ["NONE", "PROXY_V1"]
 established (default value is empty). If both request and response are
 empty, the connection establishment alone will indicate health. The request
 data can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#request ComputeRegionHealthCheck#request}
   */
   readonly request?: string;
@@ -1444,7 +1444,7 @@ data can only be ASCII.
   * The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
 can only be ASCII.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_health_check#response ComputeRegionHealthCheck#response}
   */
   readonly response?: string;

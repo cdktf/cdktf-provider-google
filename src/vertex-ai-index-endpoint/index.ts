@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface VertexAiIndexEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description of the Index.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#description VertexAiIndexEndpoint#description}
   */
   readonly description?: string;
   /**
   * The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#display_name VertexAiIndexEndpoint#display_name}
   */
   readonly displayName: string;
@@ -33,7 +33,7 @@ export interface VertexAiIndexEndpointConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * The labels with user-defined metadata to organize your Indexes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#labels VertexAiIndexEndpoint#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -42,7 +42,7 @@ export interface VertexAiIndexEndpointConfig extends cdktf.TerraformMetaArgument
 Private services access must already be configured for the network. If left unspecified, the index endpoint is not peered with any network.
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): 'projects/{project}/global/networks/{network}'.
 Where '{project}' is a project number, as in '12345', and '{network}' is network name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#network VertexAiIndexEndpoint#network}
   */
   readonly network?: string;
@@ -52,13 +52,13 @@ Where '{project}' is a project number, as in '12345', and '{network}' is network
   readonly project?: string;
   /**
   * The region of the index endpoint. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#region VertexAiIndexEndpoint#region}
   */
   readonly region?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_index_endpoint#timeouts VertexAiIndexEndpoint#timeouts}
   */
   readonly timeouts?: VertexAiIndexEndpointTimeouts;

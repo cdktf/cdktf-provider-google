@@ -16,13 +16,13 @@ export interface FolderAccessApprovalSettingsConfig extends cdktf.TerraformMetaA
   * The asymmetric crypto key version to use for signing approval requests.
 Empty active_key_version indicates that a Google-managed key should be used for signing.
 This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#active_key_version FolderAccessApprovalSettings#active_key_version}
   */
   readonly activeKeyVersion?: string;
   /**
   * ID of the folder of the access approval settings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#folder_id FolderAccessApprovalSettings#folder_id}
   */
   readonly folderId: string;
@@ -37,19 +37,19 @@ This property will be ignored if set by an ancestor of the resource, and new non
   * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#notification_emails FolderAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * enrolled_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#enrolled_services FolderAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: FolderAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#timeouts FolderAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: FolderAccessApprovalSettingsTimeouts;
@@ -80,13 +80,13 @@ Note: These values are supported as input, but considered a legacy format:
   * iam.googleapis.com
   * pubsub.googleapis.com
   * storage.googleapis.com
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#cloud_product FolderAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/folder_access_approval_settings#enrollment_level FolderAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;

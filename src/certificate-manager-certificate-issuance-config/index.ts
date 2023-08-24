@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface CertificateManagerCertificateIssuanceConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * One or more paragraphs of text description of a CertificateIssuanceConfig.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#description CertificateManagerCertificateIssuanceConfig#description}
   */
   readonly description?: string;
@@ -27,34 +27,34 @@ export interface CertificateManagerCertificateIssuanceConfigConfig extends cdktf
   readonly id?: string;
   /**
   * Key algorithm to use when generating the private key. Possible values: ["RSA_2048", "ECDSA_P256"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#key_algorithm CertificateManagerCertificateIssuanceConfig#key_algorithm}
   */
   readonly keyAlgorithm: string;
   /**
   * 'Set of label tags associated with the CertificateIssuanceConfig resource.
  An object containing a list of "key": value pairs. Example: { "name": "wrench", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#labels CertificateManagerCertificateIssuanceConfig#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Lifetime of issued certificates. A duration in seconds with up to nine fractional digits, ending with 's'.
 Example: "1814400s". Valid values are from 21 days (1814400s) to 30 days (2592000s)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#lifetime CertificateManagerCertificateIssuanceConfig#lifetime}
   */
   readonly lifetime: string;
   /**
   * The Certificate Manager location. If not specified, "global" is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#location CertificateManagerCertificateIssuanceConfig#location}
   */
   readonly location?: string;
   /**
   * A user-defined name of the certificate issuance config.
 CertificateIssuanceConfig names must be unique globally.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#name CertificateManagerCertificateIssuanceConfig#name}
   */
   readonly name: string;
@@ -67,19 +67,19 @@ CertificateIssuanceConfig names must be unique globally.
 Must be a number between 1-99, inclusive.
 You must set the rotation window percentage in relation to the certificate lifetime so that certificate renewal occurs at least 7 days after
 the certificate has been issued and at least 7 days before it expires.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#rotation_window_percentage CertificateManagerCertificateIssuanceConfig#rotation_window_percentage}
   */
   readonly rotationWindowPercentage: number;
   /**
   * certificate_authority_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#certificate_authority_config CertificateManagerCertificateIssuanceConfig#certificate_authority_config}
   */
   readonly certificateAuthorityConfig: CertificateManagerCertificateIssuanceConfigCertificateAuthorityConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#timeouts CertificateManagerCertificateIssuanceConfig#timeouts}
   */
   readonly timeouts?: CertificateManagerCertificateIssuanceConfigTimeouts;
@@ -89,7 +89,7 @@ export interface CertificateManagerCertificateIssuanceConfigCertificateAuthority
   * A CA pool resource used to issue a certificate.
 The CA pool string has a relative resource path following the form
 "projects/{project}/locations/{location}/caPools/{caPool}".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#ca_pool CertificateManagerCertificateIssuanceConfig#ca_pool}
   */
   readonly caPool: string;
@@ -153,7 +153,7 @@ export class CertificateManagerCertificateIssuanceConfigCertificateAuthorityConf
 export interface CertificateManagerCertificateIssuanceConfigCertificateAuthorityConfig {
   /**
   * certificate_authority_service_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/certificate_manager_certificate_issuance_config#certificate_authority_service_config CertificateManagerCertificateIssuanceConfig#certificate_authority_service_config}
   */
   readonly certificateAuthorityServiceConfig?: CertificateManagerCertificateIssuanceConfigCertificateAuthorityConfigCertificateAuthorityServiceConfig;

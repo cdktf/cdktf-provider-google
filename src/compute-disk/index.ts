@@ -15,7 +15,7 @@ export interface ComputeDiskConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#description ComputeDisk#description}
   */
   readonly description?: string;
@@ -36,19 +36,19 @@ images names must include the family name. If they don't, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image 'centos-6-v20180104' includes its family name 'centos-6'.
 These images can be referred by family name here.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#image ComputeDisk#image}
   */
   readonly image?: string;
   /**
   * Labels to apply to this disk.  A list of key->value pairs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#labels ComputeDisk#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Any applicable license URI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#licenses ComputeDisk#licenses}
   */
   readonly licenses?: string[];
@@ -60,7 +60,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#name ComputeDisk#name}
   */
   readonly name: string;
@@ -70,7 +70,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#physical_block_size_bytes ComputeDisk#physical_block_size_bytes}
   */
   readonly physicalBlockSizeBytes?: number;
@@ -82,7 +82,7 @@ the supported values for the caller's project.
   * Indicates how many IOPS must be provisioned for the disk.
 Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
 allows for an update of IOPS every 4 hours. To update your hyperdisk more frequently, you'll need to manually delete and recreate it
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#provisioned_iops ComputeDisk#provisioned_iops}
   */
   readonly provisionedIops?: number;
@@ -90,7 +90,7 @@ allows for an update of IOPS every 4 hours. To update your hyperdisk more freque
   * Indicates how much Throughput must be provisioned for the disk.
 Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
 allows for an update of Throughput every 4 hours. To update your hyperdisk more frequently, you'll need to manually delete and recreate it
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#provisioned_throughput ComputeDisk#provisioned_throughput}
   */
   readonly provisionedThroughput?: number;
@@ -108,7 +108,7 @@ or the size of the snapshot.
 if upsizing is detected but recreates the disk if downsizing is requested.
 You can add 'lifecycle.prevent_destroy' in the config to prevent destroying
 and recreating.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#size ComputeDisk#size}
   */
   readonly size?: number;
@@ -122,7 +122,7 @@ following are valid values:
 * 'projects/project/global/snapshots/snapshot'
 * 'global/snapshots/snapshot'
 * 'snapshot'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#snapshot ComputeDisk#snapshot}
   */
   readonly snapshot?: string;
@@ -136,56 +136,56 @@ For example, the following are valid values:
 * projects/{project}/regions/{region}/disks/{disk}
 * zones/{zone}/disks/{disk}
 * regions/{region}/disks/{disk}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#source_disk ComputeDisk#source_disk}
   */
   readonly sourceDisk?: string;
   /**
   * URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#type ComputeDisk#type}
   */
   readonly type?: string;
   /**
   * A reference to the zone where the disk resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#zone ComputeDisk#zone}
   */
   readonly zone?: string;
   /**
   * async_primary_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#async_primary_disk ComputeDisk#async_primary_disk}
   */
   readonly asyncPrimaryDisk?: ComputeDiskAsyncPrimaryDisk;
   /**
   * disk_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#disk_encryption_key ComputeDisk#disk_encryption_key}
   */
   readonly diskEncryptionKey?: ComputeDiskDiskEncryptionKey;
   /**
   * guest_os_features block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#guest_os_features ComputeDisk#guest_os_features}
   */
   readonly guestOsFeatures?: ComputeDiskGuestOsFeatures[] | cdktf.IResolvable;
   /**
   * source_image_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#source_image_encryption_key ComputeDisk#source_image_encryption_key}
   */
   readonly sourceImageEncryptionKey?: ComputeDiskSourceImageEncryptionKey;
   /**
   * source_snapshot_encryption_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#source_snapshot_encryption_key ComputeDisk#source_snapshot_encryption_key}
   */
   readonly sourceSnapshotEncryptionKey?: ComputeDiskSourceSnapshotEncryptionKey;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#timeouts ComputeDisk#timeouts}
   */
   readonly timeouts?: ComputeDiskTimeouts;
@@ -193,7 +193,7 @@ create the disk. Provide this when creating the disk.
 export interface ComputeDiskAsyncPrimaryDisk {
   /**
   * Primary disk for asynchronous disk replication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#disk ComputeDisk#disk}
   */
   readonly disk: string;
@@ -261,21 +261,21 @@ in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_self_link ComputeDisk#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_service_account ComputeDisk#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#raw_key ComputeDisk#raw_key}
   */
   readonly rawKey?: string;
@@ -283,7 +283,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
 customer-supplied encryption key to either encrypt or decrypt
 this resource. You can provide either the rawKey or the rsaEncryptedKey.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#rsa_encrypted_key ComputeDisk#rsa_encrypted_key}
   */
   readonly rsaEncryptedKey?: string;
@@ -424,7 +424,7 @@ export class ComputeDiskDiskEncryptionKeyOutputReference extends cdktf.ComplexOb
 export interface ComputeDiskGuestOsFeatures {
   /**
   * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#type ComputeDisk#type}
   */
   readonly type: string;
@@ -524,21 +524,21 @@ in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_self_link ComputeDisk#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_service_account ComputeDisk#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#raw_key ComputeDisk#raw_key}
   */
   readonly rawKey?: string;
@@ -660,21 +660,21 @@ in the cloud console. Your project's Compute Engine System service account
 ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have
 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature.
 See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_self_link ComputeDisk#kms_key_self_link}
   */
   readonly kmsKeySelfLink?: string;
   /**
   * The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#kms_key_service_account ComputeDisk#kms_key_service_account}
   */
   readonly kmsKeyServiceAccount?: string;
   /**
   * Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_disk#raw_key ComputeDisk#raw_key}
   */
   readonly rawKey?: string;

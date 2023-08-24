@@ -37,7 +37,7 @@ export interface PubsubTopicIamBindingConfig extends cdktf.TerraformMetaArgument
   readonly topic: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/pubsub_topic_iam_binding#condition PubsubTopicIamBinding#condition}
   */
   readonly condition?: PubsubTopicIamBindingCondition;

@@ -15,7 +15,7 @@ export interface OrganizationAccessApprovalSettingsConfig extends cdktf.Terrafor
   /**
   * The asymmetric crypto key version to use for signing approval requests.
 Empty active_key_version indicates that a Google-managed key should be used for signing.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#active_key_version OrganizationAccessApprovalSettings#active_key_version}
   */
   readonly activeKeyVersion?: string;
@@ -30,25 +30,25 @@ Empty active_key_version indicates that a Google-managed key should be used for 
   * A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#notification_emails OrganizationAccessApprovalSettings#notification_emails}
   */
   readonly notificationEmails?: string[];
   /**
   * ID of the organization of the access approval settings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#organization_id OrganizationAccessApprovalSettings#organization_id}
   */
   readonly organizationId: string;
   /**
   * enrolled_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#enrolled_services OrganizationAccessApprovalSettings#enrolled_services}
   */
   readonly enrolledServices: OrganizationAccessApprovalSettingsEnrolledServices[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#timeouts OrganizationAccessApprovalSettings#timeouts}
   */
   readonly timeouts?: OrganizationAccessApprovalSettingsTimeouts;
@@ -66,13 +66,13 @@ export interface OrganizationAccessApprovalSettingsEnrolledServices {
   iam.googleapis.com
   pubsub.googleapis.com
   storage.googleapis.com
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#cloud_product OrganizationAccessApprovalSettings#cloud_product}
   */
   readonly cloudProduct: string;
   /**
   * The enrollment level of the service. Default value: "BLOCK_ALL" Possible values: ["BLOCK_ALL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_access_approval_settings#enrollment_level OrganizationAccessApprovalSettings#enrollment_level}
   */
   readonly enrollmentLevel?: string;

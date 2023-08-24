@@ -15,14 +15,14 @@ export interface MonitoringGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * A user-assigned name for this group, used only for display
 purposes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_group#display_name MonitoringGroup#display_name}
   */
   readonly displayName: string;
   /**
   * The filter used to determine which monitored resources
 belong to this group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_group#filter MonitoringGroup#filter}
   */
   readonly filter: string;
@@ -37,7 +37,7 @@ belong to this group.
   * If true, the members of this group are considered to be a
 cluster. The system can perform additional analysis on
 groups that are clusters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_group#is_cluster MonitoringGroup#is_cluster}
   */
   readonly isCluster?: boolean | cdktf.IResolvable;
@@ -45,7 +45,7 @@ groups that are clusters.
   * The name of the group's parent, if it has one. The format is
 "projects/{project_id_or_number}/groups/{group_id}". For
 groups with no parent, parentName is the empty string, "".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_group#parent_name MonitoringGroup#parent_name}
   */
   readonly parentName?: string;
@@ -55,7 +55,7 @@ groups with no parent, parentName is the empty string, "".
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_group#timeouts MonitoringGroup#timeouts}
   */
   readonly timeouts?: MonitoringGroupTimeouts;

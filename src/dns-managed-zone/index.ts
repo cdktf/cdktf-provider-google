@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * A textual description field. Defaults to 'Managed by Terraform'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#description DnsManagedZone#description}
   */
   readonly description?: string;
   /**
   * The DNS name of this managed zone, for instance "example.com.".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#dns_name DnsManagedZone#dns_name}
   */
   readonly dnsName: string;
   /**
   * Set this true to delete all records in the zone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#force_destroy DnsManagedZone#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
@@ -39,14 +39,14 @@ export interface DnsManagedZoneConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * A set of key/value label pairs to assign to this ManagedZone.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#labels DnsManagedZone#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * User assigned name for this resource.
 Must be unique within the project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#name DnsManagedZone#name}
   */
   readonly name: string;
@@ -57,43 +57,43 @@ Must be unique within the project.
   /**
   * The zone's visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources. Default value: "public" Possible values: ["private", "public"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#visibility DnsManagedZone#visibility}
   */
   readonly visibility?: string;
   /**
   * cloud_logging_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#cloud_logging_config DnsManagedZone#cloud_logging_config}
   */
   readonly cloudLoggingConfig?: DnsManagedZoneCloudLoggingConfig;
   /**
   * dnssec_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#dnssec_config DnsManagedZone#dnssec_config}
   */
   readonly dnssecConfig?: DnsManagedZoneDnssecConfig;
   /**
   * forwarding_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#forwarding_config DnsManagedZone#forwarding_config}
   */
   readonly forwardingConfig?: DnsManagedZoneForwardingConfig;
   /**
   * peering_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#peering_config DnsManagedZone#peering_config}
   */
   readonly peeringConfig?: DnsManagedZonePeeringConfig;
   /**
   * private_visibility_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#private_visibility_config DnsManagedZone#private_visibility_config}
   */
   readonly privateVisibilityConfig?: DnsManagedZonePrivateVisibilityConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#timeouts DnsManagedZone#timeouts}
   */
   readonly timeouts?: DnsManagedZoneTimeouts;
@@ -101,7 +101,7 @@ while private zones are visible only to Virtual Private Cloud resources. Default
 export interface DnsManagedZoneCloudLoggingConfig {
   /**
   * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#enable_logging DnsManagedZone#enable_logging}
   */
   readonly enableLogging: boolean | cdktf.IResolvable;
@@ -165,13 +165,13 @@ export class DnsManagedZoneCloudLoggingConfigOutputReference extends cdktf.Compl
 export interface DnsManagedZoneDnssecConfigDefaultKeySpecs {
   /**
   * String mnemonic specifying the DNSSEC algorithm of this key Possible values: ["ecdsap256sha256", "ecdsap384sha384", "rsasha1", "rsasha256", "rsasha512"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#algorithm DnsManagedZone#algorithm}
   */
   readonly algorithm?: string;
   /**
   * Length of the keys in bits
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#key_length DnsManagedZone#key_length}
   */
   readonly keyLength?: number;
@@ -182,13 +182,13 @@ Point flag set and, when active, will only be used to sign
 resource record sets of type DNSKEY. Zone signing keys do
 not have the Secure Entry Point flag set and will be used
 to sign all other types of resource record sets. Possible values: ["keySigning", "zoneSigning"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#key_type DnsManagedZone#key_type}
   */
   readonly keyType?: string;
   /**
   * Identifies what kind of resource this is
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#kind DnsManagedZone#kind}
   */
   readonly kind?: string;
@@ -356,26 +356,26 @@ export class DnsManagedZoneDnssecConfigDefaultKeySpecsList extends cdktf.Complex
 export interface DnsManagedZoneDnssecConfig {
   /**
   * Identifies what kind of resource this is
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#kind DnsManagedZone#kind}
   */
   readonly kind?: string;
   /**
   * Specifies the mechanism used to provide authenticated denial-of-existence responses.
 non_existence can only be updated when the state is 'off'. Possible values: ["nsec", "nsec3"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#non_existence DnsManagedZone#non_existence}
   */
   readonly nonExistence?: string;
   /**
   * Specifies whether DNSSEC is enabled, and what mode it is in Possible values: ["off", "on", "transfer"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#state DnsManagedZone#state}
   */
   readonly state?: string;
   /**
   * default_key_specs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#default_key_specs DnsManagedZone#default_key_specs}
   */
   readonly defaultKeySpecs?: DnsManagedZoneDnssecConfigDefaultKeySpecs[] | cdktf.IResolvable;
@@ -513,13 +513,13 @@ export interface DnsManagedZoneForwardingConfigTargetNameServers {
   * Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#forwarding_path DnsManagedZone#forwarding_path}
   */
   readonly forwardingPath?: string;
   /**
   * IPv4 address of a target name server.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#ipv4_address DnsManagedZone#ipv4_address}
   */
   readonly ipv4Address: string;
@@ -638,7 +638,7 @@ export class DnsManagedZoneForwardingConfigTargetNameServersList extends cdktf.C
 export interface DnsManagedZoneForwardingConfig {
   /**
   * target_name_servers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#target_name_servers DnsManagedZone#target_name_servers}
   */
   readonly targetNameServers: DnsManagedZoneForwardingConfigTargetNameServers[] | cdktf.IResolvable;
@@ -704,7 +704,7 @@ export interface DnsManagedZonePeeringConfigTargetNetwork {
   * The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#network_url DnsManagedZone#network_url}
   */
   readonly networkUrl: string;
@@ -768,7 +768,7 @@ export class DnsManagedZonePeeringConfigTargetNetworkOutputReference extends cdk
 export interface DnsManagedZonePeeringConfig {
   /**
   * target_network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#target_network DnsManagedZone#target_network}
   */
   readonly targetNetwork: DnsManagedZonePeeringConfigTargetNetwork;
@@ -833,9 +833,11 @@ export interface DnsManagedZonePrivateVisibilityConfigGkeClusters {
   /**
   * The resource name of the cluster to bind this ManagedZone to.
 This should be specified in the format like
-'projects/*\/locations/*\/clusters/*'
-  * 
+'projects/* /locations/* /clusters/*'
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#gke_cluster_name DnsManagedZone#gke_cluster_name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly gkeClusterName: string;
 }
@@ -932,7 +934,7 @@ export interface DnsManagedZonePrivateVisibilityConfigNetworks {
   * The id or fully qualified URL of the VPC network to bind to.
 This should be formatted like 'projects/{project}/global/networks/{network}' or
 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#network_url DnsManagedZone#network_url}
   */
   readonly networkUrl: string;
@@ -1028,13 +1030,13 @@ export class DnsManagedZonePrivateVisibilityConfigNetworksList extends cdktf.Com
 export interface DnsManagedZonePrivateVisibilityConfig {
   /**
   * gke_clusters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#gke_clusters DnsManagedZone#gke_clusters}
   */
   readonly gkeClusters?: DnsManagedZonePrivateVisibilityConfigGkeClusters[] | cdktf.IResolvable;
   /**
   * networks block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_managed_zone#networks DnsManagedZone#networks}
   */
   readonly networks?: DnsManagedZonePrivateVisibilityConfigNetworks[] | cdktf.IResolvable;

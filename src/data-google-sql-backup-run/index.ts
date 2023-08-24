@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArguments {
   /**
   * The identifier for this backup run. Unique only for a specific Cloud SQL instance. If left empty and multiple backups exist for the instance, most_recent must be set to true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_backup_run#backup_id DataGoogleSqlBackupRun#backup_id}
   */
   readonly backupId?: number;
@@ -27,19 +27,19 @@ export interface DataGoogleSqlBackupRunConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * Name of the database instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_backup_run#instance DataGoogleSqlBackupRun#instance}
   */
   readonly instance: string;
   /**
   * Toggles use of the most recent backup run if multiple backups exist for a Cloud SQL instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_backup_run#most_recent DataGoogleSqlBackupRun#most_recent}
   */
   readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * Project ID of the project that contains the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_backup_run#project DataGoogleSqlBackupRun#project}
   */
   readonly project?: string;

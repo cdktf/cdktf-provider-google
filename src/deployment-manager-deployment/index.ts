@@ -18,7 +18,7 @@ create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or
 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#create_policy DeploymentManagerDeployment#create_policy}
   */
   readonly createPolicy?: string;
@@ -29,13 +29,13 @@ resource is deleted after removal from Deployment Manager. If
 'ABANDON', the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated. Default value: "DELETE" Possible values: ["ABANDON", "DELETE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#delete_policy DeploymentManagerDeployment#delete_policy}
   */
   readonly deletePolicy?: string;
   /**
   * Optional user-provided description of deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#description DeploymentManagerDeployment#description}
   */
   readonly description?: string;
@@ -48,7 +48,7 @@ actually change the deployment, just how it is updated. Default value: "DELETE" 
   readonly id?: string;
   /**
   * Unique name for the deployment
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
   */
   readonly name: string;
@@ -61,7 +61,7 @@ with real resources.
 of a deployment in preview (unless updating to preview=false). Thus,
 Terraform will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#preview DeploymentManagerDeployment#preview}
   */
   readonly preview?: boolean | cdktf.IResolvable;
@@ -71,19 +71,19 @@ to true or if other fields are updated while preview is true.
   readonly project?: string;
   /**
   * labels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#labels DeploymentManagerDeployment#labels}
   */
   readonly labels?: DeploymentManagerDeploymentLabels[] | cdktf.IResolvable;
   /**
   * target block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#target DeploymentManagerDeployment#target}
   */
   readonly target: DeploymentManagerDeploymentTarget;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#timeouts DeploymentManagerDeployment#timeouts}
   */
   readonly timeouts?: DeploymentManagerDeploymentTimeouts;
@@ -91,13 +91,13 @@ to true or if other fields are updated while preview is true.
 export interface DeploymentManagerDeploymentLabels {
   /**
   * Key for label.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#key DeploymentManagerDeployment#key}
   */
   readonly key?: string;
   /**
   * Value of label.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#value DeploymentManagerDeployment#value}
   */
   readonly value?: string;
@@ -219,7 +219,7 @@ export class DeploymentManagerDeploymentLabelsList extends cdktf.ComplexList {
 export interface DeploymentManagerDeploymentTargetConfig {
   /**
   * The full YAML contents of your configuration file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
   */
   readonly content: string;
@@ -283,14 +283,14 @@ export class DeploymentManagerDeploymentTargetConfigOutputReference extends cdkt
 export interface DeploymentManagerDeploymentTargetImports {
   /**
   * The full contents of the template that you want to import.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#content DeploymentManagerDeployment#content}
   */
   readonly content?: string;
   /**
   * The name of the template to import, as declared in the YAML
 configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#name DeploymentManagerDeployment#name}
   */
   readonly name?: string;
@@ -412,13 +412,13 @@ export class DeploymentManagerDeploymentTargetImportsList extends cdktf.ComplexL
 export interface DeploymentManagerDeploymentTarget {
   /**
   * config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#config DeploymentManagerDeployment#config}
   */
   readonly config: DeploymentManagerDeploymentTargetConfig;
   /**
   * imports block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/deployment_manager_deployment#imports DeploymentManagerDeployment#imports}
   */
   readonly imports?: DeploymentManagerDeploymentTargetImports[] | cdktf.IResolvable;

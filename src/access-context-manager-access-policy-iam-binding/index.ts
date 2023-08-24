@@ -33,7 +33,7 @@ export interface AccessContextManagerAccessPolicyIamBindingConfig extends cdktf.
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_access_policy_iam_binding#condition AccessContextManagerAccessPolicyIamBinding#condition}
   */
   readonly condition?: AccessContextManagerAccessPolicyIamBindingCondition;

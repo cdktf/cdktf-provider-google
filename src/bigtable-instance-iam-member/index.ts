@@ -37,7 +37,7 @@ export interface BigtableInstanceIamMemberConfig extends cdktf.TerraformMetaArgu
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigtable_instance_iam_member#condition BigtableInstanceIamMember#condition}
   */
   readonly condition?: BigtableInstanceIamMemberCondition;

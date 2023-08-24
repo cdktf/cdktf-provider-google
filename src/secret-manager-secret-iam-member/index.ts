@@ -37,7 +37,7 @@ export interface SecretManagerSecretIamMemberConfig extends cdktf.TerraformMetaA
   readonly secretId: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/secret_manager_secret_iam_member#condition SecretManagerSecretIamMember#condition}
   */
   readonly condition?: SecretManagerSecretIamMemberCondition;

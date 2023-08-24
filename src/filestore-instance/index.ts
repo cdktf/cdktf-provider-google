@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * A description of the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#description FilestoreInstance#description}
   */
   readonly description?: string;
@@ -27,25 +27,25 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * KMS key name used for data encryption.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#kms_key_name FilestoreInstance#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * Resource labels to represent user-provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#labels FilestoreInstance#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#location FilestoreInstance#location}
   */
   readonly location?: string;
   /**
   * The resource name of the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
@@ -56,31 +56,31 @@ export interface FilestoreInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
   * The service tier of the instance.
 Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#tier FilestoreInstance#tier}
   */
   readonly tier: string;
   /**
   * The name of the Filestore zone of the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#zone FilestoreInstance#zone}
   */
   readonly zone?: string;
   /**
   * file_shares block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#file_shares FilestoreInstance#file_shares}
   */
   readonly fileShares: FilestoreInstanceFileShares;
   /**
   * networks block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#networks FilestoreInstance#networks}
   */
   readonly networks: FilestoreInstanceNetworks[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#timeouts FilestoreInstance#timeouts}
   */
   readonly timeouts?: FilestoreInstanceTimeouts;
@@ -89,7 +89,7 @@ export interface FilestoreInstanceFileSharesNfsExportOptions {
   /**
   * Either READ_ONLY, for allowing only read requests on the exported directory,
 or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Default value: "READ_WRITE" Possible values: ["READ_ONLY", "READ_WRITE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#access_mode FilestoreInstance#access_mode}
   */
   readonly accessMode?: string;
@@ -97,7 +97,7 @@ or READ_WRITE, for allowing both read and write requests. The default is READ_WR
   * An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#anon_gid FilestoreInstance#anon_gid}
   */
   readonly anonGid?: number;
@@ -105,7 +105,7 @@ if this field is specified for other squashMode settings.
   * An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#anon_uid FilestoreInstance#anon_uid}
   */
   readonly anonUid?: number;
@@ -113,14 +113,14 @@ if this field is specified for other squashMode settings.
   * List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
 The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#ip_ranges FilestoreInstance#ip_ranges}
   */
   readonly ipRanges?: string[];
   /**
   * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH,
 for not allowing root access. The default is NO_ROOT_SQUASH. Default value: "NO_ROOT_SQUASH" Possible values: ["NO_ROOT_SQUASH", "ROOT_SQUASH"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#squash_mode FilestoreInstance#squash_mode}
   */
   readonly squashMode?: string;
@@ -312,19 +312,19 @@ export interface FilestoreInstanceFileShares {
   /**
   * File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#capacity_gb FilestoreInstance#capacity_gb}
   */
   readonly capacityGb: number;
   /**
   * The name of the fileshare (16 characters or less)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#name FilestoreInstance#name}
   */
   readonly name: string;
   /**
   * nfs_export_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#nfs_export_options FilestoreInstance#nfs_export_options}
   */
   readonly nfsExportOptions?: FilestoreInstanceFileSharesNfsExportOptions[] | cdktf.IResolvable;
@@ -438,28 +438,28 @@ export interface FilestoreInstanceNetworks {
   * The network connect mode of the Filestore instance.
 If not provided, the connect mode defaults to
 DIRECT_PEERING. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#connect_mode FilestoreInstance#connect_mode}
   */
   readonly connectMode?: string;
   /**
   * IP versions for which the instance has
 IP addresses assigned. Possible values: ["ADDRESS_MODE_UNSPECIFIED", "MODE_IPV4", "MODE_IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#modes FilestoreInstance#modes}
   */
   readonly modes: string[];
   /**
   * The name of the GCE VPC network to which the
 instance is connected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#network FilestoreInstance#network}
   */
   readonly network: string;
   /**
   * A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/filestore_instance#reserved_ip_range FilestoreInstance#reserved_ip_range}
   */
   readonly reservedIpRange?: string;

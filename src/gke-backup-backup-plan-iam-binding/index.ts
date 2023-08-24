@@ -41,7 +41,7 @@ export interface GkeBackupBackupPlanIamBindingConfig extends cdktf.TerraformMeta
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/gke_backup_backup_plan_iam_binding#condition GkeBackupBackupPlanIamBinding#condition}
   */
   readonly condition?: GkeBackupBackupPlanIamBindingCondition;

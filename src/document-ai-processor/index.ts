@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DocumentAiProcessorConfig extends cdktf.TerraformMetaArguments {
   /**
   * The display name. Must be unique.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor#display_name DocumentAiProcessor#display_name}
   */
   readonly displayName: string;
@@ -27,13 +27,13 @@ export interface DocumentAiProcessorConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor#kms_key_name DocumentAiProcessor#kms_key_name}
   */
   readonly kmsKeyName?: string;
   /**
   * The location of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor#location DocumentAiProcessor#location}
   */
   readonly location: string;
@@ -43,13 +43,13 @@ export interface DocumentAiProcessorConfig extends cdktf.TerraformMetaArguments 
   readonly project?: string;
   /**
   * The type of processor. For possible types see the [official list](https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations/fetchProcessorTypes#google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor#type DocumentAiProcessor#type}
   */
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor#timeouts DocumentAiProcessor#timeouts}
   */
   readonly timeouts?: DocumentAiProcessorTimeouts;

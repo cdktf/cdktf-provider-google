@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface VertexAiFeaturestoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * If set to true, any EntityTypes and Features for this Featurestore will also be deleted
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#force_destroy VertexAiFeaturestore#force_destroy}
   */
   readonly forceDestroy?: boolean | cdktf.IResolvable;
@@ -27,13 +27,13 @@ export interface VertexAiFeaturestoreConfig extends cdktf.TerraformMetaArguments
   readonly id?: string;
   /**
   * A set of key/value label pairs to assign to this Featurestore.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#labels VertexAiFeaturestore#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#name VertexAiFeaturestore#name}
   */
   readonly name?: string;
@@ -43,25 +43,25 @@ export interface VertexAiFeaturestoreConfig extends cdktf.TerraformMetaArguments
   readonly project?: string;
   /**
   * The region of the dataset. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#region VertexAiFeaturestore#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#encryption_spec VertexAiFeaturestore#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiFeaturestoreEncryptionSpec;
   /**
   * online_serving_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#online_serving_config VertexAiFeaturestore#online_serving_config}
   */
   readonly onlineServingConfig?: VertexAiFeaturestoreOnlineServingConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#timeouts VertexAiFeaturestore#timeouts}
   */
   readonly timeouts?: VertexAiFeaturestoreTimeouts;
@@ -69,7 +69,7 @@ export interface VertexAiFeaturestoreConfig extends cdktf.TerraformMetaArguments
 export interface VertexAiFeaturestoreEncryptionSpec {
   /**
   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#kms_key_name VertexAiFeaturestore#kms_key_name}
   */
   readonly kmsKeyName: string;
@@ -133,13 +133,13 @@ export class VertexAiFeaturestoreEncryptionSpecOutputReference extends cdktf.Com
 export interface VertexAiFeaturestoreOnlineServingConfigScaling {
   /**
   * The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of 'minNodeCount'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#max_node_count VertexAiFeaturestore#max_node_count}
   */
   readonly maxNodeCount: number;
   /**
   * The minimum number of nodes to scale down to. Must be greater than or equal to 1.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#min_node_count VertexAiFeaturestore#min_node_count}
   */
   readonly minNodeCount: number;
@@ -223,13 +223,13 @@ export class VertexAiFeaturestoreOnlineServingConfigScalingOutputReference exten
 export interface VertexAiFeaturestoreOnlineServingConfig {
   /**
   * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#fixed_node_count VertexAiFeaturestore#fixed_node_count}
   */
   readonly fixedNodeCount?: number;
   /**
   * scaling block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_featurestore#scaling VertexAiFeaturestore#scaling}
   */
   readonly scaling?: VertexAiFeaturestoreOnlineServingConfigScaling;

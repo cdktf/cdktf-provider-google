@@ -21,7 +21,7 @@ export interface DataGoogleBeyondcorpAppConnectorConfig extends cdktf.TerraformM
   readonly id?: string;
   /**
   * ID of the AppConnector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_connector#name DataGoogleBeyondcorpAppConnector#name}
   */
   readonly name: string;
@@ -31,7 +31,7 @@ export interface DataGoogleBeyondcorpAppConnectorConfig extends cdktf.TerraformM
   readonly project?: string;
   /**
   * The region of the AppConnector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_connector#region DataGoogleBeyondcorpAppConnector#region}
   */
   readonly region?: string;

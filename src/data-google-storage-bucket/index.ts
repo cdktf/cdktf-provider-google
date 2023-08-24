@@ -21,7 +21,7 @@ export interface DataGoogleStorageBucketConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The name of the bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket#name DataGoogleStorageBucket#name}
   */
   readonly name: string;

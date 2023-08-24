@@ -57,7 +57,7 @@ PrivatecaCertificate.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | The name for this Certificate. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.pool">pool</a></code> | <code>java.lang.String</code> | The name of the CaPool this Certificate belongs to. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.certificateAuthority">certificateAuthority</a></code> | <code>java.lang.String</code> | The Certificate Authority ID that should issue the certificate. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.certificateTemplate">certificateTemplate</a></code> | <code>java.lang.String</code> | The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/*\/locations/*\/certificateTemplates/*'. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.certificateTemplate">certificateTemplate</a></code> | <code>java.lang.String</code> | The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/* /locations/* /certificateTemplates/*'. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.config">config</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA">PrivatecaCertificateConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificate.Initializer.parameter.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels with user-defined metadata to apply to this resource. |
@@ -177,7 +177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/*\/locations/*\/certificateTemplates/*'.
+The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/* /locations/* /certificateTemplates/*'.
 
 If this is specified,
 the caller must have the necessary permission to use this template. If this is
@@ -185,6 +185,8 @@ omitted, no template will be used. This template must be in the same location
 as the Certificate.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate#certificate_template PrivatecaCertificate#certificate_template}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1535,7 +1537,7 @@ PrivatecaCertificateConfig.builder()
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.name">name</a></code> | <code>java.lang.String</code> | The name for this Certificate. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.pool">pool</a></code> | <code>java.lang.String</code> | The name of the CaPool this Certificate belongs to. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.certificateAuthority">certificateAuthority</a></code> | <code>java.lang.String</code> | The Certificate Authority ID that should issue the certificate. |
-| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.certificateTemplate">certificateTemplate</a></code> | <code>java.lang.String</code> | The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/*\/locations/*\/certificateTemplates/*'. |
+| <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.certificateTemplate">certificateTemplate</a></code> | <code>java.lang.String</code> | The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/* /locations/* /certificateTemplates/*'. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.config">config</a></code> | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfigA">PrivatecaCertificateConfigA</a></code> | config block. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate#id PrivatecaCertificate#id}. |
 | <code><a href="#@cdktf/provider-google.privatecaCertificate.PrivatecaCertificateConfig.property.labels">labels</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Labels with user-defined metadata to apply to this resource. |
@@ -1685,7 +1687,7 @@ public java.lang.String getCertificateTemplate();
 
 - *Type:* java.lang.String
 
-The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/*\/locations/*\/certificateTemplates/*'.
+The resource name for a CertificateTemplate used to issue this certificate, in the format 'projects/* /locations/* /certificateTemplates/*'.
 
 If this is specified,
 the caller must have the necessary permission to use this template. If this is
@@ -1693,6 +1695,8 @@ omitted, no template will be used. This template must be in the same location
 as the Certificate.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_certificate#certificate_template PrivatecaCertificate#certificate_template}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

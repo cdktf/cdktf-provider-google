@@ -41,7 +41,7 @@ export interface DataplexDatascanIamMemberConfig extends cdktf.TerraformMetaArgu
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_datascan_iam_member#condition DataplexDatascanIamMember#condition}
   */
   readonly condition?: DataplexDatascanIamMemberCondition;

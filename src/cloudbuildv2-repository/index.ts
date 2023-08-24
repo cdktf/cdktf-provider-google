@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface Cloudbuildv2RepositoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Allows clients to store small amounts of arbitrary data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#annotations Cloudbuildv2Repository#annotations}
   */
   readonly annotations?: { [key: string]: string };
@@ -27,37 +27,37 @@ export interface Cloudbuildv2RepositoryConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#location Cloudbuildv2Repository#location}
   */
   readonly location?: string;
   /**
   * Name of the repository.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#name Cloudbuildv2Repository#name}
   */
   readonly name: string;
   /**
   * The connection for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#parent_connection Cloudbuildv2Repository#parent_connection}
   */
   readonly parentConnection: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#project Cloudbuildv2Repository#project}
   */
   readonly project?: string;
   /**
   * Required. Git Clone HTTPS URI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#remote_uri Cloudbuildv2Repository#remote_uri}
   */
   readonly remoteUri: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudbuildv2_repository#timeouts Cloudbuildv2Repository#timeouts}
   */
   readonly timeouts?: Cloudbuildv2RepositoryTimeouts;

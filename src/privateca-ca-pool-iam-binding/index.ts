@@ -41,7 +41,7 @@ export interface PrivatecaCaPoolIamBindingConfig extends cdktf.TerraformMetaArgu
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/privateca_ca_pool_iam_binding#condition PrivatecaCaPoolIamBinding#condition}
   */
   readonly condition?: PrivatecaCaPoolIamBindingCondition;

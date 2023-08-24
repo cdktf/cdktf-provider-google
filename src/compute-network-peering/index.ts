@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
   /**
   * Whether to export the custom routes to the peer network. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#export_custom_routes ComputeNetworkPeering#export_custom_routes}
   */
   readonly exportCustomRoutes?: boolean | cdktf.IResolvable;
@@ -31,7 +31,7 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * Whether to export the custom routes from the peer network. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#import_custom_routes ComputeNetworkPeering#import_custom_routes}
   */
   readonly importCustomRoutes?: boolean | cdktf.IResolvable;
@@ -41,31 +41,31 @@ export interface ComputeNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   readonly importSubnetRoutesWithPublicIp?: boolean | cdktf.IResolvable;
   /**
   * Name of the peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#name ComputeNetworkPeering#name}
   */
   readonly name: string;
   /**
   * The primary network of the peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#network ComputeNetworkPeering#network}
   */
   readonly network: string;
   /**
   * The peer network in the peering. The peer network may belong to a different project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#peer_network ComputeNetworkPeering#peer_network}
   */
   readonly peerNetwork: string;
   /**
   * Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#stack_type ComputeNetworkPeering#stack_type}
   */
   readonly stackType?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_network_peering#timeouts ComputeNetworkPeering#timeouts}
   */
   readonly timeouts?: ComputeNetworkPeeringTimeouts;

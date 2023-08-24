@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleDataprocJobIamPolicy.DataGoogleDataprocJobIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogledataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogledataprocjobiampolicy"
 
 datagoogledataprocjobiampolicy.NewDataGoogleDataprocJobIamPolicy(scope Construct, id *string, config DataGoogleDataprocJobIamPolicyConfig) DataGoogleDataprocJobIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleDataprocJobIamPolicy.DataGoogleDataprocJobIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogledataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogledataprocjobiampolicy"
 
 datagoogledataprocjobiampolicy.DataGoogleDataprocJobIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleDataprocJobIamPolicy.DataGoogleDataprocJobIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogledataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogledataprocjobiampolicy"
 
 datagoogledataprocjobiampolicy.DataGoogleDataprocJobIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagoogledataprocjobiampolicy.DataGoogleDataprocJobIamPolicy_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleDataprocJobIamPolicy.DataGoogleDataprocJobIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogledataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogledataprocjobiampolicy"
 
 datagoogledataprocjobiampolicy.DataGoogleDataprocJobIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleDataprocJobIamPolicy.DataGoogleDataprocJobIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagoogledataprocjobiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagoogledataprocjobiampolicy"
 
 &datagoogledataprocjobiampolicy.DataGoogleDataprocJobIamPolicyConfig {
 	Connection: interface{},

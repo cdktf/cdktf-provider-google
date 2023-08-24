@@ -902,7 +902,7 @@ public string[] RequireAttestationsBy { get; set; }
 The resource names of the attestors that must attest to a container image.
 
 If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/*/attestors/*'.
+policy, it should be specified in the format 'projects/* /attestors/*'.
 Each attestor must exist before a policy can reference it. To add an
 attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
@@ -911,6 +911,8 @@ Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1209,7 +1211,7 @@ public string[] RequireAttestationsBy { get; set; }
 The resource names of the attestors that must attest to a container image.
 
 If the attestor is in a different project from the
-policy, it should be specified in the format 'projects/*/attestors/*'.
+policy, it should be specified in the format 'projects/* /attestors/*'.
 Each attestor must exist before a policy can reference it. To add an
 attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
@@ -1218,6 +1220,8 @@ Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/binary_authorization_policy#require_attestations_by BinaryAuthorizationPolicy#require_attestations_by}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

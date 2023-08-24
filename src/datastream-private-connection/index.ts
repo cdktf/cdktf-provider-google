@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DatastreamPrivateConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
   * Display name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#display_name DatastreamPrivateConnection#display_name}
   */
   readonly displayName: string;
@@ -27,19 +27,19 @@ export interface DatastreamPrivateConnectionConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * Labels.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#labels DatastreamPrivateConnection#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The name of the location this private connection is located in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#location DatastreamPrivateConnection#location}
   */
   readonly location: string;
   /**
   * The private connectivity identifier.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#private_connection_id DatastreamPrivateConnection#private_connection_id}
   */
   readonly privateConnectionId: string;
@@ -49,13 +49,13 @@ export interface DatastreamPrivateConnectionConfig extends cdktf.TerraformMetaAr
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#timeouts DatastreamPrivateConnection#timeouts}
   */
   readonly timeouts?: DatastreamPrivateConnectionTimeouts;
   /**
   * vpc_peering_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#vpc_peering_config DatastreamPrivateConnection#vpc_peering_config}
   */
   readonly vpcPeeringConfig: DatastreamPrivateConnectionVpcPeeringConfig;
@@ -235,14 +235,14 @@ export class DatastreamPrivateConnectionTimeoutsOutputReference extends cdktf.Co
 export interface DatastreamPrivateConnectionVpcPeeringConfig {
   /**
   * A free subnet for peering. (CIDR of /29)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#subnet DatastreamPrivateConnection#subnet}
   */
   readonly subnet: string;
   /**
   * Fully qualified name of the VPC that Datastream will peer to.
 Format: projects/{project}/global/{networks}/{name}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/datastream_private_connection#vpc DatastreamPrivateConnection#vpc}
   */
   readonly vpc: string;

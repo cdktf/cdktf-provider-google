@@ -22,7 +22,7 @@ export interface DataprocAutoscalingPolicyConfig extends cdktf.TerraformMetaArgu
   /**
   * The  location where the autoscaling policy should reside.
 The default value is 'global'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#location DataprocAutoscalingPolicy#location}
   */
   readonly location?: string;
@@ -30,7 +30,7 @@ The default value is 'global'.
   * The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#policy_id DataprocAutoscalingPolicy#policy_id}
   */
   readonly policyId: string;
@@ -40,25 +40,25 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
   readonly project?: string;
   /**
   * basic_algorithm block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#basic_algorithm DataprocAutoscalingPolicy#basic_algorithm}
   */
   readonly basicAlgorithm?: DataprocAutoscalingPolicyBasicAlgorithm;
   /**
   * secondary_worker_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#secondary_worker_config DataprocAutoscalingPolicy#secondary_worker_config}
   */
   readonly secondaryWorkerConfig?: DataprocAutoscalingPolicySecondaryWorkerConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#timeouts DataprocAutoscalingPolicy#timeouts}
   */
   readonly timeouts?: DataprocAutoscalingPolicyTimeouts;
   /**
   * worker_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#worker_config DataprocAutoscalingPolicy#worker_config}
   */
   readonly workerConfig?: DataprocAutoscalingPolicyWorkerConfig;
@@ -70,7 +70,7 @@ duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 
 Bounds: [0s, 1d].
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#graceful_decommission_timeout DataprocAutoscalingPolicy#graceful_decommission_timeout}
   */
   readonly gracefulDecommissionTimeout: string;
@@ -82,7 +82,7 @@ A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 
 Bounds: [0.0, 1.0].
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#scale_down_factor DataprocAutoscalingPolicy#scale_down_factor}
   */
   readonly scaleDownFactor: number;
@@ -93,7 +93,7 @@ recommend at least a 2 worker scale-down for the cluster to scale. A threshold o
 means the autoscaler will scale down on any recommended change.
 
 Bounds: [0.0, 1.0]. Default: 0.0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#scale_down_min_worker_fraction DataprocAutoscalingPolicy#scale_down_min_worker_fraction}
   */
   readonly scaleDownMinWorkerFraction?: number;
@@ -105,7 +105,7 @@ A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 
 Bounds: [0.0, 1.0].
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#scale_up_factor DataprocAutoscalingPolicy#scale_up_factor}
   */
   readonly scaleUpFactor: number;
@@ -116,7 +116,7 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 0 means the autoscaler will scale up on any recommended change.
 
 Bounds: [0.0, 1.0]. Default: 0.0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#scale_up_min_worker_fraction DataprocAutoscalingPolicy#scale_up_min_worker_fraction}
   */
   readonly scaleUpMinWorkerFraction?: number;
@@ -269,13 +269,13 @@ export interface DataprocAutoscalingPolicyBasicAlgorithm {
 update operation from the previous event has completed.
 
 Bounds: [2m, 1d]. Default: 2m.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#cooldown_period DataprocAutoscalingPolicy#cooldown_period}
   */
   readonly cooldownPeriod?: string;
   /**
   * yarn_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#yarn_config DataprocAutoscalingPolicy#yarn_config}
   */
   readonly yarnConfig: DataprocAutoscalingPolicyBasicAlgorithmYarnConfig;
@@ -364,13 +364,13 @@ export interface DataprocAutoscalingPolicySecondaryWorkerConfig {
   * Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#max_instances DataprocAutoscalingPolicy#max_instances}
   */
   readonly maxInstances?: number;
   /**
   * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#min_instances DataprocAutoscalingPolicy#min_instances}
   */
   readonly minInstances?: number;
@@ -389,7 +389,7 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#weight DataprocAutoscalingPolicy#weight}
   */
   readonly weight?: number;
@@ -631,13 +631,13 @@ export class DataprocAutoscalingPolicyTimeoutsOutputReference extends cdktf.Comp
 export interface DataprocAutoscalingPolicyWorkerConfig {
   /**
   * Maximum number of instances for this group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#max_instances DataprocAutoscalingPolicy#max_instances}
   */
   readonly maxInstances: number;
   /**
   * Minimum number of instances for this group. Bounds: [2, maxInstances]. Defaults to 2.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#min_instances DataprocAutoscalingPolicy#min_instances}
   */
   readonly minInstances?: number;
@@ -656,7 +656,7 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataproc_autoscaling_policy#weight DataprocAutoscalingPolicy#weight}
   */
   readonly weight?: number;

@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface CloudiotRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Activate or deactivate HTTP.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#http_config CloudiotRegistry#http_config}
   */
   readonly httpConfig?: { [key: string]: string };
@@ -31,19 +31,19 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO", "DEBUG"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#log_level CloudiotRegistry#log_level}
   */
   readonly logLevel?: string;
   /**
   * Activate or deactivate MQTT.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#mqtt_config CloudiotRegistry#mqtt_config}
   */
   readonly mqttConfig?: { [key: string]: string };
   /**
   * A unique name for the resource, required by device registry.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#name CloudiotRegistry#name}
   */
   readonly name: string;
@@ -54,31 +54,31 @@ will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", 
   /**
   * The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#region CloudiotRegistry#region}
   */
   readonly region?: string;
   /**
   * A PubSub topic to publish device state updates.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#state_notification_config CloudiotRegistry#state_notification_config}
   */
   readonly stateNotificationConfig?: { [key: string]: string };
   /**
   * credentials block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#credentials CloudiotRegistry#credentials}
   */
   readonly credentials?: CloudiotRegistryCredentials[] | cdktf.IResolvable;
   /**
   * event_notification_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#event_notification_configs CloudiotRegistry#event_notification_configs}
   */
   readonly eventNotificationConfigs?: CloudiotRegistryEventNotificationConfigs[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#timeouts CloudiotRegistry#timeouts}
   */
   readonly timeouts?: CloudiotRegistryTimeouts;
@@ -86,7 +86,7 @@ If it is not provided, the provider region is used.
 export interface CloudiotRegistryCredentials {
   /**
   * A public key certificate format and data.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#public_key_certificate CloudiotRegistry#public_key_certificate}
   */
   readonly publicKeyCertificate: { [key: string]: string };
@@ -182,7 +182,7 @@ export class CloudiotRegistryCredentialsList extends cdktf.ComplexList {
 export interface CloudiotRegistryEventNotificationConfigs {
   /**
   * PubSub topic name to publish device events.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#pubsub_topic_name CloudiotRegistry#pubsub_topic_name}
   */
   readonly pubsubTopicName: string;
@@ -192,7 +192,7 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last 'event_notification_configs'
 item.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloudiot_registry#subfolder_matches CloudiotRegistry#subfolder_matches}
   */
   readonly subfolderMatches?: string;

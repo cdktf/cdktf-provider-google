@@ -21,49 +21,49 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#ip_cidr_range VpcAccessConnector#ip_cidr_range}
   */
   readonly ipCidrRange?: string;
   /**
   * Machine type of VM Instance underlying connector. Default is e2-micro
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#machine_type VpcAccessConnector#machine_type}
   */
   readonly machineType?: string;
   /**
   * Maximum value of instances in autoscaling group underlying the connector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#max_instances VpcAccessConnector#max_instances}
   */
   readonly maxInstances?: number;
   /**
   * Maximum throughput of the connector in Mbps, must be greater than 'min_throughput'. Default is 300.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#max_throughput VpcAccessConnector#max_throughput}
   */
   readonly maxThroughput?: number;
   /**
   * Minimum value of instances in autoscaling group underlying the connector.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#min_instances VpcAccessConnector#min_instances}
   */
   readonly minInstances?: number;
   /**
   * Minimum throughput of the connector in Mbps. Default and min is 200.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#min_throughput VpcAccessConnector#min_throughput}
   */
   readonly minThroughput?: number;
   /**
   * The name of the resource (Max 25 characters).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#name VpcAccessConnector#name}
   */
   readonly name: string;
   /**
   * Name or self_link of the VPC network. Required if 'ip_cidr_range' is set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#network VpcAccessConnector#network}
   */
   readonly network?: string;
@@ -73,19 +73,19 @@ export interface VpcAccessConnectorConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#region VpcAccessConnector#region}
   */
   readonly region?: string;
   /**
   * subnet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#subnet VpcAccessConnector#subnet}
   */
   readonly subnet?: VpcAccessConnectorSubnet;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#timeouts VpcAccessConnector#timeouts}
   */
   readonly timeouts?: VpcAccessConnectorTimeouts;
@@ -94,13 +94,13 @@ export interface VpcAccessConnectorSubnet {
   /**
   * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
 https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#name VpcAccessConnector#name}
   */
   readonly name?: string;
   /**
   * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vpc_access_connector#project_id VpcAccessConnector#project_id}
   */
   readonly projectId?: string;

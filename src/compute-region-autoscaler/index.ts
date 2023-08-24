@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionAutoscalerConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#description ComputeRegionAutoscaler#description}
   */
   readonly description?: string;
@@ -31,7 +31,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#name ComputeRegionAutoscaler#name}
   */
   readonly name: string;
@@ -41,25 +41,25 @@ character, which cannot be a dash.
   readonly project?: string;
   /**
   * URL of the region where the instance group resides.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#region ComputeRegionAutoscaler#region}
   */
   readonly region?: string;
   /**
   * URL of the managed instance group that this autoscaler will scale.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#target ComputeRegionAutoscaler#target}
   */
   readonly target: string;
   /**
   * autoscaling_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#autoscaling_policy ComputeRegionAutoscaler#autoscaling_policy}
   */
   readonly autoscalingPolicy: ComputeRegionAutoscalerAutoscalingPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#timeouts ComputeRegionAutoscaler#timeouts}
   */
   readonly timeouts?: ComputeRegionAutoscalerTimeouts;
@@ -71,7 +71,7 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization {
 - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.
 
 - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#predictive_method ComputeRegionAutoscaler#predictive_method}
   */
   readonly predictiveMethod?: string;
@@ -89,7 +89,7 @@ If the average CPU is above the target utilization, the autoscaler
 scales up until it reaches the maximum number of instances you
 specified or until the average utilization reaches the target
 utilization.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#target ComputeRegionAutoscaler#target}
   */
   readonly target: number;
@@ -178,7 +178,7 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilizatio
   * Fraction of backend capacity utilization (set in HTTP(s) load
 balancing configuration) that autoscaler should maintain. Must
 be a positive float value. If not defined, the default is 0.8.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#target ComputeRegionAutoscaler#target}
   */
   readonly target: number;
@@ -245,7 +245,7 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyMetric {
 The metric cannot have negative values.
 
 The metric must have a value type of INT64 or DOUBLE.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#name ComputeRegionAutoscaler#name}
   */
   readonly name: string;
@@ -259,14 +259,14 @@ For example, a good metric to use as a utilizationTarget is
 www.googleapis.com/compute/instance/network/received_bytes_count.
 The autoscaler will work to keep this value constant for each
 of the instances.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#target ComputeRegionAutoscaler#target}
   */
   readonly target?: number;
   /**
   * Defines how target utilization value is expressed for a
 Stackdriver Monitoring metric. Possible values: ["GAUGE", "DELTA_PER_SECOND", "DELTA_PER_MINUTE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#type ComputeRegionAutoscaler#type}
   */
   readonly type?: string;
@@ -409,14 +409,14 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaled
   /**
   * Specifies a fixed number of VM instances. This must be a positive
 integer.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#fixed ComputeRegionAutoscaler#fixed}
   */
   readonly fixed?: number;
   /**
   * Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#percent ComputeRegionAutoscaler#percent}
   */
   readonly percent?: number;
@@ -507,13 +507,13 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyScaleInControl {
   /**
   * How long back autoscaling should look when computing recommendations
 to include directives regarding slower scale down, as described above.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#time_window_sec ComputeRegionAutoscaler#time_window_sec}
   */
   readonly timeWindowSec?: number;
   /**
   * max_scaled_in_replicas block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#max_scaled_in_replicas ComputeRegionAutoscaler#max_scaled_in_replicas}
   */
   readonly maxScaledInReplicas?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas;
@@ -603,25 +603,25 @@ export class ComputeRegionAutoscalerAutoscalingPolicyScaleInControlOutputReferen
 export interface ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules {
   /**
   * A description of a scaling schedule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#description ComputeRegionAutoscaler#description}
   */
   readonly description?: string;
   /**
   * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#disabled ComputeRegionAutoscaler#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#duration_sec ComputeRegionAutoscaler#duration_sec}
   */
   readonly durationSec: number;
   /**
   * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#min_required_replicas ComputeRegionAutoscaler#min_required_replicas}
   */
   readonly minRequiredReplicas: number;
@@ -631,13 +631,13 @@ export interface ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules {
   readonly name: string;
   /**
   * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#schedule ComputeRegionAutoscaler#schedule}
   */
   readonly schedule: string;
   /**
   * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#time_zone ComputeRegionAutoscaler#time_zone}
   */
   readonly timeZone?: string;
@@ -871,7 +871,7 @@ Virtual machine initialization times might vary because of
 numerous factors. We recommend that you test how long an
 instance may take to initialize. To do this, create an instance
 and time the startup process.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#cooldown_period ComputeRegionAutoscaler#cooldown_period}
   */
   readonly cooldownPeriod?: number;
@@ -880,7 +880,7 @@ and time the startup process.
 to. This is required when creating or updating an autoscaler. The
 maximum number of replicas should not be lower than minimal number
 of replicas.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#max_replicas ComputeRegionAutoscaler#max_replicas}
   */
   readonly maxReplicas: number;
@@ -889,43 +889,43 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#min_replicas ComputeRegionAutoscaler#min_replicas}
   */
   readonly minReplicas: number;
   /**
   * Defines operating mode for this policy. Default value: "ON" Possible values: ["OFF", "ONLY_UP", "ON"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#mode ComputeRegionAutoscaler#mode}
   */
   readonly mode?: string;
   /**
   * cpu_utilization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#cpu_utilization ComputeRegionAutoscaler#cpu_utilization}
   */
   readonly cpuUtilization?: ComputeRegionAutoscalerAutoscalingPolicyCpuUtilization;
   /**
   * load_balancing_utilization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#load_balancing_utilization ComputeRegionAutoscaler#load_balancing_utilization}
   */
   readonly loadBalancingUtilization?: ComputeRegionAutoscalerAutoscalingPolicyLoadBalancingUtilization;
   /**
   * metric block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#metric ComputeRegionAutoscaler#metric}
   */
   readonly metric?: ComputeRegionAutoscalerAutoscalingPolicyMetric[] | cdktf.IResolvable;
   /**
   * scale_in_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#scale_in_control ComputeRegionAutoscaler#scale_in_control}
   */
   readonly scaleInControl?: ComputeRegionAutoscalerAutoscalingPolicyScaleInControl;
   /**
   * scaling_schedules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_autoscaler#scaling_schedules ComputeRegionAutoscaler#scaling_schedules}
   */
   readonly scalingSchedules?: ComputeRegionAutoscalerAutoscalingPolicyScalingSchedules[] | cdktf.IResolvable;

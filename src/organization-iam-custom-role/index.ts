@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface OrganizationIamCustomRoleConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description for the role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#description OrganizationIamCustomRole#description}
   */
   readonly description?: string;
@@ -27,31 +27,31 @@ export interface OrganizationIamCustomRoleConfig extends cdktf.TerraformMetaArgu
   readonly id?: string;
   /**
   * The numeric ID of the organization in which you want to create a custom role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#org_id OrganizationIamCustomRole#org_id}
   */
   readonly orgId: string;
   /**
   * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#permissions OrganizationIamCustomRole#permissions}
   */
   readonly permissions: string[];
   /**
   * The role id to use for this role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#role_id OrganizationIamCustomRole#role_id}
   */
   readonly roleId: string;
   /**
   * The current launch stage of the role. Defaults to GA.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#stage OrganizationIamCustomRole#stage}
   */
   readonly stage?: string;
   /**
   * A human-readable title for the role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_custom_role#title OrganizationIamCustomRole#title}
   */
   readonly title: string;

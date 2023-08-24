@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#channel EventarcTrigger#channel}
   */
   readonly channel?: string;
   /**
   * Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#event_data_content_type EventarcTrigger#event_data_content_type}
   */
   readonly eventDataContentType?: string;
@@ -33,55 +33,55 @@ export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Optional. User labels attached to the triggers that can be used to group resources.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#labels EventarcTrigger#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#location EventarcTrigger#location}
   */
   readonly location: string;
   /**
   * Required. The resource name of the trigger. Must be unique within the location on the project.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#name EventarcTrigger#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#project EventarcTrigger#project}
   */
   readonly project?: string;
   /**
   * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#service_account EventarcTrigger#service_account}
   */
   readonly serviceAccount?: string;
   /**
   * destination block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#destination EventarcTrigger#destination}
   */
   readonly destination: EventarcTriggerDestination;
   /**
   * matching_criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#matching_criteria EventarcTrigger#matching_criteria}
   */
   readonly matchingCriteria: EventarcTriggerMatchingCriteria[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#timeouts EventarcTrigger#timeouts}
   */
   readonly timeouts?: EventarcTriggerTimeouts;
   /**
   * transport block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#transport EventarcTrigger#transport}
   */
   readonly transport?: EventarcTriggerTransport;
@@ -89,19 +89,19 @@ export interface EventarcTriggerConfig extends cdktf.TerraformMetaArguments {
 export interface EventarcTriggerDestinationCloudRunService {
   /**
   * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#path EventarcTrigger#path}
   */
   readonly path?: string;
   /**
   * Required. The region the Cloud Run service is deployed in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#region EventarcTrigger#region}
   */
   readonly region?: string;
   /**
   * Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#service EventarcTrigger#service}
   */
   readonly service: string;
@@ -211,31 +211,31 @@ export class EventarcTriggerDestinationCloudRunServiceOutputReference extends cd
 export interface EventarcTriggerDestinationGke {
   /**
   * Required. The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#cluster EventarcTrigger#cluster}
   */
   readonly cluster: string;
   /**
   * Required. The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#location EventarcTrigger#location}
   */
   readonly location: string;
   /**
   * Required. The namespace the GKE service is running in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#namespace EventarcTrigger#namespace}
   */
   readonly namespace: string;
   /**
   * Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#path EventarcTrigger#path}
   */
   readonly path?: string;
   /**
   * Required. Name of the GKE service.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#service EventarcTrigger#service}
   */
   readonly service: string;
@@ -382,25 +382,25 @@ export class EventarcTriggerDestinationGkeOutputReference extends cdktf.ComplexO
 export interface EventarcTriggerDestination {
   /**
   * [WARNING] Configuring a Cloud Function in Trigger is not supported as of today. The Cloud Function resource name. Format: projects/{project}/locations/{location}/functions/{function}
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#cloud_function EventarcTrigger#cloud_function}
   */
   readonly cloudFunction?: string;
   /**
   * The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#workflow EventarcTrigger#workflow}
   */
   readonly workflow?: string;
   /**
   * cloud_run_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#cloud_run_service EventarcTrigger#cloud_run_service}
   */
   readonly cloudRunService?: EventarcTriggerDestinationCloudRunService;
   /**
   * gke block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#gke EventarcTrigger#gke}
   */
   readonly gke?: EventarcTriggerDestinationGke;
@@ -536,19 +536,19 @@ export class EventarcTriggerDestinationOutputReference extends cdktf.ComplexObje
 export interface EventarcTriggerMatchingCriteria {
   /**
   * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#attribute EventarcTrigger#attribute}
   */
   readonly attribute: string;
   /**
   * Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#operator EventarcTrigger#operator}
   */
   readonly operator?: string;
   /**
   * Required. The value for the attribute. See https://cloud.google.com/eventarc/docs/creating-triggers#trigger-gcloud for available values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#value EventarcTrigger#value}
   */
   readonly value: string;
@@ -816,7 +816,7 @@ export class EventarcTriggerTimeoutsOutputReference extends cdktf.ComplexObject 
 export interface EventarcTriggerTransportPubsub {
   /**
   * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}. You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#topic EventarcTrigger#topic}
   */
   readonly topic?: string;
@@ -888,7 +888,7 @@ export class EventarcTriggerTransportPubsubOutputReference extends cdktf.Complex
 export interface EventarcTriggerTransport {
   /**
   * pubsub block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_trigger#pubsub EventarcTrigger#pubsub}
   */
   readonly pubsub?: EventarcTriggerTransportPubsub;

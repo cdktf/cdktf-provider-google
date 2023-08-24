@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface SccSourceConfig extends cdktf.TerraformMetaArguments {
   /**
   * The description of the source (max of 1024 characters).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/scc_source#description SccSource#description}
   */
   readonly description?: string;
@@ -24,7 +24,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/scc_source#display_name SccSource#display_name}
   */
   readonly displayName: string;
@@ -38,13 +38,13 @@ and underscores, and can be no longer than 32 characters.
   /**
   * The organization whose Cloud Security Command Center the Source
 lives in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/scc_source#organization SccSource#organization}
   */
   readonly organization: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/scc_source#timeouts SccSource#timeouts}
   */
   readonly timeouts?: SccSourceTimeouts;

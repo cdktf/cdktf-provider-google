@@ -41,7 +41,7 @@ export interface CloudRunV2ServiceIamBindingConfig extends cdktf.TerraformMetaAr
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_v2_service_iam_binding#condition CloudRunV2ServiceIamBinding#condition}
   */
   readonly condition?: CloudRunV2ServiceIamBindingCondition;

@@ -21,20 +21,20 @@ export interface DocumentAiProcessorDefaultVersionConfig extends cdktf.Terraform
   readonly id?: string;
   /**
   * The processor to set the version on.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor_default_version#processor DocumentAiProcessorDefaultVersion#processor}
   */
   readonly processor: string;
   /**
   * The version to set. Using 'stable' or 'rc' will cause the API to return the latest version in that release channel.
 Apply 'lifecycle.ignore_changes' to the 'version' field to suppress this diff.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor_default_version#version DocumentAiProcessorDefaultVersion#version}
   */
   readonly version: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/document_ai_processor_default_version#timeouts DocumentAiProcessorDefaultVersion#timeouts}
   */
   readonly timeouts?: DocumentAiProcessorDefaultVersionTimeouts;

@@ -21,7 +21,7 @@ export interface DataGoogleBeyondcorpAppGatewayConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * ID of the AppGateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_gateway#name DataGoogleBeyondcorpAppGateway#name}
   */
   readonly name: string;
@@ -31,7 +31,7 @@ export interface DataGoogleBeyondcorpAppGatewayConfig extends cdktf.TerraformMet
   readonly project?: string;
   /**
   * The region of the AppGateway.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/beyondcorp_app_gateway#region DataGoogleBeyondcorpAppGateway#region}
   */
   readonly region?: string;

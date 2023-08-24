@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeTargetGrpcProxyConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_grpc_proxy#description ComputeTargetGrpcProxy#description}
   */
   readonly description?: string;
@@ -33,7 +33,7 @@ and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_grpc_proxy#name ComputeTargetGrpcProxy#name}
   */
   readonly name: string;
@@ -45,7 +45,7 @@ except the last character, which cannot be a dash.
   * URL to the UrlMap resource that defines the mapping from URL to
 the BackendService. The protocol field in the BackendService
 must be set to GRPC.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_grpc_proxy#url_map ComputeTargetGrpcProxy#url_map}
   */
   readonly urlMap?: string;
@@ -60,13 +60,13 @@ BackendServices referenced by the urlMap will be accessed by gRPC
 applications via a sidecar proxy. In this case, a gRPC application
 must not use "xds:///" scheme in the target URI of the service
 it is connecting to
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_grpc_proxy#validate_for_proxyless ComputeTargetGrpcProxy#validate_for_proxyless}
   */
   readonly validateForProxyless?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_target_grpc_proxy#timeouts ComputeTargetGrpcProxy#timeouts}
   */
   readonly timeouts?: ComputeTargetGrpcProxyTimeouts;

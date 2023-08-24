@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface OrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the Constraint the Policy is configuring, for example, serviceuser.services.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#constraint OrganizationPolicy#constraint}
   */
   readonly constraint: string;
@@ -31,31 +31,31 @@ export interface OrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly orgId: string;
   /**
   * Version of the Policy. Default version is 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#version OrganizationPolicy#version}
   */
   readonly version?: number;
   /**
   * boolean_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#boolean_policy OrganizationPolicy#boolean_policy}
   */
   readonly booleanPolicy?: OrganizationPolicyBooleanPolicy;
   /**
   * list_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#list_policy OrganizationPolicy#list_policy}
   */
   readonly listPolicy?: OrganizationPolicyListPolicy;
   /**
   * restore_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#restore_policy OrganizationPolicy#restore_policy}
   */
   readonly restorePolicy?: OrganizationPolicyRestorePolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#timeouts OrganizationPolicy#timeouts}
   */
   readonly timeouts?: OrganizationPolicyTimeouts;
@@ -63,7 +63,7 @@ export interface OrganizationPolicyConfig extends cdktf.TerraformMetaArguments {
 export interface OrganizationPolicyBooleanPolicy {
   /**
   * If true, then the Policy is enforced. If false, then any configuration is acceptable.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#enforced OrganizationPolicy#enforced}
   */
   readonly enforced: boolean | cdktf.IResolvable;
@@ -127,13 +127,13 @@ export class OrganizationPolicyBooleanPolicyOutputReference extends cdktf.Comple
 export interface OrganizationPolicyListPolicyAllow {
   /**
   * The policy allows or denies all values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#all OrganizationPolicy#all}
   */
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#values OrganizationPolicy#values}
   */
   readonly values?: string[];
@@ -223,13 +223,13 @@ export class OrganizationPolicyListPolicyAllowOutputReference extends cdktf.Comp
 export interface OrganizationPolicyListPolicyDeny {
   /**
   * The policy allows or denies all values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#all OrganizationPolicy#all}
   */
   readonly all?: boolean | cdktf.IResolvable;
   /**
   * The policy can define specific values that are allowed or denied.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#values OrganizationPolicy#values}
   */
   readonly values?: string[];
@@ -319,25 +319,25 @@ export class OrganizationPolicyListPolicyDenyOutputReference extends cdktf.Compl
 export interface OrganizationPolicyListPolicy {
   /**
   * If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#inherit_from_parent OrganizationPolicy#inherit_from_parent}
   */
   readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#suggested_value OrganizationPolicy#suggested_value}
   */
   readonly suggestedValue?: string;
   /**
   * allow block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#allow OrganizationPolicy#allow}
   */
   readonly allow?: OrganizationPolicyListPolicyAllow;
   /**
   * deny block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#deny OrganizationPolicy#deny}
   */
   readonly deny?: OrganizationPolicyListPolicyDeny;
@@ -473,7 +473,7 @@ export class OrganizationPolicyListPolicyOutputReference extends cdktf.ComplexOb
 export interface OrganizationPolicyRestorePolicy {
   /**
   * May only be set to true. If set, then the default Policy is restored.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_policy#default OrganizationPolicy#default}
   */
   readonly default: boolean | cdktf.IResolvable;

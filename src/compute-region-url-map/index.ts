@@ -20,14 +20,14 @@ backend. However, if defaultService is specified, defaultRouteAction cannot cont
 weightedBackendServices. Conversely, if routeAction specifies any
 weightedBackendServices, service must not be specified.  Only one of defaultService,
 defaultUrlRedirect or defaultRouteAction.weightedBackendService must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#default_service ComputeRegionUrlMap#default_service}
   */
   readonly defaultService?: string;
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
   readonly description?: string;
@@ -46,7 +46,7 @@ the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
@@ -57,43 +57,43 @@ character, which cannot be a dash.
   /**
   * The Region in which the url map should reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#region ComputeRegionUrlMap#region}
   */
   readonly region?: string;
   /**
   * default_route_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#default_route_action ComputeRegionUrlMap#default_route_action}
   */
   readonly defaultRouteAction?: ComputeRegionUrlMapDefaultRouteAction;
   /**
   * default_url_redirect block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#default_url_redirect ComputeRegionUrlMap#default_url_redirect}
   */
   readonly defaultUrlRedirect?: ComputeRegionUrlMapDefaultUrlRedirect;
   /**
   * host_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_rule ComputeRegionUrlMap#host_rule}
   */
   readonly hostRule?: ComputeRegionUrlMapHostRule[] | cdktf.IResolvable;
   /**
   * path_matcher block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_matcher ComputeRegionUrlMap#path_matcher}
   */
   readonly pathMatcher?: ComputeRegionUrlMapPathMatcher[] | cdktf.IResolvable;
   /**
   * test block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#test ComputeRegionUrlMap#test}
   */
   readonly test?: ComputeRegionUrlMapTest[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#timeouts ComputeRegionUrlMap#timeouts}
   */
   readonly timeouts?: ComputeRegionUrlMapTimeouts;
@@ -102,19 +102,19 @@ export interface ComputeRegionUrlMapDefaultRouteActionCorsPolicy {
   /**
   * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header.
 Default is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_headers ComputeRegionUrlMap#allow_headers}
   */
   readonly allowHeaders?: string[];
   /**
   * Specifies the content for the Access-Control-Allow-Methods header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_methods ComputeRegionUrlMap#allow_methods}
   */
   readonly allowMethods?: string[];
@@ -122,33 +122,33 @@ Default is false.
   * Specifies the regualar expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
   * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#disabled ComputeRegionUrlMap#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#expose_headers ComputeRegionUrlMap#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
   readonly maxAge?: number;
@@ -377,14 +377,14 @@ export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyAbort 
   /**
   * The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus?: number;
   /**
   * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage?: number;
@@ -475,14 +475,14 @@ export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelayF
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds?: string;
@@ -573,13 +573,13 @@ export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelay 
   /**
   * The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage?: number;
   /**
   * fixed_delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fixed_delay ComputeRegionUrlMap#fixed_delay}
   */
   readonly fixedDelay?: ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
@@ -669,13 +669,13 @@ export class ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelayOutpu
 export interface ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicy {
   /**
   * abort block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#abort ComputeRegionUrlMap#abort}
   */
   readonly abort?: ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyAbort;
   /**
   * delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#delay ComputeRegionUrlMap#delay}
   */
   readonly delay?: ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicyDelay;
@@ -767,7 +767,7 @@ export interface ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy {
   * The full or partial URL to the RegionBackendService resource being mirrored to.
 The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map.
 Serverless NEG backends are not currently supported as a mirrored backend service.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService?: string;
@@ -835,14 +835,14 @@ export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds?: string;
@@ -932,7 +932,7 @@ export class ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeoutOutput
 export interface ComputeRegionUrlMapDefaultRouteActionRetryPolicy {
   /**
   * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#num_retries ComputeRegionUrlMap#num_retries}
   */
   readonly numRetries?: number;
@@ -949,13 +949,13 @@ Valid values are listed below. Only the following codes are supported when the U
   - internal :  a retry is attempted if the gRPC status code in the response header is set to internal.
   - resource-exhausted : a retry is attempted if the gRPC status code in the response header is set to resource-exhausted.
   - unavailable : a retry is attempted if the gRPC status code in the response header is set to unavailable.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
   readonly retryConditions?: string[];
   /**
   * per_try_timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
   */
   readonly perTryTimeout?: ComputeRegionUrlMapDefaultRouteActionRetryPolicyPerTryTimeout;
@@ -1068,13 +1068,13 @@ export class ComputeRegionUrlMapDefaultRouteActionRetryPolicyOutputReference ext
 export interface ComputeRegionUrlMapDefaultRouteActionTimeout {
   /**
   * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds?: string;
@@ -1165,14 +1165,14 @@ export interface ComputeRegionUrlMapDefaultRouteActionUrlRewrite {
   /**
   * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.
 The value must be from 1 to 255 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
   /**
   * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite.
 The value must be from 1 to 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
   readonly pathPrefixRewrite?: string;
@@ -1262,20 +1262,20 @@ export class ComputeRegionUrlMapDefaultRouteActionUrlRewriteOutputReference exte
 export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName?: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue?: string;
   /**
   * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
@@ -1420,20 +1420,20 @@ export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderA
 export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName?: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue?: string;
   /**
   * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header.
 The default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace?: boolean | cdktf.IResolvable;
@@ -1578,25 +1578,25 @@ export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderA
 export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response before sending the response back to the client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
   readonly responseHeadersToRemove?: string[];
   /**
   * request_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_add ComputeRegionUrlMap#request_headers_to_add}
   */
   readonly requestHeadersToAdd?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_add ComputeRegionUrlMap#response_headers_to_add}
   */
   readonly responseHeadersToAdd?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
@@ -1732,7 +1732,7 @@ export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderA
 export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices {
   /**
   * The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the load balancer applies any relevant headerActions specified as part of this backendServiceWeight.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService?: string;
@@ -1740,13 +1740,13 @@ export interface ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices {
   * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all weightedBackendService weights in routeAction) .
 The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy.
 The value must be from 0 to 1000.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
   readonly weight?: number;
   /**
   * header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_action ComputeRegionUrlMap#header_action}
   */
   readonly headerAction?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesHeaderAction;
@@ -1891,43 +1891,43 @@ export class ComputeRegionUrlMapDefaultRouteActionWeightedBackendServicesList ex
 export interface ComputeRegionUrlMapDefaultRouteAction {
   /**
   * cors_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#cors_policy ComputeRegionUrlMap#cors_policy}
   */
   readonly corsPolicy?: ComputeRegionUrlMapDefaultRouteActionCorsPolicy;
   /**
   * fault_injection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fault_injection_policy ComputeRegionUrlMap#fault_injection_policy}
   */
   readonly faultInjectionPolicy?: ComputeRegionUrlMapDefaultRouteActionFaultInjectionPolicy;
   /**
   * request_mirror_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
   */
   readonly requestMirrorPolicy?: ComputeRegionUrlMapDefaultRouteActionRequestMirrorPolicy;
   /**
   * retry_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_policy ComputeRegionUrlMap#retry_policy}
   */
   readonly retryPolicy?: ComputeRegionUrlMapDefaultRouteActionRetryPolicy;
   /**
   * timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#timeout ComputeRegionUrlMap#timeout}
   */
   readonly timeout?: ComputeRegionUrlMapDefaultRouteActionTimeout;
   /**
   * url_rewrite block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#url_rewrite ComputeRegionUrlMap#url_rewrite}
   */
   readonly urlRewrite?: ComputeRegionUrlMapDefaultRouteActionUrlRewrite;
   /**
   * weighted_backend_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weighted_backend_services ComputeRegionUrlMap#weighted_backend_services}
   */
   readonly weightedBackendServices?: ComputeRegionUrlMapDefaultRouteActionWeightedBackendServices[] | cdktf.IResolvable;
@@ -2133,7 +2133,7 @@ export interface ComputeRegionUrlMapDefaultUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
@@ -2142,7 +2142,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
@@ -2152,7 +2152,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
@@ -2162,7 +2162,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
@@ -2180,7 +2180,7 @@ will be retained.
 
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
@@ -2189,7 +2189,7 @@ the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENT
 to redirecting the request. If set to false, the query portion of the original URL is
 retained.
  This field is required to ensure an empty block is not set. The normal default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
   readonly stripQuery: boolean | cdktf.IResolvable;
@@ -2369,7 +2369,7 @@ export interface ComputeRegionUrlMapHostRule {
   /**
   * An optional description of this HostRule. Provide this property
 when you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
   readonly description?: string;
@@ -2378,14 +2378,14 @@ when you create the resource.
 hostnames, except * will match any string of ([a-z0-9-.]*). In
 that case, * must be the first character and must be followed in
 the pattern by either - or ..
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#hosts ComputeRegionUrlMap#hosts}
   */
   readonly hosts: string[];
   /**
   * The name of the PathMatcher to use to match the path portion of
 the URL if the hostRule matches the URL's host portion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_matcher ComputeRegionUrlMap#path_matcher}
   */
   readonly pathMatcher: string;
@@ -2525,7 +2525,7 @@ export interface ComputeRegionUrlMapPathMatcherDefaultUrlRedirect {
   /**
   * The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
@@ -2534,7 +2534,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
@@ -2544,7 +2544,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
@@ -2554,7 +2554,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
@@ -2572,7 +2572,7 @@ will be retained.
 
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
@@ -2581,7 +2581,7 @@ the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENT
 to redirecting the request. If set to false, the query portion of the original URL is
 retained.
  This field is required to ensure an empty block is not set. The normal default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
   readonly stripQuery: boolean | cdktf.IResolvable;
@@ -2762,19 +2762,19 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
   * In response to a preflight request, setting this to true indicates that the
 actual request can include user credentials. This translates to the Access-
 Control-Allow-Credentials header. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_headers ComputeRegionUrlMap#allow_headers}
   */
   readonly allowHeaders?: string[];
   /**
   * Specifies the content for the Access-Control-Allow-Methods header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_methods ComputeRegionUrlMap#allow_methods}
   */
   readonly allowMethods?: string[];
@@ -2782,33 +2782,33 @@ Control-Allow-Credentials header. Defaults to false.
   * Specifies the regular expression patterns that match allowed origins. For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests. An
 origin is allowed if it matches either allow_origins or allow_origin_regex.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
   * If true, specifies the CORS policy is disabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#disabled ComputeRegionUrlMap#disabled}
   */
   readonly disabled: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#expose_headers ComputeRegionUrlMap#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long the results of a preflight request can be cached. This
 translates to the content for the Access-Control-Max-Age header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
   readonly maxAge?: number;
@@ -3034,7 +3034,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjection
   /**
   * The HTTP status code used to abort the request. The value must be between 200
 and 599 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus: number;
@@ -3042,7 +3042,7 @@ and 599 inclusive.
   * The percentage of traffic (connections/operations/requests) which will be
 aborted as part of fault injection. The value must be between 0.0 and 100.0
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage: number;
@@ -3128,14 +3128,14 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjection
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -3224,13 +3224,13 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjection
   * The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
 100.0 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage: number;
   /**
   * fixed_delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fixed_delay ComputeRegionUrlMap#fixed_delay}
   */
   readonly fixedDelay: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay;
@@ -3314,13 +3314,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
   /**
   * abort block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#abort ComputeRegionUrlMap#abort}
   */
   readonly abort?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort;
   /**
   * delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#delay ComputeRegionUrlMap#delay}
   */
   readonly delay?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay;
@@ -3410,7 +3410,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPoli
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
   /**
   * The RegionBackendService resource being mirrored to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
@@ -3476,14 +3476,14 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPer
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -3570,7 +3570,7 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryT
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy {
   /**
   * Specifies the allowed number retries. This number must be > 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#num_retries ComputeRegionUrlMap#num_retries}
   */
   readonly numRetries?: number;
@@ -3597,13 +3597,13 @@ gRPC status code in the response header is set to deadline-exceeded
 header is set to resource-exhausted
 - unavailable: Loadbalancer will retry if
 the gRPC status code in the response header is set to unavailable
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
   readonly retryConditions?: string[];
   /**
   * per_try_timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
   */
   readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
@@ -3718,14 +3718,14 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout {
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -3814,7 +3814,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite {
   * Prior to forwarding the request to the selected service, the request's host
 header is replaced with contents of hostRewrite. The value must be between 1 and
 255 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
@@ -3822,7 +3822,7 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
   * Prior to forwarding the request to the selected backend service, the matching
 portion of the request's path is replaced by pathPrefixRewrite. The value must
 be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
   readonly pathPrefixRewrite?: string;
@@ -3912,13 +3912,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutputRe
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -3926,7 +3926,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -4062,13 +4062,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -4076,7 +4076,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -4213,26 +4213,26 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   /**
   * A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
   readonly responseHeadersToRemove?: string[];
   /**
   * request_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_add ComputeRegionUrlMap#request_headers_to_add}
   */
   readonly requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_add ComputeRegionUrlMap#response_headers_to_add}
   */
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
@@ -4370,7 +4370,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBacken
   * The default RegionBackendService resource. Before
 forwarding the request to backendService, the loadbalancer applies any relevant
 headerActions specified as part of this backendServiceWeight.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
@@ -4381,13 +4381,13 @@ backend service is determined only for new traffic. Once a user's request has
 been directed to a backendService, subsequent requests will be sent to the same
 backendService as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
   readonly weight: number;
   /**
   * header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_action ComputeRegionUrlMap#header_action}
   */
   readonly headerAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction;
@@ -4526,43 +4526,43 @@ export class ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendSer
 export interface ComputeRegionUrlMapPathMatcherPathRuleRouteAction {
   /**
   * cors_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#cors_policy ComputeRegionUrlMap#cors_policy}
   */
   readonly corsPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy;
   /**
   * fault_injection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fault_injection_policy ComputeRegionUrlMap#fault_injection_policy}
   */
   readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy;
   /**
   * request_mirror_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
   */
   readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy;
   /**
   * retry_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_policy ComputeRegionUrlMap#retry_policy}
   */
   readonly retryPolicy?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy;
   /**
   * timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#timeout ComputeRegionUrlMap#timeout}
   */
   readonly timeout?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionTimeout;
   /**
   * url_rewrite block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#url_rewrite ComputeRegionUrlMap#url_rewrite}
   */
   readonly urlRewrite?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite;
   /**
   * weighted_backend_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weighted_backend_services ComputeRegionUrlMap#weighted_backend_services}
   */
   readonly weightedBackendServices?: ComputeRegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServices[] | cdktf.IResolvable;
@@ -4769,7 +4769,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect {
   * The host that will be used in the redirect response instead of the one
 that was supplied in the request. The value must be between 1 and 255
 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
@@ -4779,7 +4779,7 @@ If set to false, the URL scheme of the redirected request will remain the
 same as that of the request. This must only be set for UrlMaps used in
 TargetHttpProxys. Setting this true for TargetHttpsProxy is not
 permitted. The default is set to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
@@ -4789,7 +4789,7 @@ that was supplied in the request. pathRedirect cannot be supplied
 together with prefixRedirect. Supply one alone or neither. If neither is
 supplied, the path of the original request will be used for the redirect.
 The value must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
@@ -4800,7 +4800,7 @@ redirecting the request. prefixRedirect cannot be supplied together with
 pathRedirect. Supply one alone or neither. If neither is supplied, the
 path of the original request will be used for the redirect. The value
 must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
@@ -4818,7 +4818,7 @@ will be retained.
 
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
@@ -4827,7 +4827,7 @@ the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENT
 prior to redirecting the request. If set to false, the query portion of the
 original URL is retained.
  This field is required to ensure an empty block is not set. The normal default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
   readonly stripQuery: boolean | cdktf.IResolvable;
@@ -5009,7 +5009,7 @@ export interface ComputeRegionUrlMapPathMatcherPathRule {
 \* is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#paths ComputeRegionUrlMap#paths}
   */
   readonly paths: string[];
@@ -5021,19 +5021,19 @@ the request to the backend. However, if service is specified, routeAction cannot
 contain any weightedBackendService s. Conversely, if routeAction specifies any
 weightedBackendServices, service must not be specified. Only one of urlRedirect,
 service or routeAction.weightedBackendService must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#service ComputeRegionUrlMap#service}
   */
   readonly service?: string;
   /**
   * route_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#route_action ComputeRegionUrlMap#route_action}
   */
   readonly routeAction?: ComputeRegionUrlMapPathMatcherPathRuleRouteAction;
   /**
   * url_redirect block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#url_redirect ComputeRegionUrlMap#url_redirect}
   */
   readonly urlRedirect?: ComputeRegionUrlMapPathMatcherPathRuleUrlRedirect;
@@ -5198,13 +5198,13 @@ export class ComputeRegionUrlMapPathMatcherPathRuleList extends cdktf.ComplexLis
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -5212,7 +5212,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHead
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -5348,13 +5348,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersT
 export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -5362,7 +5362,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHea
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -5499,26 +5499,26 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction {
   /**
   * A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
   readonly responseHeadersToRemove?: string[];
   /**
   * request_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_add ComputeRegionUrlMap#request_headers_to_add}
   */
   readonly requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_add ComputeRegionUrlMap#response_headers_to_add}
   */
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
@@ -5654,13 +5654,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesHeaderActionOutputReference
 export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
   /**
   * The end of the range (exclusive).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#range_end ComputeRegionUrlMap#range_end}
   */
   readonly rangeEnd: number;
   /**
   * The start of the range (inclusive).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#range_start ComputeRegionUrlMap#range_start}
   */
   readonly rangeStart: number;
@@ -5745,7 +5745,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches
   /**
   * The value should exactly match contents of exactMatch. Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#exact_match ComputeRegionUrlMap#exact_match}
   */
   readonly exactMatch?: string;
@@ -5753,7 +5753,7 @@ prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
   * The name of the HTTP header to match. For matching against the HTTP request's
 authority, use a headerMatch with the header name ":authority". For matching a
 request's method, use the headerName ":method".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
@@ -5761,7 +5761,7 @@ request's method, use the headerName ":method".
   * If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#invert_match ComputeRegionUrlMap#invert_match}
   */
   readonly invertMatch?: boolean | cdktf.IResolvable;
@@ -5769,7 +5769,7 @@ match criteria above are NOT met. Defaults to false.
   * The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_match ComputeRegionUrlMap#prefix_match}
   */
   readonly prefixMatch?: string;
@@ -5777,7 +5777,7 @@ must be set.
   * A header with the contents of headerName must exist. The match takes place
 whether or not the request's header has a value or not. Only one of exactMatch,
 prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#present_match ComputeRegionUrlMap#present_match}
   */
   readonly presentMatch?: boolean | cdktf.IResolvable;
@@ -5789,7 +5789,7 @@ specified in the HTTP request, use a headerMatch with headerName set to PORT and
 a regular expression that satisfies the RFC2616 Host header's port specifier.
 Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or
 rangeMatch must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
   readonly regexMatch?: string;
@@ -5797,13 +5797,13 @@ rangeMatch must be set.
   * The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#suffix_match ComputeRegionUrlMap#suffix_match}
   */
   readonly suffixMatch?: string;
   /**
   * range_match block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#range_match ComputeRegionUrlMap#range_match}
   */
   readonly rangeMatch?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch;
@@ -6061,14 +6061,14 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilte
   /**
   * Name of metadata label. The name can have a maximum length of 1024 characters
 and must be at least 1 character long.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
   /**
   * The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#value ComputeRegionUrlMap#value}
   */
   readonly value: string;
@@ -6190,13 +6190,13 @@ contribute towards the overall metadataFilter match. Supported values are:
 provided metadata.
 * MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#filter_match_criteria ComputeRegionUrlMap#filter_match_criteria}
   */
   readonly filterMatchCriteria: string;
   /**
   * filter_labels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#filter_labels ComputeRegionUrlMap#filter_labels}
   */
   readonly filterLabels: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels[] | cdktf.IResolvable;
@@ -6314,14 +6314,14 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParamete
   * The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#exact_match ComputeRegionUrlMap#exact_match}
   */
   readonly exactMatch?: string;
   /**
   * The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
@@ -6329,7 +6329,7 @@ request, in the absence of which the request match fails.
   * Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#present_match ComputeRegionUrlMap#present_match}
   */
   readonly presentMatch?: boolean | cdktf.IResolvable;
@@ -6338,7 +6338,7 @@ presentMatch, exactMatch and regexMatch must be set.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
   readonly regexMatch?: string;
@@ -6507,14 +6507,14 @@ match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#full_path_match ComputeRegionUrlMap#full_path_match}
   */
   readonly fullPathMatch?: string;
   /**
   * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#ignore_case ComputeRegionUrlMap#ignore_case}
   */
   readonly ignoreCase?: boolean | cdktf.IResolvable;
@@ -6523,7 +6523,7 @@ Defaults to false.
 specified prefixMatch. prefixMatch must begin with a /. The value must be
 between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
 regexMatch must be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_match ComputeRegionUrlMap#prefix_match}
   */
   readonly prefixMatch?: string;
@@ -6533,25 +6533,25 @@ regular expression specified in regexMatch after removing any query parameters
 and anchor supplied with the original URL. For regular expression grammar please
 see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
 fullPathMatch or regexMatch must be specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#regex_match ComputeRegionUrlMap#regex_match}
   */
   readonly regexMatch?: string;
   /**
   * header_matches block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_matches ComputeRegionUrlMap#header_matches}
   */
   readonly headerMatches?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesHeaderMatches[] | cdktf.IResolvable;
   /**
   * metadata_filters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#metadata_filters ComputeRegionUrlMap#metadata_filters}
   */
   readonly metadataFilters?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesMetadataFilters[] | cdktf.IResolvable;
   /**
   * query_parameter_matches block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#query_parameter_matches ComputeRegionUrlMap#query_parameter_matches}
   */
   readonly queryParameterMatches?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRulesQueryParameterMatches[] | cdktf.IResolvable;
@@ -6790,19 +6790,19 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy {
   * In response to a preflight request, setting this to true indicates that the
 actual request can include user credentials. This translates to the Access-
 Control-Allow-Credentials header. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_credentials ComputeRegionUrlMap#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Allow-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_headers ComputeRegionUrlMap#allow_headers}
   */
   readonly allowHeaders?: string[];
   /**
   * Specifies the content for the Access-Control-Allow-Methods header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_methods ComputeRegionUrlMap#allow_methods}
   */
   readonly allowMethods?: string[];
@@ -6810,34 +6810,34 @@ Control-Allow-Credentials header. Defaults to false.
   * Specifies the regular expression patterns that match allowed origins. For
 regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either allow_origins or allow_origin_regex.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origin_regexes ComputeRegionUrlMap#allow_origin_regexes}
   */
   readonly allowOriginRegexes?: string[];
   /**
   * Specifies the list of origins that will be allowed to do CORS requests. An
 origin is allowed if it matches either allow_origins or allow_origin_regex.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#allow_origins ComputeRegionUrlMap#allow_origins}
   */
   readonly allowOrigins?: string[];
   /**
   * If true, specifies the CORS policy is disabled.
 which indicates that the CORS policy is in effect. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#disabled ComputeRegionUrlMap#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Specifies the content for the Access-Control-Expose-Headers header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#expose_headers ComputeRegionUrlMap#expose_headers}
   */
   readonly exposeHeaders?: string[];
   /**
   * Specifies how long the results of a preflight request can be cached. This
 translates to the content for the Access-Control-Max-Age header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#max_age ComputeRegionUrlMap#max_age}
   */
   readonly maxAge?: number;
@@ -7066,7 +7066,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjecti
   /**
   * The HTTP status code used to abort the request. The value must be between 200
 and 599 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#http_status ComputeRegionUrlMap#http_status}
   */
   readonly httpStatus?: number;
@@ -7074,7 +7074,7 @@ and 599 inclusive.
   * The percentage of traffic (connections/operations/requests) which will be
 aborted as part of fault injection. The value must be between 0.0 and 100.0
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage?: number;
@@ -7166,14 +7166,14 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjecti
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -7262,13 +7262,13 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjecti
   * The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
 100.0 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#percentage ComputeRegionUrlMap#percentage}
   */
   readonly percentage?: number;
   /**
   * fixed_delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fixed_delay ComputeRegionUrlMap#fixed_delay}
   */
   readonly fixedDelay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay;
@@ -7358,13 +7358,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
   /**
   * abort block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#abort ComputeRegionUrlMap#abort}
   */
   readonly abort?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort;
   /**
   * delay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#delay ComputeRegionUrlMap#delay}
   */
   readonly delay?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay;
@@ -7454,7 +7454,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPo
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
   /**
   * The RegionBackendService resource being mirrored to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
@@ -7520,14 +7520,14 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyP
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -7614,7 +7614,7 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTr
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy {
   /**
   * Specifies the allowed number retries. This number must be > 0.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#num_retries ComputeRegionUrlMap#num_retries}
   */
   readonly numRetries: number;
@@ -7641,13 +7641,13 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy 
   header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in
   the response header is set to unavailable
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_conditions ComputeRegionUrlMap#retry_conditions}
   */
   readonly retryConditions?: string[];
   /**
   * per_try_timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#per_try_timeout ComputeRegionUrlMap#per_try_timeout}
   */
   readonly perTryTimeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout;
@@ -7759,14 +7759,14 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout {
   * Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 'seconds' field and a positive
 'nanos' field. Must be from 0 to 999,999,999 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#nanos ComputeRegionUrlMap#nanos}
   */
   readonly nanos?: number;
   /**
   * Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#seconds ComputeRegionUrlMap#seconds}
   */
   readonly seconds: string;
@@ -7855,7 +7855,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite {
   * Prior to forwarding the request to the selected service, the request's host
 header is replaced with contents of hostRewrite. The value must be between 1 and
 255 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_rewrite ComputeRegionUrlMap#host_rewrite}
   */
   readonly hostRewrite?: string;
@@ -7863,7 +7863,7 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
   * Prior to forwarding the request to the selected backend service, the matching
 portion of the request's path is replaced by pathPrefixRewrite. The value must
 be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_prefix_rewrite ComputeRegionUrlMap#path_prefix_rewrite}
   */
   readonly pathPrefixRewrite?: string;
@@ -7953,13 +7953,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewriteOutput
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -7967,7 +7967,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -8103,13 +8103,13 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   /**
   * The name of the header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_name ComputeRegionUrlMap#header_name}
   */
   readonly headerName: string;
   /**
   * The value of the header to add.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_value ComputeRegionUrlMap#header_value}
   */
   readonly headerValue: string;
@@ -8117,7 +8117,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   * If false, headerValue is appended to any values that already exist for the
 header. If true, headerValue is set for the header, discarding any values that
 were set for that header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#replace ComputeRegionUrlMap#replace}
   */
   readonly replace: boolean | cdktf.IResolvable;
@@ -8254,26 +8254,26 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   /**
   * A list of header names for headers that need to be removed from the request
 prior to forwarding the request to the backendService.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_remove ComputeRegionUrlMap#request_headers_to_remove}
   */
   readonly requestHeadersToRemove?: string[];
   /**
   * A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_remove ComputeRegionUrlMap#response_headers_to_remove}
   */
   readonly responseHeadersToRemove?: string[];
   /**
   * request_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_headers_to_add ComputeRegionUrlMap#request_headers_to_add}
   */
   readonly requestHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd[] | cdktf.IResolvable;
   /**
   * response_headers_to_add block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#response_headers_to_add ComputeRegionUrlMap#response_headers_to_add}
   */
   readonly responseHeadersToAdd?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd[] | cdktf.IResolvable;
@@ -8411,7 +8411,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBack
   * The default RegionBackendService resource. Before
 forwarding the request to backendService, the loadbalancer applies any relevant
 headerActions specified as part of this backendServiceWeight.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#backend_service ComputeRegionUrlMap#backend_service}
   */
   readonly backendService: string;
@@ -8422,13 +8422,13 @@ backend service is determined only for new traffic. Once a user's request has
 been directed to a backendService, subsequent requests will be sent to the same
 backendService as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weight ComputeRegionUrlMap#weight}
   */
   readonly weight: number;
   /**
   * header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_action ComputeRegionUrlMap#header_action}
   */
   readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction;
@@ -8567,43 +8567,43 @@ export class ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendS
 export interface ComputeRegionUrlMapPathMatcherRouteRulesRouteAction {
   /**
   * cors_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#cors_policy ComputeRegionUrlMap#cors_policy}
   */
   readonly corsPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionCorsPolicy;
   /**
   * fault_injection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#fault_injection_policy ComputeRegionUrlMap#fault_injection_policy}
   */
   readonly faultInjectionPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionFaultInjectionPolicy;
   /**
   * request_mirror_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#request_mirror_policy ComputeRegionUrlMap#request_mirror_policy}
   */
   readonly requestMirrorPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRequestMirrorPolicy;
   /**
   * retry_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#retry_policy ComputeRegionUrlMap#retry_policy}
   */
   readonly retryPolicy?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionRetryPolicy;
   /**
   * timeout block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#timeout ComputeRegionUrlMap#timeout}
   */
   readonly timeout?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionTimeout;
   /**
   * url_rewrite block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#url_rewrite ComputeRegionUrlMap#url_rewrite}
   */
   readonly urlRewrite?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionUrlRewrite;
   /**
   * weighted_backend_services block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#weighted_backend_services ComputeRegionUrlMap#weighted_backend_services}
   */
   readonly weightedBackendServices?: ComputeRegionUrlMapPathMatcherRouteRulesRouteActionWeightedBackendServices[] | cdktf.IResolvable;
@@ -8810,7 +8810,7 @@ export interface ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect {
   * The host that will be used in the redirect response instead of the one
 that was supplied in the request. The value must be between 1 and 255
 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host_redirect ComputeRegionUrlMap#host_redirect}
   */
   readonly hostRedirect?: string;
@@ -8820,7 +8820,7 @@ If set to false, the URL scheme of the redirected request will remain the
 same as that of the request. This must only be set for UrlMaps used in
 TargetHttpProxys. Setting this true for TargetHttpsProxy is not
 permitted. The default is set to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#https_redirect ComputeRegionUrlMap#https_redirect}
   */
   readonly httpsRedirect?: boolean | cdktf.IResolvable;
@@ -8830,7 +8830,7 @@ that was supplied in the request. pathRedirect cannot be supplied
 together with prefixRedirect. Supply one alone or neither. If neither is
 supplied, the path of the original request will be used for the redirect.
 The value must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_redirect ComputeRegionUrlMap#path_redirect}
   */
   readonly pathRedirect?: string;
@@ -8841,7 +8841,7 @@ redirecting the request. prefixRedirect cannot be supplied together with
 pathRedirect. Supply one alone or neither. If neither is supplied, the
 path of the original request will be used for the redirect. The value
 must be between 1 and 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#prefix_redirect ComputeRegionUrlMap#prefix_redirect}
   */
   readonly prefixRedirect?: string;
@@ -8859,7 +8859,7 @@ will be retained.
 
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENTLY_DEFAULT", "PERMANENT_REDIRECT", "SEE_OTHER", "TEMPORARY_REDIRECT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#redirect_response_code ComputeRegionUrlMap#redirect_response_code}
   */
   readonly redirectResponseCode?: string;
@@ -8867,7 +8867,7 @@ the request method will be retained. Possible values: ["FOUND", "MOVED_PERMANENT
   * If set to true, any accompanying query portion of the original URL is
 removed prior to redirecting the request. If set to false, the query
 portion of the original URL is retained. The default value is false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#strip_query ComputeRegionUrlMap#strip_query}
   */
   readonly stripQuery?: boolean | cdktf.IResolvable;
@@ -9063,7 +9063,7 @@ in the future without affecting the rest of the rules. For example,
 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#priority ComputeRegionUrlMap#priority}
   */
   readonly priority: number;
@@ -9075,31 +9075,31 @@ the request to the backend. However, if service is specified, routeAction cannot
 contain any weightedBackendService s. Conversely, if routeAction specifies any
 weightedBackendServices, service must not be specified. Only one of urlRedirect,
 service or routeAction.weightedBackendService must be set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#service ComputeRegionUrlMap#service}
   */
   readonly service?: string;
   /**
   * header_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#header_action ComputeRegionUrlMap#header_action}
   */
   readonly headerAction?: ComputeRegionUrlMapPathMatcherRouteRulesHeaderAction;
   /**
   * match_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#match_rules ComputeRegionUrlMap#match_rules}
   */
   readonly matchRules?: ComputeRegionUrlMapPathMatcherRouteRulesMatchRules[] | cdktf.IResolvable;
   /**
   * route_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#route_action ComputeRegionUrlMap#route_action}
   */
   readonly routeAction?: ComputeRegionUrlMapPathMatcherRouteRulesRouteAction;
   /**
   * url_redirect block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#url_redirect ComputeRegionUrlMap#url_redirect}
   */
   readonly urlRedirect?: ComputeRegionUrlMapPathMatcherRouteRulesUrlRedirect;
@@ -9312,37 +9312,37 @@ export interface ComputeRegionUrlMapPathMatcher {
   * A reference to a RegionBackendService resource. This will be used if
 none of the pathRules defined by this PathMatcher is matched by
 the URL's path portion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#default_service ComputeRegionUrlMap#default_service}
   */
   readonly defaultService?: string;
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
   readonly description?: string;
   /**
   * The name to which this PathMatcher is referred by the HostRule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#name ComputeRegionUrlMap#name}
   */
   readonly name: string;
   /**
   * default_url_redirect block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#default_url_redirect ComputeRegionUrlMap#default_url_redirect}
   */
   readonly defaultUrlRedirect?: ComputeRegionUrlMapPathMatcherDefaultUrlRedirect;
   /**
   * path_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path_rule ComputeRegionUrlMap#path_rule}
   */
   readonly pathRule?: ComputeRegionUrlMapPathMatcherPathRule[] | cdktf.IResolvable;
   /**
   * route_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#route_rules ComputeRegionUrlMap#route_rules}
   */
   readonly routeRules?: ComputeRegionUrlMapPathMatcherRouteRules[] | cdktf.IResolvable;
@@ -9553,25 +9553,25 @@ export class ComputeRegionUrlMapPathMatcherList extends cdktf.ComplexList {
 export interface ComputeRegionUrlMapTest {
   /**
   * Description of this test case.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#description ComputeRegionUrlMap#description}
   */
   readonly description?: string;
   /**
   * Host portion of the URL.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#host ComputeRegionUrlMap#host}
   */
   readonly host: string;
   /**
   * Path portion of the URL.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#path ComputeRegionUrlMap#path}
   */
   readonly path: string;
   /**
   * A reference to expected RegionBackendService resource the given URL should be mapped to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_url_map#service ComputeRegionUrlMap#service}
   */
   readonly service: string;

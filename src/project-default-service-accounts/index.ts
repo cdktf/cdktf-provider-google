@@ -15,7 +15,7 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   /**
   * The action to be performed in the default service accounts. Valid values are: DEPRIVILEGE, DELETE, DISABLE.
 				Note that DEPRIVILEGE action will ignore the REVERT configuration in the restore_policy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_default_service_accounts#action ProjectDefaultServiceAccounts#action}
   */
   readonly action: string;
@@ -28,20 +28,20 @@ export interface ProjectDefaultServiceAccountsConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * The project ID where service accounts are created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_default_service_accounts#project ProjectDefaultServiceAccounts#project}
   */
   readonly project: string;
   /**
   * The action to be performed in the default service accounts on the resource destroy.
 				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_default_service_accounts#restore_policy ProjectDefaultServiceAccounts#restore_policy}
   */
   readonly restorePolicy?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_default_service_accounts#timeouts ProjectDefaultServiceAccounts#timeouts}
   */
   readonly timeouts?: ProjectDefaultServiceAccountsTimeouts;

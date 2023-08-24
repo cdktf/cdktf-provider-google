@@ -21,15 +21,17 @@ export interface DataGoogleCloudfunctions2FunctionConfig extends cdktf.Terraform
   readonly id?: string;
   /**
   * The location of this cloud function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions2_function#location DataGoogleCloudfunctions2Function#location}
   */
   readonly location: string;
   /**
   * A user-defined name of the function. Function names must
-be unique globally and match pattern 'projects/*\/locations/*\/functions/*'.
-  * 
+be unique globally and match pattern 'projects/* /locations/* /functions/*'.
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/cloudfunctions2_function#name DataGoogleCloudfunctions2Function#name}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly name: string;
   /**

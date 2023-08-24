@@ -21,19 +21,19 @@ export interface AccessContextManagerIngressPolicyConfig extends cdktf.Terraform
   readonly id?: string;
   /**
   * The name of the Service Perimeter to add this resource to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_ingress_policy#ingress_policy_name AccessContextManagerIngressPolicy#ingress_policy_name}
   */
   readonly ingressPolicyName: string;
   /**
   * A GCP resource that is inside of the service perimeter.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_ingress_policy#resource AccessContextManagerIngressPolicy#resource}
   */
   readonly resource: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_ingress_policy#timeouts AccessContextManagerIngressPolicy#timeouts}
   */
   readonly timeouts?: AccessContextManagerIngressPolicyTimeouts;

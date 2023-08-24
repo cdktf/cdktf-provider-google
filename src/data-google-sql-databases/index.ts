@@ -21,13 +21,13 @@ export interface DataGoogleSqlDatabasesConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The name of the Cloud SQL database instance in which the database belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_databases#instance DataGoogleSqlDatabases#instance}
   */
   readonly instance: string;
   /**
   * Project ID of the project that contains the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_databases#project DataGoogleSqlDatabases#project}
   */
   readonly project?: string;

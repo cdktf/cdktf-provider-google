@@ -15,14 +15,14 @@ export interface ComputeRouteConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource. Provide this property
 when you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#description ComputeRoute#description}
   */
   readonly description?: string;
   /**
   * The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#dest_range ComputeRoute#dest_range}
   */
   readonly destRange: string;
@@ -41,13 +41,13 @@ match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#name ComputeRoute#name}
   */
   readonly name: string;
   /**
   * The network that this route applies to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#network ComputeRoute#network}
   */
   readonly network: string;
@@ -59,7 +59,7 @@ partial valid URL:
 * 'projects/project/global/gateways/default-internet-gateway'
 * 'global/gateways/default-internet-gateway'
 * The string 'default-internet-gateway'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_gateway ComputeRoute#next_hop_gateway}
   */
   readonly nextHopGateway?: string;
@@ -80,7 +80,7 @@ of a forwarding rule from the same VPC or any peered VPC.
 
 Note that this can only be used when the destinationRange is
 a public (non-RFC 1918) IP CIDR range.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_ilb ComputeRoute#next_hop_ilb}
   */
   readonly nextHopIlb?: string;
@@ -91,25 +91,25 @@ You can specify this as a full or partial URL. For example:
 * 'projects/project/zones/zone/instances/instance'
 * 'zones/zone/instances/instance'
 * Just the instance name, with the zone in 'next_hop_instance_zone'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_instance ComputeRoute#next_hop_instance}
   */
   readonly nextHopInstance?: string;
   /**
   * The zone of the instance specified in next_hop_instance. Omit if next_hop_instance is specified as a URL.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_instance_zone ComputeRoute#next_hop_instance_zone}
   */
   readonly nextHopInstanceZone?: string;
   /**
   * Network IP address of an instance that should handle matching packets.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_ip ComputeRoute#next_hop_ip}
   */
   readonly nextHopIp?: string;
   /**
   * URL to a VpnTunnel that should handle matching packets.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#next_hop_vpn_tunnel ComputeRoute#next_hop_vpn_tunnel}
   */
   readonly nextHopVpnTunnel?: string;
@@ -121,7 +121,7 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 
 Default value is 1000. Valid range is 0 through 65535.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#priority ComputeRoute#priority}
   */
   readonly priority?: number;
@@ -131,13 +131,13 @@ Default value is 1000. Valid range is 0 through 65535.
   readonly project?: string;
   /**
   * A list of instance tags to which this route applies.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#tags ComputeRoute#tags}
   */
   readonly tags?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_route#timeouts ComputeRoute#timeouts}
   */
   readonly timeouts?: ComputeRouteTimeouts;

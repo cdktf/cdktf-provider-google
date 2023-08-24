@@ -21,7 +21,7 @@ export interface DataGooglePubsubTopicConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * Name of the topic.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/pubsub_topic#name DataGooglePubsubTopic#name}
   */
   readonly name: string;

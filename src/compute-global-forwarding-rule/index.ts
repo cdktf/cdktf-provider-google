@@ -15,7 +15,7 @@ export interface ComputeGlobalForwardingRuleConfig extends cdktf.TerraformMetaAr
   /**
   * An optional description of this resource. Provide this property when
 you create the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#description ComputeGlobalForwardingRule#description}
   */
   readonly description?: string;
@@ -67,7 +67,7 @@ specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-con
 
 When reading an 'IPAddress', the API always returns the IP
 address number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#ip_address ComputeGlobalForwardingRule#ip_address}
   */
   readonly ipAddress?: string;
@@ -82,19 +82,19 @@ options are 'TCP', 'UDP', 'ESP',
 The valid IP protocols are different for different load balancing products
 as described in [Load balancing
 features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: ["TCP", "UDP", "ESP", "AH", "SCTP", "ICMP"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#ip_protocol ComputeGlobalForwardingRule#ip_protocol}
   */
   readonly ipProtocol?: string;
   /**
   * The IP Version that will be used by this global forwarding rule. Possible values: ["IPV4", "IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#ip_version ComputeGlobalForwardingRule#ip_version}
   */
   readonly ipVersion?: string;
   /**
   * Labels to apply to this forwarding rule.  A list of key->value pairs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#labels ComputeGlobalForwardingRule#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -103,7 +103,7 @@ features](https://cloud.google.com/load-balancing/docs/features#protocols_from_t
 
 For more information about forwarding rules, refer to
 [Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: "EXTERNAL" Possible values: ["EXTERNAL", "EXTERNAL_MANAGED", "INTERNAL_MANAGED", "INTERNAL_SELF_MANAGED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#load_balancing_scheme ComputeGlobalForwardingRule#load_balancing_scheme}
   */
   readonly loadBalancingScheme?: string;
@@ -121,7 +121,7 @@ cannot be a dash.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, the forwarding rule name must be a 1-20 characters string with
 lowercase letters and numbers and must start with a letter.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
   */
   readonly name: string;
@@ -136,13 +136,13 @@ be used.
 
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#network ComputeGlobalForwardingRule#network}
   */
   readonly network?: string;
   /**
   * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#no_automate_dns_zone ComputeGlobalForwardingRule#no_automate_dns_zone}
   */
   readonly noAutomateDnsZone?: boolean | cdktf.IResolvable;
@@ -165,7 +165,7 @@ for details.
 * TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
                   1883, 5222
 * TargetVpnGateway: 500, 4500
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#port_range ComputeGlobalForwardingRule#port_range}
   */
   readonly portRange?: string;
@@ -175,7 +175,7 @@ for details.
   readonly project?: string;
   /**
   * If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#source_ip_ranges ComputeGlobalForwardingRule#source_ip_ranges}
   */
   readonly sourceIpRanges?: string[];
@@ -187,7 +187,7 @@ network load balancing with IPv6.
 If the network specified is in auto subnet mode, this field is optional.
 However, a subnetwork must be specified if the network is in custom subnet
 mode or when creating external forwarding rule with IPv6.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#subnetwork ComputeGlobalForwardingRule#subnetwork}
   */
   readonly subnetwork?: string;
@@ -205,19 +205,19 @@ The forwarded traffic must be of a type appropriate to the target object.
 
 
 For Private Service Connect forwarding rules that forward traffic to managed services, the target must be a service attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#target ComputeGlobalForwardingRule#target}
   */
   readonly target: string;
   /**
   * metadata_filters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#metadata_filters ComputeGlobalForwardingRule#metadata_filters}
   */
   readonly metadataFilters?: ComputeGlobalForwardingRuleMetadataFilters[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#timeouts ComputeGlobalForwardingRule#timeouts}
   */
   readonly timeouts?: ComputeGlobalForwardingRuleTimeouts;
@@ -226,14 +226,14 @@ export interface ComputeGlobalForwardingRuleMetadataFiltersFilterLabels {
   /**
   * Name of the metadata label. The length must be between
 1 and 1024 characters, inclusive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#name ComputeGlobalForwardingRule#name}
   */
   readonly name: string;
   /**
   * The value that the label must match. The value has a maximum
 length of 1024 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#value ComputeGlobalForwardingRule#value}
   */
   readonly value: string;
@@ -355,13 +355,13 @@ MATCH_ANY - At least one of the filterLabels must have a matching
 label in the provided metadata.
 MATCH_ALL - All filterLabels must have matching labels in the
 provided metadata. Possible values: ["MATCH_ANY", "MATCH_ALL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#filter_match_criteria ComputeGlobalForwardingRule#filter_match_criteria}
   */
   readonly filterMatchCriteria: string;
   /**
   * filter_labels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_global_forwarding_rule#filter_labels ComputeGlobalForwardingRule#filter_labels}
   */
   readonly filterLabels: ComputeGlobalForwardingRuleMetadataFiltersFilterLabels[] | cdktf.IResolvable;

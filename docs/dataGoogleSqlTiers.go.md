@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.NewDataGoogleSqlTiers(scope Construct, id *string, config DataGoogleSqlTiersConfig) DataGoogleSqlTiers
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiers.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.DataGoogleSqlTiers_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiers.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.DataGoogleSqlTiers_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglesqltiers.DataGoogleSqlTiers_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiers.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.DataGoogleSqlTiers_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -562,7 +562,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiersConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 &datagooglesqltiers.DataGoogleSqlTiersConfig {
 	Connection: interface{},
@@ -697,7 +697,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiersTiers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 &datagooglesqltiers.DataGoogleSqlTiersTiers {
 
@@ -712,7 +712,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiersTiersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.NewDataGoogleSqlTiersTiersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleSqlTiersTiersList
 ```
@@ -844,7 +844,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleSqlTiers.DataGoogleSqlTiersTiersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/datagooglesqltiers"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglesqltiers"
 
 datagooglesqltiers.NewDataGoogleSqlTiersTiersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleSqlTiersTiersOutputReference
 ```

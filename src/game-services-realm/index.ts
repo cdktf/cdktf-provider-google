@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface GameServicesRealmConfig extends cdktf.TerraformMetaArguments {
   /**
   * Human readable description of the realm.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#description GameServicesRealm#description}
   */
   readonly description?: string;
@@ -27,13 +27,13 @@ export interface GameServicesRealmConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The labels associated with this realm. Each label is a key-value pair.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#labels GameServicesRealm#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Location of the Realm.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#location GameServicesRealm#location}
   */
   readonly location?: string;
@@ -43,7 +43,7 @@ export interface GameServicesRealmConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * GCP region of the Realm.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#realm_id GameServicesRealm#realm_id}
   */
   readonly realmId: string;
@@ -51,13 +51,13 @@ export interface GameServicesRealmConfig extends cdktf.TerraformMetaArguments {
   * Required. Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#time_zone GameServicesRealm#time_zone}
   */
   readonly timeZone: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_realm#timeouts GameServicesRealm#timeouts}
   */
   readonly timeouts?: GameServicesRealmTimeouts;

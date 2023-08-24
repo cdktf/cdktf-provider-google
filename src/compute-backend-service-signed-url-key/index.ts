@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputeBackendServiceSignedUrlKeyConfig extends cdktf.TerraformMetaArguments {
   /**
   * The backend service this signed URL key belongs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_service_signed_url_key#backend_service ComputeBackendServiceSignedUrlKey#backend_service}
   */
   readonly backendService: string;
@@ -28,13 +28,13 @@ export interface ComputeBackendServiceSignedUrlKeyConfig extends cdktf.Terraform
   /**
   * 128-bit key value used for signing the URL. The key value must be a
 valid RFC 4648 Section 5 base64url encoded string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_service_signed_url_key#key_value ComputeBackendServiceSignedUrlKey#key_value}
   */
   readonly keyValue: string;
   /**
   * Name of the signed URL key.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_service_signed_url_key#name ComputeBackendServiceSignedUrlKey#name}
   */
   readonly name: string;
@@ -44,7 +44,7 @@ valid RFC 4648 Section 5 base64url encoded string.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_service_signed_url_key#timeouts ComputeBackendServiceSignedUrlKey#timeouts}
   */
   readonly timeouts?: ComputeBackendServiceSignedUrlKeyTimeouts;

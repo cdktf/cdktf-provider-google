@@ -15,7 +15,7 @@ export interface ApigeeEnvKeystoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Apigee environment group associated with the Apigee environment,
 in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_keystore#env_id ApigeeEnvKeystore#env_id}
   */
   readonly envId: string;
@@ -28,13 +28,13 @@ in the format 'organizations/{{org_name}}/environments/{{env_name}}'.
   readonly id?: string;
   /**
   * The name of the newly created keystore.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_keystore#name ApigeeEnvKeystore#name}
   */
   readonly name?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_env_keystore#timeouts ApigeeEnvKeystore#timeouts}
   */
   readonly timeouts?: ApigeeEnvKeystoreTimeouts;

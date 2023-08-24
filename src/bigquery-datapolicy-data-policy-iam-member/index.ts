@@ -41,7 +41,7 @@ export interface BigqueryDatapolicyDataPolicyIamMemberConfig extends cdktf.Terra
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_datapolicy_data_policy_iam_member#condition BigqueryDatapolicyDataPolicyIamMember#condition}
   */
   readonly condition?: BigqueryDatapolicyDataPolicyIamMemberCondition;

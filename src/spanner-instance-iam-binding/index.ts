@@ -37,7 +37,7 @@ export interface SpannerInstanceIamBindingConfig extends cdktf.TerraformMetaArgu
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_instance_iam_binding#condition SpannerInstanceIamBinding#condition}
   */
   readonly condition?: SpannerInstanceIamBindingCondition;

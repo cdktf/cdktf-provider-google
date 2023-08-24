@@ -33,7 +33,7 @@ export interface ProjectIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_iam_member#condition ProjectIamMember#condition}
   */
   readonly condition?: ProjectIamMemberCondition;

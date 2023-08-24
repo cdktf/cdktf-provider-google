@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface StorageTransferAgentPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Specifies the client-specified AgentPool description.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_transfer_agent_pool#display_name StorageTransferAgentPool#display_name}
   */
   readonly displayName?: string;
@@ -36,7 +36,7 @@ The agentPoolId must meet the following requirements:
   * One or more numerals or lowercase ASCII characters.
 
 As expressed by the regular expression: ^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_transfer_agent_pool#name StorageTransferAgentPool#name}
   */
   readonly name: string;
@@ -46,13 +46,13 @@ As expressed by the regular expression: ^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$.
   readonly project?: string;
   /**
   * bandwidth_limit block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_transfer_agent_pool#bandwidth_limit StorageTransferAgentPool#bandwidth_limit}
   */
   readonly bandwidthLimit?: StorageTransferAgentPoolBandwidthLimit;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_transfer_agent_pool#timeouts StorageTransferAgentPool#timeouts}
   */
   readonly timeouts?: StorageTransferAgentPoolTimeouts;
@@ -60,7 +60,7 @@ As expressed by the regular expression: ^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$.
 export interface StorageTransferAgentPoolBandwidthLimit {
   /**
   * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/storage_transfer_agent_pool#limit_mbps StorageTransferAgentPool#limit_mbps}
   */
   readonly limitMbps: string;

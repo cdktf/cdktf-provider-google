@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface ComputePublicAdvertisedPrefixConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#description ComputePublicAdvertisedPrefix#description}
   */
   readonly description?: string;
   /**
   * The IPv4 address to be used for reverse DNS verification.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#dns_verification_ip ComputePublicAdvertisedPrefix#dns_verification_ip}
   */
   readonly dnsVerificationIp: string;
@@ -33,7 +33,7 @@ export interface ComputePublicAdvertisedPrefixConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#ip_cidr_range ComputePublicAdvertisedPrefix#ip_cidr_range}
   */
   readonly ipCidrRange: string;
@@ -44,7 +44,7 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?'
 which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#name ComputePublicAdvertisedPrefix#name}
   */
   readonly name: string;
@@ -54,7 +54,7 @@ except the last character, which cannot be a dash.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_public_advertised_prefix#timeouts ComputePublicAdvertisedPrefix#timeouts}
   */
   readonly timeouts?: ComputePublicAdvertisedPrefixTimeouts;

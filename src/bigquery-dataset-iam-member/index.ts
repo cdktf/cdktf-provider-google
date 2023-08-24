@@ -37,7 +37,7 @@ export interface BigqueryDatasetIamMemberConfig extends cdktf.TerraformMetaArgum
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/bigquery_dataset_iam_member#condition BigqueryDatasetIamMember#condition}
   */
   readonly condition?: BigqueryDatasetIamMemberCondition;

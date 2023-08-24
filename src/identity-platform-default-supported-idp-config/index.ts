@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * OAuth client ID
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_default_supported_idp_config#client_id IdentityPlatformDefaultSupportedIdpConfig#client_id}
   */
   readonly clientId: string;
   /**
   * OAuth client secret
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_default_supported_idp_config#client_secret IdentityPlatformDefaultSupportedIdpConfig#client_secret}
   */
   readonly clientSecret: string;
   /**
   * If this IDP allows the user to sign in
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_default_supported_idp_config#enabled IdentityPlatformDefaultSupportedIdpConfig#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -59,7 +59,7 @@ export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.T
 * 'twitter.com'
 
 * 'yahoo.com'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_default_supported_idp_config#idp_id IdentityPlatformDefaultSupportedIdpConfig#idp_id}
   */
   readonly idpId: string;
@@ -69,7 +69,7 @@ export interface IdentityPlatformDefaultSupportedIdpConfigConfig extends cdktf.T
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_default_supported_idp_config#timeouts IdentityPlatformDefaultSupportedIdpConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformDefaultSupportedIdpConfigTimeouts;

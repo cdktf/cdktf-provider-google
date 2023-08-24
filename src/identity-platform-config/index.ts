@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of domains authorized for OAuth redirects.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#authorized_domains IdentityPlatformConfig#authorized_domains}
   */
   readonly authorizedDomains?: string[];
   /**
   * Whether anonymous users will be auto-deleted after a period of 30 days
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#autodelete_anonymous_users IdentityPlatformConfig#autodelete_anonymous_users}
   */
   readonly autodeleteAnonymousUsers?: boolean | cdktf.IResolvable;
@@ -37,19 +37,19 @@ export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArgumen
   readonly project?: string;
   /**
   * blocking_functions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#blocking_functions IdentityPlatformConfig#blocking_functions}
   */
   readonly blockingFunctions?: IdentityPlatformConfigBlockingFunctions;
   /**
   * quota block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: IdentityPlatformConfigQuota;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#timeouts IdentityPlatformConfig#timeouts}
   */
   readonly timeouts?: IdentityPlatformConfigTimeouts;
@@ -57,19 +57,19 @@ export interface IdentityPlatformConfigConfig extends cdktf.TerraformMetaArgumen
 export interface IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials {
   /**
   * Whether to pass the user's OAuth identity provider's access token.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#access_token IdentityPlatformConfig#access_token}
   */
   readonly accessToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OIDC identity provider's ID token.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#id_token IdentityPlatformConfig#id_token}
   */
   readonly idToken?: boolean | cdktf.IResolvable;
   /**
   * Whether to pass the user's OAuth identity provider's refresh token.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#refresh_token IdentityPlatformConfig#refresh_token}
   */
   readonly refreshToken?: boolean | cdktf.IResolvable;
@@ -186,7 +186,7 @@ export interface IdentityPlatformConfigBlockingFunctionsTriggers {
   readonly eventType: string;
   /**
   * HTTP URI trigger for the Cloud Function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#function_uri IdentityPlatformConfig#function_uri}
   */
   readonly functionUri: string;
@@ -307,13 +307,13 @@ export class IdentityPlatformConfigBlockingFunctionsTriggersList extends cdktf.C
 export interface IdentityPlatformConfigBlockingFunctions {
   /**
   * forward_inbound_credentials block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#forward_inbound_credentials IdentityPlatformConfig#forward_inbound_credentials}
   */
   readonly forwardInboundCredentials?: IdentityPlatformConfigBlockingFunctionsForwardInboundCredentials;
   /**
   * triggers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#triggers IdentityPlatformConfig#triggers}
   */
   readonly triggers: IdentityPlatformConfigBlockingFunctionsTriggers[] | cdktf.IResolvable;
@@ -400,19 +400,19 @@ export class IdentityPlatformConfigBlockingFunctionsOutputReference extends cdkt
 export interface IdentityPlatformConfigQuotaSignUpQuotaConfig {
   /**
   * A sign up APIs quota that customers can override temporarily.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#quota IdentityPlatformConfig#quota}
   */
   readonly quota?: number;
   /**
   * How long this quota will be active for. It is measurred in seconds, e.g., Example: "9.615s".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#quota_duration IdentityPlatformConfig#quota_duration}
   */
   readonly quotaDuration?: string;
   /**
   * When this quota will take affect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#start_time IdentityPlatformConfig#start_time}
   */
   readonly startTime?: string;
@@ -525,7 +525,7 @@ export class IdentityPlatformConfigQuotaSignUpQuotaConfigOutputReference extends
 export interface IdentityPlatformConfigQuota {
   /**
   * sign_up_quota_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/identity_platform_config#sign_up_quota_config IdentityPlatformConfig#sign_up_quota_config}
   */
   readonly signUpQuotaConfig?: IdentityPlatformConfigQuotaSignUpQuotaConfig;

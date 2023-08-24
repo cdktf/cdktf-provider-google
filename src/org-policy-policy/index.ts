@@ -21,25 +21,25 @@ export interface OrgPolicyPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#name OrgPolicyPolicy#name}
   */
   readonly name: string;
   /**
   * The parent of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#parent OrgPolicyPolicy#parent}
   */
   readonly parent: string;
   /**
   * spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#spec OrgPolicyPolicy#spec}
   */
   readonly spec?: OrgPolicyPolicySpec;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#timeouts OrgPolicyPolicy#timeouts}
   */
   readonly timeouts?: OrgPolicyPolicyTimeouts;
@@ -47,25 +47,25 @@ export interface OrgPolicyPolicyConfig extends cdktf.TerraformMetaArguments {
 export interface OrgPolicyPolicySpecRulesCondition {
   /**
   * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#description OrgPolicyPolicy#description}
   */
   readonly description?: string;
   /**
   * Textual representation of an expression in Common Expression Language syntax.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#expression OrgPolicyPolicy#expression}
   */
   readonly expression?: string;
   /**
   * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#location OrgPolicyPolicy#location}
   */
   readonly location?: string;
   /**
   * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#title OrgPolicyPolicy#title}
   */
   readonly title?: string;
@@ -201,13 +201,13 @@ export class OrgPolicyPolicySpecRulesConditionOutputReference extends cdktf.Comp
 export interface OrgPolicyPolicySpecRulesValues {
   /**
   * List of values allowed at this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#allowed_values OrgPolicyPolicy#allowed_values}
   */
   readonly allowedValues?: string[];
   /**
   * List of values denied at this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#denied_values OrgPolicyPolicy#denied_values}
   */
   readonly deniedValues?: string[];
@@ -297,31 +297,31 @@ export class OrgPolicyPolicySpecRulesValuesOutputReference extends cdktf.Complex
 export interface OrgPolicyPolicySpecRules {
   /**
   * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#allow_all OrgPolicyPolicy#allow_all}
   */
   readonly allowAll?: string;
   /**
   * Setting this to true means that all values are denied. This field can be set only in Policies for list constraints.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#deny_all OrgPolicyPolicy#deny_all}
   */
   readonly denyAll?: string;
   /**
   * If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable. This field can be set only in Policies for boolean constraints.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#enforce OrgPolicyPolicy#enforce}
   */
   readonly enforce?: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#condition OrgPolicyPolicy#condition}
   */
   readonly condition?: OrgPolicyPolicySpecRulesCondition;
   /**
   * values block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#values OrgPolicyPolicy#values}
   */
   readonly values?: OrgPolicyPolicySpecRulesValues;
@@ -512,19 +512,19 @@ export class OrgPolicyPolicySpecRulesList extends cdktf.ComplexList {
 export interface OrgPolicyPolicySpec {
   /**
   * Determines the inheritance behavior for this `Policy`. If `inherit_from_parent` is true, PolicyRules set higher up in the hierarchy (up to the closest root) are inherited and present in the effective policy. If it is false, then no rules are inherited, and this Policy becomes the new root for evaluation. This field can be set only for Policies which configure list constraints.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#inherit_from_parent OrgPolicyPolicy#inherit_from_parent}
   */
   readonly inheritFromParent?: boolean | cdktf.IResolvable;
   /**
   * Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of the specific `Constraint` at this resource. This field can be set in policies for either list or boolean constraints. If set, `rules` must be empty and `inherit_from_parent` must be set to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#reset OrgPolicyPolicy#reset}
   */
   readonly reset?: boolean | cdktf.IResolvable;
   /**
   * rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/org_policy_policy#rules OrgPolicyPolicy#rules}
   */
   readonly rules?: OrgPolicyPolicySpecRules[] | cdktf.IResolvable;

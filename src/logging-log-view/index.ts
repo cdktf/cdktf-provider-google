@@ -14,19 +14,19 @@ import * as cdktf from 'cdktf';
 export interface LoggingLogViewConfig extends cdktf.TerraformMetaArguments {
   /**
   * The bucket of the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#bucket LoggingLogView#bucket}
   */
   readonly bucket: string;
   /**
   * Describes this view.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#description LoggingLogView#description}
   */
   readonly description?: string;
   /**
   * Filter that restricts which log entries in a bucket are visible in this view. Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE("projects/myproject") AND resource.type = "gce_instance" AND LOG_ID("stdout")
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#filter LoggingLogView#filter}
   */
   readonly filter?: string;
@@ -39,25 +39,25 @@ export interface LoggingLogViewConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#location LoggingLogView#location}
   */
   readonly location?: string;
   /**
   * The resource name of the view. For example: \'projects/my-project/locations/global/buckets/my-bucket/views/my-view\'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#name LoggingLogView#name}
   */
   readonly name: string;
   /**
   * The parent of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#parent LoggingLogView#parent}
   */
   readonly parent?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_log_view#timeouts LoggingLogView#timeouts}
   */
   readonly timeouts?: LoggingLogViewTimeouts;

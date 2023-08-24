@@ -37,7 +37,7 @@ export interface IapWebTypeAppEngineIamBindingConfig extends cdktf.TerraformMeta
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_binding#condition IapWebTypeAppEngineIamBinding#condition}
   */
   readonly condition?: IapWebTypeAppEngineIamBindingCondition;

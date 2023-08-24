@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ApigeeEndpointAttachmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * ID of the endpoint attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#endpoint_attachment_id ApigeeEndpointAttachment#endpoint_attachment_id}
   */
   readonly endpointAttachmentId: string;
@@ -27,26 +27,28 @@ export interface ApigeeEndpointAttachmentConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * Location of the endpoint attachment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#location ApigeeEndpointAttachment#location}
   */
   readonly location: string;
   /**
   * The Apigee Organization associated with the Apigee instance,
 in the format 'organizations/{{org_name}}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#org_id ApigeeEndpointAttachment#org_id}
   */
   readonly orgId: string;
   /**
-  * Format: projects/*\/regions/*\/serviceAttachments/*
-  * 
+  * Format: projects/* /regions/* /serviceAttachments/*
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#service_attachment ApigeeEndpointAttachment#service_attachment}
+   *
+  * Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
   */
   readonly serviceAttachment: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/apigee_endpoint_attachment#timeouts ApigeeEndpointAttachment#timeouts}
   */
   readonly timeouts?: ApigeeEndpointAttachmentTimeouts;

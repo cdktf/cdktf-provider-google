@@ -16,7 +16,7 @@ export interface AccessContextManagerAuthorizedOrgsDescConfig extends cdktf.Terr
   * The type of entities that need to use the authorization relationship during
 evaluation, such as a device. Valid values are "ASSET_TYPE_DEVICE" and
 "ASSET_TYPE_CREDENTIAL_STRENGTH". Possible values: ["ASSET_TYPE_DEVICE", "ASSET_TYPE_CREDENTIAL_STRENGTH"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#asset_type AccessContextManagerAuthorizedOrgsDesc#asset_type}
   */
   readonly assetType?: string;
@@ -38,13 +38,13 @@ traffic, by specifying "AUTHORIZATION_DIRECTION_TO" as the authorization
 direction, organizations B and C must specify
 "AUTHORIZATION_DIRECTION_FROM" as the authorization direction in their
 "AuthorizedOrgsDesc" resource. Possible values: ["AUTHORIZATION_DIRECTION_TO", "AUTHORIZATION_DIRECTION_FROM"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#authorization_direction AccessContextManagerAuthorizedOrgsDesc#authorization_direction}
   */
   readonly authorizationDirection?: string;
   /**
   * A granular control type for authorization levels. Valid value is "AUTHORIZATION_TYPE_TRUST". Possible values: ["AUTHORIZATION_TYPE_TRUST"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#authorization_type AccessContextManagerAuthorizedOrgsDesc#authorization_type}
   */
   readonly authorizationType?: string;
@@ -61,7 +61,7 @@ direction, organizations B and C must specify
 The 'authorized_orgs_desc' component must begin with a letter, followed by
 alphanumeric characters or '_'.
 After you create an 'AuthorizedOrgsDesc', you cannot change its 'name'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#name AccessContextManagerAuthorizedOrgsDesc#name}
   */
   readonly name: string;
@@ -69,19 +69,19 @@ After you create an 'AuthorizedOrgsDesc', you cannot change its 'name'.
   * The list of organization ids in this AuthorizedOrgsDesc.
 Format: 'organizations/<org_number>'
 Example: 'organizations/123456'
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#orgs AccessContextManagerAuthorizedOrgsDesc#orgs}
   */
   readonly orgs?: string[];
   /**
   * Required. Resource name for the access policy which owns this 'AuthorizedOrgsDesc'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#parent AccessContextManagerAuthorizedOrgsDesc#parent}
   */
   readonly parent: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/access_context_manager_authorized_orgs_desc#timeouts AccessContextManagerAuthorizedOrgsDesc#timeouts}
   */
   readonly timeouts?: AccessContextManagerAuthorizedOrgsDescTimeouts;

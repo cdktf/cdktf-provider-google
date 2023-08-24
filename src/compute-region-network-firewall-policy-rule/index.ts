@@ -14,37 +14,37 @@ import * as cdktf from 'cdktf';
 export interface ComputeRegionNetworkFirewallPolicyRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#action ComputeRegionNetworkFirewallPolicyRule#action}
   */
   readonly action: string;
   /**
   * An optional description for this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#description ComputeRegionNetworkFirewallPolicyRule#description}
   */
   readonly description?: string;
   /**
   * The direction in which this rule applies. Possible values: INGRESS, EGRESS
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#direction ComputeRegionNetworkFirewallPolicyRule#direction}
   */
   readonly direction: string;
   /**
   * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#disabled ComputeRegionNetworkFirewallPolicyRule#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#enable_logging ComputeRegionNetworkFirewallPolicyRule#enable_logging}
   */
   readonly enableLogging?: boolean | cdktf.IResolvable;
   /**
   * The firewall policy of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#firewall_policy ComputeRegionNetworkFirewallPolicyRule#firewall_policy}
   */
   readonly firewallPolicy: string;
@@ -57,49 +57,49 @@ export interface ComputeRegionNetworkFirewallPolicyRuleConfig extends cdktf.Terr
   readonly id?: string;
   /**
   * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#priority ComputeRegionNetworkFirewallPolicyRule#priority}
   */
   readonly priority: number;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#project ComputeRegionNetworkFirewallPolicyRule#project}
   */
   readonly project?: string;
   /**
   * The location of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#region ComputeRegionNetworkFirewallPolicyRule#region}
   */
   readonly region?: string;
   /**
   * An optional name for the rule. This field is not a unique identifier and can be updated.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#rule_name ComputeRegionNetworkFirewallPolicyRule#rule_name}
   */
   readonly ruleName?: string;
   /**
   * A list of service accounts indicating the sets of instances that are applied with this rule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#target_service_accounts ComputeRegionNetworkFirewallPolicyRule#target_service_accounts}
   */
   readonly targetServiceAccounts?: string[];
   /**
   * match block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#match ComputeRegionNetworkFirewallPolicyRule#match}
   */
   readonly match: ComputeRegionNetworkFirewallPolicyRuleMatch;
   /**
   * target_secure_tags block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#target_secure_tags ComputeRegionNetworkFirewallPolicyRule#target_secure_tags}
   */
   readonly targetSecureTags?: ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#timeouts ComputeRegionNetworkFirewallPolicyRule#timeouts}
   */
   readonly timeouts?: ComputeRegionNetworkFirewallPolicyRuleTimeouts;
@@ -107,13 +107,13 @@ export interface ComputeRegionNetworkFirewallPolicyRuleConfig extends cdktf.Terr
 export interface ComputeRegionNetworkFirewallPolicyRuleMatchLayer4Configs {
   /**
   * The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#ip_protocol ComputeRegionNetworkFirewallPolicyRule#ip_protocol}
   */
   readonly ipProtocol: string;
   /**
   * An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ``.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#ports ComputeRegionNetworkFirewallPolicyRule#ports}
   */
   readonly ports?: string[];
@@ -232,7 +232,7 @@ export class ComputeRegionNetworkFirewallPolicyRuleMatchLayer4ConfigsList extend
 export interface ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags {
   /**
   * Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#name ComputeRegionNetworkFirewallPolicyRule#name}
   */
   readonly name: string;
@@ -333,73 +333,73 @@ export class ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTagsList extend
 export interface ComputeRegionNetworkFirewallPolicyRuleMatch {
   /**
   * Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#dest_address_groups ComputeRegionNetworkFirewallPolicyRule#dest_address_groups}
   */
   readonly destAddressGroups?: string[];
   /**
   * Domain names that will be used to match against the resolved domain name of destination of traffic. Can only be specified if DIRECTION is egress.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#dest_fqdns ComputeRegionNetworkFirewallPolicyRule#dest_fqdns}
   */
   readonly destFqdns?: string[];
   /**
   * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#dest_ip_ranges ComputeRegionNetworkFirewallPolicyRule#dest_ip_ranges}
   */
   readonly destIpRanges?: string[];
   /**
   * The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is egress.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#dest_region_codes ComputeRegionNetworkFirewallPolicyRule#dest_region_codes}
   */
   readonly destRegionCodes?: string[];
   /**
   * Name of the Google Cloud Threat Intelligence list.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#dest_threat_intelligences ComputeRegionNetworkFirewallPolicyRule#dest_threat_intelligences}
   */
   readonly destThreatIntelligences?: string[];
   /**
   * Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_address_groups ComputeRegionNetworkFirewallPolicyRule#src_address_groups}
   */
   readonly srcAddressGroups?: string[];
   /**
   * Domain names that will be used to match against the resolved domain name of source of traffic. Can only be specified if DIRECTION is ingress.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_fqdns ComputeRegionNetworkFirewallPolicyRule#src_fqdns}
   */
   readonly srcFqdns?: string[];
   /**
   * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_ip_ranges ComputeRegionNetworkFirewallPolicyRule#src_ip_ranges}
   */
   readonly srcIpRanges?: string[];
   /**
   * The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is ingress.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_region_codes ComputeRegionNetworkFirewallPolicyRule#src_region_codes}
   */
   readonly srcRegionCodes?: string[];
   /**
   * Name of the Google Cloud Threat Intelligence list.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_threat_intelligences ComputeRegionNetworkFirewallPolicyRule#src_threat_intelligences}
   */
   readonly srcThreatIntelligences?: string[];
   /**
   * layer4_configs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#layer4_configs ComputeRegionNetworkFirewallPolicyRule#layer4_configs}
   */
   readonly layer4Configs: ComputeRegionNetworkFirewallPolicyRuleMatchLayer4Configs[] | cdktf.IResolvable;
   /**
   * src_secure_tags block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#src_secure_tags ComputeRegionNetworkFirewallPolicyRule#src_secure_tags}
   */
   readonly srcSecureTags?: ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags[] | cdktf.IResolvable;
@@ -716,7 +716,7 @@ export class ComputeRegionNetworkFirewallPolicyRuleMatchOutputReference extends 
 export interface ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags {
   /**
   * Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#name ComputeRegionNetworkFirewallPolicyRule#name}
   */
   readonly name: string;

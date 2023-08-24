@@ -16,13 +16,13 @@ export interface ComputeSslCertificateConfig extends cdktf.TerraformMetaArgument
   * The certificate in PEM format.
 The certificate chain must be no greater than 5 certs long.
 The chain must include at least one intermediate cert.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#certificate ComputeSslCertificate#certificate}
   */
   readonly certificate: string;
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#description ComputeSslCertificate#description}
   */
   readonly description?: string;
@@ -44,19 +44,19 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#name ComputeSslCertificate#name}
   */
   readonly name?: string;
   /**
   * Creates a unique name beginning with the specified prefix. Conflicts with name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#name_prefix ComputeSslCertificate#name_prefix}
   */
   readonly namePrefix?: string;
   /**
   * The write-only private key in PEM format.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#private_key ComputeSslCertificate#private_key}
   */
   readonly privateKey: string;
@@ -66,7 +66,7 @@ These are in the same namespace as the managed SSL certificates.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_ssl_certificate#timeouts ComputeSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeSslCertificateTimeouts;

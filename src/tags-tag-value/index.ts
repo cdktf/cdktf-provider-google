@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   /**
   * User-assigned description of the TagValue. Must not exceed 256 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value#description TagsTagValue#description}
   */
   readonly description?: string;
@@ -27,7 +27,7 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value#parent TagsTagValue#parent}
   */
   readonly parent: string;
@@ -35,13 +35,13 @@ export interface TagsTagValueConfig extends cdktf.TerraformMetaArguments {
   * Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey.
 
 The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value#short_name TagsTagValue#short_name}
   */
   readonly shortName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/tags_tag_value#timeouts TagsTagValue#timeouts}
   */
   readonly timeouts?: TagsTagValueTimeouts;

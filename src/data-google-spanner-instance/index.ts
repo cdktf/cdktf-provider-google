@@ -19,14 +19,14 @@ replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form 'regional-europe-west1' , 'us-central' etc.
 In order to obtain a valid list please consult the
 [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/spanner_instance#config DataGoogleSpannerInstance#config}
   */
   readonly config?: string;
   /**
   * The descriptive name for this instance as it appears in UIs. Must be
 unique per project and between 4 and 30 characters in length.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/spanner_instance#display_name DataGoogleSpannerInstance#display_name}
   */
   readonly displayName?: string;
@@ -44,7 +44,7 @@ in length.
 
 
 If not provided, a random string starting with 'tf-' will be selected.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/spanner_instance#name DataGoogleSpannerInstance#name}
   */
   readonly name: string;

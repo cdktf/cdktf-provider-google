@@ -37,7 +37,7 @@ export interface ComputeSnapshotIamBindingConfig extends cdktf.TerraformMetaArgu
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_snapshot_iam_binding#condition ComputeSnapshotIamBinding#condition}
   */
   readonly condition?: ComputeSnapshotIamBindingCondition;

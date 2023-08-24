@@ -25,7 +25,7 @@ export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArgumen
   readonly members: string[];
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_binding#org_id OrganizationIamBinding#org_id}
   */
   readonly orgId: string;
@@ -35,7 +35,7 @@ export interface OrganizationIamBindingConfig extends cdktf.TerraformMetaArgumen
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_binding#condition OrganizationIamBinding#condition}
   */
   readonly condition?: OrganizationIamBindingCondition;

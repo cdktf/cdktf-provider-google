@@ -17,7 +17,7 @@ export interface DataCatalogPolicyTagConfig extends cdktf.TerraformMetaArguments
 newlines, carriage returns and page breaks; and be at most 2000 bytes long when
 encoded in UTF-8. If not set, defaults to an empty description.
 If not set, defaults to an empty description.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag#description DataCatalogPolicyTag#description}
   */
   readonly description?: string;
@@ -25,7 +25,7 @@ If not set, defaults to an empty description.
   * User defined name of this policy tag. It must: be unique within the parent
 taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
 not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag#display_name DataCatalogPolicyTag#display_name}
   */
   readonly displayName: string;
@@ -40,19 +40,19 @@ not start or end with spaces; and be at most 200 bytes long when encoded in UTF-
   * Resource name of this policy tag's parent policy tag.
 If empty, it means this policy tag is a top level policy tag.
 If not set, defaults to an empty string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag#parent_policy_tag DataCatalogPolicyTag#parent_policy_tag}
   */
   readonly parentPolicyTag?: string;
   /**
   * Taxonomy the policy tag is associated with
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag#taxonomy DataCatalogPolicyTag#taxonomy}
   */
   readonly taxonomy: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag#timeouts DataCatalogPolicyTag#timeouts}
   */
   readonly timeouts?: DataCatalogPolicyTagTimeouts;

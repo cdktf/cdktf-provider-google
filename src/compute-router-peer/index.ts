@@ -15,7 +15,7 @@ export interface ComputeRouterPeerConfig extends cdktf.TerraformMetaArguments {
   /**
   * User-specified flag to indicate which mode to use for advertisement.
 Valid values of this enum field are: 'DEFAULT', 'CUSTOM' Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#advertise_mode ComputeRouterPeer#advertise_mode}
   */
   readonly advertiseMode?: string;
@@ -32,7 +32,7 @@ Note that this field can only be populated if advertiseMode is 'CUSTOM'
 and overrides the list defined for the router (in the "bgp" message).
 These groups are advertised in addition to any specified prefixes.
 Leave this field blank to advertise no custom groups.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#advertised_groups ComputeRouterPeer#advertised_groups}
   */
   readonly advertisedGroups?: string[];
@@ -40,7 +40,7 @@ Leave this field blank to advertise no custom groups.
   * The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#advertised_route_priority ComputeRouterPeer#advertised_route_priority}
   */
   readonly advertisedRoutePriority?: number;
@@ -49,13 +49,13 @@ length, the routes with the lowest priority value win.
 with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#enable ComputeRouterPeer#enable}
   */
   readonly enable?: boolean | cdktf.IResolvable;
   /**
   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#enable_ipv6 ComputeRouterPeer#enable_ipv6}
   */
   readonly enableIpv6?: boolean | cdktf.IResolvable;
@@ -68,14 +68,14 @@ The default is true.
   readonly id?: string;
   /**
   * Name of the interface the BGP peer is associated with.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#interface ComputeRouterPeer#interface}
   */
   readonly interface: string;
   /**
   * IP address of the interface inside Google Cloud Platform.
 Only IPv4 is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#ip_address ComputeRouterPeer#ip_address}
   */
   readonly ipAddress?: string;
@@ -84,7 +84,7 @@ Only IPv4 is supported.
 The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#ipv6_nexthop_address ComputeRouterPeer#ipv6_nexthop_address}
   */
   readonly ipv6NexthopAddress?: string;
@@ -95,21 +95,21 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#name ComputeRouterPeer#name}
   */
   readonly name: string;
   /**
   * Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#peer_asn ComputeRouterPeer#peer_asn}
   */
   readonly peerAsn: number;
   /**
   * IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported. Required if 'ip_address' is set.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#peer_ip_address ComputeRouterPeer#peer_ip_address}
   */
   readonly peerIpAddress?: string;
@@ -118,7 +118,7 @@ Only IPv4 is supported. Required if 'ip_address' is set.
 The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
 assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#peer_ipv6_nexthop_address ComputeRouterPeer#peer_ipv6_nexthop_address}
   */
   readonly peerIpv6NexthopAddress?: string;
@@ -129,13 +129,13 @@ assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range
   /**
   * Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#region ComputeRouterPeer#region}
   */
   readonly region?: string;
   /**
   * The name of the Cloud Router in which this BgpPeer will be configured.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#router ComputeRouterPeer#router}
   */
   readonly router: string;
@@ -144,25 +144,25 @@ If it is not provided, the provider region is used.
 such as Next Gen Firewalls, Virtual Routers, or Router Appliances.
 The VM instance must be located in zones contained in the same region as
 this Cloud Router. The VM instance is the peer side of the BGP session.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#router_appliance_instance ComputeRouterPeer#router_appliance_instance}
   */
   readonly routerApplianceInstance?: string;
   /**
   * advertised_ip_ranges block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#advertised_ip_ranges ComputeRouterPeer#advertised_ip_ranges}
   */
   readonly advertisedIpRanges?: ComputeRouterPeerAdvertisedIpRanges[] | cdktf.IResolvable;
   /**
   * bfd block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#bfd ComputeRouterPeer#bfd}
   */
   readonly bfd?: ComputeRouterPeerBfd;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#timeouts ComputeRouterPeer#timeouts}
   */
   readonly timeouts?: ComputeRouterPeerTimeouts;
@@ -170,14 +170,14 @@ this Cloud Router. The VM instance is the peer side of the BGP session.
 export interface ComputeRouterPeerAdvertisedIpRanges {
   /**
   * User-specified description for the IP range.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#description ComputeRouterPeer#description}
   */
   readonly description?: string;
   /**
   * The IP range to advertise. The value must be a
 CIDR-formatted string.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#range ComputeRouterPeer#range}
   */
   readonly range: string;
@@ -300,7 +300,7 @@ received from the peer router. The actual value is negotiated
 between the two routers and is equal to the greater of this value
 and the transmit interval of the other router. If set, this value
 must be between 1000 and 30000.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#min_receive_interval ComputeRouterPeer#min_receive_interval}
   */
   readonly minReceiveInterval?: number;
@@ -310,7 +310,7 @@ transmitted to the peer router. The actual value is negotiated
 between the two routers and is equal to the greater of this value
 and the corresponding receive interval of the other router. If set,
 this value must be between 1000 and 30000.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#min_transmit_interval ComputeRouterPeer#min_transmit_interval}
   */
   readonly minTransmitInterval?: number;
@@ -318,7 +318,7 @@ this value must be between 1000 and 30000.
   * The number of consecutive BFD packets that must be missed before
 BFD declares that a peer is unavailable. If set, the value must
 be a value between 5 and 16.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#multiplier ComputeRouterPeer#multiplier}
   */
   readonly multiplier?: number;
@@ -328,7 +328,7 @@ If set to 'ACTIVE', the Cloud Router will initiate the BFD session
 for this BGP peer. If set to 'PASSIVE', the Cloud Router will wait
 for the peer router to initiate the BFD session for this BGP peer.
 If set to 'DISABLED', BFD is disabled for this BGP peer. Possible values: ["ACTIVE", "DISABLED", "PASSIVE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_router_peer#session_initialization_mode ComputeRouterPeer#session_initialization_mode}
   */
   readonly sessionInitializationMode: string;

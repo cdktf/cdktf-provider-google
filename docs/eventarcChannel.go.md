@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcChannel.EventarcChannel.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 eventarcchannel.NewEventarcChannel(scope Construct, id *string, config EventarcChannelConfig) EventarcChannel
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.eventarcChannel.EventarcChannel.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 eventarcchannel.EventarcChannel_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.eventarcChannel.EventarcChannel.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 eventarcchannel.EventarcChannel_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ eventarcchannel.EventarcChannel_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.eventarcChannel.EventarcChannel.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 eventarcchannel.EventarcChannel_IsTerraformResource(x interface{}) *bool
 ```
@@ -783,7 +783,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcChannel.EventarcChannelConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 &eventarcchannel.EventarcChannelConfig {
 	Connection: interface{},
@@ -799,7 +799,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
 	Id: *string,
 	Project: *string,
 	ThirdPartyProvider: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v8.eventarcChannel.EventarcChannelTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.eventarcChannel.EventarcChannelTimeouts,
 }
 ```
 
@@ -932,9 +932,11 @@ CryptoKeyName *string
 
 Optional.
 
-Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*\/locations/*\/keyRings/*\/cryptoKeys/*`.
+Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/* /locations/* /keyRings/* /cryptoKeys/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/eventarc_channel#crypto_key_name EventarcChannel#crypto_key_name}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -1000,7 +1002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.eventarcChannel.EventarcChannelTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 &eventarcchannel.EventarcChannelTimeouts {
 	Create: *string,
@@ -1062,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.eventarcChannel.EventarcChannelTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/eventarcchannel"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/eventarcchannel"
 
 eventarcchannel.NewEventarcChannelTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventarcChannelTimeoutsOutputReference
 ```

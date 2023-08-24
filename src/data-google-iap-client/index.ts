@@ -16,13 +16,13 @@ export interface DataGoogleIapClientConfig extends cdktf.TerraformMetaArguments 
   * Identifier of the brand to which this client
 is attached to. The format is
 'projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iap_client#brand DataGoogleIapClient#brand}
   */
   readonly brand: string;
   /**
   * Output only. Unique identifier of the OAuth client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/iap_client#client_id DataGoogleIapClient#client_id}
   */
   readonly clientId: string;

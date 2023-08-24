@@ -18,19 +18,19 @@ export interface LoggingBillingAccountExclusionConfig extends cdktf.TerraformMet
   readonly billingAccount: string;
   /**
   * A human-readable description.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_billing_account_exclusion#description LoggingBillingAccountExclusion#description}
   */
   readonly description?: string;
   /**
   * Whether this exclusion rule should be disabled or not. This defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_billing_account_exclusion#disabled LoggingBillingAccountExclusion#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
   * The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_billing_account_exclusion#filter LoggingBillingAccountExclusion#filter}
   */
   readonly filter: string;
@@ -43,7 +43,7 @@ export interface LoggingBillingAccountExclusionConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * The name of the logging exclusion.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/logging_billing_account_exclusion#name LoggingBillingAccountExclusion#name}
   */
   readonly name: string;

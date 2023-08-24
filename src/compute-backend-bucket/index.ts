@@ -14,38 +14,38 @@ import * as cdktf from 'cdktf';
 export interface ComputeBackendBucketConfig extends cdktf.TerraformMetaArguments {
   /**
   * Cloud Storage bucket name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#bucket_name ComputeBackendBucket#bucket_name}
   */
   readonly bucketName: string;
   /**
   * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values: ["AUTOMATIC", "DISABLED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#compression_mode ComputeBackendBucket#compression_mode}
   */
   readonly compressionMode?: string;
   /**
   * Headers that the HTTP/S load balancer should add to proxied responses.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#custom_response_headers ComputeBackendBucket#custom_response_headers}
   */
   readonly customResponseHeaders?: string[];
   /**
   * An optional textual description of the resource; provided by the
 client when the resource is created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#description ComputeBackendBucket#description}
   */
   readonly description?: string;
   /**
   * The security policy associated with this backend bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#edge_security_policy ComputeBackendBucket#edge_security_policy}
   */
   readonly edgeSecurityPolicy?: string;
   /**
   * If true, enable Cloud CDN for this BackendBucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#enable_cdn ComputeBackendBucket#enable_cdn}
   */
   readonly enableCdn?: boolean | cdktf.IResolvable;
@@ -64,7 +64,7 @@ match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#name ComputeBackendBucket#name}
   */
   readonly name: string;
@@ -74,13 +74,13 @@ last character, which cannot be a dash.
   readonly project?: string;
   /**
   * cdn_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#cdn_policy ComputeBackendBucket#cdn_policy}
   */
   readonly cdnPolicy?: ComputeBackendBucketCdnPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#timeouts ComputeBackendBucket#timeouts}
   */
   readonly timeouts?: ComputeBackendBucketTimeouts;
@@ -88,7 +88,7 @@ last character, which cannot be a dash.
 export interface ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders {
   /**
   * The header field name to match on when bypassing cache. Values are case-insensitive.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#header_name ComputeBackendBucket#header_name}
   */
   readonly headerName?: string;
@@ -188,7 +188,7 @@ export interface ComputeBackendBucketCdnPolicyCacheKeyPolicy {
   /**
   * Allows HTTP request headers (by name) to be used in the
 cache key.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#include_http_headers ComputeBackendBucket#include_http_headers}
   */
   readonly includeHttpHeaders?: string[];
@@ -196,7 +196,7 @@ cache key.
   * Names of query string parameters to include in cache keys.
 Default parameters are always included. '&' and '=' will
 be percent encoded and not treated as delimiters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#query_string_whitelist ComputeBackendBucket#query_string_whitelist}
   */
   readonly queryStringWhitelist?: string[];
@@ -287,14 +287,14 @@ export interface ComputeBackendBucketCdnPolicyNegativeCachingPolicy {
   /**
   * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
 can be specified as values, and you cannot specify a status code more than once.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#code ComputeBackendBucket#code}
   */
   readonly code?: number;
   /**
   * The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#ttl ComputeBackendBucket#ttl}
   */
   readonly ttl?: number;
@@ -417,44 +417,44 @@ export interface ComputeBackendBucketCdnPolicy {
   /**
   * Specifies the cache setting for all responses from this backend.
 The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#cache_mode ComputeBackendBucket#cache_mode}
   */
   readonly cacheMode?: string;
   /**
   * Specifies the maximum allowed TTL for cached content served by this origin.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#client_ttl ComputeBackendBucket#client_ttl}
   */
   readonly clientTtl?: number;
   /**
   * Specifies the default TTL for cached content served by this origin for responses
 that do not have an existing valid TTL (max-age or s-max-age).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#default_ttl ComputeBackendBucket#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
   * Specifies the maximum allowed TTL for cached content served by this origin.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#max_ttl ComputeBackendBucket#max_ttl}
   */
   readonly maxTtl?: number;
   /**
   * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#negative_caching ComputeBackendBucket#negative_caching}
   */
   readonly negativeCaching?: boolean | cdktf.IResolvable;
   /**
   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#request_coalescing ComputeBackendBucket#request_coalescing}
   */
   readonly requestCoalescing?: boolean | cdktf.IResolvable;
   /**
   * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#serve_while_stale ComputeBackendBucket#serve_while_stale}
   */
   readonly serveWhileStale?: number;
@@ -467,25 +467,25 @@ Cloud CDN will internally behave as though
 all responses from this backend had a "Cache-Control: public,
 max-age=[TTL]" header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#signed_url_cache_max_age_sec ComputeBackendBucket#signed_url_cache_max_age_sec}
   */
   readonly signedUrlCacheMaxAgeSec?: number;
   /**
   * bypass_cache_on_request_headers block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#bypass_cache_on_request_headers ComputeBackendBucket#bypass_cache_on_request_headers}
   */
   readonly bypassCacheOnRequestHeaders?: ComputeBackendBucketCdnPolicyBypassCacheOnRequestHeaders[] | cdktf.IResolvable;
   /**
   * cache_key_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#cache_key_policy ComputeBackendBucket#cache_key_policy}
   */
   readonly cacheKeyPolicy?: ComputeBackendBucketCdnPolicyCacheKeyPolicy;
   /**
   * negative_caching_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_backend_bucket#negative_caching_policy ComputeBackendBucket#negative_caching_policy}
   */
   readonly negativeCachingPolicy?: ComputeBackendBucketCdnPolicyNegativeCachingPolicy[] | cdktf.IResolvable;

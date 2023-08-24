@@ -16,7 +16,7 @@ export interface ComputeSubnetworkConfig extends cdktf.TerraformMetaArguments {
   * An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#description ComputeSubnetwork#description}
   */
   readonly description?: string;
@@ -32,7 +32,7 @@ creation time.
 Provide this property when you create the subnetwork. For example,
 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
 non-overlapping within a network. Only IPv4 is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#ip_cidr_range ComputeSubnetwork#ip_cidr_range}
   */
   readonly ipCidrRange: string;
@@ -40,7 +40,7 @@ non-overlapping within a network. Only IPv4 is supported.
   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation
 or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet
 cannot enable direct path. Possible values: ["EXTERNAL", "INTERNAL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#ipv6_access_type ComputeSubnetwork#ipv6_access_type}
   */
   readonly ipv6AccessType?: string;
@@ -52,27 +52,27 @@ long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#name ComputeSubnetwork#name}
   */
   readonly name: string;
   /**
   * The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#network ComputeSubnetwork#network}
   */
   readonly network: string;
   /**
   * When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#private_ip_google_access ComputeSubnetwork#private_ip_google_access}
   */
   readonly privateIpGoogleAccess?: boolean | cdktf.IResolvable;
   /**
   * The private IPv6 google access type for the VMs in this subnet.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#private_ipv6_google_access ComputeSubnetwork#private_ipv6_google_access}
   */
   readonly privateIpv6GoogleAccess?: string;
@@ -87,13 +87,13 @@ A subnetwork in a given region with purpose set to 'GLOBAL_MANAGED_PROXY' is a p
 A subnetwork with purpose set to 'PRIVATE_SERVICE_CONNECT' reserves the subnet for hosting a Private Service Connect published service.
 Note that 'REGIONAL_MANAGED_PROXY' is the preferred setting for all regional Envoy load balancers.
 If unspecified, the purpose defaults to 'PRIVATE_RFC_1918'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#purpose ComputeSubnetwork#purpose}
   */
   readonly purpose?: string;
   /**
   * The GCP region for this subnetwork.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#region ComputeSubnetwork#region}
   */
   readonly region?: string;
@@ -103,7 +103,7 @@ Currently, this field is only used when 'purpose' is 'REGIONAL_MANAGED_PROXY'.
 The value can be set to 'ACTIVE' or 'BACKUP'.
 An 'ACTIVE' subnetwork is one that is currently being used for Envoy-based load balancers in a region.
 A 'BACKUP' subnetwork is one that is ready to be promoted to 'ACTIVE' or is currently draining. Possible values: ["ACTIVE", "BACKUP"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#role ComputeSubnetwork#role}
   */
   readonly role?: string;
@@ -118,26 +118,26 @@ breaking users during the 0.12 upgrade. To explicitly send a list
 of zero objects you must use the following syntax:
 'example=[]'
 For more details about this behavior, see [this section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#secondary_ip_range ComputeSubnetwork#secondary_ip_range}
   */
   readonly secondaryIpRange?: ComputeSubnetworkSecondaryIpRange[] | cdktf.IResolvable;
   /**
   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
 If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#stack_type ComputeSubnetwork#stack_type}
   */
   readonly stackType?: string;
   /**
   * log_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#log_config ComputeSubnetwork#log_config}
   */
   readonly logConfig?: ComputeSubnetworkLogConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#timeouts ComputeSubnetwork#timeouts}
   */
   readonly timeouts?: ComputeSubnetworkTimeouts;
@@ -272,7 +272,7 @@ export interface ComputeSubnetworkLogConfig {
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#aggregation_interval ComputeSubnetwork#aggregation_interval}
   */
   readonly aggregationInterval?: string;
@@ -280,7 +280,7 @@ lasting connections. Default is an interval of 5 seconds per connection. Default
   * Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
 https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
 The default value is 'true', which evaluates to include everything.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#filter_expr ComputeSubnetwork#filter_expr}
   */
   readonly filterExpr?: string;
@@ -290,7 +290,7 @@ The value of the field must be in [0, 1]. Set the sampling rate of VPC
 flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#flow_sampling ComputeSubnetwork#flow_sampling}
   */
   readonly flowSampling?: number;
@@ -298,14 +298,14 @@ half of all collected logs are reported.
   * Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs. Default value: "INCLUDE_ALL_METADATA" Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA", "CUSTOM_METADATA"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#metadata ComputeSubnetwork#metadata}
   */
   readonly metadata?: string;
   /**
   * List of metadata fields that should be added to reported logs.
 Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_subnetwork#metadata_fields ComputeSubnetwork#metadata_fields}
   */
   readonly metadataFields?: string[];

@@ -16,7 +16,7 @@ export interface BillingProjectInfoConfig extends cdktf.TerraformMetaArguments {
   * The ID of the billing account associated with the project, if
 any. Set to empty string to disable billing for the project.
 For example, '"012345-567890-ABCDEF"' or '""'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/billing_project_info#billing_account BillingProjectInfo#billing_account}
   */
   readonly billingAccount: string;
@@ -33,7 +33,7 @@ For example, '"012345-567890-ABCDEF"' or '""'.
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/billing_project_info#timeouts BillingProjectInfo#timeouts}
   */
   readonly timeouts?: BillingProjectInfoTimeouts;

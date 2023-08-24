@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/storagebucketacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/storagebucketacl"
 
 storagebucketacl.NewStorageBucketAcl(scope Construct, id *string, config StorageBucketAclConfig) StorageBucketAcl
 ```
@@ -298,7 +298,7 @@ func ResetRoleEntity()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/storagebucketacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/storagebucketacl"
 
 storagebucketacl.StorageBucketAcl_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/storagebucketacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/storagebucketacl"
 
 storagebucketacl.StorageBucketAcl_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ storagebucketacl.StorageBucketAcl_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAcl.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/storagebucketacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/storagebucketacl"
 
 storagebucketacl.StorageBucketAcl_IsTerraformResource(x interface{}) *bool
 ```
@@ -653,7 +653,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.storageBucketAcl.StorageBucketAclConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v8/storagebucketacl"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/storagebucketacl"
 
 &storagebucketacl.StorageBucketAclConfig {
 	Connection: interface{},

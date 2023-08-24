@@ -33,7 +33,7 @@ export interface IapTunnelIamMemberConfig extends cdktf.TerraformMetaArguments {
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_tunnel_iam_member#condition IapTunnelIamMember#condition}
   */
   readonly condition?: IapTunnelIamMemberCondition;

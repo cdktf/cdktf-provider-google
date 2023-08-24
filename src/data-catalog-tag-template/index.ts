@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The display name for this template.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#display_name DataCatalogTagTemplate#display_name}
   */
   readonly displayName?: string;
   /**
   * This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#force_delete DataCatalogTagTemplate#force_delete}
   */
   readonly forceDelete?: boolean | cdktf.IResolvable;
@@ -37,25 +37,25 @@ export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArgumen
   readonly project?: string;
   /**
   * Template location region.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#region DataCatalogTagTemplate#region}
   */
   readonly region?: string;
   /**
   * The id of the tag template to create.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#tag_template_id DataCatalogTagTemplate#tag_template_id}
   */
   readonly tagTemplateId: string;
   /**
   * fields block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#fields DataCatalogTagTemplate#fields}
   */
   readonly fields: DataCatalogTagTemplateFields[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#timeouts DataCatalogTagTemplate#timeouts}
   */
   readonly timeouts?: DataCatalogTagTemplateTimeouts;
@@ -63,7 +63,7 @@ export interface DataCatalogTagTemplateConfig extends cdktf.TerraformMetaArgumen
 export interface DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues {
   /**
   * The display name of the enum value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#display_name DataCatalogTagTemplate#display_name}
   */
   readonly displayName: string;
@@ -159,7 +159,7 @@ export class DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValuesList extends c
 export interface DataCatalogTagTemplateFieldsTypeEnumType {
   /**
   * allowed_values block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#allowed_values DataCatalogTagTemplate#allowed_values}
   */
   readonly allowedValues: DataCatalogTagTemplateFieldsTypeEnumTypeAllowedValues[] | cdktf.IResolvable;
@@ -224,13 +224,13 @@ export interface DataCatalogTagTemplateFieldsType {
   /**
   * Represents primitive types - string, bool etc.
  Exactly one of 'primitive_type' or 'enum_type' must be set Possible values: ["DOUBLE", "STRING", "BOOL", "TIMESTAMP"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#primitive_type DataCatalogTagTemplate#primitive_type}
   */
   readonly primitiveType?: string;
   /**
   * enum_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#enum_type DataCatalogTagTemplate#enum_type}
   */
   readonly enumType?: DataCatalogTagTemplateFieldsTypeEnumType;
@@ -320,13 +320,13 @@ export class DataCatalogTagTemplateFieldsTypeOutputReference extends cdktf.Compl
 export interface DataCatalogTagTemplateFields {
   /**
   * A description for this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#description DataCatalogTagTemplate#description}
   */
   readonly description?: string;
   /**
   * The display name for this field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#display_name DataCatalogTagTemplate#display_name}
   */
   readonly displayName?: string;
@@ -336,7 +336,7 @@ export interface DataCatalogTagTemplateFields {
   readonly fieldId: string;
   /**
   * Whether this is a required field. Defaults to false.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#is_required DataCatalogTagTemplate#is_required}
   */
   readonly isRequired?: boolean | cdktf.IResolvable;
@@ -344,13 +344,13 @@ export interface DataCatalogTagTemplateFields {
   * The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
 Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#order DataCatalogTagTemplate#order}
   */
   readonly order?: number;
   /**
   * type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_tag_template#type DataCatalogTagTemplate#type}
   */
   readonly type: DataCatalogTagTemplateFieldsType;

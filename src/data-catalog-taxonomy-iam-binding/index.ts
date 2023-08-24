@@ -41,7 +41,7 @@ export interface DataCatalogTaxonomyIamBindingConfig extends cdktf.TerraformMeta
   readonly taxonomy: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_taxonomy_iam_binding#condition DataCatalogTaxonomyIamBinding#condition}
   */
   readonly condition?: DataCatalogTaxonomyIamBindingCondition;

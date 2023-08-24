@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of the spoke.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#description NetworkConnectivitySpoke#description}
   */
   readonly description?: string;
   /**
   * Immutable. The URI of the hub that this spoke is attached to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#hub NetworkConnectivitySpoke#hub}
   */
   readonly hub: string;
@@ -33,49 +33,49 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
   readonly id?: string;
   /**
   * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#labels NetworkConnectivitySpoke#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#location NetworkConnectivitySpoke#location}
   */
   readonly location: string;
   /**
   * Immutable. The name of the spoke. Spoke names must be unique.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#name NetworkConnectivitySpoke#name}
   */
   readonly name: string;
   /**
   * The project for the resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#project NetworkConnectivitySpoke#project}
   */
   readonly project?: string;
   /**
   * linked_interconnect_attachments block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#linked_interconnect_attachments NetworkConnectivitySpoke#linked_interconnect_attachments}
   */
   readonly linkedInterconnectAttachments?: NetworkConnectivitySpokeLinkedInterconnectAttachments;
   /**
   * linked_router_appliance_instances block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#linked_router_appliance_instances NetworkConnectivitySpoke#linked_router_appliance_instances}
   */
   readonly linkedRouterApplianceInstances?: NetworkConnectivitySpokeLinkedRouterApplianceInstances;
   /**
   * linked_vpn_tunnels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#linked_vpn_tunnels NetworkConnectivitySpoke#linked_vpn_tunnels}
   */
   readonly linkedVpnTunnels?: NetworkConnectivitySpokeLinkedVpnTunnels;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#timeouts NetworkConnectivitySpoke#timeouts}
   */
   readonly timeouts?: NetworkConnectivitySpokeTimeouts;
@@ -83,13 +83,13 @@ export interface NetworkConnectivitySpokeConfig extends cdktf.TerraformMetaArgum
 export interface NetworkConnectivitySpokeLinkedInterconnectAttachments {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked interconnect attachment resources
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];
@@ -173,13 +173,13 @@ export class NetworkConnectivitySpokeLinkedInterconnectAttachmentsOutputReferenc
 export interface NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances {
   /**
   * The IP address on the VM to use for peering.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#ip_address NetworkConnectivitySpoke#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * The URI of the virtual machine resource
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#virtual_machine NetworkConnectivitySpoke#virtual_machine}
   */
   readonly virtualMachine?: string;
@@ -301,13 +301,13 @@ export class NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstancesList
 export interface NetworkConnectivitySpokeLinkedRouterApplianceInstances {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * instances block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#instances NetworkConnectivitySpoke#instances}
   */
   readonly instances: NetworkConnectivitySpokeLinkedRouterApplianceInstancesInstances[] | cdktf.IResolvable;
@@ -391,13 +391,13 @@ export class NetworkConnectivitySpokeLinkedRouterApplianceInstancesOutputReferen
 export interface NetworkConnectivitySpokeLinkedVpnTunnels {
   /**
   * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#site_to_site_data_transfer NetworkConnectivitySpoke#site_to_site_data_transfer}
   */
   readonly siteToSiteDataTransfer: boolean | cdktf.IResolvable;
   /**
   * The URIs of linked VPN tunnel resources.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_connectivity_spoke#uris NetworkConnectivitySpoke#uris}
   */
   readonly uris: string[];

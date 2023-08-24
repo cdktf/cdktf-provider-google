@@ -21,7 +21,7 @@ export interface OrganizationIamPolicyConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * The numeric ID of the organization in which you want to manage the audit logging config.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/organization_iam_policy#org_id OrganizationIamPolicy#org_id}
   */
   readonly orgId: string;

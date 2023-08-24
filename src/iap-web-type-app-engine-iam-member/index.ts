@@ -37,7 +37,7 @@ export interface IapWebTypeAppEngineIamMemberConfig extends cdktf.TerraformMetaA
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_type_app_engine_iam_member#condition IapWebTypeAppEngineIamMember#condition}
   */
   readonly condition?: IapWebTypeAppEngineIamMemberCondition;

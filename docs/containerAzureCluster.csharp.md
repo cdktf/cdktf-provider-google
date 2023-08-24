@@ -1224,7 +1224,7 @@ new ContainerAzureClusterConfig {
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.location">Location</a></code> | <code>string</code> | The location for the resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.name">Name</a></code> | <code>string</code> | The name of this resource. |
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.networking">Networking</a></code> | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterNetworking">ContainerAzureClusterNetworking</a></code> | networking block. |
-| <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.resourceGroupId">ResourceGroupId</a></code> | <code>string</code> | The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/*\/resourceGroups/*`. |
+| <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.resourceGroupId">ResourceGroupId</a></code> | <code>string</code> | The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/* /resourceGroups/*`. |
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.annotations">Annotations</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Optional. |
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.azureServicesAuthentication">AzureServicesAuthentication</a></code> | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterAzureServicesAuthentication">ContainerAzureClusterAzureServicesAuthentication</a></code> | azure_services_authentication block. |
 | <code><a href="#@cdktf/provider-google.containerAzureCluster.ContainerAzureClusterConfig.property.client">Client</a></code> | <code>string</code> | Name of the AzureClient. |
@@ -1413,9 +1413,11 @@ public string ResourceGroupId { get; set; }
 
 - *Type:* string
 
-The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/*\/resourceGroups/*`.
+The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/* /resourceGroups/*`.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_cluster#resource_group_id ContainerAzureCluster#resource_group_id}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 
@@ -2044,9 +2046,11 @@ public string VirtualNetworkId { get; set; }
 
 The Azure Resource Manager (ARM) ID of the VNet associated with your cluster.
 
-All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*\/resourceGroups/*\/providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
+All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/* /resourceGroups/* /providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_azure_cluster#virtual_network_id ContainerAzureCluster#virtual_network_id}
+
+Note: The above comment contained a comment block ending sequence (* followed by /). We have introduced a space between to prevent syntax errors. Please ignore the space.
 
 ---
 

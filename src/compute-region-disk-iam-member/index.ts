@@ -41,7 +41,7 @@ export interface ComputeRegionDiskIamMemberConfig extends cdktf.TerraformMetaArg
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_disk_iam_member#condition ComputeRegionDiskIamMember#condition}
   */
   readonly condition?: ComputeRegionDiskIamMemberCondition;

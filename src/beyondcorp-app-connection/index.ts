@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
   * List of AppConnectors that are authorised to be associated with this AppConnection
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#connectors BeyondcorpAppConnection#connectors}
   */
   readonly connectors?: string[];
   /**
   * An arbitrary user-provided name for the AppConnection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#display_name BeyondcorpAppConnection#display_name}
   */
   readonly displayName?: string;
@@ -33,13 +33,13 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * Resource labels to represent user provided metadata.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#labels BeyondcorpAppConnection#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * ID of the AppConnection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#name BeyondcorpAppConnection#name}
   */
   readonly name: string;
@@ -49,7 +49,7 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   readonly project?: string;
   /**
   * The region of the AppConnection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#region BeyondcorpAppConnection#region}
   */
   readonly region?: string;
@@ -57,25 +57,25 @@ export interface BeyondcorpAppConnectionConfig extends cdktf.TerraformMetaArgume
   * The type of network connectivity used by the AppConnection. Refer to
 https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
 for a list of possible values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */
   readonly type?: string;
   /**
   * application_endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#application_endpoint BeyondcorpAppConnection#application_endpoint}
   */
   readonly applicationEndpoint: BeyondcorpAppConnectionApplicationEndpoint;
   /**
   * gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#gateway BeyondcorpAppConnection#gateway}
   */
   readonly gateway?: BeyondcorpAppConnectionGateway;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#timeouts BeyondcorpAppConnection#timeouts}
   */
   readonly timeouts?: BeyondcorpAppConnectionTimeouts;
@@ -83,13 +83,13 @@ for a list of possible values.
 export interface BeyondcorpAppConnectionApplicationEndpoint {
   /**
   * Hostname or IP address of the remote application endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#host BeyondcorpAppConnection#host}
   */
   readonly host: string;
   /**
   * Port of the remote application endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#port BeyondcorpAppConnection#port}
   */
   readonly port: number;
@@ -173,7 +173,7 @@ export class BeyondcorpAppConnectionApplicationEndpointOutputReference extends c
 export interface BeyondcorpAppConnectionGateway {
   /**
   * AppGateway name in following format: projects/{project_id}/locations/{locationId}/appgateways/{gateway_id}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#app_gateway BeyondcorpAppConnection#app_gateway}
   */
   readonly appGateway: string;
@@ -181,7 +181,7 @@ export interface BeyondcorpAppConnectionGateway {
   * The type of hosting used by the gateway. Refer to
 https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
 for a list of possible values.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/beyondcorp_app_connection#type BeyondcorpAppConnection#type}
   */
   readonly type?: string;

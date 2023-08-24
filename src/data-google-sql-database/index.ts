@@ -22,14 +22,14 @@ export interface DataGoogleSqlDatabaseConfig extends cdktf.TerraformMetaArgument
   /**
   * The name of the Cloud SQL instance. This does not include the project
 ID.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database#instance DataGoogleSqlDatabase#instance}
   */
   readonly instance: string;
   /**
   * The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/sql_database#name DataGoogleSqlDatabase#name}
   */
   readonly name: string;

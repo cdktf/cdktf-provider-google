@@ -21,13 +21,13 @@ export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArgument
   readonly id?: string;
   /**
   * The location of the cloud run instance. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#location CloudRunDomainMapping#location}
   */
   readonly location: string;
   /**
   * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#name CloudRunDomainMapping#name}
   */
   readonly name: string;
@@ -37,19 +37,19 @@ export interface CloudRunDomainMappingConfig extends cdktf.TerraformMetaArgument
   readonly project?: string;
   /**
   * metadata block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#metadata CloudRunDomainMapping#metadata}
   */
   readonly metadata: CloudRunDomainMappingMetadata;
   /**
   * spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#spec CloudRunDomainMapping#spec}
   */
   readonly spec: CloudRunDomainMappingSpec;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#timeouts CloudRunDomainMapping#timeouts}
   */
   readonly timeouts?: CloudRunDomainMappingTimeouts;
@@ -297,7 +297,7 @@ info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotati
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#annotations CloudRunDomainMapping#annotations}
   */
   readonly annotations?: { [key: string]: string };
@@ -306,14 +306,14 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#labels CloudRunDomainMapping#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * In Cloud Run the namespace must be equal to either the
 project ID or project number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#namespace CloudRunDomainMapping#namespace}
   */
   readonly namespace: string;
@@ -443,7 +443,7 @@ export class CloudRunDomainMappingMetadataOutputReference extends cdktf.ComplexO
 export interface CloudRunDomainMappingSpec {
   /**
   * The mode of the certificate. Default value: "AUTOMATIC" Possible values: ["NONE", "AUTOMATIC"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#certificate_mode CloudRunDomainMapping#certificate_mode}
   */
   readonly certificateMode?: string;
@@ -452,14 +452,14 @@ export interface CloudRunDomainMappingSpec {
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#force_override CloudRunDomainMapping#force_override}
   */
   readonly forceOverride?: boolean | cdktf.IResolvable;
   /**
   * The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_run_domain_mapping#route_name CloudRunDomainMapping#route_name}
   */
   readonly routeName: string;

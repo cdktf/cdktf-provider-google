@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments {
   /**
   * The JSON representation of a dashboard, following the format at https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_dashboard#dashboard_json MonitoringDashboard#dashboard_json}
   */
   readonly dashboardJson: string;
@@ -27,13 +27,13 @@ export interface MonitoringDashboardConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_dashboard#project MonitoringDashboard#project}
   */
   readonly project?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/monitoring_dashboard#timeouts MonitoringDashboard#timeouts}
   */
   readonly timeouts?: MonitoringDashboardTimeouts;

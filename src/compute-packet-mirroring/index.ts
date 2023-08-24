@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface ComputePacketMirroringConfig extends cdktf.TerraformMetaArguments {
   /**
   * A human-readable description of the rule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#description ComputePacketMirroring#description}
   */
   readonly description?: string;
@@ -27,7 +27,7 @@ export interface ComputePacketMirroringConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The name of the packet mirroring rule
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#name ComputePacketMirroring#name}
   */
   readonly name: string;
@@ -35,7 +35,7 @@ export interface ComputePacketMirroringConfig extends cdktf.TerraformMetaArgumen
   * Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#priority ComputePacketMirroring#priority}
   */
   readonly priority?: number;
@@ -46,37 +46,37 @@ the same instances.
   /**
   * The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#region ComputePacketMirroring#region}
   */
   readonly region?: string;
   /**
   * collector_ilb block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#collector_ilb ComputePacketMirroring#collector_ilb}
   */
   readonly collectorIlb: ComputePacketMirroringCollectorIlb;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#filter ComputePacketMirroring#filter}
   */
   readonly filter?: ComputePacketMirroringFilter;
   /**
   * mirrored_resources block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#mirrored_resources ComputePacketMirroring#mirrored_resources}
   */
   readonly mirroredResources: ComputePacketMirroringMirroredResources;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#network ComputePacketMirroring#network}
   */
   readonly network: ComputePacketMirroringNetwork;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#timeouts ComputePacketMirroring#timeouts}
   */
   readonly timeouts?: ComputePacketMirroringTimeouts;
@@ -84,7 +84,7 @@ If it is not provided, the provider region is used.
 export interface ComputePacketMirroringCollectorIlb {
   /**
   * The URL of the forwarding rule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
   */
   readonly url: string;
@@ -149,19 +149,19 @@ export interface ComputePacketMirroringFilter {
   /**
   * IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#cidr_ranges ComputePacketMirroring#cidr_ranges}
   */
   readonly cidrRanges?: string[];
   /**
   * Direction of traffic to mirror. Default value: "BOTH" Possible values: ["INGRESS", "EGRESS", "BOTH"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#direction ComputePacketMirroring#direction}
   */
   readonly direction?: string;
   /**
   * Possible IP protocols including tcp, udp, icmp and esp
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#ip_protocols ComputePacketMirroring#ip_protocols}
   */
   readonly ipProtocols?: string[];
@@ -274,7 +274,7 @@ export class ComputePacketMirroringFilterOutputReference extends cdktf.ComplexOb
 export interface ComputePacketMirroringMirroredResourcesInstances {
   /**
   * The URL of the instances where this rule should be active.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
   */
   readonly url: string;
@@ -370,7 +370,7 @@ export class ComputePacketMirroringMirroredResourcesInstancesList extends cdktf.
 export interface ComputePacketMirroringMirroredResourcesSubnetworks {
   /**
   * The URL of the subnetwork where this rule should be active.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
   */
   readonly url: string;
@@ -466,19 +466,19 @@ export class ComputePacketMirroringMirroredResourcesSubnetworksList extends cdkt
 export interface ComputePacketMirroringMirroredResources {
   /**
   * All instances with these tags will be mirrored.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#tags ComputePacketMirroring#tags}
   */
   readonly tags?: string[];
   /**
   * instances block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#instances ComputePacketMirroring#instances}
   */
   readonly instances?: ComputePacketMirroringMirroredResourcesInstances[] | cdktf.IResolvable;
   /**
   * subnetworks block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#subnetworks ComputePacketMirroring#subnetworks}
   */
   readonly subnetworks?: ComputePacketMirroringMirroredResourcesSubnetworks[] | cdktf.IResolvable;
@@ -591,7 +591,7 @@ export class ComputePacketMirroringMirroredResourcesOutputReference extends cdkt
 export interface ComputePacketMirroringNetwork {
   /**
   * The full self_link URL of the network where this rule is active.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_packet_mirroring#url ComputePacketMirroring#url}
   */
   readonly url: string;

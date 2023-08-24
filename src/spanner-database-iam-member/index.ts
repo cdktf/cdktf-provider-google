@@ -41,7 +41,7 @@ export interface SpannerDatabaseIamMemberConfig extends cdktf.TerraformMetaArgum
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/spanner_database_iam_member#condition SpannerDatabaseIamMember#condition}
   */
   readonly condition?: SpannerDatabaseIamMemberCondition;

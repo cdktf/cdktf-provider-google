@@ -22,7 +22,7 @@ export interface DataGoogleComputeRouterNatConfig extends cdktf.TerraformMetaArg
   /**
   * Name of the NAT service. The name must be 1-63 characters long and
 comply with RFC1035.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_nat#name DataGoogleComputeRouterNat#name}
   */
   readonly name: string;
@@ -32,13 +32,13 @@ comply with RFC1035.
   readonly project?: string;
   /**
   * Region where the router and NAT reside.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_nat#region DataGoogleComputeRouterNat#region}
   */
   readonly region?: string;
   /**
   * The name of the Cloud Router in which this NAT will be configured.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_nat#router DataGoogleComputeRouterNat#router}
   */
   readonly router: string;

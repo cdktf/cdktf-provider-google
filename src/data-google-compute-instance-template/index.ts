@@ -29,13 +29,13 @@ export interface DataGoogleComputeInstanceTemplateConfig extends cdktf.Terraform
   readonly mostRecent?: boolean | cdktf.IResolvable;
   /**
   * The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_template#name DataGoogleComputeInstanceTemplate#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_template#project DataGoogleComputeInstanceTemplate#project}
   */
   readonly project?: string;

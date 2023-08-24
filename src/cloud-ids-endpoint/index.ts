@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface CloudIdsEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * An optional description of the endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#description CloudIdsEndpoint#description}
   */
   readonly description?: string;
@@ -27,19 +27,19 @@ export interface CloudIdsEndpointConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location for the endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#location CloudIdsEndpoint#location}
   */
   readonly location: string;
   /**
   * Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#name CloudIdsEndpoint#name}
   */
   readonly name: string;
   /**
   * Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like "src-net") or the full URL to the network (like "projects/{project_id}/global/networks/src-net").
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#network CloudIdsEndpoint#network}
   */
   readonly network: string;
@@ -49,19 +49,19 @@ export interface CloudIdsEndpointConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The minimum alert severity level that is reported by the endpoint. Possible values: ["INFORMATIONAL", "LOW", "MEDIUM", "HIGH", "CRITICAL"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#severity CloudIdsEndpoint#severity}
   */
   readonly severity: string;
   /**
   * Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#threat_exceptions CloudIdsEndpoint#threat_exceptions}
   */
   readonly threatExceptions?: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/cloud_ids_endpoint#timeouts CloudIdsEndpoint#timeouts}
   */
   readonly timeouts?: CloudIdsEndpointTimeouts;

@@ -17,13 +17,13 @@ export interface GameServicesGameServerDeploymentRolloutConfig extends cdktf.Ter
 applied by default to all realms and clusters. For example,
 
 'projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#default_game_server_config GameServicesGameServerDeploymentRollout#default_game_server_config}
   */
   readonly defaultGameServerConfig: string;
   /**
   * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#deployment_id GameServicesGameServerDeploymentRollout#deployment_id}
   */
   readonly deploymentId: string;
@@ -40,13 +40,13 @@ applied by default to all realms and clusters. For example,
   readonly project?: string;
   /**
   * game_server_config_overrides block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#game_server_config_overrides GameServicesGameServerDeploymentRollout#game_server_config_overrides}
   */
   readonly gameServerConfigOverrides?: GameServicesGameServerDeploymentRolloutGameServerConfigOverrides[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#timeouts GameServicesGameServerDeploymentRollout#timeouts}
   */
   readonly timeouts?: GameServicesGameServerDeploymentRolloutTimeouts;
@@ -54,7 +54,7 @@ applied by default to all realms and clusters. For example,
 export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector {
   /**
   * List of realms to match against.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#realms GameServicesGameServerDeploymentRollout#realms}
   */
   readonly realms?: string[];
@@ -121,13 +121,13 @@ export class GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRea
 export interface GameServicesGameServerDeploymentRolloutGameServerConfigOverrides {
   /**
   * Version of the configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#config_version GameServicesGameServerDeploymentRollout#config_version}
   */
   readonly configVersion?: string;
   /**
   * realms_selector block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/game_services_game_server_deployment_rollout#realms_selector GameServicesGameServerDeploymentRollout#realms_selector}
   */
   readonly realmsSelector?: GameServicesGameServerDeploymentRolloutGameServerConfigOverridesRealmsSelector;

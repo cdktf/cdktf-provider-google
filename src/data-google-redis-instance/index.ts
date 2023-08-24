@@ -21,7 +21,7 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The ID of the instance or a fully qualified identifier for the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/redis_instance#name DataGoogleRedisInstance#name}
   */
   readonly name: string;
@@ -31,7 +31,7 @@ export interface DataGoogleRedisInstanceConfig extends cdktf.TerraformMetaArgume
   readonly project?: string;
   /**
   * The name of the Redis region of the instance.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/redis_instance#region DataGoogleRedisInstance#region}
   */
   readonly region?: string;

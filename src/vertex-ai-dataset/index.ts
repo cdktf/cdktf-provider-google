@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   /**
   * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#display_name VertexAiDataset#display_name}
   */
   readonly displayName: string;
@@ -27,13 +27,13 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * A set of key/value label pairs to assign to this Workflow.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#labels VertexAiDataset#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#metadata_schema_uri VertexAiDataset#metadata_schema_uri}
   */
   readonly metadataSchemaUri: string;
@@ -43,19 +43,19 @@ export interface VertexAiDatasetConfig extends cdktf.TerraformMetaArguments {
   readonly project?: string;
   /**
   * The region of the dataset. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#region VertexAiDataset#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#encryption_spec VertexAiDataset#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiDatasetEncryptionSpec;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#timeouts VertexAiDataset#timeouts}
   */
   readonly timeouts?: VertexAiDatasetTimeouts;
@@ -64,7 +64,7 @@ export interface VertexAiDatasetEncryptionSpec {
   /**
   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_dataset#kms_key_name VertexAiDataset#kms_key_name}
   */
   readonly kmsKeyName?: string;

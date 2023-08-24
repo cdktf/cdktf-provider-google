@@ -33,7 +33,7 @@ export interface DataCatalogPolicyTagIamBindingConfig extends cdktf.TerraformMet
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/data_catalog_policy_tag_iam_binding#condition DataCatalogPolicyTagIamBinding#condition}
   */
   readonly condition?: DataCatalogPolicyTagIamBindingCondition;

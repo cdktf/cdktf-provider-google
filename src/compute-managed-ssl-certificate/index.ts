@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface ComputeManagedSslCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The unique identifier for the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#certificate_id ComputeManagedSslCertificate#certificate_id}
   */
   readonly certificateId?: number;
   /**
   * An optional description of this resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#description ComputeManagedSslCertificate#description}
   */
   readonly description?: string;
@@ -42,7 +42,7 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#name ComputeManagedSslCertificate#name}
   */
   readonly name?: string;
@@ -53,19 +53,19 @@ These are in the same namespace as the managed SSL certificates.
   /**
   * Enum field whose value is always 'MANAGED' - used to signal to the API
 which type this is. Default value: "MANAGED" Possible values: ["MANAGED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#type ComputeManagedSslCertificate#type}
   */
   readonly type?: string;
   /**
   * managed block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#managed ComputeManagedSslCertificate#managed}
   */
   readonly managed?: ComputeManagedSslCertificateManaged;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#timeouts ComputeManagedSslCertificate#timeouts}
   */
   readonly timeouts?: ComputeManagedSslCertificateTimeouts;
@@ -74,7 +74,7 @@ export interface ComputeManagedSslCertificateManaged {
   /**
   * Domains for which a managed SSL certificate will be valid.  Currently,
 there can be up to 100 domains in this list.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_managed_ssl_certificate#domains ComputeManagedSslCertificate#domains}
   */
   readonly domains: string[];

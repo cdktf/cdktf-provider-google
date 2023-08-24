@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name of the containing bucket.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object_content#bucket DataGoogleStorageBucketObjectContent#bucket}
   */
   readonly bucket: string;
   /**
   * Data as string to be uploaded. Must be defined if source is not. Note: The content field is marked as sensitive. To view the raw contents of the object, please define an output.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object_content#content DataGoogleStorageBucketObjectContent#content}
   */
   readonly content?: string;
@@ -33,7 +33,7 @@ export interface DataGoogleStorageBucketObjectContentConfig extends cdktf.Terraf
   readonly id?: string;
   /**
   * The name of the object. If you're interpolating the name of this object, see output_name instead.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/storage_bucket_object_content#name DataGoogleStorageBucketObjectContent#name}
   */
   readonly name: string;

@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface VertexAiTensorboardConfig extends cdktf.TerraformMetaArguments {
   /**
   * Description of this Tensorboard.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#description VertexAiTensorboard#description}
   */
   readonly description?: string;
   /**
   * User provided name of this Tensorboard.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#display_name VertexAiTensorboard#display_name}
   */
   readonly displayName: string;
@@ -33,7 +33,7 @@ export interface VertexAiTensorboardConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * The labels with user-defined metadata to organize your Tensorboards.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#labels VertexAiTensorboard#labels}
   */
   readonly labels?: { [key: string]: string };
@@ -43,19 +43,19 @@ export interface VertexAiTensorboardConfig extends cdktf.TerraformMetaArguments 
   readonly project?: string;
   /**
   * The region of the tensorboard. eg us-central1
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#region VertexAiTensorboard#region}
   */
   readonly region?: string;
   /**
   * encryption_spec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#encryption_spec VertexAiTensorboard#encryption_spec}
   */
   readonly encryptionSpec?: VertexAiTensorboardEncryptionSpec;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#timeouts VertexAiTensorboard#timeouts}
   */
   readonly timeouts?: VertexAiTensorboardTimeouts;
@@ -64,7 +64,7 @@ export interface VertexAiTensorboardEncryptionSpec {
   /**
   * The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
 Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/vertex_ai_tensorboard#kms_key_name VertexAiTensorboard#kms_key_name}
   */
   readonly kmsKeyName: string;

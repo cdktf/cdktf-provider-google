@@ -37,7 +37,7 @@ export interface IapWebBackendServiceIamBindingConfig extends cdktf.TerraformMet
   readonly webBackendService: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/iap_web_backend_service_iam_binding#condition IapWebBackendServiceIamBinding#condition}
   */
   readonly condition?: IapWebBackendServiceIamBindingCondition;

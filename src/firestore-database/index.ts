@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The App Engine integration mode to use for this database. Possible values: ["ENABLED", "DISABLED"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#app_engine_integration_mode FirestoreDatabase#app_engine_integration_mode}
   */
   readonly appEngineIntegrationMode?: string;
   /**
   * The concurrency control mode to use for this database. Possible values: ["OPTIMISTIC", "PESSIMISTIC", "OPTIMISTIC_WITH_ENTITY_GROUPS"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#concurrency_mode FirestoreDatabase#concurrency_mode}
   */
   readonly concurrencyMode?: string;
@@ -34,7 +34,7 @@ export interface FirestoreDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * The location of the database. Available databases are listed at
 https://cloud.google.com/firestore/docs/locations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#location_id FirestoreDatabase#location_id}
   */
   readonly locationId: string;
@@ -45,7 +45,7 @@ characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be
 UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
 "(default)" database id is also valid.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#name FirestoreDatabase#name}
   */
   readonly name: string;
@@ -57,13 +57,13 @@ UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
   * The type of the database.
 See https://cloud.google.com/datastore/docs/firestore-or-datastore
 for information about how to choose. Possible values: ["FIRESTORE_NATIVE", "DATASTORE_MODE"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#type FirestoreDatabase#type}
   */
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/firestore_database#timeouts FirestoreDatabase#timeouts}
   */
   readonly timeouts?: FirestoreDatabaseTimeouts;

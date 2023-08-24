@@ -21,25 +21,25 @@ export interface DataGoogleComputeInstanceGroupManagerConfig extends cdktf.Terra
   readonly id?: string;
   /**
   * The name of the instance group manager. Must be 1-63 characters long and comply with RFC1035. Supported characters include lowercase letters, numbers, and hyphens.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_group_manager#name DataGoogleComputeInstanceGroupManager#name}
   */
   readonly name?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_group_manager#project DataGoogleComputeInstanceGroupManager#project}
   */
   readonly project?: string;
   /**
   * The URL of the created resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_group_manager#self_link DataGoogleComputeInstanceGroupManager#self_link}
   */
   readonly selfLink?: string;
   /**
   * The zone that instances in this group should be created in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_instance_group_manager#zone DataGoogleComputeInstanceGroupManager#zone}
   */
   readonly zone?: string;

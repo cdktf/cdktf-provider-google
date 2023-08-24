@@ -37,7 +37,7 @@ export interface ProjectServiceConfig extends cdktf.TerraformMetaArguments {
   readonly service: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/project_service#timeouts ProjectService#timeouts}
   */
   readonly timeouts?: ProjectServiceTimeouts;

@@ -14,13 +14,13 @@ import * as cdktf from 'cdktf';
 export interface NetworkSecurityAddressGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Capacity of the Address Group.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#capacity NetworkSecurityAddressGroup#capacity}
   */
   readonly capacity: number;
   /**
   * Free-text description of the resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#description NetworkSecurityAddressGroup#description}
   */
   readonly description?: string;
@@ -33,45 +33,45 @@ export interface NetworkSecurityAddressGroupConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * List of items.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#items NetworkSecurityAddressGroup#items}
   */
   readonly items?: string[];
   /**
   * Set of label tags associated with the AddressGroup resource.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#labels NetworkSecurityAddressGroup#labels}
   */
   readonly labels?: { [key: string]: string };
   /**
   * The location of the gateway security policy.
 The default value is 'global'.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#location NetworkSecurityAddressGroup#location}
   */
   readonly location: string;
   /**
   * Name of the AddressGroup resource.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#name NetworkSecurityAddressGroup#name}
   */
   readonly name: string;
   /**
   * The name of the parent this address group belongs to. Format: organizations/{organization_id} or projects/{project_id}.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#parent NetworkSecurityAddressGroup#parent}
   */
   readonly parent?: string;
   /**
   * The type of the Address Group. Possible values are "IPV4" or "IPV6". Possible values: ["IPV4", "IPV6"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#type NetworkSecurityAddressGroup#type}
   */
   readonly type: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/network_security_address_group#timeouts NetworkSecurityAddressGroup#timeouts}
   */
   readonly timeouts?: NetworkSecurityAddressGroupTimeouts;

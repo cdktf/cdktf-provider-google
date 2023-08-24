@@ -14,7 +14,7 @@ import * as cdktf from 'cdktf';
 export interface DnsResponsePolicyRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#dns_name DnsResponsePolicyRule#dns_name}
   */
   readonly dnsName: string;
@@ -31,25 +31,25 @@ export interface DnsResponsePolicyRuleConfig extends cdktf.TerraformMetaArgument
   readonly project?: string;
   /**
   * Identifies the response policy addressed by this request.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#response_policy DnsResponsePolicyRule#response_policy}
   */
   readonly responsePolicy: string;
   /**
   * An identifier for this rule. Must be unique with the ResponsePolicy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#rule_name DnsResponsePolicyRule#rule_name}
   */
   readonly ruleName: string;
   /**
   * local_data block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#local_data DnsResponsePolicyRule#local_data}
   */
   readonly localData?: DnsResponsePolicyRuleLocalData;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#timeouts DnsResponsePolicyRule#timeouts}
   */
   readonly timeouts?: DnsResponsePolicyRuleTimeouts;
@@ -57,26 +57,26 @@ export interface DnsResponsePolicyRuleConfig extends cdktf.TerraformMetaArgument
 export interface DnsResponsePolicyRuleLocalDataLocalDatas {
   /**
   * For example, www.example.com.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#name DnsResponsePolicyRule#name}
   */
   readonly name: string;
   /**
   * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#rrdatas DnsResponsePolicyRule#rrdatas}
   */
   readonly rrdatas?: string[];
   /**
   * Number of seconds that this ResourceRecordSet can be cached by
 resolvers.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#ttl DnsResponsePolicyRule#ttl}
   */
   readonly ttl?: number;
   /**
   * One of valid DNS resource types. Possible values: ["A", "AAAA", "CAA", "CNAME", "DNSKEY", "DS", "HTTPS", "IPSECVPNKEY", "MX", "NAPTR", "NS", "PTR", "SOA", "SPF", "SRV", "SSHFP", "SVCB", "TLSA", "TXT"]
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#type DnsResponsePolicyRule#type}
   */
   readonly type: string;
@@ -238,7 +238,7 @@ export class DnsResponsePolicyRuleLocalDataLocalDatasList extends cdktf.ComplexL
 export interface DnsResponsePolicyRuleLocalData {
   /**
   * local_datas block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dns_response_policy_rule#local_datas DnsResponsePolicyRule#local_datas}
   */
   readonly localDatas: DnsResponsePolicyRuleLocalDataLocalDatas[] | cdktf.IResolvable;

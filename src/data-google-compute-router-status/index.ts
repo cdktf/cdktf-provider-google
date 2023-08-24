@@ -21,19 +21,19 @@ export interface DataGoogleComputeRouterStatusConfig extends cdktf.TerraformMeta
   readonly id?: string;
   /**
   * Name of the router to query.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_status#name DataGoogleComputeRouterStatus#name}
   */
   readonly name: string;
   /**
   * Project ID of the target router.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_status#project DataGoogleComputeRouterStatus#project}
   */
   readonly project?: string;
   /**
   * Region of the target router.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/data-sources/compute_router_status#region DataGoogleComputeRouterStatus#region}
   */
   readonly region?: string;

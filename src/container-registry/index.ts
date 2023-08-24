@@ -21,13 +21,13 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_registry#location ContainerRegistry#location}
   */
   readonly location?: string;
   /**
   * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/container_registry#project ContainerRegistry#project}
   */
   readonly project?: string;

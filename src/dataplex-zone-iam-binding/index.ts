@@ -45,7 +45,7 @@ export interface DataplexZoneIamBindingConfig extends cdktf.TerraformMetaArgumen
   readonly role: string;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dataplex_zone_iam_binding#condition DataplexZoneIamBinding#condition}
   */
   readonly condition?: DataplexZoneIamBindingCondition;
