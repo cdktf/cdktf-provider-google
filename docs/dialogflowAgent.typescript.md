@@ -1186,9 +1186,7 @@ Determines how intents are detected from user queries.
 MATCH_MODE_HYBRID: Best for agents with a small number of examples in intents and/or wide use of templates
 syntax and composite entities.
 MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
-using @sys.any or very large developer entities. Possible values: ["MATCH_MODE_HYBRID", "MATCH_MODE_ML_ONLY"]
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/dialogflow_agent#match_mode DialogflowAgent#match_mode}
+using
 
 ---
 

@@ -1865,7 +1865,7 @@ ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags.property.name">name</a></code> | <code>java.lang.String</code> | Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+. |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleMatchSrcSecureTags.property.name">name</a></code> | <code>java.lang.String</code> | Name of the secure tag, created with TagManager's TagValue API. |
 
 ---
 
@@ -1877,9 +1877,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#name ComputeRegionNetworkFirewallPolicyRule#name}
+Name of the secure tag, created with TagManager's TagValue API.
 
 ---
 
@@ -1899,7 +1897,7 @@ ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags.property.name">name</a></code> | <code>java.lang.String</code> | Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+. |
+| <code><a href="#@cdktf/provider-google.computeRegionNetworkFirewallPolicyRule.ComputeRegionNetworkFirewallPolicyRuleTargetSecureTags.property.name">name</a></code> | <code>java.lang.String</code> | Name of the secure tag, created with TagManager's TagValue API. |
 
 ---
 
@@ -1911,9 +1909,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/google/4.79.0/docs/resources/compute_region_network_firewall_policy_rule#name ComputeRegionNetworkFirewallPolicyRule#name}
+Name of the secure tag, created with TagManager's TagValue API.
 
 ---
 
