@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMember.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 iapappengineserviceiammember.NewIapAppEngineServiceIamMember(scope Construct, id *string, config IapAppEngineServiceIamMemberConfig) IapAppEngineServiceIamMember
 ```
@@ -304,7 +304,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMember.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 iapappengineserviceiammember.IapAppEngineServiceIamMember_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMember.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 iapappengineserviceiammember.IapAppEngineServiceIamMember_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ iapappengineserviceiammember.IapAppEngineServiceIamMember_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMember.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 iapappengineserviceiammember.IapAppEngineServiceIamMember_IsTerraformResource(x interface{}) *bool
 ```
@@ -714,7 +714,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMemberCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 &iapappengineserviceiammember.IapAppEngineServiceIamMemberCondition {
 	Expression: *string,
@@ -774,7 +774,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMemberConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 &iapappengineserviceiammember.IapAppEngineServiceIamMemberConfig {
 	Connection: interface{},
@@ -788,7 +788,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiamm
 	Member: *string,
 	Role: *string,
 	Service: *string,
-	Condition: github.com/cdktf/cdktf-provider-google-go/google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMemberCondition,
+	Condition: github.com/cdktf/cdktf-provider-google-go/google/v9.iapAppEngineServiceIamMember.IapAppEngineServiceIamMemberCondition,
 	Id: *string,
 	Project: *string,
 }
@@ -981,7 +981,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.iapAppEngineServiceIamMember.IapAppEngineServiceIamMemberConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/iapappengineserviceiammember"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/iapappengineserviceiammember"
 
 iapappengineserviceiammember.NewIapAppEngineServiceIamMemberConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IapAppEngineServiceIamMemberConditionOutputReference
 ```

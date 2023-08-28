@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.NewDataGoogleCloudbuildv2ConnectionIamPolicy(scope Construct, id *string, config DataGoogleCloudbuildv2ConnectionIamPolicyConfig) DataGoogleCloudbuildv2ConnectionIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPol
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecloudbuildv2connectioniampolicy"
 
 datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -624,7 +624,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleCloudbuildv2ConnectionIamPolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglecloudbuildv2connectioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglecloudbuildv2connectioniampolicy"
 
 &datagooglecloudbuildv2connectioniampolicy.DataGoogleCloudbuildv2ConnectionIamPolicyConfig {
 	Connection: interface{},

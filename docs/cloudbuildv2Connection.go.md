@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2Connection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2Connection(scope Construct, id *string, config Cloudbuildv2ConnectionConfig) Cloudbuildv2Connection
 ```
@@ -378,7 +378,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2Connection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.Cloudbuildv2Connection_IsConstruct(x interface{}) *bool
 ```
@@ -410,7 +410,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2Connection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.Cloudbuildv2Connection_IsTerraformElement(x interface{}) *bool
 ```
@@ -424,7 +424,7 @@ cloudbuildv2connection.Cloudbuildv2Connection_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2Connection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.Cloudbuildv2Connection_IsTerraformResource(x interface{}) *bool
 ```
@@ -898,7 +898,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionConfig {
 	Connection: interface{},
@@ -912,12 +912,12 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
 	Name: *string,
 	Annotations: *map[string]*string,
 	Disabled: interface{},
-	GithubConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfig,
-	GithubEnterpriseConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig,
-	GitlabConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig,
+	GithubConfig: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfig,
+	GithubEnterpriseConfig: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig,
+	GitlabConfig: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionTimeouts,
 }
 ```
 
@@ -1163,11 +1163,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGithubConfig {
 	AppInstallationId: *f64,
-	AuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential,
+	AuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential,
 }
 ```
 
@@ -1213,7 +1213,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredential {
 	OauthTokenSecretVersion: *string,
@@ -1249,7 +1249,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGithubEnterpriseConfig {
 	HostUri: *string,
@@ -1257,7 +1257,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
 	AppInstallationId: *f64,
 	AppSlug: *string,
 	PrivateKeySecretVersion: *string,
-	ServiceDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig,
+	ServiceDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig,
 	SslCa: *string,
 	WebhookSecretSecretVersion: *string,
 }
@@ -1399,7 +1399,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfig {
 	Service: *string,
@@ -1433,14 +1433,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGitlabConfig {
-	AuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential,
-	ReadAuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential,
+	AuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential,
+	ReadAuthorizerCredential: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential,
 	WebhookSecretSecretVersion: *string,
 	HostUri: *string,
-	ServiceDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig,
+	ServiceDirectoryConfig: github.com/cdktf/cdktf-provider-google-go/google/v9.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig,
 	SslCa: *string,
 }
 ```
@@ -1549,7 +1549,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential {
 	UserTokenSecretVersion: *string,
@@ -1585,7 +1585,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential {
 	UserTokenSecretVersion: *string,
@@ -1621,7 +1621,7 @@ Note: The above comment contained a comment block ending sequence (* followed by
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig {
 	Service: *string,
@@ -1655,7 +1655,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionInstallationState.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionInstallationState {
 
@@ -1668,7 +1668,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 &cloudbuildv2connection.Cloudbuildv2ConnectionTimeouts {
 	Create: *string,
@@ -1730,7 +1730,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigAuthorizerCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGithubConfigAuthorizerCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGithubConfigAuthorizerCredentialOutputReference
 ```
@@ -2019,7 +2019,7 @@ func InternalValue() Cloudbuildv2ConnectionGithubConfigAuthorizerCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGithubConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGithubConfigOutputReference
 ```
@@ -2339,7 +2339,7 @@ func InternalValue() Cloudbuildv2ConnectionGithubConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGithubEnterpriseConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGithubEnterpriseConfigOutputReference
 ```
@@ -2826,7 +2826,7 @@ func InternalValue() Cloudbuildv2ConnectionGithubEnterpriseConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirectoryConfigOutputReference
 ```
@@ -3097,7 +3097,7 @@ func InternalValue() Cloudbuildv2ConnectionGithubEnterpriseConfigServiceDirector
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGitlabConfigAuthorizerCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGitlabConfigAuthorizerCredentialOutputReference
 ```
@@ -3379,7 +3379,7 @@ func InternalValue() Cloudbuildv2ConnectionGitlabConfigAuthorizerCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGitlabConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGitlabConfigOutputReference
 ```
@@ -3831,7 +3831,7 @@ func InternalValue() Cloudbuildv2ConnectionGitlabConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredentialOutputReference
 ```
@@ -4113,7 +4113,7 @@ func InternalValue() Cloudbuildv2ConnectionGitlabConfigReadAuthorizerCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfigOutputReference
 ```
@@ -4384,7 +4384,7 @@ func InternalValue() Cloudbuildv2ConnectionGitlabConfigServiceDirectoryConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionInstallationStateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionInstallationStateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) Cloudbuildv2ConnectionInstallationStateList
 ```
@@ -4516,7 +4516,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionInstallationStateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionInstallationStateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) Cloudbuildv2ConnectionInstallationStateOutputReference
 ```
@@ -4816,7 +4816,7 @@ func InternalValue() Cloudbuildv2ConnectionInstallationState
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudbuildv2Connection.Cloudbuildv2ConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/cloudbuildv2connection"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudbuildv2connection"
 
 cloudbuildv2connection.NewCloudbuildv2ConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Cloudbuildv2ConnectionTimeoutsOutputReference
 ```

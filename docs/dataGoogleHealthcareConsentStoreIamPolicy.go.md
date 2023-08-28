@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleHealthcareConsentStoreIamPolicy.DataGoogleHealthcareConsentStoreIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcareconsentstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglehealthcareconsentstoreiampolicy"
 
 datagooglehealthcareconsentstoreiampolicy.NewDataGoogleHealthcareConsentStoreIamPolicy(scope Construct, id *string, config DataGoogleHealthcareConsentStoreIamPolicyConfig) DataGoogleHealthcareConsentStoreIamPolicy
 ```
@@ -277,7 +277,7 @@ func ResetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleHealthcareConsentStoreIamPolicy.DataGoogleHealthcareConsentStoreIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcareconsentstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglehealthcareconsentstoreiampolicy"
 
 datagooglehealthcareconsentstoreiampolicy.DataGoogleHealthcareConsentStoreIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -309,7 +309,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleHealthcareConsentStoreIamPolicy.DataGoogleHealthcareConsentStoreIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcareconsentstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglehealthcareconsentstoreiampolicy"
 
 datagooglehealthcareconsentstoreiampolicy.DataGoogleHealthcareConsentStoreIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ datagooglehealthcareconsentstoreiampolicy.DataGoogleHealthcareConsentStoreIamPol
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleHealthcareConsentStoreIamPolicy.DataGoogleHealthcareConsentStoreIamPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcareconsentstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglehealthcareconsentstoreiampolicy"
 
 datagooglehealthcareconsentstoreiampolicy.DataGoogleHealthcareConsentStoreIamPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -588,7 +588,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleHealthcareConsentStoreIamPolicy.DataGoogleHealthcareConsentStoreIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/datagooglehealthcareconsentstoreiampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglehealthcareconsentstoreiampolicy"
 
 &datagooglehealthcareconsentstoreiampolicy.DataGoogleHealthcareConsentStoreIamPolicyConfig {
 	Connection: interface{},
