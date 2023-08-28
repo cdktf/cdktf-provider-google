@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.cloudfunctionsFunctionIamPolicy.CloudfunctionsFunctionIamPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudfunctionsfunctioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniampolicy"
 
 cloudfunctionsfunctioniampolicy.NewCloudfunctionsFunctionIamPolicy(scope Construct, id *string, config CloudfunctionsFunctionIamPolicyConfig) CloudfunctionsFunctionIamPolicy
 ```
@@ -291,7 +291,7 @@ func ResetRegion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.cloudfunctionsFunctionIamPolicy.CloudfunctionsFunctionIamPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudfunctionsfunctioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniampolicy"
 
 cloudfunctionsfunctioniampolicy.CloudfunctionsFunctionIamPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -323,7 +323,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.cloudfunctionsFunctionIamPolicy.CloudfunctionsFunctionIamPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudfunctionsfunctioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniampolicy"
 
 cloudfunctionsfunctioniampolicy.CloudfunctionsFunctionIamPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ cloudfunctionsfunctioniampolicy.CloudfunctionsFunctionIamPolicy_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.cloudfunctionsFunctionIamPolicy.CloudfunctionsFunctionIamPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudfunctionsfunctioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniampolicy"
 
 cloudfunctionsfunctioniampolicy.CloudfunctionsFunctionIamPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -657,7 +657,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.cloudfunctionsFunctionIamPolicy.CloudfunctionsFunctionIamPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/cloudfunctionsfunctioniampolicy"
+import "github.com/cdktf/cdktf-provider-google-go/google/cloudfunctionsfunctioniampolicy"
 
 &cloudfunctionsfunctioniampolicy.CloudfunctionsFunctionIamPolicyConfig {
 	Connection: interface{},

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefix.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 computepublicadvertisedprefix.NewComputePublicAdvertisedPrefix(scope Construct, id *string, config ComputePublicAdvertisedPrefixConfig) ComputePublicAdvertisedPrefix
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefix.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 computepublicadvertisedprefix.ComputePublicAdvertisedPrefix_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefix.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 computepublicadvertisedprefix.ComputePublicAdvertisedPrefix_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ computepublicadvertisedprefix.ComputePublicAdvertisedPrefix_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefix.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 computepublicadvertisedprefix.ComputePublicAdvertisedPrefix_IsTerraformResource(x interface{}) *bool
 ```
@@ -721,7 +721,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefixConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 &computepublicadvertisedprefix.ComputePublicAdvertisedPrefixConfig {
 	Connection: interface{},
@@ -737,7 +737,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadverti
 	Description: *string,
 	Id: *string,
 	Project: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-google-go/google/v9.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefixTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-google-go/google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefixTimeouts,
 }
 ```
 
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefixTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 &computepublicadvertisedprefix.ComputePublicAdvertisedPrefixTimeouts {
 	Create: *string,
@@ -989,7 +989,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.computePublicAdvertisedPrefix.ComputePublicAdvertisedPrefixTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/computepublicadvertisedprefix"
+import "github.com/cdktf/cdktf-provider-google-go/google/computepublicadvertisedprefix"
 
 computepublicadvertisedprefix.NewComputePublicAdvertisedPrefixTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ComputePublicAdvertisedPrefixTimeoutsOutputReference
 ```

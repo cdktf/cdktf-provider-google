@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/google/4.7
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.NewDataGoogleMonitoringMeshIstioService(scope Construct, id *string, config DataGoogleMonitoringMeshIstioServiceConfig) DataGoogleMonitoringMeshIstioService
 ```
@@ -284,7 +284,7 @@ func ResetProject()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioService_IsConstruct(x interface{}) *bool
 ```
@@ -316,7 +316,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioService_IsTerraformElement(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioService_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -672,7 +672,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 &datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioServiceConfig {
 	Connection: interface{},
@@ -859,7 +859,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioServiceTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 &datagooglemonitoringmeshistioservice.DataGoogleMonitoringMeshIstioServiceTelemetry {
 
@@ -874,7 +874,7 @@ import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoring
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioServiceTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.NewDataGoogleMonitoringMeshIstioServiceTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataGoogleMonitoringMeshIstioServiceTelemetryList
 ```
@@ -1006,7 +1006,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-google.dataGoogleMonitoringMeshIstioService.DataGoogleMonitoringMeshIstioServiceTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-google-go/google/v9/datagooglemonitoringmeshistioservice"
+import "github.com/cdktf/cdktf-provider-google-go/google/datagooglemonitoringmeshistioservice"
 
 datagooglemonitoringmeshistioservice.NewDataGoogleMonitoringMeshIstioServiceTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataGoogleMonitoringMeshIstioServiceTelemetryOutputReference
 ```
